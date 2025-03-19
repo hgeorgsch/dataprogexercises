@@ -1,0 +1,113 @@
+\documentclass[12pt, titlepage]{article}
+%\usepackage[norsk]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{minted}
+\usepackage[colorlinks = true,
+linkcolor = blue,
+urlcolor = blue]{hyperref}
+
+
+\begin{document}
+
+\title{Mappeoppgave - del 1}
+\author{IIRA2001 - Høst 2023}
+\date{}
+\maketitle
+
+%\section{Mappeoppgave 1}
+Første del av mappen handler om generell programmering og tidsrekker i økonomiske fag.
+Du skal legge ved tre små programmer om temaer fra faget så langt:
+\begin{itemize}
+  \item {Populasjonsvekst og den logistiske formelen}
+  \item {Sparekalkulator}
+  \item {Lånekalkulator}
+\end{itemize}
+
+Hvert av programmene trenger litt tekst som forklarer hva hensikten er eller hvilket problem det forsøker å løse,
+samt hvordan det gjør dette, og eventuelt hva som skjer i ulike deler av programmet.
+
+Dere kan for eksempel skrive denne teksten inn sammen med programmene i jupyter-notebook filer, eller
+legge de med som et eget dokument om du har skrevet koden i en annen IDE som feks PyCharm.
+
+I første del av mappen ser vi etter at dere kan : 
+\begin{itemize}
+  \item {lage egne funksjoner}
+  \item {bruke variabler på en fornuftig måte}
+  \item {behandle data ved bruk av lister eller dictionaries}
+  \item {manipulere disse dataene med \mintinline{python}{for} eller \mintinline{python}{while} løkker}
+  \item {styre programflyt med \mintinline{python}{if}/\mintinline{python}{else}}
+  \item {plotte resultat med \mintinline{python}{pyplot}}
+  \item {\textbf{Bruke python som verktøy i en faglig sammenheng}}
+\end{itemize}
+
+Dere \textbf{må} ikke bruke alle konseptene vi har sett på så langt, \textit{det aller viktigste er at dere kan 
+bruke python til å løse et praktisk problem eller undersøke en relevant problemstilling.}
+
+Det eneste vi forventer \textbf{skal} være med - er en fornuftig fremstilling av resultatene.
+Det vil som oftest si et plot av en eller form, men om dette ikke passer, kunne det for eksempel
+være en tabell eller en tekst 
+
+
+I tillegg skal det være med et \textit{refleksjonsnotat}(se eget avsnitt).
+
+\section*{Innhold}
+\subsection*{Populasjonsvekst}
+Oppgaver 1,3,5 og 9 har omhandlet populasjonsvekst og den logistiske formelen.
+Som et minimum legger dere ved løsningen deres på en av disse oppgavene.
+
+Dersom dere vil forbedre dette, kan dere ta i bruk programmet til å undersøke noe konkret.
+Kan dere for eksempel si noe om populasjonsvekst på Sunnmøre eller i Norge?
+
+Den logistiske likningen brukes også til å modellere hvordan ny teknologi tas i bruk (se \href{https://en.wikipedia.org/wiki/Diffusion_of_innovations}{Diffusion of innovation} og \href{https://no.wikipedia.org/wiki/Diffusjon_(kommunikasjon)}{Diffusjon (norsk wiki)})
+Kanskje kan du si noe om hvor mange el-biler man kan forvente på veiene fremover, hvor mange flere brukere netflix kan håpe på å få, eller liknende.
+
+\subsection*{Sparekalkulator}
+
+Oppgaver 2,4,6,7 og 8 handlet om en sparekalkulator.
+Som et minimum legger dere ved løsningen deres på en av disse oppgavene.
+
+Som en forbedring, kan dere som foreslått i oppgaven også ta med inflasjon, formueskatt of skatt av rentene i sparekalkulatoren.
+Kommer dere på mer nyttig funksjonalitet i et program som har med sparing å gjøre, kan dere implementere disse,
+eller kanskje dere kan undersøke noen konkrete tilfeller som dere synes er interessante (Er du kanskje \href{https://www.imdb.com/title/tt0584425/}{Futurama} fan?)
+
+\subsection*{Lånekalkulator}
+
+Siste python-program i mappe 1 skal være en Lånekalkulator. Vi har ikke jobbet med lånekalkulatorer så langt, men programmet vil nok likne en del på sparekalkulatoren.
+Her skal du lage et pythonprogram som gir deg en nedbetalingsplan og viser deg hvor mye et lån vil koste.
+
+Du er fri til å designe programmet ditt, kanskje er den for boliglån slik som \href{https://www.nordea.no/privat/vare-produkter/lan-og-kreditt/boliglan/hva-koster-boliglanet.html#/}{her}, eller en serielånskalkulator slik som \href{https://www.smartepenger.no/kalkulatorer/978-serielanskalkulator}{her}
+
+\subsection*{Forklarende tekst}
+
+I tillegg til python-koden legger du ved en tekst til hver deloppgave, hvor du forklarer eventuell problemstilling, hva programmet ditt gjør og hvordan, og eventuelt drøfting av resultatene fra programmet.
+
+\section*{Refleksjonsnotat}
+
+\subsection*{Hva er et refleksjonsnotat?}
+
+Et refleksjonsnotat er en tekst man ofte tilvirker når man er midtveis i eller ferdig med en prosess - ofte en form for praksis.
+For eksempel kan en lærerstudent skrive et refleksjonsnotat hvor han reflekterer rundt en hendelse som skjedde da han var ute i praksis.
+Hva skjedde, hvordan handlet du, hva lærte du og hva sier faglitteraturen. Refleksjonsnotater kan også gjelde for hele praksisperioden og omhandle faglig utvikling og veien videre.
+
+\subsection*{Innholdet i refleksjonsnotat til første del av mappen}
+
+Dere skal legge ved et refleksjonsnotat hvor dere reflekterer rundt læringsprosessen dere har vært gjennom, og rundt bruken av python i faget deres.
+Typiske spørsmål dere reflekterer rundt vil kanskje være:
+\begin{itemize}
+   \item {Hva har jeg lært?}
+   \item {Hva har vært vanskelig, og hvordan skal du håndtere det i videre virke?}
+   \item {Med bakgrunn i oppgavene du har levert: hva vil komme til å være nyttig / mindre nyttig for deg?}
+   \item {Hvilke utfordringer har \textit{du} med å bruke programmeringsverktøy in ditt fagområde fremover}
+   \item {Hvordan tror du at du får bruk for verktøy som python videre}
+   \item { ... }
+\end{itemize}
+
+Refleksjonsnotatet er altså en personlig tekst, og den skal vise faglig utvikling, eller refleksjon rundt faget deres sett sammenheng med programmering.
+Det er bra om du knytter refleksjoner til konkrete eksempler fra kode-oppgavene dere har levert.
+
+\section*{Innlevering og tilbakemelding}
+
+Kode, kodetekst og refleksjonsnotat leveres på BlackBoard - Innleveringsfrist i (\color{blue}{slutten av uke 41?}\color{black}).
+Deretter skal dere få mulighet til tilbakemelding på innleveringen slik at dere kan forbedre den inn mot \textit{endelig innlevering i inspera før jul} (Innleveringsfrist ikke satt ennå)
+
+\end{document}
