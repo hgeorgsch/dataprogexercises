@@ -1,0 +1,10 @@
+*.aux
+*.nav
+*.toc
+*.out
+*.snm
+_minted-*/
+**/slides/*.log
+.ipynb_checkpoints/
+*/__pycache__/
+res/

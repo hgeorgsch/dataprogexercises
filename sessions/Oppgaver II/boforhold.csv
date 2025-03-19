@@ -1,0 +1,63 @@
+"14061: Boligøkonomi. Husholdninger, etter statistikkvariabel, inntektsgruppe og år"
+
+"statistikkvariabel";"inntektsgruppe";"2011";"2012";"2013";"2014";"2015";"2016";"2017";"2018";"2019";"2020";"2021";"2022";"2023"
+"Har ikke boliglån (prosent)";"Laveste inntektskvartil";72.7;72.4;70.6;72.5;74.0;72.1;73.5;71.1;71.9;71.7;73.3;72.7;72.0
+"Har ikke boliglån (prosent)";"Andre inntektskvartil";44.3;45.9;43.5;45.8;44.8;45.6;46.3;46.9;45.6;45.2;46.4;47.6;49.8
+"Har ikke boliglån (prosent)";"Tredje inntektskvartil";31.6;33.3;32.9;30.6;33.1;33.0;34.0;36.3;35.7;33.5;33.7;32.6;34.2
+"Har ikke boliglån (prosent)";"Høyeste inntektskvartil";26.1;25.3;27.8;27.5;30.4;30.4;29.6;29.3;29.2;29.0;27.5;27.1;27.2
+"Gjenstående boliglån under 1 million (prosent)";"Laveste inntektskvartil";10.9;12.2;15.7;14.5;12.2;10.9;9.7;10.2;9.9;10.2;11.6;9.7;10.9
+"Gjenstående boliglån under 1 million (prosent)";"Andre inntektskvartil";27.6;25.2;25.7;21.8;19.5;18.8;16.9;16.4;15.2;14.9;15.8;14.6;12.9
+"Gjenstående boliglån under 1 million (prosent)";"Tredje inntektskvartil";27.8;27.6;24.5;24.1;21.4;17.6;16.6;14.6;14.9;13.8;15.2;14.0;13.5
+"Gjenstående boliglån under 1 million (prosent)";"Høyeste inntektskvartil";23.4;23.3;20.8;19.3;18.1;16.0;14.5;14.1;14.8;12.9;12.9;12.4;9.8
+"Gjenstående boliglån mellom 1 og 2 millioner (prosent)";"Laveste inntektskvartil";7.3;9.5;8.1;7.3;7.7;8.7;7.4;7.4;8.3;7.9;7.7;9.4;9.3
+"Gjenstående boliglån mellom 1 og 2 millioner (prosent)";"Andre inntektskvartil";17.3;19.6;19.6;20.8;19.8;18.4;19.5;17.3;17.6;17.8;17.4;17.7;16.2
+"Gjenstående boliglån mellom 1 og 2 millioner (prosent)";"Tredje inntektskvartil";24.7;25.1;25.4;24.6;24.3;24.6;23.0;20.9;18.9;20.6;19.2;20.2;19.3
+"Gjenstående boliglån mellom 1 og 2 millioner (prosent)";"Høyeste inntektskvartil";23.9;23.7;22.3;22.6;20.9;19.8;19.6;19.1;18.7;17.2;16.6;14.6;15.8
+"Gjenstående boliglån mellom 2 og 3 millioner (prosent)";"Laveste inntektskvartil";1.2;1.5;2.4;2.5;1.9;3.2;3.4;4.6;3.7;3.9;4.8;5.8;5.6
+"Gjenstående boliglån mellom 2 og 3 millioner (prosent)";"Andre inntektskvartil";4.1;4.4;6.2;6.9;8.4;9.6;9.7;8.9;11.4;11.8;13.3;12.6;12.4
+"Gjenstående boliglån mellom 2 og 3 millioner (prosent)";"Tredje inntektskvartil";8.3;7.7;9.9;11.9;11.8;13.6;14.0;14.6;15.4;14.9;17.9;16.7;16.1
+"Gjenstående boliglån mellom 2 og 3 millioner (prosent)";"Høyeste inntektskvartil";12.4;12.4;15.1;15.6;14.2;16.4;17.1;13.9;14.8;15.3;17.2;17.2;18.0
+"Gjenstående boliglån over 3 millioner (prosent)";"Laveste inntektskvartil";0.9;0.9;0.8;0.8;0.8;1.2;1.9;1.3;2.3;2.2;2.5;2.5;2.2
+"Gjenstående boliglån over 3 millioner (prosent)";"Andre inntektskvartil";1.3;1.3;1.3;2.0;2.5;2.8;3.2;4.2;5.4;5.0;7.1;7.3;8.7
+"Gjenstående boliglån over 3 millioner (prosent)";"Tredje inntektskvartil";2.6;2.7;4.3;5.3;5.2;5.9;7.7;7.9;10.3;12.3;13.9;16.5;16.8
+"Gjenstående boliglån over 3 millioner (prosent)";"Høyeste inntektskvartil";8.1;10.9;10.6;12.2;12.1;13.1;14.8;18.1;18.5;20.8;25.8;28.8;29.2
+"Total boutgift. Gjennomsnitt (kr)";"Laveste inntektskvartil";67684.0;67946.0;72607.0;73379.0;73644.0;76197.0;77505.0;83407.0;86231.0;87902.0;91569.0;107203.0;113309.0
+"Total boutgift. Gjennomsnitt (kr)";"Andre inntektskvartil";85546.0;82441.0;89338.0;91546.0;92985.0;91693.0;95222.0;95325.0;104884.0;107139.0;118025.0;133935.0;141743.0
+"Total boutgift. Gjennomsnitt (kr)";"Tredje inntektskvartil";104114.0;102171.0;108877.0;113016.0;113144.0;110231.0;112841.0;115758.0;123641.0;129817.0;144347.0;159833.0;174888.0
+"Total boutgift. Gjennomsnitt (kr)";"Høyeste inntektskvartil";126379.0;131712.0;132131.0;141715.0;134919.0;129584.0;138529.0;139673.0;151422.0;158781.0;176092.0;209199.0;237758.0
+"Total bokostnad (Total boutgift ekskludert avdrag). Gjennomsnitt (kr)";"Laveste inntektskvartil";61506.0;59648.0;64265.0;64468.0;65525.0;66782.0;69652.0;73513.0;75912.0;77605.0;77821.0;93372.0;102718.0
+"Total bokostnad (Total boutgift ekskludert avdrag). Gjennomsnitt (kr)";"Andre inntektskvartil";67840.0;63529.0;67446.0;71181.0;69217.0;67973.0;70869.0;72843.0;80252.0;80751.0;82558.0;99895.0;114905.0
+"Total bokostnad (Total boutgift ekskludert avdrag). Gjennomsnitt (kr)";"Tredje inntektskvartil";73709.0;72655.0;76103.0;78395.0;78022.0;72362.0;74272.0;78156.0;83487.0;87806.0;87617.0;106573.0;132888.0
+"Total bokostnad (Total boutgift ekskludert avdrag). Gjennomsnitt (kr)";"Høyeste inntektskvartil";86127.0;86615.0;86894.0;92868.0;87369.0;80537.0;84176.0;86871.0;94575.0;96974.0;95982.0;127048.0;169077.0
+"Opplever boutgiftene som svært tyngende (prosent)";"Laveste inntektskvartil";12.1;11.3;11.4;11.7;12.8;11.8;11.7;9.8;11.9;10.7;..;..;12.9
+"Opplever boutgiftene som svært tyngende (prosent)";"Andre inntektskvartil";5.4;5.1;3.3;4.7;4.3;3.5;4.5;5.3;5.9;4.1;..;..;7.1
+"Opplever boutgiftene som svært tyngende (prosent)";"Tredje inntektskvartil";2.5;2.9;3.1;2.3;3.4;2.0;3.0;2.7;3.3;3.2;..;..;6.5
+"Opplever boutgiftene som svært tyngende (prosent)";"Høyeste inntektskvartil";1.7;1.7;1.3;1.4;1.2;1.3;1.1;1.5;1.7;1.3;..;..;3.2
+"Boutgifter utgjør under 10 prosent av inntekt (prosent)";"Laveste inntektskvartil";11.4;14.5;12.8;13.6;14.2;12.6;11.0;9.3;9.0;9.4;7.1;3.7;4.9
+"Boutgifter utgjør under 10 prosent av inntekt (prosent)";"Andre inntektskvartil";17.9;24.8;21.3;22.1;22.0;23.8;19.5;22.0;19.5;19.4;16.8;8.4;12.6
+"Boutgifter utgjør under 10 prosent av inntekt (prosent)";"Tredje inntektskvartil";20.0;23.0;25.4;23.1;25.9;28.5;26.9;27.8;23.2;22.9;17.1;12.5;15.3
+"Boutgifter utgjør under 10 prosent av inntekt (prosent)";"Høyeste inntektskvartil";31.0;32.1;33.4;31.1;35.5;38.2;33.9;37.9;34.5;34.2;27.3;23.9;21.9
+"Boutgifter utgjør 10-19 prosent av inntekt (prosent)";"Laveste inntektskvartil";17.0;15.2;14.8;16.9;17.2;15.6;16.0;15.2;15.2;15.3;15.8;11.6;13.3
+"Boutgifter utgjør 10-19 prosent av inntekt (prosent)";"Andre inntektskvartil";28.6;26.2;25.8;28.0;29.1;28.0;29.6;28.4;28.1;29.5;29.0;29.2;26.8
+"Boutgifter utgjør 10-19 prosent av inntekt (prosent)";"Tredje inntektskvartil";28.0;30.0;28.5;30.0;29.3;26.9;30.6;29.0;29.5;30.5;29.7;32.7;26.1
+"Boutgifter utgjør 10-19 prosent av inntekt (prosent)";"Høyeste inntektskvartil";32.4;31.3;30.6;32.3;31.3;30.9;32.9;29.1;32.0;30.3;34.2;32.0;27.8
+"Boutgifter utgjør 20-29 prosent av inntekt (prosent)";"Laveste inntektskvartil";19.0;20.8;21.5;19.5;18.6;19.8;20.2;20.3;21.1;19.9;21.2;22.1;18.9
+"Boutgifter utgjør 20-29 prosent av inntekt (prosent)";"Andre inntektskvartil";26.6;27.8;28.9;29.0;27.2;28.1;28.0;28.1;27.0;29.0;31.7;32.0;28.8
+"Boutgifter utgjør 20-29 prosent av inntekt (prosent)";"Tredje inntektskvartil";31.9;29.9;27.8;27.3;27.4;27.2;25.8;26.4;29.0;29.9;33.7;32.4;29.9
+"Boutgifter utgjør 20-29 prosent av inntekt (prosent)";"Høyeste inntektskvartil";22.7;23.3;24.2;23.8;21.9;22.6;24.2;23.0;23.8;23.2;26.7;27.2;29.3
+"Boutgifter utgjør 30-39 prosent av inntekt (prosent)";"Laveste inntektskvartil";15.0;18.2;17.2;17.9;14.7;16.7;18.2;18.0;18.9;19.7;20.3;20.7;20.1
+"Boutgifter utgjør 30-39 prosent av inntekt (prosent)";"Andre inntektskvartil";15.2;12.8;14.6;13.0;12.9;12.1;14.9;13.3;15.7;14.5;14.9;18.0;19.2
+"Boutgifter utgjør 30-39 prosent av inntekt (prosent)";"Tredje inntektskvartil";14.1;12.1;12.1;12.4;12.7;12.9;11.8;11.7;13.6;12.1;15.9;16.3;19.4
+"Boutgifter utgjør 30-39 prosent av inntekt (prosent)";"Høyeste inntektskvartil";8.0;9.1;7.6;8.9;8.0;6.4;6.7;6.4;6.5;7.9;9.2;12.2;15.1
+"Boutgifter utgjør 40-59 prosent av inntekt (prosent)";"Laveste inntektskvartil";16.6;15.4;19.0;17.3;17.3;18.7;17.5;19.6;19.5;18.7;21.1;22.9;23.1
+"Boutgifter utgjør 40-59 prosent av inntekt (prosent)";"Andre inntektskvartil";6.9;5.9;6.6;6.2;5.8;5.9;6.4;5.8;7.5;5.2;6.6;10.6;11.0
+"Boutgifter utgjør 40-59 prosent av inntekt (prosent)";"Tredje inntektskvartil";2.9;3.7;4.5;5.3;3.4;2.7;3.7;3.6;3.0;2.9;3.1;5.5;8.5
+"Boutgifter utgjør 40-59 prosent av inntekt (prosent)";"Høyeste inntektskvartil";3.6;2.7;2.0;2.1;2.5;1.2;1.6;2.3;2.0;3.5;2.4;3.8;5.0
+"Boutgifter utgjør 60 prosent eller mer av inntekt (prosent)";"Laveste inntektskvartil";17.0;13.6;13.0;13.3;16.3;14.7;15.4;14.9;14.3;14.8;14.5;18.9;19.8
+"Boutgifter utgjør 60 prosent eller mer av inntekt (prosent)";"Andre inntektskvartil";1.4;0.6;0.8;0.6;1.5;1.1;0.6;0.5;0.8;0.8;1.0;1.7;1.5
+"Boutgifter utgjør 60 prosent eller mer av inntekt (prosent)";"Tredje inntektskvartil";1.1;0.2;0.7;0.6;0.8;0.4;0.5;0.3;0.2;0.7;0.5;0.5;0.8
+"Boutgifter utgjør 60 prosent eller mer av inntekt (prosent)";"Høyeste inntektskvartil";0.6;0.7;0.5;0.7;0.0;0.0;0.3;0.2;0.5;0.0;0.1;0.8;0.9
+"Antall husholdninger som svarte";"Laveste inntektskvartil";1162;1480;1384;1619;1365;1498;1351;1351;1380;1311;1344;1220;1163
+"Antall husholdninger som svarte";"Andre inntektskvartil";1131;1409;1369;1643;1412;1537;1387;1341;1366;1347;1347;1315;1219
+"Antall husholdninger som svarte";"Tredje inntektskvartil";1158;1557;1622;1892;1705;1770;1541;1505;1538;1563;1523;1406;1453
+"Antall husholdninger som svarte";"Høyeste inntektskvartil";1413;1740;1765;2219;1911;2054;1900;1783;1795;1810;1817;1795;1696

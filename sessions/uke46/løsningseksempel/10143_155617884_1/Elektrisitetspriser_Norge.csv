@@ -1,0 +1,896 @@
+"09364: Kraftpriser i sluttbrukermarkedet, etter kontraktstype, kvartal og statistikkvariabel"
+
+"kontraktstype";"kvartal";"Kraftpris ekskl. avgifter (øre/kWh)";"Kraftpris inkl. mva (øre/kWh)";"Fordeling av kontraktstyper (prosent)"
+"HUSHOLDNINGER";"2012K1";34.4;42.0;100.0
+"HUSHOLDNINGER";"2012K2";26.1;31.8;100.0
+"HUSHOLDNINGER";"2012K3";20.0;24.3;100.0
+"HUSHOLDNINGER";"2012K4";30.4;37.1;100.0
+"HUSHOLDNINGER";"2013K1";34.9;42.6;100.0
+"HUSHOLDNINGER";"2013K2";34.6;42.2;100.0
+"HUSHOLDNINGER";"2013K3";33.4;40.6;100.0
+"HUSHOLDNINGER";"2013K4";35.6;43.4;100.0
+"HUSHOLDNINGER";"2014K1";31.5;38.4;100.0
+"HUSHOLDNINGER";"2014K2";26.6;32.5;100.0
+"HUSHOLDNINGER";"2014K3";31.6;38.5;100.0
+"HUSHOLDNINGER";"2014K4";31.7;38.7;100.0
+"HUSHOLDNINGER";"2015K1";31.3;38.1;100.0
+"HUSHOLDNINGER";"2015K2";26.0;31.7;100.0
+"HUSHOLDNINGER";"2015K3";20.0;24.4;100.0
+"HUSHOLDNINGER";"2015K4";25.9;31.6;100.0
+"HUSHOLDNINGER";"2016K1";28.7;35.0;100.0
+"HUSHOLDNINGER";"2016K2";28.8;35.1;100.0
+"HUSHOLDNINGER";"2016K3";30.5;37.2;100.0
+"HUSHOLDNINGER";"2016K4";37.6;45.8;100.0
+"HUSHOLDNINGER";"2017K1";34.3;41.9;100.0
+"HUSHOLDNINGER";"2017K2";33.1;40.4;100.0
+"HUSHOLDNINGER";"2017K3";33.3;40.6;100.0
+"HUSHOLDNINGER";"2017K4";36.0;43.8;100.0
+"HUSHOLDNINGER";"2018K1";42.5;51.8;100.0
+"HUSHOLDNINGER";"2018K2";44.6;54.4;100.0
+"HUSHOLDNINGER";"2018K3";55.3;67.5;100.0
+"HUSHOLDNINGER";"2018K4";54.8;66.9;100.0
+"HUSHOLDNINGER";"2019K1";55.2;67.4;100.0
+"HUSHOLDNINGER";"2019K2";45.6;55.7;100.0
+"HUSHOLDNINGER";"2019K3";42.5;51.9;100.0
+"HUSHOLDNINGER";"2019K4";46.8;57.2;100.0
+"HUSHOLDNINGER";"2020K1";26.8;32.7;100.0
+"HUSHOLDNINGER";"2020K2";14.9;18.2;100.0
+"HUSHOLDNINGER";"2020K3";14.4;17.6;100.0
+"HUSHOLDNINGER";"2020K4";22.2;27.1;100.0
+"HUSHOLDNINGER";"2021K1";53.5;65.3;100.0
+"HUSHOLDNINGER";"2021K2";50.9;62.2;100.0
+"HUSHOLDNINGER";"2021K3";76.3;93.1;100.0
+"HUSHOLDNINGER";"2021K4";108.1;132.0;100.0
+"HUSHOLDNINGER";"2022K1";117.2;143.1;100.0
+"HUSHOLDNINGER";"2022K2";124.2;151.6;100.0
+"HUSHOLDNINGER";"2022K3";214.3;261.6;100.0
+"HUSHOLDNINGER";"2022K4";169.6;207.0;100.0
+"HUSHOLDNINGER";"2023K1";110.5;134.8;100.0
+"HUSHOLDNINGER";"2023K2";84.7;103.2;100.0
+"HUSHOLDNINGER";"2023K3";42.2;51.5;100.0
+"Nye fastpriskontrakter, inntil 1-års varighet, husholdninger";"2012K1";40.0;48.7;2.0
+"Nye fastpriskontrakter, inntil 1-års varighet, husholdninger";"2012K2";38.4;46.8;1.3
+"Nye fastpriskontrakter, inntil 1-års varighet, husholdninger";"2012K3";35.6;43.4;0.5
+"Nye fastpriskontrakter, inntil 1-års varighet, husholdninger";"2012K4";32.7;39.9;0.7
+"Nye fastpriskontrakter, inntil 1-års varighet, husholdninger";"2013K1";35.0;42.7;0.7
+"Nye fastpriskontrakter, inntil 1-års varighet, husholdninger";"2013K2";35.6;43.3;0.3
+"Nye fastpriskontrakter, inntil 1-års varighet, husholdninger";"2013K3";32.9;40.1;0.6
+"Nye fastpriskontrakter, inntil 1-års varighet, husholdninger";"2013K4";37.1;45.3;0.4
+"Nye fastpriskontrakter, inntil 1-års varighet, husholdninger";"2014K1";33.4;40.7;0.3
+"Nye fastpriskontrakter, inntil 1-års varighet, husholdninger";"2014K2";33.5;40.8;0.6
+"Nye fastpriskontrakter, inntil 1-års varighet, husholdninger";"2014K3";34.5;42.0;0.3
+"Nye fastpriskontrakter, inntil 1-års varighet, husholdninger";"2014K4";33.5;40.8;0.4
+"Nye fastpriskontrakter, inntil 1-års varighet, husholdninger";"2015K1";33.6;40.9;0.4
+"Nye fastpriskontrakter, inntil 1-års varighet, husholdninger";"2015K2";32.9;40.1;0.3
+"Nye fastpriskontrakter, inntil 1-års varighet, husholdninger";"2015K3";31.5;38.4;0.2
+"Nye fastpriskontrakter, inntil 1-års varighet, husholdninger";"2015K4";31.1;37.9;0.2
+"Nye fastpriskontrakter, inntil 1-års varighet, husholdninger";"2016K1";26.8;32.7;0.2
+"Nye fastpriskontrakter, inntil 1-års varighet, husholdninger";"2016K2";26.8;32.7;0.1
+"Nye fastpriskontrakter, inntil 1-års varighet, husholdninger";"2016K3";29.6;36.0;0.1
+"Nye fastpriskontrakter, inntil 1-års varighet, husholdninger";"2016K4";31.1;37.9;0.2
+"Nye fastpriskontrakter, inntil 1-års varighet, husholdninger";"2017K1";32.0;39.0;0.2
+"Nye fastpriskontrakter, inntil 1-års varighet, husholdninger";"2017K2";30.0;36.6;0.1
+"Nye fastpriskontrakter, inntil 1-års varighet, husholdninger";"2017K3";31.0;37.8;0.1
+"Nye fastpriskontrakter, inntil 1-års varighet, husholdninger";"2017K4";30.6;37.3;0.2
+"Nye fastpriskontrakter, inntil 1-års varighet, husholdninger";"2018K1";32.9;40.1;0.4
+"Nye fastpriskontrakter, inntil 1-års varighet, husholdninger";"2018K2";35.6;43.5;0.2
+"Nye fastpriskontrakter, inntil 1-års varighet, husholdninger";"2018K3";43.6;53.2;0.2
+"Nye fastpriskontrakter, inntil 1-års varighet, husholdninger";"2018K4";51.3;62.7;0.3
+"Nye fastpriskontrakter, inntil 1-års varighet, husholdninger";"2019K1";46.0;56.2;0.4
+"Nye fastpriskontrakter, inntil 1-års varighet, husholdninger";"2019K2";36.5;44.5;0.2
+"Nye fastpriskontrakter, inntil 1-års varighet, husholdninger";"2019K3";38.8;47.4;0.3
+"Nye fastpriskontrakter, inntil 1-års varighet, husholdninger";"2019K4";42.3;51.6;0.3
+"Nye fastpriskontrakter, inntil 1-års varighet, husholdninger";"2020K1";35.7;43.6;0.5
+"Nye fastpriskontrakter, inntil 1-års varighet, husholdninger";"2020K2";23.7;28.9;0.4
+"Nye fastpriskontrakter, inntil 1-års varighet, husholdninger";"2020K3";17.3;21.1;0.3
+"Nye fastpriskontrakter, inntil 1-års varighet, husholdninger";"2020K4";24.3;29.7;0.4
+"Nye fastpriskontrakter, inntil 1-års varighet, husholdninger";"2021K1";32.3;39.4;0.6
+"Nye fastpriskontrakter, inntil 1-års varighet, husholdninger";"2021K2";31.1;37.9;0.5
+"Nye fastpriskontrakter, inntil 1-års varighet, husholdninger";"2021K3";80.7;98.6;1.5
+"Nye fastpriskontrakter, inntil 1-års varighet, husholdninger";"2021K4";72.7;88.7;1.1
+"Nye fastpriskontrakter, inntil 1-års varighet, husholdninger";"2022K1";95.2;116.2;1.2
+"Nye fastpriskontrakter, inntil 1-års varighet, husholdninger";"2022K2";94.8;115.7;1.5
+"Nye fastpriskontrakter, inntil 1-års varighet, husholdninger";"2022K3";91.6;111.8;0.9
+"Nye fastpriskontrakter, inntil 1-års varighet, husholdninger";"2022K4";77.8;95.0;0.6
+"Nye fastpriskontrakter, inntil 1-års varighet, husholdninger";"2023K1";59.5;72.6;0.6
+"Nye fastpriskontrakter, inntil 1-års varighet, husholdninger";"2023K2";43.8;53.4;0.5
+"Nye fastpriskontrakter, inntil 1-års varighet, husholdninger";"2023K3";36.9;44.9;0.6
+"Nye fastpriskontrakter, over 1-års varighet, husholdninger";"2012K1";39.2;47.7;0.9
+"Nye fastpriskontrakter, over 1-års varighet, husholdninger";"2012K2";35.5;43.2;0.6
+"Nye fastpriskontrakter, over 1-års varighet, husholdninger";"2012K3";34.0;41.5;0.8
+"Nye fastpriskontrakter, over 1-års varighet, husholdninger";"2012K4";35.3;43.1;0.8
+"Nye fastpriskontrakter, over 1-års varighet, husholdninger";"2013K1";35.5;43.3;0.3
+"Nye fastpriskontrakter, over 1-års varighet, husholdninger";"2013K2";35.5;43.2;0.3
+"Nye fastpriskontrakter, over 1-års varighet, husholdninger";"2013K3";34.1;41.6;0.3
+"Nye fastpriskontrakter, over 1-års varighet, husholdninger";"2013K4";37.4;45.5;0.4
+"Nye fastpriskontrakter, over 1-års varighet, husholdninger";"2014K1";35.8;43.6;0.3
+"Nye fastpriskontrakter, over 1-års varighet, husholdninger";"2014K2";34.9;42.5;0.3
+"Nye fastpriskontrakter, over 1-års varighet, husholdninger";"2014K3";32.8;40.0;0.2
+"Nye fastpriskontrakter, over 1-års varighet, husholdninger";"2014K4";32.5;39.7;0.2
+"Nye fastpriskontrakter, over 1-års varighet, husholdninger";"2015K1";32.1;39.1;0.2
+"Nye fastpriskontrakter, over 1-års varighet, husholdninger";"2015K2";33.5;40.9;0.2
+"Nye fastpriskontrakter, over 1-års varighet, husholdninger";"2015K3";31.2;38.0;0.1
+"Nye fastpriskontrakter, over 1-års varighet, husholdninger";"2015K4";31.1;37.9;0.1
+"Nye fastpriskontrakter, over 1-års varighet, husholdninger";"2016K1";27.4;33.4;0.1
+"Nye fastpriskontrakter, over 1-års varighet, husholdninger";"2016K2";28.0;34.1;0.1
+"Nye fastpriskontrakter, over 1-års varighet, husholdninger";"2016K3";30.3;36.9;0.1
+"Nye fastpriskontrakter, over 1-års varighet, husholdninger";"2016K4";29.9;36.5;0.1
+"Nye fastpriskontrakter, over 1-års varighet, husholdninger";"2017K1";29.6;36.1;0.3
+"Nye fastpriskontrakter, over 1-års varighet, husholdninger";"2017K2";30.6;37.3;0.1
+"Nye fastpriskontrakter, over 1-års varighet, husholdninger";"2017K3";32.0;39.0;0.1
+"Nye fastpriskontrakter, over 1-års varighet, husholdninger";"2017K4";34.3;41.8;0.1
+"Nye fastpriskontrakter, over 1-års varighet, husholdninger";"2018K1";27.6;33.6;0.2
+"Nye fastpriskontrakter, over 1-års varighet, husholdninger";"2018K2";34.2;41.8;0.1
+"Nye fastpriskontrakter, over 1-års varighet, husholdninger";"2018K3";41.8;51.0;0.1
+"Nye fastpriskontrakter, over 1-års varighet, husholdninger";"2018K4";43.5;53.2;0.2
+"Nye fastpriskontrakter, over 1-års varighet, husholdninger";"2019K1";42.3;51.6;0.1
+"Nye fastpriskontrakter, over 1-års varighet, husholdninger";"2019K2";36.3;44.4;0.2
+"Nye fastpriskontrakter, over 1-års varighet, husholdninger";"2019K3";42.9;52.4;0.1
+"Nye fastpriskontrakter, over 1-års varighet, husholdninger";"2019K4";41.8;51.1;0.2
+"Nye fastpriskontrakter, over 1-års varighet, husholdninger";"2020K1";33.9;41.4;0.1
+"Nye fastpriskontrakter, over 1-års varighet, husholdninger";"2020K2";34.3;41.9;0.0
+"Nye fastpriskontrakter, over 1-års varighet, husholdninger";"2020K3";38.1;46.5;0.0
+"Nye fastpriskontrakter, over 1-års varighet, husholdninger";"2020K4";32.3;39.4;0.0
+"Nye fastpriskontrakter, over 1-års varighet, husholdninger";"2021K1";32.4;39.5;0.1
+"Nye fastpriskontrakter, over 1-års varighet, husholdninger";"2021K2";28.4;34.6;0.1
+"Nye fastpriskontrakter, over 1-års varighet, husholdninger";"2021K3";41.5;50.7;0.1
+"Nye fastpriskontrakter, over 1-års varighet, husholdninger";"2021K4";47.8;58.4;0.4
+"Nye fastpriskontrakter, over 1-års varighet, husholdninger";"2022K1";55.3;67.5;0.7
+"Nye fastpriskontrakter, over 1-års varighet, husholdninger";"2022K2";47.6;58.1;0.3
+"Nye fastpriskontrakter, over 1-års varighet, husholdninger";"2022K3";55.0;67.1;0.1
+"Nye fastpriskontrakter, over 1-års varighet, husholdninger";"2022K4";50.2;61.3;0.2
+"Nye fastpriskontrakter, over 1-års varighet, husholdninger";"2023K1";70.9;86.6;0.0
+"Nye fastpriskontrakter, over 1-års varighet, husholdninger";"2023K2";66.1;80.5;0.0
+"Nye fastpriskontrakter, over 1-års varighet, husholdninger";"2023K3";48.2;58.8;0.0
+"Eldre fastpriskontrakter, husholdninger";"2012K1";38.8;47.3;4.9
+"Eldre fastpriskontrakter, husholdninger";"2012K2";38.9;47.5;3.9
+"Eldre fastpriskontrakter, husholdninger";"2012K3";36.1;44.0;5.4
+"Eldre fastpriskontrakter, husholdninger";"2012K4";36.7;44.8;4.6
+"Eldre fastpriskontrakter, husholdninger";"2013K1";36.0;43.9;5.0
+"Eldre fastpriskontrakter, husholdninger";"2013K2";36.1;43.9;4.1
+"Eldre fastpriskontrakter, husholdninger";"2013K3";35.8;43.7;4.2
+"Eldre fastpriskontrakter, husholdninger";"2013K4";36.6;44.6;3.5
+"Eldre fastpriskontrakter, husholdninger";"2014K1";36.2;44.1;3.6
+"Eldre fastpriskontrakter, husholdninger";"2014K2";35.9;43.8;3.4
+"Eldre fastpriskontrakter, husholdninger";"2014K3";38.2;46.5;7.0
+"Eldre fastpriskontrakter, husholdninger";"2014K4";34.3;41.8;2.6
+"Eldre fastpriskontrakter, husholdninger";"2015K1";33.4;40.7;2.1
+"Eldre fastpriskontrakter, husholdninger";"2015K2";33.1;40.3;2.3
+"Eldre fastpriskontrakter, husholdninger";"2015K3";33.5;40.8;2.1
+"Eldre fastpriskontrakter, husholdninger";"2015K4";32.2;39.2;1.7
+"Eldre fastpriskontrakter, husholdninger";"2016K1";31.1;37.9;1.7
+"Eldre fastpriskontrakter, husholdninger";"2016K2";30.7;37.4;1.7
+"Eldre fastpriskontrakter, husholdninger";"2016K3";29.8;36.4;1.5
+"Eldre fastpriskontrakter, husholdninger";"2016K4";29.7;36.2;1.4
+"Eldre fastpriskontrakter, husholdninger";"2017K1";30.2;36.9;1.6
+"Eldre fastpriskontrakter, husholdninger";"2017K2";30.6;37.3;1.5
+"Eldre fastpriskontrakter, husholdninger";"2017K3";31.9;38.9;3.6
+"Eldre fastpriskontrakter, husholdninger";"2017K4";30.6;37.3;1.4
+"Eldre fastpriskontrakter, husholdninger";"2018K1";30.4;37.0;1.5
+"Eldre fastpriskontrakter, husholdninger";"2018K2";30.2;36.9;2.0
+"Eldre fastpriskontrakter, husholdninger";"2018K3";32.3;39.5;1.7
+"Eldre fastpriskontrakter, husholdninger";"2018K4";34.2;41.7;1.9
+"Eldre fastpriskontrakter, husholdninger";"2019K1";34.6;42.2;1.5
+"Eldre fastpriskontrakter, husholdninger";"2019K2";35.1;42.9;1.9
+"Eldre fastpriskontrakter, husholdninger";"2019K3";36.5;44.6;1.9
+"Eldre fastpriskontrakter, husholdninger";"2019K4";37.2;45.4;1.8
+"Eldre fastpriskontrakter, husholdninger";"2020K1";38.3;46.8;1.7
+"Eldre fastpriskontrakter, husholdninger";"2020K2";35.5;43.3;1.9
+"Eldre fastpriskontrakter, husholdninger";"2020K3";33.3;40.7;1.7
+"Eldre fastpriskontrakter, husholdninger";"2020K4";33.7;41.1;1.5
+"Eldre fastpriskontrakter, husholdninger";"2021K1";36.6;44.6;1.6
+"Eldre fastpriskontrakter, husholdninger";"2021K2";34.1;41.7;1.9
+"Eldre fastpriskontrakter, husholdninger";"2021K3";34.9;42.6;2.0
+"Eldre fastpriskontrakter, husholdninger";"2021K4";38.8;47.3;2.0
+"Eldre fastpriskontrakter, husholdninger";"2022K1";50.0;61.0;3.3
+"Eldre fastpriskontrakter, husholdninger";"2022K2";49.2;60.0;6.1
+"Eldre fastpriskontrakter, husholdninger";"2022K3";58.4;71.3;4.4
+"Eldre fastpriskontrakter, husholdninger";"2022K4";56.4;68.8;3.9
+"Eldre fastpriskontrakter, husholdninger";"2023K1";53.5;65.3;2.8
+"Eldre fastpriskontrakter, husholdninger";"2023K2";52.5;64.0;3.2
+"Eldre fastpriskontrakter, husholdninger";"2023K3";51.6;62.9;2.7
+"Kontrakter tilknyttet elspotprisen, husholdninger";"2012K1";33.3;40.6;60.9
+"Kontrakter tilknyttet elspotprisen, husholdninger";"2012K2";24.0;29.3;65.1
+"Kontrakter tilknyttet elspotprisen, husholdninger";"2012K3";17.0;20.7;67.0
+"Kontrakter tilknyttet elspotprisen, husholdninger";"2012K4";30.5;37.2;67.8
+"Kontrakter tilknyttet elspotprisen, husholdninger";"2013K1";34.4;41.9;66.9
+"Kontrakter tilknyttet elspotprisen, husholdninger";"2013K2";34.2;41.7;67.4
+"Kontrakter tilknyttet elspotprisen, husholdninger";"2013K3";32.5;39.6;68.1
+"Kontrakter tilknyttet elspotprisen, husholdninger";"2013K4";34.3;41.8;66.0
+"Kontrakter tilknyttet elspotprisen, husholdninger";"2014K1";29.3;35.7;66.1
+"Kontrakter tilknyttet elspotprisen, husholdninger";"2014K2";24.0;29.2;67.1
+"Kontrakter tilknyttet elspotprisen, husholdninger";"2014K3";30.3;36.9;60.2
+"Kontrakter tilknyttet elspotprisen, husholdninger";"2014K4";30.4;37.0;68.3
+"Kontrakter tilknyttet elspotprisen, husholdninger";"2015K1";29.1;35.5;67.7
+"Kontrakter tilknyttet elspotprisen, husholdninger";"2015K2";23.5;28.7;69.2
+"Kontrakter tilknyttet elspotprisen, husholdninger";"2015K3";17.2;21.0;67.6
+"Kontrakter tilknyttet elspotprisen, husholdninger";"2015K4";24.2;29.6;69.3
+"Kontrakter tilknyttet elspotprisen, husholdninger";"2016K1";26.9;32.8;69.9
+"Kontrakter tilknyttet elspotprisen, husholdninger";"2016K2";27.4;33.4;70.7
+"Kontrakter tilknyttet elspotprisen, husholdninger";"2016K3";29.1;35.5;71.5
+"Kontrakter tilknyttet elspotprisen, husholdninger";"2016K4";36.6;44.6;71.3
+"Kontrakter tilknyttet elspotprisen, husholdninger";"2017K1";32.1;39.2;68.0
+"Kontrakter tilknyttet elspotprisen, husholdninger";"2017K2";31.8;38.7;69.2
+"Kontrakter tilknyttet elspotprisen, husholdninger";"2017K3";32.3;39.4;69.6
+"Kontrakter tilknyttet elspotprisen, husholdninger";"2017K4";34.9;42.6;71.8
+"Kontrakter tilknyttet elspotprisen, husholdninger";"2018K1";42.2;51.5;72.3
+"Kontrakter tilknyttet elspotprisen, husholdninger";"2018K2";43.6;53.2;72.1
+"Kontrakter tilknyttet elspotprisen, husholdninger";"2018K3";54.3;66.3;72.4
+"Kontrakter tilknyttet elspotprisen, husholdninger";"2018K4";53.1;64.9;72.2
+"Kontrakter tilknyttet elspotprisen, husholdninger";"2019K1";53.1;64.8;74.7
+"Kontrakter tilknyttet elspotprisen, husholdninger";"2019K2";43.8;53.5;74.7
+"Kontrakter tilknyttet elspotprisen, husholdninger";"2019K3";41.0;50.1;76.0
+"Kontrakter tilknyttet elspotprisen, husholdninger";"2019K4";45.3;55.2;73.7
+"Kontrakter tilknyttet elspotprisen, husholdninger";"2020K1";22.9;27.9;77.1
+"Kontrakter tilknyttet elspotprisen, husholdninger";"2020K2";12.3;15.1;78.2
+"Kontrakter tilknyttet elspotprisen, husholdninger";"2020K3";12.2;14.9;80.1
+"Kontrakter tilknyttet elspotprisen, husholdninger";"2020K4";20.2;24.7;77.1
+"Kontrakter tilknyttet elspotprisen, husholdninger";"2021K1";53.8;65.7;76.1
+"Kontrakter tilknyttet elspotprisen, husholdninger";"2021K2";50.3;61.4;75.7
+"Kontrakter tilknyttet elspotprisen, husholdninger";"2021K3";79.4;96.9;74.1
+"Kontrakter tilknyttet elspotprisen, husholdninger";"2021K4";111.4;136.0;74.5
+"Kontrakter tilknyttet elspotprisen, husholdninger";"2022K1";116.4;142.1;75.9
+"Kontrakter tilknyttet elspotprisen, husholdninger";"2022K2";127.3;155.4;75.1
+"Kontrakter tilknyttet elspotprisen, husholdninger";"2022K3";225.3;275.0;80.1
+"Kontrakter tilknyttet elspotprisen, husholdninger";"2022K4";170.6;208.2;87.4
+"Kontrakter tilknyttet elspotprisen, husholdninger";"2023K1";108.5;132.4;92.1
+"Kontrakter tilknyttet elspotprisen, husholdninger";"2023K2";84.4;102.8;92.1
+"Kontrakter tilknyttet elspotprisen, husholdninger";"2023K3";39.2;47.8;92.9
+"Variabel pris kontrakter, husholdninger";"2012K1";35.5;43.3;31.3
+"Variabel pris kontrakter, husholdninger";"2012K2";28.4;34.6;29.2
+"Variabel pris kontrakter, husholdninger";"2012K3";23.5;28.7;26.2
+"Variabel pris kontrakter, husholdninger";"2012K4";28.8;35.1;26.0
+"Variabel pris kontrakter, husholdninger";"2013K1";36.0;43.9;27.1
+"Variabel pris kontrakter, husholdninger";"2013K2";35.4;43.2;27.9
+"Variabel pris kontrakter, husholdninger";"2013K3";35.1;42.8;26.8
+"Variabel pris kontrakter, husholdninger";"2013K4";38.3;46.7;29.7
+"Variabel pris kontrakter, husholdninger";"2014K1";35.8;43.6;29.7
+"Variabel pris kontrakter, husholdninger";"2014K2";31.6;38.5;28.6
+"Variabel pris kontrakter, husholdninger";"2014K3";32.5;39.6;32.2
+"Variabel pris kontrakter, husholdninger";"2014K4";34.7;42.3;28.5
+"Variabel pris kontrakter, husholdninger";"2015K1";36.0;43.9;29.6
+"Variabel pris kontrakter, husholdninger";"2015K2";31.4;38.3;28.1
+"Variabel pris kontrakter, husholdninger";"2015K3";25.3;30.8;30.0
+"Variabel pris kontrakter, husholdninger";"2015K4";29.5;35.9;28.6
+"Variabel pris kontrakter, husholdninger";"2016K1";33.0;40.2;28.1
+"Variabel pris kontrakter, husholdninger";"2016K2";32.2;39.2;27.5
+"Variabel pris kontrakter, husholdninger";"2016K3";34.3;41.8;26.8
+"Variabel pris kontrakter, husholdninger";"2016K4";40.6;49.5;27.0
+"Variabel pris kontrakter, husholdninger";"2017K1";39.6;48.3;30.0
+"Variabel pris kontrakter, husholdninger";"2017K2";36.5;44.5;29.1
+"Variabel pris kontrakter, husholdninger";"2017K3";36.0;43.9;26.6
+"Variabel pris kontrakter, husholdninger";"2017K4";39.0;47.6;26.5
+"Variabel pris kontrakter, husholdninger";"2018K1";44.4;54.1;25.6
+"Variabel pris kontrakter, husholdninger";"2018K2";48.5;59.2;25.7
+"Variabel pris kontrakter, husholdninger";"2018K3";59.9;73.1;25.5
+"Variabel pris kontrakter, husholdninger";"2018K4";61.2;74.7;25.4
+"Variabel pris kontrakter, husholdninger";"2019K1";63.6;77.6;23.3
+"Variabel pris kontrakter, husholdninger";"2019K2";52.3;63.9;23.0
+"Variabel pris kontrakter, husholdninger";"2019K3";48.5;59.2;21.6
+"Variabel pris kontrakter, husholdninger";"2019K4";52.6;64.2;23.9
+"Variabel pris kontrakter, husholdninger";"2020K1";40.3;49.3;20.6
+"Variabel pris kontrakter, husholdninger";"2020K2";22.8;27.8;19.5
+"Variabel pris kontrakter, husholdninger";"2020K3";22.8;27.8;17.8
+"Variabel pris kontrakter, husholdninger";"2020K4";28.5;34.8;20.9
+"Variabel pris kontrakter, husholdninger";"2021K1";54.4;66.5;21.6
+"Variabel pris kontrakter, husholdninger";"2021K2";55.2;67.4;21.7
+"Variabel pris kontrakter, husholdninger";"2021K3";69.7;85.1;22.2
+"Variabel pris kontrakter, husholdninger";"2021K4";106.0;129.5;21.9
+"Variabel pris kontrakter, husholdninger";"2022K1";135.8;165.8;18.9
+"Variabel pris kontrakter, husholdninger";"2022K2";141.0;172.1;17.0
+"Variabel pris kontrakter, husholdninger";"2022K3";209.3;255.6;14.5
+"Variabel pris kontrakter, husholdninger";"2022K4";222.7;271.9;8.0
+"Variabel pris kontrakter, husholdninger";"2023K1";196.4;239.8;4.4
+"Variabel pris kontrakter, husholdninger";"2023K2";120.4;146.8;4.2
+"Variabel pris kontrakter, husholdninger";"2023K3";109.8;133.8;3.8
+"TJENESTEYTENDE NÆRINGER";"2012K1";32.6;.;100.0
+"TJENESTEYTENDE NÆRINGER";"2012K2";25.4;.;100.0
+"TJENESTEYTENDE NÆRINGER";"2012K3";19.4;.;100.0
+"TJENESTEYTENDE NÆRINGER";"2012K4";31.3;.;100.0
+"TJENESTEYTENDE NÆRINGER";"2013K1";34.1;.;100.0
+"TJENESTEYTENDE NÆRINGER";"2013K2";34.0;.;100.0
+"TJENESTEYTENDE NÆRINGER";"2013K3";31.1;.;100.0
+"TJENESTEYTENDE NÆRINGER";"2013K4";34.5;.;100.0
+"TJENESTEYTENDE NÆRINGER";"2014K1";29.9;.;100.0
+"TJENESTEYTENDE NÆRINGER";"2014K2";24.4;.;100.0
+"TJENESTEYTENDE NÆRINGER";"2014K3";30.0;.;100.0
+"TJENESTEYTENDE NÆRINGER";"2014K4";30.5;.;100.0
+"TJENESTEYTENDE NÆRINGER";"2015K1";29.1;.;100.0
+"TJENESTEYTENDE NÆRINGER";"2015K2";23.5;.;100.0
+"TJENESTEYTENDE NÆRINGER";"2015K3";18.1;.;100.0
+"TJENESTEYTENDE NÆRINGER";"2015K4";25.0;.;100.0
+"TJENESTEYTENDE NÆRINGER";"2016K1";27.3;.;100.0
+"TJENESTEYTENDE NÆRINGER";"2016K2";25.9;.;100.0
+"TJENESTEYTENDE NÆRINGER";"2016K3";27.2;.;100.0
+"TJENESTEYTENDE NÆRINGER";"2016K4";35.5;.;100.0
+"TJENESTEYTENDE NÆRINGER";"2017K1";30.9;.;100.0
+"TJENESTEYTENDE NÆRINGER";"2017K2";29.4;.;100.0
+"TJENESTEYTENDE NÆRINGER";"2017K3";29.8;.;100.0
+"TJENESTEYTENDE NÆRINGER";"2017K4";32.8;.;100.0
+"TJENESTEYTENDE NÆRINGER";"2018K1";39.0;.;100.0
+"TJENESTEYTENDE NÆRINGER";"2018K2";40.8;.;100.0
+"TJENESTEYTENDE NÆRINGER";"2018K3";51.0;.;100.0
+"TJENESTEYTENDE NÆRINGER";"2018K4";50.7;.;100.0
+"TJENESTEYTENDE NÆRINGER";"2019K1";51.1;.;100.0
+"TJENESTEYTENDE NÆRINGER";"2019K2";42.0;.;100.0
+"TJENESTEYTENDE NÆRINGER";"2019K3";37.9;.;100.0
+"TJENESTEYTENDE NÆRINGER";"2019K4";43.1;.;100.0
+"TJENESTEYTENDE NÆRINGER";"2020K1";24.6;.;100.0
+"TJENESTEYTENDE NÆRINGER";"2020K2";11.9;.;100.0
+"TJENESTEYTENDE NÆRINGER";"2020K3";10.3;.;100.0
+"TJENESTEYTENDE NÆRINGER";"2020K4";18.3;.;100.0
+"TJENESTEYTENDE NÆRINGER";"2021K1";49.1;.;100.0
+"TJENESTEYTENDE NÆRINGER";"2021K2";45.8;.;100.0
+"TJENESTEYTENDE NÆRINGER";"2021K3";72.3;.;100.0
+"TJENESTEYTENDE NÆRINGER";"2021K4";105.9;.;100.0
+"TJENESTEYTENDE NÆRINGER";"2022K1";113.0;.;100.0
+"TJENESTEYTENDE NÆRINGER";"2022K2";125.5;.;100.0
+"TJENESTEYTENDE NÆRINGER";"2022K3";226.0;.;100.0
+"TJENESTEYTENDE NÆRINGER";"2022K4";162.6;.;100.0
+"TJENESTEYTENDE NÆRINGER";"2023K1";110.2;.;100.0
+"TJENESTEYTENDE NÆRINGER";"2023K2";80.8;.;100.0
+"TJENESTEYTENDE NÆRINGER";"2023K3";37.3;.;100.0
+"Nye fastpriskontrakter, tjenesteytende næringer";"2012K1";37.2;.;2.2
+"Nye fastpriskontrakter, tjenesteytende næringer";"2012K2";34.5;.;4.6
+"Nye fastpriskontrakter, tjenesteytende næringer";"2012K3";35.5;.;1.1
+"Nye fastpriskontrakter, tjenesteytende næringer";"2012K4";36.2;.;2.0
+"Nye fastpriskontrakter, tjenesteytende næringer";"2013K1";35.3;.;2.9
+"Nye fastpriskontrakter, tjenesteytende næringer";"2013K2";33.9;.;2.6
+"Nye fastpriskontrakter, tjenesteytende næringer";"2013K3";32.7;.;0.9
+"Nye fastpriskontrakter, tjenesteytende næringer";"2013K4";34.9;.;1.0
+"Nye fastpriskontrakter, tjenesteytende næringer";"2014K1";32.5;.;1.7
+"Nye fastpriskontrakter, tjenesteytende næringer";"2014K2";31.3;.;3.6
+"Nye fastpriskontrakter, tjenesteytende næringer";"2014K3";31.7;.;1.0
+"Nye fastpriskontrakter, tjenesteytende næringer";"2014K4";34.1;.;1.5
+"Nye fastpriskontrakter, tjenesteytende næringer";"2015K1";33.0;.;0.8
+"Nye fastpriskontrakter, tjenesteytende næringer";"2015K2";33.8;.;2.1
+"Nye fastpriskontrakter, tjenesteytende næringer";"2015K3";29.2;.;1.3
+"Nye fastpriskontrakter, tjenesteytende næringer";"2015K4";30.6;.;0.8
+"Nye fastpriskontrakter, tjenesteytende næringer";"2016K1";30.1;.;1.1
+"Nye fastpriskontrakter, tjenesteytende næringer";"2016K2";31.7;.;1.8
+"Nye fastpriskontrakter, tjenesteytende næringer";"2016K3";28.7;.;0.1
+"Nye fastpriskontrakter, tjenesteytende næringer";"2016K4";31.8;.;0.8
+"Nye fastpriskontrakter, tjenesteytende næringer";"2017K1";28.1;.;0.7
+"Nye fastpriskontrakter, tjenesteytende næringer";"2017K2";27.8;.;0.6
+"Nye fastpriskontrakter, tjenesteytende næringer";"2017K3";29.7;.;0.5
+"Nye fastpriskontrakter, tjenesteytende næringer";"2017K4";28.9;.;1.1
+"Nye fastpriskontrakter, tjenesteytende næringer";"2018K1";28.7;.;4.4
+"Nye fastpriskontrakter, tjenesteytende næringer";"2018K2";30.8;.;0.8
+"Nye fastpriskontrakter, tjenesteytende næringer";"2018K3";32.6;.;3.1
+"Nye fastpriskontrakter, tjenesteytende næringer";"2018K4";40.6;.;3.6
+"Nye fastpriskontrakter, tjenesteytende næringer";"2019K1";33.9;.;1.5
+"Nye fastpriskontrakter, tjenesteytende næringer";"2019K2";35.9;.;1.3
+"Nye fastpriskontrakter, tjenesteytende næringer";"2019K3";36.0;.;0.8
+"Nye fastpriskontrakter, tjenesteytende næringer";"2019K4";38.5;.;0.8
+"Nye fastpriskontrakter, tjenesteytende næringer";"2020K1";39.1;.;3.2
+"Nye fastpriskontrakter, tjenesteytende næringer";"2020K2";21.2;.;0.7
+"Nye fastpriskontrakter, tjenesteytende næringer";"2020K3";16.5;.;1.6
+"Nye fastpriskontrakter, tjenesteytende næringer";"2020K4";18.9;.;2.0
+"Nye fastpriskontrakter, tjenesteytende næringer";"2021K1";29.2;.;4.3
+"Nye fastpriskontrakter, tjenesteytende næringer";"2021K2";28.5;.;4.7
+"Nye fastpriskontrakter, tjenesteytende næringer";"2021K3";43.9;.;3.9
+"Nye fastpriskontrakter, tjenesteytende næringer";"2021K4";32.2;.;1.9
+"Nye fastpriskontrakter, tjenesteytende næringer";"2022K1";42.8;.;1.7
+"Nye fastpriskontrakter, tjenesteytende næringer";"2022K2";39.6;.;0.9
+"Nye fastpriskontrakter, tjenesteytende næringer";"2022K3";31.9;.;0.4
+"Nye fastpriskontrakter, tjenesteytende næringer";"2022K4";49.2;.;0.5
+"Nye fastpriskontrakter, tjenesteytende næringer";"2023K1";129.7;.;2.4
+"Nye fastpriskontrakter, tjenesteytende næringer";"2023K2";34.5;.;0.4
+"Nye fastpriskontrakter, tjenesteytende næringer";"2023K3";28.6;.;0.4
+"Eldre fastpriskontrakter, tjenesteytende næringer";"2012K1";38.8;.;4.1
+"Eldre fastpriskontrakter, tjenesteytende næringer";"2012K2";38.2;.;6.5
+"Eldre fastpriskontrakter, tjenesteytende næringer";"2012K3";34.6;.;12.7
+"Eldre fastpriskontrakter, tjenesteytende næringer";"2012K4";34.7;.;9.0
+"Eldre fastpriskontrakter, tjenesteytende næringer";"2013K1";36.3;.;6.0
+"Eldre fastpriskontrakter, tjenesteytende næringer";"2013K2";36.9;.;6.5
+"Eldre fastpriskontrakter, tjenesteytende næringer";"2013K3";36.4;.;9.4
+"Eldre fastpriskontrakter, tjenesteytende næringer";"2013K4";35.8;.;8.2
+"Eldre fastpriskontrakter, tjenesteytende næringer";"2014K1";35.0;.;7.4
+"Eldre fastpriskontrakter, tjenesteytende næringer";"2014K2";35.5;.;5.3
+"Eldre fastpriskontrakter, tjenesteytende næringer";"2014K3";35.3;.;8.9
+"Eldre fastpriskontrakter, tjenesteytende næringer";"2014K4";34.6;.;7.7
+"Eldre fastpriskontrakter, tjenesteytende næringer";"2015K1";33.4;.;5.6
+"Eldre fastpriskontrakter, tjenesteytende næringer";"2015K2";32.8;.;5.3
+"Eldre fastpriskontrakter, tjenesteytende næringer";"2015K3";32.5;.;6.9
+"Eldre fastpriskontrakter, tjenesteytende næringer";"2015K4";32.6;.;7.8
+"Eldre fastpriskontrakter, tjenesteytende næringer";"2016K1";31.1;.;6.0
+"Eldre fastpriskontrakter, tjenesteytende næringer";"2016K2";30.6;.;5.2
+"Eldre fastpriskontrakter, tjenesteytende næringer";"2016K3";31.4;.;7.0
+"Eldre fastpriskontrakter, tjenesteytende næringer";"2016K4";31.4;.;4.7
+"Eldre fastpriskontrakter, tjenesteytende næringer";"2017K1";29.5;.;4.2
+"Eldre fastpriskontrakter, tjenesteytende næringer";"2017K2";29.3;.;4.8
+"Eldre fastpriskontrakter, tjenesteytende næringer";"2017K3";29.2;.;6.9
+"Eldre fastpriskontrakter, tjenesteytende næringer";"2017K4";28.8;.;4.8
+"Eldre fastpriskontrakter, tjenesteytende næringer";"2018K1";32.1;.;2.8
+"Eldre fastpriskontrakter, tjenesteytende næringer";"2018K2";30.3;.;7.2
+"Eldre fastpriskontrakter, tjenesteytende næringer";"2018K3";31.1;.;5.8
+"Eldre fastpriskontrakter, tjenesteytende næringer";"2018K4";34.0;.;4.8
+"Eldre fastpriskontrakter, tjenesteytende næringer";"2019K1";40.4;.;3.5
+"Eldre fastpriskontrakter, tjenesteytende næringer";"2019K2";34.9;.;5.8
+"Eldre fastpriskontrakter, tjenesteytende næringer";"2019K3";35.0;.;7.5
+"Eldre fastpriskontrakter, tjenesteytende næringer";"2019K4";33.4;.;5.1
+"Eldre fastpriskontrakter, tjenesteytende næringer";"2020K1";38.0;.;4.1
+"Eldre fastpriskontrakter, tjenesteytende næringer";"2020K2";35.0;.;7.1
+"Eldre fastpriskontrakter, tjenesteytende næringer";"2020K3";24.8;.;4.5
+"Eldre fastpriskontrakter, tjenesteytende næringer";"2020K4";25.9;.;4.2
+"Eldre fastpriskontrakter, tjenesteytende næringer";"2021K1";30.1;.;3.0
+"Eldre fastpriskontrakter, tjenesteytende næringer";"2021K2";31.9;.;3.6
+"Eldre fastpriskontrakter, tjenesteytende næringer";"2021K3";31.1;.;4.0
+"Eldre fastpriskontrakter, tjenesteytende næringer";"2021K4";37.3;.;3.5
+"Eldre fastpriskontrakter, tjenesteytende næringer";"2022K1";53.3;.;2.0
+"Eldre fastpriskontrakter, tjenesteytende næringer";"2022K2";47.1;.;4.3
+"Eldre fastpriskontrakter, tjenesteytende næringer";"2022K3";82.2;.;4.9
+"Eldre fastpriskontrakter, tjenesteytende næringer";"2022K4";95.0;.;3.6
+"Eldre fastpriskontrakter, tjenesteytende næringer";"2023K1";48.2;.;2.6
+"Eldre fastpriskontrakter, tjenesteytende næringer";"2023K2";75.2;.;4.4
+"Eldre fastpriskontrakter, tjenesteytende næringer";"2023K3";71.4;.;6.0
+"Kontrakter tilknyttet elspotprisen, tjenesteytende næringer";"2012K1";32.1;.;89.1
+"Kontrakter tilknyttet elspotprisen, tjenesteytende næringer";"2012K2";23.8;.;83.1
+"Kontrakter tilknyttet elspotprisen, tjenesteytende næringer";"2012K3";16.7;.;82.2
+"Kontrakter tilknyttet elspotprisen, tjenesteytende næringer";"2012K4";31.2;.;81.1
+"Kontrakter tilknyttet elspotprisen, tjenesteytende næringer";"2013K1";33.8;.;86.8
+"Kontrakter tilknyttet elspotprisen, tjenesteytende næringer";"2013K2";33.7;.;85.7
+"Kontrakter tilknyttet elspotprisen, tjenesteytende næringer";"2013K3";30.4;.;85.2
+"Kontrakter tilknyttet elspotprisen, tjenesteytende næringer";"2013K4";34.3;.;85.7
+"Kontrakter tilknyttet elspotprisen, tjenesteytende næringer";"2014K1";29.2;.;85.2
+"Kontrakter tilknyttet elspotprisen, tjenesteytende næringer";"2014K2";23.0;.;82.6
+"Kontrakter tilknyttet elspotprisen, tjenesteytende næringer";"2014K3";29.3;.;85.5
+"Kontrakter tilknyttet elspotprisen, tjenesteytende næringer";"2014K4";29.9;.;86.3
+"Kontrakter tilknyttet elspotprisen, tjenesteytende næringer";"2015K1";28.6;.;89.0
+"Kontrakter tilknyttet elspotprisen, tjenesteytende næringer";"2015K2";22.5;.;88.3
+"Kontrakter tilknyttet elspotprisen, tjenesteytende næringer";"2015K3";16.5;.;87.1
+"Kontrakter tilknyttet elspotprisen, tjenesteytende næringer";"2015K4";24.0;.;86.2
+"Kontrakter tilknyttet elspotprisen, tjenesteytende næringer";"2016K1";26.8;.;88.2
+"Kontrakter tilknyttet elspotprisen, tjenesteytende næringer";"2016K2";25.3;.;89.0
+"Kontrakter tilknyttet elspotprisen, tjenesteytende næringer";"2016K3";26.7;.;89.5
+"Kontrakter tilknyttet elspotprisen, tjenesteytende næringer";"2016K4";35.7;.;90.9
+"Kontrakter tilknyttet elspotprisen, tjenesteytende næringer";"2017K1";30.7;.;90.4
+"Kontrakter tilknyttet elspotprisen, tjenesteytende næringer";"2017K2";29.2;.;88.7
+"Kontrakter tilknyttet elspotprisen, tjenesteytende næringer";"2017K3";29.7;.;88.3
+"Kontrakter tilknyttet elspotprisen, tjenesteytende næringer";"2017K4";32.8;.;88.3
+"Kontrakter tilknyttet elspotprisen, tjenesteytende næringer";"2018K1";39.5;.;86.1
+"Kontrakter tilknyttet elspotprisen, tjenesteytende næringer";"2018K2";41.5;.;87.6
+"Kontrakter tilknyttet elspotprisen, tjenesteytende næringer";"2018K3";52.7;.;87.2
+"Kontrakter tilknyttet elspotprisen, tjenesteytende næringer";"2018K4";51.7;.;87.5
+"Kontrakter tilknyttet elspotprisen, tjenesteytende næringer";"2019K1";51.6;.;90.8
+"Kontrakter tilknyttet elspotprisen, tjenesteytende næringer";"2019K2";42.3;.;88.9
+"Kontrakter tilknyttet elspotprisen, tjenesteytende næringer";"2019K3";37.9;.;88.7
+"Kontrakter tilknyttet elspotprisen, tjenesteytende næringer";"2019K4";43.5;.;87.5
+"Kontrakter tilknyttet elspotprisen, tjenesteytende næringer";"2020K1";23.0;.;86.6
+"Kontrakter tilknyttet elspotprisen, tjenesteytende næringer";"2020K2";9.7;.;88.0
+"Kontrakter tilknyttet elspotprisen, tjenesteytende næringer";"2020K3";9.1;.;89.7
+"Kontrakter tilknyttet elspotprisen, tjenesteytende næringer";"2020K4";17.8;.;88.7
+"Kontrakter tilknyttet elspotprisen, tjenesteytende næringer";"2021K1";51.0;.;86.6
+"Kontrakter tilknyttet elspotprisen, tjenesteytende næringer";"2021K2";47.4;.;87.0
+"Kontrakter tilknyttet elspotprisen, tjenesteytende næringer";"2021K3";76.1;.;87.0
+"Kontrakter tilknyttet elspotprisen, tjenesteytende næringer";"2021K4";112.0;.;89.2
+"Kontrakter tilknyttet elspotprisen, tjenesteytende næringer";"2022K1";116.4;.;91.4
+"Kontrakter tilknyttet elspotprisen, tjenesteytende næringer";"2022K2";131.2;.;89.3
+"Kontrakter tilknyttet elspotprisen, tjenesteytende næringer";"2022K3";238.8;.;90.2
+"Kontrakter tilknyttet elspotprisen, tjenesteytende næringer";"2022K4";165.5;.;93.3
+"Kontrakter tilknyttet elspotprisen, tjenesteytende næringer";"2023K1";109.1;.;91.8
+"Kontrakter tilknyttet elspotprisen, tjenesteytende næringer";"2023K2";80.6;.;92.7
+"Kontrakter tilknyttet elspotprisen, tjenesteytende næringer";"2023K3";34.5;.;91.7
+"Variabel pris kontrakter, tjenesteytende næringer";"2012K1";33.8;.;4.6
+"Variabel pris kontrakter, tjenesteytende næringer";"2012K2";27.2;.;5.8
+"Variabel pris kontrakter, tjenesteytende næringer";"2012K3";23.1;.;4.0
+"Variabel pris kontrakter, tjenesteytende næringer";"2012K4";28.2;.;7.9
+"Variabel pris kontrakter, tjenesteytende næringer";"2013K1";35.5;.;4.2
+"Variabel pris kontrakter, tjenesteytende næringer";"2013K2";34.7;.;5.2
+"Variabel pris kontrakter, tjenesteytende næringer";"2013K3";33.2;.;4.4
+"Variabel pris kontrakter, tjenesteytende næringer";"2013K4";36.6;.;5.1
+"Variabel pris kontrakter, tjenesteytende næringer";"2014K1";33.5;.;5.7
+"Variabel pris kontrakter, tjenesteytende næringer";"2014K2";29.0;.;8.5
+"Variabel pris kontrakter, tjenesteytende næringer";"2014K3";31.3;.;4.6
+"Variabel pris kontrakter, tjenesteytende næringer";"2014K4";32.3;.;4.5
+"Variabel pris kontrakter, tjenesteytende næringer";"2015K1";33.3;.;4.6
+"Variabel pris kontrakter, tjenesteytende næringer";"2015K2";27.9;.;4.3
+"Variabel pris kontrakter, tjenesteytende næringer";"2015K3";24.2;.;4.8
+"Variabel pris kontrakter, tjenesteytende næringer";"2015K4";28.3;.;5.2
+"Variabel pris kontrakter, tjenesteytende næringer";"2016K1";31.0;.;4.8
+"Variabel pris kontrakter, tjenesteytende næringer";"2016K2";29.1;.;4.1
+"Variabel pris kontrakter, tjenesteytende næringer";"2016K3";30.1;.;3.4
+"Variabel pris kontrakter, tjenesteytende næringer";"2016K4";35.1;.;3.7
+"Variabel pris kontrakter, tjenesteytende næringer";"2017K1";35.2;.;4.7
+"Variabel pris kontrakter, tjenesteytende næringer";"2017K2";32.4;.;5.8
+"Variabel pris kontrakter, tjenesteytende næringer";"2017K3";32.2;.;4.3
+"Variabel pris kontrakter, tjenesteytende næringer";"2017K4";36.4;.;5.8
+"Variabel pris kontrakter, tjenesteytende næringer";"2018K1";42.2;.;6.8
+"Variabel pris kontrakter, tjenesteytende næringer";"2018K2";44.6;.;4.4
+"Variabel pris kontrakter, tjenesteytende næringer";"2018K3";56.4;.;3.9
+"Variabel pris kontrakter, tjenesteytende næringer";"2018K4";57.5;.;4.1
+"Variabel pris kontrakter, tjenesteytende næringer";"2019K1";56.6;.;4.2
+"Variabel pris kontrakter, tjenesteytende næringer";"2019K2";48.7;.;4.0
+"Variabel pris kontrakter, tjenesteytende næringer";"2019K3";43.9;.;3.1
+"Variabel pris kontrakter, tjenesteytende næringer";"2019K4";46.0;.;6.5
+"Variabel pris kontrakter, tjenesteytende næringer";"2020K1";30.5;.;6.1
+"Variabel pris kontrakter, tjenesteytende næringer";"2020K2";16.6;.;4.2
+"Variabel pris kontrakter, tjenesteytende næringer";"2020K3";16.8;.;4.1
+"Variabel pris kontrakter, tjenesteytende næringer";"2020K4";22.0;.;5.1
+"Variabel pris kontrakter, tjenesteytende næringer";"2021K1";45.9;.;6.1
+"Variabel pris kontrakter, tjenesteytende næringer";"2021K2";44.1;.;4.7
+"Variabel pris kontrakter, tjenesteytende næringer";"2021K3";62.5;.;5.1
+"Variabel pris kontrakter, tjenesteytende næringer";"2021K4";76.9;.;5.4
+"Variabel pris kontrakter, tjenesteytende næringer";"2022K1";98.4;.;4.9
+"Variabel pris kontrakter, tjenesteytende næringer";"2022K2";108.5;.;5.5
+"Variabel pris kontrakter, tjenesteytende næringer";"2022K3";141.7;.;4.5
+"Variabel pris kontrakter, tjenesteytende næringer";"2022K4";172.7;.;2.7
+"Variabel pris kontrakter, tjenesteytende næringer";"2023K1";180.0;.;3.2
+"Variabel pris kontrakter, tjenesteytende næringer";"2023K2";105.8;.;2.5
+"Variabel pris kontrakter, tjenesteytende næringer";"2023K3";64.2;.;1.9
+"INDUSTRI UNNTATT KRAFTINTENSIV INDUSTRI";"2012K1";31.8;.;100.0
+"INDUSTRI UNNTATT KRAFTINTENSIV INDUSTRI";"2012K2";24.8;.;100.0
+"INDUSTRI UNNTATT KRAFTINTENSIV INDUSTRI";"2012K3";19.7;.;100.0
+"INDUSTRI UNNTATT KRAFTINTENSIV INDUSTRI";"2012K4";30.8;.;100.0
+"INDUSTRI UNNTATT KRAFTINTENSIV INDUSTRI";"2013K1";33.8;.;100.0
+"INDUSTRI UNNTATT KRAFTINTENSIV INDUSTRI";"2013K2";32.8;.;100.0
+"INDUSTRI UNNTATT KRAFTINTENSIV INDUSTRI";"2013K3";30.4;.;100.0
+"INDUSTRI UNNTATT KRAFTINTENSIV INDUSTRI";"2013K4";32.2;.;100.0
+"INDUSTRI UNNTATT KRAFTINTENSIV INDUSTRI";"2014K1";28.4;.;100.0
+"INDUSTRI UNNTATT KRAFTINTENSIV INDUSTRI";"2014K2";23.4;.;100.0
+"INDUSTRI UNNTATT KRAFTINTENSIV INDUSTRI";"2014K3";29.2;.;100.0
+"INDUSTRI UNNTATT KRAFTINTENSIV INDUSTRI";"2014K4";29.1;.;100.0
+"INDUSTRI UNNTATT KRAFTINTENSIV INDUSTRI";"2015K1";28.6;.;100.0
+"INDUSTRI UNNTATT KRAFTINTENSIV INDUSTRI";"2015K2";22.2;.;100.0
+"INDUSTRI UNNTATT KRAFTINTENSIV INDUSTRI";"2015K3";16.6;.;100.0
+"INDUSTRI UNNTATT KRAFTINTENSIV INDUSTRI";"2015K4";23.8;.;100.0
+"INDUSTRI UNNTATT KRAFTINTENSIV INDUSTRI";"2016K1";26.4;.;100.0
+"INDUSTRI UNNTATT KRAFTINTENSIV INDUSTRI";"2016K2";26.0;.;100.0
+"INDUSTRI UNNTATT KRAFTINTENSIV INDUSTRI";"2016K3";26.6;.;100.0
+"INDUSTRI UNNTATT KRAFTINTENSIV INDUSTRI";"2016K4";35.0;.;100.0
+"INDUSTRI UNNTATT KRAFTINTENSIV INDUSTRI";"2017K1";29.9;.;100.0
+"INDUSTRI UNNTATT KRAFTINTENSIV INDUSTRI";"2017K2";29.2;.;100.0
+"INDUSTRI UNNTATT KRAFTINTENSIV INDUSTRI";"2017K3";28.9;.;100.0
+"INDUSTRI UNNTATT KRAFTINTENSIV INDUSTRI";"2017K4";32.5;.;100.0
+"INDUSTRI UNNTATT KRAFTINTENSIV INDUSTRI";"2018K1";38.6;.;100.0
+"INDUSTRI UNNTATT KRAFTINTENSIV INDUSTRI";"2018K2";39.9;.;100.0
+"INDUSTRI UNNTATT KRAFTINTENSIV INDUSTRI";"2018K3";49.4;.;100.0
+"INDUSTRI UNNTATT KRAFTINTENSIV INDUSTRI";"2018K4";49.4;.;100.0
+"INDUSTRI UNNTATT KRAFTINTENSIV INDUSTRI";"2019K1";50.3;.;100.0
+"INDUSTRI UNNTATT KRAFTINTENSIV INDUSTRI";"2019K2";38.8;.;100.0
+"INDUSTRI UNNTATT KRAFTINTENSIV INDUSTRI";"2019K3";36.6;.;100.0
+"INDUSTRI UNNTATT KRAFTINTENSIV INDUSTRI";"2019K4";43.1;.;100.0
+"INDUSTRI UNNTATT KRAFTINTENSIV INDUSTRI";"2020K1";22.8;.;100.0
+"INDUSTRI UNNTATT KRAFTINTENSIV INDUSTRI";"2020K2";10.4;.;100.0
+"INDUSTRI UNNTATT KRAFTINTENSIV INDUSTRI";"2020K3";9.9;.;100.0
+"INDUSTRI UNNTATT KRAFTINTENSIV INDUSTRI";"2020K4";17.6;.;100.0
+"INDUSTRI UNNTATT KRAFTINTENSIV INDUSTRI";"2021K1";49.4;.;100.0
+"INDUSTRI UNNTATT KRAFTINTENSIV INDUSTRI";"2021K2";45.3;.;100.0
+"INDUSTRI UNNTATT KRAFTINTENSIV INDUSTRI";"2021K3";70.7;.;100.0
+"INDUSTRI UNNTATT KRAFTINTENSIV INDUSTRI";"2021K4";103.5;.;100.0
+"INDUSTRI UNNTATT KRAFTINTENSIV INDUSTRI";"2022K1";103.8;.;100.0
+"INDUSTRI UNNTATT KRAFTINTENSIV INDUSTRI";"2022K2";120.7;.;100.0
+"INDUSTRI UNNTATT KRAFTINTENSIV INDUSTRI";"2022K3";216.2;.;100.0
+"INDUSTRI UNNTATT KRAFTINTENSIV INDUSTRI";"2022K4";150.7;.;100.0
+"INDUSTRI UNNTATT KRAFTINTENSIV INDUSTRI";"2023K1";103.2;.;100.0
+"INDUSTRI UNNTATT KRAFTINTENSIV INDUSTRI";"2023K2";76.4;.;100.0
+"INDUSTRI UNNTATT KRAFTINTENSIV INDUSTRI";"2023K3";35.8;.;100.0
+"Nye fastpriskontrakter, industri unntatt kraftintensiv industri";"2012K1";35.9;.;7.3
+"Nye fastpriskontrakter, industri unntatt kraftintensiv industri";"2012K2";35.9;.;5.9
+"Nye fastpriskontrakter, industri unntatt kraftintensiv industri";"2012K3";33.8;.;2.1
+"Nye fastpriskontrakter, industri unntatt kraftintensiv industri";"2012K4";36.9;.;2.4
+"Nye fastpriskontrakter, industri unntatt kraftintensiv industri";"2013K1";33.6;.;2.6
+"Nye fastpriskontrakter, industri unntatt kraftintensiv industri";"2013K2";32.5;.;2.7
+"Nye fastpriskontrakter, industri unntatt kraftintensiv industri";"2013K3";29.1;.;1.3
+"Nye fastpriskontrakter, industri unntatt kraftintensiv industri";"2013K4";33.5;.;1.2
+"Nye fastpriskontrakter, industri unntatt kraftintensiv industri";"2014K1";30.7;.;3.2
+"Nye fastpriskontrakter, industri unntatt kraftintensiv industri";"2014K2";29.8;.;3.1
+"Nye fastpriskontrakter, industri unntatt kraftintensiv industri";"2014K3";31.7;.;1.2
+"Nye fastpriskontrakter, industri unntatt kraftintensiv industri";"2014K4";28.5;.;1.6
+"Nye fastpriskontrakter, industri unntatt kraftintensiv industri";"2015K1";30.1;.;0.7
+"Nye fastpriskontrakter, industri unntatt kraftintensiv industri";"2015K2";30.6;.;1.8
+"Nye fastpriskontrakter, industri unntatt kraftintensiv industri";"2015K3";30.1;.;0.5
+"Nye fastpriskontrakter, industri unntatt kraftintensiv industri";"2015K4";30.4;.;0.2
+"Nye fastpriskontrakter, industri unntatt kraftintensiv industri";"2016K1";25.9;.;1.1
+"Nye fastpriskontrakter, industri unntatt kraftintensiv industri";"2016K2";29.7;.;0.5
+"Nye fastpriskontrakter, industri unntatt kraftintensiv industri";"2016K3";31.0;.;0.3
+"Nye fastpriskontrakter, industri unntatt kraftintensiv industri";"2016K4";34.3;.;0.2
+"Nye fastpriskontrakter, industri unntatt kraftintensiv industri";"2017K1";28.9;.;1.0
+"Nye fastpriskontrakter, industri unntatt kraftintensiv industri";"2017K2";30.7;.;0.3
+"Nye fastpriskontrakter, industri unntatt kraftintensiv industri";"2017K3";37.4;.;0.1
+"Nye fastpriskontrakter, industri unntatt kraftintensiv industri";"2017K4";30.6;.;0.6
+"Nye fastpriskontrakter, industri unntatt kraftintensiv industri";"2018K1";30.6;.;0.8
+"Nye fastpriskontrakter, industri unntatt kraftintensiv industri";"2018K2";38.0;.;0.5
+"Nye fastpriskontrakter, industri unntatt kraftintensiv industri";"2018K3";41.4;.;0.2
+"Nye fastpriskontrakter, industri unntatt kraftintensiv industri";"2018K4";45.2;.;0.1
+"Nye fastpriskontrakter, industri unntatt kraftintensiv industri";"2019K1";37.1;.;0.6
+"Nye fastpriskontrakter, industri unntatt kraftintensiv industri";"2019K2";36.6;.;0.4
+"Nye fastpriskontrakter, industri unntatt kraftintensiv industri";"2019K3";34.2;.;1.2
+"Nye fastpriskontrakter, industri unntatt kraftintensiv industri";"2019K4";39.5;.;0.7
+"Nye fastpriskontrakter, industri unntatt kraftintensiv industri";"2020K1";32.3;.;1.2
+"Nye fastpriskontrakter, industri unntatt kraftintensiv industri";"2020K2";32.7;.;1.1
+"Nye fastpriskontrakter, industri unntatt kraftintensiv industri";"2020K3";35.1;.;0.9
+"Nye fastpriskontrakter, industri unntatt kraftintensiv industri";"2020K4";22.2;.;2.2
+"Nye fastpriskontrakter, industri unntatt kraftintensiv industri";"2021K1";28.5;.;1.3
+"Nye fastpriskontrakter, industri unntatt kraftintensiv industri";"2021K2";24.7;.;0.9
+"Nye fastpriskontrakter, industri unntatt kraftintensiv industri";"2021K3";27.9;.;1.2
+"Nye fastpriskontrakter, industri unntatt kraftintensiv industri";"2021K4";30.6;.;0.9
+"Nye fastpriskontrakter, industri unntatt kraftintensiv industri";"2022K1";36.1;.;2.0
+"Nye fastpriskontrakter, industri unntatt kraftintensiv industri";"2022K2";63.9;.;2.3
+"Nye fastpriskontrakter, industri unntatt kraftintensiv industri";"2022K3";25.1;.;1.8
+"Nye fastpriskontrakter, industri unntatt kraftintensiv industri";"2022K4";51.9;.;1.8
+"Nye fastpriskontrakter, industri unntatt kraftintensiv industri";"2023K1";48.6;.;2.2
+"Nye fastpriskontrakter, industri unntatt kraftintensiv industri";"2023K2";43.8;.;1.5
+"Nye fastpriskontrakter, industri unntatt kraftintensiv industri";"2023K3";35.9;.;1.4
+"Eldre fastpriskontrakter, industri unntatt kraftintensiv industri";"2012K1";35.7;.;5.0
+"Eldre fastpriskontrakter, industri unntatt kraftintensiv industri";"2012K2";37.5;.;6.2
+"Eldre fastpriskontrakter, industri unntatt kraftintensiv industri";"2012K3";35.9;.;13.7
+"Eldre fastpriskontrakter, industri unntatt kraftintensiv industri";"2012K4";35.7;.;13.7
+"Eldre fastpriskontrakter, industri unntatt kraftintensiv industri";"2013K1";36.9;.;5.3
+"Eldre fastpriskontrakter, industri unntatt kraftintensiv industri";"2013K2";36.0;.;6.8
+"Eldre fastpriskontrakter, industri unntatt kraftintensiv industri";"2013K3";35.6;.;8.7
+"Eldre fastpriskontrakter, industri unntatt kraftintensiv industri";"2013K4";35.6;.;7.3
+"Eldre fastpriskontrakter, industri unntatt kraftintensiv industri";"2014K1";33.1;.;7.0
+"Eldre fastpriskontrakter, industri unntatt kraftintensiv industri";"2014K2";31.3;.;8.3
+"Eldre fastpriskontrakter, industri unntatt kraftintensiv industri";"2014K3";32.6;.;10.3
+"Eldre fastpriskontrakter, industri unntatt kraftintensiv industri";"2014K4";32.9;.;7.8
+"Eldre fastpriskontrakter, industri unntatt kraftintensiv industri";"2015K1";31.7;.;8.1
+"Eldre fastpriskontrakter, industri unntatt kraftintensiv industri";"2015K2";30.4;.;6.8
+"Eldre fastpriskontrakter, industri unntatt kraftintensiv industri";"2015K3";28.9;.;6.4
+"Eldre fastpriskontrakter, industri unntatt kraftintensiv industri";"2015K4";29.2;.;7.0
+"Eldre fastpriskontrakter, industri unntatt kraftintensiv industri";"2016K1";29.7;.;4.1
+"Eldre fastpriskontrakter, industri unntatt kraftintensiv industri";"2016K2";27.2;.;4.6
+"Eldre fastpriskontrakter, industri unntatt kraftintensiv industri";"2016K3";28.1;.;4.3
+"Eldre fastpriskontrakter, industri unntatt kraftintensiv industri";"2016K4";30.3;.;4.2
+"Eldre fastpriskontrakter, industri unntatt kraftintensiv industri";"2017K1";29.3;.;5.0
+"Eldre fastpriskontrakter, industri unntatt kraftintensiv industri";"2017K2";29.0;.;6.6
+"Eldre fastpriskontrakter, industri unntatt kraftintensiv industri";"2017K3";29.2;.;9.8
+"Eldre fastpriskontrakter, industri unntatt kraftintensiv industri";"2017K4";29.6;.;6.7
+"Eldre fastpriskontrakter, industri unntatt kraftintensiv industri";"2018K1";29.3;.;4.2
+"Eldre fastpriskontrakter, industri unntatt kraftintensiv industri";"2018K2";29.7;.;3.3
+"Eldre fastpriskontrakter, industri unntatt kraftintensiv industri";"2018K3";30.2;.;10.3
+"Eldre fastpriskontrakter, industri unntatt kraftintensiv industri";"2018K4";31.8;.;5.3
+"Eldre fastpriskontrakter, industri unntatt kraftintensiv industri";"2019K1";33.5;.;5.9
+"Eldre fastpriskontrakter, industri unntatt kraftintensiv industri";"2019K2";33.1;.;7.7
+"Eldre fastpriskontrakter, industri unntatt kraftintensiv industri";"2019K3";33.3;.;7.4
+"Eldre fastpriskontrakter, industri unntatt kraftintensiv industri";"2019K4";34.0;.;5.9
+"Eldre fastpriskontrakter, industri unntatt kraftintensiv industri";"2020K1";34.1;.;6.6
+"Eldre fastpriskontrakter, industri unntatt kraftintensiv industri";"2020K2";25.8;.;4.2
+"Eldre fastpriskontrakter, industri unntatt kraftintensiv industri";"2020K3";26.9;.;3.8
+"Eldre fastpriskontrakter, industri unntatt kraftintensiv industri";"2020K4";27.0;.;3.9
+"Eldre fastpriskontrakter, industri unntatt kraftintensiv industri";"2021K1";37.9;.;2.4
+"Eldre fastpriskontrakter, industri unntatt kraftintensiv industri";"2021K2";36.0;.;3.1
+"Eldre fastpriskontrakter, industri unntatt kraftintensiv industri";"2021K3";42.6;.;4.6
+"Eldre fastpriskontrakter, industri unntatt kraftintensiv industri";"2021K4";41.1;.;3.3
+"Eldre fastpriskontrakter, industri unntatt kraftintensiv industri";"2022K1";41.3;.;1.3
+"Eldre fastpriskontrakter, industri unntatt kraftintensiv industri";"2022K2";41.0;.;3.0
+"Eldre fastpriskontrakter, industri unntatt kraftintensiv industri";"2022K3";58.9;.;2.4
+"Eldre fastpriskontrakter, industri unntatt kraftintensiv industri";"2022K4";51.5;.;2.9
+"Eldre fastpriskontrakter, industri unntatt kraftintensiv industri";"2023K1";44.7;.;2.9
+"Eldre fastpriskontrakter, industri unntatt kraftintensiv industri";"2023K2";40.8;.;4.9
+"Eldre fastpriskontrakter, industri unntatt kraftintensiv industri";"2023K3";43.9;.;5.8
+"Kontrakter tilknyttet elspotprisen, industri unntatt kraftintensiv industri";"2012K1";31.0;.;84.0
+"Kontrakter tilknyttet elspotprisen, industri unntatt kraftintensiv industri";"2012K2";22.9;.;84.5
+"Kontrakter tilknyttet elspotprisen, industri unntatt kraftintensiv industri";"2012K3";16.4;.;80.8
+"Kontrakter tilknyttet elspotprisen, industri unntatt kraftintensiv industri";"2012K4";29.8;.;81.5
+"Kontrakter tilknyttet elspotprisen, industri unntatt kraftintensiv industri";"2013K1";33.5;.;89.1
+"Kontrakter tilknyttet elspotprisen, industri unntatt kraftintensiv industri";"2013K2";32.5;.;87.4
+"Kontrakter tilknyttet elspotprisen, industri unntatt kraftintensiv industri";"2013K3";29.8;.;87.1
+"Kontrakter tilknyttet elspotprisen, industri unntatt kraftintensiv industri";"2013K4";31.7;.;88.3
+"Kontrakter tilknyttet elspotprisen, industri unntatt kraftintensiv industri";"2014K1";27.7;.;86.4
+"Kontrakter tilknyttet elspotprisen, industri unntatt kraftintensiv industri";"2014K2";22.1;.;84.9
+"Kontrakter tilknyttet elspotprisen, industri unntatt kraftintensiv industri";"2014K3";28.6;.;86.0
+"Kontrakter tilknyttet elspotprisen, industri unntatt kraftintensiv industri";"2014K4";28.7;.;88.4
+"Kontrakter tilknyttet elspotprisen, industri unntatt kraftintensiv industri";"2015K1";28.1;.;88.5
+"Kontrakter tilknyttet elspotprisen, industri unntatt kraftintensiv industri";"2015K2";21.3;.;89.1
+"Kontrakter tilknyttet elspotprisen, industri unntatt kraftintensiv industri";"2015K3";15.6;.;91.1
+"Kontrakter tilknyttet elspotprisen, industri unntatt kraftintensiv industri";"2015K4";23.3;.;90.5
+"Kontrakter tilknyttet elspotprisen, industri unntatt kraftintensiv industri";"2016K1";26.2;.;92.5
+"Kontrakter tilknyttet elspotprisen, industri unntatt kraftintensiv industri";"2016K2";25.9;.;92.9
+"Kontrakter tilknyttet elspotprisen, industri unntatt kraftintensiv industri";"2016K3";26.4;.;93.7
+"Kontrakter tilknyttet elspotprisen, industri unntatt kraftintensiv industri";"2016K4";35.1;.;93.8
+"Kontrakter tilknyttet elspotprisen, industri unntatt kraftintensiv industri";"2017K1";29.7;.;91.0
+"Kontrakter tilknyttet elspotprisen, industri unntatt kraftintensiv industri";"2017K2";28.9;.;86.4
+"Kontrakter tilknyttet elspotprisen, industri unntatt kraftintensiv industri";"2017K3";28.8;.;87.7
+"Kontrakter tilknyttet elspotprisen, industri unntatt kraftintensiv industri";"2017K4";32.6;.;89.9
+"Kontrakter tilknyttet elspotprisen, industri unntatt kraftintensiv industri";"2018K1";39.0;.;92.4
+"Kontrakter tilknyttet elspotprisen, industri unntatt kraftintensiv industri";"2018K2";40.2;.;93.5
+"Kontrakter tilknyttet elspotprisen, industri unntatt kraftintensiv industri";"2018K3";51.6;.;87.1
+"Kontrakter tilknyttet elspotprisen, industri unntatt kraftintensiv industri";"2018K4";50.3;.;91.8
+"Kontrakter tilknyttet elspotprisen, industri unntatt kraftintensiv industri";"2019K1";51.3;.;90.5
+"Kontrakter tilknyttet elspotprisen, industri unntatt kraftintensiv industri";"2019K2";39.0;.;89.6
+"Kontrakter tilknyttet elspotprisen, industri unntatt kraftintensiv industri";"2019K3";36.8;.;89.8
+"Kontrakter tilknyttet elspotprisen, industri unntatt kraftintensiv industri";"2019K4";43.6;.;90.1
+"Kontrakter tilknyttet elspotprisen, industri unntatt kraftintensiv industri";"2020K1";21.6;.;87.0
+"Kontrakter tilknyttet elspotprisen, industri unntatt kraftintensiv industri";"2020K2";9.2;.;88.3
+"Kontrakter tilknyttet elspotprisen, industri unntatt kraftintensiv industri";"2020K3";8.7;.;89.1
+"Kontrakter tilknyttet elspotprisen, industri unntatt kraftintensiv industri";"2020K4";16.9;.;86.9
+"Kontrakter tilknyttet elspotprisen, industri unntatt kraftintensiv industri";"2021K1";50.0;.;90.3
+"Kontrakter tilknyttet elspotprisen, industri unntatt kraftintensiv industri";"2021K2";46.4;.;85.2
+"Kontrakter tilknyttet elspotprisen, industri unntatt kraftintensiv industri";"2021K3";73.8;.;87.0
+"Kontrakter tilknyttet elspotprisen, industri unntatt kraftintensiv industri";"2021K4";107.0;.;92.8
+"Kontrakter tilknyttet elspotprisen, industri unntatt kraftintensiv industri";"2022K1";106.5;.;93.5
+"Kontrakter tilknyttet elspotprisen, industri unntatt kraftintensiv industri";"2022K2";125.6;.;92.3
+"Kontrakter tilknyttet elspotprisen, industri unntatt kraftintensiv industri";"2022K3";226.4;.;93.6
+"Kontrakter tilknyttet elspotprisen, industri unntatt kraftintensiv industri";"2022K4";155.6;.;93.7
+"Kontrakter tilknyttet elspotprisen, industri unntatt kraftintensiv industri";"2023K1";105.5;.;93.6
+"Kontrakter tilknyttet elspotprisen, industri unntatt kraftintensiv industri";"2023K2";78.6;.;92.6
+"Kontrakter tilknyttet elspotprisen, industri unntatt kraftintensiv industri";"2023K3";35.0;.;92.1
+"Variabel pris kontrakter, industri unntatt kraftintensiv industri";"2012K1";37.0;.;3.7
+"Variabel pris kontrakter, industri unntatt kraftintensiv industri";"2012K2";30.0;.;3.4
+"Variabel pris kontrakter, industri unntatt kraftintensiv industri";"2012K3";25.1;.;3.3
+"Variabel pris kontrakter, industri unntatt kraftintensiv industri";"2012K4";30.7;.;2.4
+"Variabel pris kontrakter, industri unntatt kraftintensiv industri";"2013K1";35.4;.;2.9
+"Variabel pris kontrakter, industri unntatt kraftintensiv industri";"2013K2";35.7;.;3.0
+"Variabel pris kontrakter, industri unntatt kraftintensiv industri";"2013K3";34.6;.;2.9
+"Variabel pris kontrakter, industri unntatt kraftintensiv industri";"2013K4";37.0;.;3.2
+"Variabel pris kontrakter, industri unntatt kraftintensiv industri";"2014K1";34.2;.;3.4
+"Variabel pris kontrakter, industri unntatt kraftintensiv industri";"2014K2";30.7;.;3.6
+"Variabel pris kontrakter, industri unntatt kraftintensiv industri";"2014K3";32.6;.;2.6
+"Variabel pris kontrakter, industri unntatt kraftintensiv industri";"2014K4";33.8;.;2.2
+"Variabel pris kontrakter, industri unntatt kraftintensiv industri";"2015K1";33.4;.;2.7
+"Variabel pris kontrakter, industri unntatt kraftintensiv industri";"2015K2";27.7;.;2.4
+"Variabel pris kontrakter, industri unntatt kraftintensiv industri";"2015K3";22.3;.;2.0
+"Variabel pris kontrakter, industri unntatt kraftintensiv industri";"2015K4";27.8;.;2.3
+"Variabel pris kontrakter, industri unntatt kraftintensiv industri";"2016K1";29.9;.;2.2
+"Variabel pris kontrakter, industri unntatt kraftintensiv industri";"2016K2";28.6;.;2.0
+"Variabel pris kontrakter, industri unntatt kraftintensiv industri";"2016K3";29.7;.;1.7
+"Variabel pris kontrakter, industri unntatt kraftintensiv industri";"2016K4";36.3;.;1.8
+"Variabel pris kontrakter, industri unntatt kraftintensiv industri";"2017K1";36.3;.;3.0
+"Variabel pris kontrakter, industri unntatt kraftintensiv industri";"2017K2";32.3;.;6.8
+"Variabel pris kontrakter, industri unntatt kraftintensiv industri";"2017K3";32.2;.;2.4
+"Variabel pris kontrakter, industri unntatt kraftintensiv industri";"2017K4";36.7;.;2.8
+"Variabel pris kontrakter, industri unntatt kraftintensiv industri";"2018K1";42.6;.;2.6
+"Variabel pris kontrakter, industri unntatt kraftintensiv industri";"2018K2";44.4;.;2.6
+"Variabel pris kontrakter, industri unntatt kraftintensiv industri";"2018K3";54.8;.;2.4
+"Variabel pris kontrakter, industri unntatt kraftintensiv industri";"2018K4";55.6;.;2.8
+"Variabel pris kontrakter, industri unntatt kraftintensiv industri";"2019K1";56.4;.;2.9
+"Variabel pris kontrakter, industri unntatt kraftintensiv industri";"2019K2";47.8;.;2.3
+"Variabel pris kontrakter, industri unntatt kraftintensiv industri";"2019K3";44.2;.;1.7
+"Variabel pris kontrakter, industri unntatt kraftintensiv industri";"2019K4";45.7;.;3.4
+"Variabel pris kontrakter, industri unntatt kraftintensiv industri";"2020K1";25.3;.;5.2
+"Variabel pris kontrakter, industri unntatt kraftintensiv industri";"2020K2";13.4;.;6.4
+"Variabel pris kontrakter, industri unntatt kraftintensiv industri";"2020K3";12.5;.;6.2
+"Variabel pris kontrakter, industri unntatt kraftintensiv industri";"2020K4";19.1;.;7.0
+"Variabel pris kontrakter, industri unntatt kraftintensiv industri";"2021K1";49.0;.;6.1
+"Variabel pris kontrakter, industri unntatt kraftintensiv industri";"2021K2";40.6;.;10.9
+"Variabel pris kontrakter, industri unntatt kraftintensiv industri";"2021K3";59.0;.;7.1
+"Variabel pris kontrakter, industri unntatt kraftintensiv industri";"2021K4";86.3;.;3.0
+"Variabel pris kontrakter, industri unntatt kraftintensiv industri";"2022K1";93.8;.;3.2
+"Variabel pris kontrakter, industri unntatt kraftintensiv industri";"2022K2";84.2;.;2.4
+"Variabel pris kontrakter, industri unntatt kraftintensiv industri";"2022K3";113.9;.;2.2
+"Variabel pris kontrakter, industri unntatt kraftintensiv industri";"2022K4";155.1;.;1.6
+"Variabel pris kontrakter, industri unntatt kraftintensiv industri";"2023K1";162.5;.;1.2
+"Variabel pris kontrakter, industri unntatt kraftintensiv industri";"2023K2";98.1;.;0.9
+"Variabel pris kontrakter, industri unntatt kraftintensiv industri";"2023K3";65.5;.;0.7
+"KRAFTINTENSIV INDUSTRI";"2012K1";28.7;.;100.0
+"KRAFTINTENSIV INDUSTRI";"2012K2";23.3;.;100.0
+"KRAFTINTENSIV INDUSTRI";"2012K3";26.5;.;100.0
+"KRAFTINTENSIV INDUSTRI";"2012K4";27.1;.;100.0
+"KRAFTINTENSIV INDUSTRI";"2013K1";29.7;.;100.0
+"KRAFTINTENSIV INDUSTRI";"2013K2";28.1;.;100.0
+"KRAFTINTENSIV INDUSTRI";"2013K3";28.6;.;100.0
+"KRAFTINTENSIV INDUSTRI";"2013K4";29.2;.;100.0
+"KRAFTINTENSIV INDUSTRI";"2014K1";29.3;.;100.0
+"KRAFTINTENSIV INDUSTRI";"2014K2";29.3;.;100.0
+"KRAFTINTENSIV INDUSTRI";"2014K3";29.7;.;100.0
+"KRAFTINTENSIV INDUSTRI";"2014K4";29.7;.;100.0
+"KRAFTINTENSIV INDUSTRI";"2015K1";30.3;.;100.0
+"KRAFTINTENSIV INDUSTRI";"2015K2";30.1;.;100.0
+"KRAFTINTENSIV INDUSTRI";"2015K3";31.3;.;100.0
+"KRAFTINTENSIV INDUSTRI";"2015K4";31.8;.;100.0
+"KRAFTINTENSIV INDUSTRI";"2016K1";30.8;.;100.0
+"KRAFTINTENSIV INDUSTRI";"2016K2";30.7;.;100.0
+"KRAFTINTENSIV INDUSTRI";"2016K3";30.1;.;100.0
+"KRAFTINTENSIV INDUSTRI";"2016K4";30.0;.;100.0
+"KRAFTINTENSIV INDUSTRI";"2017K1";30.9;.;100.0
+"KRAFTINTENSIV INDUSTRI";"2017K2";31.4;.;100.0
+"KRAFTINTENSIV INDUSTRI";"2017K3";28.2;.;100.0
+"KRAFTINTENSIV INDUSTRI";"2017K4";28.8;.;100.0
+"KRAFTINTENSIV INDUSTRI";"2018K1";31.4;.;100.0
+"KRAFTINTENSIV INDUSTRI";"2018K2";30.9;.;100.0
+"KRAFTINTENSIV INDUSTRI";"2018K3";32.2;.;100.0
+"KRAFTINTENSIV INDUSTRI";"2018K4";31.8;.;100.0
+"KRAFTINTENSIV INDUSTRI";"2019K1";32.5;.;100.0
+"KRAFTINTENSIV INDUSTRI";"2019K2";32.5;.;100.0
+"KRAFTINTENSIV INDUSTRI";"2019K3";32.0;.;100.0
+"KRAFTINTENSIV INDUSTRI";"2019K4";31.8;.;100.0
+"KRAFTINTENSIV INDUSTRI";"2020K1";30.1;.;100.0
+"KRAFTINTENSIV INDUSTRI";"2020K2";26.7;.;100.0
+"KRAFTINTENSIV INDUSTRI";"2020K3";28.4;.;100.0
+"KRAFTINTENSIV INDUSTRI";"2020K4";28.3;.;100.0
+"KRAFTINTENSIV INDUSTRI";"2021K1";33.5;.;100.0
+"KRAFTINTENSIV INDUSTRI";"2021K2";32.4;.;100.0
+"KRAFTINTENSIV INDUSTRI";"2021K3";38.2;.;100.0
+"KRAFTINTENSIV INDUSTRI";"2021K4";46.9;.;100.0
+"KRAFTINTENSIV INDUSTRI";"2022K1";43.0;.;100.0
+"KRAFTINTENSIV INDUSTRI";"2022K2";45.7;.;100.0
+"KRAFTINTENSIV INDUSTRI";"2022K3";62.1;.;100.0
+"KRAFTINTENSIV INDUSTRI";"2022K4";50.0;.;100.0
+"KRAFTINTENSIV INDUSTRI";"2023K1";49.7;.;100.0
+"KRAFTINTENSIV INDUSTRI";"2023K2";46.8;.;100.0
+"KRAFTINTENSIV INDUSTRI";"2023K3";41.1;.;100.0
+"Fastpriskontrakter og ikke markedsbestemte priser, kraftintensiv industri";"2012K1";28.6;.;95.1
+"Fastpriskontrakter og ikke markedsbestemte priser, kraftintensiv industri";"2012K2";23.3;.;96.3
+"Fastpriskontrakter og ikke markedsbestemte priser, kraftintensiv industri";"2012K3";:;.;95.9
+"Fastpriskontrakter og ikke markedsbestemte priser, kraftintensiv industri";"2012K4";26.9;.;95.2
+"Fastpriskontrakter og ikke markedsbestemte priser, kraftintensiv industri";"2013K1";:;.;95.6
+"Fastpriskontrakter og ikke markedsbestemte priser, kraftintensiv industri";"2013K2";:;.;97.2
+"Fastpriskontrakter og ikke markedsbestemte priser, kraftintensiv industri";"2013K3";:;.;97.4
+"Fastpriskontrakter og ikke markedsbestemte priser, kraftintensiv industri";"2013K4";29.1;.;96.6
+"Fastpriskontrakter og ikke markedsbestemte priser, kraftintensiv industri";"2014K1";:;.;95.6
+"Fastpriskontrakter og ikke markedsbestemte priser, kraftintensiv industri";"2014K2";:;.;:
+"Fastpriskontrakter og ikke markedsbestemte priser, kraftintensiv industri";"2014K3";:;.;:
+"Fastpriskontrakter og ikke markedsbestemte priser, kraftintensiv industri";"2014K4";:;.;:
+"Fastpriskontrakter og ikke markedsbestemte priser, kraftintensiv industri";"2015K1";:;.;:
+"Fastpriskontrakter og ikke markedsbestemte priser, kraftintensiv industri";"2015K2";:;.;:
+"Fastpriskontrakter og ikke markedsbestemte priser, kraftintensiv industri";"2015K3";:;.;:
+"Fastpriskontrakter og ikke markedsbestemte priser, kraftintensiv industri";"2015K4";:;.;:
+"Fastpriskontrakter og ikke markedsbestemte priser, kraftintensiv industri";"2016K1";:;.;:
+"Fastpriskontrakter og ikke markedsbestemte priser, kraftintensiv industri";"2016K2";:;.;:
+"Fastpriskontrakter og ikke markedsbestemte priser, kraftintensiv industri";"2016K3";:;.;:
+"Fastpriskontrakter og ikke markedsbestemte priser, kraftintensiv industri";"2016K4";:;.;:
+"Fastpriskontrakter og ikke markedsbestemte priser, kraftintensiv industri";"2017K1";:;.;:
+"Fastpriskontrakter og ikke markedsbestemte priser, kraftintensiv industri";"2017K2";:;.;:
+"Fastpriskontrakter og ikke markedsbestemte priser, kraftintensiv industri";"2017K3";:;.;:
+"Fastpriskontrakter og ikke markedsbestemte priser, kraftintensiv industri";"2017K4";:;.;:
+"Fastpriskontrakter og ikke markedsbestemte priser, kraftintensiv industri";"2018K1";:;.;:
+"Fastpriskontrakter og ikke markedsbestemte priser, kraftintensiv industri";"2018K2";:;.;:
+"Fastpriskontrakter og ikke markedsbestemte priser, kraftintensiv industri";"2018K3";:;.;:
+"Fastpriskontrakter og ikke markedsbestemte priser, kraftintensiv industri";"2018K4";:;.;:
+"Fastpriskontrakter og ikke markedsbestemte priser, kraftintensiv industri";"2019K1";:;.;:
+"Fastpriskontrakter og ikke markedsbestemte priser, kraftintensiv industri";"2019K2";:;.;:
+"Fastpriskontrakter og ikke markedsbestemte priser, kraftintensiv industri";"2019K3";:;.;:
+"Fastpriskontrakter og ikke markedsbestemte priser, kraftintensiv industri";"2019K4";:;.;:
+"Fastpriskontrakter og ikke markedsbestemte priser, kraftintensiv industri";"2020K1";:;.;:
+"Fastpriskontrakter og ikke markedsbestemte priser, kraftintensiv industri";"2020K2";:;.;:
+"Fastpriskontrakter og ikke markedsbestemte priser, kraftintensiv industri";"2020K3";:;.;:
+"Fastpriskontrakter og ikke markedsbestemte priser, kraftintensiv industri";"2020K4";:;.;:
+"Fastpriskontrakter og ikke markedsbestemte priser, kraftintensiv industri";"2021K1";:;.;:
+"Fastpriskontrakter og ikke markedsbestemte priser, kraftintensiv industri";"2021K2";:;.;:
+"Fastpriskontrakter og ikke markedsbestemte priser, kraftintensiv industri";"2021K3";:;.;:
+"Fastpriskontrakter og ikke markedsbestemte priser, kraftintensiv industri";"2021K4";:;.;:
+"Fastpriskontrakter og ikke markedsbestemte priser, kraftintensiv industri";"2022K1";:;.;:
+"Fastpriskontrakter og ikke markedsbestemte priser, kraftintensiv industri";"2022K2";:;.;:
+"Fastpriskontrakter og ikke markedsbestemte priser, kraftintensiv industri";"2022K3";:;.;:
+"Fastpriskontrakter og ikke markedsbestemte priser, kraftintensiv industri";"2022K4";:;.;:
+"Fastpriskontrakter og ikke markedsbestemte priser, kraftintensiv industri";"2023K1";:;.;:
+"Fastpriskontrakter og ikke markedsbestemte priser, kraftintensiv industri";"2023K2";:;.;:
+"Fastpriskontrakter og ikke markedsbestemte priser, kraftintensiv industri";"2023K3";:;.;:
+"Kontrakter tilknyttet elspotprisen, kraftintensiv industri";"2012K1";30.1;.;4.9
+"Kontrakter tilknyttet elspotprisen, kraftintensiv industri";"2012K2";22.6;.;3.7
+"Kontrakter tilknyttet elspotprisen, kraftintensiv industri";"2012K3";15.9;.;4.1
+"Kontrakter tilknyttet elspotprisen, kraftintensiv industri";"2012K4";30.0;.;4.8
+"Kontrakter tilknyttet elspotprisen, kraftintensiv industri";"2013K1";33.9;.;4.4
+"Kontrakter tilknyttet elspotprisen, kraftintensiv industri";"2013K2";30.2;.;2.8
+"Kontrakter tilknyttet elspotprisen, kraftintensiv industri";"2013K3";30.0;.;2.6
+"Kontrakter tilknyttet elspotprisen, kraftintensiv industri";"2013K4";30.2;.;3.4
+"Kontrakter tilknyttet elspotprisen, kraftintensiv industri";"2014K1";26.2;.;4.4
+"Kontrakter tilknyttet elspotprisen, kraftintensiv industri";"2014K2";22.9;.;:
+"Kontrakter tilknyttet elspotprisen, kraftintensiv industri";"2014K3";28.2;.;:
+"Kontrakter tilknyttet elspotprisen, kraftintensiv industri";"2014K4";26.6;.;:
+"Kontrakter tilknyttet elspotprisen, kraftintensiv industri";"2015K1";25.1;.;:
+"Kontrakter tilknyttet elspotprisen, kraftintensiv industri";"2015K2";19.3;.;:
+"Kontrakter tilknyttet elspotprisen, kraftintensiv industri";"2015K3";14.6;.;:
+"Kontrakter tilknyttet elspotprisen, kraftintensiv industri";"2015K4";21.9;.;:
+"Kontrakter tilknyttet elspotprisen, kraftintensiv industri";"2016K1";23.8;.;:
+"Kontrakter tilknyttet elspotprisen, kraftintensiv industri";"2016K2";24.5;.;:
+"Kontrakter tilknyttet elspotprisen, kraftintensiv industri";"2016K3";24.9;.;:
+"Kontrakter tilknyttet elspotprisen, kraftintensiv industri";"2016K4";33.8;.;:
+"Kontrakter tilknyttet elspotprisen, kraftintensiv industri";"2017K1";29.9;.;:
+"Kontrakter tilknyttet elspotprisen, kraftintensiv industri";"2017K2";27.7;.;:
+"Kontrakter tilknyttet elspotprisen, kraftintensiv industri";"2017K3";25.4;.;:
+"Kontrakter tilknyttet elspotprisen, kraftintensiv industri";"2017K4";29.7;.;:
+"Kontrakter tilknyttet elspotprisen, kraftintensiv industri";"2018K1";36.7;.;:
+"Kontrakter tilknyttet elspotprisen, kraftintensiv industri";"2018K2";37.8;.;:
+"Kontrakter tilknyttet elspotprisen, kraftintensiv industri";"2018K3";48.1;.;:
+"Kontrakter tilknyttet elspotprisen, kraftintensiv industri";"2018K4";45.9;.;:
+"Kontrakter tilknyttet elspotprisen, kraftintensiv industri";"2019K1";45.8;.;:
+"Kontrakter tilknyttet elspotprisen, kraftintensiv industri";"2019K2";36.0;.;:
+"Kontrakter tilknyttet elspotprisen, kraftintensiv industri";"2019K3";33.9;.;:
+"Kontrakter tilknyttet elspotprisen, kraftintensiv industri";"2019K4";39.2;.;:
+"Kontrakter tilknyttet elspotprisen, kraftintensiv industri";"2020K1";15.9;.;:
+"Kontrakter tilknyttet elspotprisen, kraftintensiv industri";"2020K2";6.2;.;:
+"Kontrakter tilknyttet elspotprisen, kraftintensiv industri";"2020K3";5.9;.;:
+"Kontrakter tilknyttet elspotprisen, kraftintensiv industri";"2020K4";12.3;.;:
+"Kontrakter tilknyttet elspotprisen, kraftintensiv industri";"2021K1";42.7;.;:
+"Kontrakter tilknyttet elspotprisen, kraftintensiv industri";"2021K2";39.4;.;:
+"Kontrakter tilknyttet elspotprisen, kraftintensiv industri";"2021K3";64.4;.;:
+"Kontrakter tilknyttet elspotprisen, kraftintensiv industri";"2021K4";88.9;.;:
+"Kontrakter tilknyttet elspotprisen, kraftintensiv industri";"2022K1";81.8;.;:
+"Kontrakter tilknyttet elspotprisen, kraftintensiv industri";"2022K2";83.9;.;:
+"Kontrakter tilknyttet elspotprisen, kraftintensiv industri";"2022K3";152.9;.;:
+"Kontrakter tilknyttet elspotprisen, kraftintensiv industri";"2022K4";103.7;.;:
+"Kontrakter tilknyttet elspotprisen, kraftintensiv industri";"2023K1";74.7;.;:
+"Kontrakter tilknyttet elspotprisen, kraftintensiv industri";"2023K2";53.3;.;:
+"Kontrakter tilknyttet elspotprisen, kraftintensiv industri";"2023K3";31.5;.;:

@@ -1,0 +1,20 @@
+%%html
+<!-- # @ hidden -->
+<script>
+  // AUTORUN AND HIDE #@hidden CELLS ON NOTEBOOK-LOAD!
+           require(
+               ['base/js/namespace', 'jquery'], 
+               function(jupyter, $) {
+                   $(jupyter.events).on("kernel_ready.Kernel", function () {
+                       console.log("Auto-running and hiding all cells with # @ hidden comment...");
+                       $('.cm-comment:contains(@hidden)').closest('div.input').hide();
+                       var cells = $('.cm-comment:contains(@hidden)').closest('div.input').parents('.cell');
+                       for (let i=0; i<cells.length; i++){
+                           var id = Jupyter.notebook.get_cell_elements().index(cells[i]);
+                           Jupyter.notebook.execute_cells([id]);
+                       }
+                       jupyter.actions.call('jupyter-notebook:save-notebook');
+                   });
+               }
+           );
+</script>

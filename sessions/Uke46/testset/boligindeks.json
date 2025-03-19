@@ -1,0 +1,26 @@
+{"queryObj":{
+  "query": [
+    {
+      "code": "Boligtype",
+      "selection": {
+        "filter": "item",
+        "values": [
+          "01",
+          "05"
+        ]
+      }
+    },
+    {
+      "code": "ContentsCode",
+      "selection": {
+        "filter": "item",
+        "values": [
+          "Indeks"
+        ]
+      }
+    }
+  ],
+  "response": {
+    "format": "json-stat2"
+  }
+},"tableIdForQuery":"11386","postUrl":"https://data.ssb.no/api/v0/no/table/11386"}

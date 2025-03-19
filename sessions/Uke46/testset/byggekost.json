@@ -1,0 +1,26 @@
+{"queryObj":{
+  "query": [
+    {
+      "code": "Arbeidstype",
+      "selection": {
+        "filter": "item",
+        "values": [
+          "04",
+          "05"
+        ]
+      }
+    },
+    {
+      "code": "ContentsCode",
+      "selection": {
+        "filter": "item",
+        "values": [
+          "BKIIndex"
+        ]
+      }
+    }
+  ],
+  "response": {
+    "format": "json-stat2"
+  }
+},"tableIdForQuery":"08653","postUrl":"https://data.ssb.no/api/v0/no/table/08653"}
