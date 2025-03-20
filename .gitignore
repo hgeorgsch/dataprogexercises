@@ -8,3 +8,4 @@ _minted-*/
 .ipynb_checkpoints/
 */__pycache__/
 res/
+.obsidian
