@@ -1,12 +1,12 @@
 ---
 title: Utkast til læringsmateriale i data og programmering
 ---
-+ [[Kontekstuelle oppgåver]] (til mappa)
 
-+ [[Introduksjon til Jupyter Notebook]]
-+ [[Enkel aritmetikk og matematiske funksjonar]]
++ [[Introduksjon til Jupyter Notebook]] (mogleg fyrste øving ved Hans Georg)
+
 + [[Fyrste datasett frå CSV]]
 
++ [[Kontekstuelle oppgåver]] (til mappa)
 
 + IIF2001 - to delar
 	+ Del 1.  Grunnleggjande introduksjon
