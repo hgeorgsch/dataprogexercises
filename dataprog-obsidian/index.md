@@ -2,6 +2,7 @@
 title: Utkast til læringsmateriale i data og programmering
 ---
 
++ [[Opningssamling]]
 + [[Introduksjon til Jupyter Notebook]] (mogleg fyrste øving ved Hans Georg)
 
 + [[Fyrste datasett frå CSV]]
