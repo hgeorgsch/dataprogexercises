@@ -2,6 +2,18 @@
 title: Utkast til læringsmateriale i data og programmering
 ---
 
++ [[Praktiske tips til utvikling av kurset]]
+ + Skisse til opplegg:
+	 + 2-3 samlingar à 2-3 dagar
+	 + førelesingsrekkje
+		 + historiefortelling
+		 + drøfta konsekvensar av tekniske detaljar
+			 + (likskapsteiknet, flyttal, læring frå data, kan maskiner tenkja?)
+	+ oppgåverekkje
+		+ demovideo - førebuing til oppgåver
+		+ tutorials - lukka oppgåver
+		+ prosjektoppgåver - opne oppgåver - egna til mappa
+		
 + [[Opningssamling]]
 + [[Introduksjon til Jupyter Notebook]] (mogleg fyrste øving ved Hans Georg)
 
