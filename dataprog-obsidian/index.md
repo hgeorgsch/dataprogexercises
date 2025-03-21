@@ -14,8 +14,10 @@ title: Utkast til læringsmateriale i data og programmering
 		+ tutorials - lukka oppgåver
 		+ prosjektoppgåver - opne oppgåver - egna til mappa
 		
-+ [[Opningssamling]]
-+ [[Introduksjon til Jupyter Notebook]] (mogleg fyrste øving ved Hans Georg)
++ [[Opningssamling]] (program)
+	+ [[Introduksjon til Jupyter Notebook]] (mogleg fyrste øving ved Hans Georg)
+	+ [[Halveringsmetoden]] 
+		+ introduksjon til numeriske metodar og løkker
 
 + [[Fyrste datasett frå CSV]]
 
