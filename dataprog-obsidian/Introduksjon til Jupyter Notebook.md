@@ -198,6 +198,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 xs = np.linspace( -10, +10, 10 )
+xs = [ x for x in range(-5,+5) ]
+xs2 = [ x/4 for x in range(-20,+20) ]
 ys = [ f(x) for x in xs ]
 plt.plot( xs, ys )
 plt.show()

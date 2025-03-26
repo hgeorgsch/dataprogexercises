@@ -28,4 +28,14 @@ title: Utkast til læringsmateriale i data og programmering
 		+ Sjå `Beregninger og funksjoner-JHmanus.ipynb` (oppsummering)
 	+ Del 2.  Store datasett
 
-	
+
+- Idéar.
+	- Korleis innfører me løkker og *if*?
+		- Halveringsmetoden
+		- Simulering
+			- Sparekalkulator
+				-  utrekning år for år
+				- geometrisk rekkje på lukka form
+				- plotta begge løysingar og samanlikn
+		- Preprosessering av datasett?
+		- API
