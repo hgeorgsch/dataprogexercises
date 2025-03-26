@@ -132,6 +132,10 @@ def f(x):
 print( f(3) )
 ```
 
+**NB** Sjølv om `print` her er ein funksjon som «gjer noko», så gjer han ingenting her, når `f` vert definert.  Han gjer noko når `f` seinare vert *brukt*.
+
+**TODO** Vurder om det fylgjande vert eit for stort sprang.
+
 Ofte har me matematiske modellar som skildrar forventa samfunns-
 og foretningsutvikling.  T.d. meiner ein at folkeveksten i eit land
 ofte kan skidrast som
@@ -180,7 +184,7 @@ På Island er der 372 520 innbyggjarar (2021).
 Me reknar med at Island maksimalt kan oppretthalda eit folketal
 på 4 millionar og at relativ vekstrate er 2% (=0,02).
 
-*Skriv ein *python*-funksjon som reknar ut folketalet på Island i 2040 
+*Skriv ein python-funksjon som reknar ut folketalet på Island i 2040 
 og skriv ut resultatet saman med relevant informasjon om føresetnadene.*
 
 (Du kan sjølvsagt ta utgangspunkt i dømet og endra tala.)

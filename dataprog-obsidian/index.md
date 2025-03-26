@@ -3,7 +3,7 @@ title: Utkast til læringsmateriale i data og programmering
 ---
 
 + [[Praktiske tips til utvikling av kurset]]
- + Skisse til opplegg:
+ + [[Skisse til opplegg]]
 	 + 2-3 samlingar à 2-3 dagar
 	 + førelesingsrekkje
 		 + historiefortelling
@@ -17,9 +17,9 @@ title: Utkast til læringsmateriale i data og programmering
 + [[Opningssamling]] (program)
 	+ [[Introduksjon til Jupyter Notebook]] (mogleg fyrste øving ved Hans Georg)
 	+ [[Halveringsmetoden]] 
-		+ introduksjon til numeriske metodar og løkker
-
-+ [[Fyrste datasett frå CSV]]
+		+ introduksjon til numeriske metodar og løkkerA
+	+ [[Fyrste datasett med CSV]]
++ [[Fyrste øving med CSV 2024]]
 
 + [[Kontekstuelle oppgåver]] (til mappa)
 
@@ -27,3 +27,5 @@ title: Utkast til læringsmateriale i data og programmering
 	+ Del 1.  Grunnleggjande introduksjon
 		+ Sjå `Beregninger og funksjoner-JHmanus.ipynb` (oppsummering)
 	+ Del 2.  Store datasett
+
+	
