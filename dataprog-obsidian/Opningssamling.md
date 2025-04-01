@@ -5,6 +5,7 @@ author: Hans Georg
 date: 20. mars 2025
 ---
 
+
 **Utkast**
 
 
@@ -18,3 +19,24 @@ date: 20. mars 2025
 | 14-15       | Øvingsøkt                   | Debrief og opplegg vidare.   |
 | 15-16       | Øvingsøkt                   |                              |
 | 16-17       | Debrief                     |                              |
+
++ Fem blokkar
+	+ [[Installasjon]]
+	+ [[Seminar om motivasjon og ynskjer]]
+	+ [[Introduksjon til Jupyter Notebook]] 
+	+ [[Simulering av kontantstraum]] 
+	+ [[Fyrste datasett med CSV]]
++ **NB** *rekk me fem slike blokkar?*
++ Treng tilpassing til deltakartal
+
++ Installasjon vert handtert spesielt	
+	+ Demovideoar for ulike OS
+	+ Dei som bruker jobbmaskin bør samrå seg med IT-støtte på jobb
+	+ Vegleiing etter behov
++ Seminaret er primært ei samtale i plenum eller i grupper
++ Dei øvrige tre har sams format	
+	+ *Jupyter notebook*-dokument
+	+ Motivasjonsføredrag med demonstrasjon av dokumentet
+	+ Øvingsoppgåver i dokumentet
+	+ Øving med vegleiing
+	+ Om mogleg, oppsummeringsvideo for å støtta vidare arbeid

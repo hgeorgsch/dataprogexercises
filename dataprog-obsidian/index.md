@@ -16,10 +16,25 @@ title: Utkast til læringsmateriale i data og programmering
 		
 + [[Opningssamling]] (program)
 	+ [[Introduksjon til Jupyter Notebook]] (mogleg fyrste øving ved Hans Georg)
-	+ [[Halveringsmetoden]] 
-		+ introduksjon til numeriske metodar og løkkerA
+	+ [[Simulering av kontantstraum]] 
 	+ [[Fyrste datasett med CSV]]
-+ [[Fyrste øving med CSV 2024]]
++ Fyrste periode
+	+ Store datasett
+		+ [[Vidaregåande bruk av CSV]]
+		+ API
+		+ døme på problem
+		+ døme på kjelder
+	+ Tekniske detaljar
+		+ Funksjonar
+		+ Løkker
+		+ Datatypar
+		+ [[Køyretid og Kompleksitet]]
+	+ Større simuleringar
+		+ *shrimp* game
+	+ Statistiske metodar
++ Nedprioritert stoff
+	+ [[Halveringsmetoden]] 
+		+ introduksjon til numeriske metodar og løkker
 
 + [[Kontekstuelle oppgåver]] (til mappa)
 
@@ -27,6 +42,7 @@ title: Utkast til læringsmateriale i data og programmering
 	+ Del 1.  Grunnleggjande introduksjon
 		+ Sjå `Beregninger og funksjoner-JHmanus.ipynb` (oppsummering)
 	+ Del 2.  Store datasett
+	+ [[Mappe Del 2 Haust 2024]]
 
 
 - Idéar.
