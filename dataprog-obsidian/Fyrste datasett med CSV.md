@@ -13,7 +13,9 @@ tags:
 	+ kva er skilnaden på informasjon og data?
 	+ kva er skilnaden på kunnskap og informasjon?
 + Døme valutakurs
-	+ Datasett frå Noregs Bank: /assets/EXR20250104.csv
+	+ Frå [Noregs Bank](https://www.norges-bank.no/tema/Statistikk/Valutakurser/?tab=api)
+		+ Fleire datasett; me bruker  USD/EUR/GBP/DKK/SEK siste fem åra
+	+ /assets/EXR20250104.csv
 		+ merk, semikolon som skiljeteikn
 
 
