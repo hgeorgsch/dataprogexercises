@@ -28,6 +28,7 @@ title: Utkast til læringsmateriale i data og programmering
 		+ Funksjonar
 		+ Løkker
 		+ Datatypar
+		+ Likskap og tilordning
 		+ [[Køyretid og Kompleksitet]]
 	+ Større simuleringar
 		+ *shrimp* game
