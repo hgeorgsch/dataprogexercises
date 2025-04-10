@@ -3,10 +3,11 @@
 \usepackage{babel}
 \usepackage{tikz}
 
-\title[Programmering og Data \\ skisse til EVU-kurs}
+\title{Programmering og Data \\ skisse til EVU-kurs}
 \author{Hans Georg Schaathun og Jonas Harang}
 
 \begin{document}
+\maketitle
 
 Institutt for IKT og realfag ved NTNU førebur eit nytt etter- og
 vidareutdanningskurs i programmering og dataanalyse, herunder maskinlæring.
@@ -29,7 +30,7 @@ tolka dei innanfor eigen fagdisiplin.
 \paragraph{Innhald.}  
 Kurset legg vekt på å demonstrera eit rikt monn av ulike teknikkar på ulike
 typar data.  Det er i stor grad opp til den einskilde deltakaren å velja kva
-teknikkar som er verd 
+teknikkar som er verd å bruka på.
 
 \paragraph{Vurdering.}  
 Grunnlaget for vurdering er ein innlevert mappe der studenten presenterer
@@ -44,31 +45,66 @@ Me vil òg koma inn på alternativ til Jupyter Notebook (t.d.\ IDE-ar
 Studentane bruker eigne (bærbare) maskiner, men me gjev vegleiing til installasjon
 og oppstart til dei som treng det.
 
-
+\paragraph{Læringsmateriell og -aktivitetar.}
+Materialet til ei typisk veke omfattar
+\begin{itemize}
+        \item Oversiktsføredrag (video) $\sim$ 15 min.
+        \item Demonstrasjonsvideo $\sim$ 15 min.
+        \item Gjennomarbeidde døme som viser nye teknikkar i Jupyter Notebook.
+        \item Øvingsoppgåver.
+	\item \emph{Dropin}-vegleiing på MS-Team, éin time på ettermiddagstid 
+	   eller tidleg kveld.
+\end{itemize}
 
 \begin{figure}
    \begin{tikzpicture}
-      \tikzstyle{box}=[draw,rounded corners,node distance=2in]
-       \tikzstyle{g}=[box,fill=green!20,minimum width=0.8\textwidth]
-       \tikzstyle{p}=[box,fill=yellow!20,minimum width=0.7\textwidth,xshift=0.05\textwidth] ;
-       \node [g] (g1) {\textbf{Opningssamling} (to dagar).  
+      \tikzstyle{box}=[draw,rounded corners,node distance=1.8in]
+       \tikzstyle{g}=[box,fill=green!20,minimum width=0.9\textwidth]
+       \tikzstyle{p}=[box,fill=yellow!20,minimum width=0.8\textwidth] % ,xshift=0.05\textwidth] 
+       \node [g] (g1) { 
+          \parbox{0.75\textwidth}{\textbf{Opningssamling} (to dagar).  
                        Koma i gang med verktya.  Overblikk over semesteret.
-                       } ;
-       \node [p,below of=g1] (p1) {\textbf{Fyrste Periode} (seks veker à 12h).  
-           Kvar veke demonstrerer  
-       Koma i gang med verktya.  Overblikk over semesteret.} ;
-       \node [g,below of=p1] (g2) {\textbf{Midtvegssamling.}  
+		       }} ;
+       \node [p,below of=g1] (p1) {
+	  \parbox{0.75\textwidth}{
+	     \textbf{Fyrste Periode} (seks veker à 12h).  
+           \begin{itemize}
+		   \item Formattering av data, teikkoding og filformat.
+		   \item Visualisering av data.
+		   \item Statistisk analyse.
+		   \item Simulering.
+		   \item Tilgang til data gjennom API (Application Programming Interface).
+	   \end{itemize}
+	   Øvingsoppgåvene i fyrste periode legg vekt på å variera og utvida 
+	   dei gjenomarbeidde døma.
+	}
+          } ;
+       \node [g,below of=p1] (g2) {
+          \parbox{0.75\textwidth}{
+	  \textbf{Midtvegssamling.}  
                           Seminar med erfaringsutveksling frå fyrste periode.
                           Munnleg presentasjon av fyrste del av vurderingsmappa.
-                          Overblikk og planleggjing av andre periode.}
-       \node [p,below of=g2] (p2) {\textbf{Andre Periode} (seks veker à 12h).
-           Koma i gang med verktya.  Overblikk over semesteret.
-           } ;
-       \node [g,below of=p2] (g3) {\textbf{Oppsummeringssamling.}  \emph{Debrief.}  
-            Erfaringsutveksling.  Spørsmål og svar.} ;
+			  Overblikk og planleggjing av andre periode.}} ;
+       \node [p,below of=g2] (p2) {%
+	  \parbox{0.75\textwidth}{
+	  \textbf{Andre Periode} (seks veker à 12h).
+           \begin{itemize}
+		   \item Maskinlæring
+		   \item Komplekse datasett og kombinasjon av data frå ulike
+		      kjelder.
+		   \item Etiske og juridiske atterhald (m.a.\ personvern)
+		   \item Programmering av IDE 
+	   \end{itemize}
+	   Øvingsoppgåvene i andre periode krev i aukande grad at studentane
+	   finn eigne problemstillingar og data frå eige arbeidssituasjon, og
+	   tek i bruk teknikkar som er gjennomgått tidlegare.,
+	   }} ;
+       \node [g,below of=p2] (g3) {
+	  \parbox{0.6\textwidth}{
+	    \textbf{Oppsummeringssamling.}  \emph{Debrief.}  
+	    Erfaringsutveksling.  Spørsmål og svar.}} ;
    \end{tikzpicture}
-   \caption{Kursstruktur.}
-
+   \caption{Kursstruktur. Førebels skisse}
 \end{figure}
 
 \end{document}
