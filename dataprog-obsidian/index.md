@@ -13,6 +13,7 @@ title: Utkast til læringsmateriale i data og programmering
 		+ demovideo - førebuing til oppgåver
 		+ tutorials - lukka oppgåver
 		+ prosjektoppgåver - opne oppgåver - egna til mappa
++ [[samle noen tanker]] frå Jonas
 		
 + [[Opningssamling]] (program)
 	+ [[Introduksjon til Jupyter Notebook]] (mogleg fyrste øving ved Hans Georg)

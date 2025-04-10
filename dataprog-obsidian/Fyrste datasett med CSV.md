@@ -10,13 +10,15 @@ tags:
 
 + Føredrag
 	+ kva meiner me med data?
+		+ Døme: valutakurs utan søylenamn
 	+ kva er skilnaden på informasjon og data?
+		+ Døme: søylenamn i tabellen
 	+ kva er skilnaden på kunnskap og informasjon?
-+ Døme valutakurs
-	+ Frå [Noregs Bank](https://www.norges-bank.no/tema/Statistikk/Valutakurser/?tab=api)
-		+ Fleire datasett; me bruker  USD/EUR/GBP/DKK/SEK siste fem åra
-	+ /assets/EXR20250104.csv
-		+ merk, semikolon som skiljeteikn
+		+ Informasjon er proposisjonell kunnskap, og dermed objektiv
+		+ Kunnskap kan òg vera taus og kontekstuell
++ Tutorial	
+	+ assets/csv01.ipynb
+	+ /assets/EXR20250104.csv frå [Noregs Bank](https://www.norges-bank.no/tema/Statistikk/Valutakurser/?tab=api)
 
 
 ## Øvingar	
