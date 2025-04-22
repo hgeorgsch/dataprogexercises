@@ -5,14 +5,20 @@ title: Utkast til læringsmateriale i data og programmering
 + [[Praktiske tips til utvikling av kurset]]
  + [[Skisse til opplegg]]
 	 + 2-3 samlingar à 2-3 dagar
-	 + førelesingsrekkje
-		 + historiefortelling
-		 + drøfta konsekvensar av tekniske detaljar
-			 + (likskapsteiknet, flyttal, læring frå data, kan maskiner tenkja?)
-	+ oppgåverekkje
-		+ demovideo - førebuing til oppgåver
-		+ tutorials - lukka oppgåver
-		+ prosjektoppgåver - opne oppgåver - egna til mappa
+	 + to periodar à seks veker
+	 + Typisk veke
+		 + *videoføredrag* 15min
+			 + historiefortelling
+			 + drøfta konsekvensar av tekniske detaljar
+				 + (likskapsteiknet, flyttal, læring frå data, kan maskiner tenkja?)
+		+ *demovideo* (15 min) - førebuing til oppgåver
+		+ *tutorial* i Jupyter notebook
+			+ utarbeidd døme med høve til endringar
+		+ oppgåver av ulike slag
+			+ lukka oppgåver à la *tutorials* i Jupyter notebook
+			+ *fading examples* à la Clark *et al* 2005
+			+ drilloppgåver i Coderunner
+			+ prosjektoppgåver - opne oppgåver - egna til mappa
 + [[samle noen tanker]] frå Jonas
 		
 + [[Opningssamling]] (program)
@@ -34,6 +40,7 @@ title: Utkast til læringsmateriale i data og programmering
 	+ Større simuleringar
 		+ *shrimp* game
 	+ Statistiske metodar
+		+ 
 + Nedprioritert stoff
 	+ [[Halveringsmetoden]] 
 		+ introduksjon til numeriske metodar og løkker
