@@ -70,7 +70,7 @@ print( f"BMI er {bmi:.2f}" )
 
 Legg merke til at python hugsar alle variablane frå forrige kodecelle.  
 
-### Oppgåver
+:::{admonition} Oppgåver
 
 1.  Sjekk at du kan redigera ei kodecelle.
 	1. Dobbelklikk på kodecella med utrekninga.
@@ -79,6 +79,7 @@ Legg merke til at python hugsar alle variablane frå forrige kodecelle.
 	4. Ser det rett ut?
 2.  Kan du endra utskrifta slik at programmet skriv BMI med éin desimal?
 3. Kan du redigera ei *markdown*-celle òg?  Prinsippet er det same.  Dobbelklikk på cella, skriv kva du vil, og trykk Shift-lineskift for å *rendra* cella.
+:::
 
 ## Markdown
 
@@ -100,13 +101,13 @@ I tillegg til formatteringane som eg har brukt over, kan me bruka **utheva** tek
 Markdown støtter også matematikk med $\LaTeX$ syntax
 $$ f(x) = 3x^2 + x - 10 $$
 
-### Oppgåver
-
+:::{admonition} Oppgåver
 Bruk teksta mi over som døme, og svar på fylgjande.
 Dobbelklikk for å sjå eller redigera koden og Shift-lineskift for å køyra (*rendra*).
 
 1. Kva kode vert brukt til utheva skrift og kursiv?
 2. Kva er skilnaden på ein og fleire skigardard (`#`)?
+:::
 
 ## Funksjonar 
 
@@ -198,7 +199,7 @@ def folketal(tid):
 print( "folketal etter 50 år er {folketal(50)}")
 ```
 
-### Oppgåve
+:::{admonition} Oppgåve
 
 På Island er der 372 520 innbyggjarar (2021). 
 Me reknar med at Island maksimalt kan oppretthalda eit folketal
@@ -208,6 +209,7 @@ på 4 millionar og at relativ vekstrate er 2% (=0,02).
 og skriv ut resultatet saman med relevant informasjon om føresetnadene.*
 
 (Du kan sjølvsagt ta utgangspunkt i dømet og endra tala.)
+:::
 
 ## Plott
 
@@ -229,15 +231,16 @@ plt.show()
 Her dukkar der opp eit par nye konsept.
 Dei to variablane, `xs` og `ys` vert definert som lister.
 
-**Oppgåve** Kva er `xs` lik?  Lag ei ny kodecelle med ein `print`-instruksjon
-for å sjå.
+:::{admonition} Oppgåve
+Kva er `xs` lik?  Lag ei ny kodecelle med ein `print`-instruksjon for å sjå.
+:::
 
 Den andre lista, `ys` er definert ved det som vert kalla listekomprehensjon,
 elementa i lista er alle verdiane `f(x)` der `x` tek kvar verdi i `xs`.
 Dette tilsvarer mengekomprehensjon som de kanskje har sett i matematikken,
 $\{ f(x) | x\in X\}$.
 
-### Oppgåve
+:::{admonition} Oppgåve
 
 1. Plottet over er kanskje litt grovkorna.  Kan du auka talet på punkt
    ved å endra definisjonen på `xs`?
@@ -248,6 +251,7 @@ $\{ f(x) | x\in X\}$.
 4.  Slå opp [dokumentasjonen på plot-funksjonen](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html) 
     og sjå om du kan endra farge på kurva og setja namn på aksane.
     Kva synest du trengst for å gjera grafen presentabel?
+:::
 
 ## Nyttig?
 
