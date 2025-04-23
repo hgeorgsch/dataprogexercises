@@ -270,4 +270,6 @@ del spørja kva gong de snublar.
 + [Kjapt cheat sheet til hvordan skrive markdown](https://www.markdownguide.org/cheat-sheet),
 + [en litt større tutorial med mattetriksene til Latex](https://ashki23.github.io/markdown-latex.html)
 
-![YouTube](https://www.youtube.com/watch?v=uVLzL5E-YBM)
+```{video} https://www.youtube.com/watch?v=uVLzL5E-YBM
+```
+

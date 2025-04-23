@@ -9,3 +9,8 @@ execute:
 # Add a bibtex file so that we can create citations
 bibtex_bibfiles:
   - hgs.bib
+
+
+sphinx: 
+    extra_extensions:
+        - sphinx_iframes
