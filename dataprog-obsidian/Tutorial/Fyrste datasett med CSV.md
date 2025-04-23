@@ -39,9 +39,11 @@ Dette må ein vera merksam på når ein skal lesa fila.
 Fila er rein tekst, slik at me kan opna ho i ei teksteditor (vim, notepad, e.l.).
 Dersom du vil opna ho i Excel, kan det løna seg å opna Excel med eitt tomt ark, og so bruka import-funksjonen frå menyane. Då skal du få opp ein dialogboks der du kan fortelja maskina at semikolon er skiljeteikn, og komma er det ikkje.
 
-**Oppgåve**  Opna fila i eit program du kjenner og sjå korleis ho ser ut.
+:::{admonition} Oppgåve
+Opna fila i eit program du kjenner og sjå korleis ho ser ut.
 Du kan godt opna både i ein teksthandsamar og i eit rekneark.
 Kan du finna att kursen på pund sterling for fem år sidan?  Kva med svenske kroner 1. januar i år?
+:::
 
 Fila inneheld gjerne meir data enn me er interesserte i. Det skal me ikkje tenkja på.  
 Me legg vekt på å forstå det som er nyttig for oss.
@@ -188,7 +190,9 @@ Det er ein god start, men kva er dei rake krosslinene?
 Problemet finn me i fila, som har fem ulike valutaar. Dei fem valuataane har ikkje kvar si søyle.
 I staden er der ei søyle for valutakode.
 
-**Oppgåve** Kva del av plottet svarer til kva valuta?
+:::{admonition} Refleksjonsspørsmål
+Kva del av plottet svarer til kva valuta?
+:::
 
 For å få eit godt plott, må me filtrera datasettet for å skilja dei fem valutaane frå kvarandre.
 
@@ -241,7 +245,10 @@ Når me vel $x$- og $y$-akse i `plot`-funksjonen, kan me gje ei liste med søyle
 mrg.plot( x="dato", y = [ "GBP", "DKK" ])
 ```
 
-**Oppgåve**  Bruk det som me har lært til no for å plotta alle dei fem valutaane i eitt diagram.
+:::{admonition} Oppgåve  
+Bruk det som me har lært til no for å plotta alle dei fem valutaane i eitt diagram.
+:::
+
 
 ## Skriva ut ein fil
 
@@ -258,8 +265,9 @@ mrg.to_csv("EXR-formattert.csv", index=False)
 
 Me ser ikkje noko utdata frå denne funksjonen, so for å sjå kva som skjedde, må me finna att fila i filsystemet.
 
-**Oppgåve**
+:::{admonition} Oppgåve
 Finn fila i filsystemet og opna ho i Excel eller eit anna program. Inneheld ho det ho skal?
+:::
 
 ## Avrunding
 
