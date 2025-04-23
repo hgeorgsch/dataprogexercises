@@ -4,8 +4,21 @@ tags:
   - jupyter
   - function
   - plot
-author: Hans Georg
+title: Introduksjon til Jupyter Notebook
+author: Hans Georg Schaathun
 date: 20. mars 2025
+jupyter:
+  jupytext:
+    cell_metadata_filter: -all
+    text_representation:
+      extension: .md
+      format_name: markdown
+      format_version: '1.3'
+      jupytext_version: 1.17.0
+  kernelspec:
+    display_name: cosmoai
+    language: python
+    name: cosmoai
 ---
 
 + Jonas' utgåver:
@@ -24,8 +37,8 @@ I denne samanhengen er *Jupyter Notebook*, som dette dokumentet er skrive i, eit
 
 Eit dokument er delt opp i to typar celler som du skriv, samt utdata-celler.  Denne teksta er ei *markdown*-cellae, som me bruker til tekst.  I tillegg kan me skriva kode-celler, som den fylgjande.
 
-```
-print( "Hello World!")
+```{code-cell} python3
+print( "Hello World!" )
 ```
 
 Kodecella innheld programkode som vert køyrd av maskina når du trykkjer Shift-Lineskift.
@@ -36,7 +49,7 @@ Målet i oppgåvene under er å testa at det har installert Jupyter, at det verk
 
 Eg vil ikkje kalla innhaldet i kodecella for eit program. Det er berre éin einskild instruksjon. Eit program er ein serie instruksjonar, som skal utførast i rekkjefylgje.  Dette kurset har eit program, av økter og aktivitetar som eg har instruert at me skal utføra. Rett nok er me menneske og kan improvisera.  Den fridommen har maskina ikkje. Ho gjennomfører programmet strengt som det er skrive.  T.d.
 
-```
+```{code-cell} python3
 h = 1.83
 m = 87
 bmi = 87 / h**2
@@ -52,7 +65,7 @@ Her har me brukt fleire viktige mekanismar i programmering.
 + `f"` ... `"` markerer ein formattert tekststreng.  Her kan me bruka krøllparentesane til å inkludera variablar (`bmi`).
 
 Det er litt voldsomt med desimalar, so me kan instruera python til å bruka t.d. 2 desimalar.
-```
+```{code-cell} python3
 print( f"BMI er {bmi:.2f}" )
 ```
 Legg merke til at python hugsar alle variablane frå forrige kodecelle.  
@@ -105,7 +118,7 @@ I matematikken er $f(x)$ ein funksjon, som returnerer ein verdi.
 
 Me kan programmera våre eigne funksjonar i python, og dei kan òg representera
 matematiske funksjonar.  T.d.
-```
+```{code-cell} python3
 def f(x):
     return 3*x**2 + x - 10
 ```
@@ -115,16 +128,16 @@ Merk indenteringa.  Alt som er indentert er ein del av `def`-utsegna.  Neste
 linje som ikkje er indentert vert ein ny instruksjon.
 
 Me kan kalla funksjonen, t.d. som
-```
+```{code-cell} python3
 print( "Funksjonsverdi", f(5) )
 ```
 eller som del av eit uttrykk
-```
+```{code-cell} python3
 print( f"Eit uttrykk f(10)*2-1 = {f(10)*2-1}." )
 ```
 
 Funksjonar i *python* kan gjera begge delar, både returnera verdi og gjera noko.
-```
+```{code-cell} python3
 def f(x):
     print( f"x={x}" )
     return 3*x**2 + x - 10
@@ -159,7 +172,7 @@ For å implementera denne funksjonen i *python* er det enklast å bruke
 bibliotek som gjev tilgang til $\exp$-funksjonen.  Då bruker me ein
 `import`-instruksjon.
 
-```
+```{code-cell} python3
 import math
 
 print( "exp 1 = ", math.exp(1) )
@@ -167,7 +180,7 @@ print( "exp 10 = ", math.exp(10) )
 ```
 
 Då kan me t.d. skriva
-```
+```{code-cell} python3
 def folketal(tid):
     K = 3500000
     P0 = 45000
@@ -193,7 +206,7 @@ og skriv ut resultatet saman med relevant informasjon om føresetnadene.*
 
 For å forstå ein matematisk modell ynskjer me som regel å plotta han.
 Dette kan me gjera med fylgjande kode.
-```
+```{code-cell} python3
 import matplotlib.pyplot as plt
 import numpy as np
 
