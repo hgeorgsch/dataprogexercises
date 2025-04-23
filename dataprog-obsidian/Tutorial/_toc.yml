@@ -5,9 +5,10 @@ root: intro
 chapters:
   - file: opening
     sections:
-    - file: Fyrste datasett med CSV
-    - file: Introduksjon til Jupyter Notebook
-    - file: Simulering av kontantstraum
+    - file: installasjon
+    - file: notebook/Fyrste datasett med CSV
+    - file: notebook/Introduksjon til Jupyter Notebook
+    - file: notebook/Simulering av kontantstraum
   - file: first
   - file: midway
   - file: second
