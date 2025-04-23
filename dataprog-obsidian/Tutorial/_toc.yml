@@ -3,6 +3,6 @@
 format: jb-book
 root: intro
 chapters:
-- file: Fyrste datasett med CSV.md
-- file: Introduksjon til Jupyter Notebook.md
-- file: Simulering av kontantstraum.md
+- file: Fyrste datasett med CSV
+- file: Introduksjon til Jupyter Notebook
+- file: Simulering av kontantstraum

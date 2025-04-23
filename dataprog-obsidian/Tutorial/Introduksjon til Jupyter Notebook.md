@@ -26,6 +26,7 @@ kernelspec:
 	+ [[Help-funksjonen]]
 
 # Programmering og Jupyter Notebook
+
 ## Dei fyrste stega
 
 Programmering er mykje rart. Folk som bruker programvareutvikling bruker gjerne andre verkty enn dei som programmerer matematiske modellar eller statistiske analysar. Målet med *dette* kurset er å bruka store datasett til å forstå verda, gjennom statistiske analysar, visualisering eller simulering. Mange bruker allereie rekneark til denne jobben, men mange nyttige datasett er for store til å lasta dei i rekneark, og då treng ein andre verkty.
@@ -62,12 +63,14 @@ Her har me brukt fleire viktige mekanismar i programmering.
 + `f"` ... `"` markerer ein formattert tekststreng.  Her kan me bruka krøllparentesane til å inkludera variablar (`bmi`).
 
 Det er litt voldsomt med desimalar, so me kan instruera python til å bruka t.d. 2 desimalar.
+
 ```{code-cell} python3
 print( f"BMI er {bmi:.2f}" )
 ```
+
 Legg merke til at python hugsar alle variablane frå forrige kodecelle.  
 
-#### Oppgåver
+### Oppgåver
 
 1.  Sjekk at du kan redigera ei kodecelle.
 	1. Dobbelklikk på kodecella med utrekninga.
@@ -97,7 +100,7 @@ I tillegg til formatteringane som eg har brukt over, kan me bruka **utheva** tek
 Markdown støtter også matematikk med $\LaTeX$ syntax
 $$ f(x) = 3x^2 + x - 10 $$
 
-#### Oppgåver
+### Oppgåver
 
 Bruk teksta mi over som døme, og svar på fylgjande.
 Dobbelklikk for å sjå eller redigera koden og Shift-lineskift for å køyra (*rendra*).
@@ -115,25 +118,31 @@ I matematikken er $f(x)$ ein funksjon, som returnerer ein verdi.
 
 Me kan programmera våre eigne funksjonar i python, og dei kan òg representera
 matematiske funksjonar.  T.d.
+
 ```{code-cell} python3
 def f(x):
     return 3*x**2 + x - 10
 ```
+
 Kodeordet `def` seier at me definerer ein funksjon, som heiter `f` og har
 eitt argument `x`.  Kodeordet `return` seier at funksjonen returnerer ein verdi.
 Merk indenteringa.  Alt som er indentert er ein del av `def`-utsegna.  Neste
 linje som ikkje er indentert vert ein ny instruksjon.
 
 Me kan kalla funksjonen, t.d. som
+
 ```{code-cell} python3
 print( "Funksjonsverdi", f(5) )
 ```
+
 eller som del av eit uttrykk
+
 ```{code-cell} python3
 print( f"Eit uttrykk f(10)*2-1 = {f(10)*2-1}." )
 ```
 
 Funksjonar i *python* kan gjera begge delar, både returnera verdi og gjera noko.
+
 ```{code-cell} python3
 def f(x):
     print( f"x={x}" )
@@ -177,6 +186,7 @@ print( "exp 10 = ", math.exp(10) )
 ```
 
 Då kan me t.d. skriva
+
 ```{code-cell} python3
 def folketal(tid):
     K = 3500000
@@ -188,7 +198,7 @@ def folketal(tid):
 print( "folketal etter 50 år er {folketal(50)}")
 ```
 
-#### Oppgåve
+### Oppgåve
 
 På Island er der 372 520 innbyggjarar (2021). 
 Me reknar med at Island maksimalt kan oppretthalda eit folketal
@@ -203,6 +213,7 @@ og skriv ut resultatet saman med relevant informasjon om føresetnadene.*
 
 For å forstå ein matematisk modell ynskjer me som regel å plotta han.
 Dette kan me gjera med fylgjande kode.
+
 ```{code-cell} python3
 import matplotlib.pyplot as plt
 import numpy as np
@@ -226,7 +237,7 @@ elementa i lista er alle verdiane `f(x)` der `x` tek kvar verdi i `xs`.
 Dette tilsvarer mengekomprehensjon som de kanskje har sett i matematikken,
 $\{ f(x) | x\in X\}$.
 
-#### Oppgåve
+### Oppgåve
 
 1. Plottet over er kanskje litt grovkorna.  Kan du auka talet på punkt
    ved å endra definisjonen på `xs`?
