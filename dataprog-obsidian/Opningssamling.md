@@ -25,7 +25,7 @@ date: 20. mars 2025
 	+ [[Seminar om motivasjon og ynskjer]]
 	+ [[Introduksjon til Jupyter Notebook]] 
 	+ [[Simulering av kontantstraum]] 
-	+ [[Fyrste datasett med CSV]]
+	+ [[Introduksjon til datasett i CSV]]
 + **NB** *rekk me fem slike blokkar?*
 + Treng tilpassing til deltakartal
 

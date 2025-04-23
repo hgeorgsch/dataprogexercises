@@ -1,4 +1,11 @@
 ---
+title: Fyrste datasett med CSV
+author: Hans Georg Schaathun
+tags:
+  - csv
+  - plot
+  - session
+  - exercise/tutorial
 jupytext:
   formats: ipynb,md:myst
   text_representation:
@@ -12,17 +19,11 @@ kernelspec:
   name: pythonenv
 ---
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 # Arbeida med store datasett
-
-+++ {"slideshow": {"slide_type": "slide"}}
 
 Eitt hovudmål i dette kurset er å kunna handtera store datasett frå røynda vha. programmering, i praksis i python. Me skal starta med datasettet, og so tek me programmeringsteknikkane etter kvart. Mange har gjort liknande ting i Excel eller andre rekneark, og då vil det ta ein del tid før føremonane ved programmering kjem til syne. Enkle oppgåver er som regel enklare å gjera, og i alle fall raskare å læra, i rekneark. Det er berre samansette oppgåver og store datasett som vert enklare ved programmering. Eitt problem med Excel spesifikt er maksgrensa på ein million radar. Me skal etter kvar sjå på datasett som er større enn det.
 
 Merk at dette dokumentet er tenkt presentert munnleg i eit seminar. Forklaringane kan difor vera litt knappe til sjølvstudium.
-
-+++
 
 ## Fyrste datasett
 
@@ -242,8 +243,6 @@ mrg.plot( x="dato", y = [ "GBP", "DKK" ])
 
 **Oppgåve**  Bruk det som me har lært til no for å plotta alle dei fem valutaane i eitt diagram.
 
-+++
-
 ## Skriva ut ein fil
 
 Heilt til slutt skal me sjå korleis me kan skriva det reformatterte datasettet tilbake til fil.
@@ -262,8 +261,6 @@ Me ser ikkje noko utdata frå denne funksjonen, so for å sjå kva som skjedde, 
 **Oppgåve**
 Finn fila i filsystemet og opna ho i Excel eller eit anna program. Inneheld ho det ho skal?
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
 ## Avrunding
 
 Der er mykje å halda styr på i pandas. Her har me berre sett eitt døme og nokre få teknikkar. Når du skal bruka python og pandas i praksis vil du stadig vekk ha bruk for å slå opp konkrete teknikkar.  T.d.
@@ -274,7 +271,3 @@ Der er mykje å halda styr på i pandas. Her har me berre sett eitt døme og nok
 
 Det er ikkje sikkert at det er mykje hjelp i desse kjeldene enno, før du har lært litt meir. I neste demo skal me forklara nokre fleire grunnleggjande konsept. Målet er å læra nok til å søkja etter resten, lesa dokumentasjon og å stilla gode spørsmål når du treng det.
 
-
-```{code-cell} ipython3
-
-```
