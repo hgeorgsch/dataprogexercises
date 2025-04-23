@@ -31,7 +31,7 @@ title: Utkast til læringsmateriale i data og programmering
 + [[Opningssamling]] (program)
 	+ [[Introduksjon til Jupyter Notebook]] (mogleg fyrste øving ved Hans Georg)
 	+ [[Simulering av kontantstraum]] 
-	+ [[Fyrste datasett med CSV]]
+	+ [[Introduksjon til datasett i CSV]]
 	
 ## Fyrste periode
 

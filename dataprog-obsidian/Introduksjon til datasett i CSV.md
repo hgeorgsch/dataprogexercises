@@ -1,12 +1,13 @@
 ---
 tags:
-  - exercise
   - csv
   - plot
+  - session
+  - lecture/samling
 ---
 
-+ Grunnlag og idéar
-	+ [[Fyrste øving med CSV 2024]]
++ Grunnlag og idéar: [[Fyrste øving med CSV 2024]]
++ Tutorial: [[Fyrste datasett med CSV]]
 
 + Føredrag
 	+ kva meiner me med data?
