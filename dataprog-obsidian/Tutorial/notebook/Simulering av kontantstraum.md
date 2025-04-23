@@ -54,7 +54,9 @@ rente = 5/100  # Rentesats til utrekning
 
 No treng me kode som gjentek den same operasjonen kvart år. Den mest grunnleggjande måten å gjera det på, er med ei løkke (*loop*). Der finst ulike formar.  Lat oss sjå på `for`-løkka fyrst. 
 
-**Oppgåve** Prøv fyrst å lesa koden under. Går det an å forstå kva som skjer utan å køyra koden? Køyr so koden og sjå på resultatet.
+:::{admonition} Oppgåve
+Prøv fyrst å lesa koden under. Går det an å forstå kva som skjer utan å køyra koden? Køyr so koden og sjå på resultatet.
+:::
 
 ```{code-cell} python3
 saldo = 10.000
@@ -64,7 +66,12 @@ for year in range(2025,2045):
    print( f"Lånesaldo 31. desember {year}: {saldo}" )
 ```
 
-Løkka definerer ein variabel (her `year`) som tek kvar verdi i ei liste eller eit listeliknande objekt (her `range`). Koden inni løkka vert køyrd éin gong med kvar verdi. Lånet vert utbetalt berre ein gong, før løkka starta, her med eit lånebeløp på 10.000.
+Løkka definerer ein variabel (her `year`) som tek kvar verdi i ei liste eller eit listeliknande objekt (her `range`).
+Python bruker innrykk (indentering) for å markera kva som høyrer til løkka.  
+Kolon på slutten av `for`-lina markerer starten på ein *blokk*, som inkluderer alle liner som er innrykte i forhold
+til `for`.
+Denne blokken vert køyrd éin gong med kvar verdi av `year`.
+Lånet vert utbetalt berre ein gong, før løkka starta, her med eit lånebeløp på 10.000.
 
 **Merk** `range` er ikkje ei liste, men ein sokalla iterator. Det speler inga rolle, bortsett frå når me ynskjer å inspisera objektet. Det går derimot an å konvertera til ei liste.
 
@@ -78,7 +85,9 @@ Me kan samanlikna det med sjølve iteratoren:
 print( range(2024,2045) )
 ```
 
-**Oppåve**  `for`-løkka går like godt med ei liste.  Prøv å byta ut `range(2025,2045)` med ei liste, t.d. `[ 2025, 2026, 2027, 2028 ]`.
+:::{admonition} Oppgåve
+`for`-løkka går like godt med ei liste.  Prøv å byta ut `range(2025,2045)` med ei liste, t.d. `[ 2025, 2026, 2027, 2028 ]`.
+:::
 
 ### Nedbetaling
 
@@ -88,7 +97,9 @@ Den fyrste simuleringa viser korleis lånet veks med renter og rentesrente. I pr
 terminbetaling = 1000
 ```
 
-**Oppgåva** Korleis vil du endra koden over slik at nedbetalinga òg vert simulert?
+:::{admonition} Oppgåve
+Korleis vil du endra koden over slik at nedbetalinga òg vert simulert?
+:::
 
 Kan henda kjem du opp med noko slikt som dette:
 
@@ -101,11 +112,15 @@ for year in range(2025,2045):
    print( f"Lånesaldo 31. desember {year}: {saldo}" )
 ```
 
-**Oppgåve**  Kva skjer om du trekk frå terminbetalinga før du legg til renta? Gjer det nokon forskjell?
+:::{admonition} Oppgåve
+Kva skjer om du trekk frå terminbetalinga før du legg til renta? Gjer det nokon forskjell?
+:::
 
 Her er det litt vilkårleg om me klarer å betala ned lånet innanfor simuleringsperioden fram til 2045 eller ikkje.  Det går an å skriva løkka slik at ho simulerer fram til lånet er nedbetalt.  Det enklaste er då å bruka `while` i staden for `for`.
 
-**Refleksjon** Ser du kva koden under gjer før du køyrer han?
+:::{admonition} Refleksjon
+Ser du kva koden under gjer før du køyrer han?
+:::
 
 ```{code-cell} python3
 saldo = 10.000
@@ -118,17 +133,57 @@ while saldo > 0:
    year = year + 1
 ```
 
-**Refleksjon** Kvifor må me setja `year` før løkka startar i dette tilfellet, og ikkje i tilfellet med `for`?
+:::{admonition} Refleksjon
+Kvifor må me setja `year` før løkka startar i dette tilfellet, og ikkje i tilfellet med `for`?
+:::
 
 Med `while`-løkka kan me gjenta koden heilt til eit eller anna vilkår er innfridd. Til samanlikning er `for`-løkka ganske rigid; ho handterer variabelen `year` sjølv og går gjennom førehandsbestemte verdiar. Med `while` tek programmøren heile ansvaret for variabelen og sluttkriteriet. Det gjev litt meir kode for å oppdatera `year`, men òg meir fleksibilitet.
 
-**Oppgåve** Kva skjer om du set terminbetalinga lågt, t.d. til 200?
+:::{admonition} Oppgåve
+Kva skjer om du set terminbetalinga lågt, t.d. til 200?
+:::
 
-**Oppgåve** Ofte vert lånet belasta med eit fast gebyr i tillegg til rentene.  Legg til eit gebyr på 50kr/år i simuleringa. Korleis påverker det lånet?
+:::{admonition} Oppgåve
+Ofte vert lånet belasta med eit fast gebyr i tillegg til rentene.  Legg til eit gebyr på 50kr/år i simuleringa. Korleis påverker det lånet?
+:::
+
 ### Plotting og annan bruk av utrekningane
 
-1. Plott
-2. Rekn ut total
+Som regel, når me simulerer, er me interesserte i data undervegs
+i simuleringa, t.d. lånesaldo år for år.  I simuleringane over
+har me ikkje lagra noko undervegs, berre skrive ut til skjerm.
+Ein måte å endra dette på er å laga ein liste som samlar lagrar
+resultatet i kvar iterasjon.
+
+```{code-cell} python3
+saldo = 10.000
+y = [ saldo ]
+x = [ 2024 ]
+for year in range(2025,2045):
+   saldo = saldo + saldo*rente
+   y.append( saldo )
+   x.append( year )
+print( x )
+print( y )
+```
+
+Her lagar me to lister, kalt `x` og `y` som reflekterer at me skal plotta
+resultatet straks.  Liste-typen har ein metode (eller funksjon) `append`
+for å leggja til eit element på slutten av lista.  Dersom du er usikker
+på korleis det verkar, so kan du flytta `print`-satsane inn i løkka og sjå
+kva som skjer.
+
+Me kan plotta som me har gjort før.
+
+```{code-cell} python3
+import matplotlib.pyplot as plt
+   plt.plot( x, y )
+plt.show()
+```
+
+:::{admonition} Oppgåve
+Plott lånesaldoen med årleg nedbetaling.
+:::
 
 ### Gjenbruk av simuleringa med funksjonar
 ### Den matematiske løysinga
@@ -141,8 +196,6 @@ Med `while`-løkka kan me gjenta koden heilt til eit eller anna vilkår er innfr
 ### Tilfeldige renteendringar i framtida
 
 1. Legg til tilfeldige rentehopp
-
-+++
 
 ### Oppgåver
 
