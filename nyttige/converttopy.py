@@ -10,4 +10,4 @@ def convert(filename):
                file.write(line)
             print(cell["source"])
 
-convert("../sessions/Uke43/Pandas-Lese-Data-JH.ipynb")
+#convert("../sessions/Uke43/Pandas-Lese-Data-JH.ipynb")
