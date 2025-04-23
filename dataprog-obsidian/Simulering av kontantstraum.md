@@ -66,9 +66,18 @@ print( range(2024,2045) )
 
 ### Nedbetaling
 
+Den fyrste simuleringa viser korleis lånet veks med renter og rentesrente. I praksis betaler ein som regel lånet ned, gradvis år for år.  Sett at me startar med det same lånet som over, men betaler inn eit terminbeløp på 1000 kr same dagen som rentene vert kapitaliserte kvar år.
+
+```
+terminbetaling = 1000
+```
+
+**Oppgåva** Korleis vil du endra koden over slik at nedbetalinga òg vert simulert?
+
+Kan henda kjem du opp med noko slikt som dette:
+
 ```
 saldo = 10.000
-terminbetaling = 1000
 for year in range(2025,2045):
    print( f"Lånesaldo 1. januar {year}: {saldo}" )
    saldo = saldo + saldo*rente
@@ -76,11 +85,14 @@ for year in range(2025,2045):
    print( f"Lånesaldo 31. desember {year}: {saldo}" )
 ```
 
-*Oppgåve*  Kva skjer om du trekk frå terminbetalinga før du legg til renta? Gjer det nokon forskjell?
+**Oppgåve**  Kva skjer om du trekk frå terminbetalinga før du legg til renta? Gjer det nokon forskjell?
+
+Her er det litt vilkårleg om me klarer å betala ned lånet innanfor simuleringsperioden fram til 2045 eller ikkje.  Det går an å skriva løkka slik at ho simulerer fram til lånet er nedbetalt.  Det enklaste er då å bruka `while` i staden for `for`.
+
+**Refleksjon** Ser du kva koden under gjer før du køyrer han?
 
 ```
 saldo = 10.000
-terminbetaling = 1000
 year = 2025
 while saldo > 0:
    print( f"Lånesaldo 1. januar {year}: {saldo}" )
@@ -90,6 +102,10 @@ while saldo > 0:
    year = year + 1
 ```
 
+**Refleksjon** Kvifor må me setja `year` før løkka startar i dette tilfellet, og ikkje i tilfellet med `for`?
+
+Med `while`-løkka kan me gjenta koden heilt til eit eller anna vilkår er innfridd. Til samanlikning er `for`-løkka ganske rigid; ho handterer variabelen `year` sjølv og går gjennom førehandsbestemte verdiar. Med `while` tek programmøren heile ansvaret for variabelen og sluttkriteriet. Det gjev litt meir kode for å oppdatera `year`, men òg meir fleksibilitet.
+
 **Oppgåve** Kva skjer om du set terminbetalinga lågt, t.d. til 200?
 
 **Oppgåve** Ofte vert lånet belasta med eit fast gebyr i tillegg til rentene.  Legg til eit gebyr på 50kr/år i simuleringa. Korleis påverker det lånet?
@@ -98,6 +114,7 @@ while saldo > 0:
 1. Plott
 2. Rekn ut total
 
+### Gjenbruk av simuleringa med funksjonar
 ### Den matematiske løysinga
 
 1. Geometrisk rekkje - lukka form
