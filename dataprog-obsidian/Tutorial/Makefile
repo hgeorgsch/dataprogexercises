@@ -1,2 +1,2 @@
 %.ipynb: %.md
-	jupytext --to notebook --execute $<
+	jupytext --to notebook --execute "$<"

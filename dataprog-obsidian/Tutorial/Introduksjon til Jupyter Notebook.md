@@ -1,24 +1,21 @@
 ---
-tags:
-  - intro
-  - jupyter
-  - function
-  - plot
+tags: [intro, jupyter, function, plot]
 title: Introduksjon til Jupyter Notebook
 author: Hans Georg Schaathun
 date: 20. mars 2025
-jupyter:
-  jupytext:
-    cell_metadata_filter: -all
-    text_representation:
-      extension: .md
-      format_name: markdown
-      format_version: '1.3'
-      jupytext_version: 1.17.0
-  kernelspec:
-    display_name: cosmoai
-    language: python
-    name: cosmoai
+jupytext:
+  cell_metadata_filter: -all
+  formats: md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.17.0
+  root_level_metadata_filter: -tags,-title,-author,-date
+kernelspec:
+  display_name: cosmoai
+  language: python
+  name: cosmoai
 ---
 
 + Jonas' utgåver:
