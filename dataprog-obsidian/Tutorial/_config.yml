@@ -1,0 +1,11 @@
+# In _config.yml
+
+title: Data og programmering for ulike fag
+author: Hans Georg Schaathun og Jonas Julius Harang
+logo: ntnu.svg
+execute:
+  execute_notebooks: force
+
+# Add a bibtex file so that we can create citations
+bibtex_bibfiles:
+  - hgs.bib
