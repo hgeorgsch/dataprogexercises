@@ -6,3 +6,6 @@ tags:
 + Jupyter to run git  [[/assets/hent-innhold.ipynb]]
 
 + [[jupytext]] to manage conversion between Jupyter notebook and markdown
++ Jupyter Books to make web pages
+	+ video with Iframes
+		+ https://teachbooks.io/manual/external/sphinx-iframes/README.html
