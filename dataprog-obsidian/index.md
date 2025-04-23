@@ -25,7 +25,9 @@ title: Utkast til læringsmateriale i data og programmering
 		+ Sjå `Beregninger og funksjoner-JHmanus.ipynb` (oppsummering)
 	+ Del 2.  Store datasett
 	+ [[Mappe Del 2 Haust 2024]]
-		
+
+## Samlingar
+
 + [[Opningssamling]] (program)
 	+ [[Introduksjon til Jupyter Notebook]] (mogleg fyrste øving ved Hans Georg)
 	+ [[Simulering av kontantstraum]] 
