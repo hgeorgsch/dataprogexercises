@@ -27,6 +27,8 @@ kernelspec:
 	+ med litt røynsle og litt kreativitet er der inga grense for kva de kan gjera
 		+ vert det komplekst nok, får de til meir med programmering enn med rekneark
 
+# Simulering av ein kontantstraum
+
 ## Disposisjon
 
 Simulering vert ofte brukt for å modellera og analysera moglege framtidsscenario. I staden for å laga utvikla éin modell som skildrar kva som må skje eller sannsynligvis skjer, simulerer ein eitt mogleg scenario, basert på eitt sett føresetnader. So kan ein evt. simulera fleire gongar med ulike færesetnader. Dette er særleg nyttig i komplekse og probabilistiske modellar, som det ofte er uråd å løysa analytisk. Me høyrer ofte om utgreiingar som refererer til simulering, t.d. i epidemologi og smittevern og i traffikkprogrnosar og vegplanleggjing. 
