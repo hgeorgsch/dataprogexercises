@@ -1,6 +1,6 @@
 %.ipynb: %.md
 	jupytext --to notebook --execute "$<"
-
+_build: intro.md
 _build:
 	jupyter-book build .
 
