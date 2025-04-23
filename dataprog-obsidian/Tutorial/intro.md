@@ -13,7 +13,7 @@ høgre og sjå om du får `ipynb` som eit val.  Du må sjølvsagt
 (sjå [installasjon](installasjon)).
 
 
-+ [Opningssamling](opening)
++ [Opningssamling](Opningssamling)
 + [Fyrste periode](first)
 + [Midtvegssamling](midway)
 + [Andre periode](second)
