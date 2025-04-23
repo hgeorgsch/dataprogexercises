@@ -1,12 +1,21 @@
 ---
 title: Simulering av kontantstraum
 author: Hans Georg Schaathun
-tags:
-  - exercise
-  - simulering
-  - loop
+tags: [exercise, simulering, loop]
+jupytext:
+  cell_metadata_filter: -all
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.17.0
+  formats: md:myst
+  root_level_metadata_filter: -title,-author,-tags
+kernelspec:
+  display_name: cosmoai
+  language: python
+  name: cosmoai
 ---
-
 
 + Problem.
 	+ lån med årleg rente
@@ -35,7 +44,8 @@ Eit lån, og mange andre kontantstraumar, er ein enkel prosess. Prosessen er dis
 
 Koden vert enklast å lesa dersom me bruker ein variabel med namn til rentesats.
 Lat oss starta med 5%.
-```{code-block} python3
+
+```{code-cell} python3
 rentesats = 5  # Rentesats i prosent
 rente = 5/100  # Rentesats til utrekning
 ```
@@ -44,7 +54,7 @@ No treng me kode som gjentek den same operasjonen kvart år. Den mest grunnleggj
 
 **Oppgåve** Prøv fyrst å lesa koden under. Går det an å forstå kva som skjer utan å køyra koden? Køyr so koden og sjå på resultatet.
 
-```{code-block} python3
+```{code-cell} python3
 saldo = 10.000
 for year in range(2025,2045):
    print( f"Lånesaldo 1. januar {year}: {saldo}" )
@@ -56,12 +66,13 @@ Løkka definerer ein variabel (her `year`) som tek kvar verdi i ei liste eller e
 
 **Merk** `range` er ikkje ei liste, men ein sokalla iterator. Det speler inga rolle, bortsett frå når me ynskjer å inspisera objektet. Det går derimot an å konvertera til ei liste.
 
-```{code-block} python3
+```{code-cell} python3
 print( list( range(2024,2045) ) )
 ```
+
 Me kan samanlikna det med sjølve iteratoren:
 
-```{code-block} python3
+```{code-cell} python3
 print( range(2024,2045) )
 ```
 
@@ -71,7 +82,7 @@ print( range(2024,2045) )
 
 Den fyrste simuleringa viser korleis lånet veks med renter og rentesrente. I praksis betaler ein som regel lånet ned, gradvis år for år.  Sett at me startar med det same lånet som over, men betaler inn eit terminbeløp på 1000 kr same dagen som rentene vert kapitaliserte kvar år.
 
-```{code-block} python3
+```{code-cell} python3
 terminbetaling = 1000
 ```
 
@@ -79,7 +90,7 @@ terminbetaling = 1000
 
 Kan henda kjem du opp med noko slikt som dette:
 
-```{code-block} python3
+```{code-cell} python3
 saldo = 10.000
 for year in range(2025,2045):
    print( f"Lånesaldo 1. januar {year}: {saldo}" )
@@ -94,7 +105,7 @@ Her er det litt vilkårleg om me klarer å betala ned lånet innanfor simulering
 
 **Refleksjon** Ser du kva koden under gjer før du køyrer han?
 
-```{code-block} python3
+```{code-cell} python3
 saldo = 10.000
 year = 2025
 while saldo > 0:
@@ -129,6 +140,7 @@ Med `while`-løkka kan me gjenta koden heilt til eit eller anna vilkår er innfr
 
 1. Legg til tilfeldige rentehopp
 
++++
 
 ### Oppgåver
 
