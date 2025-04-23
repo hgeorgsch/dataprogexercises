@@ -1,0 +1,8 @@
+# In _toc.yml
+
+format: jb-book
+root: intro
+chapters:
+- file: Fyrste datasett med CSV.md
+- file: Introduksjon til Jupyter Notebook.md
+- file: Simulering av kontantstraum.md
