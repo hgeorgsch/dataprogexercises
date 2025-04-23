@@ -5,7 +5,7 @@ tags:
 
 I have started [[2025-04-23]] to set up tutorials written in markdown and converted to Jupyter notebook.  These are found in the directory `dataprog-obsidian/Tutorial`. 
 
-First [jupytext](https://github.com/mwouts/jupytext) must be installed using  pip. It is included in `requirements.txt` the repo.
+First [jupytext](https://github.com/mwouts/jupytext) must be installed using  pip. It is included in `requirements.txt` in the repo.
 
 To set up a new markdown file for use in Jupyter, we need these two lines
 ```sh
