@@ -3,7 +3,7 @@
 format: jb-book
 root: intro
 chapters:
-  - file: opening
+  - file: Opningssamling
     sections:
     - file: installasjon
     - file: notebook/Fyrste datasett med CSV
