@@ -7,10 +7,22 @@ date: 24. april 2025
 
 # Opningssamling
 
+Kurset startar med ei samling over to dagar.
+Hovudmålet for denne samlinga er at alle har installert og kan
+bruka *Jupyter notebook* på eiga maskin, samt at me har ei
+felles forståing av kva me søkjer å oppnå i laupet av semesteret.
+
+**Førebuing** me tilrår at alle installerer programvaren på eiga
+maskin før samlinga (sjå [Installasjon](Installasjon)), gjerne i
+samråd med IT-tenesta dersom ein bruker jobbmaskin.  
+Vegleiingstida før lønsj fyrste dagen er for dei som av ein eller
+annan grunn ikkje får gjort dette på førehand.
+
 
 ## Dag 1
 
-+ 10.00-11.00: Vegleiing til [Installasjon](Installasjon)
++ 10.00-11.30: Vegleiing til [Installasjon](Installasjon),
+    for dei som ikkje er ferdig med det på førehand.
 + 11.30-12.15: Lønsjpause
 + 12.15-12.30: Velkommen.  Praktisk informasjon.
 + 12.30-13.00: Presentasjon av Økt 1. 
