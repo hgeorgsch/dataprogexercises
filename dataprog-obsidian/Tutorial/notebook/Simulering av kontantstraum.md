@@ -62,7 +62,8 @@ til `for`.
 Denne blokken vert køyrd éin gong med kvar verdi av `year`.
 Lånet vert utbetalt berre ein gong, før løkka starta, her med eit lånebeløp på 10.000.
 
-**Merk** `range` er ikkje ei liste, men ein sokalla iterator. Det speler inga rolle, bortsett frå når me ynskjer å inspisera objektet. Det går derimot an å konvertera til ei liste.
+**Merk** at `range` ikkje er ei liste, men ein sokalla iterator.
+Det speler inga rolle, bortsett frå når me ynskjer å inspisera objektet. Det går derimot an å konvertera til ei liste.
 
 ```{code-cell} python3
 print( list( range(2024,2045) ) )
@@ -309,12 +310,51 @@ vert endra tilfeldig i framtida.
 
 Me kan t.d. tenkja oss at kvart år er det 10% sannsyn for at renta går
 opp ½ prosentpoeng, og 10% sjanse for at ho går tilsvarande ned.
+Då treng me ein mekanisme for slump.
+Der finst fleire ulike modular og bibliotek som gjer dette i python.
+Her kan me bruka eit av dei enklaste, som heiter
+[random](https://docs.python.org/3/library/random.html).
+Lat oss testa det fyrst.
+
+```{code-cell} python3
+import random
+random.randint(1,10)
+```
+
+Dette er den einaste funksjonen me treng i dag;
+`random.randint(1,10)` returnerer eit heiltal frå 1 til 10,
+tilfeldig frå ei uniform fordeling.  Me kan kjapt testa at
+me ikkje får same tal kvar gong, t.d.
+
+```{code-cell} python3
+[ random.randint(1,10) for x in range(20) ]
+```
+
+:::{admonition} Refleksjon
+Ser resultatet rimeleg ut?
+:::
+
+:::{admonition} Refleksjon
+Korleis kan me bruka eit slikt slumptal til å simulera
+tilfeldige hendingar?
+:::
+
+Ein vanleg teknikk er å tolka ulike tal frå slumptalsgeneratoren
+som ulike hendingar.  
+T.d. kan me seia at 1 gjev renteoppgang og 2 gjev rentenedgang.
+Då får me kanskje fylgjande som erstatning for `loan` og `loan2`.
+
 
 ```{code-cell} python3
 def loan3(saldo=10000,rente=0.05,nedbetaling=0,year=2024,gebyr=0):
    y = [ saldo ]
    x = [ year ]
    while saldo > 0 and len(x) < 100:
+      slump = random.randint(1,10)
+      if slump == 1:
+         rente = rente + 0.005
+      elif slump == 10:
+         rente = rente - 0.005
       saldo = saldo + saldo*rente
       saldo = saldo + gebyr
       saldo = saldo - terminbetaling
@@ -323,6 +363,53 @@ def loan3(saldo=10000,rente=0.05,nedbetaling=0,year=2024,gebyr=0):
       x.append( year )
    return (x,y)
 ```
+
+Her er der to nye element, som kan trengja forklaring.
+Det fyrste er `if`, som liknar litt på `while`, bortsett
+frå at `if` berre køyrer blokken éin gong dersom vilkåret
+er sant, og ikkje fleire gongar so lenge som det er sant.
+Vilkåret her er at `slump` må vera lik 1 for å få renteoppgang.
+Fordi python bruker likskapsteiknet til tilordning, må me bruka
+dobbelt likskapsteikn for likskap.  Dette er likskap i matematisk
+forstand, som eit utsagn som kan vera sant eller usant.
+
+Til slutt har me `elif`.  Dersom det fyrste `if`-vilkåret er sant,
+vert `elif`-blokken ignorert.  Dersom det fyrste vilkåret er usant,
+prøver maskina `elif` og sjekkar om `slump == 10` er sant.
+
+I dette tilfellet vil me verkeleg simulera fleire gongar for å kunna
+sjå tilfeldigheitene.
+
+```{code-cell} python3
+for i in range(12):
+   (x,y) = loan3()
+   plt.plot(x,y)
+plt.show()
+```
+
+Legg merke til at me kan køyra `plt.plot()` mange gongar, og alt
+kjem opp i den same figuren.
+
+:::{admonition} Refleksjon
+Er dette ein god sannsynsmodell for renteendringar i framtida?
+Kan du forbetra han?
+:::
+
+:::{admonition} Oppgåve
+Lag ein figur som simulerer lånet med andre parametrar.
+:::
+
+:::{caution}
+Slumptal på ei datamaskin er ikkje strengt tatt tilfeldige.
+Under panseret er der ein matematisk funksjon som genererer ein deterministisk
+serie med tal, slik at det er relativt vanskeleg å forutsjå neste tal.
+Dette er godt nok til dei fleste simuleringsformål, men i somme fagfelt
+er det ei stor utfordring å laga slumptalsgeneratorar som er gode nok.
+
+Der finst bibliotek som bruker data utanfrå, t.d. frå musa eller tastaturet,
+til å finna ekte tilfeldige tal.  Problemet er at det går mykje treigare når
+ein treng meir enn nokre få verdiar.
+:::
 
 ## Oppgåver
 
@@ -338,7 +425,22 @@ Me har simulert årlege terminar, noko som ikkje er særleg vanleg i røynda.
 Lag simuleringar med månadleg rentekapitalisering og terminbetaling.
 :::
 
-## Notat - utelate material
+:::{admonition} Oppgåve
+I røynda kjem ei renteendring sjelden aleine.  
+Kan henda vore burde sannsynlegheita for renteauke auka når den fyrste renteendringa
+skjer, og ikkje gå ned før me ser ein rentenedgang.
+Endra `loan3`-funksjonen for å simulera dette.
+
+Det er litt plunder å få til, men du kan t.d.
+1. Innføra ein variabel `terskel` og seia at me får renteoppgang når 
+    `slump <= terskel`.
+2. Kvar gong renta går opp eller ned, kan du justera `terskel`.
+3. Slumptal frå 1 til 10 er kanskje for grovkorna, men du kan auka spennet til 100
+    eller 1000.
+4. Du kan laga ein tilsvarande terskel for rentenedgang.
+:::
+
+## Notat - materiale som vert utelate 
 
 1. Geometrisk rekkje - lukka form
 	1. plott og samanlikna
