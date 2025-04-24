@@ -3,7 +3,7 @@ title: Utkast til læringsmateriale i data og programmering
 ---
 
 + [[Praktiske tips til utvikling av kurset]]
- + [[Skisse til opplegg]]
++ [[Skisse til opplegg]]
 	 + 2-3 samlingar à 2-3 dagar
 	 + to periodar à seks veker
 	 + Typisk veke
@@ -29,11 +29,10 @@ title: Utkast til læringsmateriale i data og programmering
 ## Samlingar
 
 + [[Opningssamling]] (program)
-	+ [[Introduksjon til Jupyter Notebook]] (mogleg fyrste øving ved Hans Georg)
-	+ [[Simulering av kontantstraum]] 
-	+ [[Introduksjon til datasett i CSV]]
 	
 ## Fyrste periode
+
+Sjå [[first]]
 
 + Store datasett
 	+ [[Vidaregåande bruk av CSV]]
@@ -59,24 +58,7 @@ title: Utkast til læringsmateriale i data og programmering
 			- plotta begge løysingar og samanlikn
 	- Preprosessering av datasett?
 	- API
-### Vekesblokkar
 
-+ Større simuleringar
-	+ *shrimp* game
-+ Deskriptiv statistikk og slumptal
-	+ gjennomsnitt og standardavvik
-	+ Simulering av terningar
-	+ pseudo-tilfeldige tal
-+ Frå statistikk til maskinlæring
-	+ *Føredrag* «om å læra frå data»
-		+ Florence Nightingale
-		+ Fishcher
-		+ Lineær regresjon
-		+ Klassifiseringsproblem
-	+ *Demo* regresjon og korrelasjon i pandas
-	+ *Tutorial* regresjon og korrelasjon i eit datasett
-
-## Andre periode
 
 ## Nedprioritert stoff
 
