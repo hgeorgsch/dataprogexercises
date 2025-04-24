@@ -297,7 +297,7 @@ Samanlikna lån med ulike terminbeløp (`nedbetaling`), ved å laga eit plott.
 :::
 
 :::{admonition} Oppgåve
-Endra definisjonen på `loan2` slik at du har ein parameter til å setja
+Endra definisjonen av `loan2` slik at du har ein parameter til å setja
 kor mange år som maksimalt skal simulerast.
 :::
 
