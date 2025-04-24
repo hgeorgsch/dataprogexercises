@@ -33,10 +33,10 @@ annan grunn ikkje får gjort dette på førehand.
 ## Dag 2
 
 + 9.00-9.30: Presentasjon av Økt 2. 
-+ 9.30-11.30: Økt 2. [Simulering av kontantstraum](notebook/Simulering%20av%20kontantstraum) 
++ 9.30-11.30: Økt 2.  [Fyrste datasett med CSV](notebook/Fyrste%20datasett%20med%20CSV)
 + 11.30-12.30 Lønsj
 + 12.30-13.00: Presentasjon av Økt 3. 
-+ 13.00-14.30: Økt 3. [Fyrste datasett med CSV](notebook/Fyrste%20datasett%20med%20CSV)
++ 13.00-14.30: Økt 3.  [Simulering av kontantstraum](notebook/Simulering%20av%20kontantstraum) 
 + 14.30-15.30: [Seminar om motivasjon og ynskjer](Seminar om motivasjon og ynskjer)
 + 14.00-15.00: Debrief og opplegg vidare.
 
