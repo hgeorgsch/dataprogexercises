@@ -251,10 +251,20 @@ med ulike rentenivå
 x5,y5 = loan(1000000,rente=0.05,terminbetaling=70000)
 x4,y4 = loan(1000000,rente=0.04,terminbetaling=70000)
 x3,y3 = loan(1000000,rente=0.03,terminbetaling=70000)
-plt.plot( x5, y5, 'r-', x4, y4, 'b:', x3, y3, 'g' )
-plt.legend( "5%", "6%", "7%" )
+plt.plot( x5, y5, 'r--', x4, y4, 'b:', x3, y3, 'g' )
+plt.legend( [ "5%", "4%", "3%" ] )
 plt.show()
 ```
+
+:::{admonition} Refleksjon
+Kva tyder dei ulike argumenta til `plot`?
+:::
+
+:::{admonition} Refleksjon
+Kva gjer `plt.legend()`?
+Om du ikkje ser det med ein gong, so prøv å fjerna lina for å sjå 
+kva som vert annleis.
+:::
 
 :::{admonition} Refleksjon
 Kva skjer i simuleringa over om me set rentenivået til 6% eller 7%?
@@ -290,10 +300,29 @@ Endra definisjonen av `loan2` slik at du har ein parameter til å setja
 kor mange år som maksimalt skal simulerast.
 :::
 
-
 ## Tilfeldige renteendringar i framtida
 
-1. Legg til tilfeldige rentehopp
+Alt som me har gjort til no, hadde du kanskje kunne gjort enklare
+i rekneark.
+Lat oss no auka komplekiteten eit hakk, og førestilla oss at endrenivået
+vert endra tilfeldig i framtida.
+
+Me kan t.d. tenkja oss at kvart år er det 10% sannsyn for at renta går
+opp ½ prosentpoeng, og 10% sjanse for at ho går tilsvarande ned.
+
+```{code-cell} python3
+def loan3(saldo=10000,rente=0.05,nedbetaling=0,year=2024,gebyr=0):
+   y = [ saldo ]
+   x = [ year ]
+   while saldo > 0 and len(x) < 100:
+      saldo = saldo + saldo*rente
+      saldo = saldo + gebyr
+      saldo = saldo - terminbetaling
+      year = year + 1
+      y.append( saldo )
+      x.append( year )
+   return (x,y)
+```
 
 ## Oppgåver
 
