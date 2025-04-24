@@ -5,5 +5,5 @@ _build:
 	sh make.sh
 
 clean:
-	rm -f *.ipynb
+	rm -f notebook/*.ipynb
 	rm -rf _build
