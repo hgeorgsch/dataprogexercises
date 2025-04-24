@@ -42,10 +42,20 @@ print( "Hello World!" )
 Kodecella innheld programkode som vert køyrd av maskina når du trykkjer Shift-Lineskift.
 Koden er skrive i eit språk som heiter *python* og som er vorte mektig populært dei siste tjue åra. Jupyter er ikkje dei einast programmet som tolkar og køyrer *python*-kode.  Det kan me koma tilbake til.
 
-Målet i oppgåvene under er å testa at det har installert Jupyter, at det verkar og at de kan redigera Jupyter-dokument.
+Målet i oppgåvene under er å testa at de har installert Jupyter,
+at det verkar, og at de kan redigera Jupyter-dokument.
+
+:::{admonition} Definisjon
+Instruksjonen `print` er eit døme på ein **funksjon** i python.
+Det er ein førehandsdefinert instruksjon som vert utførd når funksjonsnamnet
+er etterfulgt av eit parentesuttrykk.  Det som står inni parentesen
+(`"Hello World!"`) kaller me **argumentet** til funksjonen.
+:::
+
 ## Kode og program
 
-Eg vil ikkje kalla innhaldet i kodecella for eit program. Det er berre éin einskild instruksjon. Eit program er ein serie instruksjonar, som skal utførast i rekkjefylgje.  Dette kurset har eit program, av økter og aktivitetar som eg har instruert at me skal utføra. Rett nok er me menneske og kan improvisera.  Den fridommen har maskina ikkje. Ho gjennomfører programmet strengt som det er skrive.  T.d.
+Eg vil ikkje kalla innhaldet i kodecella over for eit program.
+Det er berre éin einskild instruksjon. Eit program er ein serie instruksjonar, som skal utførast i rekkjefylgje.  Dette kurset har eit program, av økter og aktivitetar som eg har instruert at me skal utføra. Rett nok er me menneske og kan improvisera.  Den fridommen har maskina ikkje. Ho gjennomfører programmet strengt som det er skrive.  T.d.
 
 ```{code-cell} python3
 h = 1.83
@@ -62,6 +72,23 @@ Her har me brukt fleire viktige mekanismar i programmering.
 + `print` skriv ut ei melding på skjermen
 + `f"` ... `"` markerer ein formattert tekststreng.  Her kan me bruka krøllparentesane til å inkludera variablar (`bmi`).
 
+:::{admonition} 
+Ein **variabel** er eit namn som har ein verdi som kan variera ettersom
+programmet køyrer.  I dømet over er `h`, `m` og `bmi` variablar.
+Me kan **tilordna** (*assign*) ein ny verdi til ein variabel med eit
+**tilordingsuttrykk**.  Python bruker likskapsteiknet `=` som tilordningssymbol.
+:::
+
+:::{caution} 
+Merk at tilordningsuttrykket ikkje skal lesast som matematisk likskap.
+T.d. kan me skriva `variabel = variabel + 1`, der venstre- og høgresida
+openbert er ulike.  
+Høgresida vert rekna ut fyrst, med den gamle verdien av `variabel`,
+før verdien vert tilordna namnet `variabel` på venstre side.
+Matematikarar vil gjerne skrive $:=$ eller $\leftarrow$ som tilordningssymbol,
+medan $=$ tyder ein påstand om at dei to sidene *er* like.
+:::
+
 Det er litt voldsomt med desimalar, so me kan instruera python til å bruka t.d. 2 desimalar.
 
 ```{code-cell} python3
@@ -71,7 +98,6 @@ print( f"BMI er {bmi:.2f}" )
 Legg merke til at python hugsar alle variablane frå forrige kodecelle.  
 
 :::{admonition} Oppgåver
-
 1.  Sjekk at du kan redigera ei kodecelle.
 	1. Dobbelklikk på kodecella med utrekninga.
 	2. Endra tala.
@@ -80,6 +106,7 @@ Legg merke til at python hugsar alle variablane frå forrige kodecelle.
 2.  Kan du endra utskrifta slik at programmet skriv BMI med éin desimal?
 3. Kan du redigera ei *markdown*-celle òg?  Prinsippet er det same.  Dobbelklikk på cella, skriv kva du vil, og trykk Shift-lineskift for å *rendra* cella.
 :::
+
 
 ## Markdown
 
@@ -175,8 +202,8 @@ A = \frac{K-P_0}{P_0}
 $$
 der $P_0$ er folketalet ved $t=0$.
 
-For å implementera denne funksjonen i *python* er det enklast å bruke
-bibliotek som gjev tilgang til $\exp$-funksjonen.  Då bruker me ein
+For å implementera denne funksjonen i *python* er det enklast å bruka
+ein modul som gjev tilgang til $\exp$-funksjonen.  Då bruker me ein
 `import`-instruksjon.
 
 ```{code-cell} python3
@@ -185,6 +212,16 @@ import math
 print( "exp 1 = ", math.exp(1) )
 print( "exp 10 = ", math.exp(10) )
 ```
+
+:::{admonition} Definisjon
+Ein **modul** i python er ein samling definisjoner som er meint for
+gjenbruk i ulike program. 
+I dømet over er `math` ein slik modul, og `import`-instruksjonen
+lastar denne modulen slik at me kan bruka funksjonar som er definerte
+der.
+Punktumnotasjonen i `math.exp(1)` seier at me bruker funksjonen
+`exp` som er definert i `math`.
+:::
 
 Då kan me t.d. skriva
 
