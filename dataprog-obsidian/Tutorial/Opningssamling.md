@@ -55,3 +55,9 @@ annan grunn ikkje får gjort dette på førehand.
 	+ Øvingsoppgåver i dokumentet
 	+ Øving med vegleiing
 	+ Om mogleg, oppsummeringsvideo for å støtta vidare arbeid
+
+### Manglande konsept
+
++ [ ] Køyring av celler i feil rekkjefylgje
++ [ ] Er folketalsmodellen for stort eit sprang (Introdkusjon)
+

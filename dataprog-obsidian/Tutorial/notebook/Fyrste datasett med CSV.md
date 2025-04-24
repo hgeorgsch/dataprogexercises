@@ -51,7 +51,7 @@ Me legg vekt på å forstå det som er nyttig for oss.
 :::{hint}
 Når du skal arbeida med eit nytt datasett, løner det seg å sjå på fila for å forsikra deg om at du har fått det du ville.
 :::
-No kan me gå vidare til å opna fila i python.  Me bruker biblioteket pandas.
+No kan me gå vidare til å opna fila i python.  Me bruker modulen pandas.
 
 ```{code-cell} ipython3
 ---
@@ -94,23 +94,27 @@ Kvifor heiter det ikkje `df.print()` eller `plot(df)`?
 Grunnen er kvar funksjonen er definert.  I det fyrste dømet er `print` ein *global* funksjon.  
 Han er alltid tilgjengeleg.  Argumentet `df` fortel kva data `print` skal prenta.
 
-I det andre dømet hentar me funksjonen `read_csv` frå eit bibliotek, pandas, som me døypte `pd` då me importerte det. Då er `pd` kjelda der me finn `read_csv` og `"EXR20250401.csv", sep=";"` er filnamn og konfigurasjon som funksjonen opererer på.
+I det andre dømet hentar me funksjonen `read_csv` frå ein modul, pandas, som me døypte `pd` då me importerte det. Då er `pd` kjelda der me finn `read_csv` og `"EXR20250401.csv", sep=";"` er filnamn og konfigurasjon som funksjonen opererer på.
 
 I det tredje dømet er funksjonen `plot()` definert i *objektet* `df`, som fekk verdien sin frå `pd.read_csv(...)` tidlegare.  Her treng me ikkje noko argument, fordi funksjonen allereie kjem frå, og veit om, `df`, og freistar å plotta dette objektet.
 
 
 ## Plottet
 
-**Refleksjonsspørsmål** Kva søyler er interessante å plotta?
+:::{admonition} Refleksjon
+Kva søyler er interessante å plotta?
+:::
 
 Me kan freista med `TIME_PERIOD` og `OBS_VALUE` som ser ut som dato og kurs.
 
-```{code-cell} ipython3
-%%script python --no-raise-error
+```ipython3
 df.plot( x="TIME_PERIOD", y="OBS_VALUE" )
 ```
 
-Dette var òg for naivt. *«No numeric data to plot»* er kanskje litt overraskande, men lat oss sjå nærare på dei to søylene.  Me kan be pandas om datatypane for alle søylene, slik:
+Dette er òg for naivt.
+Om du set denne koden i ein kode-blokk, får du *«No numeric data to plot»*.
+Det er kanskje litt overraskande, men lat oss sjå nærare på dei to søylene.
+Me kan be pandas om datatypane for alle søylene, slik:
 
 ```{code-cell} ipython3
 df.dtypes
@@ -122,7 +126,9 @@ Dei to søylene som interesserer oss har typen `object`, noko som kan vera nær 
 
 ## Datatypar
 
-Datattypar kan skapa mykje forvirring når me arbeider med data, og det kan vera komplisert fordi der er uendeleg mange datatypar, og kvar type vert representert ulikt internt i maskinen og overfor brukaren. Internt i maskina er alt representert som ein serie med *bits*, der kvar *bit* er 0 eller 1, av eller på, sann eller usann; kjært barn har mange namn.  Har ein åtte *bits* (ein *byte*), kan ein tolka dei saman som eit heiltal mellom 0 og 255, eller som eit tein (bokstav eller anna) frå ein eller annan tabell. Har ein fleire *bytes* kan ein tolka det som ein teiknstreng (t.d. `"Hello World"`).
+Datattypar kan skapa mykje forvirring når me arbeider med data, og det kan vera komplisert fordi der er uendeleg mange datatypar, og kvar type vert representert ulikt internt i maskinen og overfor brukaren. Internt i maskina er alt representert som ein serie med *bits*, der kvar *bit* er 0 eller 1, av eller på, sann eller usann; kjært barn har mange namn.  Har ein åtte *bits* (ein *byte*), kan ein tolka dei saman som eit heiltal mellom 0 og 255, eller som eit tein (bokstav eller anna) frå ein eller annan tabell 
+(t.d. [ASCII](https://en.wikipedia.org/wiki/ASCII)).
+Har ein fleire *bytes* kan ein tolka det som ein teiknstreng (t.d. `"Hello World"`).
 
 I python har me sett at teiknstrengar vert skrivne i gåseaugo, medan tal vert skrivne utan.  Difor er `100` ikkje det same som `"100"` eller `"eitt hundrede"`.  For oss kan det vera det same, men for maskina er det berre `100` som er eit tal.
 
@@ -151,7 +157,7 @@ df.dtypes
 
 Merk notasjonen.  Klammene, i `df['OBS_VALUE']` let oss adressera éi søyle i datasettet. Dette kan me gjera både på venstre og høgre side av tilordninga (`=`).  På venstre side tilordnar me ei ny søyle («engelsk» og «kurs»). På høgre side bruker me ei eksisterande søyle i utrekninga til den nye. Slik me har gjort det her, vert den gamle søyla (`OBS_VALUE`) ikkje endra.
 
-Den fyrste lina bruker strengfunksjonen `replace` på kvar einaste verdi i søyla. Den andre lina bruker konverteringsrutinen `to_numeric` for å lesa eit tal frå teiknstrengen. I utlistinga ser me at datasettet har fått t nye søyler, der `"kurs"` er flyttal.  Lat oss sjå på heile datasettet.
+Den fyrste lina bruker strengfunksjonen `replace` på kvar einaste verdi i søyla. Den andre lina bruker konverteringsrutinen `to_numeric` for å lesa eit tal frå teiknstrengen. I utlistinga ser me at datasettet har fått to nye søyler, der `"kurs"` er flyttal.  Lat oss sjå på heile datasettet.
 
 ```{code-cell} ipython3
 display(df)
@@ -239,7 +245,9 @@ mrg.plot()
 
 OK.  Datasettet ser fint ut, men plottet var ikkje det som me venta.
 
-**Refleksjonsspørsmål** Kva er det eigentleg som er plotta?
+:::{admonition} Refleksjon
+Kva er det eigentleg som er plotta?
+:::
 
 Når me vel $x$- og $y$-akse i `plot`-funksjonen, kan me gje ei liste med søyler, slik:
 
