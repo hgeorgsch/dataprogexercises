@@ -7,7 +7,7 @@ tags:
   - session
   - exercise/tutorial
 jupytext:
-  formats: ipynb,md:myst
+  formats: md:myst
   text_representation:
     extension: .md
     format_name: myst
@@ -48,9 +48,10 @@ Kan du finna att kursen på pund sterling for fem år sidan?  Kva med svenske kr
 Fila inneheld gjerne meir data enn me er interesserte i. Det skal me ikkje tenkja på.  
 Me legg vekt på å forstå det som er nyttig for oss.
 
-**Hint** Når du skal arbeida med eit nytt datasett, løner det seg å sjå på fila for å forsikra deg om at du har fått det du ville.
-
-No kan me gå vidare til å opna fila i Excel.  Me bruker biblioteket pandas.
+:::{hint}
+Når du skal arbeida med eit nytt datasett, løner det seg å sjå på fila for å forsikra deg om at du har fått det du ville.
+:::
+No kan me gå vidare til å opna fila i python.  Me bruker biblioteket pandas.
 
 ```{code-cell} ipython3
 ---
@@ -105,6 +106,7 @@ I det tredje dømet er funksjonen `plot()` definert i *objektet* `df`, som fekk 
 Me kan freista med `TIME_PERIOD` og `OBS_VALUE` som ser ut som dato og kurs.
 
 ```{code-cell} ipython3
+%%script python --no-raise-error
 df.plot( x="TIME_PERIOD", y="OBS_VALUE" )
 ```
 
