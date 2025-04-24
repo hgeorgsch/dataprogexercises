@@ -179,7 +179,11 @@ def f(x):
 print( f(3) )
 ```
 
-**NB** Sjølv om `print` her er ein funksjon som «gjer noko», så gjer han ingenting her, når `f` vert definert.  Han gjer noko når `f` seinare vert *brukt*.
+:::{note}
+Sjølv om `print` her er ein funksjon som «gjer noko», så gjer han ingenting her, når `f` vert definert.  Han gjer noko når `f` seinare vert *brukt*.
+:::
+
+## Folketalsmodell
 
 **TODO** Vurder om det fylgjande vert eit for stort sprang.
 
@@ -191,16 +195,13 @@ P(t) = \frac{K}{1+A\exp(-rt)}
 $$
 der
 + $P(t)$: folketal ved tiden $t$
-+ $r$ er relativ vekstrate, feks 2% ($0,02$)
++ $r$ er relativ vekstrate, feks 2% (0,02)
 + $K$ er makskapasiteten til populasjonen
 + $\exp$ er den naturlege ekponentialfunksjonen $e^x$ der $e$ er 
   Eulers tall: $e\approx 2,71828$
-
-$A$ er en koeffisient definert ved:
-$$
-A = \frac{K-P_0}{P_0}
-$$
-der $P_0$ er folketalet ved $t=0$.
++ $A$ er en koeffisient definert ved:
+  $A = \frac{K-P_0}{P_0}$
+  der $P_0$ er folketalet ved $t=0$.
 
 For å implementera denne funksjonen i *python* er det enklast å bruka
 ein modul som gjev tilgang til $\exp$-funksjonen.  Då bruker me ein
@@ -231,9 +232,9 @@ def folketal(tid):
     P0 = 45000
     A = (K-P0)/P0
     r = 0.04
-    return K / ( 1 + A*exp(-r*tid) )
+    return K / ( 1 + A*math.exp(-r*tid) )
 
-print( "folketal etter 50 år er {folketal(50)}")
+print( f"folketal etter 50 år er {folketal(50)}")
 ```
 
 :::{admonition} Oppgåve
