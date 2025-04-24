@@ -288,3 +288,9 @@ Der er mykje å halda styr på i pandas. Her har me berre sett eitt døme og nok
 * [Kokebok](https://www.skytowner.com/explore/pandas_recipes_reference) 
 
 Det er ikkje sikkert at det er mykje hjelp i desse kjeldene enno, før du har lært litt meir. I neste demo skal me forklara nokre fleire grunnleggjande konsept. Målet er å læra nok til å søkja etter resten, lesa dokumentasjon og å stilla gode spørsmål når du treng det.
+
+## Materiale som ikkje fekk pass
+
++ [ ] Sjå etter endring - differanse
+	1. plott differanse
++ [ ] Korrelasjon mellom valutaar?
