@@ -134,7 +134,7 @@ Kva skjer om du set terminbetalinga lågt, t.d. til 200?
 :::
 
 :::{admonition} Oppgåve
-Ofte vert lånet belasta med eit fast gebyr i tillegg til rentene.  Legg til eit gebyr på 50kr/år i simuleringa. Korleis påverker det lånet?
+Ofte vert lånet belasta med eit fast gebyr i tillegg til rentene.  Legg til eit gebyr på 50kr/år i simuleringa. Korleis påverkar det lånet?
 :::
 
 ## Plotting og annan bruk av utrekningane
@@ -305,7 +305,7 @@ kor mange år som maksimalt skal simulerast.
 
 Alt som me har gjort til no, hadde du kanskje kunne gjort enklare
 i rekneark.
-Lat oss no auka komplekiteten eit hakk, og førestilla oss at endrenivået
+Lat oss no auka komplekiteten eit hakk, og førestilla oss at rentenivået
 vert endra tilfeldig i framtida.
 
 Me kan t.d. tenkja oss at kvart år er det 10% sannsyn for at renta går
@@ -341,7 +341,7 @@ tilfeldige hendingar?
 
 Ein vanleg teknikk er å tolka ulike tal frå slumptalsgeneratoren
 som ulike hendingar.  
-T.d. kan me seia at 1 gjev renteoppgang og 2 gjev rentenedgang.
+T.d. kan me seia at 1 gjev renteoppgang og 10 gjev rentenedgang.
 Då får me kanskje fylgjande som erstatning for `loan` og `loan2`.
 
 
