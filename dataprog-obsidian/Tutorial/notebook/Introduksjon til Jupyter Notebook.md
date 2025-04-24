@@ -18,12 +18,6 @@ kernelspec:
   name: cosmoai
 ---
 
-+ Jonas' utgåver:
-	+ `Intro-JH.ipynb`
-	+ `drodlesjekk.ipynb`
-+ Overflyt om
-	+ [[Datatypar og aritmetriske operatorar]]
-	+ [[Help-funksjonen]]
 
 # Programmering og Jupyter Notebook
 

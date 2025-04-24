@@ -24,7 +24,7 @@ annan grunn ikkje får gjort dette på førehand.
 + 10.00-11.30: Vegleiing til [Installasjon](Installasjon),
     for dei som ikkje er ferdig med det på førehand.
 + 11.30-12.15: Lønsjpause
-+ 12.15-12.30: Velkommen.  Praktisk informasjon.
++ 12.15-12.30: Velkommen.  [Praktisk informasjon](../intro).
 + 12.30-13.00: Presentasjon av Økt 1. 
 + 13.00-13.20: Presentasjon av deltakarane 
 + 13.30-15.30: Økt 1. [Introduksjon til Jupyter Notebook](notebook/Introduksjon%20til%20Jupyter%20Notebook)
@@ -60,3 +60,5 @@ annan grunn ikkje får gjort dette på førehand.
 
 + [ ] Køyring av celler i feil rekkjefylgje
 + [ ] Er folketalsmodellen for stort eit sprang (Introdkusjon)
++ [ ] Nedlasting av Jupyter Notebook - lagring/filnamn etc
++ [ ] Nedlasting av datafiler (CSV) og andre tilleggsresursar
