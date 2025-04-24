@@ -105,6 +105,7 @@ I det tredje dømet er funksjonen `plot()` definert i *objektet* `df`, som fekk 
 Me kan freista med `TIME_PERIOD` og `OBS_VALUE` som ser ut som dato og kurs.
 
 ```{code-cell} ipython3
+%%script python --no-raise-error
 df.plot( x="TIME_PERIOD", y="OBS_VALUE" )
 ```
 
