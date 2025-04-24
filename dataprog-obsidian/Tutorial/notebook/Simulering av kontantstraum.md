@@ -182,16 +182,125 @@ plt.show()
 ```
 
 :::{admonition} Oppgåve
-Plott lånesaldoen med årleg nedbetaling.
+Plott utviklinga av lånesaldoen med årleg nedbetaling.
 :::
 
 ### Gjenbruk av simuleringa med funksjonar
-### Den matematiske løysinga
 
-1. Geometrisk rekkje - lukka form
-	1. plott og samanlikna
+Slik me har gjort det til no, er det tungvint å variera parametrane
+og gjenta simuleringa.
+Me må kopiera fleire kodeliner og endra nokre få tal.
+Dette kan me gjera enklare ved å definera funksjonar.
 
-### Plott og samanlikning
+```{code-cell} python3
+def loan(saldo=10000,rente=0.05,nedbetaling=0,year=2024,gebyr=0):
+   y = [ saldo ]
+   x = [ year ]
+   while saldo > 0:
+      saldo = saldo + saldo*rente
+      saldo = saldo + gebyr
+      saldo = saldo - terminbetaling
+      year = year + 1
+      y.append( saldo )
+      x.append( year )
+   return (x,y)
+```
+
+Her definerer me ein funksjon (med `def`) med mange parametrar:
+`saldo`, `rente`, `year` og `gebyr`.
+Dermed kan me velja ny parameterverdi kvar gong me køyrer funksjonen.
+Kvar parameter har fått ein initialverdi, som gjer parameteren valfri.  
+Dersom me ikkje spesifiserer ein paremeter, vert initialverdien brukt.
+Returverdien frå funksjonen er ein tuppel med to verdiar.
+Resten av koden burde vera gjenkjenneleg frå tidlegare døme, sjølv om
+me har kombinert elementa på ein ny måte.
+
+:::{admonition} Refleksjon
+Den einaste parameteren som ikkje svarer til ein variabel i tidlegare
+døme er `gebyr`.  Sjå på koden.  Kva representerer `gebyr`?
+:::
+
+Me kan t.d. bruka `loan`-funksjonen slik:
+
+```{code-cell} python3
+import matplotlib.pyplot as plt
+x,y = loan(1000000,0.06,70000)
+plt.plot( x,y )
+```
+
+:::{admonition} Definisjon
+Du hugsar kanskje at verdiane i parentesen når me kaller (bruker)
+funksjonen, vert kalt **argument**.
+Namna som er lista i parentesen når me definerer funksjonen, vert
+kalt **parametrar**.
+Når funksjonen vert kalt, får parametrane verdi etter argumenta.
+:::
+
+
+Det går òg an å namngje ein eller fleire arfgument, og det gjer
+ofte koden enklare å lesa.  T.d. kan me skriva
+
+```{code-cell} python3
+x,y = loan(1000000,nedbetaling=70000,gebyr=45)
+plt.plot( x,y )
+plt.show()
+```
+
+:::{caution}
+Argument som ikkje er namngjevne, kaller me gjerne posisjonsargument.
+Dei gjev verdi til parameteren i same posisjon.  
+Nsmngjevne argument gjev verdi til parameter med same namn, og dei
+kan kome i vilkårleg rekkjefylgje.
+Bortsett frå éin ting.  Alle posisjonsargumenta må koma før dei
+namngjevne argumenta.
+:::
+
+Lat oss no sjå på korleis me kan samanlikna simuleringar, t.d.
+med ulike rentenivå
+
+```{code-cell} python3
+x5,y5 = loan(1000000,rente=0.05,nedbetaling=70000)
+x4,y4 = loan(1000000,rente=0.04,nedbetaling=70000)
+x3,y3 = loan(1000000,rente=0.03,nedbetaling=70000)
+plt.plot( x5, y5, 'r-', x4, y4, 'b:', x3, y3, 'g' )
+plt.legend( "5%", "6%", "7%" )
+plt.show()
+```
+
+:::{admonition} Refleksjon
+Kva skjer i simuleringa over om me set rentenivået til 6% eller 7%?
+:::
+
+Eit potensielt problem i simuleringa er at ho risikerer å køyra
+uendeleg, dersom nedbetalinga ikkje dekkjer rentene.  
+Det er god skikk å leggja inn ekstra stoppreglar for å unngå dette.
+T.d. kan me stoppa simuleringa etter 100 år.
+
+```{code-cell} python3
+def loan2(saldo=10000,rente=0.05,nedbetaling=0,year=2024,gebyr=0):
+   y = [ saldo ]
+   x = [ year ]
+   while saldo > 0 and len(x) < 100:
+      saldo = saldo + saldo*rente
+      saldo = saldo + gebyr
+      saldo = saldo - terminbetaling
+      year = year + 1
+      y.append( saldo )
+      x.append( year )
+   return (x,y)
+```
+
+Her bruker me `len`-funksjonen som tel kor mange element som finst i lista.
+
+:::{admonition} Oppgåve
+Samanlikna lån med ulike terminbeløp (`nedbetaling`), ved å laga eit plott.
+:::
+
+:::{admonition} Oppgåve
+Endra definisjonen på `loan2` slik at du har ein parameter til å setja
+kor mange år som maksimalt skal simulerast.
+:::
+
 
 ### Tilfeldige renteendringar i framtida
 
@@ -201,3 +310,8 @@ Plott lånesaldoen med årleg nedbetaling.
 
 + Serielån - plott terminbeløp
 + Månadleg betaling
+
+### Geometriske rekkjer
+
+1. Geometrisk rekkje - lukka form
+	1. plott og samanlikna
