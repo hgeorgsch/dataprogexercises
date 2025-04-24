@@ -12,6 +12,12 @@ høgre og sjå om du får `ipynb` som eit val.  Du må sjølvsagt
 òg installera *Python* og *Jupyter notebook*
 (sjå [installasjon](Installasjon)).
 
+Opplegget byggjer på ein erfaring om at programmering sjelden handlar
+om å hugsa kommandoar og syntaks for å skriva heile programmet frå botnen.
+Programmering i praksis handlar langt oftare om å søkja opp gode døme og
+tilpassa dei til eigne behov.
+Dei fleste oppgåvene, særleg i starten, handlar difor om å lesa, testa
+og modifisera kode.
 
 + [Opningssamling](Opningssamling)
 + [Fyrste periode](first)
