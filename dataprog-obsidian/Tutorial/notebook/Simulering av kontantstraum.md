@@ -59,7 +59,7 @@ Prøv fyrst å lesa koden under. Går det an å forstå kva som skjer utan å k�
 :::
 
 ```{code-cell} python3
-saldo = 10.000
+saldo = 10000
 for year in range(2025,2045):
    print( f"Lånesaldo 1. januar {year}: {saldo}" )
    saldo = saldo + saldo*rente
@@ -104,7 +104,7 @@ Korleis vil du endra koden over slik at nedbetalinga òg vert simulert?
 Kan henda kjem du opp med noko slikt som dette:
 
 ```{code-cell} python3
-saldo = 10.000
+saldo = 10000
 for year in range(2025,2045):
    print( f"Lånesaldo 1. januar {year}: {saldo}" )
    saldo = saldo + saldo*rente
@@ -123,7 +123,7 @@ Ser du kva koden under gjer før du køyrer han?
 :::
 
 ```{code-cell} python3
-saldo = 10.000
+saldo = 10000
 year = 2025
 while saldo > 0:
    print( f"Lånesaldo 1. januar {year}: {saldo}" )
@@ -156,7 +156,7 @@ Ein måte å endra dette på er å laga ein liste som samlar lagrar
 resultatet i kvar iterasjon.
 
 ```{code-cell} python3
-saldo = 10.000
+saldo = 10000
 y = [ saldo ]
 x = [ 2024 ]
 for year in range(2025,2045):
@@ -177,7 +177,7 @@ Me kan plotta som me har gjort før.
 
 ```{code-cell} python3
 import matplotlib.pyplot as plt
-   plt.plot( x, y )
+plt.plot( x, y )
 plt.show()
 ```
 
@@ -193,7 +193,7 @@ Me må kopiera fleire kodeliner og endra nokre få tal.
 Dette kan me gjera enklare ved å definera funksjonar.
 
 ```{code-cell} python3
-def loan(saldo=10000,rente=0.05,nedbetaling=0,year=2024,gebyr=0):
+def loan(saldo=10000,rente=0.05,terminbetaling=0,year=2024,gebyr=0):
    y = [ saldo ]
    x = [ year ]
    while saldo > 0:
@@ -241,7 +241,7 @@ Det går òg an å namngje ein eller fleire arfgument, og det gjer
 ofte koden enklare å lesa.  T.d. kan me skriva
 
 ```{code-cell} python3
-x,y = loan(1000000,nedbetaling=70000,gebyr=45)
+x,y = loan(1000000,terminbetaling=70000,gebyr=45)
 plt.plot( x,y )
 plt.show()
 ```
@@ -259,9 +259,9 @@ Lat oss no sjå på korleis me kan samanlikna simuleringar, t.d.
 med ulike rentenivå
 
 ```{code-cell} python3
-x5,y5 = loan(1000000,rente=0.05,nedbetaling=70000)
-x4,y4 = loan(1000000,rente=0.04,nedbetaling=70000)
-x3,y3 = loan(1000000,rente=0.03,nedbetaling=70000)
+x5,y5 = loan(1000000,rente=0.05,terminbetaling=70000)
+x4,y4 = loan(1000000,rente=0.04,terminbetaling=70000)
+x3,y3 = loan(1000000,rente=0.03,terminbetaling=70000)
 plt.plot( x5, y5, 'r-', x4, y4, 'b:', x3, y3, 'g' )
 plt.legend( "5%", "6%", "7%" )
 plt.show()

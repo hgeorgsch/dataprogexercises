@@ -72,7 +72,7 @@ Her har me brukt fleire viktige mekanismar i programmering.
 + `print` skriv ut ei melding på skjermen
 + `f"` ... `"` markerer ein formattert tekststreng.  Her kan me bruka krøllparentesane til å inkludera variablar (`bmi`).
 
-:::{admonition} 
+:::{admonition} Definisjon
 Ein **variabel** er eit namn som har ein verdi som kan variera ettersom
 programmet køyrer.  I dømet over er `h`, `m` og `bmi` variablar.
 Me kan **tilordna** (*assign*) ein ny verdi til ein variabel med eit
