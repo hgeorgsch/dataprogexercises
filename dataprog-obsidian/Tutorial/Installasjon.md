@@ -4,6 +4,7 @@
 	+ Demovideoar for ulike OS
 	+ Dei som bruker jobbmaskin bør samrå seg med IT-støtte på jobb
 	+ Vegleiing etter behov
++ Jupyter Notebook eller Jupyter Lab
 
 ## Steg 1.  Anaconda
 
