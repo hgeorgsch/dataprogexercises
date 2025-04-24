@@ -6,8 +6,8 @@ chapters:
   - file: Opningssamling
     sections:
     - file: Installasjon
-    - file: notebook/Fyrste datasett med CSV
     - file: notebook/Introduksjon til Jupyter Notebook
+    - file: notebook/Fyrste datasett med CSV
     - file: notebook/Simulering av kontantstraum
   - file: first
   - file: midway
