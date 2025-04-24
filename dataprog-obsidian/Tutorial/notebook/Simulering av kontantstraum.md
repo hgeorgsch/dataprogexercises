@@ -17,19 +17,8 @@ kernelspec:
   name: cosmoai
 ---
 
-+ Problem.
-	+ lån med årleg rente
-	+ Sjå [[Sparekalkulator]]
-+ Relativt enkelt problem.
-	+ kan løysast analytisk, om du kan litt matematikk
-	+ kan løysast i rekneark, om du har god orden
-	+ me løyser det her for å demonstrera nokre grunnleggjande programeringskonsept og korleis me kan leika med ulike tankeeksperiment
-	+ med litt røynsle og litt kreativitet er der inga grense for kva de kan gjera
-		+ vert det komplekst nok, får de til meir med programmering enn med rekneark
 
 # Simulering av ein kontantstraum
-
-## Disposisjon
 
 Simulering vert ofte brukt for å modellera og analysera moglege framtidsscenario. I staden for å laga utvikla éin modell som skildrar kva som må skje eller sannsynligvis skjer, simulerer ein eitt mogleg scenario, basert på eitt sett føresetnader. So kan ein evt. simulera fleire gongar med ulike færesetnader. Dette er særleg nyttig i komplekse og probabilistiske modellar, som det ofte er uråd å løysa analytisk. Me høyrer ofte om utgreiingar som refererer til simulering, t.d. i epidemologi og smittevern og i traffikkprogrnosar og vegplanleggjing. 
 
@@ -40,7 +29,7 @@ Etter økta skal de kunna
 2. bruka *løkker* (`for` eller `ẁhile`) i programmering
 3. programmera med slumptal og tilfeldige hendingar
 
-### Den fyrste løkka - rente kvart år
+## Den fyrste løkka - rente kvart år
 
 Eit lån, og mange andre kontantstraumar, er ein enkel prosess. Prosessen er diskret, i den tydinga at tida beveger seg i faste steg eller periodar, t.d. kvart år eller kvar månad.  Dette gjeld ikkje *spot*-marknader der transaksjonar skjer vilkårleg tett, og uansett kor ofte du observerer prisen eller saldoen, so kan nokon ha rukke å selja noko og påverka prisen imellom observasjonane. Det skal me ikkje tenkja på her.  Lat oss sjå på eit enkelt lån der rentene vert kapitaliserte 31. desember kvart år.
 
@@ -89,7 +78,7 @@ print( range(2024,2045) )
 `for`-løkka går like godt med ei liste.  Prøv å byta ut `range(2025,2045)` med ei liste, t.d. `[ 2025, 2026, 2027, 2028 ]`.
 :::
 
-### Nedbetaling
+## Nedbetaling
 
 Den fyrste simuleringa viser korleis lånet veks med renter og rentesrente. I praksis betaler ein som regel lånet ned, gradvis år for år.  Sett at me startar med det same lånet som over, men betaler inn eit terminbeløp på 1000 kr same dagen som rentene vert kapitaliserte kvar år.
 
@@ -147,7 +136,7 @@ Kva skjer om du set terminbetalinga lågt, t.d. til 200?
 Ofte vert lånet belasta med eit fast gebyr i tillegg til rentene.  Legg til eit gebyr på 50kr/år i simuleringa. Korleis påverker det lånet?
 :::
 
-### Plotting og annan bruk av utrekningane
+## Plotting og annan bruk av utrekningane
 
 Som regel, når me simulerer, er me interesserte i data undervegs
 i simuleringa, t.d. lånesaldo år for år.  I simuleringane over
@@ -185,7 +174,7 @@ plt.show()
 Plott utviklinga av lånesaldoen med årleg nedbetaling.
 :::
 
-### Gjenbruk av simuleringa med funksjonar
+## Gjenbruk av simuleringa med funksjonar
 
 Slik me har gjort det til no, er det tungvint å variera parametrane
 og gjenta simuleringa.
@@ -302,16 +291,35 @@ kor mange år som maksimalt skal simulerast.
 :::
 
 
-### Tilfeldige renteendringar i framtida
+## Tilfeldige renteendringar i framtida
 
 1. Legg til tilfeldige rentehopp
 
-### Oppgåver
+## Oppgåver
 
-+ Serielån - plott terminbeløp
-+ Månadleg betaling
+:::{admonition} Oppgåve
+So langt har me sett på annuitetslån, der terminbetalinga er eit fast beløp.
+Tenk i staden på eit serielån, der du betaler rentene pluss eit fast 
+nedbetalingsbeløp.
+Lag eit plott som samanliknar utviklinga på serie- og annuitetslån.
+:::
 
-### Geometriske rekkjer
+:::{admonition} Oppgåve
+Me har simulert årlege terminar, noko som ikkje er særleg vanleg i røynda.
+Lag simuleringar med månadleg rentekapitalisering og terminbetaling.
+:::
+
+## Notat - utelate material
 
 1. Geometrisk rekkje - lukka form
 	1. plott og samanlikna
+
++ Problem.
+	+ lån med årleg rente
+	+ Sjå [[Sparekalkulator]]
++ Relativt enkelt problem.
+	+ kan løysast analytisk, om du kan litt matematikk
+	+ kan løysast i rekneark, om du har god orden
+	+ me løyser det her for å demonstrera nokre grunnleggjande programeringskonsept og korleis me kan leika med ulike tankeeksperiment
+	+ med litt røynsle og litt kreativitet er der inga grense for kva de kan gjera
+		+ vert det komplekst nok, får de til meir med programmering enn med rekneark
