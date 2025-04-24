@@ -1,8 +1,9 @@
 %.ipynb: %.md
 	jupytext --to notebook --execute "$<"
 _build: intro.md
-_build:
+nb:
 	-jupytext --to notebook --execute notebook/*.md
+_build: nb
 	jupyter-book build .
 
 clean:
