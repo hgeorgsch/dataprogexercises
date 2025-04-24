@@ -1,11 +1,4 @@
 ---
-title: Fyrste datasett med CSV
-author: Hans Georg Schaathun
-tags:
-  - csv
-  - plot
-  - session
-  - exercise/tutorial
 jupytext:
   formats: ipynb,md:myst
   text_representation:
@@ -48,9 +41,10 @@ Kan du finna att kursen på pund sterling for fem år sidan?  Kva med svenske kr
 Fila inneheld gjerne meir data enn me er interesserte i. Det skal me ikkje tenkja på.  
 Me legg vekt på å forstå det som er nyttig for oss.
 
-**Hint** Når du skal arbeida med eit nytt datasett, løner det seg å sjå på fila for å forsikra deg om at du har fått det du ville.
-
-No kan me gå vidare til å opna fila i Excel.  Me bruker biblioteket pandas.
+:::{hint}
+Når du skal arbeida med eit nytt datasett, løner det seg å sjå på fila for å forsikra deg om at du har fått det du ville.
+:::
+No kan me gå vidare til å opna fila i python.  Me bruker biblioteket pandas.
 
 ```{code-cell} ipython3
 ---
