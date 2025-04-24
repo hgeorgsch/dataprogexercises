@@ -255,9 +255,7 @@ Dette kan me gjera med fylgjande kode.
 
 ```{code-cell} python3
 import matplotlib.pyplot as plt
-import numpy as np
 
-xs = np.linspace( -10, +10, 10 )
 xs = [ x for x in range(-5,+5) ]
 xs2 = [ x/4 for x in range(-20,+20) ]
 ys = [ f(x) for x in xs ]
@@ -281,7 +279,6 @@ $\{ f(x) | x\in X\}$.
 
 1. Plottet over er kanskje litt grovkorna.  Kan du auka talet på punkt
    ved å endra definisjonen på `xs`?
-   Kva trur du dei tre argumenta til `np.linspace` tyder?
 2. Bruk døma over og lag eit plott over estimert folketal på Island over dei
    neste åtte åra.
 3.  Kor mange $x$-verdiar treng du for å få eit pent plott?
