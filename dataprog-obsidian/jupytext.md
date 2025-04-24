@@ -21,9 +21,5 @@ make notebook.ipynb
 
 It is also possible to convert the other way, or to use the py:percent format to convert to and from python scripts. It is even possible to pair files and have Jupyter notebook do live coversion.  See the [full documentation](https://jupytext.readthedocs.io/en/latest/index.html).
 
-## Parra filer
++ I have tried paired files, but it seems to strip metadata used in markdown but not in Jupyter.
 
-[[Fyrste datasett med CSV]] er sett opp som parra dokument utan at Jupyter-fila er registrert i git. Ein kan raskt rekonstruera denne filen, og elles synkronisera versjonane med 
-```sh
-jupytext --sync "Fyrste datasett med CSV.md"
-```
