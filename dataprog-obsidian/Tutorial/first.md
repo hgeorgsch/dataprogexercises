@@ -1,9 +1,11 @@
 # Fyrste periode
 
 + Deskriptiv statistikk og slumptal
-	+ gjennomsnitt og standardavvik
+	+ Gjennomsnitt og standardavvik
 	+ Simulering av terningar
 	+ pseudo-tilfeldige tal
+    + plot/subplot og eksport av figurar
+    + ulike plot: histogram/scatter/kakediagram
 + Frå statistikk til maskinlæring
 	+ *Føredrag* «om å læra frå data»
 		+ Florence Nightingale
@@ -16,3 +18,4 @@
 + Større simuleringar
 	+ *shrimp* game
 + *Web API* og JSON 
++ Maskinlæring i scikitlearn
