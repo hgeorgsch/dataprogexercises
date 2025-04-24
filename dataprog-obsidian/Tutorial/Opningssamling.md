@@ -60,4 +60,3 @@ annan grunn ikkje får gjort dette på førehand.
 
 + [ ] Køyring av celler i feil rekkjefylgje
 + [ ] Er folketalsmodellen for stort eit sprang (Introdkusjon)
-
