@@ -12,5 +12,7 @@
 		+ Klassifiseringsproblem
 	+ *Demo* regresjon og korrelasjon i pandas
 	+ *Tutorial* regresjon og korrelasjon i eit datasett
++ Kombinasjon (fletting) av datasett
 + Større simuleringar
 	+ *shrimp* game
++ *Web API* og JSON 

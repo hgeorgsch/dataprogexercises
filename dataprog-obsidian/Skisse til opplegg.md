@@ -56,23 +56,4 @@ tags:
 	+ API fra SSB
 	+ Andre API og JSON
 
-## Mellomsamlinga
 
-+ **Mål for mellomsamlinga**
-	+ oppsummera fyrste periode
-		+ erfaringsdeling
-		+ spørsmål og svar
-	+ planleggja arbeidet med mappa
-
-## Andre periode
-
-+ **Mål for andre periode**
-	+ bruka teknikkar frå fyrste periode på eit praktisk dataanalyseproblem frå eige virke 
-	+ gjennomføra eitt praktisk prosjekt etter eige val
-	+ setja saman vurderingsmappa
-## Avslutningssamling
-
-+ **Mål for avslutningssamlinga**
-	+ Munnleg presentasjon av prosjektoppgåvene
-	+ munnleg eksamen?  ... om det trengst
-	+ sluttevaluering og refleksjon

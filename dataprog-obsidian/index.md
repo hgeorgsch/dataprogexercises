@@ -4,8 +4,6 @@ title: Utkast til læringsmateriale i data og programmering
 
 + [[Praktiske tips til utvikling av kurset]]
 + [[Skisse til opplegg]]
-	 + 2-3 samlingar à 2-3 dagar
-	 + to periodar à seks veker
 	 + Typisk veke
 		 + *videoføredrag* 15min
 			 + historiefortelling
@@ -59,8 +57,12 @@ Sjå [[first]]
 	- Preprosessering av datasett?
 	- API
 
+## Stoff som bør få plass
+
++ [[Datatypar og aritmetriske operatorar]]
 
 ## Nedprioritert stoff
 
 + [[Halveringsmetoden]] 
 	+ introduksjon til numeriske metodar og løkker
++ [[Help-funksjonen]]
