@@ -5,6 +5,7 @@ tags:
 ---
 + Oppgave 6 - kunstig datasett med tilfeldige tal
 + `Untitled.ipynb` døme med konkurstal
+
 ## Oppgave 7: Gå berserk på ssb.no:
 
 * Sjekk at du kan:
