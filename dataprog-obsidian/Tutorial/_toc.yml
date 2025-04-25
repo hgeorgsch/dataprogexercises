@@ -9,6 +9,7 @@ chapters:
     - file: notebook/Introduksjon til Jupyter Notebook
     - file: notebook/Fyrste datasett med CSV
     - file: notebook/Simulering av kontantstraum
+    - file: Mappevurdering
   - file: first
   - file: midway
   - file: second

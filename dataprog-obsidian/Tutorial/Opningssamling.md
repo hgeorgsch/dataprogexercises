@@ -39,6 +39,7 @@ annan grunn ikkje får gjort dette på førehand.
 + 13.00-14.30: Økt 3.  [Simulering av kontantstraum](notebook/Simulering%20av%20kontantstraum) 
 + 14.30-15.30: [Seminar om motivasjon og ynskjer](Seminar om motivasjon og ynskjer)
 + 14.00-15.00: Debrief og opplegg vidare.
+    + [Mappevurdering](Mappevurdering)
 
 ## Arbeidsnotat
 
