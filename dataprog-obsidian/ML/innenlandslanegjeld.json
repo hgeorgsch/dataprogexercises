@@ -1,0 +1,16 @@
+{"queryObj":{
+  "query": [
+    {
+      "code": "Lantaker2",
+      "selection": {
+        "filter": "item",
+        "values": [
+          "Kred04"
+        ]
+      }
+    }
+  ],
+  "response": {
+    "format": "json-stat2"
+  }
+},"tableIdForQuery":"06718","postUrl":"https://data.ssb.no/api/v0/no/table/06718"}
