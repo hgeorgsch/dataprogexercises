@@ -11,11 +11,7 @@
 	+ pseudo-tilfeldige tal
     + Simulering av ein utvalsstudie
 + Frå statistikk til maskinlæring
-	+ *Føredrag* «om å læra frå data»
-		+ Florence Nightingale
-		+ Fishcher
-		+ Lineær regresjon
-		+ Klassifiseringsproblem
+	+ *Føredrag* [[Om å læra frå data]]
 	+ *Demo* regresjon og korrelasjon i pandas
 	+ *Tutorial* regresjon og korrelasjon i eit datasett
 + Kombinasjon (fletting) av datasett

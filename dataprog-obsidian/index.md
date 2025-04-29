@@ -25,18 +25,29 @@ title: Utkast til læringsmateriale i data og programmering
 	+ [[Mappe Del 2 Haust 2024]]
 + Tekniske innføringar, dvs. førelesingar og øvingar som legg vekt på å læra grunnteknikkar utan særleg vekt på kontekst:
 	+ [[Datatypar og aritmetriske operatorar]]
+	+ [[Løkker]]
+	+ [[Løkker og Lister og andre fundamentale omgrep]]
 	+ [[pandas og CSV]]
 	+ [[Dictionaries]]
 	+ Funksjonar
-	+ [[Løkker]]
 	+ Datatypar
 + Perspektivføredrag
 	+ Likskap og tilordning
 	+ [[Køyretid og Kompleksitet]]
 	+ [[Tilfeldighet-While]]
+	+ [[Filhandtering]]
+	+ Statistikk og maskinlæring: [[Om å læra frå data]]
+	+ [[Mappetips og persondata.pdf]]
 + Oppgåver
 	+ [[Marknadssimulering]]
 	+ [[Kontekstuelle oppgåver]] (til mappa)
++ Unsorted
+	+ Store datasett
+		+ [[Vidaregåande bruk av CSV]]
+		+ API
+		+ døme på problem
+		+ døme på kjelder
+	+ [[Maskinlæring]]
 
 ## Program
 
@@ -46,14 +57,8 @@ title: Utkast til læringsmateriale i data og programmering
 	+ [[first]]
 + Førelesingsnotat
 	+ [[Introduksjon til datasett i CSV]]
+	+ 
 	
-## Fyrste periode
-
-+ Store datasett
-	+ [[Vidaregåande bruk av CSV]]
-	+ API
-	+ døme på problem
-	+ døme på kjelder
 
 
 
