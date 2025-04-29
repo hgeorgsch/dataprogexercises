@@ -27,10 +27,10 @@ title: Utkast til læringsmateriale i data og programmering
 	+ [[Datatypar og aritmetriske operatorar]]
 	+ [[Løkker]]
 	+ [[Løkker og Lister og andre fundamentale omgrep]]
+		+ Funksjonar
 	+ [[pandas og CSV]]
 	+ [[Dictionaries]]
-	+ Funksjonar
-	+ Datatypar
+	+ [[Klasser-Objekter]]
 + Perspektivføredrag
 	+ Likskap og tilordning
 	+ [[Køyretid og Kompleksitet]]
@@ -41,6 +41,7 @@ title: Utkast til læringsmateriale i data og programmering
 + Oppgåver
 	+ [[Marknadssimulering]]
 	+ [[Kontekstuelle oppgåver]] (til mappa)
+	+ [[Shrimp-Game]]
 + Unsorted
 	+ Store datasett
 		+ [[Vidaregåande bruk av CSV]]
