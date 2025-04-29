@@ -37,7 +37,6 @@ title: Utkast til læringsmateriale i data og programmering
 + Oppgåver
 	+ [[Marknadssimulering]]
 	+ [[Kontekstuelle oppgåver]] (til mappa)
-	+ 
 
 ## Program
 
