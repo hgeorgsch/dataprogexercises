@@ -37,11 +37,12 @@ title: Utkast til læringsmateriale i data og programmering
 	+ [[Tilfeldighet-While]]
 	+ [[Filhandtering]]
 	+ Statistikk og maskinlæring: [[Om å læra frå data]]
-	+ [[Mappetips og persondata.pdf]]
+	+ [[Mentale og matematiske modellar]]
+	+ [[Mappetips og persondata.pdf]]  (periode 2)
 + Oppgåver
 	+ [[Marknadssimulering]]
 	+ [[Kontekstuelle oppgåver]] (til mappa)
-	+ [[Shrimp-Game]]
+	+ [[Agent-basert simulering]] inkl. [[Shrimp-Game]]
 + Unsorted
 	+ Store datasett
 		+ [[Vidaregåande bruk av CSV]]

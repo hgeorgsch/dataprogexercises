@@ -15,8 +15,7 @@
 	+ *Demo* regresjon og korrelasjon i pandas
 	+ *Tutorial* regresjon og korrelasjon i eit datasett
 + Kombinasjon (fletting) av datasett
-+ Større simuleringar
-	+ [[Shrimp-Game]]
++ [[Agent-basert simulering]]
 + *Web API* og JSON 
 + Maskinlæring i scikitlearn
 
