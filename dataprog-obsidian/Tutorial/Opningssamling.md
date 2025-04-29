@@ -33,6 +33,8 @@ annan grunn ikkje får gjort dette på førehand.
 ## Dag 2
 
 + 9.00-9.30: Presentasjon av Økt 2. 
+    + Nedlasting og organisering av filer
+    + pandas og CSV
 + 9.30-11.30: Økt 2.  [Fyrste datasett med CSV](notebook/Fyrste%20datasett%20med%20CSV)
 + 11.30-12.30 Lønsj
 + 12.30-13.00: Presentasjon av Økt 3. 
