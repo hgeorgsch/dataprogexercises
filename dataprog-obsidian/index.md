@@ -40,7 +40,7 @@ title: Utkast til læringsmateriale i data og programmering
 	+ [[Mentale og matematiske modellar]]
 	+ [[Mappetips og persondata.pdf]]  (periode 2)
 + Oppgåver
-	+ [[Marknadssimulering]]
+	+ [[Marknadssimulering]] og [[Tilfeldighet-While]]
 	+ [[Kontekstuelle oppgåver]] (til mappa)
 	+ [[Agent-basert simulering]] inkl. [[Shrimp-Game]]
 + Unsorted
