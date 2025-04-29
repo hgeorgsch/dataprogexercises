@@ -27,48 +27,36 @@ title: Utkast til læringsmateriale i data og programmering
 	+ [[Datatypar og aritmetriske operatorar]]
 	+ [[pandas]]
 	+ [[Dictionaries]]
-+ Andre notat
+	+ Funksjonar
+	+ [[Løkker]]
+	+ Datatypar
++ Perspektivføredrag
+	+ Likskap og tilordning
+	+ [[Køyretid og Kompleksitet]]
 	+ [[Tilfeldighet-While]]
 + Oppgåver
 	+ [[Marknadssimulering]]
+	+ [[Kontekstuelle oppgåver]] (til mappa)
 	+ 
 
 ## Program
 
 + Sjå òg [[Tutorial/intro|intro]] til Jupyter Books
-+ [[Opningssamling]] (program)
++ Etablert program
+	+ [[Opningssamling]] (program)
+	+ [[first]]
 + Førelesingsnotat
 	+ [[Introduksjon til datasett i CSV]]
-	+ 
 	
 ## Fyrste periode
-
-Sjå [[first]]
 
 + Store datasett
 	+ [[Vidaregåande bruk av CSV]]
 	+ API
 	+ døme på problem
 	+ døme på kjelder
-+ Tekniske detaljar
-	+ Funksjonar
-	+ Løkker
-	+ Datatypar
-	+ Likskap og tilordning
-	+ [[Køyretid og Kompleksitet]]
 
-### Idéar.
 
-+ [[Kontekstuelle oppgåver]] (til mappa)
-- Korleis innfører me løkker og *if*?
-	- Halveringsmetoden
-	- Simulering
-		- Sparekalkulator
-			-  utrekning år for år
-			- geometrisk rekkje på lukka form
-			- plotta begge løysingar og samanlikn
-	- Preprosessering av datasett?
-	- API
 
 
 ## Nedprioritert stoff
