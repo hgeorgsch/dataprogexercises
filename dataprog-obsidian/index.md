@@ -25,7 +25,7 @@ title: Utkast til læringsmateriale i data og programmering
 	+ [[Mappe Del 2 Haust 2024]]
 + Tekniske innføringar, dvs. førelesingar og øvingar som legg vekt på å læra grunnteknikkar utan særleg vekt på kontekst:
 	+ [[Datatypar og aritmetriske operatorar]]
-	+ [[pandas]]
+	+ [[pandas og CSV]]
 	+ [[Dictionaries]]
 	+ Funksjonar
 	+ [[Løkker]]
