@@ -5,4 +5,5 @@ tags:
 
 +  [[Uke41-Torsdag-Manus]]  veke 40-41/2024
 	+ [[Pandas-Series-DataFrames-JH]]
-+ [[Lese-Manipulere-Dataframes]]   (primært oppgåver)  veke 42/2024
++ [[Manipulere-Dataframes]]   (primært oppgåver)  veke 42/2024
++ [[Pandas-Lese-Data-JH]]  veke 43/2024
