@@ -16,7 +16,7 @@
 	+ *Tutorial* regresjon og korrelasjon i eit datasett
 + Kombinasjon (fletting) av datasett
 + Større simuleringar
-	+ *shrimp* game
+	+ [[Shrimp-Game]]
 + *Web API* og JSON 
 + Maskinlæring i scikitlearn
 
