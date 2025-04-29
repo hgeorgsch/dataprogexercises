@@ -24,11 +24,22 @@ title: Utkast til læringsmateriale i data og programmering
 	+ Del 2.  Store datasett
 	+ [[Mappe Del 2 Haust 2024]]
 + Tekniske innføringar, dvs. førelesingar og øvingar som legg vekt på å læra grunnteknikkar utan særleg vekt på kontekst:
+	+ [[Datatypar og aritmetriske operatorar]]
 	+ [[pandas]]
+	+ [[Dictionaries]]
++ Andre notat
+	+ [[Tilfeldighet-While]]
++ Oppgåver
+	+ [[Marknadssimulering]]
+	+ 
 
-## Samlingar
+## Program
 
++ Sjå òg [[Tutorial/intro|intro]] til Jupyter Books
 + [[Opningssamling]] (program)
++ Førelesingsnotat
+	+ [[Introduksjon til datasett i CSV]]
+	+ 
 	
 ## Fyrste periode
 
@@ -59,9 +70,6 @@ Sjå [[first]]
 	- Preprosessering av datasett?
 	- API
 
-## Stoff som bør få plass
-
-+ [[Datatypar og aritmetriske operatorar]]
 
 ## Nedprioritert stoff
 

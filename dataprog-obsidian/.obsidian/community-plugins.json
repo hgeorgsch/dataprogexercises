@@ -1,4 +1,6 @@
 [
   "obsidian-tagfolder",
-  "tag-wrangler"
+  "tag-wrangler",
+  "find-unlinked-files",
+  "duplicate-detector"
 ]

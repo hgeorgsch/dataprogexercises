@@ -55,7 +55,7 @@ Skriv to pythonprogrammer:
         -   Lag et program, analyser data som *du synest er
             spennende/interessant* og vis selvstendig bruk av python
 
-        -   [kaggle.com](www.kaggle.com) inneholder en hel del data som
+        -   [kaggle.com](http://www.kaggle.com) inneholder en hel del data som
             kanskje kan være nyttig i slike tilfeller
 
     -   Dersom du har en kul idé til et program som bruker et web-api,
