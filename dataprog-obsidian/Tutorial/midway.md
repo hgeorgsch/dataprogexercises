@@ -12,3 +12,4 @@ har starta, basert på tilbakemeldingar og behov
 
 + [ ] Tidsramme
 + [ ] Vurdering: skal me ha munnleg presentasjon frå fyrste del av mappa.
++ [ ] *Live* koding-øving
