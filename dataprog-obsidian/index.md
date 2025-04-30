@@ -23,26 +23,32 @@ title: Utkast til læringsmateriale i data og programmering
 		+ Sjå `Beregninger og funksjoner-JHmanus.ipynb` (oppsummering)
 	+ Del 2.  Store datasett
 	+ [[Mappe Del 2 Haust 2024]]
+
+Nedanståande blokkar er lista i vilkårleg rekkjefylgje.
+
+| Blokk                       | Perspektiv             | Teknisk                                    | Oppgåve                |
+| :-------------------------- | ---------------------- | ------------------------------------------ | ---------------------- |
+| Statistikk/Maskinlæring     | [[Om å læra frå data]] |                                            |                        |
+| [[Meir om simulering]]      | [[Tilfeldigheit]]      | [[Simulering med While]], [[Dictionaries]] | [[Marknadssimulering]] |
+| [[Agent-basert simulering]] |                        |                                            | [[Shrimp-Game]]        |
+
+Resten av materialet er ikkje sortert i vekesblokkar
+
 + Tekniske innføringar, dvs. førelesingar og øvingar som legg vekt på å læra grunnteknikkar utan særleg vekt på kontekst:
 	+ [[Datatypar og aritmetriske operatorar]]
 	+ [[Løkker]]
 	+ [[Løkker og Lister og andre fundamentale omgrep]]
 		+ Funksjonar
 	+ [[pandas og CSV]]
-	+ [[Dictionaries]]
 	+ [[Klasser-Objekter]]
 + Perspektivføredrag
 	+ Likskap og tilordning
 	+ [[Køyretid og Kompleksitet]]
-	+ [[Tilfeldighet-While]]
 	+ [[Filhandtering]]
-	+ Statistikk og maskinlæring: [[Om å læra frå data]]
 	+ [[Mentale og matematiske modellar]]
 	+ [[Mappetips og persondata.pdf]]  (periode 2)
 + Oppgåver
-	+ [[Marknadssimulering]] og [[Tilfeldighet-While]]
 	+ [[Kontekstuelle oppgåver]] (til mappa)
-	+ [[Agent-basert simulering]] inkl. [[Shrimp-Game]]
 + Unsorted
 	+ Store datasett
 		+ [[Vidaregåande bruk av CSV]]
