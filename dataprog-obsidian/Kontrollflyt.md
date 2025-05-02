@@ -1,3 +1,9 @@
+---
+tags:
+  - programming-elementals
+---
++ [[If-else-while-JH]]
++ Sjå òg [[Datastrukturer-lokker-plotting-manus]]
 
 + Me innfører løkker fyrst gjennom ein enkel simulering
 	- Sparekalkulator: [[Simulering av kontantstraum]]

@@ -36,8 +36,8 @@ Resten av materialet er ikkje sortert i vekesblokkar
 
 + Tekniske innføringar, dvs. førelesingar og øvingar som legg vekt på å læra grunnteknikkar utan særleg vekt på kontekst:
 	+ [[Datatypar og aritmetriske operatorar]]
-	+ [[Løkker]]
-	+ [[Løkker og Lister og andre fundamentale omgrep]]
+	+ [[Kontrollflyt]]
+	+ [[Datastrukturer]]
 		+ Funksjonar
 	+ [[pandas og CSV]]
 	+ [[Klasser-Objekter]]
@@ -47,8 +47,10 @@ Resten av materialet er ikkje sortert i vekesblokkar
 	+ [[Filhandtering]]
 	+ [[Mentale og matematiske modellar]]
 	+ [[Mappetips og persondata.pdf]]  (periode 2)
-+ Oppgåver
++ Oppgåver til mappa
+	+ Dei oppgåvene som hittil er førebudd til nytt kurs er formulert for relativt enkel utforsking. Dei kan kanskje brukast i mappa, men studentane vil trengja ein god briefing og fleire idéear.
 	+ [[Kontekstuelle oppgåver]] (til mappa)
+	+ [[Sparekalkulator og Logistisk Vekst]]
 + Unsorted
 	+ Store datasett
 		+ [[Vidaregåande bruk av CSV]]
