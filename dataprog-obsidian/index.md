@@ -24,24 +24,23 @@ title: Utkast til læringsmateriale i data og programmering
 	+ Del 2.  Store datasett
 	+ [[Mappe Del 2 Haust 2024]]
 
+**Forslag** Seks blokkar til Periode 1.
 Nedanståande blokkar er lista i vilkårleg rekkjefylgje.
 
-| Blokk                            | Perspektiv                   | Teknisk                                                                        | Oppgåve                |
-| :------------------------------- | ---------------------------- | ------------------------------------------------------------------------------ | ---------------------- |
-| [[Statistikk og Maskinlæring]]   | [[Om å læra frå data]]       |                                                                                |                        |
-| [[Meir om simulering]]           | [[Tilfeldigheit]]            | [[Simulering med While]], [[Dictionaries]]                                     | [[Marknadssimulering]] |
-| [[Agent-basert simulering]]      |                              | [[Klasser-Objekter]]                                                           | [[Shrimp-Game]]        |
-| [[WebAPI]]                       | [[Web - Protokollar og API]] |                                                                                |                        |
-| [[CSV og Deskriptiv Statistikk]] |                              | [[pandas og CSV]]                                                              |                        |
-| [[Simulering og Kontrollflyt]]   |                              | [[Datatypar og aritmetriske operatorar]]; [[Kontrollflyt]]; [[Datastrukturer]] |                        |
+| Blokk                            | Perspektiv                                      | Teknisk (Howto)                                                                | Oppgåve                |
+| :------------------------------- | ----------------------------------------------- | ------------------------------------------------------------------------------ | ---------------------- |
+| [[Statistikk og Maskinlæring]]   | [[Om å læra frå data]]                          |                                                                                |                        |
+| [[Simulering og Kontrollflyt]]   | [[Tilfeldigheit]]                               | [[Simulering med While]], [[Dictionaries]]                                     | [[Marknadssimulering]] |
+| [[Agent-basert simulering]]      | [[Mentale og matematiske modellar]]             | [[Klasser-Objekter]]                                                           | [[Shrimp-Game]]        |
+| [[WebAPI]]                       | [[Web - Protokollar og API]]                    |                                                                                |                        |
+| [[CSV og Deskriptiv Statistikk]] | [[Filhandtering]]                               | [[pandas og CSV]]                                                              |                        |
+| [[Simulering og Kontrollflyt]]   | [[Imperativ programmering og maskinarkitektur]] | [[Datatypar og aritmetriske operatorar]]; [[Kontrollflyt]]; [[Datastrukturer]] | [[Marknadssimulering]] |
 
 Resten av materialet er ikkje sortert i vekesblokkar
 
 + Perspektivføredrag
-	+ Likskap og tilordning
+	+ [[Likskap og tilordning]]
 	+ [[Køyretid og Kompleksitet]]
-	+ [[Filhandtering]]
-	+ [[Mentale og matematiske modellar]]
 	+ [[Mappetips og persondata.pdf]]  (periode 2)
 + Oppgåver til mappa
 	+ Dei oppgåvene som hittil er førebudd til nytt kurs er formulert for relativt enkel utforsking. Dei kan kanskje brukast i mappa, men studentane vil trengja ein god briefing og fleire idéear.
@@ -53,10 +52,8 @@ Resten av materialet er ikkje sortert i vekesblokkar
 + Sjå òg [[Tutorial/intro|intro]] til Jupyter Books
 + Etablert program
 	+ [[Opningssamling]] (program)
+		+ [[Introduksjon til datasett i CSV]] (førelesingsnotat)
 	+ [[first]]
-+ Førelesingsnotat
-	+ [[Introduksjon til datasett i CSV]]
-	+ 
 	
 
 
