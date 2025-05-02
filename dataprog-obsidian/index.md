@@ -26,11 +26,12 @@ title: Utkast til læringsmateriale i data og programmering
 
 Nedanståande blokkar er lista i vilkårleg rekkjefylgje.
 
-| Blokk                       | Perspektiv             | Teknisk                                    | Oppgåve                |
-| :-------------------------- | ---------------------- | ------------------------------------------ | ---------------------- |
-| Statistikk/Maskinlæring     | [[Om å læra frå data]] |                                            |                        |
-| [[Meir om simulering]]      | [[Tilfeldigheit]]      | [[Simulering med While]], [[Dictionaries]] | [[Marknadssimulering]] |
-| [[Agent-basert simulering]] |                        |                                            | [[Shrimp-Game]]        |
+| Blokk                       | Perspektiv                   | Teknisk                                    | Oppgåve                |
+| :-------------------------- | ---------------------------- | ------------------------------------------ | ---------------------- |
+| Statistikk/Maskinlæring     | [[Om å læra frå data]]       |                                            |                        |
+| [[Meir om simulering]]      | [[Tilfeldigheit]]            | [[Simulering med While]], [[Dictionaries]] | [[Marknadssimulering]] |
+| [[Agent-basert simulering]] |                              |                                            | [[Shrimp-Game]]        |
+| [[WebAPI]]                  | [[Web - Protokollar og API]] |                                            |                        |
 
 Resten av materialet er ikkje sortert i vekesblokkar
 
