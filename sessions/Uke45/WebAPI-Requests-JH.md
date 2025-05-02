@@ -347,6 +347,7 @@ pp.pprint(data)
 
 * Man får gjerne statistisk data tilbake i json_stat-format
 * Vi kan bruke `pyjstat` til å lese data inn til pandas
+* Eurostat og ssb anbefaler json_stat format
 
 ```{code-cell} ipython3
 #!pip install pyjstat
