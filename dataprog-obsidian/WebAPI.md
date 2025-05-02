@@ -9,4 +9,6 @@ tags:
 + [[API-eksempel-chatgpt]]
 + [[WebAPI-Requests-JH]]
 + [[SSB-API]]
-+ 
++ Vurder:
+	+ døme på problem
+	+ døme på kjelder
