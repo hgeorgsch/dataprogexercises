@@ -26,22 +26,17 @@ title: Utkast til læringsmateriale i data og programmering
 
 Nedanståande blokkar er lista i vilkårleg rekkjefylgje.
 
-| Blokk                       | Perspektiv                   | Teknisk                                    | Oppgåve                |
-| :-------------------------- | ---------------------------- | ------------------------------------------ | ---------------------- |
-| Statistikk/Maskinlæring     | [[Om å læra frå data]]       |                                            |                        |
-| [[Meir om simulering]]      | [[Tilfeldigheit]]            | [[Simulering med While]], [[Dictionaries]] | [[Marknadssimulering]] |
-| [[Agent-basert simulering]] |                              |                                            | [[Shrimp-Game]]        |
-| [[WebAPI]]                  | [[Web - Protokollar og API]] |                                            |                        |
+| Blokk                            | Perspektiv                   | Teknisk                                                                        | Oppgåve                |
+| :------------------------------- | ---------------------------- | ------------------------------------------------------------------------------ | ---------------------- |
+| [[Statistikk og Maskinlæring]]   | [[Om å læra frå data]]       |                                                                                |                        |
+| [[Meir om simulering]]           | [[Tilfeldigheit]]            | [[Simulering med While]], [[Dictionaries]]                                     | [[Marknadssimulering]] |
+| [[Agent-basert simulering]]      |                              | [[Klasser-Objekter]]                                                           | [[Shrimp-Game]]        |
+| [[WebAPI]]                       | [[Web - Protokollar og API]] |                                                                                |                        |
+| [[CSV og Deskriptiv Statistikk]] |                              | [[pandas og CSV]]                                                              |                        |
+| [[Simulering og Kontrollflyt]]   |                              | [[Datatypar og aritmetriske operatorar]]; [[Kontrollflyt]]; [[Datastrukturer]] |                        |
 
 Resten av materialet er ikkje sortert i vekesblokkar
 
-+ Tekniske innføringar, dvs. førelesingar og øvingar som legg vekt på å læra grunnteknikkar utan særleg vekt på kontekst:
-	+ [[Datatypar og aritmetriske operatorar]]
-	+ [[Kontrollflyt]]
-	+ [[Datastrukturer]]
-		+ Funksjonar
-	+ [[pandas og CSV]]
-	+ [[Klasser-Objekter]]
 + Perspektivføredrag
 	+ Likskap og tilordning
 	+ [[Køyretid og Kompleksitet]]
@@ -52,13 +47,6 @@ Resten av materialet er ikkje sortert i vekesblokkar
 	+ Dei oppgåvene som hittil er førebudd til nytt kurs er formulert for relativt enkel utforsking. Dei kan kanskje brukast i mappa, men studentane vil trengja ein god briefing og fleire idéear.
 	+ [[Kontekstuelle oppgåver]] (til mappa)
 	+ [[Sparekalkulator og Logistisk Vekst]]
-+ Unsorted
-	+ Store datasett
-		+ [[Vidaregåande bruk av CSV]]
-		+ API
-		+ døme på problem
-		+ døme på kjelder
-	+ [[Maskinlæring]]
 
 ## Program
 
