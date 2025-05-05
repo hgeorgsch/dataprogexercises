@@ -1,0 +1,35 @@
+{"queryObj":{
+  "query": [
+    {
+      "code": "LovbruddKrim",
+      "selection": {
+        "filter": "vs:LovGruppeKrimAO",
+        "values": [
+          "2AAAAA-2ZZZZz"
+        ]
+      }
+    },
+    {
+      "code": "Kjonn",
+      "selection": {
+        "filter": "item",
+        "values": [
+          "2",
+          "1"
+        ]
+      }
+    },
+    {
+      "code": "ContentsCode",
+      "selection": {
+        "filter": "item",
+        "values": [
+          "Personoffer"
+        ]
+      }
+    }
+  ],
+  "response": {
+    "format": "json-stat2"
+  }
+},"tableIdForQuery":"08635","postUrl":"https://data.ssb.no/api/v0/no/table/08635"}
