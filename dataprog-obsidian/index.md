@@ -32,7 +32,7 @@ Nedanståande blokkar er lista i vilkårleg rekkjefylgje.
 | [[Statistikk og Maskinlæring]]   | [[Om å læra frå data]]                          |                                                                                |                        |
 | [[Simulering og Kontrollflyt]]   | [[Tilfeldigheit]]                               | [[Simulering med While]], [[Dictionaries]]                                     | [[Marknadssimulering]] |
 | [[Agent-basert simulering]]      | [[Mentale og matematiske modellar]]             | [[Klasser-Objekter]]                                                           | [[Shrimp-Game]]        |
-| [[WebAPI]]                       | [[Web - Protokollar og API]]                    |                                                                                |                        |
+| [[WebAPI]]                       | [[Web - Protokollar og API]]                    | [[WebAPI og JSON]]                                                             |                        |
 | [[CSV og Deskriptiv Statistikk]] | [[Filhandtering]]                               | [[pandas og CSV]]                                                              |                        |
 | [[Simulering og Kontrollflyt]]   | [[Imperativ programmering og maskinarkitektur]] | [[Datatypar og aritmetriske operatorar]]; [[Kontrollflyt]]; [[Datastrukturer]] | [[Marknadssimulering]] |
 
