@@ -28,11 +28,12 @@ title: Utkast til læringsmateriale i data og programmering
 Me lyt finna eit tema og ei kotekstuell oppgåve som motiverer nokre av desse
 grunnteknikkane og gjev breidd saman med simuleringa.
 
++ [ ] Er det for mykje konseptuelt materiale og oversiktsførelesing?  📅 2025-05-07 
 
 | Blokk                            | Perspektiv                                                          | Teknisk (Howto)                      | Oppgåve                |
 | :------------------------------- | ------------------------------------------------------------------- | ------------------------------------ | ---------------------- |
 | [[Simulering og Kontrollflyt]]   | [[Tilfeldigheit]] , [[Imperativ programmering og maskinarkitektur]] | [[Kontrollflyt]]; [[Datastrukturer]] | [[Marknadssimulering]] |
-| [[CSV og Deskriptiv Statistikk]] | [[Filhandtering]]                                                   | [[pandas og CSV]]                    |                        |
+| [[CSV og Deskriptiv Statistikk]] | [[Filhandtering]], [[Konseptuell forståing av  pandas]]             |                                      |                        |
 | [[Agent-basert simulering]]      | [[Mentale og matematiske modellar]]                                 | [[Klasser-Objekter]]                 | [[Shrimp-Game]]        |
 | [[WebAPI]]                       | [[Web - Protokollar og API]]                                        | [[WebAPI og JSON]]                   |                        |
 | [[Statistikk og Maskinlæring]]   | [[Om å læra frå data]]                                              | [[Maskinlæringsbibliotek]]           |                        |

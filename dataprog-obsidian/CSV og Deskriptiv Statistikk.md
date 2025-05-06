@@ -12,14 +12,29 @@ tags:
 	+ Kunna bruka pandas til deskriptiv statistikk og plotting
 
 + *Oversiktsførelesing*  [[Filhandtering]]
-+ Utdjuping [[pandas og CSV]]
++ *Oversiktsførelesing*  [[Konseptuell forståing av  pandas]]  veke 40-41/2024
++ Step 1.  Pandas
+	+ Step 1a.  Extracting Series and making plots.
+	+ Step 1b.  Mean and standard deviation 
++ Step 2. SciKitLearn
+	+ [[Linear Regression in SciKitLearn]]
++ Step 3. Eksporting plots
 
++ Oppgåver
+	+ [[Eksportdata]]
+	+ [[Manipulere-Dataframes]]   (primært oppgåver)  veke 42/2024
 
-+ Datasett : https://www.ssb.no/en/utenriksokonomi/utenrikshandel/artikler/import-og-eksport-alle-land-og-varenummer
++ Grunnleggjande pandas
+	+ index
+	+ søyler og radar
+	+ tabellar og seriar
+	+ utdrag av tabellar
++ Plott
++ Vidaregåande
+	+ snitt og union
 
-
-1. Filter by country
-2. Filter by goods type?
-3. Sum value
-4. Sum quantity
-5. Compare import/export
++ [[Pandas-Lese-Data-JH]] frå CSV veke 43/2024
++ [[Semi-avansert-Pandas]]  veke 44/2024
+	+ mykje interessant, men treng betre oppgåver
+	+ [[example-piechart]]
+	+ [[example-encoding]]
