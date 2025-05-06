@@ -4,6 +4,8 @@ tags:
 ---
 + [[If-else-while-JH]]
 + [[Simulering med While]]
+	+ [[Bolske uttrykk]]
+	+ break og continue
 + Sjå òg [[Datastrukturer-lokker-plotting-manus]]
 + **NB** Bolsk aritmetikk er vesentlig og vert ein gjengangar
 

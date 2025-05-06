@@ -17,6 +17,7 @@ title: Utkast til læringsmateriale i data og programmering
 			+ *fading examples* à la Clark *et al* 2005
 			+ drilloppgåver i Coderunner
 			+ prosjektoppgåver - opne oppgåver - egna til mappa
++ [[Medstudentvurdering]]
 + [[samle noen tanker]] frå Jonas
 + IIF2001 - to delar
 	+ Del 1.  Grunnleggjande introduksjon
@@ -42,7 +43,7 @@ Resten av materialet er ikkje sortert i vekesblokkar
 
 + Perspektivføredrag
 	+ [[Likskap og tilordning]]
-	+ [[Køyretid og Kompleksitet]]
+	+ [[Køyretid og Kompleksitet]] (periode 2)
 	+ [[Mappetips og persondata.pdf]]  (periode 2)
 + Oppgåver til mappa
 	+ Dei oppgåvene som hittil er førebudd til nytt kurs er formulert for relativt enkel utforsking. Dei kan kanskje brukast i mappa, men studentane vil trengja ein god briefing og fleire idéear.
