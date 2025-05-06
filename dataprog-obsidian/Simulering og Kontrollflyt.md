@@ -3,14 +3,18 @@ tags:
   - simulering
   - session
 ---
+*Me må sikkert dela denne i to*
 
-+ *Oversiktsføredrag* [[Tilfeldigheit]]
-+ [[Marknadssimulering]]
-+ [[Simulering med While]] 
-	+ teke frå 2024
-	+ vert repetisjon frå [[Simulering av kontantstraum]]
-	+ [[Bolske uttrykk]]
-	+ break og continue
++ Byggjer på  [[Simulering av kontantstraum]]
++ *Oversiktsføredrag* 
+	+ [[Tilfeldigheit]]
+	+ [[Imperativ programmering og maskinarkitektur]]
++ *Tekniske demonstrasjonar*
+	+ [[Kontrollflyt]]
+	+ [[Datastrukturer]]
++ *Øvingar.*
+	+ CodeRunner 1 og 2 frå 2024.
+	+ [[Marknadssimulering]]
 
 
 # Døme: handlande kundar
