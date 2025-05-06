@@ -24,17 +24,18 @@ title: Utkast til læringsmateriale i data og programmering
 	+ Del 2.  Store datasett
 	+ [[Mappe Del 2 Haust 2024]]
 
-**Forslag** Seks blokkar til Periode 1.
-Nedanståande blokkar er lista i vilkårleg rekkjefylgje.
+**Forslag** Fem blokkar til Periode 1.  Den fyrste blokken er overfull, og må delast opp.
+Me lyt finna eit tema og ei kotekstuell oppgåve som motiverer nokre av desse
+grunnteknikkane og gjev breidd saman med simuleringa.
+
 
 | Blokk                            | Perspektiv                                      | Teknisk (Howto)                                                                | Oppgåve                |
 | :------------------------------- | ----------------------------------------------- | ------------------------------------------------------------------------------ | ---------------------- |
-| [[Statistikk og Maskinlæring]]   | [[Om å læra frå data]]                          |                                                                                |                        |
-| [[Simulering og Kontrollflyt]]   | [[Tilfeldigheit]]                               | [[Simulering med While]], [[Dictionaries]]                                     | [[Marknadssimulering]] |
-| [[Agent-basert simulering]]      | [[Mentale og matematiske modellar]]             | [[Klasser-Objekter]]                                                           | [[Shrimp-Game]]        |
-| [[WebAPI]]                       | [[Web - Protokollar og API]]                    | [[WebAPI og JSON]]                                                             |                        |
+| [[Simulering og Kontrollflyt]]   | [[Tilfeldigheit]] , [[Imperativ programmering og maskinarkitektur]] |  [[Kontrollflyt]]; [[Datastrukturer]] | [[Marknadssimulering]] |
 | [[CSV og Deskriptiv Statistikk]] | [[Filhandtering]]                               | [[pandas og CSV]]                                                              |                        |
-| [[Simulering og Kontrollflyt]]   | [[Imperativ programmering og maskinarkitektur]] | [[Datatypar og aritmetriske operatorar]]; [[Kontrollflyt]]; [[Datastrukturer]] | [[Marknadssimulering]] |
+| [[Agent-basert simulering]]      | [[Mentale og matematiske modellar]]             | [[Klasser-Objekter]]                                                           | [[Shrimp-Game]]        |
+| [[WebAPI]]                       | [[Web - Protokollar og API]]                    | [[WebAPI og JSON]]          |                        |
+| [[Statistikk og Maskinlæring]]   | [[Om å læra frå data]]                          | [[Maskinlæringsbibliotek]]  |                        |
 
 Resten av materialet er ikkje sortert i vekesblokkar
 

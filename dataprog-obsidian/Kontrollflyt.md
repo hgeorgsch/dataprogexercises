@@ -3,6 +3,7 @@ tags:
   - programming-elementals
 ---
 + [[If-else-while-JH]]
++ [[Simulering med While]]
 + Sjå òg [[Datastrukturer-lokker-plotting-manus]]
 
 + Me innfører løkker fyrst gjennom ein enkel simulering
