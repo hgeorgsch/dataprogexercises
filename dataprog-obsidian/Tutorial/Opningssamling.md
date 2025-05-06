@@ -45,7 +45,7 @@ annan grunn ikkje får gjort dette på førehand.
 
 ## Arbeidsnotat
 
-+ [ ] Vurder programmet
++ [ ] Vurder programmet   📅 2025-06-20
     + [ ] Kor lang bør kvar økt vera?
     + [ ] Fleire oppgåver?
 
@@ -61,7 +61,7 @@ annan grunn ikkje får gjort dette på førehand.
 
 ### Manglande konsept
 
-+ [ ] Køyring av celler i feil rekkjefylgje
-+ [ ] Er folketalsmodellen for stort eit sprang (Introdkusjon)
-+ [ ] Nedlasting av Jupyter Notebook - lagring/filnamn etc
-+ [ ] Nedlasting av datafiler (CSV) og andre tilleggsresursar
++ [ ] Køyring av celler i feil rekkjefylgje 📅 2025-06-20
++ [ ] Er folketalsmodellen for stort eit sprang (Introdkusjon)   📅 2025-05-12 
++ [ ] Nedlasting av Jupyter Notebook - lagring/filnamn etc  📅 2025-06-20
++ [ ] Nedlasting av datafiler (CSV) og andre tilleggsresursar 📅 2025-06-20

@@ -12,11 +12,9 @@ kernelspec:
 ---
 *Førelesingsnotat frå veke 41/2024.  Sjå nokre andre notat og oppslagstabellar i [[Pandas-Series-DataFrames-JH]]*
 
++ #primitives/pickle
+
 ```{code-cell} ipython3
----
-slideshow:
-  slide_type: skip
----
 import pandas as pd
 import numpy as np
 import pickle
@@ -29,15 +27,10 @@ df
 ```
 
 ```{code-cell} ipython3
----
-slideshow:
-  slide_type: skip
----
-df =df.drop(columns=["id", "alternate_names", "gender", "wand", "actor", "alternate_actors", "image"])
+df = df.drop(columns=["id", "alternate_names", "gender", "wand", "actor", "alternate_actors", "image"])
 df
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
 
 # Introduksjon til *pan*el *da*ta: Pandas
 

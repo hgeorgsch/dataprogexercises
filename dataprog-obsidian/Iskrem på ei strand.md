@@ -14,3 +14,34 @@ tags:
 + Fordeling av kundar
 	+ Uniform
 	+ TIlfeldig
+
+
+
++ Klasser
+	+ Simulator
+		+ kontrollerer tida 
+		+ kontrollerer stranda
+			+ 1D kontinuerleg struktur
+			+ plasserer tilfeldige badegjestar
+		+ plasserer badegjestar
+	+ Kiosk (Kiosk 1 og Kiosk 2)
+	+ Badegjest
+		+ sannsyn for kjøp, avhengig av 
+			+ avstand til kiosk
+			+ tid frå forrige kjøp
+			+ lengd på køen
++ Modell 1.
+	+ Uniformt vær
+	+ Tilfeldig plasserte badegjestar
+	+ Kioskane vel plassering
+	+ Heil dag.  Tilfeldige kjøp.  Ingen kø  
++ Modell 2.
+	+ Små tidssteg.
+	+ Kjøp avheng av tid sidan forrige kjøp
+	+ Kø på kioskane,
++ Modell 2.
+	+ Badegjestane kan ta omsyn til køen.
++ Modell 3.
+	+ Varisjon i vêret, som fører til
+	+ Variasjon i tal på badegjestar
+	+ Lysta på iskrem

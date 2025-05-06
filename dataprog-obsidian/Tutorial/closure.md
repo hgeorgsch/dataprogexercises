@@ -8,5 +8,5 @@ midtvegssamlinga, basert på røynsler derifrå.
 	+ erfaringsdeling og refleksjon
 	+ sluttevaluering
 
-+ [ ] munnleg eksamen?  ... om det trengst
-+ [ ] Tidsramme
++ [ ] munnleg eksamen?  ... om det trengst  #eksamen   📅 2025-09-15
++ [ ] Tidsramme avslutningssamling   📅 2025-10-31
