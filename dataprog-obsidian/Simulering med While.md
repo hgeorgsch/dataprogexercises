@@ -20,13 +20,10 @@ tags:
 * Den bruker vi når vi skal gjøre noe «for» alle elementene i en samling
 * Vi vet altså på forhånd hvor mange ganger løkken skal iterere
 
-+++ {"slideshow": {"slide_type": "subslide"}}
-
 * Dersom vi undersøker feks kundeadferd og bruker tilfeldige tall til å simulere avgjørelser vet man typisk ikke hvor mange ganger en løkke trenger å kjøre
 * Da kan vi bruke `while` løkken
 
 
-+++ {"slideshow": {"slide_type": "fragment"}}
 
 ```python
 while «boolsk uttrykk»:
@@ -34,10 +31,8 @@ while «boolsk uttrykk»:
     #Kode
     #Kode
 ```
+
 * Løkken kjører så lenge det "boolske uttrykket" evalueres til `True`
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
 * Dersom vi trenger å avbryte en løkke midt i en iterasjon kan vi bruke `break`
 * Dersom vi trenger å starte løkken på nytt midt i en iterasjon kan vi bruke `continue`
 
@@ -59,4 +54,3 @@ while sjekkevariabel:
     
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}

@@ -10,9 +10,15 @@ kernelspec:
   language: python
   name: python3
 ---
-*Førelesingsnotat frå veke 41/2024.  Sjå nokre andre notat og oppslagstabellar i [[Pandas-Series-DataFrames-JH]]*
+*Basert på førelesingsnotat frå veke 41/2024.  Sjå nokre andre notat og oppslagstabellar i [[Pandas-Series-DataFrames-JH]]*
 
-+ #primitives/pickle
++ **Læringsmål**
+	+ Konseptuell oversikt over pandas
+		+  Data frame og Series
+		+ indeks
+
+
++ [ ] Bør me introdusera `pickle`? #primitives/pickle   📅 2025-05-07 
 
 ```{code-cell} ipython3
 import pandas as pd
@@ -37,14 +43,14 @@ df
 Nyttig ressurs: [https://pandas.pydata.org/docs/user_guide/](https://pandas.pydata.org/docs/user_guide/)
 
 * Pandas er et bibliotek for python for å manipulere og analysere data
+	* me brukte det fyrst i [[Fyrste datasett med CSV]]
+	
 * Vi bruker pandas til å laste inn eller lage datasett
     - Rydde opp i data
     - Få det over på annet format
     - Gjøre statistikk
     - Plotte data
     
-
-+++ {"slideshow": {"slide_type": "subslide"}}
 
 * Vi importerer pandas med som regel med `import pandas as pd`
 * Pandas er bygd på numpy, så man trenger ofte også å bruke numpy
@@ -68,10 +74,6 @@ df
 ```
 
 ```{code-cell} ipython3
----
-slideshow:
-  slide_type: skip
----
 sdata = {"frukt": ["epler", "pærer", "moreller", "rips"], "produksjon": [12,23,1,9], "subsidiert": [True, False, True, False], "pris": [10, 25, 40, 5]}
 df_bilde = pd.DataFrame(sdata)
 df_bilde
@@ -87,7 +89,7 @@ df_bilde2 = pd.DataFrame(sdata2, index = ["epler", "pærer", "moreller", "rips"]
 df_bilde2
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
+## Data Frame og Series
 
 * Pandas er bygd opp av objekter kalt *DataFrames* og *Series*
 * Vi jobber for det meste med DataFrames
@@ -96,16 +98,14 @@ df_bilde2
 <img src="img/dfnavn1.jpg" width="550">
 
 
-+++ {"slideshow": {"slide_type": "subslide"}}
-
 * Hvert rad har en index
 * Ut av boksen har radene indeks med heltall 0,1,2,3...
 * Man kan også ha navn på radene (indeks er liste med strenger) slik som kolonnenavnene
 ![dataframe_indeksnavn](img/dfnavn2.png)
 
-+++ {"slideshow": {"slide_type": "slide"}}
 
 ## Pandas Series
+
 * Pandas series er som kolonnene i en tabell
 * Dataserier har en *index*, et *navn* og *data* av en eller annen datatype (`dtype`)
 * Vi lager serier med `pd.Series( ... )`
@@ -120,11 +120,8 @@ dataserie_2 = pd.Series(["Bil", "Båt", "Sykkel", "Tog", "Fly"])
 dataserie
 ```
 
-+++ {"slideshow": {"slide_type": "fragment"}}
 
 * Her mangler vi navn på serien
-
-+++ {"slideshow": {"slide_type": "subslide"}}
 
 * Vi kan navngi serien ved å gi *keyword* argumentet "name"
 * `pd.Series(data, name="Navnet")`
@@ -481,3 +478,140 @@ print(f"Gjennomsnittlig arbeidsledighet er {round(gjennomsnitt,1)}%")
 ```{code-cell} ipython3
 
 ```
+
+
+## Utdjupin
+
+
+* Når vi behandler store mengder data og data fra ulike kilder trenger vi å ha kontroll på hvordan dataen vår representeres internt i datamaskinen
+```python
+data = np.array([..... ], dtype=«numpy datatype»)
+```
+* `numpy` har flere ulike datatyper vi kan bruke
+
+
+| **Type**       | **Name**     | **Description**                                                   |
+| -------------- | ------------ | ----------------------------------------------------------------- |
+| Integer        | `int8`       | Integer (-128 to 127)                                             |
+| Integer        | `int16`      | Integer (-32,768 to 32,767)                                       |
+| Integer        | `int32`      | Integer (-2,147,483,648 to 2,147,483,647)                         |
+| Integer        | `int64`      | Integer (-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807) |
+| Unsigned Int   | `uint8`      | Unsigned integer (0 to 255)                                       |
+| Unsigned Int   | `uint16`     | Unsigned integer (0 to 65,535)                                    |
+| Unsigned Int   | `uint32`     | Unsigned integer (0 to 4,294,967,295)                             |
+| Unsigned Int   | `uint64`     | Unsigned integer (0 to 18,446,744,073,709,551,615)                |
+| Floating Point | `float16`    | Half precision floating point                                     |
+| Floating Point | `float32`    | Single precision floating point                                   |
+| Floating Point | `float64`    | Double precision floating point                                   |
+| Complex Number | `complex64`  | Complex number (real and imaginary as `float32`)                  |
+| Complex Number | `complex128` | Complex number (real and imaginary as `float64`)                  |
+| Boolean        | `bool_`      | Boolean (True or False)                                           |
+| String         | `string_`    | Fixed-size string data                                            |
+| Unicode String | `unicode_`   | Fixed-size Unicode string data                                    |
+
++++ {"editable": true, "slideshow": {"slide_type": "subslide"}}
+
+### DataFrame-data
+* Merk at dersom vi forandrer datavariabelen, forandres også pandas serien
+* Vi sier at dataframen inneholder «refererer» til data som er lagret et annet sted
+* Dersom dette ikke er ønskelig kan vi bruke `copy=True` når vi lager serien
+* Av og til vil vi ha en kopi som ikke forstyrrer «datakilden»
+* Av og til vil vi ikke gjøre det slik -- det er raskere og bruker mindre minne
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: fragment
+---
+dataserie = pd.Series(data, name=navn, index=indeks, copy=True)
+print(dataserie)
+data[2]=66
+dataserie
+```
+
++++ {"editable": true, "slideshow": {"slide_type": "subslide"}}
+
+
+
+## Attributter
+* Pandas Series objekter har ulike *atributter*
+
++++ {"editable": true, "slideshow": {"slide_type": "fragment"}}
+
+| **Attribute**      | **Description**                                                                 |
+|--------------------|---------------------------------------------------------------------------------|
+| `index`            | The index (labels) of the Series.                                               |
+| `values`           | The values (data) of the Series as a NumPy array.                               |
+| `name`             | The name of the Series.                                                         |
+| `dtype`            | The data type of the values in the Series.                                      |
+| `size`             | The number of elements in the Series.                                           |
+| `shape`            | The dimensionality of the Series (always a single dimension).                   |
+| `empty`            | Returns `True` if the Series is empty (i.e., has no elements).                  |
+| `nbytes`           | The total number of bytes consumed by the Series' elements.                     |
+| `hasnans`          | Returns `True` if there are any `NaN` values in the Series.                     |
+| `is_unique`        | Returns `True` if all values in the Series are unique.                          |
+| `is_monotonic`     | Returns `True` if the Series is sorted in increasing order.                     |
+| `str`              | Provides access to string methods (if the Series contains strings).             |
+| `dt`               | Provides access to datetime methods (if the Series contains datetime objects).  |
+| `T`                | The transpose of the Series (no effect for 1D data, but included for consistency). |
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: subslide
+---
+print(dataserie.name)
+print(dataserie.values)
+print(dataserie.index)
+print(dataserie.nbytes)
+```
+
++++ {"editable": true, "slideshow": {"slide_type": "subslide"}}
+
+## Metoder
+* Pandas Series objekter har flere nyttige *metoder*
+
++++ {"editable": true, "slideshow": {"slide_type": "fragment"}}
+
+| **Metode**            | **Beskrivelse**                                                                  |
+|-----------------------|----------------------------------------------------------------------------------|
+| `head(n)`             | Returnerer de første `n` elementene i Series (standard er 5).                     |
+| `tail(n)`             | Returnerer de siste `n` elementene i Series (standard er 5).                      |
+| `unique()`            | Returnerer unike verdier i Series.                                                |
+| `value_counts()`      | Returnerer antall forekomster av unike verdier i Series.                          |
+| `describe()`          | Genererer beskrivende statistikk som antall, gjennomsnitt, std, min og maks.      |
+| `sum()`               | Returnerer summen av elementene i Series.                                         |
+| `mean()`              | Returnerer gjennomsnittet av elementene i Series.                                 |
+| `median()`            | Returnerer medianen av elementene i Series.                                       |
+| `min()`               | Returnerer minimumsverdien i Series.                                              |
+| `max()`               | Returnerer maksimumsverdien i Series.                                             |
+| `std()`               | Returnerer standardavviket til Series.                                            |
+| `sort_values()`       | Sorterer Series etter verdiene.                                                   |
+| `sort_index()`        | Sorterer Series etter indeksen.                                                   |
+| `apply(func)`         | Anvender en funksjon element for element på Series.                               |
+| `map(func)`           | Mapper verdier i Series ved hjelp av funksjon eller dictionary.                       |
+| `dropna()`            | Fjerner `NaN`-verdier fra Series.                                                 |
+| `fillna(value)`       | Fyller inn `NaN`-verdier med en spesifisert verdi.                                |
+| `astype(dtype)`       | Endrer datatypen til Series til spesifisert datatype.                             |
+| `clip(lower, upper)`  | Begrenser verdier til et spesifisert område (nedre og øvre grenser).              |
+| `between(left, right)`| Returnerer True for verdier mellom spesifiserte grenser.                          |
+| `shift(periods)`      | Skifter verdiene med et spesifisert antall perioder.                             |
+| `cumsum()`            | Returnerer den kumulative summen av elementene i Series.                          |
+| `cumprod()`           | Returnerer det kumulative produktet av elementene i Series.                       |
+| `rolling(window)`     | Gir glidende beregninger med et gitt vindu                                          |
+| `expanding()`         | Gir ekspanderende beregninger (f.eks. kumulative beregninger).               |
+| `resample(rule)`      | Resampler tidsseriedata i henhold til en spesifisert frekvens.                    |
+| `plot()`              | Plotter dataen i Series ved hjelp av Matplotlib.                                  |
+
+```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: subslide
+---
+print(dataserie.describe())
+dataserie.dropna()
+```
+

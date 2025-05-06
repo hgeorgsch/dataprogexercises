@@ -4,11 +4,13 @@ tags:
   - session
 ---
 
++ *Oversiktsføredrag* [[Tilfeldigheit]]
 + [[Marknadssimulering]]
 + [[Simulering med While]] 
 	+ teke frå 2024
 	+ vert repetisjon frå [[Simulering av kontantstraum]]
-+ *Oversiktsføredrag* [[Tilfeldigheit]]
+	+ [[Bolske uttrykk]]
+	+ break og continue
 
 
 # Døme: handlande kundar
@@ -21,10 +23,6 @@ tags:
 * Kunden trekker en tilfeldig vare hver gang
 
 ```{code-cell} ipython3
----
-slideshow:
-  slide_type: slide
----
 varer = {"Epler": 10.0,
          "Pærer": 15.0,
          "Bleier": 35.0,
@@ -56,13 +54,14 @@ def simuler_handling():
             shopper = False
     return total_pris
 
-#print(f"""Kunden handlet følgende varer {handlekurv}
-#Det koster kroner {total_pris:.1f}
-#Da er det igjen {budsjett} kroner i budsjettet
-#""")
+# print(f"""Kunden handlet følgende varer {handlekurv}
+# Det koster kroner {total_pris:.1f}
+# Da er det igjen {budsjett} kroner i budsjettet
+# """)
 ```
 
-# Oppg: 
+# Oppgåve 
+
 * Simuler voldsomt mange kunder som handler slik som i eksempelt over
 * Regn ut gjennomsnittlig pris kundene handler for
 * Plott hvordan fordelingen av pengebruk i butikken er
