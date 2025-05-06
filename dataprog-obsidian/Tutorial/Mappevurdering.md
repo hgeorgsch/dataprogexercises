@@ -43,9 +43,9 @@ obligatoriske arbeidskravet er å sikra at alle som leverer mappa, har
 den minimumsforståinga som krevst for å få emnet godkjend.
 
 
-+ [ ] Revider og godkjenn
-+ [ ] Vurderingskriterium
-+ [ ] Deklarasjonsskjema for KI
++ [ ] Konsept for mappevurdering   📅 2025-09-15
+	+ [ ] Vurderingskriterium for mappa
+	+ [ ] Deklarasjonsskjema for KI
 
 ## Vurderingskriterium
 

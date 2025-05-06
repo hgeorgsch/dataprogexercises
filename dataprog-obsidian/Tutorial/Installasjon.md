@@ -6,9 +6,10 @@
 	+ Vegleiing etter behov
 + Jupyter Notebook eller Jupyter Lab
 
-+ [ ] Tutorial for MS-Windows
-+ [ ] Tutorial for MacOS
-+ [ ] Tutorial for Linux/Unix
++ [ ] Installasjonstutorials 📅 2025-06-20
+	+ [ ] Tutorial for MS-Windows
+	+ [ ] Tutorial for MacOS
+	+ [ ] Tutorial for Linux/Unix
 
 ## Steg 1.  Anaconda
 

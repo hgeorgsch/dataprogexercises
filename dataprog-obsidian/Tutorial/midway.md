@@ -10,6 +10,6 @@ har starta, basert på tilbakemeldingar og behov
 	+ planleggja arbeidet med mappa
 
 
-+ [ ] Tidsramme
-+ [ ] Vurdering: skal me ha munnleg presentasjon frå fyrste del av mappa.
-+ [ ] *Live* koding-øving
++ [ ] Tidsramme mellomsamling  📅 2025-10-31
++ [ ] Vurdering: skal me ha munnleg presentasjon frå fyrste del av mappa.    📅 2025-09-15
++ [ ] *Live* koding-øving på mellomsamling   📅 2025-10-31

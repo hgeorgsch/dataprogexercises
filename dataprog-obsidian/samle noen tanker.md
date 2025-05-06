@@ -6,7 +6,7 @@ Tanker om formål og fremgang
 
 ### Mål med kurset/kompetanser/ferdigheter og kunnskap
 
-Ferdigheter:
++ Ferdigheter:
 	+ Bruke python selvstendig i faglig sammenheng
 		+ Pandas
 		+ Grafisk fremstilling
