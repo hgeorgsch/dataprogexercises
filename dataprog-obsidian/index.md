@@ -29,13 +29,13 @@ Me lyt finna eit tema og ei kotekstuell oppgåve som motiverer nokre av desse
 grunnteknikkane og gjev breidd saman med simuleringa.
 
 
-| Blokk                            | Perspektiv                                      | Teknisk (Howto)                                                                | Oppgåve                |
-| :------------------------------- | ----------------------------------------------- | ------------------------------------------------------------------------------ | ---------------------- |
-| [[Simulering og Kontrollflyt]]   | [[Tilfeldigheit]] , [[Imperativ programmering og maskinarkitektur]] |  [[Kontrollflyt]]; [[Datastrukturer]] | [[Marknadssimulering]] |
-| [[CSV og Deskriptiv Statistikk]] | [[Filhandtering]]                               | [[pandas og CSV]]                                                              |                        |
-| [[Agent-basert simulering]]      | [[Mentale og matematiske modellar]]             | [[Klasser-Objekter]]                                                           | [[Shrimp-Game]]        |
-| [[WebAPI]]                       | [[Web - Protokollar og API]]                    | [[WebAPI og JSON]]          |                        |
-| [[Statistikk og Maskinlæring]]   | [[Om å læra frå data]]                          | [[Maskinlæringsbibliotek]]  |                        |
+| Blokk                            | Perspektiv                                                          | Teknisk (Howto)                      | Oppgåve                |
+| :------------------------------- | ------------------------------------------------------------------- | ------------------------------------ | ---------------------- |
+| [[Simulering og Kontrollflyt]]   | [[Tilfeldigheit]] , [[Imperativ programmering og maskinarkitektur]] | [[Kontrollflyt]]; [[Datastrukturer]] | [[Marknadssimulering]] |
+| [[CSV og Deskriptiv Statistikk]] | [[Filhandtering]]                                                   | [[pandas og CSV]]                    |                        |
+| [[Agent-basert simulering]]      | [[Mentale og matematiske modellar]]                                 | [[Klasser-Objekter]]                 | [[Shrimp-Game]]        |
+| [[WebAPI]]                       | [[Web - Protokollar og API]]                                        | [[WebAPI og JSON]]                   |                        |
+| [[Statistikk og Maskinlæring]]   | [[Om å læra frå data]]                                              | [[Maskinlæringsbibliotek]]           |                        |
 
 Resten av materialet er ikkje sortert i vekesblokkar
 

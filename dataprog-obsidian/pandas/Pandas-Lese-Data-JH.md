@@ -11,63 +11,9 @@ kernelspec:
   name: python3
 ---
 
-+++ {"editable": true, "slideshow": {"slide_type": "slide"}}
-
 # Hente og lese inn data til pandas
 
-+++ {"editable": true, "slideshow": {"slide_type": "slide"}}
-
-## CSV 
-
-* En vanlig måte å lagre data på er i csv-format
-* csv = comma separated values
-* I en csv-fil har vi data lagret som tekst i en type tabellformat
-* Hver linje i filen er et datapunkt, og inneholder et eller flere felt med data (kolonner)
-* Datafeltene er separert med en *separator*, ofte et komma
-* Første linje i filen gir gjerne metadata (navn på kolonnene)
-
-+++ {"editable": true, "slideshow": {"slide_type": "subslide"}}
-
-## Tegnkoding
-
-* CSV-filer er som sagt vanlig tekst, men:
-    - Tekst kan representeres på forkjellige måter i en datamaskin
-    - Måten kalles tegnkodingen (character-coding)
-    - Vi må ofte sørge for riktig inputkoding (input-encoding) for å få ut riktig tekst
-* Enkleste mulige tegnkoding er ASCII
-* Unicode sørger for at vi kan bruke æ,ø,å $\Delta$, $\Gamma$ osv. Feks UTF-8 og UTF-16
-
-+++ {"editable": true, "slideshow": {"slide_type": "subslide"}}
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/ASCII-Table-wide.svg">
-
-+++ {"editable": true, "slideshow": {"slide_type": "subslide"}}
-
-## Unicode
-* Unicode er et tegnsett/tegnkoding som har som formål å støtte alle språk
-* Alle tegn som brukes må da få sin egen kode
-* Til og med [emojis](https://unicode.org/emoji/charts/full-emoji-list.html)
-* U+1f911, CLDR Short name: money-mouth-face, 🤑
-
-+++ {"editable": true, "slideshow": {"slide_type": "subslide"}}
-
-## Vanlige tegnkodinger:
-* Unicode har flere måter å gi tegnkodingene på:
-  * 'utf-8'
-  * 'utf-16'
-  * 'utf-32'
-* I tillegg har vi en annen standard litt på siden av  unicode: *ISO-8859-1*
-  * Kalles ofte "Latin-1"
-  * Koder for det latinske alfabetet
-  * Vanlig i bruk i Amerika, Vest-Europa, Oceania og store deler av Afrika
-
-+++ {"editable": true, "slideshow": {"slide_type": "subslide"}}
-
-#### SSB
-* SSB bruker 'UTF-8' for .XML og JSON formater (mer om JSON senere)
-* SSB bruker 'ISO-8859-1' for .csv formatene sine
-
-+++ {"editable": true, "slideshow": {"slide_type": "slide"}}
++ byggjer på [[Filhandtering]]
 
 ## CSV + Pandas
 
@@ -81,11 +27,6 @@ kernelspec:
     -  `index_col = «kolonnenummer»` Angir hvilken av kolonnene som skal brukes som indeks (nummer eller etikette) 
 
 ```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: subslide
----
 import pandas as pd
 
 BB_df= pd.read_csv("blackboard.csv", encoding="utf-16", sep="\t")
@@ -98,17 +39,12 @@ BB_df= pd.read_csv("blackboard.csv", encoding="utf-16", sep="\t", index_col=0)
 BB_df
 ```
 
-+++ {"editable": true, "slideshow": {"slide_type": "subslide"}}
 
 * Filen vi har lastet inn er klasselisten fra blackboard
 * på iirmoodle.it.ntnu.no er det mulig å melde folk opp i fag ved å laste *opp* en csv-fil
 * `moodle_example.csv` viser hvordan denne filen skal se ut
 
 ```{code-cell} ipython3
----
-slideshow:
-  slide_type: fragment
----
 moodleEx_df = pd.read_csv("moodle_example.csv")
 moodleEx_df
 ```
