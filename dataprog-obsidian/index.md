@@ -55,9 +55,6 @@ Resten av materialet er ikkje sortert i vekesblokkar
 + Sjå òg [[Tutorial/intro|intro]] til Jupyter Books
 + Etablert program
 	+ [[Opningssamling]] (program)
-		+ [[Introduksjon til datasett i CSV]] (førelesingsnotat)
-		+ [[Python og Jupyter Notebook]]
-		+ [[Introduksjon til simulering]]
 	+ [[first]]
 	
 

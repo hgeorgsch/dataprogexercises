@@ -6,10 +6,6 @@
 * SSB bruker tegnkodinger «UTF-8» og «ISO-8859-1»
 
 ```{code-cell} ipython3
----
-slideshow:
-  slide_type: subslide
----
 #Vi går til ssb.no og henter et datasett om arbeidsledige
 arbeidsledige_df = pd.read_csv("arbeidsledige.csv", sep=";", header=1, index_col=0)
 
@@ -30,35 +26,25 @@ arbeidsledige_df = arbeidsledige_df.drop("prosent", axis=1)
 ```
 
 ```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: subslide
----
 # Vi henter et datasett med åpnede konkurser fra SSB
 konkurser_df = pd.read_csv("konkurser.csv", encoding="ISO-8859-1", sep="\t", index_col = 0)
 konkurser_df.index.name=None
 konkurser_df
 ```
 
-+++ {"editable": true, "slideshow": {"slide_type": "slide"}}
 
 ### Analyse:
 * Vi vil slå sammen dataene våre om arbeidsledighet og åpnede konkurser
 * Er det en sammenheng?
 
 ```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: fragment
----
 konkurser_df+arbeidsledige_df #Det funket dårlig....
 ```
 
 +++ {"editable": true, "slideshow": {"slide_type": "slide"}}
 
 # Slå sammen data
+
 Vi må passe på en rekke ting når vi skal slå sammen data:
 * Matchende datatyper: 2 kolonner blir ansett som forkjellige dersom de har forskjellige datatyper men matchende data
 * Hva skal vi beholde (Alt som matcher, kun matchende data fra nr 1 eller 2 dataframe)
