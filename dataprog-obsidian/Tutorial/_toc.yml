@@ -6,10 +6,15 @@ chapters:
   - file: Opningssamling
     sections:
     - file: Installasjon
-    - file: notebook/Introduksjon til Jupyter Notebook
+    - file: notebook/Fyrste dokument i Jupyter Notebook
     - file: notebook/Fyrste datasett med CSV
     - file: notebook/Simulering av kontantstraum
     - file: Mappevurdering
+    - file: Førelesingsnotat frå opningssamlinga
+      subsections:
+      - file: Introduksjon til datasett i CSV.md
+      - file: Introduksjon til simulering.md
+      - file: Python og Jupyter Notebook.md
   - file: first
   - file: midway
   - file: second

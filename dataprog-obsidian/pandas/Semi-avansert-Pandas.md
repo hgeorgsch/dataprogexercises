@@ -27,6 +27,7 @@ Vi har nå vært igjennom basics med pandas. Det er veldig mye du kan gjøre med
 
 <!-- #region editable=true slideshow={"slide_type": "subslide"} -->
 # Multiindex dataframes
+
 * Multiindex har «tupler» som index: `[(Alta, 1991), (Alta, 1992), .... , (Ålesund, 1991), (Ålesund,  1992)]`
 * Vi kan lage en slik multiindex med feks `.set_index(["Sted", "År"])`
 * Vi slår nå opp i dataframe med tupler, `df.loc[("Molde", 2001), "Fraflytning"]`
@@ -95,6 +96,7 @@ df.loc[idx["Germany":"Sweden", "2022Q1":"2023Q3"], :]
 
 <!-- #region editable=true slideshow={"slide_type": "subslide"} -->
 ## Boolsk filtrering
+
 * Gjør vi noe som `df["alder"] > 25` returnerer pandas en dataserie med `True`overalt hvor "alder" er større enn 25
 * Vi kan bruke denne dataserien til å slå opp i alle radene hvor serien inneholder true:
 
