@@ -56,9 +56,10 @@ Resten av materialet er ikkje sortert i vekesblokkar
 + Etablert program
 	+ [[Opningssamling]] (program)
 		+ [[Introduksjon til datasett i CSV]] (førelesingsnotat)
+		+ [[Python og Jupyter Notebook]]
+		+ [[Introduksjon til simulering]]
 	+ [[first]]
 	
-
 
 
 

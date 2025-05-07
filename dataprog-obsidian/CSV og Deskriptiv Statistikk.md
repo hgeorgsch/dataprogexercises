@@ -21,8 +21,10 @@ tags:
 + Step 3. Eksporting plots
 
 + Oppgåver
-	+ [[Eksportdata]]
 	+ [[Manipulere-Dataframes]]   (primært oppgåver)  veke 42/2024
+		+ grunnteknikkar
+	+ [[Arbeidsledige]] : Latin 1, combination of datasets
+	+ [[Eksportdata]] requires extensive pre-processing to extract comparrable data
 
 + Grunnleggjande pandas
 	+ index
@@ -34,6 +36,7 @@ tags:
 	+ snitt og union
 
 + [[Pandas-Lese-Data-JH]] frå CSV veke 43/2024
+	+ Bruker blackboard-data
 + [[Semi-avansert-Pandas]]  veke 44/2024
 	+ mykje interessant, men treng betre oppgåver
 	+ [[example-piechart]]
