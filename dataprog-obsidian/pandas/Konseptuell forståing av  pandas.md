@@ -18,7 +18,8 @@ kernelspec:
 		+ indeks
 
 
-+ [ ] Bør me introdusera `pickle`? #primitives/pickle   📅 2025-05-07 
++ [x] Bør me introdusera `pickle`? #primitives/pickle 📅 2025-05-07 ✅ 2025-05-08
+	+ Neppe !
 
 ```{code-cell} ipython3
 import pandas as pd
