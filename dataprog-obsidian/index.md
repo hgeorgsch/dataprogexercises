@@ -29,15 +29,16 @@ title: Utkast til læringsmateriale i data og programmering
 Me lyt finna eit tema og ei kotekstuell oppgåve som motiverer nokre av desse
 grunnteknikkane og gjev breidd saman med simuleringa.
 
-+ [ ] Er det for mykje konseptuelt materiale og oversiktsførelesing?  📅 2025-05-07 
++ [x] Er det for mykje konseptuelt materiale og oversiktsførelesing?  📅 2025-05-07  @completed(2025-05-08T11:08:59+02:00)
 
-| Blokk                            | Perspektiv                                                          | Teknisk (Howto)                      | Oppgåve                |
-| :------------------------------- | ------------------------------------------------------------------- | ------------------------------------ | ---------------------- |
-| [[Simulering og Kontrollflyt]]   | [[Tilfeldigheit]] , [[Imperativ programmering og maskinarkitektur]] | [[Kontrollflyt]]; [[Datastrukturer]] | [[Marknadssimulering]] |
-| [[CSV og Deskriptiv Statistikk]] | [[Filhandtering]], [[Konseptuell forståing av  pandas]]             |                                      |                        |
-| [[Agent-basert simulering]]      | [[Mentale og matematiske modellar]]                                 | [[Klasser-Objekter]]                 | [[Shrimp-Game]]        |
-| [[WebAPI]]                       | [[Web - Protokollar og API]]                                        | [[WebAPI og JSON]]                   |                        |
-| [[Statistikk og Maskinlæring]]   | [[Om å læra frå data]]                                              | [[Maskinlæringsbibliotek]]           |                        |
+| Blokk                                | Perspektiv                                                          | Teknisk (Howto)                                                                 | Oppgåve                                                                               |
+| :----------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| [[Numeriske Meodar og Kontrollflyt]] | [[Tilfeldigheit]] , [[Imperativ programmering og maskinarkitektur]] | [[Kontrollflyt]]                                                                | [[Folkevekst]] ; [[Halveringsmetoden]]; [[CodeRunner Basic]] ; [[CodeRunner Control]] |
+| [[Simulering og Datastrukturar]]     | [[Datastrukturar og Kompleksitet]]                                  | [[Datastrukturer]]                                                              | [[Marknadssimulering]]; [[CodeRunner Data Structures]]                                |
+| [[CSV og Deskriptiv Statistikk]]     | [[Filhandtering]], [[Konseptuell forståing av  pandas]]             | [[Filkonvertering og -import]]; [[Plot i pandas]]; [[Gjennomsnitt og spreding]] |                                                                                       |
+| [[Agent-basert simulering]]          | [[Mentale og matematiske modellar]]                                 | [[Klasser-Objekter]]                                                            | [[Shrimp-Game]]; [[Iskrem på ei strand]]                                              |
+| [[WebAPI]]                           | [[Web - Protokollar og API]]                                        | [[WebAPI og JSON]]                                                              |                                                                                       |
+| [[Statistikk og Maskinlæring]]       | [[Om å læra frå data]]                                              | [[Maskinlæringsbibliotek]]                                                      |                                                                                       |
 
 Resten av materialet er ikkje sortert i vekesblokkar
 
@@ -62,6 +63,4 @@ Resten av materialet er ikkje sortert i vekesblokkar
 
 ## Nedprioritert stoff
 
-+ [[Halveringsmetoden]] 
-	+ introduksjon til numeriske metodar og løkker
 + [[Help-funksjonen]]
