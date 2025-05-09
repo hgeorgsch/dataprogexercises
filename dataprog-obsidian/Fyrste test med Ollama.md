@@ -62,6 +62,12 @@ docker exec -it ollama ollama pull  deepseek-coder-v2
 
 Referanse: [Ollama in docker](https://ollama.com/blog/ollama-is-now-available-as-an-official-docker-image)
 
+# KI i Jupyter
+
+```sh
+pip install langchain-ollama
+```
+
 # KI *inline* i Jupyter
 
 ```{code-cell} ipython3
