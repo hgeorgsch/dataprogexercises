@@ -75,9 +75,10 @@ Alt me treng er eit minne som me kan bla igjennom og ein operasjon som verkar p�
 
 ---
 
+<!-- slide bg="white" -->
 ## von Neumann-arkitekturen
 
-+ [ ] FIgur: Maskinarkitektur
+![[Von_Neumann_Architecture.svg|600]]
 
 note:
 Maskin har eit minna
@@ -85,7 +86,6 @@ Maskin har eit minna
 Ikkje berre det, programmøren må sjå for seg kva som skjer etter lange seriar med kommandoar, for kvar kommando avheng av resultatet av dei føregåande. 
 
 ---
-
 
 
 ```python=
