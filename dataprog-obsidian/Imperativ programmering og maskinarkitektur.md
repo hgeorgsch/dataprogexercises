@@ -43,7 +43,7 @@ print(b)
 ```
 
 note:
-Dette er enno tydlegare i dette dømet.  Dei to *print*-linene er identiske, men dei gjev ikkje same resultat, fordi *tilstaden* åt maskina er forskjellig. Fyrste gongen har `b` tilstanden 5, og *print* skriv ut 5. Andre gongen er tilstanden 10, og det er 10 som vert skrive ut.
+Tilstanden vert enno tydlegare i dette dømet.  Dei to *print*-linene er identiske, men dei gjev ikkje same resultat, fordi *tilstaden* åt maskina er forskjellig. Fyrste gongen har `b` tilstanden 5, og *print* skriv ut 5. Andre gongen er tilstanden 10, og det er 10 som vert skrive ut.
 
 ---
 
@@ -149,8 +149,75 @@ Sjølv om me stadig får nye programmeringsspråk treng CPUen stadig den same ma
 
 ---
 
+<!-- slide bg="white" -->
+
+![[state.svg]]
+
+
+note:
+Ein instruksjon som *print* er i verkelegheit uhyre komplisert. Talverdiar må omsetjasts til teiknstrengar.  Adressa til terminalen må finnast. Kvart teikn må kopierast frå registeret til terminalen. Feil kan oppstå og må evt. handterast. Det er godt me har tredjegenerasjonsspråk so me slepp å tenkja på desse detaljane.
+
+Det grunnleggjande prinsippet er likevel det same som Turing og von Neumann la til grunn for tre mannsaldrar sidan.  Gjennom programmet gjev me imperativar til CPUen, som utfører ordren avhengig av tilstanden sin. Somme instruksjonar oppdaterar variablar i tilstanden. Somme instruksjonar kommuniserer med verda utanfor maskina.  CPUen har òg ein programpeikar som viser til neste instruksjon i programmet. Normalt går peikaren frå ei line til neste, men ikkje alltid. I *for*-løkka kan peikaren hoppa tilbake for å gjenta linene i løkka.
+
+Denne same modellen ligg til grunn for all imperativ programmering. Det som gjer programmering krevjande, er at programmøren må kunna forutseia kva som skjer på CPUen, og ikkje minst kva tilstand maskina kan enda opp i.  Det er lett å oversjå moglege tilstandar, og skriva programmet slik at det berre verkar dei vanlegaste situasjonane.
+
+---
+# Kontrollflyt i python
+
+note: 
+Eg håper du har høyrd føredraget om  «Imperativ programmering», og at du har arbeidd gjennom nokre enkle demonstrasjonar og øvingar i python. No skal eg gå litt nærare inn i struktur og syntaks i python.
+
+---
+
+## Tilordning 
+
 ```
-if b > 5:
+variabel = 5
+variabel = 5**2 + 17
+```
+
+---
+## Datatypar
+
+```
+heiltal = 5
+flyttal = 5.0
+tekst = "Fem"
+liste = [ 3, 4, 5, 6, 7 ]
+```
+
+
+```
+In [2]: type(variabel)
+Out[2]: int
+
+In [3]: type(flyttal)
+Out[3]: float
+
+In [4]: type(tekst)
+Out[4]: str
+
+In [5]: type(liste)
+Out[5]: list
+```
+<!-- element class="fragment" -->
+
+---
+## Bolske uttrykk  og *if*
+
+```
+b = 5
+if b > 5: 
+   print( "b er stor" )
+   b = 0
+```
+	
+---
+## *if*-*else*
+
+```
+b = 5
+if b > 5: 
    print( "b er stor" )
    b = 0
 else:
@@ -158,38 +225,37 @@ else:
    b = 10
 ```
 	
-- Kontrollflyt - løkker og if
-
 ---
+## Kontrollflyt 
 
 ```
-s = 0
-i = 0
-while s < 100:
-   s = s + i
-   print( f"{i}: {s}" )
-print( "Ferdig.  Det tok {i} steg." )
+b = 0
+while b < 9: 
+   print( "No er b lik", b )
 ```
-	
-- Kontrollflyt - løkker og if
-
----
-
----
 
 ```
-s = 0
-for i in range(16):
-   s = s + i
-   print( f"{i}: {s}" )
+for b in range(9): 
+   print( "No er b lik", b )
 ```
-	
-- Kontrollflyt - løkker og if
-
----
-## Vektorprosessorar
-
+<!-- element class="fragment" -->
 
 ---
 
-Ikkje berre det, programmøren må sjå for seg kva som skjer etter lange seriar med kommandoar, for kvar kommando avheng av resultatet av dei føregåande. 
+## Likskap og *if*
+
+```
+sanningsverdi = heiltal == 5
+```
+
+
+
+```
+variabel = 5
+if variabel == 5:
+   print( "Fem" )
+else:
+   print( "Ikkje fem" )
+```
+
+

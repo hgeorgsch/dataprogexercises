@@ -10,3 +10,12 @@ note: Imperativ programmering svarer godt til det som skjer i dei elektroniske k
 
 (frå wikimedia commons)
 ![[Von_Neumann_Architecture.svg|600]]
+
+
+---
+## Vektorprosessorar
+
+
+---
+
+Ikkje berre det, programmøren må sjå for seg kva som skjer etter lange seriar med kommandoar, for kvar kommando avheng av resultatet av dei føregåande. 
