@@ -1,0 +1,12 @@
+
++ Sjå òg [[Imperativ programmering og maskinarkitektur]]
+
+- Figur: CPU og register
+	+ https://slideplayer.com/slide/5101082/
+	+ https://programmathically.com/how-does-a-cpu-execute-instructions-understanding-instruction-cycles/
+
+note: Imperativ programmering svarer godt til det som skjer i dei elektroniske krinsane på prosessoren.
+
+
+(frå wikimedia commons)
+![[Von_Neumann_Architecture.svg|600]]
