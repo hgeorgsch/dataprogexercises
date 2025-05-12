@@ -50,6 +50,9 @@ Resten av materialet er ikkje sortert i vekesblokkar
 	+ Dei oppgåvene som hittil er førebudd til nytt kurs er formulert for relativt enkel utforsking. Dei kan kanskje brukast i mappa, men studentane vil trengja ein god briefing og fleire idéear.
 	+ [[Kontekstuelle oppgåver]] (til mappa)
 	+ [[Sparekalkulator og Logistisk Vekst]]
++ Idéar 
+	+ lat studentane testa AI på oppgåvene tidleg i semesteret
+	+ *Live* koding på video
 
 ## Program
 

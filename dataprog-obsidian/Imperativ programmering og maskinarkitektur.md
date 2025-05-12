@@ -11,7 +11,7 @@ Me skal prata litt om korleis datamaskina konseptuelt sett verkar. Målet er lit
 
 ---
 
-![[command.webp]]
+![[command.webp|600]]
 
 - [ ] Figur: Linsens på *clipart*
 
@@ -25,14 +25,14 @@ Maskina tenkjer ikkje. Det er programmøren som står for all tenkinga. Maskina 
 
 <split even>
 ::: block
-![[Alan_Turing_(1951).jpg|500]]
+![[Alan_Turing_(1951).jpg|400]]
 
 Alan Turing 1951 ([by Elliott & Fry](https://www.computerhistory.org/timeline/1949/) Public Domain)
 :::
 
 
 ::: block
-![[Alonzo_Church.jpg|500]]
+![[Alonzo_Church.jpg|400]]
 
 Alonzo Church
 ([By Princeton University, Fair use](https://en.wikipedia.org/w/index.php?curid=6082269))
@@ -49,7 +49,7 @@ Båe modellane var abstrakte matematiske konsept, men det er Turing sin modell s
 ---
 ## Turingmaskina
 
-![[Turing_Machine_Model_Davey_2012.jpg]]
+![[Turing_Machine_Model_Davey_2012.jpg|600]]
 
 Turing Machine, reconstructed by Mike Davey as seen at Go Ask ALICE at Harvard University ([Rocky Acosta](https://commons.wikimedia.org/wiki/User:Arttechlaw "User:Arttechlaw") - Own work)
 
@@ -67,7 +67,7 @@ Turingmaskina er ei *tilstandsmaskin*.  Dvs. til ei kvar tid er maskina i ei bes
 ![[turinginstruction.svg|600]]
 
 note:
-På kvart tidssteg ser maskina tilstanden sin og eitt teikn på bandet. Dette avgjer både den nye tilstanden og kva teikn som vert skrive til bandet. I tillegg kan bandet flytta eit steg til høgre eller venstre.
+På kvart tidssteg ser maskina tilstanden sin og eitt teikn på bandet. Dette avgjer både den nye tilstanden og kva teikn som vert skrive til bandet. I tillegg kan bandet flytta eit steg til høgre eller venstre. Turingmaskina har ein fast oppslagstabell, som gjev resultatet for ein gjeven tilstand og eit gjeve teikn på bandet. Same tilstand og teikn gjev *alltid* same resultat.
 
 Denne maskina er sjølvsagt absurd enkel.  Ho må òg vera uhyrleg treig sidan det tek lang tid å leita gjennom bandet. Likevel viser Turing at ho i prinsippet kan løysa mange komplekse problem.  
 
@@ -78,10 +78,52 @@ Alt me treng er eit minne som me kan bla igjennom og ein operasjon som verkar p�
 <!-- slide bg="white" -->
 ## von Neumann-arkitekturen
 
-![[Von_Neumann_Architecture.svg|600]]
+![[neumann.svg|1200]]
 
 note:
-Maskin har eit minna
+Desse elementa kjenner me igjen i  John von Neumann sin arkitektur frå 1945, som har vorte førande for den praktiske konstruksjonen av datamaskiner.
+
+Papirremsa er vorte til *Random Access Memory*, eller RAM. *Random Access* tyder at maskina kan lesa og skriva til ein kvan posisjon, utan å bruka tid på å leita langs remsa.
+
+Sjølve prosesseringseininga er vorten meir kompleks. Kontrolleininga held styr på programmet og kva instruksjon den logiske og aritmetiske eininga skal utføra neste gong.  Tilstanden er ikkje lenger éin atomær verdi, men fleire register der kvart register inneheld ein verdi.
+
+Instruksjonane er typisk enkle aritmetiske og logiske operasjonar, som pluss, minus, og, og eller, samt instruksjonar for å hoppa i programmet eller lesa og skriva til minnet eller til eksterne einingar som skjerm og tastatur.
+
+---
+
+![[Classic_shot_of_the_ENIAC.jpg]]
+
+[By Unidentified U.S. Army photographer](https://commons.wikimedia.org/w/index.php?curid=978770) Public Domain 
+
+note:
+Dei fyrste programmørane måtte koda programmet nøyaktig som prosessoren les det, ikkje som nullar og einarar, men som elektrisitet som er anten av eller på, ved hjelp av brytarar og koblingsbrett. Biletet viser ENIAC som er rekna som den fyrste generelle, programmerbare, elektroniske datamaskina, og som kom i drift i 1945.
+
+---
+
+- **ca. 1947/49** Assembler-språk
+- **1957** Fortran
+- **1958** LISP
+- **1962** Simula
+- **1972** C
+- **1980** C++
+- **1991** Python
+- **1993** R
+- **1995** Java
+- **2000** C\#
+- **2002** Scratch
+
+note:
+For å gjera programmeringa enklare, har me utvikla programmeringsspråk. Andre generasjon programmeringsspråk kom allereie på 1940-talet og er kjent som *assembler*-språk.  Der bruker ein nøyaktig dei same primitive instruksjonane som CPU-en bruker, men ein kan definera variablar og subrutinar.
+
+Ein av dei største nyvinningane i tredje generasjon-språka som kom frå slutten av 1950-talet var å gjera dei uavhengige av prosessorarkitekturen. Ulike mikroprosessorar har ikkje det same instruksjnonssettet, og eit *assembly*-program kan berre brukast på den maskintypen det er skrive for.
+
+Der finst tusenvis av programmeringsspråk, som er meir eller mindre utbreidde, og meir eller mindre egna til ulike oppgåver. Utviklinga handlar i stor grad om å gjera det enklare å handtera komplekse problem og datastrukturar. Fjerde generasjon-språk er gjerne tilpassa spesifikke anvendingsdomene.
+
+Python, som kom i 1991, er eit tredjegenerasjonspråk. Det vert brukt til alle slags oppgåver, men det er særleg populært fordi det gjev tilgang til gode og gratis bibliotek til numerisk analyse, statistikk og maskinlæring. 
+
+Sjølv om me stadig får nye programmeringsspråk treng CPUen stadig den same maskinkoden. Når me skriv eit program i python, bruker me eit anna program, kalt ein *interpreter* eller *tolk*, som les programmet og omset det til maskinkode.  Jupyter Notebook bruker ein sokalla *kernel* til denne tolkejobben, og der finst *kernels* for andre språk en *python*.
+
+---
 
 Ikkje berre det, programmøren må sjå for seg kva som skjer etter lange seriar med kommandoar, for kvar kommando avheng av resultatet av dei føregåande. 
 
@@ -114,14 +156,6 @@ Dette er enno tydlegare i dette dømet.  Dei to *print*-linene er identiske, men
 
 ---
 
-
-- [ ] Figur: CPU og register
-	+ https://slideplayer.com/slide/5101082/
-	+ https://programmathically.com/how-does-a-cpu-execute-instructions-understanding-instruction-cycles/
-
-note: Imperativ programmering svarer godt til det som skjer i dei elektroniske krinsane på prosessoren.
-
----
 
 ## Tilstandsmaskina
 
