@@ -125,10 +125,6 @@ Sjølv om me stadig får nye programmeringsspråk treng CPUen stadig den same ma
 
 ---
 
-Ikkje berre det, programmøren må sjå for seg kva som skjer etter lange seriar med kommandoar, for kvar kommando avheng av resultatet av dei føregåande. 
-
----
-
 
 ```python=
 b = 5
@@ -168,3 +164,7 @@ note:
 ---
 ## Vektorprosessorar
 
+
+---
+
+Ikkje berre det, programmøren må sjå for seg kva som skjer etter lange seriar med kommandoar, for kvar kommando avheng av resultatet av dei føregåande. 
