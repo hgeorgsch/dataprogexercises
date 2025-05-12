@@ -20,6 +20,30 @@ Me kaller det for imperativ programmering, fordi me gjev maskina kommandoar, dvs
 
 Maskina tenkjer ikkje. Det er programmøren som står for all tenkinga. Maskina gjer nøyaktig som kommandert, og programmøren må sjå for seg kva kvar kommando fører til.
 
+---
+
+
+```python=
+b = 5
+print(b)
+```
+
+note:
+Imperativen er tydelag når me skriv t.d. *print* i python. Maskina prentar som ho får beskjed om. Den fyrste lina i koden her er òg ein imperativ, som som me lyt lesa som «lat $b$ vera lik 5». 
+
+Dette skapar ei *tilstandsmaskin*, dvs. ei maskin som til i ein bestemt tilstand til ei kvar tid, og denne tilstanden kan endra seg for kvar instruksjon.  Her er det variabelen `b` som utgjer tilstandsrommet. Før line 1 er `b` i ein udefintert tilstand og etterpå er han i tilstanden 5.
+
+---
+
+```python=
+b = 5
+print(b)
+b = 10
+print(b)
+```
+
+note:
+Dette er enno tydlegare i dette dømet.  Dei to *print*-linene er identiske, men dei gjev ikkje same resultat, fordi *tilstaden* åt maskina er forskjellig. Fyrste gongen har `b` tilstanden 5, og *print* skriv ut 5. Andre gongen er tilstanden 10, og det er 10 som vert skrive ut.
 
 ---
 
@@ -125,39 +149,40 @@ Sjølv om me stadig får nye programmeringsspråk treng CPUen stadig den same ma
 
 ---
 
-
-```python=
-b = 5
-print(b)
 ```
-
-note:
-Imperativen er tydelagst i den andre lina: *print!* men den fyrste setninga er òg ein imperativ, som me lyt lesa som «lat $b$ vera lik 5». 
-
-Dette skapar ei *tilstandsmaskin*, dvs. ei maskin som til i ein bestemt tilstand til ei kvar tid, og denne tilstanden kan endra seg for kvar instruksjon.
-Variabelen `b` var udefinert før line 1. Etter line 1 har han fått ein verdi, og altso ein ny tilstand.
-
----
-
-```python=
-b = 5
-print(b)
-b = 10
-print(b)
+if b > 5:
+   print( "b er stor" )
+   b = 0
+else:
+   print( "b er liten" )
+   b = 10
 ```
-
-note:
-Dette er enno tydlegare i dette dømet.  Dei to *print*-linene er identiske, men dei gjev ikkje same resultat, fordi *tilstaden* åt maskina er forskjellig.
-
+	
+- Kontrollflyt - løkker og if
 
 ---
 
-
-## Tilstandsmaskina
-
-note: 
+```
+s = 0
+i = 0
+while s < 100:
+   s = s + i
+   print( f"{i}: {s}" )
+print( "Ferdig.  Det tok {i} steg." )
+```
+	
+- Kontrollflyt - løkker og if
 
 ---
+
+---
+
+```
+s = 0
+for i in range(16):
+   s = s + i
+   print( f"{i}: {s}" )
+```
 	
 - Kontrollflyt - løkker og if
 
