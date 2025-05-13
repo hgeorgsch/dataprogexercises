@@ -1,3 +1,8 @@
+---
+title: Introduksjon til Simulering
+---
+
+# Introduksjon til Simulering
 
 + *Tutorial*  [[Simulering av kontantstraum]]
 + *Læringsmål*

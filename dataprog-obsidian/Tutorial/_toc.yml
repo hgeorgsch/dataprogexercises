@@ -10,8 +10,8 @@ chapters:
     - file: notebook/Fyrste datasett med CSV
     - file: notebook/Simulering av kontantstraum
     - file: Mappevurdering
-    - file: Førelesingsnotat frå opningssamlinga
-      subsections:
+    - file: Førelesingsnotat frå Opningssamlinga
+      sections:
       - file: Introduksjon til datasett i CSV.md
       - file: Introduksjon til simulering.md
       - file: Python og Jupyter Notebook.md
