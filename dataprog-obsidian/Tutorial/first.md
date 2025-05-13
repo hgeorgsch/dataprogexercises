@@ -2,6 +2,12 @@
 
 ## Øvingstema
 
+Veke 1
+: [Simulering og Kontrollflyt](Simulering01)
+
+Veke 2
+: [Simulering og Datastrukturar](Simulering og Datastrukturar)
+
 + Deskriptiv statistikk og slumptal
     + Gjennomsnitt og standardavvik
     + plot/subplot og eksport av figurar
@@ -15,7 +21,6 @@
 	+ *Demo* regresjon og korrelasjon i pandas
 	+ *Tutorial* regresjon og korrelasjon i eit datasett
 + Kombinasjon (fletting) av datasett
-+ [[Simulering og Datastrukturar]]
 + [[Agent-basert simulering]]
 + *Web API* og JSON 
 + Maskinlæring i scikitlearn

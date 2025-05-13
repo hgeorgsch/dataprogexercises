@@ -16,6 +16,15 @@ chapters:
       - file: Introduksjon til simulering.md
       - file: Python og Jupyter Notebook.md
   - file: first
+    sections:
+    - file: Simulering01
+      sections:
+      - file: Imperativ programmering og maskinarkitektur.md
+      - file: Kontrollflyt i Python.md
+      - file: notebook/Halveringsmetoden.md
+    - file: Simulering02
+      sections:
+      - file: notebook/Simulering og Datastrukturar.md
   - file: midway
   - file: second
   - file: closure
