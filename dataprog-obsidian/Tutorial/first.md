@@ -24,7 +24,7 @@ Veke 3
 + Kombinasjon (fletting) av datasett
 
 Veke 4
-: [[Agent-basert simulering]]
+: [Agent-basert simulering](Agent-basert%20simulering)
 
 Veke 4
 : [WebAPI](WebAPI) og JSON 
