@@ -27,6 +27,8 @@ chapters:
       - file: notebook/Simulering og Datastrukturar.md
     - file: CSV og Deskriptiv Statistikk.md
     - file: Agent-basert simulering.md
+      sections:
+      - file: notebook/Shrimp-Game
     - file: WebAPI
     - file: Statistikk og Maskinlæring.md
 _toc.yml

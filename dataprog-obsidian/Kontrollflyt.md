@@ -2,6 +2,7 @@
 tags:
   - programming-elementals
 ---
+
 + [[If-else-while-JH]]
 + [[Simulering med While]]
 	+ [[Bolske uttrykk]]
