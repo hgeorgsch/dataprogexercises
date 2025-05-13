@@ -1,9 +1,12 @@
 ---
+title: CSV og Deskriptiv Statistikk
 tags:
   - session
   - statistics
   - csv
 ---
+
+# CSV og Deskriptiv Statistikk
 
 + **Læringsmål**
 	+ Kunna finna, lasta ned og bruka filer frå ulike kjelder 

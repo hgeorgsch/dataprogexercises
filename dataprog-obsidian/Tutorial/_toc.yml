@@ -31,7 +31,6 @@ chapters:
       - file: notebook/Shrimp-Game
     - file: WebAPI
     - file: Statistikk og Maskinlæring.md
-_toc.yml
   - file: midway
   - file: second
   - file: closure
