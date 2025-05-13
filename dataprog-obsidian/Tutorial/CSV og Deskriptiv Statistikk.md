@@ -26,6 +26,14 @@ tags:
 	+ [[Arbeidsledige]] : Latin 1, combination of datasets
 	+ [[Eksportdata]] requires extensive pre-processing to extract comparrable data
 
++ Deskriptiv statistikk 
+    + Gjennomsnitt og standardavvik
+    + plot/subplot og eksport av figurar
+    + ulike plot: histogram/scatter/kakediagram
+    + Simulering av ein utvalsstudie
++ Maskinlæring i scikitlearn
++ Kombinasjon (fletting) av datasett
+
 + Grunnleggjande pandas
 	+ index
 	+ søyler og radar
