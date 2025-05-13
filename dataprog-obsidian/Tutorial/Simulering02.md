@@ -10,6 +10,8 @@ author: Hans Georg Schaathun
 + Byggjer på  [[Simulering av kontantstraum]] og [[Tutorial/Simulering01|Simulering01]]
 + *Oversiktsføredrag* 
 	+ [Tilfeldigheit](Tilfeldigheit)
+		+ Simulering av terningar ?
+		+ pseudo-tilfeldige tal ?
 	+ [Datastrukturar og Kompleksitet](Datastrukturar%20og%20Kompleksitet)
 + *Tekniske demonstrasjonar*
 	+ [Datastrukturer](Datastrukturer)
