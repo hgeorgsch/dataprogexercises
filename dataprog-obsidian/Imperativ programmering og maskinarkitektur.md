@@ -13,7 +13,7 @@ Me skal prata litt om korleis datamaskina konseptuelt sett verkar. Målet er lit
 
 ![[command.webp|600]]
 
-- [ ] Figur: Linsens på *clipart*
+- [ ] Figur: Lisens på *clipart*
 
 note:
 Me kaller det for imperativ programmering, fordi me gjev maskina kommandoar, dvs. setningar i grammatisk imperativ.  
@@ -151,7 +151,7 @@ Sjølv om me stadig får nye programmeringsspråk treng CPUen stadig den same ma
 
 <!-- slide bg="white" -->
 
-![[state.svg]]
+![[state.svg|900]]
 
 
 note:

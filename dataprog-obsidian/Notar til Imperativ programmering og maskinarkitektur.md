@@ -1,4 +1,7 @@
 
+
+## Gamle skisser og idéar
+
 + Sjå òg [[Imperativ programmering og maskinarkitektur]]
 
 - Figur: CPU og register
