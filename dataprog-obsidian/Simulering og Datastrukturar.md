@@ -8,12 +8,12 @@ tags:
 + Byggjer på  [[Simulering av kontantstraum]]
 + *Oversiktsføredrag* 
 	+ [[Tilfeldigheit]]
-	+ [[Imperativ programmering og maskinarkitektur]]
+	+ [[Datastrukturar og Kompleksitet]]
 + *Tekniske demonstrasjonar*
 	+ [[Kontrollflyt]]
 	+ [[Datastrukturer]]
 + *Øvingar.*
-	+ CodeRunner 1 og 2 frå 2024.
+	+ [[CodeRunner Data Structures]]
 	+ [[Marknadssimulering]]
 
 

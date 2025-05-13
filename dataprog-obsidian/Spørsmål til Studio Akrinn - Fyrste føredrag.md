@@ -1,3 +1,9 @@
+---
+tags:
+  - development/questions
+  - studio-akrinn
+---
+
 
 + Utkast til fyrste føredragsvideo [[Imperativ programmering og maskinarkitektur]]
 	+ Fyrst tenkt som eitt føredrag på 15 min, men vert truleg best som to på rundt sju.

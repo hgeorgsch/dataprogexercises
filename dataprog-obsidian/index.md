@@ -43,7 +43,6 @@ grunnteknikkane og gjev breidd saman med simuleringa.
 Resten av materialet er ikkje sortert i vekesblokkar
 
 + Perspektivføredrag
-	+ [[Likskap og tilordning]]
 	+ [[Køyretid og Kompleksitet]] (periode 2)
 	+ [[Mappetips og persondata.pdf]]  (periode 2)
 + Oppgåver til mappa
@@ -67,3 +66,6 @@ Resten av materialet er ikkje sortert i vekesblokkar
 ## Nedprioritert stoff
 
 + [[Help-funksjonen]]
++ [[Likskap og tilordning]]
+	+ inngår i [[Imperativ programmering og maskinarkitektur]]
+	+ neppe fornuftig å problematisera det meir i dette kurset
