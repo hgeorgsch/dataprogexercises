@@ -1,4 +1,5 @@
 ---
+title: Marknadssimulering
 jupytext:
   text_representation:
     extension: .md
@@ -11,9 +12,11 @@ kernelspec:
   name: python3
 ---
 
+# Marknadssimulering
+
 *Dette kjem frå veke 37 hausten 2024*
 
-# Oppgave 5.1: Varer på salg
+## Oppgave 5.1: Varer på salg
 
 Vi ønsker å undersøke hvordan det å sette varer på tilbud påvirker salg og omsetning
 
@@ -149,7 +152,8 @@ plt.show()
         
 ```
 
-# Oppgave 5.2: Simulere markedsdynamikk
+## Oppgave 5.2: Simulere markedsdynamikk
+
 1. Set opp en markedsmodell for et gode:
  
 * Tilbud: $Q_s = a - bP+\epsilon_s$
