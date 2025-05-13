@@ -18,3 +18,6 @@ tags:
 pip install --user ipykernel
 python -m ipykernel install --user --name=myenv
 ```
+
++ [[Fyrste test med Ollama]]
++ ]
