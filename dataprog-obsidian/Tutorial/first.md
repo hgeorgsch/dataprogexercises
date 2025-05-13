@@ -6,7 +6,7 @@ Veke 1
 : [Simulering og Kontrollflyt](Simulering01)
 
 Veke 2
-: [Simulering og Datastrukturar](Simulering og Datastrukturar)
+: [Simulering og Datastrukturar](Simulering02)
 
 + Slumptal ?
 	+ Simulering av terningar
