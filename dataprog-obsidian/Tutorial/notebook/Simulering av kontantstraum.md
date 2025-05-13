@@ -12,9 +12,9 @@ jupytext:
   formats: md:myst
   root_level_metadata_filter: -title,-author,-tags
 kernelspec:
-  display_name: cosmoai
+  display_name: dataprog
   language: python
-  name: cosmoai
+  name: dataprog
 ---
 
 
