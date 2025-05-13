@@ -23,7 +23,7 @@ Maskina tenkjer ikkje. Det er programmøren som står for all tenkinga. Maskina 
 ---
 
 
-```python=
+```python
 b = 5
 print(b)
 ```
@@ -35,7 +35,7 @@ Dette skapar ei *tilstandsmaskin*, dvs. ei maskin som til i ein bestemt tilstand
 
 ---
 
-```python=
+```python
 b = 5
 print(b)
 b = 10

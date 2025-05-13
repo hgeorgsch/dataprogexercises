@@ -3,19 +3,6 @@ tags:
   - simulering
   - session
 ---
-*Me må sikkert dela denne i to*
-
-+ Byggjer på  [[Simulering av kontantstraum]]
-+ *Oversiktsføredrag* 
-	+ [[Tilfeldigheit]]
-	+ [[Datastrukturar og Kompleksitet]]
-+ *Tekniske demonstrasjonar*
-	+ [[Kontrollflyt]]
-	+ [[Datastrukturer]]
-+ *Øvingar.*
-	+ [[CodeRunner Data Structures]]
-	+ [[Marknadssimulering]]
-
 
 # Døme: handlande kundar
 
