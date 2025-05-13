@@ -11,3 +11,4 @@ res/
 .obsidian
 *.log
 pythonenv
+export

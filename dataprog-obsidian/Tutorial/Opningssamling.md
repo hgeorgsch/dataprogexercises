@@ -25,19 +25,22 @@ annan grunn ikkje får gjort dette på førehand.
     for dei som ikkje er ferdig med det på førehand.
 + 11.30-12.15: Lønsjpause
 + 12.15-12.30: Velkommen.  [Praktisk informasjon](../intro).
-+ 12.30-13.00: Presentasjon av Økt 1.  [[Python og Jupyter Notebook]]
++ 12.30-13.00: Presentasjon av Økt 1.  
+  [Python og Jupyter Notebook](Python%20og%20Jupyter%20Notebook)
 + 13.00-13.20: Presentasjon av deltakarane 
 + 13.30-15.30: Økt 1. [Introduksjon til Jupyter Notebook](notebook/Introduksjon%20til%20Jupyter%20Notebook)
 + 15.30-16.30: Debrief                     
 
 ## Dag 2
 
-+ 9.00-9.30: Presentasjon av Økt 2.   [[Introduksjon til datasett i CSV]]
++ 9.00-9.30: Presentasjon av Økt 2.
+     [Introduksjon til datasett i CSV](Introduksjon%20til%20datasett%20i%20CSV)
     + Nedlasting og organisering av filer
     + pandas og CSV
 + 9.30-11.30: Økt 2.  [Fyrste datasett med CSV](notebook/Fyrste%20datasett%20med%20CSV)
 + 11.30-12.30 Lønsj
-+ 12.30-13.00: Presentasjon av Økt 3.  [[Introduksjon til simulering]]
++ 12.30-13.00: Presentasjon av Økt 3.  
+  [Introduksjon til simulering](Introduksjon%20til%20simulering)
 + 13.00-14.30: Økt 3.  [Simulering av kontantstraum](notebook/Simulering%20av%20kontantstraum) 
 + 14.30-15.30: [Seminar om motivasjon og ynskjer](Seminar om motivasjon og ynskjer)
 + 14.00-15.00: Debrief og opplegg vidare.
