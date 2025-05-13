@@ -395,6 +395,8 @@ def g():
    print ( f"b={b}" )
 
 print ( f"b={b}" )
+g()
+print ( f"b={b}" )
 ```
 
 note:
