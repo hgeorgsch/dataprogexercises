@@ -1,4 +1,5 @@
 ---
+title: Slumptal
 tags:
   - lecture/video
 ---
