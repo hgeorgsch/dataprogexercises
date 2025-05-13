@@ -12,7 +12,7 @@ Veke 3
 : [CSV og Deskriptiv Statistikk](CSV%20og%20Deskriptiv%20Statistikk)
 
 Veke 4
-: [[Agent-basert simulering]]
+: [Agent-basert simulering](Agent-basert%20simulering)
 
 Veke 4
 : [WebAPI](WebAPI) og JSON 
