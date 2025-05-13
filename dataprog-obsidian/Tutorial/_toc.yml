@@ -25,6 +25,11 @@ chapters:
     - file: Simulering02
       sections:
       - file: notebook/Simulering og Datastrukturar.md
+    - file: CSV og Deskriptiv Statistikk.md
+    - file: Agent-basert simulering.md
+    - file: WebAPI
+    - file: Statistikk og Maskinlæring.md
+_toc.yml
   - file: midway
   - file: second
   - file: closure
