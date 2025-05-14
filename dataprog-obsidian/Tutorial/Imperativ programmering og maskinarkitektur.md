@@ -13,9 +13,12 @@ Me skal prata litt om korleis datamaskina konseptuelt sett verkar. Målet er lit
 
 ![[command-DALLE.webp]]
 
+![[export/Imperativ programmering og maskinarkitektur/assets/command.webp]]
+
 - [x] Figur: Lisens på *clipart* ✅ 2025-05-14
 - [x] Kan genere med feks DALL-E (command-DALLE.webp, command-DALLE-alt.webp) ✅ 2025-05-14
 - [ ] Kan DALL-E o.l ta imot et fargekart vi bruker i digital profil / brand?
+- [ ] Inkluder grafikk frå DALL-E
 
 note:
 Me kaller det for imperativ programmering, fordi me gjev maskina kommandoar, dvs. setningar i grammatisk imperativ.  
@@ -33,9 +36,10 @@ print(b)
 note:
 Imperativen er tydelag når me skriv t.d. *print* i python. Maskina prentar som ho får beskjed om. Den fyrste lina i koden her er òg ein imperativ, som som me lyt lesa som «lat $b$ vera lik 5». 
 
-Dette skapar ei *tilstandsmaskin*, dvs. ei maskin som til i ein bestemt tilstand til ei kvar tid, og denne tilstanden kan endra seg for kvar instruksjon.  Her er det variabelen `b` som utgjer tilstandsrommet. Før line 1 er `b` i ein udefintert tilstand og etterpå er han i tilstanden 5.
+Eit kritisk kjenneteikn i imperativ programmering er *tilstand* . Tilordning `b=5` endrar tilstand på maskina. Før line 1 er `b`uderfinert, når me kjem til line 2 har `b` ein verdi, 5, og altso ein annan tilstand. Resultatet av *print* i line 2 avheng heilt openbert av kva tilstand maskina har.
 
-- [ ] Her skulle det kanskje vært en slide om hva vi mener med en tilstandsmaskin før det ses på mer ved turingmaskina?
+- [x] Her skulle det kanskje vært en slide om hva vi mener med en tilstandsmaskin før det ses på mer ved turingmaskina? ✅ 2025-05-14
+
 ---
 
 ```python
@@ -114,9 +118,11 @@ Papirremsa er vorte til *Random Access Memory*, eller RAM. *Random Access* tyder
 
 Sjølve prosesseringseininga er vorten meir kompleks. Kontrolleininga held styr på programmet og kva instruksjon den logiske og aritmetiske eininga skal utføra neste gong.  Tilstanden er ikkje lenger éin atomær verdi, men fleire register der kvart register inneheld ein verdi.
 
-Instruksjonane er typisk enkle aritmetiske og logiske operasjonar, som pluss, minus, og, og eller, samt instruksjonar for å hoppa i programmet eller lesa og skriva til minnet eller til eksterne einingar som skjerm og tastatur.
+Instruksjonane er typisk enkle aritmetiske og logiske operasjonar, som pluss, minus, og, og eller, samt instruksjonar for å hoppa i programmet eller lesa og skriva til minnet.
 
-- [ ] Kanskje noen ord om hva input/output device er
+I tillegg er maskina kobla til det me gjerne kaller *perifere einingar*, eller *input/output devices* i figuren. Det omfatter skjerm, for *output*, og tastatur for *input*, men kan òg vera nettverksgrensesnitt eller harddisk. Du la kanskje merke til at turingmaskina ikkje hadde nokon mekanisme for å kommunisera med omverda. I praksis må den logiske eininga ha instruksjonar for å senda og motta data til og frå perifere einingar.
+
+- [x] Kanskje noen ord om hva input/output device er ✅ 2025-05-14
 
 ---
 
