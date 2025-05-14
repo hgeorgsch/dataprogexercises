@@ -25,20 +25,25 @@ title: Utkast til læringsmateriale i data og programmering
 	+ Del 2.  Store datasett
 	+ [[Mappe Del 2 Haust 2024]]
 
-**Forslag** Fem blokkar til Periode 1.  Den fyrste blokken er overfull, og må delast opp.
-Me lyt finna eit tema og ei kotekstuell oppgåve som motiverer nokre av desse
-grunnteknikkane og gjev breidd saman med simuleringa.
++ **Periode 1** Forslag vert utarbeidd Jupyter Books:  [[Tutorial/first|first]]
+
++ **Notar til Periode 1**
+	+ *Føredrag* [[Numeriske Metodar og Kontrollflyt]]
+		+ [[Imperativ programmering og maskinarkitektur]]
+			+ Dette vert truleg to føredrag, eitt historisk perspektiv og eitt om python-syntaks
+			+ [[Notar til Imperativ programmering og maskinarkitektur]]
+			+ [[Spørsmål til Studio Akrinn - Fyrste føredrag]]
 
 + [x] Er det for mykje konseptuelt materiale og oversiktsførelesing?  📅 2025-05-07  @completed(2025-05-08T11:08:59+02:00)
 
-| Blokk                                | Perspektiv                                                                 | Teknisk (Howto)                                                                 | Oppgåve                                                                               |
-| :----------------------------------- | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| [[Numeriske Metodar og Kontrollflyt]] | [[Imperativ programmering og maskinarkitektur]]  [[Kontrollflyt i Python]] | [[Kontrollflyt]]                                                                | [[Folkevekst]] ; [[Halveringsmetoden]]; [[CodeRunner Basic]] ; [[CodeRunner Control]] |
-| [[Simulering og Datastrukturar]]     | [[Tilfeldigheit]] [[Datastrukturar og Kompleksitet]]                       | [[Datastrukturer]]                                                              | [[Marknadssimulering]]; [[CodeRunner Data Structures]]                                |
-| [[CSV og Deskriptiv Statistikk]]     | [[Filhandtering]], [[Konseptuell forståing av  pandas]]                    | [[Filkonvertering og -import]]; [[Plot i pandas]]; [[Gjennomsnitt og spreding]] |                                                                                       |
-| [[Agent-basert simulering]]          | [[Mentale og matematiske modellar]]                                        | [[Klasser-Objekter]]                                                            | [[Shrimp-Game]]; [[Iskrem på ei strand]]                                              |
-| [[WebAPI]]                           | [[Web - Protokollar og API]]                                               | [[WebAPI og JSON]]                                                              |                                                                                       |
-| [[Statistikk og Maskinlæring]]       | [[Om å læra frå data]]                                                     | [[Maskinlæringsbibliotek]]                                                      |                                                                                       |
+| Blokk                                 | Perspektiv                                                                 | Teknisk (Howto)                                                                 | Oppgåve                                                                                  |
+| :------------------------------------ | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| [[Numeriske Metodar og Kontrollflyt]] | [[Imperativ programmering og maskinarkitektur]]  [[Kontrollflyt i Python]] | [[Kontrollflyt]]                                                                | [[Folkevekst]] ; [[Halveringsmetoden]]; [[CodeRunner Basic]] ; [[CodeRunner Control]]    |
+| [[Simulering02]]                      | [[Tilfeldigheit]] [[Datastrukturar og Kompleksitet]]                       | [[Datastrukturer]]                                                              | [[Marknadssimulering]]; [[Simulering og Datastrukturar]]; [[CodeRunner Data Structures]] |
+| [[CSV og Deskriptiv Statistikk]]      | [[Filhandtering]], [[Konseptuell forståing av  pandas]]                    | [[Filkonvertering og -import]]; [[Plot i pandas]]; [[Gjennomsnitt og spreding]] |                                                                                          |
+| [[Agent-basert simulering]]           | [[Mentale og matematiske modellar]]                                        | [[Klasser-Objekter]]                                                            | [[Shrimp-Game]]; [[Iskrem på ei strand]]                                                 |
+| [[WebAPI]]                            | [[Web - Protokollar og API]]                                               | [[WebAPI og JSON]]                                                              |                                                                                          |
+| [[Statistikk og Maskinlæring]]        | [[Om å læra frå data]]                                                     | [[Maskinlæringsbibliotek]]                                                      |                                                                                          |
 
 Resten av materialet er ikkje sortert i vekesblokkar
 

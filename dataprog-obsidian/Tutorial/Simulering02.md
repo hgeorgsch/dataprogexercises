@@ -7,7 +7,7 @@ author: Hans Georg Schaathun
 # Veke 2. Simulering og Datastrukturar
 
 
-+ Byggjer på  [[Simulering av kontantstraum]] og [[Tutorial/Simulering01|Simulering01]]
++ Byggjer på  [[Simulering av kontantstraum]] og [[Numeriske Metodar og Kontrollflyt]]
 + *Oversiktsføredrag* 
 	+ [Tilfeldigheit](Tilfeldigheit)
 		+ Simulering av terningar ?

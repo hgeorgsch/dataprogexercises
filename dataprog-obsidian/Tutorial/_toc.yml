@@ -17,7 +17,7 @@ chapters:
       - file: Python og Jupyter Notebook.md
   - file: first
     sections:
-    - file: Simulering01
+    - file: Numeriske Metodar og Kontrollflyt.md
       sections:
       - file: Imperativ programmering og maskinarkitektur.md
       - file: Kontrollflyt i Python.md
