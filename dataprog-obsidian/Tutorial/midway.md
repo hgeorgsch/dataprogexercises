@@ -1,7 +1,7 @@
 # Midtvegssamling
 
 Programmet for midtvegssamlinga vert lagt etter at kurset
-har starta, basert på tilbakemeldingar og behov
+har starta, basert på tilbakemeldingar og behov.
 
 + **Mål for samlinga**
 	+ oppsummera fyrste periode
