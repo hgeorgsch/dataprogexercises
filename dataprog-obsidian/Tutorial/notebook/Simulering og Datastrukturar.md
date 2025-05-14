@@ -1,7 +1,8 @@
 ---
 tags:
   - simulering
-  - session
+  - exercise
+  - data-structures
 ---
 
 # Døme: handlande kundar

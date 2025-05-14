@@ -3,7 +3,7 @@
 ## Øvingstema
 
 Veke 1
-: [Simulering og Kontrollflyt](Simulering01)
+: [Simulering og Kontrollflyt](Numeriske%20Metodar%20og%20Kontrollflyt.md)
 
 Veke 2
 : [Simulering og Datastrukturar](Simulering02)
