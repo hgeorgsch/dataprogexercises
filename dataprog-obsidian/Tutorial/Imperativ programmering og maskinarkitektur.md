@@ -11,9 +11,11 @@ Me skal prata litt om korleis datamaskina konseptuelt sett verkar. Målet er lit
 
 ---
 
-![[command.webp|600]]
+![[command-DALLE.webp]]
 
-- [ ] Figur: Lisens på *clipart*
+- [x] Figur: Lisens på *clipart* ✅ 2025-05-14
+- [x] Kan genere med feks DALL-E (command-DALLE.webp, command-DALLE-alt.webp) ✅ 2025-05-14
+- [ ] Kan DALL-E o.l ta imot et fargekart vi bruker i digital profil / brand?
 
 note:
 Me kaller det for imperativ programmering, fordi me gjev maskina kommandoar, dvs. setningar i grammatisk imperativ.  
@@ -33,6 +35,7 @@ Imperativen er tydelag når me skriv t.d. *print* i python. Maskina prentar som 
 
 Dette skapar ei *tilstandsmaskin*, dvs. ei maskin som til i ein bestemt tilstand til ei kvar tid, og denne tilstanden kan endra seg for kvar instruksjon.  Her er det variabelen `b` som utgjer tilstandsrommet. Før line 1 er `b` i ein udefintert tilstand og etterpå er han i tilstanden 5.
 
+- [ ] Her skulle det kanskje vært en slide om hva vi mener med en tilstandsmaskin før det ses på mer ved turingmaskina?
 ---
 
 ```python
@@ -112,6 +115,8 @@ Papirremsa er vorte til *Random Access Memory*, eller RAM. *Random Access* tyder
 Sjølve prosesseringseininga er vorten meir kompleks. Kontrolleininga held styr på programmet og kva instruksjon den logiske og aritmetiske eininga skal utføra neste gong.  Tilstanden er ikkje lenger éin atomær verdi, men fleire register der kvart register inneheld ein verdi.
 
 Instruksjonane er typisk enkle aritmetiske og logiske operasjonar, som pluss, minus, og, og eller, samt instruksjonar for å hoppa i programmet eller lesa og skriva til minnet eller til eksterne einingar som skjerm og tastatur.
+
+- [ ] Kanskje noen ord om hva input/output device er
 
 ---
 
