@@ -6,7 +6,9 @@ tags:
 # Agent-basert simulering
 
 
-+ *Oversiktsførelesing*:  Objektorientert modellering og programmering 
++ *Oversiktsførelesing*:
+	+ Objektorientert modellering og programmering 
+	+  [[Mentale og matematiske modellar]]  
 + *Demovideo*: [Klasser-Objekter](Klasser-Objekter) i python
 + *Demovideo*: Programmering i `.py`-filer
 + *Demovideo*: git og github?

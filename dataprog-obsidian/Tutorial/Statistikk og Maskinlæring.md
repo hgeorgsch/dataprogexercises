@@ -4,11 +4,10 @@ tags:
 title: Statistikk og Maskinlæring
 ---
 
-# Statistikk og Maskinlæring
+# Frå Statistikk til Maskinlæring
 
-+ Frå statistikk til maskinlæring
-	+ *Føredrag* [[Om å læra frå data]]
-	+ *Demo* regresjon og korrelasjon i pandas
-	+ *Tutorial* regresjon og korrelasjon i eit datasett
-+ [[Maskinlæring]]  (2024)
-
++ *Føredrag* [[Om å læra frå data]]
++ *Demo* regresjon og korrelasjon i pandas: [[Maskinlæringsbibliotek]]
++ *Tutorial* regresjon og korrelasjon i eit datasett
++ Notat og idéar
+	+ [[Maskinlæring]]  (2024)

@@ -1,8 +1,21 @@
+---
+tags:
+  - lecture/video/perspective
+---
 
 
 + Florence Nightingale
-+ Fishcher
-+ Lineær regresjon
-+ Klassifiseringsproblem
++ Utviklinga av statistikk i samfunnsvitskapane
+	+ Andre halvdel av 1800-talet
+	+ Lineær regresjon
+	+ Byggjer på regresjon i astronomi frå starten av 1800-talet
+	+ Ny forståing av usikkerheit
++ Fisher i mellomkrigstida
+	+ Klassifiseringsproblem
++ Shannons Informasjonsteori på 1940- og 50-talet
++ Bruksområde
+	+ Demografi
+	+ Val- og meiningsmålingar
+	+ Klinisk testing
 + Maskinlæring som sannsynsmodell
-+ Evaluering av maskinlæringsmodellar
+	+ Evaluering av maskinlæringsmodellar

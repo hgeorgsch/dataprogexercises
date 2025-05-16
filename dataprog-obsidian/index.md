@@ -26,28 +26,21 @@ title: Utkast til læringsmateriale i data og programmering
 	+ [[Mappe Del 2 Haust 2024]]
 
 + **Periode 1** Forslag vert utarbeidd Jupyter Books:  [[Tutorial/first|first]]
-
-+ **Notar til Periode 1**
-	+ *Føredrag* [[Numeriske Metodar og Kontrollflyt]]
-		+ [[Imperativ programmering og maskinarkitektur]]
-			+ Dette vert truleg to føredrag, eitt historisk perspektiv og eitt om python-syntaks
+1. [[Numeriske Metodar og Kontrollflyt]] 
+		+ Notar til [[Imperativ programmering og maskinarkitektur]]
 			+ [[Notar til Imperativ programmering og maskinarkitektur]]
 			+ [[Spørsmål til Studio Akrinn - Fyrste føredrag]]
+		+ Notar til [[Kontrollflyt i Python]]
+			+ Vis i Python Tutor e.l.
+				+ Fire vindauga (minimum): Kode - Utdata - Global tilstand - Lokal tilstand
+2. [[Simulering02]]                      
+3. [[CSV og Deskriptiv Statistikk]]
+4. [[Agent-basert simulering]]
+5. [[WebAPI]] 
+6. [[Statistikk og Maskinlæring]]     
 
-+ [x] Er det for mykje konseptuelt materiale og oversiktsførelesing?  📅 2025-05-07  @completed(2025-05-08T11:08:59+02:00)
 
-| Blokk                                 | Perspektiv                                                                 | Teknisk (Howto)                                                                 | Oppgåve                                                                                  |
-| :------------------------------------ | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| [[Numeriske Metodar og Kontrollflyt]] | [[Imperativ programmering og maskinarkitektur]]  [[Kontrollflyt i Python]] | [[Kontrollflyt]]                                                                | [[Folkevekst]] ; [[Halveringsmetoden]]; [[CodeRunner Basic]] ; [[CodeRunner Control]]    |
-| [[Simulering02]]                      | [[Tilfeldigheit]] [[Datastrukturar og Kompleksitet]]                       | [[Datastrukturer]]                                                              | [[Marknadssimulering]]; [[Simulering og Datastrukturar]]; [[CodeRunner Data Structures]] |
-| [[CSV og Deskriptiv Statistikk]]      | [[Filhandtering]], [[Konseptuell forståing av  pandas]]                    | [[Filkonvertering og -import]]; [[Plot i pandas]]; [[Gjennomsnitt og spreding]] |                                                                                          |
-| [[Agent-basert simulering]]           | [[Mentale og matematiske modellar]]                                        | [[Klasser-Objekter]]                                                            | [[Shrimp-Game]]; [[Iskrem på ei strand]]                                                 |
-| [[WebAPI]]                            | [[Web - Protokollar og API]]                                               | [[WebAPI og JSON]]                                                              |                                                                                          |
-| [[Statistikk og Maskinlæring]]        | [[Om å læra frå data]]                                                     | [[Maskinlæringsbibliotek]]                                                      |                                                                                          |
-
-Resten av materialet er ikkje sortert i vekesblokkar
-
-+ Perspektivføredrag
++ Perspektivføredrag til **Periode 2**
 	+ [[Køyretid og Kompleksitet]] (periode 2)
 	+ [[Mappetips og persondata.pdf]]  (periode 2)
 + Oppgåver til mappa
