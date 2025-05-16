@@ -13,9 +13,12 @@ tags:
 		+ kunna kjenna igjen og byta teiknkoding
 		+ kjenna ulike filformat og dialektar av CSV
 	+ Kunna bruka pandas til deskriptiv statistikk og plotting
-
 + *Oversiktsførelesing*  [[Filhandtering]]
 + *Oversiktsførelesing*  [[Konseptuell forståing av  pandas]]  veke 40-41/2024
++ *Demovideo*
+	+  [[Filkonvertering og -import]]
+	+ [[Plot i pandas]]]
+	+  [[Gjennomsnitt og spreding]] 
 + Step 1.  Pandas
 	+ Step 1a.  Extracting Series and making plots.
 	+ Step 1b.  Mean and standard deviation 
