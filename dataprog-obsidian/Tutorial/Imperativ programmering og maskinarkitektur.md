@@ -54,17 +54,21 @@ Tilstanden vert enno tydlegare i dette dømet.  Dei to *print*-linene er identis
 
 ---
 
-<split even>
-::: block
-![[Alan_Turing_(1951).jpg|400]]
+<!-- slide template="[[tpl-twocolumn]]" -->
 
+::: leftimage
+![[Alan_Turing_(1951).jpg|400]]
+:::
+
+::: leftcredit
 Alan Turing 1951 ([by Elliott & Fry](https://www.computerhistory.org/timeline/1949/) Public Domain)
 :::
 
-
-::: block
+::: rightimage
 ![[Alonzo_Church.jpg|400]]
+:::
 
+::: rightcredit
 Alonzo Church
 ([By Princeton University, Fair use](https://en.wikipedia.org/w/index.php?curid=6082269))
 :::
@@ -78,11 +82,16 @@ Turingmaskina er den mest kjende modellen, og den som ligg til grunn for imperat
 Båe modellane var abstrakte matematiske konsept, men det er Turing sin modell som best svarer til dei elektroniske maskinene som ein tok til å byggja utover 1940-talet.  Imperativ programmering er stadig det dominerande tankesettet, og difor det som me vil bruka tid på her.
 
 ---
+
+<!-- slide template="[[tpl-quote]]" -->
+
 ## Turingmaskina
 
-![[Turing_Machine_Model_Davey_2012.jpg|600]]
+![[Turing_Machine_Model_Davey_2012.jpg]]
 
+::: credit
 Turing Machine, reconstructed by Mike Davey as seen at Go Ask ALICE at Harvard University ([Rocky Acosta](https://commons.wikimedia.org/wiki/User:Arttechlaw "User:Arttechlaw") - Own work)
+:::
 
 note: 
 Turingmaskina er som sagt ein abstrakt og matematisk modell. Biletet viser ein rekonstruert modell. 
@@ -93,9 +102,11 @@ Turingmaskina er ei *tilstandsmaskin*.  Dvs. til ei kvar tid er maskina i ei bes
 
 ---
 
-<!-- slide bg="white" -->
+<!-- slide template="[[tpl-diagram]]" -->
 
-![[turinginstruction.svg|600]]
+![[turinginstruction.svg]]
+::: credit
+:::
 
 note:
 På kvart tidssteg ser maskina tilstanden sin og eitt teikn på bandet. Dette avgjer både den nye tilstanden og kva teikn som vert skrive til bandet. I tillegg kan bandet flytta eit steg til høgre eller venstre. Turingmaskina har ein fast oppslagstabell, som gjev resultatet for ein gjeven tilstand og eit gjeve teikn på bandet. Same tilstand og teikn gjev *alltid* same resultat.
@@ -106,10 +117,14 @@ Alt me treng er eit minne som me kan bla igjennom og ein operasjon som verkar p�
 
 ---
 
-<!-- slide bg="white" -->
-## von Neumann-arkitekturen
+<!-- slide template="[[tpl-diagram]]" -->
+
+**von Neumann-arkitekturen**
 
 ![[neumann.svg|1200]]
+
+::: credit
+:::
 
 note:
 Desse elementa kjenner me igjen i  John von Neumann sin arkitektur frå 1945, som har vorte førande for den praktiske konstruksjonen av datamaskiner.
@@ -126,9 +141,13 @@ I tillegg er maskina kobla til det me gjerne kaller *perifere einingar*, eller *
 
 ---
 
+<!-- slide template="[[tpl-quote]]" -->
+
 ![[Classic_shot_of_the_ENIAC.jpg]]
 
+::: credit
 [By Unidentified U.S. Army photographer](https://commons.wikimedia.org/w/index.php?curid=978770) Public Domain 
+:::
 
 note:
 Dei fyrste programmørane måtte koda programmet nøyaktig som prosessoren les det, ikkje som nullar og einarar, men som elektrisitet som er anten av eller på, ved hjelp av brytarar og koblingsbrett. Biletet viser ENIAC som er rekna som den fyrste generelle, programmerbare, elektroniske datamaskina, og som kom i drift i 1945.
@@ -162,7 +181,12 @@ Sjølv om me stadig får nye programmeringsspråk treng CPUen stadig den same ma
 
 <!-- slide bg="white" -->
 
+<!-- slide template="[[tpl-diagram]]" -->
+
 ![[state.svg|900]]
+
+::: credit
+:::
 
 
 note:
