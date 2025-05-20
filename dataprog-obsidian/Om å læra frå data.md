@@ -279,50 +279,52 @@ sannsynlege responsen.
 ---
 
 # Sannsynleg $\neq$ Sann
+
 note:
-        p.
-           Det er difor ChatGPT finn opp so mykje misinformasjon.
-           Sannsynleg har ingenting med sann å gjera.
+Det er difor ChatGPT finn opp so mykje misinformasjon.
+Sannsynleg har ingenting med sann å gjera.
 
         
 ---
 
 # Semantikk versus Syntaks
+
 note:
-        p.
-           Der finst andre typar kunstig intelligens som jobbar med semantikk
-           der maskinlæring og ChatGPT berre handlar om syntaks.
-           Mellom anna har me hatt automatiske provmaskiner i fleire tiår.
-           Dei arbeider med logiske proposisjonar og kan gjennomføra 
-           logisk deduksjon.
-           Dette kan ein kombinera med semantiske teknologiar som ikkje berre
-           identifiserer ord med konsept men ogso relasjonar mellom konsept.
-        p.
-           For byggja ein meir sannferdig ChatGPT må ein kanskje finna måtar
-           å kombinera maskinlæring med semantiske teknologiar.
+Der finst andre typar kunstig intelligens som jobbar med semantikk
+der maskinlæring og ChatGPT berre handlar om syntaks.
+Mellom anna har me hatt automatiske provmaskiner i fleire tiår.
+Dei arbeider med logiske proposisjonar og kan gjennomføra 
+logisk deduksjon.
+Dette kan ein kombinera med semantiske teknologiar som ikkje berre
+identifiserer ord med konsept men ogso relasjonar mellom konsept.
+
+For byggja ein meir sannferdig ChatGPT må ein kanskje finna måtar
+å kombinera maskinlæring med semantiske teknologiar.
           
 ---
 
 # Representative Data
+
 note:
-       p.
-          Dersom du skal gjera ein meiningsmåling for å vurdera oppslutning
-          om ulike politiske parti, so vil du ikkje vera nøydd med å spørja
-          eit par hundre lærarar som er til stades i dag.
-       p For det fyrste er eit par hundre litt knapt.
-       p.
-          For det andre er ikkje lærarar særleg representative for nasjonen
-          som heilskap.  Industriarbeidarar, lækjarar, lærarar og næringslivsleiarar
-          har ein tendens til ulike meiningar.
-       p.
-          Mange har brukt maskinlæring i tilsetjingsprosessar.
-          Maskina er trent på representative data frå fortida, der den typiske 
-          tilsette har vore ein kvit mann med sivilingeniørutdanning frå Trondheim.
-          Då vil maskina halda fram med å velja kvite menn med 
-          sivilingeniørutdanning frå Trondheim.
-       p.
-          Afrikanske invandrarar, kvinner og musikarar frå Noregs Musikkhøgskule
-          er akkurat like feil so langt som maskina kan sjå frå data.
+
+Dersom du skal gjera ein meiningsmåling for å vurdera oppslutning
+om ulike politiske parti, so vil du ikkje vera nøydd med å spørja
+eit par hundre lærarar som er til stades i dag.
+
+For det fyrste er eit par hundre litt knapt.
+
+For det andre er ikkje lærarar særleg representative for nasjonen
+som heilskap.  Industriarbeidarar, lækjarar, lærarar og næringslivsleiarar
+har ein tendens til ulike meiningar.
+
+Mange har brukt maskinlæring i tilsetjingsprosessar.
+Maskina er trent på representative data frå fortida, der den typiske 
+tilsette har vore ein kvit mann med sivilingeniørutdanning frå Trondheim.
+Då vil maskina halda fram med å velja kvite menn med 
+sivilingeniørutdanning frå Trondheim.
+
+Afrikanske invandrarar, kvinner og musikarar frå Noregs Musikkhøgskule
+er akkurat like feil so langt som maskina kan sjå frå data.
 
 ---
 
@@ -386,3 +388,4 @@ Der finst ikkje empirisk grunnlag for at nyskapinga er positiv.
 	+ Klinisk testing
 + Maskinlæring som sannsynsmodell
 	+ Evaluering av maskinlæringsmodellar
+
