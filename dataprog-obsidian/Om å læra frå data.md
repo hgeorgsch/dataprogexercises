@@ -284,7 +284,6 @@ note:
 Det er difor ChatGPT finn opp so mykje misinformasjon.
 Sannsynleg har ingenting med sann å gjera.
 
-        
 ---
 
 # Semantikk versus Syntaks
