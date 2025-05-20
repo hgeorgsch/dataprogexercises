@@ -121,6 +121,9 @@ def bisect(f,lower,upper):
 print ( bisect(f,-2,2))
 ```
 
+[Lenke til halveringsmetoden grafisk](https://jonajh.folk.ntnu.no/forkurs/halveringsmetoden.html)
+<iframe src=https://jonajh.folk.ntnu.no/forkurs/halveringsmetoden.html width=700 height=500>
+</iframe>
 ### Oppgåve
 
 Finn dei to andre nullpunkta vha. halveringsmetoden.
