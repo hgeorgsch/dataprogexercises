@@ -14,8 +14,8 @@ Me freistar å gje eit par forskjellige innfallsvinklar til kvart tema. Det typi
 Øvingane kjem i fleire formar. Dei to fyrste vekene har me to typar. Nokre er utarbeidde døme av same type som på opningssamlinga. Her er meininga å reflektera over kva som skjer i dømet og testa eigne variasjonar av det. Dei andre øvingane er automatisk retta oppgåver, som er meint å testa nokre av dei mest fundamentale konstruksjonane i python.
 
 + **Perspektiv**
-	+ [Imperativ programmering og maskinarkitektur](Imperativ%20programmering%20og%20maskinarkitektur)
-	+ [Kontrollflyt i Python](Kontrollflyt%20i%20Python)
+	+ [Imperativ programmering og maskinarkitektur](https://iirevu.org.ntnu.no/Imperativ%20programmering%20og%20maskinarkitektur)
+	+ [Kontrollflyt i Python](https://iirevu.org.ntnu.no/Kontrollflyt%20i%20Python)
 + **Demovideo**
 	+ [Kontrollflyt](Kontrollflyt)
 + **Øvingar**

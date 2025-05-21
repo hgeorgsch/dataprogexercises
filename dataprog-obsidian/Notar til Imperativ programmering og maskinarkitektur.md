@@ -1,4 +1,5 @@
 
+- [ ] Kan DALL-E o.l ta imot et fargekart vi bruker i digital profil / brand?
 
 ## Gamle skisser og idéar
 
@@ -14,6 +15,9 @@ note: Imperativ programmering svarer godt til det som skjer i dei elektroniske k
 (frå wikimedia commons)
 ![[Von_Neumann_Architecture.svg|600]]
 
+![[export/Imperativ programmering og maskinarkitektur/assets/command.webp]]
+
+(clipart utan lisens)
 
 ---
 ## Vektorprosessorar
