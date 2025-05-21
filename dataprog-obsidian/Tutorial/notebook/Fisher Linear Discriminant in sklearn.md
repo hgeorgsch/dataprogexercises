@@ -12,7 +12,7 @@ kernelspec:
   name: dataprog
 ---
 
-# Fisher Linear Discriminant
+# Lineær Diskriminant
 
 Klassifisering er eit standardproblem i statistikk og maskinlæring, som dukkar opp i ei lang rekkje praktiske problem.
 
@@ -118,7 +118,7 @@ argumentet er konstruert, og berre bruka det som eit fast mynster.
 ::: {admonition} Refleksjon
 Kva irisart plar ha dei breidaste begerblada? 
 Kva art plar ha dei lengste?
-:::
+:::k
 
 ::: {admonition} Oppgåve
 Plott ulike par av søyler frå datasettet.
@@ -127,10 +127,17 @@ Kva drag er nyttigast for å identifisera kvar irisart?
 
 ## Diskriminant
 
-Løysing åt Fisher er kjend som *Fisher Linear Discriminant*.
+Løysing åt Fisher er kjend som ein *Lineær Disriminant*.
 For å kunna visualisera kva denne diskriminanten gjer, skal
 me freista ei klassifisering basert berre på dei to måla som
 me plotta over, dvs. lengd og breidd på begerblada.
+
+::: {admonition} Merknad
+I dag er der eit par forskjellige formlar for å rekna ut lineære diskriminantar.
+Om du les [dokumentasjonen](https://scikit-learn.org/stable/modules/generated/sklearn.discriminant_analysis.LinearDiscriminantAnalysis.html), 
+vil du sjå at scikit-learn støttar eit par forskjellige metodar. Me skal ikkje gå inn på skilnadene
+eller på kva variant Fisher utvikla i si tid.
+:::
 
 Diskriminanten skil mellom to klasser, og me har tre.
 Difor skal me fyrst skilja mellom *iris setosa* og *ikkje-setosa*
@@ -158,12 +165,21 @@ Den midste lina er kanskje rar, men me har sett liknande notasjon
 med pandas.  Den same notasjonen verkar her, sjølv om dette er numpy
 *arrays*. Her set me altso alle $y$-verdiar som ikkje er 0 lik 1.
 
+So er me klare for å laga ein lineær diskriminant.
+
 ```{code-cell} ipython3
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis 
 
 lda = LinearDiscriminantAnalysis()  
-lda_t = lda.fit_transform(X,y)
+lda.fit(X,y)
+print(lda)
+print(lda.coef_)
+print(lda.intercept_)
 ```
+
+Her er det mykje som skjer under panseret. Tilordninga `lda =` instansierer diskriminanten. Den andre lina `lda.fit` tilpassar diskriminanten til datasettet.
+
++++
 
 ::: {admonition} Oppgåve
 Lag diskriminantar som skil ut hhv. *iris versicolor* og 
