@@ -1,7 +1,15 @@
 ---
-tags:
-  - sklearn
-  - pandas
+jupytext:
+  formats: ipynb,md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.17.0
+kernelspec:
+  display_name: dataprog
+  language: python
+  name: dataprog
 ---
 
 # Fisher Linear Discriminant
@@ -29,7 +37,7 @@ Frå [wikimedia commons](https://commons.wikimedia.org/wiki/File:Iris_versicolor
 
 Me skal bruka scikit-learn, og fordi iris-datasettet er so populært, er det allereie tilgjengeleg i biblioteket. Me kan lasta det slik:
 
-```{code-cell} python3
+```{code-cell} ipython3
 from sklearn import datasets
 
 iris = datasets.load_iris()
@@ -44,11 +52,11 @@ det som me er vande med frå `pandas`.
 Kva datatype er objektet `iris`?
 :::
 
-Mesteparten av datasettet er `iris.data` som er ein $150\times4$ *array*.
+Mesteparten av datastrukturen er attributten `iris.data` som er ein $150\times4$ *array*.
 Det stemmer med tre klasser à 50 eksemplar med fire målbare drag.
 Der er òg ein attributt `feature_names`:
 
-```{code-cell} python3
+```{code-cell} ipython3
 print(iris.data.shape)
 print(iris.feature_names)
 ```
@@ -57,7 +65,7 @@ Der ser me altso kva søyle som er kva i datasettet.
 Me òg vist `iris.data.shape` som er storleiken på `data`-matrisa.
 Dernest legg me merke til det som scikit-learn kaller *target*.
 
-```{code-cell} python3
+```{code-cell} ipython3
 print(iris.target.shape)
 print(iris.target_names)
 ```
@@ -78,14 +86,14 @@ nyttig med spreidingsplott (*scatter plot*).  Det er synd at me
 berre klarer å plotta to søyler i to dimensjonar, men me får ta
 det me kan få.
 
-```{code-cell} python3
+```{code-cell} ipython3
 import matplotlib.pyplot as plt
 
-_, ax = plt.subplots()
-scatter = ax.scatter(iris.data[:, 0], iris.data[:, 1], c=iris.target)
+scatter = plt.scatter(iris.data[:, 0], iris.data[:, 1], c=iris.target)
 
+ax = plt.gca()
 ax.set(xlabel=iris.feature_names[0], ylabel=iris.feature_names[1])
-_ = ax.legend(
+ax.legend(
     scatter.legend_elements()[0], iris.target_names, loc="lower right", title="Classes"
 )
 ```
@@ -119,23 +127,53 @@ Kva drag er nyttigast for å identifisera kvar irisart?
 
 ## Diskriminant
 
-```{code-cell} python3
-# Import necessary libraries  
-import numpy as np  
-import pandas as pd  
-from sklearn.discriminant_analysis import LinearDiscriminantAnalysis 
+Løysing åt Fisher er kjend som *Fisher Linear Discriminant*.
+For å kunna visualisera kva denne diskriminanten gjer, skal
+me freista ei klassifisering basert berre på dei to måla som
+me plotta over, dvs. lengd og breidd på begerblada.
 
+Diskriminanten skil mellom to klasser, og me har tre.
+Difor skal me fyrst skilja mellom *iris setosa* og *ikkje-setosa*
+som den andre klassa.  Lat oss fyrst setja opp datasettet, slik:
+
+```{code-cell} ipython3
 X = iris.data[:,:2]
 print( X.shape )
 y = iris.target
 print( y.shape )
+```
+
+Det er vanleg å bruka $x$ om innvariablane og $y$ om utvariablane.
+Her har me altso to innvariablar og éin utvariabel.
+Me har derimot tre klasser i $y$, og skulle berre ha to.
+Det kan me fiksa slik.
+
+```{code-cell} ipython3
+print( y )
+y[ y != 0 ] = 1
+print( y )
+```
+
+Den midste lina er kanskje rar, men me har sett liknande notasjon
+med pandas.  Den same notasjonen verkar her, sjølv om dette er numpy
+*arrays*. Her set me altso alle $y$-verdiar som ikkje er 0 lik 1.
+
+```{code-cell} ipython3
+from sklearn.discriminant_analysis import LinearDiscriminantAnalysis 
 
 lda = LinearDiscriminantAnalysis()  
 lda_t = lda.fit_transform(X,y)
 ```
+
+::: {admonition} Oppgåve
+Lag diskriminantar som skil ut hhv. *iris versicolor* og 
+*iris virginica*.  Er alle like enkle å skilja på desse to
+variablane?
+:::
 
 ## Referansar
 
 + Dokumentasjonen for sklearn
 	+  [datasets.load_iris](https://scikit-learn.org/1.4/modules/generated/sklearn.datasets.load_iris.html#sklearn.datasets.load_iris "sklearn.datasets.load_iris")
 	+ [LinearDiscriminantAnalysis](https://scikit-learn.org/stable/modules/generated/sklearn.discriminant_analysis.LinearDiscriminantAnalysis.html)
+
