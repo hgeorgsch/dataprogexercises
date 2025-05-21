@@ -89,6 +89,7 @@ Rsquared = modell.score(X,y) #Score med hvor godt linjen "passer"
 ```
 
 ## Typer læring
+
 * I hovedtrekk ofte to typer:
   * «Supervised learning»: Algoritmen eller modellen lærer fra input/output data (vi vet hva "resultatet" skal være)
   * «Unsupervised learning»: Algoritmen eller modellen finner mønstre i data vi ikke "kjenner" i utgangspunktet
@@ -96,6 +97,7 @@ Rsquared = modell.score(X,y) #Score med hvor godt linjen "passer"
 +++
 
 ## Hovedmål
+
 * Målet med «læringen» er at den opplærte modellen vår skal «funke» på data vi ikke har sett før
 * Dersom den gjør det sier vi at modellen generaliserer bra
 
@@ -190,7 +192,8 @@ df =df.reindex(np.random.permutation(df.index))
 df
 ```
 
-# KMeans clustering
+# K-Means clustering
+
 * «Unsupervised learning»
 * Vi prøver å dele data inn i klynger uten å nødvendigvis vite hva de representerer
 * Noen ganger vet vi hvor mange klynger det burde være, andre ganger må vi prøve oss frem
@@ -217,7 +220,8 @@ sns.relplot(data=df, x="hoyde", y="vekt", hue="cluster")
 sns.relplot(data=df, x="hoyde", y="vekt", hue="Kjønn")
 ```
 
-# K-nearest neighbors
+# K-nearest neighbours
+
 * «Supervised learning» - Vi har data hvor vi kjenner klassifiseringene
 * For nye usette datapunkt undersøker vi de $k$ nærmeste naboene til datapunktet, og klassifiseringen deres
 * Klassifiseringen til det nye datapunktet bestemmes av disse
@@ -263,7 +267,8 @@ df_test.dtypes
 
 ```
 
-# Akadmeisk sukksess
+# Akademisk sukksess
+
 [Dataset](https://archive.ics.uci.edu/dataset/697/predict+students+dropout+and+academic+success)
 
 ```{code-cell} ipython3
@@ -272,6 +277,7 @@ df["Target"].unique()
 ```
 
 # Support vector machine
+
 «supervised learning»
 
 ```{code-cell} ipython3

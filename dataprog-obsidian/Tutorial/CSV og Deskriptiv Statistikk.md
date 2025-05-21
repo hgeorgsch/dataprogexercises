@@ -17,7 +17,7 @@ tags:
 + *Oversiktsførelesing*  [[Konseptuell forståing av  pandas]]  veke 40-41/2024
 + *Demovideo*
 	+  [[Filkonvertering og -import]]
-	+ [[Plot i pandas]]]
+	+ [[Plot i pandas]]
 	+  [[Gjennomsnitt og spreding]] 
 + Step 1.  Pandas
 	+ Step 1a.  Extracting Series and making plots.

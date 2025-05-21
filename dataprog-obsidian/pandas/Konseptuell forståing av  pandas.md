@@ -17,27 +17,10 @@ kernelspec:
 		+  Data frame og Series
 		+ indeks
 
-
-+ [x] Bør me introdusera `pickle`? #primitives/pickle 📅 2025-05-07 ✅ 2025-05-08
-	+ Neppe !
-
-```{code-cell} ipython3
-import pandas as pd
-import numpy as np
-import pickle
-
-with open("HPcharacters.pickle", "rb") as file:
-    HPdata = pickle.load(file)
-
-df = pd.DataFrame(HPdata)
-df
-```
-
-```{code-cell} ipython3
-df = df.drop(columns=["id", "alternate_names", "gender", "wand", "actor", "alternate_actors", "image"])
-df
-```
-
++ Datasett med *radar* og *søyler*
+	+ datapunkt
+	+ drag eller *features*
++ [[Døme med pickle]]
 
 # Introduksjon til *pan*el *da*ta: Pandas
 
@@ -56,23 +39,6 @@ Nyttig ressurs: [https://pandas.pydata.org/docs/user_guide/](https://pandas.pyda
 * Vi importerer pandas med som regel med `import pandas as pd`
 * Pandas er bygd på numpy, så man trenger ofte også å bruke numpy
 
-```{code-cell} ipython3
----
-slideshow:
-  slide_type: subslide
----
-#EKSEMPEL
-
-import pandas as pd
-import numpy as np
-import pickle
-
-with open("HPcharacters.pickle", "rb") as file:
-    HPdata = pickle.load(file)
-
-df = pd.DataFrame(HPdata)
-df
-```
 
 ```{code-cell} ipython3
 sdata = {"frukt": ["epler", "pærer", "moreller", "rips"], "produksjon": [12,23,1,9], "subsidiert": [True, False, True, False], "pris": [10, 25, 40, 5]}
