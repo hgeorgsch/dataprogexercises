@@ -127,23 +127,53 @@ Kva drag er nyttigast for å identifisera kvar irisart?
 
 ## Diskriminant
 
-```{code-cell} ipython3
-# Import necessary libraries  
-import numpy as np  
-import pandas as pd  
-from sklearn.discriminant_analysis import LinearDiscriminantAnalysis 
+Løysing åt Fisher er kjend som *Fisher Linear Discriminant*.
+For å kunna visualisera kva denne diskriminanten gjer, skal
+me freista ei klassifisering basert berre på dei to måla som
+me plotta over, dvs. lengd og breidd på begerblada.
 
+Diskriminanten skil mellom to klasser, og me har tre.
+Difor skal me fyrst skilja mellom *iris setosa* og *ikkje-setosa*
+som den andre klassa.  Lat oss fyrst setja opp datasettet, slik:
+
+```{code-cell} ipython3
 X = iris.data[:,:2]
 print( X.shape )
 y = iris.target
 print( y.shape )
+```
+
+Det er vanleg å bruka $x$ om innvariablane og $y$ om utvariablane.
+Her har me altso to innvariablar og éin utvariabel.
+Me har derimot tre klasser i $y$, og skulle berre ha to.
+Det kan me fiksa slik.
+
+```{code-cell} ipython3
+print( y )
+y[ y != 0 ] = 1
+print( y )
+```
+
+Den midste lina er kanskje rar, men me har sett liknande notasjon
+med pandas.  Den same notasjonen verkar her, sjølv om dette er numpy
+*arrays*. Her set me altso alle $y$-verdiar som ikkje er 0 lik 1.
+
+```{code-cell} ipython3
+from sklearn.discriminant_analysis import LinearDiscriminantAnalysis 
 
 lda = LinearDiscriminantAnalysis()  
 lda_t = lda.fit_transform(X,y)
 ```
+
+::: {admonition} Oppgåve
+Lag diskriminantar som skil ut hhv. *iris versicolor* og 
+*iris virginica*.  Er alle like enkle å skilja på desse to
+variablane?
+:::
 
 ## Referansar
 
 + Dokumentasjonen for sklearn
 	+  [datasets.load_iris](https://scikit-learn.org/1.4/modules/generated/sklearn.datasets.load_iris.html#sklearn.datasets.load_iris "sklearn.datasets.load_iris")
 	+ [LinearDiscriminantAnalysis](https://scikit-learn.org/stable/modules/generated/sklearn.discriminant_analysis.LinearDiscriminantAnalysis.html)
+
