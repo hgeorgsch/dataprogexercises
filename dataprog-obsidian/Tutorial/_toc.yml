@@ -12,25 +12,28 @@ chapters:
     - file: Mappevurdering
     - file: Førelesingsnotat frå Opningssamlinga
       sections:
-      - file: Introduksjon til datasett i CSV.md
-      - file: Introduksjon til simulering.md
-      - file: Python og Jupyter Notebook.md
+      - file: Introduksjon til datasett i CSV
+      - file: Introduksjon til simulering
+      - file: Python og Jupyter Notebook
   - file: first
     sections:
-    - file: Numeriske Metodar og Kontrollflyt.md
+    - file: Numeriske Metodar og Kontrollflyt
       sections:
-      - file: Imperativ programmering og maskinarkitektur.md
-      - file: Kontrollflyt i Python.md
-      - file: notebook/Halveringsmetoden.md
+      - file: Imperativ programmering og maskinarkitektur
+      - file: Kontrollflyt i Python
+      - file: notebook/Halveringsmetoden
     - file: Simulering02
       sections:
-      - file: notebook/Simulering og Datastrukturar.md
-    - file: CSV og Deskriptiv Statistikk.md
-    - file: Agent-basert simulering.md
+      - file: notebook/Simulering og Datastrukturar
+    - file: CSV og Deskriptiv Statistikk
+    - file: Agent-basert simulering
       sections:
       - file: notebook/Shrimp-Game
     - file: WebAPI
-    - file: Statistikk og Maskinlæring.md
+    - file: Statistikk og Maskinlæring
+      sections:
+      - file: Om å læra frå data
+      - file: notebook/Fisher Linear Discriminant in sklearn
   - file: midway
   - file: second
   - file: closure
