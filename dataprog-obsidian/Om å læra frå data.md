@@ -4,6 +4,7 @@ tags:
   - lecture/video/perspective
 ---
 
+# Om å læra frå data
 
 
 ---

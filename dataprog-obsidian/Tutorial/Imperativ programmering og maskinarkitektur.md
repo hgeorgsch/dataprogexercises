@@ -11,14 +11,13 @@ Me skal prata litt om korleis datamaskina konseptuelt sett verkar. Målet er lit
 
 ---
 
+<!-- slide template="[[tpl-quote]]" -->
+
 ![[command-DALLE.webp]]
 
-![[export/Imperativ programmering og maskinarkitektur/assets/command.webp]]
-
-- [x] Figur: Lisens på *clipart* ✅ 2025-05-14
-- [x] Kan genere med feks DALL-E (command-DALLE.webp, command-DALLE-alt.webp) ✅ 2025-05-14
-- [ ] Kan DALL-E o.l ta imot et fargekart vi bruker i digital profil / brand?
-- [ ] Inkluder grafikk frå DALL-E
+::: credit
+Bilete frå DALL-E (kunstig intelligens)
+:::
 
 note:
 Me kaller det for imperativ programmering, fordi me gjev maskina kommandoar, dvs. setningar i grammatisk imperativ.  
@@ -26,7 +25,6 @@ Me kaller det for imperativ programmering, fordi me gjev maskina kommandoar, dvs
 Maskina tenkjer ikkje. Det er programmøren som står for all tenkinga. Maskina gjer nøyaktig som kommandert, og programmøren må sjå for seg kva kvar kommando fører til.
 
 ---
-
 
 ```python
 b = 5
@@ -73,9 +71,9 @@ Alonzo Church
 ([By Princeton University, Fair use](https://en.wikipedia.org/w/index.php?curid=6082269))
 :::
 
-</split>
 
-note: Teorien for datamaskiner og programmering vart hovudsakleg utarbeidd på 1930-talet, om lag ti år før ein fyrst bygde maskiner som faktisk kunne køyra programma. Church og Turing definterte kvart sitt paradigme. Dei er ekvivalente i den forstand at dei kan *oppnå* det same, sjølv om ein tenkjer forskjellig.
+note:
+Teorien for datamaskiner og programmering vart hovudsakleg utarbeidd på 1930-talet, om lag ti år før ein fyrst bygde maskiner som faktisk kunne køyra programma. Church og Turing definterte kvart sitt paradigme. Dei er ekvivalente i den forstand at dei kan *oppnå* det same, sjølv om ein tenkjer forskjellig.
 
 Turingmaskina er den mest kjende modellen, og den som ligg til grunn for imperativ programmering, der me kommanderer maskina og seier nøyaktig hva ho skal gjera.  Church sin $\lambda$-kalkyle ligg til grunn for det som me i dag kaller *funksjonell programmering*, der me definerer kva eigenskaper resultatet av programmer skal ha, utan å seia korleis ein oppnår det.
 
