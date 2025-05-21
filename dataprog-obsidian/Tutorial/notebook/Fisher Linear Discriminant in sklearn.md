@@ -37,6 +37,40 @@ iris = datasets.load_iris()
 display( iris )
 ```
 
+Datasettet er formattert for `sklearn`, som er forskjellig frå 
+det som me er vande med frå `pandas`. 
+
+::: {admonition} Refleksjon
+Kva datatype er objektet `iris`?
+:::
+
+Mesteparten av datasettet er `iris.data` som er ein $150\times4$ *array*.
+Det stemmer med tre klasser à 50 eksemplar med fire målbare drag.
+Der er òg ein attributt `feature_names`:
+
+```{code-cell} python3
+iris.data.shape
+iris.feature_names
+```
+
+Der ser me altso kva søyle som er kva i datasettet.
+Dernest legg me merke til det som scikit-learn kaller *target*.
+
+```{code-cell} python3
+iris.target.shape
+iris.target_names
+```
+
+Her har me altso dei tre iris-artene.  Det som me elles kaller 
+«klasse» eller *label* heiter altso *target* i scikit-learn.
+Kvart artsnamn er koda som eit heiltal (0,1,2) i `iris.target` som
+er ein ein-dimensjonal *array* med eitt element for kvar rekkje i
+`iris.data`.
+
+Då har me det som me treng, og me skal ikkje bry oss med resten av
+datastrukturen.
+
+
 ### Scatter plot
 
 ```{code-cell} python3
