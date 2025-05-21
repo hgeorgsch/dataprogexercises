@@ -1,4 +1,5 @@
 ---
+title: Om å læra frå data
 tags:
   - lecture/video/perspective
 ---

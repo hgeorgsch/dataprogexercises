@@ -4,9 +4,10 @@ tags:
   - api
 title: Web API og JSON
 ---
+
 # Web API and JSON
 
-+ *Perspektiv: [[Web - Protokollar og API]]
++ *Perspektiv* [[Web - Protokollar og API]]
 + *Demonstrasjon* [[WebAPI og JSON]]  
 
 + [[API-eksempel-sport]]
