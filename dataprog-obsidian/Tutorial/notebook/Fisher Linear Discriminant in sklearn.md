@@ -49,19 +49,20 @@ Det stemmer med tre klasser à 50 eksemplar med fire målbare drag.
 Der er òg ein attributt `feature_names`:
 
 ```{code-cell} python3
-iris.data.shape
-iris.feature_names
+print(iris.data.shape)
+print(iris.feature_names)
 ```
 
 Der ser me altso kva søyle som er kva i datasettet.
+Me òg vist `iris.data.shape` som er storleiken på `data`-matrisa.
 Dernest legg me merke til det som scikit-learn kaller *target*.
 
 ```{code-cell} python3
-iris.target.shape
-iris.target_names
+print(iris.target.shape)
+print(iris.target_names)
 ```
 
-Her har me altso dei tre iris-artene.  Det som me elles kaller 
+Her har me altso dei tre iris-artane.  Det som me elles kaller 
 «klasse» eller *label* heiter altso *target* i scikit-learn.
 Kvart artsnamn er koda som eit heiltal (0,1,2) i `iris.target` som
 er ein ein-dimensjonal *array* med eitt element for kvar rekkje i
@@ -70,19 +71,51 @@ er ein ein-dimensjonal *array* med eitt element for kvar rekkje i
 Då har me det som me treng, og me skal ikkje bry oss med resten av
 datastrukturen.
 
-
 ### Scatter plot
+
+For å få eit visuelt inntrykk av klassifiseringsproblemet, er det
+nyttig med spreidingsplott (*scatter plot*).  Det er synd at me 
+berre klarer å plotta to søyler i to dimensjonar, men me får ta
+det me kan få.
 
 ```{code-cell} python3
 import matplotlib.pyplot as plt
 
 _, ax = plt.subplots()
 scatter = ax.scatter(iris.data[:, 0], iris.data[:, 1], c=iris.target)
+
 ax.set(xlabel=iris.feature_names[0], ylabel=iris.feature_names[1])
 _ = ax.legend(
     scatter.legend_elements()[0], iris.target_names, loc="lower right", title="Classes"
 )
 ```
+
+Her plottar me dei to fyrste søylene. 
+Legg merke til korleis me bruker klassene (*target*) til å velja
+farge på punkta med `c`-argumentet.
+
+
+::: {admonition} Oppgåve
+Kva gjer `ax.set`?  Og kva gjer `ax.legend`?
+(Kva skjer om du fjernar dei?
+:::
+
+Det fyrste argumentet til `ax.legend` er sikkert vondt å forstå.
+Poenget med det er å henta ut fargane som er brukt i `scatter`-plottet,
+der `scatter` er variabelen som vart tilordna plottet over.
+Det andre argumentet er so lista med namn som skal knyttast til fargane.
+Inntil vidare er det nok best ikkje å tenkja på korleis det fyrste 
+argumentet er konstruert, og berre bruka det som eit fast mynster.
+
+::: {admonition} Refleksjon
+Kva irisart plar ha dei breidaste begerblada? 
+Kva art plar ha dei lengste?
+:::
+
+::: {admonition} Oppgåve
+Plott ulike par av søyler frå datasettet.
+Kva drag er nyttigast for å identifisera kvar irisart?
+:::
 
 ## Diskriminant
 
@@ -90,12 +123,12 @@ _ = ax.legend(
 # Import necessary libraries  
 import numpy as np  
 import pandas as pd  
-import matplotlib.pyplot as plt  
-from sklearn.model_selection import train_test_split  
-from sklearn.preprocessing import StandardScaler  
-from sklearn.discriminant_analysis import LinearDiscriminantAnalysis as LDA  
-from sklearn.metrics import accuracy_score  
-from sklearn.linear_model import LogisticRegression
+from sklearn.discriminant_analysis import LinearDiscriminantAnalysis 
+
+X = iris.data[:,:2]
+print( X.shape )
+y = iris.target
+print( y.shape )
 
 lda = LinearDiscriminantAnalysis()  
 lda_t = lda.fit_transform(X,y)
