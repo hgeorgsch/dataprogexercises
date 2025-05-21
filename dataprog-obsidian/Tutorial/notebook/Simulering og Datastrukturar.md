@@ -1,8 +1,15 @@
 ---
-tags:
-  - simulering
-  - exercise
-  - data-structures
+jupytext:
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.17.0
+  formats: md:myst
+kernelspec:
+  name: dataprog
+  language: python
+  display_name: dataprog
 ---
 
 # Døme: handlande kundar
