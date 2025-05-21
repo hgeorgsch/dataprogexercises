@@ -44,7 +44,7 @@ det som me er vande med frå `pandas`.
 Kva datatype er objektet `iris`?
 :::
 
-Mesteparten av datasettet er `iris.data` som er ein $150\times4$ *array*.
+Mesteparten av datastrukturen er attributten `iris.data` som er ein $150\times4$ *array*.
 Det stemmer med tre klasser à 50 eksemplar med fire målbare drag.
 Der er òg ein attributt `feature_names`:
 
