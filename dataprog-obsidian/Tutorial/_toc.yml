@@ -32,7 +32,6 @@ chapters:
     - file: WebAPI
     - file: Statistikk og Maskinlæring
       sections:
-      - file: Om å læra frå data
       - file: notebook/Fisher Linear Discriminant in sklearn
   - file: midway
   - file: second
