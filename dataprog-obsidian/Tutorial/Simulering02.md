@@ -14,7 +14,7 @@ author: Hans Georg Schaathun
 		+ pseudo-tilfeldige tal ?
 	+ [Datastrukturar og Kompleksitet](Datastrukturar%20og%20Kompleksitet)
 + *Tekniske demonstrasjonar*
-	+ [Datastrukturer](Datastrukturer)
+	+ [[Datastrukturer]]
 + *Øvingar.*
 	+ [[CodeRunner Data Structures]]
 	+ [Marknadssimulering](notebook/Marknadssimulering)

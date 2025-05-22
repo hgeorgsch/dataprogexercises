@@ -1,3 +1,7 @@
+---
+tags:
+   - notes
+---
 
 - [ ] Kan DALL-E o.l ta imot et fargekart vi bruker i digital profil / brand?
 
