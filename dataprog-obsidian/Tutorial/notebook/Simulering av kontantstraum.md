@@ -9,7 +9,7 @@ jupytext:
     format_name: myst
     format_version: 0.13
     jupytext_version: 1.17.0
-  formats: md:myst
+  formats: md:myst,ipynb
   root_level_metadata_filter: -title,-author,-tags
 kernelspec:
   display_name: dataprog
