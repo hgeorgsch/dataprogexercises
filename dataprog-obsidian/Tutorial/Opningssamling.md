@@ -43,7 +43,7 @@ annan grunn ikkje får gjort dette på førehand.
 + 12.30-13.00: Presentasjon av Økt 3.  
   [Introduksjon til simulering](Introduksjon%20til%20simulering)
 + 13.00-14.30: Økt 3.  [Simulering av kontantstraum](notebook/Simulering%20av%20kontantstraum) 
-+ 14.30-15.30: [Seminar om motivasjon og ynskjer](Seminar%20om%20motivasjon%20og%20ynskjer)
++ 14.30-15.30: [Seminar om motivasjon og ynskjer](Seminar%20om%20Motivasjon%20og%20Ynskjer)
 + 14.00-15.00: Debrief og opplegg vidare.
     + [Mappevurdering](Mappevurdering)
 
