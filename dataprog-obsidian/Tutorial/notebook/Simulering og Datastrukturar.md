@@ -1,11 +1,11 @@
 ---
 jupytext:
+  formats: md:myst,ipynb
   text_representation:
     extension: .md
     format_name: myst
     format_version: 0.13
     jupytext_version: 1.17.0
-  formats: md:myst,ipynb
 kernelspec:
   name: dataprog
   language: python
@@ -22,6 +22,9 @@ kernelspec:
 * Kunden trekker en tilfeldig vare hver gang
 
 ```{code-cell} ipython3
+import random
+import matplotlib.pyplot as plt
+
 varer = {"Epler": 10.0,
          "Pærer": 15.0,
          "Bleier": 35.0,
@@ -78,3 +81,4 @@ print(f"Kunder legger i snitt igjen {snitt:.2f} kroner per handletur")
 plt.hist(pengebruk, 20)
 plt.show()
 ```
+
