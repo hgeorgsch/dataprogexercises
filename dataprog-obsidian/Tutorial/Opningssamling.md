@@ -29,7 +29,7 @@ annan grunn ikkje får gjort dette på førehand.
 + 12.30-13.00: Presentasjon av Økt 1.  
   [Python og Jupyter Notebook](Python%20og%20Jupyter%20Notebook)
 + 13.00-13.20: Presentasjon av deltakarane 
-+ 13.30-15.30: Økt 1. [Introduksjon til Jupyter Notebook](notebook/Introduksjon%20til%20Jupyter%20Notebook)
++ 13.30-15.30: Økt 1. [Introduksjon til Jupyter Notebook](notebook/Fyrste%20dokument%20i%20Jupyter%20Notebook)
 + 15.30-16.30: Debrief                     
 
 ## Dag 2
