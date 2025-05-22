@@ -195,7 +195,9 @@ Dette skal me koma tilbake til.
 
 Ein nyinstantiert modell er heilt tilfeldig.
 Det er den andre lina `lda.fit` som tilpassar modellen til datasettet.
-Dei tre koeffisientane `lda.coef_` og `lda.intercept_` kaller me ofte for *vektene* i modellen.
+Dei to koeffisientane `lda.coef_` kaller me ofte for *vektene* i modellen.
+Den tredje parameteren `lda.intercept_` kan me kalla konstantleddet
+(eller *bias*).
 Dei er dei som vert tilpassa av `fit`.
 
 ## Visualisering av diskriminanten
@@ -205,7 +207,7 @@ Før me går inn på bruk av modellen, skal me visualisera han, slik at me veit 
 Koden under vil vera kryptisk for dei som ikkje har lese ein del matematikk og spesielt lineær algebra,
 og det er ikkje viktig å forstå alt. 
 
-Lat oss kalla dei tre vektene for $x$, $y$ og $z$.
+Lat oss kalla dei vektene for $x$ og $y$ og konstantleddet for $z$.
 
 ```{code-cell} ipython3
 x, y = lda.coef_.flatten()
@@ -244,6 +246,10 @@ ax.plot( xv, yv, "--" )
 ax.quiver( 5.6, f(5.6), x, y, scale=10, width=2**(-8) )
 ```
 
+Som me ser klarer diskriminanten stort sett å skilja iris setosa frå
+dei to andre artane.  Der er berre nokre få atypiske eksemplar som
+vert feilklassifiserte.
+
 Den svarte pilen er plotta med `quiver`-funksjonen. Han viser normalvektoren på diskriminantlina, dvs. ei vektor som står vinkelrett på skiljelina.
 Denne vektoren har koordinatar `(x,y)`, dvs. `lda.coef_`.
 
@@ -251,7 +257,6 @@ Denne vektoren har koordinatar `(x,y)`, dvs. `lda.coef_`.
 Om du har eit punkt $(x',y')$ og normalvektoren er $(x,y)$, vil dot-produktet $(x,y)\cdot(x',y')=xx'+yy'$ vera negativ på den eine sida av determinantlina og positiv på den andre. På lina er produktet null. Dess lenger frå lina punktet $(x',y')$ er, dess større er absoluttverdien. Det er altso dette produktet modellen bruker for å predikera klassa for eit nytt objekt $(x',y')$.
 :::
 
-+++
 
 ::: {admonition} Oppgåve
 Lag diskriminantar som skil ut hhv. *iris versicolor* og 
@@ -262,12 +267,19 @@ variablane?
 ## Prediksjon vha modellen
 
 
-## Referansar
+## Oppsummering
+
+Det me har vist her er ikkje berre ein metode som var hipp og kul på
+1930-talet og for lengst forelda.
+Me har vist hovudprinsippet for mange moderne maskinlæringsmetodar òg.
+Den store skilnaden er at den lineære modellen berre har to vekter,
+eller generelt éi vekt per *input*-variabel.
+Djupe nevrale nettverk kan ha mange milliardar vekter.  Dei er heller
+ikkje lineære.
+Når djupe nevrale nettverk vert brukte til klassifisering, definerer
+dei ei ikkje-lineær hyperflate som skiljer to klasser.
 
 + Dokumentasjonen for sklearn
     +  [datasets.load_iris](https://scikit-learn.org/1.4/modules/generated/sklearn.datasets.load_iris.html#sklearn.datasets.load_iris "sklearn.datasets.load_iris")
     + [LinearDiscriminantAnalysis](https://scikit-learn.org/stable/modules/generated/sklearn.discriminant_analysis.LinearDiscriminantAnalysis.html)
 
-```{code-cell} ipython3
-
-```
