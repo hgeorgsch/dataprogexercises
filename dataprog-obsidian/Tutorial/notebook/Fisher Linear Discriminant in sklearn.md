@@ -165,6 +165,16 @@ Den midste lina er kanskje rar, men me har sett liknande notasjon
 med pandas.  Den same notasjonen verkar her, sjølv om dette er numpy
 *arrays*. Her set me altso alle $y$-verdiar som ikkje er 0 lik 1.
 
+::: {admonition} Oppgåve
+Det er lurt å laga eit plott for å dobbelsjekka at datasettet er det som me hadde tenkt.
+Du kan bruka koden over som døme.
+Lag eit spreidingsplott av `X` fargekoda med klassene frå `y`.
+:::
+
++++
+
+## Den lineære diskriminanten
+
 So er me klare for å laga ein lineær diskriminant.
 
 ```{code-cell} ipython3
@@ -177,7 +187,69 @@ print(lda.coef_)
 print(lda.intercept_)
 ```
 
-Her er det mykje som skjer under panseret. Tilordninga `lda =` instansierer diskriminanten. Den andre lina `lda.fit` tilpassar diskriminanten til datasettet.
+Her er det mykje som skjer under panseret.
+Diskriminanten, som me har instantiert under namnet `lda`, er ein klassifiseringsmodell, 
+som me kan bruka til å klassifisera nye blomar.
+Dersom me måler lengd `l` og breidd `b` på begerblada, vil `lda.predict(l,b)` gje oss ein *prediksjon* for klassa.
+Dette skal me koma tilbake til.
+
+Ein nyinstantiert modell er heilt tilfeldig.
+Det er den andre lina `lda.fit` som tilpassar modellen til datasettet.
+Dei tre koeffisientane `lda.coef_` og `lda.intercept_` kaller me ofte for *vektene* i modellen.
+Dei er dei som vert tilpassa av `fit`.
+
+## Visualisering av diskriminanten
+
+Diskriminanten definerer ei line som freistar å skilja dei to klassene frå kvarande.
+Før me går inn på bruk av modellen, skal me visualisera han, slik at me veit kva me arbeider med.
+Koden under vil vera kryptisk for dei som ikkje har lese ein del matematikk og spesielt lineær algebra,
+og det er ikkje viktig å forstå alt. 
+
+Lat oss kalla dei tre vektene for $x$, $y$ og $z$.
+
+```{code-cell} ipython3
+x, y = lda.coef_.flatten()
+z, = lda.intercept_
+print( x, y, z )
+```
+
+Du hugsar kanskje at ei rak line kan skrivast som ei likning eller funksjon $y=\alpha x + \beta$ eller $f(x)=\alpha x+\beta$.
+For diskriminanten er denne lina gitt slik at
+$\alpha = - x/y$
+og
+$\beta = -z/y$, eller i kode som:
+
+```{code-cell} ipython3
+beta = -z/y
+alpha = -x/y
+def f(xx): return alpha*xx+beta
+```
+
+Denne lina kan me bruka til å plotta diskriminanten.  Me må gjenta koden for å plotta spreidingsplottet, og kan då skriva,
+
+```{code-cell} ipython3
+import matplotlib.pyplot as plt
+
+ax = plt.subplot()
+scatter = ax.scatter(iris.data[:, 0], iris.data[:, 1], c=iris.target)
+ax.set(xlabel=iris.feature_names[0], ylabel=iris.feature_names[1])
+ax.legend(
+    scatter.legend_elements()[0], ["setosa", "ikkje setosa"], loc="lower right"
+)
+
+xv = [4, 8]
+yv = [ f(xx) for xx in xv ]
+ax.plot( xv, yv, "--" )
+
+ax.quiver( 5.6, f(5.6), x, y, scale=10, width=2**(-8) )
+```
+
+Den svarte pilen er plotta med `quiver`-funksjonen. Han viser normalvektoren på diskriminantlina, dvs. ei vektor som står vinkelrett på skiljelina.
+Denne vektoren har koordinatar `(x,y)`, dvs. `lda.coef_`.
+
+::: {admonition} Merknad
+Om du har eit punkt $(x',y')$ og normalvektoren er $(x,y)$, vil dot-produktet $(x,y)\cdot(x',y')=xx'+yy'$ vera negativ på den eine sida av determinantlina og positiv på den andre. På lina er produktet null. Dess lenger frå lina punktet $(x',y')$ er, dess større er absoluttverdien. Det er altso dette produktet modellen bruker for å predikera klassa for eit nytt objekt $(x',y')$.
+:::
 
 +++
 
@@ -187,8 +259,15 @@ Lag diskriminantar som skil ut hhv. *iris versicolor* og
 variablane?
 :::
 
+## Prediksjon vha modellen
+
+
 ## Referansar
 
 + Dokumentasjonen for sklearn
     +  [datasets.load_iris](https://scikit-learn.org/1.4/modules/generated/sklearn.datasets.load_iris.html#sklearn.datasets.load_iris "sklearn.datasets.load_iris")
     + [LinearDiscriminantAnalysis](https://scikit-learn.org/stable/modules/generated/sklearn.discriminant_analysis.LinearDiscriminantAnalysis.html)
+
+```{code-cell} ipython3
+
+```
