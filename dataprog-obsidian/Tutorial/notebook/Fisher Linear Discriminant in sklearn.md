@@ -266,6 +266,29 @@ variablane?
 
 ## Prediksjon vha modellen
 
+Lat oss billa oss inn at me har målt tre blomar, og målt begerblada.
+Me skriv kvar blome som ei liste med [*lengd*, *breidd*].
+
+```{code-cell} ipython3
+x1 = [ 4.4, 3.5 ]
+x2 = [ 4.8, 2.5 ]
+x3 = [ 3.8, 6.6 ]
+```
+
+No kan me sjekka kva modellen meiner om desse blomane.
+```{code-cell} ipython3
+for x in [ x1, x2, x3 ]:
+   print( f"{x} -> {lda.predict(x)}" )
+```
+
+::: {admonition}
+Kva gjer koden min over?
+Kva tyder tala over?
+:::
+
+Me skal sjå at modellen predikerer setosa (0) for den fyrste, og ikkje for dei to andre.
+
+lda.predict((l,b))` gje oss ein *prediksjon* for klassa.
 
 ## Oppsummering
 
