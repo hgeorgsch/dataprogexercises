@@ -1,3 +1,9 @@
+---
+tags:
+   - samling
+title: Midtvegssamling
+---
+
 # Midtvegssamling
 
 Programmet for midtvegssamlinga vert lagt etter at kurset

@@ -1,14 +1,20 @@
-#!/bin/sh
+#!/bin/bash
 # This is to build the Jupyter Book, including generating notebook files
 # from markdown.
 
-T=../dataprog-obdsidian/Tutorial/
+T=../dataprog-obsidian/Tutorial/
 N=$T/notebook
+ls $T
+ls $N
 
 ( cd $N ; for i in *.md ; do jupytext --to notebook "$i" ; done )
 
 mkdir -p notebook
-cp $N/*.{csv,json,ipynb} notebook 
+
+cp $N/*.csv notebook 
+cp $N/*.json notebook 
+cp $N/*.ipynb notebook 
+cp $N/*.jpg notebook 
 
 cp $T/*.md .
 
