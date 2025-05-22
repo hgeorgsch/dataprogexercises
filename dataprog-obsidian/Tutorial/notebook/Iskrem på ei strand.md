@@ -2,7 +2,10 @@
 tags:
   - exercise
   - simulering
+title: Iskrem på ei strand
 ---
+
+# Iskrem på ei strand
 
 
 + To iskremseljarar med vagn som dei kan flytta kvar dag.
