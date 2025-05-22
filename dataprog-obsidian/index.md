@@ -25,21 +25,6 @@ title: Utkast til læringsmateriale i data og programmering
 	+ Del 2.  Store datasett
 	+ [[Mappe Del 2 Haust 2024]]
 
-+ **Periode 1** Forslag vert utarbeidd Jupyter Books:  [[Tutorial/first|first]]
-1. [[Numeriske Metodar og Kontrollflyt]] 
-		+ Notar til [[Imperativ programmering og maskinarkitektur]]
-			+ [[Notar til Imperativ programmering og maskinarkitektur]]
-			+ [[Spørsmål til Studio Akrinn - Fyrste føredrag]]
-		+ Notar til [[Kontrollflyt i Python]]
-			+ Vis i Python Tutor e.l.
-				+ Fire vindauga (minimum): Kode - Utdata - Global tilstand - Lokal tilstand
-2. [[Simulering02]]                      
-3. [[CSV og Deskriptiv Statistikk]]
-4. [[Agent-basert simulering]]
-	1. [[Notar til Agent-basert simulering]]
-5. [[WebAPI]] 
-6. [[Statistikk og Maskinlæring]]     
-
 
 + Perspektivføredrag til **Periode 2**
 	+ [[Køyretid og Kompleksitet]] (periode 2)
@@ -55,9 +40,23 @@ title: Utkast til læringsmateriale i data og programmering
 ## Program
 
 + Sjå òg [[Tutorial/intro|intro]] til Jupyter Books
-+ Etablert program
-	+ [[Opningssamling]] (program)
-	+ [[first]]
++  [[Opningssamling]] (program)
+	+ [[Seminar om Motivasjon og Ynskjer]]
++ **Periode 1** Forslag vert utarbeidd Jupyter Books:  [[Tutorial/first|first]]
+1. [[Numeriske Metodar og Kontrollflyt]] 
+		+ Notar til [[Imperativ programmering og maskinarkitektur]]
+			+ [[Notar til Imperativ programmering og maskinarkitektur]]
+			+ [[Spørsmål til Studio Akrinn - Fyrste føredrag]]
+		+ Notar til [[Kontrollflyt i Python]]
+			+ Vis i Python Tutor e.l.
+				+ Fire vindauga (minimum): Kode - Utdata - Global tilstand - Lokal tilstand
+2. [[Simulering02]]                      
+3. [[CSV og Deskriptiv Statistikk]]
+4. [[Agent-basert simulering]]
+	1. [[Notar til Agent-basert simulering]]
+5. [[WebAPI]] 
+6. [[Statistikk og Maskinlæring]]     
+
 	
 
 
