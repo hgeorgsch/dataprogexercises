@@ -1,5 +1,8 @@
 ---
 title: Introduksjon til Simulering
+tags:
+  - simulering
+  - lecture/samling
 ---
 
 # Introduksjon til Simulering

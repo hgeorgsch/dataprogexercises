@@ -1,4 +1,8 @@
-
+---
+tags:
+   - lecture
+   - modelling
+---
 
 + Utfordringar
 	+ Ein lyt ha ein presis mental modell for å forstå kva ein freistar å gjera

@@ -1,6 +1,8 @@
 ---
 tags:
   - simulering
+  - session
+title: Agent-basert simulering
 ---
 
 # Agent-basert simulering

@@ -1,3 +1,8 @@
+---
+tags:
+   - period
+---
+
 # Andre periode
 
 + **Mål for andre periode**

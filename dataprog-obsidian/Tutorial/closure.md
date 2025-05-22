@@ -1,3 +1,9 @@
+---
+title: Avslutningssamling
+tags:
+  - samling
+---
+
 # Avslutningssamling
 
 Programmet for midtvegssamlinga vert lagt etter 
