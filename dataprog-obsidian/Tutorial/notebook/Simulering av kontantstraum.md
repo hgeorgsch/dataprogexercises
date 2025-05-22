@@ -441,14 +441,14 @@ Det er litt plunder å få til, men du kan t.d.
 ## Notat - materiale som vert utelate 
 
 1. Geometrisk rekkje - lukka form
-	1. plott og samanlikna
+    1. plott og samanlikna
 
 + Problem.
-	+ lån med årleg rente
-	+ Sjå [[Sparekalkulator]]
+    + lån med årleg rente
+    + Sjå [[Sparekalkulator]]
 + Relativt enkelt problem.
-	+ kan løysast analytisk, om du kan litt matematikk
-	+ kan løysast i rekneark, om du har god orden
-	+ me løyser det her for å demonstrera nokre grunnleggjande programeringskonsept og korleis me kan leika med ulike tankeeksperiment
-	+ med litt røynsle og litt kreativitet er der inga grense for kva de kan gjera
-		+ vert det komplekst nok, får de til meir med programmering enn med rekneark
+    + kan løysast analytisk, om du kan litt matematikk
+    + kan løysast i rekneark, om du har god orden
+    + me løyser det her for å demonstrera nokre grunnleggjande programeringskonsept og korleis me kan leika med ulike tankeeksperiment
+    + med litt røynsle og litt kreativitet er der inga grense for kva de kan gjera
+        + vert det komplekst nok, får de til meir med programmering enn med rekneark

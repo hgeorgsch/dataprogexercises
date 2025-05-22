@@ -285,5 +285,5 @@ Det er ikkje sikkert at det er mykje hjelp i desse kjeldene enno, før du har l�
 ## Materiale som ikkje fekk pass
 
 + Sjå etter endring - differanse
-	1. plott differanse
+    1. plott differanse
 + Korrelasjon mellom valutaar?
