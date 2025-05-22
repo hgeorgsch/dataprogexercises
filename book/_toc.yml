@@ -26,6 +26,7 @@ chapters:
       sections:
       - file: notebook/Tilfeldigheit
       - file: notebook/Simulering og Datastrukturar
+      - file: notebook/Marknadssimulering
     - file: CSV og Deskriptiv Statistikk
       sections:
       - file: Filhandtering
@@ -33,6 +34,7 @@ chapters:
     - file: Agent-basert simulering
       sections:
       - file: notebook/Shrimp-Game
+      - file: notebook/Iskrem på ei strand.ipynb
     - file: WebAPI
     - file: Statistikk og Maskinlæring
       sections:
