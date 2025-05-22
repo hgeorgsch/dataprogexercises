@@ -11,6 +11,7 @@ title: Statistikk og Maskinlæring
 + *Demo* regresjon og korrelasjon i pandas:
 	+ [[Maskinlæringsbibliotek]]
 	+ [Fisher Linear Discriminant in sklearn](notebook/Fisher%20Linear%20Discriminant%20in%20sklearn)
+	+ [Evaluering av modellar](notebook/Evaluering)
 + *Tutorial* regresjon og korrelasjon i eit datasett
 + Notat og idéar
 	+ [[Maskinlæring]]  (2024)
