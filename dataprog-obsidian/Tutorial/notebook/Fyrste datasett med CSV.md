@@ -1,11 +1,4 @@
 ---
-title: Fyrste datasett med CSV
-author: Hans Georg Schaathun
-tags:
-  - csv
-  - plot
-  - session
-  - exercise/tutorial
 jupytext:
   formats: md:myst
   text_representation:
