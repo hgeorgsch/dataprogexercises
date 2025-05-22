@@ -168,29 +168,33 @@ måla.
 
 <!-- slide template="[[tpl-quote]]" -->
 
-![[dataset.svg]]
+![[fisher.svg]]
 
 ::: credit
+Eigen figur, sjå [[Fisher Linear Discriminant in sklearn]].
 :::
-
----
-
-<!-- slide template="[[tpl-quote]]" -->
-
-![[sep2.svg]]
-
-::: credit
-:::
-
 
 note:
 Eg er dårleg på å teikna fire dimensjonar, men dersom han hadde
 to mål, kunne det sjå slik ut.
 
-Kvart punkt er eitt individ, og her har me ein blå og ein raud art.
+Kvart punkt er eitt individ, og her har me tre artar i tre ulike fargar.
 
 Kvart individ har eitt mål på $x$-aksen og eitt på $y$-aksen,
 
+
+---
+
+<!-- slide template="[[tpl-quote]]" -->
+
+![[fishersep.svg]]
+
+::: credit
+Eigen figur, sjå [[Fisher Linear Discriminant in sklearn]].
+:::
+
+
+note:
 Fisher delte dei to artane frå kvarandre med ein rett line.
 Her ser me ei god og ei dårleg line; Fisher fann ein matematisk
 formel for den gode lina.

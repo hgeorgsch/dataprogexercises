@@ -118,7 +118,7 @@ argumentet er konstruert, og berre bruka det som eit fast mynster.
 ::: {admonition} Refleksjon
 Kva irisart plar ha dei breidaste begerblada? 
 Kva art plar ha dei lengste?
-:::k
+:::
 
 ::: {admonition} Oppgåve
 Plott ulike par av søyler frå datasettet.
