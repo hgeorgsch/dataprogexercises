@@ -3,6 +3,7 @@ tags:
   - session/week
 author: Hans Georg Schaathun
 ---
+
 # Veke 1. Numeriske Metodar og Kontrollflyt
 
 Me freistar å gje eit par forskjellige innfallsvinklar til kvart tema. Det typiske vekesprogrammet inneheld difor forskjellige ressursar som kan brukast på ulikt vis.

@@ -1,6 +1,6 @@
 
 
-## Fyrste leksjon
+# Fyrste leksjon
 
 + *Tutorial* [[Introduksjon til Jupyter Notebook]]
 + *Læringsmål*

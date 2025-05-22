@@ -1,6 +1,6 @@
 ---
 tags:
-  - session
+  - session/week
 title: Statistikk og Maskinlæring
 ---
 
