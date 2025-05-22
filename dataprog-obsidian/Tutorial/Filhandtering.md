@@ -1,8 +1,8 @@
 ---
 tags:
-  - perspective
-  - lecture
+  - lecture/perspective
 ---
+
 + Teiknkoding
 	+ Latin 1
 	+ UTF-8

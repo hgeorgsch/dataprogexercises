@@ -1,3 +1,9 @@
+---
+tags:
+    - tutorial
+    - installation
+---
+
 # Installasjon
 
 + Installasjon vert handtert spesielt	

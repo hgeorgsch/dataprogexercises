@@ -1,6 +1,6 @@
 ---
 tags:
-  - lecture
+  - lecture/perspective
 ---
 
 # Kontrollflyt i python

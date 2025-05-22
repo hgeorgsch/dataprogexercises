@@ -26,6 +26,9 @@ chapters:
       sections:
       - file: notebook/Simulering og Datastrukturar
     - file: CSV og Deskriptiv Statistikk
+      sections:
+      - file: Filhandtering
+      - file: notebook/notebook/Linear Regression in SciKitLearn
     - file: Agent-basert simulering
       sections:
       - file: notebook/Shrimp-Game

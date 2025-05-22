@@ -1,4 +1,5 @@
 ---
+title: Opningssamling
 tags:
   - samling
 author: Hans Georg Schaathun

@@ -1,3 +1,8 @@
+---
+tags:
+   - book/overview
+---
+
 # Data og programmering for ulike fag
 
 *Data og programmering* er eit kursopplegg for folk som allereie arbeider 

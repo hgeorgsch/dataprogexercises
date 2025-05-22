@@ -106,7 +106,6 @@ nvidia-cusparselt-cu12==0.6.3
 nvidia-nccl-cu12==2.26.2
 nvidia-nvjitlink-cu12==12.6.85
 nvidia-nvtx-cu12==12.6.77
-onnx==1.15.0
 opencv-python==4.11.0.86
 overrides==7.7.0
 packaging==23.2
@@ -136,7 +135,6 @@ pyparsing==3.1.1
 python-dateutil==2.8.2
 python-json-logger==3.3.0
 pytz==2023.3.post1
-PyYAML==6.0
 pyzmq==26.4.0
 referencing==0.36.2
 requests==2.31.0
@@ -196,3 +194,4 @@ webencodings==0.5.1
 websocket-client==1.8.0
 widgetsnbextension==4.0.14
 zipp==3.21.0
+PyYAML>=6.0
