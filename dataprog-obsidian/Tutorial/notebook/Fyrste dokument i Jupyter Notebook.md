@@ -92,10 +92,10 @@ Legg merke til at python hugsar alle variablane frå forrige kodecelle.
 
 :::{admonition} Oppgåver
 1.  Sjekk at du kan redigera ei kodecelle.
-	1. Dobbelklikk på kodecella med utrekninga.
-	2. Endra tala.
-	3. Rekna ut BMI på nytt.  Trykk Shift-lineskift for å køyra koden.
-	4. Ser det rett ut?
+    1. Dobbelklikk på kodecella med utrekninga.
+    2. Endra tala.
+    3. Rekna ut BMI på nytt.  Trykk Shift-lineskift for å køyra koden.
+    4. Ser det rett ut?
 2.  Kan du endra utskrifta slik at programmet skriv BMI med éin desimal?
 3. Kan du redigera ei *markdown*-celle òg?  Prinsippet er det same.  Dobbelklikk på cella, skriv kva du vil, og trykk Shift-lineskift for å *rendra* cella.
 :::

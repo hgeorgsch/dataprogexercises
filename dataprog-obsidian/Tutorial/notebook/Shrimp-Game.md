@@ -52,7 +52,7 @@ Python er eit sokalla objektorientert språk. Me kan bruka eit objekt for å mod
 import random
 class Fisherman:
     def fangst(self):
-		return  random.randint(0,75)
+        return  random.randint(0,75)
 ```
 
 Denne klassa inneheld ein funksjon (definert med `def` som andre funksjonar).
@@ -79,12 +79,12 @@ import random
 class Fisherman:
     def fangst(self):
         f = random.randint(0,75)
-		self.sistefangst = f
-		return f
+        self.sistefangst = f
+        return f
     def profit(self,price):
         p = self.sistefangst*(price-5)
-		self.sisteprofitt = p
-		return p
+        self.sisteprofitt = p
+        return p
 ```
 
 Fangstvolument er tilfeldig som før, men vert no lagra i  ein variabel, `sistefangst` i objektet. Punktumnotasjonen i `self.sistefangst` seier at `sistefangst` er ein variabel *inni* (objektet) `self`. Til sist vert fangstvolument returnert. 
@@ -158,8 +158,8 @@ I python heiter konstruktøren alltid `__init__`, og me kan definera og kalla ha
 ```{code-cell} ipython3
 class Market:
    def __init__(self,fishermen,horizon=100):
-       self.horizon = horizon
-	   self.fishermen = fishermen
+        self.horizon = horizon
+        self.fishermen = fishermen
 
 market = Market( [ atari, commodore ] )
 print( market.horizon )
@@ -177,15 +177,15 @@ No er det vanskelegast overstått.  Me kan gå vidare til sjølve simuleringa.
 ```{code-cell} ipython3
 class Market:
    def __init__(self,fishermen):
-	   self.fishermen = fishermen
+        self.fishermen = fishermen
    def price(self,totalquantity):
-       return 45 - totalquantity/5
+        return 45 - totalquantity/5
    def sim(self,horizon=100):
-       for i in range(horizon):
+        for i in range(horizon):
            q = [ f.fangst() for f in self.fishermen ]
-           qsum = sum(q)		   
-		   price = self.price(qsum)
-		   profit =  [ f.profit(price) for f in self.fishermen ]
+           qsum = sum(q)
+           price = self.price(qsum)
+           profit =  [ f.profit(price) for f in self.fishermen ]
 		   print( f"Runde {i}: pris={price}; profit={profit}" )
    
 ```
@@ -240,8 +240,8 @@ Den `Fisherman`-agenten som me har implementert har ein triviell strategi, med t
 class MaximalFisherman(Fisherman):
     def fangst(self):
         f = 75
-		self.sistefangst = f
-		return f
+        self.sistefangst = f
+        return f
 market = Market([ MaximalFisherman() for i in range(3) ])
 market.sim(2)
 ```
