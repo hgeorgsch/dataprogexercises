@@ -11,10 +11,11 @@ jupytext:
     format_name: myst
     format_version: 0.13
     jupytext_version: 1.17.0
+  formats: md:myst
 kernelspec:
-  display_name: Python 3 (ipykernel)
+  display_name: dataprog
   language: python
-  name: python3
+  name: dataprog
 ---
 
 # Programmering og Jupyter Notebook

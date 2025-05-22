@@ -1,6 +1,6 @@
 ---
 jupytext:
-  formats: ipynb,md:myst
+  formats: md:myst
   text_representation:
     extension: .md
     format_name: myst
@@ -192,4 +192,3 @@ variablane?
 + Dokumentasjonen for sklearn
 	+  [datasets.load_iris](https://scikit-learn.org/1.4/modules/generated/sklearn.datasets.load_iris.html#sklearn.datasets.load_iris "sklearn.datasets.load_iris")
 	+ [LinearDiscriminantAnalysis](https://scikit-learn.org/stable/modules/generated/sklearn.discriminant_analysis.LinearDiscriminantAnalysis.html)
-

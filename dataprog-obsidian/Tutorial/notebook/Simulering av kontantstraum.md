@@ -17,7 +17,6 @@ kernelspec:
   name: dataprog
 ---
 
-
 # Simulering av ein kontantstraum
 
 Simulering vert ofte brukt for å modellera og analysera moglege framtidsscenario. I staden for å laga utvikla éin modell som skildrar kva som må skje eller sannsynligvis skjer, simulerer ein eitt mogleg scenario, basert på eitt sett føresetnader. So kan ein evt. simulera fleire gongar med ulike færesetnader. Dette er særleg nyttig i komplekse og probabilistiske modellar, som det ofte er uråd å løysa analytisk. Me høyrer ofte om utgreiingar som refererer til simulering, t.d. i epidemologi og smittevern og i traffikkprogrnosar og vegplanleggjing. 
@@ -343,7 +342,6 @@ Ein vanleg teknikk er å tolka ulike tal frå slumptalsgeneratoren
 som ulike hendingar.  
 T.d. kan me seia at 1 gjev renteoppgang og 10 gjev rentenedgang.
 Då får me kanskje fylgjande som erstatning for `loan` og `loan2`.
-
 
 ```{code-cell} python3
 def loan3(saldo=10000,rente=0.05,nedbetaling=0,year=2024,gebyr=0):

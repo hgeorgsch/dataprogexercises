@@ -5,10 +5,11 @@ jupytext:
     format_name: myst
     format_version: 0.13
     jupytext_version: 1.17.0
+  formats: md:myst
 kernelspec:
-  display_name: Python 3
+  display_name: dataprog
   language: python
-  name: python3
+  name: dataprog
 ---
 
 # Halveringsmetoden
@@ -87,7 +88,6 @@ Merk at ``testvar`` har endra verdi.  Kva skjer om du køyrer dei blokkane over
 (``if``- og ``while``-satsane) over ein gong til?
 :::
 
-
 +++
 
 ## Eit enkelt døme
@@ -148,9 +148,6 @@ def bisect2(f,lower,upper):
     return (lower+upper)/2
 print(bisect2(f,-2,2))
 ```
-
-
-+++
 
 ## Utviklinga gjennom algoritmen
 

@@ -5,11 +5,13 @@ jupytext:
     format_name: myst
     format_version: 0.13
     jupytext_version: 1.17.0
+  formats: md:myst
 kernelspec:
-  display_name: Python 3 (ipykernel)
+  display_name: dataprog
   language: python
-  name: python3
+  name: dataprog
 ---
+
 # The Shrimp Game
 
 Problemet er teke frå *AE201808 Næringsøkonomi*
@@ -59,6 +61,7 @@ Fiskaren fiskar eit tilfeldig volum som vert returnert.
 Marknaden kan kalla denne funksjonen for å ha data til å rekna ut prisen.
 
 Me kan *instantiera* og testa eit objekt av klassa slik:
+
 ```{code-cell} ipython3
 ibm = Fisherman()
 ibmfangst = ibm.fangst()

@@ -1,7 +1,15 @@
 ---
-title: Slumptal
-tags:
-  - lecture/video
+jupytext:
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.17.0
+  formats: md:myst
+kernelspec:
+  name: dataprog
+  language: python
+  display_name: dataprog
 ---
 
 # Simulering og modellering
@@ -93,7 +101,6 @@ def trekk_tilfeldig(liste):
 
 print(f"Tilfeldig element i listen er {trekk_tilfeldig(mange_kast)}")
 ```
-
 
 * Av og til må man lage egne rutiner slik som dette
 * Andre ganger kan vi bruke en av de mange innebygde funksjonene i `random` biblioteket

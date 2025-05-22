@@ -1,12 +1,24 @@
 ---
-tags:
-  - exercise
-  - simulering
-title: Iskrem på ei strand
+tags: [exercise, simulering]
+title: "Iskrem p\xE5 ei strand"
+jupytext:
+  cell_metadata_filter: -all
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.17.0
+  formats: md:myst
+  root_level_metadata_filter: -tags,-title
+kernelspec:
+  display_name: dataprog
+  language: python
+  name: dataprog
 ---
 
 # Iskrem på ei strand
 
++++
 
 + To iskremseljarar med vagn som dei kan flytta kvar dag.
 	+ Mål: tena mest mogleg pengar
@@ -18,7 +30,7 @@ title: Iskrem på ei strand
 	+ Uniform
 	+ TIlfeldig
 
-
++++
 
 + Klasser
 	+ Simulator
