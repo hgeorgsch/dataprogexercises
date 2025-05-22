@@ -1,11 +1,11 @@
 ---
 jupytext:
+  formats: md:myst,ipynb
   text_representation:
     extension: .md
     format_name: myst
     format_version: 0.13
     jupytext_version: 1.17.0
-  formats: md:myst,ipynb
 kernelspec:
   display_name: dataprog
   language: python
@@ -125,8 +125,8 @@ Legg merke til at me har direkte tilgang til attributten i objektet, via punktum
 
 ```{code-cell} ipython3
 price = 15
-print( f"Atari hadde profitt på ${atari.profitt(price)}." )
-print( f"Commodore hadde profitt på ${commodore.profitt(price)}." )
+print( f"Atari hadde profitt på ${atari.profit(price)}." )
+print( f"Commodore hadde profitt på ${commodore.profit(price)}." )
 ```
 
 :::{tip}
@@ -186,7 +186,7 @@ class Market:
            qsum = sum(q)
            price = self.price(qsum)
            profit =  [ f.profit(price) for f in self.fishermen ]
-		   print( f"Runde {i}: pris={price}; profit={profit}" )
+           print( f"Runde {i}: pris={price}; profit={profit}" )
    
 ```
 
@@ -279,3 +279,4 @@ Kva simuleringar treng du for å finna ein fornuftig likevekt i marknaden?  Kva 
 :::{admonition} Oppgåve
 *Shrimp Game* er eit særtilfelle av *Cobweb-modellen* (sjå t.d. [Dawid and Kopel 1998](https://link.springer.com/article/10.1007/s001910050066)). Korleis fungerer ulike strategiar dersom der er mange leverandørar i marknaden, kanskje 100 eller 1000? Du må heilt sikkert endra pris- og profittfunksjonen for at nokon skal tena pengar med so mange konkurranter, men det kan du gjera.
 :::
+
