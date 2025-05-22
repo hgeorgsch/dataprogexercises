@@ -5,7 +5,7 @@ jupytext:
     format_name: myst
     format_version: 0.13
     jupytext_version: 1.17.0
-  formats: md:myst
+  formats: md:myst,ipynb
 kernelspec:
   display_name: dataprog
   language: python
