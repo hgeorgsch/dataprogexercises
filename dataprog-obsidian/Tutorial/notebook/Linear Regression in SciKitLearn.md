@@ -14,11 +14,22 @@ kernelspec:
 
 # Lineær Regresjon i scikit-learn
 
-+ [Diabetes Dataset](https://scikit-learn.org/stable/datasets/toy_dataset.html#diabetes-dataset)
+*Scikit-learn* (`sklearn`) er eit populært bibliotek både for maskinlæring og
+konvensjonell statistikk.  Mange populære datasett er inkludert
+i biblioteket, til testing og utprøving, og her skal me bruka eitt 
+av dei, nemleg eit for prediksjon av utvikling av diabetes.
+Detaljane står i 
+[dokumentasjonen på datasettet](https://scikit-learn.org/stable/datasets/toy_dataset.html#diabetes-dataset).
+
+For å lasta datasettet importerer me `sklearn` og bruker biblioteket.
 
 ```{code-cell} python3
 from sklearn.datasets import load_diabetes
 diabetes = load_diabetes()
+display(diabetes)
+```
+
+```
 diabetes.target[:3]
 diabetes.data.shape
 ```
