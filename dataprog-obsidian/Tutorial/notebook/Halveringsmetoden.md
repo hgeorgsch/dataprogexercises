@@ -81,10 +81,11 @@ while testvar > 0:
         testvar = testvar - 2
 ```
 
-### Oppgåve
+::: {admonition} Oppgåve
 
 Merk at ``testvar`` har endra verdi.  Kva skjer om du køyrer dei blokkane over
 (``if``- og ``while``-satsane) over ein gong til?
+:::
 
 
 +++
@@ -124,9 +125,10 @@ print ( bisect(f,-2,2))
 [Lenke til halveringsmetoden grafisk](https://jonajh.folk.ntnu.no/forkurs/halveringsmetoden.html)
 <iframe src=https://jonajh.folk.ntnu.no/forkurs/halveringsmetoden.html width=700 height=500>
 </iframe>
-### Oppgåve
 
+::: {admonition} Oppgåve
 Finn dei to andre nullpunkta vha. halveringsmetoden.
+:::
 
 +++
 

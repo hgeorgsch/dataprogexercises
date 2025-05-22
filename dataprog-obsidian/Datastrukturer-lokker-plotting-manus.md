@@ -14,6 +14,7 @@ kernelspec:
 +++ {"slideshow": {"slide_type": "slide"}}
 
 # Datastrukturer: Lister
+
 * I forrige time regnet vi på populasjonsvekst for Norge og Sverige
 * Hva om vi i populasjonsveksteksempelet ikke bare så på 2 land, men kanskje alle i Europa
 * Alle parametre måtte ha en egen variabel for hvert land
@@ -24,6 +25,7 @@ kernelspec:
 +++ {"slideshow": {"slide_type": "subslide"}}
 
 ## Lister
+
 * Vi trenger en annen måte å organisere og *strukturere* datapunktene våre på
 * Python har flere ulike typer **datastrukturer** som kan hjelpe oss med det
 * Den første vi skal se på er *lister*

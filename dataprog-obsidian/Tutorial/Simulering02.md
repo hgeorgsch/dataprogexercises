@@ -9,7 +9,7 @@ author: Hans Georg Schaathun
 
 + Byggjer på  [[Simulering av kontantstraum]] og [[Numeriske Metodar og Kontrollflyt]]
 + *Oversiktsføredrag* 
-	+ [Tilfeldigheit](Tilfeldigheit)
+	+ [Tilfeldigheit](notebook/Tilfeldigheit)
 		+ Simulering av terningar ?
 		+ pseudo-tilfeldige tal ?
 	+ [Datastrukturar og Kompleksitet](Datastrukturar%20og%20Kompleksitet)
