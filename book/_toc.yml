@@ -41,6 +41,7 @@ chapters:
     - file: Statistikk og Maskinlæring
       sections:
       - file: notebook/Fisher Linear Discriminant in sklearn
+      - file: notebook/Evaluering
   - file: midway
   - file: second
   - file: closure

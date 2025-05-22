@@ -283,7 +283,7 @@ for x in [ x1, x2, x3 ]:
    print( f"{x} -> {lda.predict(x)}" )
 ```
 
-::: {admonition}
+::: {admonition} Refleksjon
 Kva gjer koden min over?
 Kva tyder tala over?
 :::

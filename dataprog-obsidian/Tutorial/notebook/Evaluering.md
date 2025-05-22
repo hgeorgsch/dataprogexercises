@@ -52,7 +52,7 @@ på.  Dette testsettet kan me ikkje bruka i treninga.
 Ein vanleg tommelfingerregel er å bruka 20% av datasettet til testing
 og 80% til trening.
 
-::: {admonition}
+::: {admonition} Merknad
 Dette er ein tommelfingerregel.  Dersom du er kjend med estimering
 og hypotesetesting frå statistikk, so kan du kanskje rekna ut kor
 mange datapunkt du treng i testsettet for å få eit statistisk
@@ -117,7 +117,7 @@ Merk at me berre skil mellom iris setosa og ikkje-setosa.
 
 ```{code-cell} ipython3
 lda = LinearDiscriminantAnalysis()  
-lda.fit(trening,trenningtarget)
+lda.fit(trening,treningtarget)
 print(lda.coef_)
 print(lda.intercept_)
 ```
@@ -215,7 +215,7 @@ for x in [ x1, x2, x3 ]:
    print( f"{x} -> {lda.predict(x)}" )
 ```
 
-::: {admonition}
+::: {admonition} Refleksjon
 Kva gjer koden min over?
 Kva tyder tala over?
 :::

@@ -12,7 +12,7 @@ kernelspec:
   display_name: dataprog
 ---
 
-# Linear Regression in scikit-learn
+# Lineær Regresjon i scikit-learn
 
 + [Diabetes Dataset](https://scikit-learn.org/stable/datasets/toy_dataset.html#diabetes-dataset)
 
