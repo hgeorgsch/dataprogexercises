@@ -270,12 +270,14 @@ Lat oss billa oss inn at me har målt tre blomar, og målt begerblada.
 Me skriv kvar blome som ei liste med [*lengd*, *breidd*].
 
 ```{code-cell} ipython3
-x1 = [ 4.4, 3.5 ]
-x2 = [ 4.8, 2.5 ]
-x3 = [ 3.8, 6.6 ]
+import numpy as np
+x1 = np.array([[ 4.4, 3.5 ]])
+x2 = np.array([[ 4.8, 2.5 ]])
+x3 = np.array([[ 7.5, 2.6 ]])
 ```
 
 No kan me sjekka kva modellen meiner om desse blomane.
+
 ```{code-cell} ipython3
 for x in [ x1, x2, x3 ]:
    print( f"{x} -> {lda.predict(x)}" )
@@ -288,7 +290,22 @@ Kva tyder tala over?
 
 Me skal sjå at modellen predikerer setosa (0) for den fyrste, og ikkje for dei to andre.
 
-lda.predict((l,b))` gje oss ein *prediksjon* for klassa.
+Lat oss sjå korleis det ser ut i spreidingsplottet òg.
+Me legg til dei tre nye blomane med kross i plottet for å skilja dei
+frå treningssettet, slik:
+
+```{code-cell} ipython3
+ax = plt.subplot()
+scatter = ax.scatter(iris.data[:, 0], iris.data[:, 1], c=iris.target)
+ax.set(xlabel=iris.feature_names[0], ylabel=iris.feature_names[1])
+ax.legend(
+    scatter.legend_elements()[0], ["setosa", "ikkje setosa"], loc="lower right"
+)
+
+xn = [ x[0,0] for x in [ x1, x2, x3 ] ]
+yn = [ x[0,1] for x in [ x1, x2, x3 ] ]
+ax.plot( xn, yn, "x" )
+```
 
 ## Oppsummering
 
@@ -302,7 +319,11 @@ ikkje lineære.
 Når djupe nevrale nettverk vert brukte til klassifisering, definerer
 dei ei ikkje-lineær hyperflate som skiljer to klasser.
 
-+ Dokumentasjonen for sklearn
+Der er to viktige ting som me ikkje har vist her:
++ Lineær diskriminant med meir enn to *inputs*.
++ Evaluering av modellen.
+Dette skal me koma tilbake til.
+
++ Meir dokumentasjonen på klearn
     +  [datasets.load_iris](https://scikit-learn.org/1.4/modules/generated/sklearn.datasets.load_iris.html#sklearn.datasets.load_iris "sklearn.datasets.load_iris")
     + [LinearDiscriminantAnalysis](https://scikit-learn.org/stable/modules/generated/sklearn.discriminant_analysis.LinearDiscriminantAnalysis.html)
-
