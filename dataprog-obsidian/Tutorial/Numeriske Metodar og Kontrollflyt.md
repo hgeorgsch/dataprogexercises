@@ -18,7 +18,7 @@ Me freistar å gje eit par forskjellige innfallsvinklar til kvart tema. Det typi
 	+ [Imperativ programmering og maskinarkitektur](https://iirevu.org.ntnu.no/Imperativ%20programmering%20og%20maskinarkitektur)
 	+ [Kontrollflyt i Python](https://iirevu.org.ntnu.no/Kontrollflyt%20i%20Python)
 + **Demovideo**
-	+ [Kontrollflyt](Kontrollflyt)
+	+ [[Kontrollflyt]]
 + **Øvingar**
 	+ [Halveringsmetoden](notebook/Halveringsmetoden)
 	+ [[Folkevekst]]

@@ -24,6 +24,7 @@ chapters:
       - file: notebook/Halveringsmetoden
     - file: Simulering02
       sections:
+      - file: Datastrukturar og Kompleksitet
       - file: notebook/Tilfeldigheit
       - file: notebook/Simulering og Datastrukturar
       - file: notebook/Marknadssimulering
