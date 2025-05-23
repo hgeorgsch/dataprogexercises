@@ -55,6 +55,15 @@ print(diabetes.target[:3])
 print(diabetes.data[:3,:])
 ```
 
+::: {admonition} Merknad
+Datasettet er skalert og normalisert.  Det har ein del føremonar for
+algoritmane, men for å kunne tolka data må me då finna ut korleis
+dei er skalert for å konvertera dei til kjende einingar.  
+Det kan vera at ein kan finna denne informasjonen i dokumentasjonen
+og andre kjelder som har utvikla datasettet, men det tek me oss ikkje
+tid til.
+:::
+
 ::: {admonition} Oppgåve
 Datastrukturen `diabetes` inneheld og ei beskriving, som `diabetes.DESCR`.
 For å sjå beskrivinga, er det best å bruka `print` eller `display`?
@@ -90,6 +99,60 @@ reg.fit(x,y)
 print(reg.coef_)
 print(reg.intercept_)
 ```
+
+Her gjer me to ting.  Fyrst instantierer me ein modell `reg`, som ein
+*LinearRegression*-modell frå `sklearn`. 
+Deretter tilpasser me modellen til datasettet, vha. `fit`-metoden,
+som bestemmer parametrane i modellen.
+Du hugsar kanskje frå statistikken at ein lineær regresjonsmodellen
+har likninga $y = ax + b$.
+Det er parametrane $a$ og $b$ som vert bestemte av `fit`-metoden.
+Her er `reg.coef_` $a$, og dette er gjerne kjende som *vektene* i
+modellen i maskinlæringsjargonen.  
+Dette er ei matrise fordi ein lineær modell treng éi vekt per *input*-variabel.
+Vanligvis vil matrisa ha meir enn eitt element.
+Konstantleddet $b$ finn me i `reg.intercept`.
+
+Dersom me no observerer eitt nytt individ, og måler $x$-variabelen til 0,1, kan
+me spørja modellen kva som er venta sykdomsutvikling $y$.
+Modellen definerer den lineære funksjonen $f(x) = ax+b$, som me kan definera i 
+python som,
+
+```{code-cell} ipython3
+a = reg.coef_.flatten()[0]
+b = reg.intercept_
+def f(x): return a*x + b
+```
+
+Modellen vår er altso funksjonen `f`, som me kan bruka som fylgjer,
+
+```{code-cell} ipython3
+print( f(0.1) )
+```
+
+## Visualisering
+
+## Predicsjon med modellen
+
+Me treng ikkje konstruera funksjonen `f` sjølv.  Me gjorde det over berre
+for å illustrera samanhengen med teorien i statistikken.
+Modellane i `sklearn` har derimot ein `predict`-metode som gjer det same som `f`.
+
+```{code-cell} ipython3
+print( reg.predict([[0.1]]) )
+```
+
+::: {admonition} Merknad
+Innparametern til `predict` er ein 2D-struktur, anten ein numpy-*array* eller her 
+ei liste av lister.  Grunnen er at `predict` kan predikare for mange $x$-verdiar
+(rader) samstundes, i tillegg til at der vanligvis er fleire inn-variablar
+(søyler).
+:::
+
+::: {admonition} Merknad
+Lag eit plott som samanliknar prediksjonane frå `f` og `reg.predict`.
+Er dei alltid like?
+:::
 
 ## References
 
