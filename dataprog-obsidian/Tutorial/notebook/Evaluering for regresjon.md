@@ -43,11 +43,15 @@ importerer òg dei same biblioteka som me brukte sist.
 
 ```{code-cell} ipython3
 from sklearn.datasets import load_diabetes
+from sklearn import linear_model
 import matplotlib.pyplot as plt
 import numpy as np
 
 diabetes = load_diabetes()
-display(diabetes)
+x = diabetes.data[:,2:3]
+y = diabetes.target
+print(x)
+print(y)
 ```
 
 Me har ikkje fleire data enn det eine settet.  For å kunne evaluera
@@ -68,65 +72,25 @@ Der større testsett gjev ein meir påliteleg evaluering, vil større
 treningssett gje ein betre modell.  Det er eit dilemma.
 :::
 
-Me hadde 242 objekt i datasettet.
+Me hadde 242 objekt i datasettet.  Eit testsett på 20% vert då
+om lag 49 objekt, med 193 til treningssettet.
 
 ```{code-cell} ipython3
-trening1 = iris.data[:40,:2]
-trening2 = iris.data[50:90,:2]
-trening3 = iris.data[100:140,:2]
-test1 = iris.data[40:50,:2]
-test2 = iris.data[90:100,:2]
-test3 = iris.data[140:,:2]
-
-trening = np.vstack( [ trening1, trening2, trening3 ] )
-test = np.vstack( [ test1, test2, test3 ] )
+trainx = x[:193]
+trainy = y[:193]
+testx = x[193:]
+testy = y[193:]
 ```
 
-Her bruker me seks variablar for å dela kvar klasse i 40+10 
-rader, før me stablar saman tre delsett til test- og tremingssettet.
-Me bruker numpy-funksjonen `vstack` som står for *vertical stack` 
-til å setja saman matrisene.
-Me kan sjekka:
 
-```{code-cell} ipython3
-print( "TRENING" )
-print(trening)
-print( "TEST" )
-print(test)
-```
-
-Me må gjera det same med klassene *target*.
-
-```{code-cell} ipython3
-treningtarget = np.zeros( 120 )
-treningtarget[40:] = 1
-print( treningtarget )
-```
-
-Her gjer me det på ein litt annan måte, som er meir kompakt.
-Det er mogleg fordi me veit kvar klassene er.
-Den fyrste lina lagar ein vektor med 120 nullar, og den andre sett
-alle elementa bortsett frå dei 40 fyrste, til ein.
-
-For testsettet har me
-
-```{code-cell} ipython3
-testtarget = np.zeros( 30 )
-testtarget[10:] = 1
-print( testtarget )
-```
-
-Merk at me berre skil mellom iris setosa og ikkje-setosa.
 
 ## Trening av diskriminanten
 
-Me kan trena diskriminanten som før.
+Me kan trena modellen som før.
 
 ```{code-cell} ipython3
-lda = LinearDiscriminantAnalysis()  
-lda.fit(trening,treningtarget)
-print(lda.coef_)
-print(lda.intercept_)
+reg = linear_model.LinearRegression()
+reg.fit(trainx,trainy)
 ```
 
 ::: {admonition} Oppgåve
