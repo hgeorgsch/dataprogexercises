@@ -2,6 +2,7 @@
 
 title: Data og programmering for ulike fag
 author: Hans Georg Schaathun og Jonas Julius Harang
+copyright: "2023"
 logo: ntnu.svg
 execute:
   execute_notebooks: force
