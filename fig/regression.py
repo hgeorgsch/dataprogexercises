@@ -19,8 +19,9 @@ plt.savefig( "regdata.svg" )
 reg = linear_model.LinearRegression()
 reg.fit(x,y)
 
-xv = [ -0.1, 0, 0.1, 0.15 ]
-yv = reg.predict(np.array([xv]) 
+xv = np.array( [[ -0.09, 0, 0.1, 0.16 ]] ).T
+print( xv.shape )
+yv = reg.predict(xv)
 ax.plot( xv, yv, "r:" )
 
 plt.savefig( "regmodel.svg" )
