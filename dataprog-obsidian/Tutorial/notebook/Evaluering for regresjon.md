@@ -140,16 +140,6 @@ På same måte som i den
 [forrige øvinga](Fisher%20Linear%20Discriminant%20in%20sklearn),
 kan me definera `f` for å plotta diskriminanten.
 
-+++
-
-::: {admonition} Refleksjon
-Er dette ein god modell for testsettet?
-Korleis ville du ha teikna diskriminanten for å skilja dei to klassene?
-
-Samanlikna med visualiseringa som du gjorde sjølv på treningssettet.
-Er der gode grunnar for at diskriminanten ikkje er betre?
-:::
-
 
 ## Oppsummering
 
