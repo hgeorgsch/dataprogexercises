@@ -33,6 +33,7 @@ chapters:
       sections:
       - file: Filhandtering
       - file: notebook/Linear Regression in SciKitLearn
+      - file: notebook/Evaluering for regresjon
     - file: Agent-basert simulering
       sections:
       - file: notebook/Shrimp-Game
