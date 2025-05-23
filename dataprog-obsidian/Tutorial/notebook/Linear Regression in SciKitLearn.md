@@ -1,11 +1,11 @@
 ---
 jupytext:
+  formats: md:myst,ipynb
   text_representation:
     extension: .md
     format_name: myst
     format_version: 0.13
     jupytext_version: 1.17.0
-  formats: md:myst,ipynb
 kernelspec:
   name: dataprog
   language: python
@@ -21,24 +21,74 @@ av dei, nemleg eit for prediksjon av utvikling av diabetes.
 Detaljane står i 
 [dokumentasjonen på datasettet](https://scikit-learn.org/stable/datasets/toy_dataset.html#diabetes-dataset).
 
+## Datasettet
+
 For å lasta datasettet importerer me `sklearn` og bruker biblioteket.
 
-```{code-cell} python3
+```{code-cell} ipython3
 from sklearn.datasets import load_diabetes
 diabetes = load_diabetes()
 display(diabetes)
 ```
 
-```
-diabetes.target[:3]
-diabetes.data.shape
+::: {admonition} Oppgåve
+Kva datatype er `diabetes`?
+:::
+
+Dette datasettet er førebudd spesielt for testing av regresjonsmodellar.
+Difor skil det mellom *input* eller `data`, og den variabelen som ein
+skal freista å predikera, *target*.
+
+```{code-cell} ipython3
+print(diabetes.data.shape)
+print(diabetes.target.shape)
 ```
 
-```{code-cell} python3
+Det er alltid nyttig å sjå på dimensjonane på datasett.
+Her har med 442 rader, same for `data` og `target`.
+Der er ti inn-variablar i `data` og éin ut-variabel i `target`.
+Om me ser på eit par liner i toppen av kvar matrise, ser me at alt
+er tal.
+
+```{code-cell} ipython3
+print(diabetes.target[:3])
+print(diabetes.data[:3,:])
+```
+
+::: {admonition} Oppgåve
+Datastrukturen `diabetes` inneheld og ei beskriving, som `diabetes.DESCR`.
+For å sjå beskrivinga, er det best å bruka `print` eller `display`?
+Kva tyder dei ulike søylene?
+:::
+
+## Modellen
+
+Normalt bruker ein fleire *input*-variablar i modellen, men for å
+kunna visualisera han pent i 2D, skal me berre bruke éin.
+T.d. kan me ta ut den tredje søyla.
+
+```{code-cell} ipython3
+import numpy as np
+x = diabetes.data[:,2:3]
+print(x.shape)
+y = diabetes.target
+print(y.shape)
+```
+
+::: {admonition} Oppgåve
+Kva er skilnaden på `diabetes.data[:,2:3]` og `diabetes.data[:,2]`?  
+Du kan sjekka ved å endra på koden?
+:::
+
+Merk at `x` må vera ei to-dimensjonal matrise når me går vidare,
+sjølv om ho berre har éi søyle.
+
+```{code-cell} ipython3
 from sklearn import linear_model
 reg = linear_model.LinearRegression()
-reg.fit([[0, 0], [1, 1], [2, 2]], [0, 1, 2])
-reg.coef_
+reg.fit(x,y)
+print(reg.coef_)
+print(reg.intercept_)
 ```
 
 ## References
