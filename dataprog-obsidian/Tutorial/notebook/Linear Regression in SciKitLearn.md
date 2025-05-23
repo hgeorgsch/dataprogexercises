@@ -64,12 +64,13 @@ og andre kjelder som har utvikla datasettet, men det tek me oss ikkje
 tid til.
 :::
 
+## Førebuing av datasettet
+
 ::: {admonition} Oppgåve
 Datastrukturen `diabetes` inneheld og ei beskriving, som `diabetes.DESCR`.
 For å sjå beskrivinga, er det best å bruka `print` eller `display`?
 Kva tyder dei ulike søylene?
 :::
-
 ## Modellen
 
 Normalt bruker ein fleire *input*-variablar i modellen, men for å
@@ -91,6 +92,35 @@ Du kan sjekka ved å endra på koden?
 
 Merk at `x` må vera ei to-dimensjonal matrise når me går vidare,
 sjølv om ho berre har éi søyle.
+
+Før me går vidare, er det greitt å visualisera, so me ser kva
+me arbeider med.
+
+```{code-cell} ipython3
+import matplotlib.pyplot as plt
+
+ax = plt.subplot()
+scatter = ax.scatter( x, y )
+ax.set(xlabel="$x$", ylabel="$y$")
+```
+
+::: {admonition} Refleksjon
+Kva fortel plottet deg?
+
+Variablane her er hhv. BMI ($x$) og sjukdomsutvikling ($y$).
+Er der samanheng mellom dei to?  Trur du BMI er ein god predikator
+aleine?
+:::
+
+::: {admonition} Merknad
+I aksenamna brukte me notasjonen `$x$` og `$y$`.  
+Det er $\LaTeX$-notasjon som gjerne kan brukast til
+matematiske symbol både i matplotlib og markdown.
+:::
+
+## Modellen
+
+Fylgjande kode set opp regresjonsmodellen.
 
 ```{code-cell} ipython3
 from sklearn import linear_model
@@ -132,7 +162,21 @@ print( f(0.1) )
 
 ## Visualisering
 
-## Predicsjon med modellen
+Det er greit å visualisera regresjonsmodellen saman med 
+datasettet.
+
+```{code-cell} ipython3
+ax = plt.subplot()
+scatter = ax.scatter( x, y )
+ax.set(xlabel="$x$", ylabel="$y$")
+
+xv = [ -0.1, 0, 0.1, 0.15 ]
+yv = [ f(x) for x in xv ]
+ax.plot( xv, yv, "r:" )
+
+```
+
+## Prediksjon med modellen
 
 Me treng ikkje konstruera funksjonen `f` sjølv.  Me gjorde det over berre
 for å illustrera samanhengen med teorien i statistikken.
@@ -154,6 +198,20 @@ Lag eit plott som samanliknar prediksjonane frå `f` og `reg.predict`.
 Er dei alltid like?
 :::
 
-## References
+## Oppsummering
 
-+ [Medium post](https://medium.com/@heyamit10/how-to-perform-linear-regression-using-pandas-scikit-learn-9fcfa6085fb0)
+Læringsmålet i denne øvinga har vore å sjå ein mogleg syntaks 
+for lineær regresjon i python.
+
+Me har vald scikit-learn her fordi det er eit utbreidd val for
+trening og testing av maskinlæringsmodellar, og ein kan bruka
+mange ulike algoritmar i det same rammeverket og med den same 
+syntaksen.
+
+Det er ikkje det beste valet for statistikk, der ein gjerne
+vil analysera dei einskilde parametrane i modellen.
+Då kan ein anten sjå etter andre bibliotek, eller implementera
+dei matematiske formlane sjølv. 
+
+Dømet er basert på ein post frå
+[Medium](https://medium.com/@heyamit10/how-to-perform-linear-regression-using-pandas-scikit-learn-9fcfa6085fb0)
