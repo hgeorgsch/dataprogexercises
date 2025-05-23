@@ -7,7 +7,7 @@ from sklearn import linear_model
 
 diabetes = load_diabetes()
 
-x = diabetes.data[:,2:3]
+x = diabetes.data[:,6:7]
 y = diabetes.target
 
 ax = plt.subplot()

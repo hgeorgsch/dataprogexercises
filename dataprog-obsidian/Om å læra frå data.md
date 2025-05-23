@@ -55,7 +55,7 @@ Korelasjon versus kausalitet
 
 <!-- slide template="[[tpl-quote]]" -->
 
-![[dataset2.svg]]
+![[regdata.svg]]
 
 ::: credit
 :::
@@ -70,7 +70,7 @@ tala på dødsfall og talet på handvask.
 
 # regresjon
 
-![[reg.svg]]
+![[regmodel.svg]]
 
 ::: credit
 :::
