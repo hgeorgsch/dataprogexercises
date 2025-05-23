@@ -23,8 +23,8 @@ tags:
 	+ Step 1a.  Extracting Series and making plots.
 	+ Step 1b.  Mean and standard deviation 
 + Step 2. SciKitLearn
-	+ [[Linear Regression in SciKitLearn]]
-	+ [[Evaluering for regresjon]]
+	+ [Lineær regresjon]([notebook/Linear%20Regression%20in%20SciKitLearn)
+	+ [Evaluering av regresjonsmodellen](notebook/Evaluering%20for%20regresjon)
 + Step 3. Eksporting plots
 
 + Oppgåver
