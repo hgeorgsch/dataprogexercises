@@ -24,6 +24,7 @@ tags:
 	+ Step 1b.  Mean and standard deviation 
 + Step 2. SciKitLearn
 	+ [[Linear Regression in SciKitLearn]]
+	+ [[Evaluering for regresjon]]
 + Step 3. Eksporting plots
 
 + Oppgåver
