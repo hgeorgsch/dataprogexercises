@@ -10,8 +10,6 @@ kernelspec:
   display_name: dataprog
   language: python
   name: dataprog
-tags:
-   - exercise
 ---
 
 # Evaluering av modellar
@@ -82,8 +80,6 @@ testx = x[193:]
 testy = y[193:]
 ```
 
-
-
 ## Trening av diskriminanten
 
 Me kan trena modellen som før.
@@ -100,8 +96,8 @@ Visualiser treningssettet og diskriminanten.
 Me kan òg sjekka nøyaktig kor mykje feil modellen gjer på treningssettet.
 
 ```{code-cell} ipython3
-pred = lda.predict( trening )
-error = pred - treningtarget
+pred = reg.predict( trainx )
+error = pred - trainy
 print( error )
 ```
 
@@ -129,8 +125,8 @@ Kva representerer dette talet `sum(error)/len(error)`?
 Me kan gjera akkurat den same testen som med treningssettet.
 
 ```{code-cell} ipython3
-testpred = lda.predict( test )
-testerror = testpred - testtarget
+testpred = reg.predict( testx )
+testerror = testpred - testy
 print( testerror )
 ```
 
@@ -144,25 +140,7 @@ På same måte som i den
 [forrige øvinga](Fisher%20Linear%20Discriminant%20in%20sklearn),
 kan me definera `f` for å plotta diskriminanten.
 
-```{code-cell} ipython3
-x, y = lda.coef_.flatten()
-z, = lda.intercept_
-beta = -z/y
-alpha = -x/y
-def f(xx): return alpha*xx+beta
-```
-
-```{code-cell} ipython3
-ax = plt.subplot()
-scatter = ax.scatter(test[:, 0], test[:, 1], c=testtarget)
-ax.set(xlabel=iris.feature_names[0], ylabel=iris.feature_names[1])
-ax.legend(
-    scatter.legend_elements()[0], ["setosa", "ikkje setosa"], loc="lower right"
-)
-xv = [ 4.25 + i/2 for i in range(7) ]
-yv = [ f(x) for x in xv ]
-ax.plot( xv, yv, "k:" )
-```
++++
 
 ::: {admonition} Refleksjon
 Er dette ein god modell for testsettet?
@@ -172,15 +150,6 @@ Samanlikna med visualiseringa som du gjorde sjølv på treningssettet.
 Er der gode grunnar for at diskriminanten ikkje er betre?
 :::
 
-::: {admonition} Merknad
-Når me drog ut testsettet, tok me dei ti siste eksemplara
-i kvar klasse.
-Det er bør me kun gjera dersom testsettet er tilfeldig ordna.
-Me risikerer at testen vert skeiv dersom blomar med uvanlege
-drag ligg samla i datasettet.
-Difor er det god skikk, i dei fleste tilfelle, og stokka datasettet
-tilfeldig før me deler det i trenings- og testdata.
-:::
 
 ## Oppsummering
 
@@ -195,3 +164,6 @@ dårleg på testsettet.
 Difor skal de ta med dykk desse teknikkane og prøva dei ut på større
 og meir interessante datasett.
 
+```{code-cell} ipython3
+
+```
