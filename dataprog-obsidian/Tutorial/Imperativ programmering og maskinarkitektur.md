@@ -5,7 +5,16 @@ tags:
 
 # Imperativ programmering
 
-note: Der er mange måtar å programmera ei datamaskin på. Det paradigmet som ligg til grunn for dette kurset er *imperativ* programmering. Det er det mest kjende paradigmet, men ikkje det einaste.
+note:
+Der er mange måter å programmere en datamaskin på.
+Det paradigmet som ligger til grunn for dette kurset kaller vi gjerne for *imperativ* programmering.
+Det er det mest kjente paradigmet, men ikke det eneste.
+
+Vi skal snakke litt om hvordan datamaskina konseptuelt sett virker.
+Målet er bedre innblikk i hvordan vi tenker når vi bruker Python til
+å instruere datamaskinen..
+
+*original*: Der er mange måtar å programmera ei datamaskin på. Det paradigmet som ligg til grunn for dette kurset er *imperativ* programmering. Det er det mest kjende paradigmet, men ikkje det einaste.
 
 Me skal prata litt om korleis datamaskina konseptuelt sett verkar. Målet er litt betre innblikk i korleis me tenkjer når me bruker Python til å instruera datamaskina.
 
@@ -20,6 +29,13 @@ Bilete frå DALL-E (kunstig intelligens)
 :::
 
 note:
+Vi kaller det for imperativ programmering, fordi vi gir maskinen kommandoer, dvs. setninger i grammatisk imperativ.  
+
+Maskinen tenker ikke.
+Det er programmøren som står for all tenkingen.
+Maskinen gjør nøyaktig som kommandert, og programmøren må se for seg hva hver kommando vil føre til.
+
+*original:*
 Me kaller det for imperativ programmering, fordi me gjev maskina kommandoar, dvs. setningar i grammatisk imperativ.  
 
 Maskina tenkjer ikkje. Det er programmøren som står for all tenkinga. Maskina gjer nøyaktig som kommandert, og programmøren må sjå for seg kva kvar kommando fører til.
@@ -32,11 +48,19 @@ print(b)
 ```
 
 note:
-Imperativen er tydelag når me skriv t.d. *print* i python. Maskina prentar som ho får beskjed om. Den fyrste lina i koden her er òg ein imperativ, som som me lyt lesa som «lat $b$ vera lik 5». 
+Imperativen er tydelig når vi skriver t.eks. *print* i python.
+Maskinen prenter som han får beskjed om.
+Den første kodelinjen her er også en imperativ, som som vi kan lese som «la $b$ være lik 5». 
 
-Eit kritisk kjenneteikn i imperativ programmering er *tilstand* . Tilordning `b=5` endrar tilstand på maskina. Før line 1 er `b`uderfinert, når me kjem til line 2 har `b` ein verdi, 5, og altso ein annan tilstand. Resultatet av *print* i line 2 avheng heilt openbert av kva tilstand maskina har.
+Et kritisk kjennetegn i imperativ programmering er *tilstand*.
+Tilordningen `b=5` endrer tilstand på maskinen.
+Før linje 1 er `b` udefinert, når vi kommer til linje 2 har `b` verdien 5, og dermed en anden tilstand.
+Resultatet av *print* i line 2 avhenger helt åbenbart av hvilken tilstand maskinen -- eller `b` -- har.
 
-- [x] Her skulle det kanskje vært en slide om hva vi mener med en tilstandsmaskin før det ses på mer ved turingmaskina? ✅ 2025-05-14
+*original:*
+Imperativen er tydeleg når me skriv t.d. *print* i python. Maskina prentar som ho får beskjed om. Den fyrste lina i koden her er òg ein imperativ, som som me lyt lesa som «lat $b$ vera lik 5». 
+
+Eit kritisk kjenneteikn i imperativ programmering er *tilstand* . Tilordning `b=5` endrar tilstand på maskina. Før line 1 er `b` udefinert, når me kjem til line 2 har `b` ein verdi, 5, og altso ein annan tilstand. Resultatet av *print* i line 2 avheng heilt openbert av kva tilstand maskina har.
 
 ---
 
@@ -152,7 +176,7 @@ Dei fyrste programmørane måtte koda programmet nøyaktig som prosessoren les d
 
 ---
 
-- **ca. 1947/49** Assembler-språk
+- **1947/49** Assembler-språk
 - **1957** Fortran
 - **1958** LISP
 - **1962** Simula
