@@ -6,7 +6,39 @@ tags:
 # Kontrollflyt i python
 
 note: 
+Jeg håper du har hørt foredraget om  «Imperativ programmering», og at du har arbeidet gjennom noen enkle demonstrasjoner og øvelser i python.
+Her skal jeg gå litt nærmere inn i struktur og syntaks i python.
+
+*original:*
 Eg håper du har høyrd føredraget om  «Imperativ programmering», og at du har arbeidd gjennom nokre enkle demonstrasjonar og øvingar i python. No skal eg gå litt nærare inn i struktur og syntaks i python.
+
+---
+
+## Demo
+
+1. Finn vevside
+2. Velg sprog 
+3. Vis bunnen av siden
+4. Tast eller lim inn kode
+
+
+note:
+For å kunne se hva som skjer under panseret, skal vi bruke et verktøy som heter *Python Tutor*.
+Det er gratis tilgjengelig, så du kan bruke det selv òg, hvis du vil.
+
+1. Vevsiden heter `pythontutor.org`
+2. Selv om det heter *Python Tutor*, støttes flere sprog.  Vi velger python.
+3. Nederst på siden er en KI-assistent.  Den har ikke jeg prøvd, men det overlater jeg til dere.
+
+Det vi skal gjøre her er å se hvordan *tilstanden* i maskinen endres mens programmet kjører linje for linje.
+Dette kan vi gjøre med et verktøy som gjerne kalles *debugger*; der finnes også en *debugger* i Jupyter lab.
+*Python Tutor* fungerer litt bedre når vi ønsker å stoppe for hver eneste linje, som vi gjerne gjør når
+vi er helt ferske og programmene små.  Vanlige *debuggers* er bedre egnet med litt mer erfaring og litt større
+programmer.
+
+4. Vi finner boksen hvor vi kan skrive inn vår egen kode.
+5. Vi trykker «Visualize Execution» for å se hva som skjer.
+
 
 ---
 
@@ -14,49 +46,59 @@ Eg håper du har høyrd føredraget om  «Imperativ programmering», og at du ha
 
 ```
 variabel = 5
-```
-
-```
+print( "Variabelen har verdien", variabel )
 variabel2 = variabel**2 + 17
 variabel3 = variabel2 - 2*variabel
 variabel3 = variabel2/2
 ```
-<!-- element class="fragment" -->
 
 note:
-Noko av det mest grunnleggjande er variablar som me kan tilordna ein verdi med likheitsteiknet. Om variabelen ikkje var definert i utgangspunktet, vert han oppretta når han vert tilordna.
+Noe av det mest grunnleggende i imperativ programmering er variabler som vi kan tilordne verdier med likhetstegnet.
+Om variabelen ikke er definert i utgangspunktet, blir han opprettet når han blir tilordnet en verdi.
+I *Python Tutor* kan vi observere tilstanden med alle de variabler som er definerte til en hver tid.
+Vi kan kjøre programmet én linje ad gangen.
+Den røde pilen er «program counter» og viser hvilken linje som skal kjøres neste gang.
 
-(fragment)
-Me har òg tilgang til alle dei vanlege aritmetiske operasjonane.
+Når vi trykker «Next» ser vi hva som skjer.  
+Vi får en boks som heter «Global frame».
+Det er tilstanden til maskinen.
+Variabelen `variabel` er blitt en del av tilstanden.
+
+Vi kan fortsette å trykke *next*.
+Den grønne pilen viser hva som nettopp er kjørt og den røde viser neste linje.
+Når programmet laver *output* ser vi det øverst til høyre.
+
+Hver gang vi tilordner en ny variabel, dukker den opp i *global frame*.
+Vi huske selvsagt at vi kan bruke alle slag aritmetiske uttrykk på høyre side i tilordningen.
+
+(vurdering)
++ Bør vi ha hele kodeeksempelet klart på starten?  
++ Klipp og lim hele kodesnutten samlet?
++ Skrive linje for linje?
++ Mulig å starte med linje 1-2, og legge til linje 3-5 før siste avsnitt
+
 
 ---
 ## Datatypar
 
 ```
 heiltal = 5
+print( type( heiltal ) )
 flyttal = 5.0
+print( type( flyttal ) )
 tekst = "Fem"
+print( type( tekst ) )
 liste = [ 3, 4, 5, 6, 7 ]
+print( type( liste ) )
 ```
 
-
-```
-In [2]: type(variabel)
-Out[2]: int
-
-In [3]: type(flyttal)
-Out[3]: float
-
-In [4]: type(tekst)
-Out[4]: str
-
-In [5]: type(liste)
-Out[5]: list
-```
-<!-- element class="fragment" -->
 
 note:
-Variablar kjem i forskjellige typar. Nokon av dei vanlegaste typane er heiltal, flyttal, teiknstreng og liste. Me treng ikkje fortelja python kva type me vil ha; det finn python ut av, men me kan sjekka kva type ein variabel har fått , med `type`- funksjonen.
+Verdier kommer i forskjellige typer; *datatyper*.
+Noen av de vanligste typene er heltall, flyttall, tegnstreng og liste.
+Vi trenger ikke fortelle python hvilken type vi vil ha; det finner den ut av selv, men vi kan sjekke hva slags type en variabel har fått, med `type`-funksjonen.
+
+Det er verd å være bevisst på.  Det skjer ikke sjelden at programmer ikke virker fordi en variabel plutselig har feil datatype.
 
 ---
 
