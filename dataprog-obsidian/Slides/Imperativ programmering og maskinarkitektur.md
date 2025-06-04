@@ -72,6 +72,12 @@ print(b)
 ```
 
 note:
+Tilstanden blir enda tydligere i dette eksempelet.
+De to *print*-linjene er identiske, men de gir ikke samme resultat, fordi *tilstaden* i maskinen er forskjellig.
+Første gang har `b` tilstanden 5, og *print* skriver ut 5.
+Den andre gangen er tilstanden 10, og det er 10 som blir skrevet ut.
+
+*original:*
 Tilstanden vert enno tydlegare i dette dømet.  Dei to *print*-linene er identiske, men dei gjev ikkje same resultat, fordi *tilstaden* åt maskina er forskjellig. Fyrste gongen har `b` tilstanden 5, og *print* skriv ut 5. Andre gongen er tilstanden 10, og det er 10 som vert skrive ut.
 
 ---
@@ -97,6 +103,16 @@ Alonzo Church
 
 
 note:
+Teorien for datamaskiner og programmering ble lang på vei utarbeidet på 1930-talet, cirka ti år før man først bygde maskiner som faktisk kunne kjøre programmene.
+Church og Turing definterte hvert sitt paradigme. De er ekvivalente i den forstand at de kan *oppnå* det samme, selv om tankesettet er meget forskjellig.
+
+Turingmaskinen er den mest kjente modellen, og den som ligger til grunn for imperativ programmering, der vi kommanderer maskinene og sier nøyaktig hva den skal gjøre i hvilken rekkefølge.
+Church sin $\lambda$-kalkyle ligger til grunn for det som vi i dag kaller *funksjonell programmering*, der vi heller definerer hvilke egenskaper resultatet av programmet skal ha, utan å si hvordan man skal komme dit.
+
+Begge modellene var abstrakte matematiske konsepter, men det er Turing sin modell som best svarer til dei elektroniske maskinene som man tok til å bygge utover 1940-talet.
+Imperativ programmering er stadig det dominerende tankesettet, og derfor er det det vi skal bruke tid på her.
+
+*original:*
 Teorien for datamaskiner og programmering vart hovudsakleg utarbeidd på 1930-talet, om lag ti år før ein fyrst bygde maskiner som faktisk kunne køyra programma. Church og Turing definterte kvart sitt paradigme. Dei er ekvivalente i den forstand at dei kan *oppnå* det same, sjølv om ein tenkjer forskjellig.
 
 Turingmaskina er den mest kjende modellen, og den som ligg til grunn for imperativ programmering, der me kommanderer maskina og seier nøyaktig hva ho skal gjera.  Church sin $\lambda$-kalkyle ligg til grunn for det som me i dag kaller *funksjonell programmering*, der me definerer kva eigenskaper resultatet av programmer skal ha, utan å seia korleis ein oppnår det.
@@ -116,6 +132,14 @@ Turing Machine, reconstructed by Mike Davey as seen at Go Ask ALICE at Harvard U
 :::
 
 note: 
+Turingmaskinen er som sagt en abstrakt og matematisk modell. Bildet viser en rekonstruert og fysisk modell. 
+
+Maskinen har et papirbånd som er rullet opp på to spoler som kan dra båndet fram og tilbake gjennom lesehodet i midten.
+Dette båndet er minnet i maskinen og delt i diskrete posisjonar der hver posisjon kan inneholde ett tegn.
+
+Turingmaskinen er en *tilstandsmaskin*.  Dvs. til en hver tid er maskinen i en bestemt tilstand. Det som maskinen gjør avhenger både av tilstanden og det som står på båndet. 
+
+*original:*
 Turingmaskina er som sagt ein abstrakt og matematisk modell. Biletet viser ein rekonstruert modell. 
 
 Maskina har eit papirband som er rulla opp på to spoler som kan dra bandet att og fram gjennom lesehodet i midten. Papirbandet er minnet i maskina og delt i diskrete posisjonar der kvar posisjon kan innehalad eitt teikn.
@@ -131,6 +155,19 @@ Turingmaskina er ei *tilstandsmaskin*.  Dvs. til ei kvar tid er maskina i ei bes
 :::
 
 note:
+På hver tidssteg ser maskinen tilstanden sin og ett tegn på båndet. Dette avjør både den nye tilstanden og hvilket tegn som blir skrevet på båndet.
+I tillegg kan båndet flytte et steg til høyre eller til venstre.
+Turingmaskinen har en fast oppslagstabell som definerer resultatet for en gitt tilstand og et gitt tegn på båndet.
+Samme tilstand og tegn gir *alltid* samme resultat.
+
+Denne maskinen er selvsagt absurd enkel.
+Den må òg være uhyre treg sidan det tar lang tid å lete gjennom båndet efter riktig posisjon. 
+Likevel viser Turing at den i prinsippet kan løse mange komplekse problem.  
+
+Alt vi trenger er et minne som vi kan bla igjennom og en operasjon som virker på to inputtverdier, tilstanden og verdien fra båndet.
+Ennu i dag regner vi turingmaskinen som målestokk for hva som overhode er mulig å berege.
+
+*original:*
 På kvart tidssteg ser maskina tilstanden sin og eitt teikn på bandet. Dette avgjer både den nye tilstanden og kva teikn som vert skrive til bandet. I tillegg kan bandet flytta eit steg til høgre eller venstre. Turingmaskina har ein fast oppslagstabell, som gjev resultatet for ein gjeven tilstand og eit gjeve teikn på bandet. Same tilstand og teikn gjev *alltid* same resultat.
 
 Denne maskina er sjølvsagt absurd enkel.  Ho må òg vera uhyrleg treig sidan det tek lang tid å leita gjennom bandet. Likevel viser Turing at ho i prinsippet kan løysa mange komplekse problem.  
@@ -149,6 +186,23 @@ Alt me treng er eit minne som me kan bla igjennom og ein operasjon som verkar p�
 :::
 
 note:
+Elementene fra turingmaskinen kjenner vi igjen i John von Neumann sin arkitektur fra 1945.
+Hans modell er blitt førende for praktisk konstruksjon av datamaskiner.
+
+Papirremsen er blit til *Random Access Memory*, eller RAM. *Random Access* betyr at maskinen kan lese og skrive på en hvilken som helst posisjon, utan å bruke tid på å lete langs remsen
+
+Selve prosesseringsenheten er blitt mer kompleks. 
+Kontrollenheten holder styr på programmet og hvilken instruksjon den logiske og aritmetiske enheten skal utføre neste gang.
+Tilstanden er ikke lenger én atomær verdi, men flere registre der hvert register inneholder en verdi.
+
+Instruksjonene er typisk enkle aritmetiske og logiske operasjoner, som pluss, minus, *og* og *eller*, samt instruksjoner for å hoppe i programmet eller lese og skrive til minnet.
+
+I tillegg er maskina koblet til det vi gjerne kaller *perifere enheter*, eller *input/output devices* i figuren.
+Det omfatter skjerm, for *output*, og tastatur for *input*, men kan òg være nettverksgrensesnitt eller harddisk.
+Du la kanskje merke til at turingmaskinen ikke hadde noen mekanisme for å kommunisere omverdenen.
+I praksis må den logiske enheten ha instruksjoner for å sende og motta data til og fra perifere enheter.
+
+*original:*
 Desse elementa kjenner me igjen i  John von Neumann sin arkitektur frå 1945, som har vorte førande for den praktiske konstruksjonen av datamaskiner.
 
 Papirremsa er vorte til *Random Access Memory*, eller RAM. *Random Access* tyder at maskina kan lesa og skriva til ein kvan posisjon, utan å bruka tid på å leita langs remsa.
@@ -158,8 +212,6 @@ Sjølve prosesseringseininga er vorten meir kompleks. Kontrolleininga held styr 
 Instruksjonane er typisk enkle aritmetiske og logiske operasjonar, som pluss, minus, og, og eller, samt instruksjonar for å hoppa i programmet eller lesa og skriva til minnet.
 
 I tillegg er maskina kobla til det me gjerne kaller *perifere einingar*, eller *input/output devices* i figuren. Det omfatter skjerm, for *output*, og tastatur for *input*, men kan òg vera nettverksgrensesnitt eller harddisk. Du la kanskje merke til at turingmaskina ikkje hadde nokon mekanisme for å kommunisera med omverda. I praksis må den logiske eininga ha instruksjonar for å senda og motta data til og frå perifere einingar.
-
-- [x] Kanskje noen ord om hva input/output device er ✅ 2025-05-14
 
 ---
 
@@ -172,6 +224,10 @@ I tillegg er maskina kobla til det me gjerne kaller *perifere einingar*, eller *
 :::
 
 note:
+De første programmørene måtte kode programmet nøyaktig som prosessoren leser det, ikke som nuller og einere, men som elektrisitet som er enten av eller på, ved hjelp av brytere og koblingsbrett.
+Bildet viser ENIAC som er regnet som den første generelle, programmerbare, elektroniske datamaskinen, og som kom i drift i 1945.
+
+*original:*
 Dei fyrste programmørane måtte koda programmet nøyaktig som prosessoren les det, ikkje som nullar og einarar, men som elektrisitet som er anten av eller på, ved hjelp av brytarar og koblingsbrett. Biletet viser ENIAC som er rekna som den fyrste generelle, programmerbare, elektroniske datamaskina, og som kom i drift i 1945.
 
 ---
