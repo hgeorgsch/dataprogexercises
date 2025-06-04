@@ -79,6 +79,7 @@ Vi huske selvsagt at vi kan bruke alle slag aritmetiske uttrykk på høyre side 
 
 
 ---
+
 ## Datatypar
 
 ```
@@ -90,6 +91,8 @@ tekst = "Fem"
 print( type( tekst ) )
 liste = [ 3, 4, 5, 6, 7 ]
 print( type( liste ) )
+typ = type( liste )
+print( type( typ ) )
 ```
 
 
@@ -99,6 +102,9 @@ Noen av de vanligste typene er heltall, flyttall, tegnstreng og liste.
 Vi trenger ikke fortelle python hvilken type vi vil ha; det finner den ut av selv, men vi kan sjekke hva slags type en variabel har fått, med `type`-funksjonen.
 
 Det er verd å være bevisst på.  Det skjer ikke sjelden at programmer ikke virker fordi en variabel plutselig har feil datatype.
+
+Merk at typen òg er en verdi, av type *type*, som vi kan bruke som alle andre verdier og f.eks. tilordne til en variabel.
+Dermed er det mulig å teste hvilken type variabelen har, om du skulle trenge det.
 
 ---
 
@@ -290,6 +296,9 @@ Merk at variablar som vert definert eller tilordna inne i funksjonen, ikkje er s
 # Lukke til med øvingane
 
 note: 
-Ingen lærer å programmera ved å høyra på forklaringar. Den einaste måten er å prøva seg fram, studera døme, og bruka programmering på eigne problem. Det einaste eg har freista på her er å peika på nokre kjerneelement, for at dei skal vera lettare å kjenna igjen i praksis. Eg håper det hjelper når du går i gang med øvingane, men om det ikkje gjer det, so treng du heller ikkje hugsa det.
+Ingen lærer å programmere ved å høre på forklaringer.
+Den eneste måten er å prøve seg frem, studere eksempler, og bruke programmering på egne problemer.
+Det eneste jeg har forsøkt å oppnå her er å peke på *noen* kjerneelementer, for at det skal være lettere å kjenne dem igjen i praksis.
+Jeg håper det hjelper når du går i gang med øvelsene, men om det ikke gjær det, så trenger du heller ikke huske det.
 
-Lukke til.
+Lykke til!
