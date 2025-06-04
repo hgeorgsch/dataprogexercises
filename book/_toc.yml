@@ -20,8 +20,6 @@ chapters:
     sections:
     - file: Numeriske Metodar og Kontrollflyt
       sections:
-      - file: Imperativ programmering og maskinarkitektur
-      - file: Kontrollflyt i Python
       - file: notebook/Halveringsmetoden
     - file: Simulering02
       sections:
