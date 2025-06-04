@@ -244,7 +244,20 @@ Dei fyrste programmørane måtte koda programmet nøyaktig som prosessoren les d
 - **2000** C\#
 - **2002** Scratch
 
-note:
+ote:
+For å gjøre programmeringen enklere, har vi utviklet ulike programmeringssprog.
+Andre generasjon programmeringssprog kom allerede på 1940-talet og er kjent som *assembler*-sprog.
+Der bruker man nøyaktig de samme primitive instruksjonene som CPU-en bruker, men man kan definere variabler og subrutiner, i stedet for å måtte referere til minne- og registeradresser.
+
+En av de største nyvinningene i tredje generasjon-sprogene som kom fra slutten av 1950-talet var å gjøre dem mer uavhengige av prosessorarkitekturen. Ulike mikroprosessorer har ikke det samme instruksjnonssettet, og et *assembly*-program kan bare brukes på den maskintypen det er skrevet for.
+
+Der finnes tusenvis av programmeringssprog, som er mer eller mindre utbredd, og mer eller mindre egnet til ulike oppgaver.
+Utviklinga handler i stor grad om å gjøre det enklere å håndtere komplekse problem og store datastrukturer. Fjerde generasjon-sprog er gjerne tilpasset anvendelsesdomener.
+
+Python, som først kom i 1991, er et tredjegenerasjonsprog.
+Det blir brukt til alle slags oppgaver, men det er særlig populært fordi det gir tilgang til gode og gratis bibliotek til numerisk analyse, statistikk og maskinlæring. 
+
+*original:*
 For å gjera programmeringa enklare, har me utvikla programmeringsspråk. Andre generasjon programmeringsspråk kom allereie på 1940-talet og er kjent som *assembler*-språk.  Der bruker ein nøyaktig dei same primitive instruksjonane som CPU-en bruker, men ein kan definera variablar og subrutinar.
 
 Ein av dei største nyvinningane i tredje generasjon-språka som kom frå slutten av 1950-talet var å gjera dei uavhengige av prosessorarkitekturen. Ulike mikroprosessorar har ikkje det same instruksjnonssettet, og eit *assembly*-program kan berre brukast på den maskintypen det er skrive for.
@@ -268,7 +281,27 @@ Sjølv om me stadig får nye programmeringsspråk treng CPUen stadig den same ma
 
 
 note:
-Ein instruksjon som *print* er i verkelegheit uhyre komplisert. Talverdiar må omsetjasts til teiknstrengar.  Adressa til terminalen må finnast. Kvart teikn må kopierast frå registeret til terminalen. Feil kan oppstå og må evt. handterast. Det er godt me har tredjegenerasjonsspråk so me slepp å tenkja på desse detaljane.
+En instruksjon som *print* er i virkeligheten uhyre komplisert.
+Tallverdier må oversettes til tegnstrenger.
+Adressen tl terminalen må finnes.
+Hvert tegn må kopieres fra registeret til riktig posisjon på terminalen.
+Feil kan oppstå og må håndteres fornuftig når det skjer. 
+Det er godt vi har tredjgegenerasjonssprog så vi slipper å tenke på alle disse detaljene selv.
+
+Det grunnleggende prinsippet er likevel det samme som Turing og von Neumann la til grunn for tre mannsaldre sidan.
+Gjennom programmet gir vi imperativer til CPUen, som utfører ordren avhengig av tilstanden sin.
+Noen instruksjoner oppdaterer variabler i tilstanden.
+Andre kommuniserer med verden utenfor maskinen.
+CPUen har òg en programpeiker som viser til neste instruksjon i programmet.
+Normalt går pekeren frå en linje til neste, men ikke alltid.
+I *for*-løkken kan hopper pekere tilbake til starten av løkken for å gjenta de samme kodelinjene med en ny tilstand.
+
+Denne samme modellen ligger til grunn for all imperativ programmering.
+Det som gjør programmering krevende, er at programmøren må kunne forutsi hva som skjer på CPUen, og ikke minst hvilken tilstand maskinen kan ende opp i.
+Det er lett å overse mulige tilstander, og skrive programmet slik at det bare virker i de vanligste situasjonene.
+
+*original:*
+Ein instruksjon som *print* er i verkelegheita uhyre komplisert. Talverdiar må omsetjasts til teiknstrengar.  Adressa til terminalen må finnast. Kvart teikn må kopierast frå registeret til terminalen. Feil kan oppstå og må evt. handterast. Det er godt me har tredjegenerasjonsspråk so me slepp å tenkja på desse detaljane.
 
 Det grunnleggjande prinsippet er likevel det same som Turing og von Neumann la til grunn for tre mannsaldrar sidan.  Gjennom programmet gjev me imperativar til CPUen, som utfører ordren avhengig av tilstanden sin. Somme instruksjonar oppdaterar variablar i tilstanden. Somme instruksjonar kommuniserer med verda utanfor maskina.  CPUen har òg ein programpeikar som viser til neste instruksjon i programmet. Normalt går peikaren frå ei line til neste, men ikkje alltid. I *for*-løkka kan peikaren hoppa tilbake for å gjenta linene i løkka.
 
