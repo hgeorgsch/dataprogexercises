@@ -74,6 +74,7 @@ Kunnskap om korrelasjon gir like fullt en nyttig pekepinn på hvor man kan lete 
 ![[regdata.svg]]
 
 ::: credit
+Figur frå øvinga [Lineær regresjon](notebook/Linear%20Regression%20in%20SciKitLearn).
 :::
 
 note:
@@ -91,6 +92,7 @@ Figuren viser ikke hennes data, men et andet datasett der vi har en variabel `x`
 ![[regmodel.svg]]
 
 ::: credit
+Figur frå øvinga [Lineær regresjon](notebook/Linear%20Regression%20in%20SciKitLearn).
 :::
 
 note:
