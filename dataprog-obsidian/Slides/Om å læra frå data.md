@@ -356,30 +356,22 @@ via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=36506020
 :::
 
 note:
+Der er mange utfordringer når man skal lære fra data. 
+En av de største er å finne data som er *representative* for det man ønsker å lære noe om.
 
-Dersom du skal gjera ein meiningsmåling for å vurdera oppslutning
-om ulike politiske parti, so vil du ikkje vera nøydd med å spørja
-eit par hundre lærarar som er til stades i dag.
+Ingen prøver å spå resultatene til stortingsvalget ved å spørre bare et par tusen mennesker på Søre Sunnmøre. Vi vet at det ville gi en helt anden modell enn om vi spurte folk i Lofoten eller Drammen.
 
-For det fyrste er eit par hundre litt knapt.
-
-For det andre er ikkje lærarar særleg representative for nasjonen
-som heilskap.  Industriarbeidarar, lækjarar, lærarar og næringslivsleiarar
-har ein tendens til ulike meiningar.
-
-Mange har brukt maskinlæring i tilsetjingsprosessar.
-Maskina er trent på representative data frå fortida, der den typiske 
-tilsette har vore ein kvit mann med sivilingeniørutdanning frå Trondheim.
-Då vil maskina halda fram med å velja kvite menn med 
-sivilingeniørutdanning frå Trondheim.
-
-Afrikanske invandrarar, kvinner og musikarar frå Noregs Musikkhøgskule
-er akkurat like feil so langt som maskina kan sjå frå data.
+Det er mange som glemmer denne lærdommen når de snakker om maskinlæring og kunstig intelligens. Et velkjent eksempel er ansettelsesprosesser, der man har trent maskinlæringsmodeller på data fra historiske ansettelsesprosesser, og ikke på data som er representative for den fremtiden man ønsker seg. Historisk har man kanskje bare ansatt etnisk norske menn, og da lærer maskinlæringsmodellen at det er slik det skal være.
 
 
 ---
 
-# Overraskinga
+![[2010_Utopien_arche04.jpg]]
+
+::: credit
+By Efthymios Warlamis - Own work, Daskunstmuseum, 2007-01-05, CC BY-SA 3.0,
+via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=16899707)
+:::
 
 note:
 
