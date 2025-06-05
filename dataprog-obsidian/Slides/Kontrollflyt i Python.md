@@ -9,9 +9,6 @@ note:
 Jeg håper du har hørt foredraget om  «Imperativ programmering», og at du har arbeidet gjennom noen enkle demonstrasjoner og øvelser i python.
 Her skal jeg gå litt nærmere inn i struktur og syntaks i python.
 
-*original:*
-Eg håper du har høyrd føredraget om  «Imperativ programmering», og at du har arbeidd gjennom nokre enkle demonstrasjonar og øvingar i python. No skal eg gå litt nærare inn i struktur og syntaks i python.
-
 ---
 
 ## Demo
@@ -28,16 +25,17 @@ Det er gratis tilgjengelig, så du kan bruke det selv òg, hvis du vil.
 
 1. Vevsiden heter `pythontutor.org`
 2. Selv om det heter *Python Tutor*, støttes flere sprog.  Vi velger python.
-3. Nederst på siden er en KI-assistent.  Den har ikke jeg prøvd, men det overlater jeg til dere.
+3. Nederst på siden er en KI-assistent.  Den har jeg ikke prøvd selv, så det blir opp til dere om dere vil prøve.
 
 Det vi skal gjøre her er å se hvordan *tilstanden* i maskinen endres mens programmet kjører linje for linje.
-Dette kan vi gjøre med et verktøy som gjerne kalles *debugger*; der finnes også en *debugger* i Jupyter lab.
-*Python Tutor* fungerer litt bedre når vi ønsker å stoppe for hver eneste linje, som vi gjerne gjør når
-vi er helt ferske og programmene små.  Vanlige *debuggers* er bedre egnet med litt mer erfaring og litt større
+Verktøy som lar oss gjøre det, kalles gjerne for  *debuggers*.
+Der finnes også en *debugger* i Jupyter lab, men *Python Tutor* fungerer litt bedre når vi ønsker å stoppe for hver eneste linje, som vi gjerne gjør når
+vi er helt ferske og programmene små.
+Vanlige *debuggers* er bedre egnet med litt mer erfaring og litt større
 programmer.
 
-4. Vi finner boksen hvor vi kan skrive inn vår egen kode.
-5. Vi trykker «Visualize Execution» for å se hva som skjer.
+4. Midt på siden er der en boks hvor vi kan skrive inn vår egen kode.
+5. Når vi har lagt inn kode, trykker «Visualize Execution» for å se hva som skjer.
 
 
 ---
@@ -47,17 +45,22 @@ programmer.
 ```
 variabel = 5
 print( "Variabelen har verdien", variabel )
+
 variabel2 = variabel**2 + 17
 variabel3 = variabel2 - 2*variabel
 variabel3 = variabel2/2
 ```
 
 note:
+(vis kode)
+
 Noe av det mest grunnleggende i imperativ programmering er variabler som vi kan tilordne verdier med likhetstegnet.
 Om variabelen ikke er definert i utgangspunktet, blir han opprettet når han blir tilordnet en verdi.
 I *Python Tutor* kan vi observere tilstanden med alle de variabler som er definerte til en hver tid.
 Vi kan kjøre programmet én linje ad gangen.
 Den røde pilen er «program counter» og viser hvilken linje som skal kjøres neste gang.
+
+(vis tilstand)
 
 Når vi trykker «Next» ser vi hva som skjer.  
 Vi får en boks som heter «Global frame».
@@ -176,6 +179,7 @@ if b > 5:
 else:
    print( "b er liten" )
    b = 10
+print( f"b={b}" )
 ```
 
 note:
@@ -227,9 +231,9 @@ note:
 Med *if* blir blokken kjørt høyst én gang.
 Tilsvarende har vi *while* som kjører blokken om igjen så lenge vilkåret er sant.
 Det kan vera null, én, eller mange ganger.
-Om utsagnet aldri blir usanw, vil programmet aldri stoppa.
+Om utsagnet aldri blir usant, vil programmet aldri ta slutt.
 
-La oss endre litt på programmet, slik at det tar slutt.
+La oss endre litt på programmet, slik at det terminerer.
 
 ---
 
@@ -257,8 +261,8 @@ for i in [ 0, 2, 4, 6, 8]:
 ```
 
 note:
-hvis vi vil at løkken skal køyra et visst antal omganger, er det som regel bedre å bruka *for*.
-legg merke til at *for* gir opphav til en variabel som blir tilordnet på starten av hver runde.
+Hvis vi vil at løkken skal kjøre et visst antal omganger, er det som regel bedre å bruka *for*.
+Legg merke til at *for* gir opphav til en variabel som blir tilordnet på starten av hver runde.
 
 Legg merke til at alle blokker blir innledet med kolon, både for *if*, *while* og *for*.
 
@@ -281,9 +285,10 @@ funksjon()
 
 note:
 En litt anden type blokk er funksjonen.
-Når vi definerer funksjonen med *def* får kodeblokken et navn, som dukker opp i *Global Frame*, men blokken blir ikke kjørt.
+Når vi definerer funksjonen med *def* får kodeblokken et navn, som dukker opp i *Global Frame*.
+Blokken blir derimot ikke kjørt.
 
-Vi kan kalle funksjonen, som i linje 4, og da ser vi at programpekeren hopper inn i funksjonen, som blir kjørt.
+Vi kaller funksjonen i linje 4, og da ser vi at programpekeren hopper inn i funksjonsblokken, som blir kjørt.
 Funksjonen har sin egen *frame*, og det samme variabelnavnet kan ha ulik verdi i den globale og den lokale rammen.
 Funksjonen kan ikke endre den globale tilstanden.
 
@@ -331,7 +336,7 @@ print( type(r) )
 
 note:
 Teknisk sett har vi en returverdi selv om der ikke er noen `return`-linje, men da er returverdien `None` av `NoneType`-typen.
-Denne *None*-typen blir ofte brukt i variabler når riktig verdi er ukjenr eller utilgjengelig.
+Denne *None*-typen blir ofte brukt i variabler når riktig verdi er ukjent eller utilgjengelig.
 
 Legg også merke til at funksjonen blir kjørt på nytt i den nestsiste linjen, fordi der er et eksplisitt kall.
 I den siste linjen, selv om den på mange måter gjør det samme, bruker vi blott verdien av `r` uten å kjøre funksjonen på nytt.
@@ -344,6 +349,6 @@ note:
 Ingen lærer å programmere ved å høre på forklaringer.
 Den eneste måten er å prøve seg frem, studere eksempler, og bruke programmering på egne problemer.
 Det eneste jeg har forsøkt å oppnå her er å peke på *noen* kjerneelementer, for at det skal være lettere å kjenne dem igjen i praksis.
-Jeg håper det hjelper når du går i gang med øvelsene, men om det ikke gjær det, så trenger du heller ikke huske det.
+Jeg håper det hjelper når du går i gang med øvelsene, men om det ikke gjør det, så er det kanskje heller ikke verd å huske.
 
 Lykke til!
