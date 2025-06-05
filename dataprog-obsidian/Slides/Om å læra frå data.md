@@ -298,51 +298,62 @@ personer som regner.
 
 ---
 
-# Sannsynsmodellar
+<!-- slide template="[[tpl-quote]]" -->
+
+![[iris-pdf.svg]]
+
+::: credit
+Eigen figur basert på iris-datasettet.
+:::
 
 note:
-Uansett om me taler om statistikk eller maskinlæring,
-handlar det om å bruka data for å byggja sannsynsmodellar.
-Når modellen er bygd kan ein sjå på nokre eigenskaper
-i ein situasjon og predikera resten.
+Uansett om vi tenker statistikk eller maskinlæring,
+handler det om å bruke data for å bygge sannsynlighetsmodeller.
+Figuren viser mulige sannsynlighetsfordelinger for kronblad på *Iris Setosa* i blått og *Iris Versicolor* i orange, basert på datasettet.
 
-Det er dette ChatGPT gjer òg.
-Når du skriv inn eit spørsmål, predikerer ChatGPT eit
-sannsynleg svar i tråd med den teksta han er trent på.
+Vi ser den statistiske forskjellen.  Hvis kronbladet er mer enn tre centimeter bredt er det mest sannsynlig *versicolor*, men det er langt fra sikkert.
 
-ChatGPT er en generativ modell; dvs. han genererer ny
-tekst, men innerst inne er dette ikkje forskjellig frå 
-gamle regresjons- og klassifikasjonsmodellar.
-ChatGPT ser på ei kontekst og predikerer den mest 
-sannsynlege responsen.
+---
+
+<!-- slide template="[[tpl-quote]]" -->
+
+![[Artificial_Intelligence_Word_Cloud.png]]
+
+::: credit
+By Madhav-Malhotra-003 - Own work, CC0,
+via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=127185596)
+:::
+
+note:
+Det er akkurat det samme ChatGPT eller MicroSoft Copilot gjør.
+Store sprogmodeller er sannsynlighetsmodeller for tekst.
+Når du skriver inn et spørsmål, predikerer ChatGPT et
+sannsynlig svar i tråd med den tekstkorpusen den er trent på.
+
+Vi kaller ChatGPT for er en generativ modell; dvs. han genererer ny
+tekst, men innerst inne er dette ikke forskjellig fra 
+gamle regresjons- og klassifikasjonsmodeller.
+ChatGPT ser på en kontekst og predikerer den mest 
+sannsynlige responsen.
  
 ---
 
 # Sannsynleg $\neq$ Sann
 
 note:
-Det er difor ChatGPT finn opp so mykje misinformasjon.
+Det er derfor ChatGPT og andre sprogmodeller hallusinerer.
 Sannsynleg har ingenting med sann å gjera.
 
 ---
 
-# Semantikk versus Syntaks
+<!-- slide template="[[tpl-quote]]" -->
 
-note:
-Der finst andre typar kunstig intelligens som jobbar med semantikk
-der maskinlæring og ChatGPT berre handlar om syntaks.
-Mellom anna har me hatt automatiske provmaskiner i fleire tiår.
-Dei arbeider med logiske proposisjonar og kan gjennomføra 
-logisk deduksjon.
-Dette kan ein kombinera med semantiske teknologiar som ikkje berre
-identifiserer ord med konsept men ogso relasjonar mellom konsept.
+![[Simple_random_sampling.png]]
 
-For byggja ein meir sannferdig ChatGPT må ein kanskje finna måtar
-å kombinera maskinlæring med semantiske teknologiar.
-          
----
-
-# Representative Data
+::: credit
+By Dan Kernler - Own work, CC BY-SA 4.0,
+via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=36506020)
+:::
 
 note:
 
@@ -365,30 +376,6 @@ sivilingeniørutdanning frå Trondheim.
 Afrikanske invandrarar, kvinner og musikarar frå Noregs Musikkhøgskule
 er akkurat like feil so langt som maskina kan sjå frå data.
 
----
-
-# Førestillingsevna
-
-note:
-
-Mennesket har ein unik evne til førestilling.
-Me kan førestilla oss ei annleis framtid.
-Og me kan førestilla oss korleis andre menneske vil oppleva
-denne framtida.
-
-Weizenbaum skreiv t.d. at me menneske lærar noko om det 
-å vera menneske berre av å veksa opp som menneske og verte
-behandla som menneske av andre menneske.
-
-Denne idéen er godt kjend i den tyske og skandinaviske
-danningstradisjonen.  Den danske utdanningsfilosofen
-Peter Kemp skriv t.d. at der
-utdanningsinnhaldet - forklaring - kan skrivast ned
-og takast fram når det trengst, finst der eit
-danningsinnhald - forståinga - som berre kan formidlast
-i direkte møte mellom menneske.
-
-Maskina er god på utdanningsinnhald.
 
 ---
 
@@ -407,24 +394,4 @@ Overrasking og nyskaping er støy som bryt med forventinga,
 det som statistikken kaller *utliggjarar*.
 Der finst ikkje empirisk grunnlag for at nyskapinga er positiv.
 
-
----
-
-# Notes
-
-+ Florence Nightingale
-+ Utviklinga av statistikk i samfunnsvitskapane
-	+ Andre halvdel av 1800-talet
-	+ Lineær regresjon
-	+ Byggjer på regresjon i astronomi frå starten av 1800-talet
-	+ Ny forståing av usikkerheit
-+ Fisher i mellomkrigstida
-	+ Klassifiseringsproblem
-+ Shannons Informasjonsteori på 1940- og 50-talet
-+ Bruksområde
-	+ Demografi
-	+ Val- og meiningsmålingar
-	+ Klinisk testing
-+ Maskinlæring som sannsynsmodell
-	+ Evaluering av maskinlæringsmodellar
 
