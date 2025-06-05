@@ -84,13 +84,15 @@ Vi huske selvsagt at vi kan bruke alle slag aritmetiske uttrykk på høyre side 
 
 ```
 heiltal = 5
-print( type( heiltal ) )
 flyttal = 5.0
-print( type( flyttal ) )
 tekst = "Fem"
-print( type( tekst ) )
 liste = [ 3, 4, 5, 6, 7 ]
+
+print( type( heiltal ) )
+print( type( flyttal ) )
+print( type( tekst ) )
 print( type( liste ) )
+
 typ = type( liste )
 print( type( typ ) )
 ```
@@ -99,6 +101,7 @@ print( type( typ ) )
 note:
 Verdier kommer i forskjellige typer; *datatyper*.
 Noen av de vanligste typene er heltall, flyttall, tegnstreng og liste.
+
 Vi trenger ikke fortelle python hvilken type vi vil ha; det finner den ut av selv, men vi kan sjekke hva slags type en variabel har fått, med `type`-funksjonen.
 
 Det er verd å være bevisst på.  Det skjer ikke sjelden at programmer ikke virker fordi en variabel plutselig har feil datatype.
@@ -112,42 +115,54 @@ Dermed er det mulig å teste hvilken type variabelen har, om du skulle trenge de
 
 ```
 liste = [ 3, 4, 5, 6, 7 ]
-print(liste[2])
-print(type(liste[2]))
-```
+B = liste
+C = [ 3, 4, 5, 6, 7 ]
 
+liste[2] = "X"
+
+print(B[2])
+print(type(B[2]))
 ```
-tekst = "Fem"
-print(tekst[2])
-print(type(tekst[2]))
-```
-<!-- element class="fragment" -->
 
 note:
-Liste er ein samansett type, som består av fleire element av ein annan type. Me kan henta ut eitt element i lista med klammenotasjon.  Elementa er indeksert frå null, so `liste[2]` gjev det tredje elementet.
+Når vi tilordnet en liste, viste *Python Tutor* den som et objekt ved siden av *Global Frame*.
+Grunnen til det ser vi dersom vi tilordner den samme listen til flere variabelnavn.
+Flere variabler kan peke på det samme objektet.
+Vi sier gjerne at variabelen er en *peker* til objektet.
 
-(fragment)
-Det same gjeld teiknstrengar, sjølv om her har elementa same type.  Python skil ikkje mellom einskildteikn og strengar av fleire teikn.
+Liste er en sammensatt type, som gjør et vi kan manipulere innholdet i listen også.
+Vi bruker klammeparenteser for å vise til en posisjon i listen.  
+Når vi endrer verdien i `liste[2]`, er det innholdet i objektet som endres.
+Endringen er synlig også via andre pekere til det samme objektet.
+
 
 ---
+
 ## Bolske uttrykk  og *if*
 
 ```
 b = 5
-if b > 5: 
+if b > 7: 
    print( "b er stor" )
    b = 0
 print( "Denne lina vert køyrd uansett" )   
 ```
 
 note:
-Det andre fundamentale konseptet ved sidan av variablar, er kontrollflyt, der ulike delar av programmet vert køyrd, avhengig av tilstanden. Det enklaste dømet er *if*.
+Det andre fundamentale konseptet ved siden av variablar, er kontrollflyt, der ulike delar av programmet blir kjørt, avhengig av tilstanden.
+Det enklaste eksempelet er *if*.
+Vi ser at programpekeren hopper over linje 3 og 4, fordi `b > 7` er usann.
 
-(illustrasjon)
-Kolonet på slutten av *if*-lina innleier ein *blokk* som er indentert i forhold til koden før og etter. Heile blokken vert køyrd om vilkåret for *if* er sant. Det er viktig at denne indenteringa er konsistent.
+(endring)
+Hvis vi endrer verdien på `b`, kan *if*-blokken bli kjørt.
 
-(illustrasjon)
-Vilkåret er eit bolsk uttrykk, dvs. ei utsegn som kan vera anten sann eller usann.
+(annotering)
+Kolonet på slutten av *if*-lina innleder en *blokk* som er indentert i forhold til koden før og etter.
+Hele blokken blir kjørt om vilkåret for *if* er sant. 
+Denne indenteringen må være konsistent, slik at python vet hva som hører med til blokken.
+
+(annotering)
+Vilkåret er et bolsk uttrykk, dvs. et utsagn som kan være enten sant eller usant.
 
 ---
 
@@ -164,55 +179,88 @@ else:
 ```
 
 note:
-Når me har *if* kan me òg ha *else*, som innleier ein blokk med kolon, på same måte som *if*. Denne *else*-blokken vert køyrd når *if*-blokken ikkje vert køyrd, og vise versa.
+Når vi har *if* kan vi også ha *else*, som innleder en blokk med kolon, på samme måte som *if*.
+Denne *else*-blokken blir kjørt når *if*-blokken ikke blir kjørt, og vise versa.
 	
 ---
 
 ## Bolske uttrykk og variablar
 
 ```
-In [13]: b = 5
-    ...: test = b > 5
+b = 5
+test = b > 5
 
-In [14]: print(type(test))
-<class 'bool'>
+typ = type(test)
 
-In [15]: print(test)
-False
-```
-
-```
 if b == 5:
    print ( "Fem" )
 b = b == 5
 ```
-<!-- element class="fragment" -->
 
 note:
-Det bolske uttrykket er ein eigen datatype. Me kan faktisk ta det bolske uttrykket og tilordna det til ein variabel. Då kan me òg sjå at datatypen er `bool`, altso bolsk, og verdien er usann eller *False*.
+Det bolske uttrykket er en egen datatype.
+Vi kan faktisk ta det bolske uttrykket og tilordna det til en variabel.
+Da ser vi òg at datatypen er `bool`, som er en forkortelse for *Boolean* eller bolsk på norsk, og verdien er usann eller *False*.
 
-(fragment)
-Då kan me òg merka oss bruken av likheitsteikn, som kan vera vanskeleg å forstå både i matematikken og i programmering, fordi det vert brukt i mange ulike tydingar.  Når me skriv tilordninga `b = 5` tyder likheitsteiknet *ikkje* at b er lik 5, men at me *skal la $b$ det verta* 5. Når me skal laga eit boolsk uttrykk med likskap, bruker me dobbelt likheitsteikn.  Det gjev utsegna $b$ er lik 5 som kan vera sann eller usann.
+Vi skal også merke oss bruken av likheitstegnet, som kan være vanskelig å forstå både i matematikken og i programmering, fordi det har flere ulike betydninger. 
+Når vi skriver tilordningen `b = 5` betyr likhetstegnet *ikke* at b er lik 5, men at `b` skal *bli* lik 5.
+Når vi skal lave et bolsk uttrykk med likhet, bruker vi dobbelt likhetstegn.
+Dét gir utsagnet at `b` er lik 5, som kan væra sant eller usant.
+
+Så hva betyr da den siste linjen, `b` er lik `b` er lik 5?
+
+Vi må se på tilordningen, med det enkle likhetstegnet først.  
+Høyresiden er uttrykk, som her er et bolsk uttrykk med likhet, og verdien av uttrykket havner i variabelen `b` som spesifisert på venstre side.
 
 ---
-## Kontrollflyt 
+
+## Lækker 
 
 ```
 b = 0
 while b < 9: 
    print( "No er b lik", b )
-```
 
 ```
-for b in range(9): 
-   print( "No er b lik", b )
-```
-<!-- element class="fragment" -->
 
 note:
-Når me bruker *if* vert blokken køyrd høgst éin gong. Tilsvarande har me *while* som køyrer blokken om att so lenge vilkåret er sant. Det kan vera null, ein, eller mange gongar. Om utsegna aldri vert usann, vil programmet aldri stoppa.
+Med *if* blir blokken kjørt høyst én gang.
+Tilsvarende har vi *while* som kjører blokken om igjen så lenge vilkåret er sant.
+Det kan vera null, én, eller mange ganger.
+Om utsagnet aldri blir usanw, vil programmet aldri stoppa.
 
-*while* er eit døme på ei løkke, dvs. ein gjentakande blokk.  Om me vil at løkka skal køyra eit visst antal omgongar, er det betre å bruka *for*.  Legg merke til at *for* gjev opphav til ein variabel som vert tilordna. I dømet vert $b$ tilordna 0 fyrste gongen, og so 1 og 2 og so vidare opp til 8.  Legg merke til at alle blokkar vert innleidd med kolon.
+La oss endre litt på programmet, slik at det tar slutt.
+
+---
+
+## Lækker 
+
+```
+b = 0
+while b < 9: 
+   print( "No er b lik", b )
+   b = b + 2
+
+```
+
+note:
+*while* er et eksempel på en løkke, dvs. en gjentagende blokk.
+
+---
+
+## for 
+
+```
+for i in [ 0, 2, 4, 6, 8]:
+   print( "No er i lik", i )
+
+```
+
+note:
+hvis vi vil at løkken skal køyra et visst antal omganger, er det som regel bedre å bruka *for*.
+legg merke til at *for* gir opphav til en variabel som blir tilordnet på starten av hver runde.
+
+Legg merke til at alle blokker blir innledet med kolon, både for *if*, *while* og *for*.
 
 ---
 
@@ -220,19 +268,28 @@ Når me bruker *if* vert blokken køyrd høgst éin gong. Tilsvarande har me *wh
 
 ```
 def funksjon():
-   print( "Dette er funksjonen" )
+   variabel = "Inne"
+   print( f"Dette er funksjonen ({variabel})" )
+
+variabel = "Ute"
+
 
 funksjon()
-print( "Dette er noko anna" )
+print( f"Dette er noko anna ({variabel})" )
 funksjon()
 ```
 
 note:
-Eit anna viktig døme på blokkar er funksjonen. Når me definerer funksjonen med *def* får kodeblokken eit namn, men han vert ikkje køyrd då.
+En litt anden type blokk er funksjonen.
+Når vi definerer funksjonen med *def* får kodeblokken et navn, som dukker opp i *Global Frame*, men blokken blir ikke kjørt.
 
-Han vert i staden køyrd når funksjonen vert kalt.  Me kan kalla den same funksjonen mange gongar.
+Vi kan kalle funksjonen, som i linje 4, og da ser vi at programpekeren hopper inn i funksjonen, som blir kjørt.
+Funksjonen har sin egen *frame*, og det samme variabelnavnet kan ha ulik verdi i den globale og den lokale rammen.
+Funksjonen kan ikke endre den globale tilstanden.
 
-Der er to viktige grunnar for å laga funksjonar.  Det eine er å unngå unødig gjentaking av kode. Det andre er for å skilja ut blokkar som har ein veldefinert oppgåve, for at koden skal vera enklare å lesa.
+Der er to viktige grunner for å lave funksjoner.
+Det ene er å unngå unødig gjentagelse av kode.
+Det andre er å gjøre koden enklere å lese ved å skille ut blokker som har sine veldefinerte oppgaver.
 
 ---
 
@@ -242,54 +299,42 @@ Der er to viktige grunnar for å laga funksjonar.  Det eine er å unngå unødig
 def f(b):
    print( f"Eg fekk {b} inn. No reknar eg" )
    return b**2 + 2*b - 5
-print( f(b))   
-print( type(f(b)))   
+r = f(b)
+print( r )   
+print( type(r))   
 ```
 
 note:
-I matematikken er me vane med at funksjonar tek ein verdi inn og gjev ein verdi ut. Det kan dei òg gjera i python. Då definerer med parameter i parantensen, ($b$ i dømet), som fungerer som ein variabel inne i funksjonen.  Det er ikkje rekna som god skikk å tilordne nye verdiar til parametrane, men det er mogleg.
+I matematikken er vi vant til at funksjonar tar en verdi inn og gir en verdi tilbake.
+Det kan de også gjøre i python.
+Vi definerer parameter i parantensen. 
+I eksempelet har vi parameteren `b` som fungerer som en variabel inne i funksjonen.  
+Det er ikke god skikk å tilordne ny verdi til en parameter, men det er mulig å gjøre det.
 
-*return*-lina avsluttar funksjonen og spesifiserer returverdien.  No kan me bruka funksjonen i uttrykk på same måte som variablar eller konstante tal og teiknstrengar.
+*return*-linjen avslutter funksjonen og definerer returverdien.
+Nu kan vi bruke funksjonen i uttrykk på samme måte som variabler eller konstante tall og tegnstrenger.
 
 ---
 
 ## *None*-typen
 
 ```
-In [21]: def foobar():
-    ...:     print( "Eg heiter foobar." )
-    ...: 
+def foobar():
+    print( "Eg heiter foobar." )
 
-In [22]: print( foobar() )
-Eg heiter foobar.
-None
+r = foobar()
 
-In [23]: print( type(foobar()) )
-Eg heiter foobar.
-<class 'NoneType'>
+print( type( foobar() ) )
+
+print( type(r) )
 ```
 
 note:
-Teknisk sett har me ein retur-verdi sjølv om der ikkje er nokon `return`-line, men då er returverdien `None` av `NoneType`-typen.  Denne *None*-typen vert ofte brukt i variablar når riktig verdi er ukjend eller utilgjengeleg.
+Teknisk sett har vi en returverdi selv om der ikke er noen `return`-linje, men da er returverdien `None` av `NoneType`-typen.
+Denne *None*-typen blir ofte brukt i variabler når riktig verdi er ukjenr eller utilgjengelig.
 
----
-
-## Lokale og globale variablar
-
-```
-b = 5
-print ( f"b={b}" )
-def g():
-   b = 7
-   print ( f"b={b}" )
-
-print ( f"b={b}" )
-g()
-print ( f"b={b}" )
-```
-
-note:
-Merk at variablar som vert definert eller tilordna inne i funksjonen, ikkje er synlege utanfor. Me seier at funksjonen har sitt eige *scope*.  Dette gjer det mogleg å bruka funksjonar som andre har skrive, utan å risikera at tilstanden i programmet vert endra utan at det er synleg. Me bruker parameter og returverdi for å utveksla data med funksjonskoden.
+Legg også merke til at funksjonen blir kjørt på nytt i den nestsiste linjen, fordi der er et eksplisitt kall.
+I den siste linjen, selv om den på mange måter gjør det samme, bruker vi blott verdien av `r` uten å kjøre funksjonen på nytt.
 
 ---
 
