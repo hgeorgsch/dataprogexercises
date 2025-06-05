@@ -6,7 +6,6 @@ tags:
 
 # Om å læra frå data
 
-
 ---
 
 <!-- slide template="[[tpl-quote]]" -->
@@ -224,12 +223,15 @@ Eigen figur, sjå [[Fisher Linear Discriminant in sklearn]].
 
 note:
 Fisher delte artene fra hverandre med rette linjer.
-Her ser me ei god og ei dårleg line; Fisher fann ein matematisk
-formel for den gode lina.
+Her ser vi Fishers løsning for å skille *Iris Setosa* fra andre iris-varianter.
 
-No kan me måla eit ukjend individ, og raskt sjå kva side av
-line individet høyrer heime på, og gjetta på den arten.
-Det er ikkje 100%, men me har godt sannsyn.
+Når vi siden måla et ukjent individ, kan vi raskt se hvilken side av
+linjen det faller på.
+Modellen er perfekt.  Vi ser ett setosaeksemplar på feil side av linjen.
+Det er likevel en god modell, som virker med god sannsynlighet. 
+
+Mye av det arbeidet vi gjør i maskinlæring er ett av disse to problemene, 
+enten regresjon eller klasifisering.
 
 ---
 
@@ -242,25 +244,29 @@ Det er ikkje 100%, men me har godt sannsyn.
 rundt 2005
 : Vektorprosessorer *(GPU)*
 
-siste ti år
-: *djupe* evrale nettverk
+rundt 2010-2015
+: *djupe* nevrale nettverk
 
 note:
-Rosenblatt (1957) viste fram trening av nevralt nettverk
-for å løysa klassifiseringsproblem, men han
-justerte vektene manuelt.
+Historien om maskinlæring og kunstig intelligens begynner på 1950-tallet,
+ikke lenge efter at de første datamaskinene ble bygd.
+Rosenblatt viste frem trening av nevrale nettverk
+for å løse klassifiseringsproblemer i 1957, men den gangen
+justerte han vektene manuelt.
 
-Det er fyrst på 1980-talet at ein får effektiv trening
-av nevrale nettverk, og skjøner at dette handlar om
-usikkerheit og sannsyn.
+Det er først på 1980-tallet at man får effektive treningsalgoritmer
+for nevrale nettverk, og skjønner at maskinlæring må bygge
+statistikk og forståelsen av usikkerhet og sannsynlighet.
 
-For tjue år sidan fekk me vektorprosessorar, som fyrst vart
-brukte på skjermkort og kom i masseproduksjon til spillkonsoll.
-Ein oppdaga derimot ganske raskt at dei var uhyre effektive til
-å rekne på store datamengder.
+For tyve år siden fikk vi billige vektorprosessorer, som først 
+ble brukt i skjermkort og ble masseproduksert til spillkonsoller.
+Man oppdaget derimot ganske raskt at de var uhyre effektive til
+å regne på store datamengder.  
+Matematikken i nevrale nettverk er langt på vei den samme som i 3D-grafikk.
 
-For ti år sidan lossna det verkeleg for nevrale nettverka.
-Vektormaskinene gjorde at ein kunne bruka større nettverk og
+For ti-femten år siden løsnet det virkelig for nevrale nettverk.
+Vektormaskinene gjorde at man kunne bruke større nettverk og 
+større datasett, og 
 testa meir og raskare, og ein fann nye nettverksarkitekturar.
 
 Likevel, me hanskast framleis med dei same utfordringane rundt
@@ -268,27 +274,27 @@ usikkerheit og sannsyn som har utfordra statistikarane i 200 år.
           
 ---
 
-+ Statistikk med handrekna formlar.
-+ Maskinrekning pga. mange «tunge» rekneoperasjonar 
-+ Maskinrekning pga. mange fridomsgradar
-+ Maskinrekning pga. store datamengder
-+ Maskinrekning fordi lukka formlar ikkje er kjende
-    + Iterativ tilnærming
+<!-- slide template="[[tpl-quote]]" -->
+
+![[Human_computers_-_Dryden.jpg]]
+
+::: credit
+NACA High Speed Flight Station Computer Room (1949)
+by
+[NACA (NASA)](http://www.dfrc.nasa.gov/Gallery/Photo/Places/HTML/E49-54.html),
+- Dryden Flight Research Center Photo Collection - 
+Public Domain, via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=885426).
+:::
 
 note:
-Der er ingen klar grense mellom kva som er maskinlæring
-og kva som berre er statistikk.
-Eg arbeidde mykje med maskinlæring for 12-15 år sidan.
-Då brukte eg hovudsakleg SVM (support vector machines).
-Den gongen var SVM stort sett like presise som nevrale
-nettverk, og mykje raskare.
-Ein kollega av meg argumenterte for at det ikkje
-er maskinlæring, fordi SVM har ein lukka formel som
-vert rekna ut i eitt steg.
+Der er ingen klar grense mellom hva som er maskinlæring
+og hva som bare er statistikk.
+Eksperter kan gjerne være uenige om hvor grensen går.
+Kan hende er den store forskjellen mellom modeller
+som kan regnes for hånd og modeller som krever maskiner.
 
-For å illustrera skilnaden kan me bruka eit enklare
-døme.  (eller dropp)
-
+Bildet viser noen av NASAs *computers* i 1949 - altså
+personer som regner.
 
 ---
 
