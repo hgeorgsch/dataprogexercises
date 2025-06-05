@@ -77,8 +77,8 @@ Kunnskap om korrelasjon gir like fullt en nyttig pekepinn på hvor man kan lete 
 :::
 
 note:
-Florence Nightingale såg på samanhengen mellomn to variablar,
-tala på dødsfall og talet på handvask.
+Florence Nightingale så på samanhengen mellom to variabler,
+antall dødsfall og antall håndvask.
 
 Figuren viser ikke hennes data, men et andet datasett der vi har en variabel `x` som vi kan observere og en anden variabel `y` som vi ønsker å forutsi før vi kan observere den. Hvert punkt viser et observert par x/y som hører sammen.
 
@@ -97,6 +97,10 @@ note:
 Når vi studerer en slik samanheng kvantitativt, kaller vi det
 regresjonsanalyse,  som er en av de aller mest sentrale og grunnleggjande
 teknikken i statistikk.
+
+Lineær regresjon prøver å beskrive `y` som en lineær funksjon av `x`.
+Det kan se ut som en svak sammenheng der `y` ofte er noe mindre med større `x`,
+men i dette datasettet er der mye mer tilfeldig variasjon.
 
 ---
 
@@ -135,16 +139,20 @@ By Charles Wellington Furse (died 1904)
 :::
 
 note:
+Regresjonsanalysen var derimot ikke utviklet da Florence fikk sitt
+gjennombrudd.
+Det tok over ett hundrede år å utvikle.
+Nettopp tilfeldig variasjon har vist seg krevende å forstå.
 
-Regresjonsanalysa var derimot ikkje utvikla då Florence fekk
-gjennombrotet sitt.
-Det tok over eitt hundrede år å utvikla.
-Ein del av teknikken, minste kvadrats metode, var rett nok skildra av Legendre
-i 1805 og godt etablert i astronomi, men då Quetelet innførde statistikk i
-samfunnsvitskapane hadde ein stadig ikkje god nok forståing for sannsyn og
-usikkerheit til heilt å få det til.
-Ofte vert Galton som er rekna som oppfinnaren av regresjon rundt 1885, med
-arbeid i genetikk og arvelære.
+En del av teknikken, minste kvadraters metode, ble skildret av Legendre
+i 1805.
+Teknikken ble raskt etablert i astronomi, der man hadde en relativt
+enkel modell med få variabler.
+Da Quetelet innførte statistikk i samfunnsvitskapane utover 1800-tallet,
+hadde man derimot ikke tilstrekkelig forståelse av 
+sannsynlighet og usikkerhet til helt å lykkes.
+Mange regner  Galton som som oppfinneren av regresjon rundt 1885, med
+arbeide i genetikk og arvelære.
         
 ---
 
@@ -171,16 +179,16 @@ Iris Setosa; from
 :::
 
 note:
-Ein av dei største statistikarane er Ronald Fisher, som m.a.
-er kjend for løysing av klassifiseringsproblem.
-Datasettet som han brukte for å klassifisera tre ulike artar
-av irisblomen vert stadig brukt som referansetest i maskinlæring
+En anden av de store pionerene i statistikk er Ronald Fisher, som bl.a.
+er kjent for løsninger på klassifiseringsproblemer.
+Datasettet som han brukte for å klassifisere tre ulike arter
+av irisblomsten blir stadig brukt som referansetest i maskinlæring
 i dag.
 
-Datasettet hadde målt lengd og breidd på kron- og begerblada på
-ulike individ.  Fisher viste at han kunne finna ein statistisk
-modell som seier kva art individet høyrer til, berre ut frå dei fire 
-måla.
+Datasettet inneholder lengde og bredde på kron- og begerblad på
+ulike individ av blomsten.
+Fisher viste at han kunne finne en statistisk modell som sier 
+hvilken art et individ tilhører, bare ut fra disse fire målene..
 
 ---
 
@@ -193,13 +201,13 @@ Eigen figur, sjå [[Fisher Linear Discriminant in sklearn]].
 :::
 
 note:
-Eg er dårleg på å teikna fire dimensjonar, men dersom han hadde
-to mål, kunne det sjå slik ut.
+Jeg er dårlig på å tegne i fire dimensjonar, men dersom vi bare tar
+målene på begerbladene, kan det se slik ut.
 
-Kvart punkt er eitt individ, og her har me tre artar i tre ulike fargar.
-
-Kvart individ har eitt mål på $x$-aksen og eitt på $y$-aksen,
-
+Hvert punkt er ett individ,
+med lengde på x-aksen og bredde på y-aksen.
+Hver art har så sin farve, og vi kan se at de ulike artene
+*typisk sett* har ulike mål.
 
 ---
 
@@ -213,7 +221,7 @@ Eigen figur, sjå [[Fisher Linear Discriminant in sklearn]].
 
 
 note:
-Fisher delte dei to artane frå kvarandre med ein rett line.
+Fisher delte artene fra hverandre med rette linjer.
 Her ser me ei god og ei dårleg line; Fisher fann ein matematisk
 formel for den gode lina.
 
