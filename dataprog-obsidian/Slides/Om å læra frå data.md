@@ -20,9 +20,9 @@ By Henrietta Rae -  Public Domain
 :::
 
 note:
-Florence Nightingale er kanskje best kjend som
+Florence Nightingale er kanskje best kjent som
 *the lady with the lamp*,
-den omsorgfulle sjukepleiaren på det engelske
+den omsorgsfulle sykepleiersken på det engelske
 feltskjukehuset under Krimkrigen.
 
 ---
@@ -36,20 +36,36 @@ Mortality Chart due to Florence Nightingale
 :::
 
 note:
-Ho er kanskje mindre kjend som statistikar, til tross
-for at ho var ein banebrytande pionér.
-På feltsjukehuset registrerte ho møysommeleg data m.a.
-om kor mange som døydde og kor ofte lækjarane vaska hendene.
+Hun er kanskje mindre kjent som statistiker, til tross
+for at hun var en banebrytende pionér.
+I 1858 ble hun som første kvinne medlem av *Royal Statistical Society*.
 
-**NB!** Ho fann statistiske samanhengar; ikkje årsakssamanhengar.
+På feltsjukehuset registrerte hun møysommelig data.
+Bl.a. talte hun hvor mange pasienter som døde og hvor ofte
+legene vasket hendene.
 
-Kan henda var det slik at når mange pasientar var svært sjuke
-og døyande, so hadde ikkje lækjarane tid til å vaske hendene,
-slik at mange dødsfall forårsakar dårleg hygiene.
+Hun fant en statistisk sammenheng, som hun brukte til å påvirke politikken
+og skape reformer i sykestellet.  Det sies at hun hadde møter med dronning
+Victoria personlig.
 
-På det punktet lærte helsevitskapane meir utover 1900-talet.
-         
-Korelasjon versus kausalitet
+Det skal innrømmes at selv om Florence gjettet på at dårlig håndhygiene
+fører til flere dødsfall, er ikke dét noe som vi kan lese ut fra datamaterialet.
+Kan hende er det slik at når mange pasientar er syke og 
+døende, så har legene mindre tid til å vaske hendene.
+Altså at mange døende pasienter er årsak til dårleg hygiene.
+
+Årsakssammenhengene ble forklart av legevidenskaben efter Florence Nightingale sin tid.
+
+Når vi går i gang med å studere stordata med hjelp av programmering og kunstig intelligens,
+er det viktig å huske på at vi egentlig ikke gjør noget andet enn Florence Nightingale.
+Vi gjør det blott i større skala, med flere variabler og flere datapunkter.
+Hun kunne telle og tegne for hånd.
+Når vi går til store data trenger vi maskiner til å gjøre eselarbeidet for oss.
+
+Liksom Florence Nightingale, kan hverken KI eller vi finne årsakssammenhenger gjennom data alene.
+Som dataanalytikere, statistikere og KI-eksperter må vi nøye oss med å påvise korrelasjon,
+og overlate kausalitet til andre fagfelter.
+Kunnskap om korrelasjon gir like fullt en nyttig pekepinn på hvor man kan lete efter kausalitet.
  
 ---
 
@@ -64,11 +80,13 @@ note:
 Florence Nightingale såg på samanhengen mellomn to variablar,
 tala på dødsfall og talet på handvask.
 
+Figuren viser ikke hennes data, men et andet datasett der vi har en variabel `x` som vi kan observere og en anden variabel `y` som vi ønsker å forutsi før vi kan observere den. Hvert punkt viser et observert par x/y som hører sammen.
+
 ---
 
 <!-- slide template="[[tpl-quote]]" -->
 
-# regresjon
+# Regresjon
 
 ![[regmodel.svg]]
 
@@ -76,8 +94,8 @@ tala på dødsfall og talet på handvask.
 :::
 
 note:
-Når slike samanhengar vert studerte kvantitativt, kaller me det
-regresjonsanalyse,  kanskje den aller mest sentrale og grunnleggjande
+Når vi studerer en slik samanheng kvantitativt, kaller vi det
+regresjonsanalyse,  som er en av de aller mest sentrale og grunnleggjande
 teknikken i statistikk.
 
 ---

@@ -123,12 +123,10 @@ Båe modellane var abstrakte matematiske konsept, men det er Turing sin modell s
 
 <!-- slide template="[[tpl-quote]]" -->
 
-## Turingmaskina
-
 ![[Turing_Machine_Model_Davey_2012.jpg]]
 
 ::: credit
-Turing Machine, reconstructed by Mike Davey as seen at Go Ask ALICE at Harvard University ([Rocky Acosta](https://commons.wikimedia.org/wiki/User:Arttechlaw "User:Arttechlaw") - Own work)
+**Turing Machine**, reconstructed by Mike Davey as seen at Go Ask ALICE at Harvard University ([Rocky Acosta](https://commons.wikimedia.org/wiki/User:Arttechlaw "User:Arttechlaw") - Own work)
 :::
 
 note: 
