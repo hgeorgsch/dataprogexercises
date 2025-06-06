@@ -153,7 +153,7 @@ print( "Denne lina vert køyrd uansett" )
 
 note:
 Det andre fundamentale konseptet ved siden av variablar, er kontrollflyt, der ulike delar av programmet blir kjørt, avhengig av tilstanden.
-Det enklaste eksempelet er *if*.
+Det enkleste eksempelet er *if*.
 Vi ser at programpekeren hopper over linje 3 og 4, fordi `b > 7` er usann.
 
 (endring)
@@ -162,7 +162,7 @@ Hvis vi endrer verdien på `b`, kan *if*-blokken bli kjørt.
 (annotering)
 Kolonet på slutten av *if*-lina innleder en *blokk* som er indentert i forhold til koden før og etter.
 Hele blokken blir kjørt om vilkåret for *if* er sant. 
-Denne indenteringen må være konsistent, slik at python vet hva som hører med til blokken.
+Denne indenteringen må være konsistent, slik at python vet hvilke linjer som hører med til blokken, og hvilke som kommer efterpå.
 
 (annotering)
 Vilkåret er et bolsk uttrykk, dvs. et utsagn som kan være enten sant eller usant.
@@ -207,18 +207,18 @@ Vi kan faktisk ta det bolske uttrykket og tilordna det til en variabel.
 Da ser vi òg at datatypen er `bool`, som er en forkortelse for *Boolean* eller bolsk på norsk, og verdien er usann eller *False*.
 
 Vi skal også merke oss bruken av likheitstegnet, som kan være vanskelig å forstå både i matematikken og i programmering, fordi det har flere ulike betydninger. 
-Når vi skriver tilordningen `b = 5` betyr likhetstegnet *ikke* at b er lik 5, men at `b` skal *bli* lik 5.
+Når vi skriver tilordningen `b = 5` betyr likhetstegnet *ikke* at b er lik 5, men at `b` skal *bli* lik 5. Det er altså en imperativ.
 Når vi skal lave et bolsk uttrykk med likhet, bruker vi dobbelt likhetstegn.
 Dét gir utsagnet at `b` er lik 5, som kan væra sant eller usant.
 
 Så hva betyr da den siste linjen, `b` er lik `b` er lik 5?
 
-Vi må se på tilordningen, med det enkle likhetstegnet først.  
-Høyresiden er uttrykk, som her er et bolsk uttrykk med likhet, og verdien av uttrykket havner i variabelen `b` som spesifisert på venstre side.
+Vi må se på tilordningen først, altså høyre og venstre side av det enkle likhetstegnet.  
+Høyresiden er et uttrykk, som her er et bolsk uttrykk med likhet, og verdien av uttrykket havner i variabelen `b` som spesifisert på venstre side.
 
 ---
 
-## Lækker 
+## Løkker 
 
 ```
 b = 0
@@ -230,14 +230,14 @@ while b < 9:
 note:
 Med *if* blir blokken kjørt høyst én gang.
 Tilsvarende har vi *while* som kjører blokken om igjen så lenge vilkåret er sant.
-Det kan vera null, én, eller mange ganger.
+Det kan være null, én eller mange ganger.
 Om utsagnet aldri blir usant, vil programmet aldri ta slutt.
 
 La oss endre litt på programmet, slik at det terminerer.
 
 ---
 
-## Lækker 
+## Løkker 
 
 ```
 b = 0
@@ -261,14 +261,14 @@ for i in [ 0, 2, 4, 6, 8]:
 ```
 
 note:
-Hvis vi vil at løkken skal kjøre et visst antal omganger, er det som regel bedre å bruka *for*.
-Legg merke til at *for* gir opphav til en variabel som blir tilordnet på starten av hver runde.
+Hvis vi vil at løkken skal kjøre et bestemt antall omganger, er det som regel bedre å bruke *for*.
+Legg merke til at *for* automatisk gir opphav til en variabel som blir tilordnet på starten av hver runde.
 
-Legg merke til at alle blokker blir innledet med kolon, både for *if*, *while* og *for*.
+Vi kan òg huske at alle blokker blir innledet med kolon, både for *if*, *while* og *for*.
 
 ---
 
-## Funksjonar
+## Funksjoner
 
 ```
 def funksjon():
@@ -349,6 +349,6 @@ note:
 Ingen lærer å programmere ved å høre på forklaringer.
 Den eneste måten er å prøve seg frem, studere eksempler, og bruke programmering på egne problemer.
 Det eneste jeg har forsøkt å oppnå her er å peke på *noen* kjerneelementer, for at det skal være lettere å kjenne dem igjen i praksis.
-Jeg håper det hjelper når du går i gang med øvelsene, men om det ikke gjør det, så er det kanskje heller ikke verd å huske.
+Jeg håper det hjelper når du går i gang med øvelsene, men om det ikke gjør det, så er det kanskje heller ikke så viktig å huske.
 
 Lykke til!

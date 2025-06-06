@@ -10,13 +10,9 @@ Der er mange måter å programmere en datamaskin på.
 Det paradigmet som ligger til grunn for dette kurset kaller vi gjerne for *imperativ* programmering.
 Det er det mest kjente paradigmet, men ikke det eneste.
 
-Vi skal snakke litt om hvordan datamaskina konseptuelt sett virker.
+Vi skal snakke litt om hvordan datamaskinen konseptuelt sett virker.
 Målet er bedre innblikk i hvordan vi tenker når vi bruker Python til
 å instruere datamaskinen.
-
-*original*: Der er mange måtar å programmera ei datamaskin på. Det paradigmet som ligg til grunn for dette kurset er *imperativ* programmering. Det er det mest kjende paradigmet, men ikkje det einaste.
-
-Me skal prata litt om korleis datamaskina konseptuelt sett verkar. Målet er litt betre innblikk i korleis me tenkjer når me bruker Python til å instruera datamaskina.
 
 ---
 
@@ -160,18 +156,10 @@ Turingmaskinen har en fast oppslagstabell som definerer resultatet for en gitt t
 Samme tilstand og tegn gir *alltid* samme resultat.
 
 Denne maskinen er selvsagt absurd enkel.
-Den må òg være uhyre treg siden det tar lang tid å lete gjennom båndet efter riktig posisjon. 
+Den må òg være uhyre treg siden det tar mange steg og dermed  lang tid å lete gjennom båndet hvis man er ut efter bestemte data.
 Likevel viser Turing at den i prinsippet kan løse mange komplekse problemer.  
-
-Alt vi trenger er et minne som vi kan bla igjennom og en operasjon som virker på to inputtverdier, tilstanden og verdien fra båndet.
+Alt vi trenger er et minne som vi kan bla igjennom og en operasjon som virker på to inputtverdier, tilstanden og verdien fra minnet.
 Ennu i dag regner vi turingmaskinen som målestokk for hva som overhode er mulig å beregne.
-
-*original:*
-På kvart tidssteg ser maskina tilstanden sin og eitt teikn på bandet. Dette avgjer både den nye tilstanden og kva teikn som vert skrive til bandet. I tillegg kan bandet flytta eit steg til høgre eller venstre. Turingmaskina har ein fast oppslagstabell, som gjev resultatet for ein gjeven tilstand og eit gjeve teikn på bandet. Same tilstand og teikn gjev *alltid* same resultat.
-
-Denne maskina er sjølvsagt absurd enkel.  Ho må òg vera uhyrleg treig sidan det tek lang tid å leita gjennom bandet. Likevel viser Turing at ho i prinsippet kan løysa mange komplekse problem.  
-
-Alt me treng er eit minne som me kan bla igjennom og ein operasjon som verkar på to inputtverdiar, tilstanden og verdien fra bandet.
 
 ---
 
@@ -188,7 +176,7 @@ note:
 Elementene fra turingmaskinen kjenner vi igjen i John von Neumann sin arkitektur fra 1945.
 Hans modell er blitt førende for praktisk konstruksjon av datamaskiner.
 
-Papirremsen er blit til *Random Access Memory*, eller RAM. *Random Access* betyr at maskinen kan lese og skrive på en hvilken som helst posisjon, utan å bruke tid på å lete langs remsen
+Papirremsen er blit til *Random Access Memory*, eller RAM. *Random Access* betyr at maskinen kan lese og skrive på en hvilken som helst posisjon, uten å bruke tid på å lete langs remsen
 
 Selve prosesseringsenheten er blitt mer kompleks. 
 Kontrollenheten holder styr på programmet og hvilken instruksjon den logiske og aritmetiske enheten skal utføre neste gang.
@@ -316,4 +304,4 @@ note:
 Jeg håper at dette konseptuelle overblikket er nyttig når dere setter
 dere ned for å programmere, men vi skal ikke dvele ved det.
 Det er først når dere kjenner at dere har kontroll med hva maskinen 
-gjør at dere vet at dere har forstått det.
+gjør at dere vet at dere har forstått noe.
