@@ -43,13 +43,13 @@ På feltsjukehuset registrerte hun møysommelig data.
 Bl.a. talte hun hvor mange pasienter som døde og hvor ofte
 legene vasket hendene.
 
-Hun fant en statistisk sammenheng, som hun brukte til å argumentere for bedre hygiene. Hun møtte  dronning Victoria personlig, og fikk anledning til på påvirke poltikken gjennom statistikk. Reformene hun skape i sykestellet er et av de aller første eksemplene på at systematisk databehandling blir brukt til å ta beslutninger.
+Hun fant en statistisk sammenheng, som hun brukte til å argumentere for bedre hygiene. Hun møtte  dronning Victoria personlig, og fikk anledning til på påvirke poltikken gjennom statistikk. Reformene hun skape i sykestellet er et av de aller første eksemplene på at data blir brukt systematisk til å ta beslutninger.
 
 Det skal innrømmes at selv om Florence gjettet på at dårlig håndhygiene
 fører til flere dødsfall, er ikke dét noe som vi kan lese ut fra datamaterialet.
 Kan hende er det slik at når mange pasientar er syke og 
 døende, så har legene mindre tid til å vaske hendene.
-Altså at mange døende pasienter er årsak til dårleg hygiene.
+Altså at mange døende pasienter er årsak til dårlig hygiene.
 
 Årsakssammenhengene ble forklart av legevidenskaben efter Florence Nightingale sin tid.
 
@@ -105,13 +105,13 @@ Figuren viser ikke hennes data, men et andet datasett der vi har en variabel `x`
 
 note:
 Når vi studerer en slik samanheng kvantitativt, kaller vi det
-regresjonsanalyse,  som er en av de aller mest sentrale og grunnleggjande
+regresjonsanalyse,  som er en av de aller mest sentrale og grunnleggende
 teknikkene i statistikk.
 
 Lineær regresjon prøver å beskrive `y` som en lineær funksjon av `x`.
 Dette datasettet viser bare svak sammenheng.
-Gjennomsnittlig `y`-verd synker noe med økende `x`,
-men det er tilfeldig variasjon som dominerer.
+Gjennomsnittlig `y`-verdi synker noe med økende `x`,
+men det er tilfeldig variasjon som dominereri bildet.
 
 ---
 
@@ -238,7 +238,7 @@ Her ser vi Fishers løsning for å skille *Iris Setosa* fra andre iris-varianter
 
 Når vi siden måla et ukjent individ, kan vi raskt se hvilken side av
 linjen det faller på.
-Modellen er perfekt.  Vi ser ett setosaeksemplar på feil side av linjen.
+Modellen er ikke perfekt.  Vi ser f.eks. ett setosaeksemplar på feil side av linjen.
 Det er likevel en god modell, som virker med god sannsynlighet. 
 
 Mye av det arbeidet vi gjør i maskinlæring er ett av disse to problemene, 
@@ -259,8 +259,7 @@ rundt 2010-2015
 : *djupe* nevrale nettverk
 
 note:
-Historien om maskinlæring og kunstig intelligens begynner på 1950-tallet,
-ikke lenge efter at de første datamaskinene ble bygd.
+Historien om maskinlæring og kunstig intelligens begynner på 1940- og 50-tallet, samtidig med at de første generelle og programmerbare datamaskinene ble tatt i bruk.
 Rosenblatt viste frem trening av nevrale nettverk
 for å løse klassifiseringsproblemer i 1957, men den gangen
 justerte han vektene manuelt.
@@ -278,10 +277,11 @@ Matematikken i nevrale nettverk er langt på vei den samme som i 3D-grafikk.
 For ti-femten år siden løsnet det virkelig for nevrale nettverk.
 Vektormaskinene gjorde at man kunne bruke større nettverk og 
 større datasett, og 
-testa meir og raskare, og ein fann nye nettverksarkitekturar.
+teste flere og større modeller på kortere tid.
+Det hjalp frem nye og mer komplekse nettverksarkitekturer.
 
-Likevel, me hanskast framleis med dei same utfordringane rundt
-usikkerheit og sannsyn som har utfordra statistikarane i 200 år.
+Likevel står vi overfor de samme utfordringene rundt
+usikkerhet og sannsynlighet som statistikerne har strevd med i 200 år.
           
 ---
 
@@ -320,7 +320,7 @@ Egen figur basert på iris-datasettet.
 note:
 Uansett om vi tenker statistikk eller maskinlæring,
 handler det om å bruke data for å bygge sannsynlighetsmodeller.
-Figuren viser mulige sannsynlighetsfordelinger for kronblad på *Iris Setosa* i blått og *Iris Versicolor* i orange, basert på datasettet.
+Figuren viser mulige sannsynlighetsfordelinger for kronbladbredden på *Iris Setosa* i blått og *Iris Versicolor* i orange, basert på datasettet.
 
 Vi ser den statistiske forskjellen.  Hvis kronbladet er mer enn tre centimeter bredt er det mest sannsynlig *versicolor*, men det er langt fra sikkert.
 
@@ -353,7 +353,7 @@ sannsynlige responsen.
 
 note:
 Det er derfor ChatGPT og andre sprogmodeller hallusinerer.
-Sannsynleg har ingenting med sann å gjera.
+Sannsynlig har ingenting med sann å gjøre.
 
 ---
 
@@ -374,10 +374,12 @@ Ingen prøver å spå resultatene til stortingsvalget ved å spørre bare et par
 
 Det er mange som glemmer denne lærdommen når de tar i bruk maskinlæring og kunstig intelligens. Et velkjent eksempel er ansettelsesprosesser, der man har trent maskinlæringsmodeller på data fra historiske ansettelsesprosesser, og ikke på data som er representative for den fremtiden man ønsker seg.  
 
-Hvis man tidligere bare har ansatt etnisk norske menn med sivilingeniørgrad fra Trondhjem, får vi en maskinlæringsmodell som sier at dét er normalen. Kvinner, afrikanere og musikere fremstår alle som like usannsynlige og blir dermed valgt bort, blott fordi de var sjeldne i det treningsutvalget.
+Hvis man tidligere bare har ansatt etnisk norske menn med sivilingeniørgrad fra Trondhjem, får vi en maskinlæringsmodell som sier at dét er normalen. Kvinner, afrikanere og musikere fremstår alle som like usannsynlige og blir dermed valgt bort, blott fordi de var sjeldne i treningsutvalget.
 
 
 ---
+
+<!-- slide template="[[tpl-quote]]" -->
 
 ![[2010_Utopien_arche04.jpg]]
 
