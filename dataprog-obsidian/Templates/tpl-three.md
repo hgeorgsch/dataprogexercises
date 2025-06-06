@@ -2,6 +2,9 @@
   .reveal .twocolumnslide .credit {
      font-size: 18pt ;
   }
+  .reveal .twocolumnslide {
+     font-size: 21pt ;
+  } 
   .reveal .twocolumnslide section img {
      object-fit: contain   ;
      height: 600px ;

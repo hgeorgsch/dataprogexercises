@@ -43,9 +43,7 @@ På feltsjukehuset registrerte hun møysommelig data.
 Bl.a. talte hun hvor mange pasienter som døde og hvor ofte
 legene vasket hendene.
 
-Hun fant en statistisk sammenheng, som hun brukte til å påvirke politikken
-og skape reformer i sykestellet.  Det sies at hun hadde møter med dronning
-Victoria personlig.
+Hun fant en statistisk sammenheng, som hun brukte til å argumentere for bedre hygiene. Hun møtte  dronning Victoria personlig, og fikk anledning til på påvirke poltikken gjennom statistikk. Reformene hun skape i sykestellet er et av de aller første eksemplene på at systematisk databehandling blir brukt til å ta beslutninger.
 
 Det skal innrømmes at selv om Florence gjettet på at dårlig håndhygiene
 fører til flere dødsfall, er ikke dét noe som vi kan lese ut fra datamaterialet.
@@ -55,6 +53,18 @@ Altså at mange døende pasienter er årsak til dårleg hygiene.
 
 Årsakssammenhengene ble forklart av legevidenskaben efter Florence Nightingale sin tid.
 
+---
+
+<!-- slide template="[[tpl-quote]]" -->
+
+![[DARPA_Big_Data.jpg]]
+
+::: credit
+By DARPA - Defense Advanced Research Projects Agency (DARPA), Public Domain,
+via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=25685422)
+:::
+
+note:
 Når vi går i gang med å studere stordata med hjelp av programmering og kunstig intelligens,
 er det viktig å huske på at vi egentlig ikke gjør noget andet enn Florence Nightingale.
 Vi gjør det blott i større skala, med flere variabler og flere datapunkter.
@@ -86,22 +96,22 @@ Figuren viser ikke hennes data, men et andet datasett der vi har en variabel `x`
 
 <!-- slide template="[[tpl-quote]]" -->
 
-# Regresjon
 
 ![[regmodel.svg]]
 
 ::: credit
-Figur frå øvinga [Lineær regresjon](notebook/Linear%20Regression%20in%20SciKitLearn).
+[Lineær regresjon](notebook/Linear%20Regression%20in%20SciKitLearn) (døme frå øvinga).
 :::
 
 note:
 Når vi studerer en slik samanheng kvantitativt, kaller vi det
 regresjonsanalyse,  som er en av de aller mest sentrale og grunnleggjande
-teknikken i statistikk.
+teknikkene i statistikk.
 
 Lineær regresjon prøver å beskrive `y` som en lineær funksjon av `x`.
-Det kan se ut som en svak sammenheng der `y` ofte er noe mindre med større `x`,
-men i dette datasettet er der mye mer tilfeldig variasjon.
+Dette datasettet viser bare svak sammenheng.
+Gjennomsnittlig `y`-verd synker noe med økende `x`,
+men det er tilfeldig variasjon som dominerer.
 
 ---
 
@@ -120,7 +130,7 @@ By
 :::
 
 ::: image2
-**Adolphe Quetelet (1796-1874)**
+**Adolphe Quetelet <br> (1796-1874)**
 ![[Adolphe_Quételet_by_Joseph-Arnold_Demannez.jpg]]
 :::
 
@@ -130,7 +140,7 @@ By Joseph-Arnold Demannez.
 :::
 
 ::: image3
-**sir Francis Galton ($\sim$ 1885)**
+**sir Francis Galton <br> ($\sim$ 1885)**
 ![[Sir_Francis_Galton_by_Charles_Wellington_Furse.jpg]]
 :::
 
@@ -142,8 +152,7 @@ By Charles Wellington Furse (died 1904)
 note:
 Regresjonsanalysen var derimot ikke utviklet da Florence fikk sitt
 gjennombrudd.
-Det tok over ett hundrede år å utvikle.
-Nettopp tilfeldig variasjon har vist seg krevende å forstå.
+Det tok mange generasjoner å oppnå tilstrekkelig forståelse for tilfeldig variasjon.
 
 En del av teknikken, minste kvadraters metode, ble skildret av Legendre
 i 1805.
