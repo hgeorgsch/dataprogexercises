@@ -28,7 +28,7 @@ feltskjukehuset under Krimkrigen.
 
 <!-- slide template="[[tpl-quote]]" -->
 
-![[https://upload.wikimedia.org/wikipedia/commons/1/17/Nightingale-mortality.jpg]]
+![[Nightingale-mortality.jpg]]
 
 ::: credit
 Mortality Chart due to Florence Nightingale
@@ -202,7 +202,7 @@ Eigen figur, sjå [[Fisher Linear Discriminant in sklearn]].
 :::
 
 note:
-Jeg er dårlig på å tegne i fire dimensjonar, men dersom vi bare tar
+Jeg er dårlig på å tegne i fire dimensjoner, men dersom vi bare tar
 målene på begerbladene, kan det se slik ut.
 
 Hvert punkt er ett individ,
@@ -303,7 +303,7 @@ personer som regner.
 ![[iris-pdf.svg]]
 
 ::: credit
-Eigen figur basert på iris-datasettet.
+Egen figur basert på iris-datasettet.
 :::
 
 note:
@@ -361,7 +361,9 @@ En av de største er å finne data som er *representative* for det man ønsker �
 
 Ingen prøver å spå resultatene til stortingsvalget ved å spørre bare et par tusen mennesker på Søre Sunnmøre. Vi vet at det ville gi en helt anden modell enn om vi spurte folk i Lofoten eller Drammen.
 
-Det er mange som glemmer denne lærdommen når de snakker om maskinlæring og kunstig intelligens. Et velkjent eksempel er ansettelsesprosesser, der man har trent maskinlæringsmodeller på data fra historiske ansettelsesprosesser, og ikke på data som er representative for den fremtiden man ønsker seg. Historisk har man kanskje bare ansatt etnisk norske menn, og da lærer maskinlæringsmodellen at det er slik det skal være.
+Det er mange som glemmer denne lærdommen når de tar i bruk maskinlæring og kunstig intelligens. Et velkjent eksempel er ansettelsesprosesser, der man har trent maskinlæringsmodeller på data fra historiske ansettelsesprosesser, og ikke på data som er representative for den fremtiden man ønsker seg.  
+
+Hvis man tidligere bare har ansatt etnisk norske menn med sivilingeniørgrad fra Trondhjem, får vi en maskinlæringsmodell som sier at dét er normalen. Kvinner, afrikanere og musikere fremstår alle som like usannsynlige og blir dermed valgt bort, blott fordi de var sjeldne i det treningsutvalget.
 
 
 ---
@@ -374,16 +376,10 @@ via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=16899707
 :::
 
 note:
+Da ChatGPT ble allment tilgjengelig i 2022 fremsto det som et mirakel fra fremtiden, som et orakel som vi ikke er ment å forstå.
 
-Mennesket kan difor handtera overrasking.
-Me kan finna meining i val som aldri har vore gjort før,
-som å tilsetja afrikanske invandrar eller kvinner,
-eller musikarar i ein ingeniørjobb,
-og vurdera om det er bra for oss.
+Det er ikke sant.
 
-Maskina kan ikkje det.
-Overrasking og nyskaping er støy som bryt med forventinga,
-det som statistikken kaller *utliggjarar*.
-Der finst ikkje empirisk grunnlag for at nyskapinga er positiv.
-
-
+ Mange av prinsippene bak maskinlæring er over hundrede år gamle, og selv om vi i dag har regnekraft og datamengder som kan ta pusten fra oss, er vi like sårbare for de gamle fallgrubene.
+ Modellene representerer bare den fortiden som de er trent på.
+ Skal vi skape den fremtiden vi ønsker oss, må vi ta ansvar selv.
