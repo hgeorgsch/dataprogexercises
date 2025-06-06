@@ -152,15 +152,17 @@ By Charles Wellington Furse (died 1904)
 note:
 Regresjonsanalysen var derimot ikke utviklet da Florence fikk sitt
 gjennombrudd.
-Det tok mange generasjoner å oppnå tilstrekkelig forståelse for tilfeldig variasjon.
+Tilfeldighet og sannsynlighet er rett og slett krevende konsepter å håndtere, 
+og det tok mange generasjoner å oppnå tilstrekkelig forståelse til å kunne utvikle pålitelige teknikker.
 
-En del av teknikken, minste kvadraters metode, ble skildret av Legendre
-i 1805.
-Teknikken ble raskt etablert i astronomi, der man hadde en relativt
-enkel modell med få variabler.
-Da Quetelet innførte statistikk i samfunnsvitskapane utover 1800-tallet,
-hadde man derimot ikke tilstrekkelig forståelse av 
-sannsynlighet og usikkerhet til helt å lykkes.
+Det var enklest i fysikken. 
+Legendre skildre  minste kvadraters metode allerede i 1805, og astronomene tok raskt teknikken i bruk for å beregne planetbaner.
+Fordelen med fysikk er at de teoretiske modellene er godt funderte og har relativt få variabler.
+
+Samfunnsvidenskabene er vanskeligere, fordi der alltid er flere faktorer enn dem vi klarer å holde regning med.
+Da Quetelet innførte statistikk i samfunnsvidenskabene utover 1800-tallet,
+hadde man ennu ikke tilstrekkelig forståelse av  sannsynlighet og usikkerhet til helt å lykkes.
+
 Mange regner  Galton som som oppfinneren av regresjon rundt 1885, med
 arbeide i genetikk og arvelære.
         
