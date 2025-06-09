@@ -5,6 +5,20 @@ tags:
 
 **Tittel**  Dataanalyse gjennom programmering og maskinlæring
 
+**Ingress**
+Emnet gjev ein introduksjon til bruk av generell programmering som eit verkty i dataanalyse. Målgruppa er folk som allereie arbeider med kvantitative data i jobben,
+anten det er rekneskap, forretningsanalyser, demografi eller finans.
+Målet er at programmeringsverkty skal gjera det mogleg å handtera større og meir samansette datasett og mogleggjera meir avanserte og fleksible analyseteknikkar, som maskinlæring.
+
+**Innhald**
++ Ta i bruk Jupyter Lab og Python.
++ Simulering av økonomiske prosessar
++ Formattering og visualisering av datasett
++ Statistisk analyse og maskinlæring
++ Personvern, sikkerheit og etikk
+Kurset opnar for at studentane kan velja ulike tema til fordjuping.
+
+*Læringsutbyte*
 + Kunnskap. Etter endt kurs veit kandidaten
 	+ om dei viktigsdte høve og avgrensingar som programmering,
       maskinlæring og andre digitale verkty gjev til 
