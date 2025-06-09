@@ -16,7 +16,9 @@ tags:
 + Ferdigheiter.  Etter endt kurs kan kandidaten
 	+ bruka programmering til å henta, formattera, kombinera,
       visualisera og analysera data frå ulike kjelder.
-+ Kompetanse
++ Kompetanse. Etter endt kurs kan kandidaten
+	+ finna fram relevante data og velja relevante verkty og metodar for å handtera dei.
+	+ kritisk analysera og tolka kvantitative data i eigen fagkontekst.
 
 **Studiepoengreduksjon**  7½sp IIRA2001, 2½sp INGAxxxx
 
