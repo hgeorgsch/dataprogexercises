@@ -3,6 +3,8 @@ tags:
   - emneskildring
 ---
 
+# Utkast 2025
+
 **Tittel**  Dataanalyse gjennom programmering og maskinlæring
 
 **Ingress**
