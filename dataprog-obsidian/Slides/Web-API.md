@@ -2,14 +2,13 @@
 tags:
   - lecture/video
 ---
-<p align="center">
-	<img src="/slidefig/ssb-statistisk-aarbog-1881.png" width=300>
-</p>
----
-![[export/Web-API/Slides/slidefig/ssb-statistisk-aarbog-1881.png]]
-:::credit
+<!-- slide template="[[tpl-fitdiagram2]]" -->
+
+![[ssb-statistisk-aarbog-1881.png]]
+::: credit
 Statistik årbok 1881, fra ssb.no
 :::
+
 note:
 Før den digitale revolusjonen var datainnhenting en manuell og langsom prosess.
 
@@ -123,7 +122,7 @@ Her har vi ufinheter på de fleste språk  inkludert Klingon, og vil du fornærm
 + Tilgjengelighet
 + Aktualitet - tidsriktighet
 
-:note
+note:
 * Kildepålitelighet -- ssb, eurostat stoler vi på -- hva med en tilfeldig githubbruker?
 * Validitet og nøyaktighet - Måler dataene det de påstår og er de presise?
 * Kompletthet - Hvor stor del av fenomen eller populasjon er fanget opp?
@@ -157,28 +156,20 @@ For å kunne gjøre dette må vi vite litt om hvordan datamaskiner kommuniserer 
 ---
 
 <!-- slide template="[[tpl-fitdiagram2]]" -->
-::: heading
-#### OSI modellen
-:::
-
-![[osi.svg]]
+![[communication-troubles.webp]]
 
 ::: credit
-Laget i tikz
+Illustrasjon generert av DALL-E
 :::
-
-note:
-
 ---
 
 <!-- slide template="[[tpl-fitdiagram2]]" -->
-::: heading
-### OSI-modellen 
-:::
+##### OSI-model
 
 ![[osi.svg]]
 
 ::: credit
-credits go here
 :::
+
+note:
 

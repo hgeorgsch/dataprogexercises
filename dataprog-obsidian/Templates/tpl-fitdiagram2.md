@@ -1,4 +1,3 @@
-
 <style>
 .diagramslide {
   display: flex;
@@ -10,47 +9,40 @@
   margin: 0;
   overflow: hidden;
 }
-
-.diagramslide .heading {
+.diagramslide h1, .diagramslide h2, .diagramslide h3, .diagramslide h4, .diagramslide h5, .diagramslide h6 {
+  margin: 0.5em 0 0.2em 0;
+  padding: 0 1.5em;
+  max-height: 12vh;
   flex: 0 0 auto;
-  margin: 0.5em 0 0.25em 0;
-  padding: 0 1em;
 }
-
-.diagramslide .internal-embed {
-  display: flex;
-  flex: 1 1 auto;
+.diagramslide .internal-embed,
+.diagramslide img,
+.diagramslide svg {
+  flex: 1 1 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
   align-items: center;
   justify-content: center;
-  min-height: 0; /* critical for flex children */
-}
-
-.diagramslide .internal-embed img,
-.diagramslide img {
-  max-height: 50vh;
-  max-width: 98vw;
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
+  max-height: 75vh;   /* You can tweak this */
   object-fit: contain;
-  display: block;
 }
-
-/* For standalone <img> tags, just in case */
-.diagramslide img {
-  margin: 0 auto;
-}
-
 .diagramslide .credit {
+  margin: 0.2em 0 0.5em 0;
+  padding: 0 1.5em;
+  font-size: 0.4em !important;
+  max-height: 10vh;
   flex: 0 0 auto;
-  font-size: 0.9em;
-  color: #999;
-  margin: 0.25em 1em 0.75em 1em;
-  text-align: right;
+  color: #888;
 }
 </style>
 
 <div class="diagramslide">
-  <% heading %>
   <% content %>
+  <div class="credit">
   <% credit %>
+  </div>
 </div>
+
