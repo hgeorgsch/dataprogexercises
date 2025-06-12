@@ -2,8 +2,12 @@
 tags:
   - lecture/video
 ---
-![[ssb-statistisk-aarbog-1881.png]]
-::: credit
+<p align="center">
+	<img src="/slidefig/ssb-statistisk-aarbog-1881.png" width=300>
+</p>
+---
+![[export/Web-API/Slides/slidefig/ssb-statistisk-aarbog-1881.png]]
+:::credit
 Statistik årbok 1881, fra ssb.no
 :::
 note:
@@ -152,8 +156,29 @@ For å kunne gjøre dette må vi vite litt om hvordan datamaskiner kommuniserer 
 
 ---
 
-# OSI-modellen
+<!-- slide template="[[tpl-fitdiagram2]]" -->
+::: heading
+#### OSI modellen
+:::
 
-bilde her
+![[osi.svg]]
+
+::: credit
+Laget i tikz
+:::
 
 note:
+
+---
+
+<!-- slide template="[[tpl-fitdiagram2]]" -->
+::: heading
+### OSI-modellen 
+:::
+
+![[osi.svg]]
+
+::: credit
+credits go here
+:::
+
