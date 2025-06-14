@@ -36,6 +36,13 @@ tags:
        fokus: “Python, som vi altså skal fokusere på i dette kurset (?), kom
        først i 1991, …"
 
++ TODO
+	+ [ ] Hunden $\to$ #jonas ? idéar ?
+	+ [ ] Tilstand - kva, korleis, kvifor
+		+ [ ] Turingmaskina
+		+ [ ] seinare
+	+ [ ] Kommunikasjon frå turingmaskina
+
 
 ## Gamle skisser og idéar
 
