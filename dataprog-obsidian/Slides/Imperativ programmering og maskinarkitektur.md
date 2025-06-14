@@ -128,18 +128,9 @@ Båe modellane var abstrakte matematiske konsept, men det er Turing sin modell s
 note: 
 Turingmaskinen er som sagt en abstrakt og matematisk modell. Bildet viser en rekonstruert og fysisk modell. 
 
-Maskinen har et papirbånd som er rullet opp på to spoler som drar båndet fram og tilbake gjennom lesehodet i midten.
-Dette båndet er minnet i maskinen.
-Det er delt i diskrete posisjonar der hver posisjon kan inneholde ett tegn.
+Maskinen har en langt papirremse som brukes som minne. Remsen er delt i diskrete plasser, der ett tegn, symbol eller bokstav kan skrives på hver plass. De to spolene kan dra remsen frem og tilbake gjennom «hjernen» i maskinen.
 
-Turingmaskinen er en *tilstandsmaskin*.  Dvs. til en hver tid er maskinen i en bestemt tilstand. Det som maskinen gjør avhenger både av tilstanden og det som står på båndet. 
-
-*original:*
-Turingmaskina er som sagt ein abstrakt og matematisk modell. Biletet viser ein rekonstruert modell. 
-
-Maskina har eit papirband som er rulla opp på to spoler som kan dra bandet att og fram gjennom lesehodet i midten. Papirbandet er minnet i maskina og delt i diskrete posisjonar der kvar posisjon kan innehalad eitt teikn.
-
-Turingmaskina er ei *tilstandsmaskin*.  Dvs. til ei kvar tid er maskina i ei bestemt tilstand. Det som maskina gjer avheng både av tilstanda og kva som står på bandet. 
+I tillegg til remsen, kan «hjernen» i maskinen huske ett symbol, slik at den til en hver tid kan se to symboler: ett på remsen og ett som den husker. Turingmaskinen er en *tilstandsmaskin*, og det symbolet som huskes i «hjernen» danner tilstanden til maskinen.
 
 ---
 
@@ -180,13 +171,13 @@ Papirremsen er blit til *Random Access Memory*, eller RAM. *Random Access* betyr
 
 Selve prosesseringsenheten er blitt mer kompleks. 
 Kontrollenheten holder styr på programmet og hvilken instruksjon den logiske og aritmetiske enheten skal utføre neste gang.
-Tilstanden er ikke lenger én atomær verdi, men flere registre der hvert register inneholder en verdi.
+Tilstanden er ikke lenger bare ett symbol, men flere registre med ulike funksjoner, der hvert register inneholder en verdi.
 
 Instruksjonene er typisk enkle aritmetiske og logiske operasjoner, som pluss, minus, *og* og *eller*, samt instruksjoner for å hoppe i programmet eller lese og skrive til minnet.
 
 I tillegg er maskina koblet til det vi gjerne kaller *perifere enheter*, eller *input/output devices* i figuren.
 Det omfatter skjerm for *output*, og tastatur for *input*, men kan òg være nettverksgrensesnitt eller harddisk.
-Du la kanskje merke til at turingmaskinen ikke hadde noen mekanisme for å kommunisere omverdenen.
+Turingmaskinen hadde ingen mekanisme for å kommunisere omverdenen.
 I praksis må den logiske enheten ha instruksjoner for å sende og motta data til og fra perifere enheter.
 
 Et hovedpoeng i von Neumann-arkitekturen er at det samme RAM-minnet blir brukt både til de data som programmet arbeider på og til selve programmet.
@@ -241,21 +232,10 @@ Der bruker man nøyaktig de samme primitive instruksjonene som CPU-en bruker, me
 En av de største nyvinningene i tredje generasjon-sprogene som kom fra slutten av 1950-talet var å gjøre dem mer uavhengige av prosessorarkitekturen. Ulike mikroprosessorer har ikke det samme instruksjnonssettet, og et *assembly*-program kan bare brukes på den maskintypen det er skrevet for.
 
 Der finnes tusenvis av programmeringssprog, som er mer eller mindre utbredd, og mer eller mindre egnet til ulike oppgaver.
-Utviklingen handler i stor grad om å gjøre det enklere å håndtere komplekse problem, sammensatte programmer og store datastrukturer. Fjerde generasjon-sprog er gjerne tilpasset spesifikke anvendelsesdomener.
+Utviklingen handler i stor grad om å gjøre det enklere å håndtere komplekse problem, sammensatte programmer og store datastrukturer. Fjerde generasjon-sprog som SQL er gjerne tilpasset spesifikke anvendelsesdomener.
 
-Python, som først kom i 1991, er et tredjegenerasjonsprog.
+Python, som vi bruker, kom først i 1991 og er et tredjegenerasjonsprog.
 Det blir brukt til alle slags oppgaver, men det er særlig populært fordi det gir tilgang til gode og gratis bibliotek til numerisk analyse, statistikk og maskinlæring. 
-
-*original:*
-For å gjera programmeringa enklare, har me utvikla programmeringsspråk. Andre generasjon programmeringsspråk kom allereie på 1940-talet og er kjent som *assembler*-språk.  Der bruker ein nøyaktig dei same primitive instruksjonane som CPU-en bruker, men ein kan definera variablar og subrutinar.
-
-Ein av dei største nyvinningane i tredje generasjon-språka som kom frå slutten av 1950-talet var å gjera dei uavhengige av prosessorarkitekturen. Ulike mikroprosessorar har ikkje det same instruksjnonssettet, og eit *assembly*-program kan berre brukast på den maskintypen det er skrive for.
-
-Der finst tusenvis av programmeringsspråk, som er meir eller mindre utbreidde, og meir eller mindre egna til ulike oppgåver. Utviklinga handlar i stor grad om å gjera det enklare å handtera komplekse problem og datastrukturar. Fjerde generasjon-språk er gjerne tilpassa spesifikke anvendingsdomene.
-
-Python, som kom i 1991, er eit tredjegenerasjonspråk. Det vert brukt til alle slags oppgåver, men det er særleg populært fordi det gjev tilgang til gode og gratis bibliotek til numerisk analyse, statistikk og maskinlæring. 
-
-Sjølv om me stadig får nye programmeringsspråk treng CPUen stadig den same maskinkoden. Når me skriv eit program i python, bruker me eit anna program, kalt ein *interpreter* eller *tolk*, som les programmet og omset det til maskinkode.  Jupyter Notebook bruker ein sokalla *kernel* til denne tolkejobben, og der finst *kernels* for andre språk en *python*.
 
 ---
 
