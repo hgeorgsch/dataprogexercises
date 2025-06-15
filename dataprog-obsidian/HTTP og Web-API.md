@@ -57,17 +57,24 @@ Eller klienten kan være et pythonskript, som sender en forespørsel om å få m
 ---
 
 ### HTTP spørringer
-| Metode  | Beskrivelse                                        |
-| ------- | -------------------------------------------------- |
-| GET     | Henter ressurser/data                              |
-| POST    | Sender data til serveren (ofte for å opprette noe) |
-| PUT     | Erstatter en ressurs helt                          |
-| PATCH   | Oppdaterer deler av en ressurs                     |
-| DELETE  | Sletter en ressurs                                 |
-| HEAD    | Samme som GET, men uten responsbody                |
-| OPTIONS | Returnerer støttede metoder for en ressurs         |
-| CONNECT | Etablerer en tunnel til serveren                   |
-| TRACE   | Returnerer det mottatte requestet (debugging)      |
+
+<font size="6">
+
+| Metode   | Beskrivelse                                 |
+|----------|---------------------------------------------|
+| **GET**      | Henter ressurser/data                       |
+| **POST**     | Sender data til serveren (ofte for å opprette noe) |
+| PUT      | Erstatter en ressurs helt                     |
+| PATCH    | Oppdaterer deler av en ressurs                |
+| DELETE   | Sletter en ressurs                            |
+| HEAD     | Samme som GET, men uten responsbody           |
+| OPTIONS  | Returnerer støttede metoder for en ressurs    |
+| CONNECT  | Etablerer en tunnel til serveren              |
+| TRACE    | Returnerer det mottatte requestet (debugging) |
+
+
+</font>
+
 note:
 
 En klient kan sende flere typer spørringer
@@ -75,20 +82,31 @@ En klient kan sende flere typer spørringer
 ---
 
 ### HTTP spørringer
-| Metode   | Beskrivelse                                        |
-| -------- | -------------------------------------------------- |
-| **GET**  | Henter ressurser/data                              |
-| **POST** | Sender data til serveren (ofte for å opprette noe) |
-| PUT      | Erstatter en ressurs helt                          |
-| PATCH    | Oppdaterer deler av en ressurs                     |
-| DELETE   | Sletter en ressurs                                 |
-| HEAD     | Samme som GET, men uten responsbody                |
-| OPTIONS  | Returnerer støttede metoder for en ressurs         |
-| CONNECT  | Etablerer en tunnel til serveren                   |
-| TRACE    | Returnerer det mottatte requestet (debugging)      |
+
+<font size="6">
+
+| Metode   | Beskrivelse                                 |
+|----------|---------------------------------------------|
+|==**GET**==      | ==Henter ressurser/data==                       |
+| ==**POST**==     | ==Sender data til serveren (ofte for å opprette noe)== |
+| PUT      | Erstatter en ressurs helt                     |
+| PATCH    | Oppdaterer deler av en ressurs                |
+| DELETE   | Sletter en ressurs                            |
+| HEAD     | Samme som GET, men uten responsbody           |
+| OPTIONS  | Returnerer støttede metoder for en ressurs    |
+| CONNECT  | Etablerer en tunnel til serveren              |
+| TRACE    | Returnerer det mottatte requestet (debugging) |
+
+
+</font>
+
 note:
 I praksis trenger vi stort sett kun å bry oss med GET-metoder som henter ressurser/data og POST som sender data til tjeneren, i vårt tilfelle er det ofte snakk om en "handleliste" som beskriver hvilke data vi vil ha tak i.
 
 ---
 
 # Oppbygging
+
+
+
+
