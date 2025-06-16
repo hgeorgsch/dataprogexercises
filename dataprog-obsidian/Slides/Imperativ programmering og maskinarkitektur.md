@@ -99,7 +99,7 @@ Alonzo Church
 
 
 note:
-Teorien for datamaskiner og programmering ble lang på vei utarbeidet på 1930-talet, cirka ti år før man først bygde maskiner som faktisk kunne kjøre programmene.
+Teorien for datamaskiner og programmering ble langt på vei utarbeidet på 1930-talet, cirka ti år før man først bygde maskiner som faktisk kunne kjøre programmene.
 Church og Turing definerte hvert sitt paradigme. De er ekvivalente i den forstand at de kan *oppnå* det samme, selv om tankesettet er meget forskjellig.
 
 Turingmaskinen er den mest kjente modellen, og den som ligger til grunn for imperativ programmering, der vi kommanderer maskinene og sier nøyaktig hva den skal gjøre i hvilken rekkefølge.
