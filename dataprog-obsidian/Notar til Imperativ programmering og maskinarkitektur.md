@@ -3,6 +3,7 @@ tags:
    - notes
 ---
 
++ Sjå [[Imperativ programmering og maskinarkitektur]]
 - [ ] Kan DALL-E o.l ta imot et fargekart vi bruker i digital profil / brand?
 
 ## Innspel frå Ben  David
@@ -46,7 +47,6 @@ tags:
 
 ## Gamle skisser og idéar
 
-+ Sjå òg [[Imperativ programmering og maskinarkitektur]]
 
 - Figur: CPU og register
 	+ https://slideplayer.com/slide/5101082/

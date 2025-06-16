@@ -43,7 +43,7 @@ På feltsjukehuset registrerte hun møysommelig data.
 Bl.a. talte hun hvor mange pasienter som døde og hvor ofte
 legene vasket hendene.
 
-Hun fant en statistisk sammenheng, som hun brukte til å argumentere for bedre hygiene. Hun møtte  dronning Victoria personlig, og fikk anledning til på påvirke poltikken gjennom statistikk. Reformene hun skape i sykestellet er et av de aller første eksemplene på at data blir brukt systematisk til å ta beslutninger.
+Hun fant en statistisk sammenheng, som hun brukte til å argumentere for bedre hygiene. Hun møtte  dronning Victoria personlig, og fikk anledning til på påvirke politikken gjennom statistikk. Reformene hun skape i sykestellet er et av de aller første eksemplene på at data blir brukt systematisk til å ta beslutninger.
 
 Det skal innrømmes at selv om Florence gjettet på at dårlig håndhygiene
 fører til flere dødsfall, er ikke dét noe som vi kan lese ut fra datamaterialet.
@@ -242,7 +242,11 @@ Modellen er ikke perfekt.  Vi ser f.eks. ett setosaeksemplar på feil side av li
 Det er likevel en god modell, som virker med god sannsynlighet. 
 
 Mye av det arbeidet vi gjør i maskinlæring er ett av disse to problemene, 
-enten regresjon eller klasifisering.
+enten regresjon eller klassifisering.
+
+Den lineære modellen har bare én *vekt*, som definerer stigningstallet på skillelinjen. Dagens dype nevrale nettverk kan ha milliarder av vekter. Dess flere vekter, dess mer komplekse sammenhenger kan beskrives, men flere vekter krever også flere datapunkter og ikke minst mer strøm til beregningen.
+
+I tillegg til vektene har modellen et konstantledd, *bias*, som forteller hvor linjen krysser `y`-aksen.
 
 ---
 
@@ -253,7 +257,7 @@ enten regresjon eller klasifisering.
 : Maskinlæring *er* statistikk.
 
 rundt 2005
-: Vektorprosessorer *(GPU)*
+: Vektorprosessorar *(GPU)*
 
 rundt 2010-2015
 : *djupe* nevrale nettverk
@@ -266,7 +270,7 @@ justerte han vektene manuelt.
 
 Det er først på 1980-tallet at man får effektive treningsalgoritmer
 for nevrale nettverk, og skjønner at maskinlæring må bygge
-statistikk og forståelsen av usikkerhet og sannsynlighet.
+statistikk og forståelsen av usikkerhet og sannsynlighet. 
 
 For tyve år siden fikk vi billige vektorprosessorer, som først 
 ble brukt i skjermkort og ble masseproduksert til spillkonsoller.
@@ -352,7 +356,7 @@ sannsynlige responsen.
 # Sannsynleg $\neq$ Sann
 
 note:
-Det er derfor ChatGPT og andre sprogmodeller hallusinerer.
+Det er derfor ChatGPT og andre sprogmodeller kan hallusinere.
 Sannsynlig har ingenting med sann å gjøre.
 
 ---
