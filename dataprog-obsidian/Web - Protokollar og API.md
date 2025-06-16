@@ -85,6 +85,10 @@ name=Student
 
 *  Litt om html/json/xml avhengig av hva telnet/curl gir oss å se på
 
+
+```bash
+openssl s_client -connect nrk.no:443 -quiet
+```
 ### Hvordan bruke feks http-protokoll til å hente data?
 #### API
 - 

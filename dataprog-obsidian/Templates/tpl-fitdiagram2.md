@@ -38,6 +38,7 @@
   flex: 0 0 auto;
   color: #888;
 }
+
 </style>
 
 <div class="diagramslide">
