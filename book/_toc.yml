@@ -21,17 +21,17 @@ chapters:
     - file: Numeriske Metodar og Kontrollflyt
       sections:
       - file: notebook/Halveringsmetoden
-    - file: Simulering02
-      sections:
-      - file: Datastrukturar og Kompleksitet
-      - file: notebook/Tilfeldigheit
-      - file: notebook/Simulering og Datastrukturar
-      - file: notebook/Marknadssimulering
     - file: CSV og Deskriptiv Statistikk
       sections:
       - file: Filhandtering
       - file: notebook/Linear Regression in SciKitLearn
       - file: notebook/Evaluering for regresjon
+    - file: Veke 3 Simulering
+      sections:
+      - file: Datastrukturar og Kompleksitet
+      - file: notebook/Tilfeldigheit
+      - file: notebook/Simulering og Datastrukturar
+      - file: notebook/Marknadssimulering
     - file: Agent-basert simulering
       sections:
       - file: notebook/Shrimp-Game
