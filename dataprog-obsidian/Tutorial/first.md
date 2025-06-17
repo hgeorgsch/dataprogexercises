@@ -11,7 +11,7 @@ Veke 1
 : [Numeriske Metodar og Kontrollflyt](Numeriske%20Metodar%20og%20Kontrollflyt.md)
 
 Veke 2
-: [Simulering og Datastrukturar](Simulering02)
+: [Simulering og Datastrukturar](Veke%203%20Simulering.md)
 
 Veke 3
 : [CSV og Deskriptiv Statistikk](CSV%20og%20Deskriptiv%20Statistikk)
