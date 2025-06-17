@@ -796,11 +796,13 @@ df
 
 #### Aritmetikk med serier
 * Legg merke til hvordan vi kan gjøre "elementvise operasjoner" med dataserier ganske lett
-  | Operasjon                   | Beskrivelse                                          | Eksempel i Python                                     | Resultat                                     |
-|-----------------------------|------------------------------------------------------|-------------------------------------------------------|----------------------------------------------|
-| Addisjon (+)                | Legger til verdier i to serier.                       | `s1 = pd.Series([1, 2, 3])`<br>`s2 = pd.Series([4, 5, 6])`<br>`s3 = s1 + s2` | `0: 5, 1: 7, 2: 9`                          |
-| Subtraksjon (-)             | Trekker verdier i én serie fra en annen.              | `s3 = s1 - s2`                                        | `0: -3, 1: -3, 2: -3`                       |
-| Multiplikasjon (*)          | Multipliserer verdier i to serier.                    | `s3 = s1 * s2`                                        | `0: 4, 1: 10, 2: 18`                        |
-| Divisjon (/)                | Deler verdier i én serie med en annen.                | `s3 = s2 / s1`                                        | `0: 4.0, 1: 2.5, 2: 2.0`                    |
-| Potens (**)                 | Opphøyer verdier i en serie til en eksponent.         | `s3 = s1 ** 2`                                        | `0: 1, 1: 4, 2: 9`                          |
-| Modulo (%)                  | Finner resten etter divisjon av to serier.            | `s3 = s2 % s1`                                        | `0: 0, 1: 1, 2: 0`                          |
+
+
+| Operasjon          | Beskrivelse                                   | Eksempel i Python                                                            | Resultat                 |
+| ------------------ | --------------------------------------------- | ---------------------------------------------------------------------------- | ------------------------ |
+| Addisjon (+)       | Legger til verdier i to serier.               | `s1 = pd.Series([1, 2, 3])`<br>`s2 = pd.Series([4, 5, 6])`<br>`s3 = s1 + s2` | `0: 5, 1: 7, 2: 9`       |
+| Subtraksjon (-)    | Trekker verdier i én serie fra en annen.      | `s3 = s1 - s2`                                                               | `0: -3, 1: -3, 2: -3`    |
+| Multiplikasjon (*) | Multipliserer verdier i to serier.            | `s3 = s1 * s2`                                                               | `0: 4, 1: 10, 2: 18`     |
+| Divisjon (/)       | Deler verdier i én serie med en annen.        | `s3 = s2 / s1`                                                               | `0: 4.0, 1: 2.5, 2: 2.0` |
+| Potens (**)        | Opphøyer verdier i en serie til en eksponent. | `s3 = s1 ** 2`                                                               | `0: 1, 1: 4, 2: 9`       |
+| Modulo (%)         | Finner resten etter divisjon av to serier.    | `s3 = s2 % s1`                                                               | `0: 0, 1: 1, 2: 0`       |

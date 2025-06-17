@@ -49,7 +49,6 @@ Vi må passe på en rekke ting når vi skal slå sammen data:
 * Hva skal vi beholde (Alt som matcher, kun matchende data fra nr 1 eller 2 dataframe)
 * Dersom man slår sammen på index, må disse samsvare
 
-+++ {"editable": true, "slideshow": {"slide_type": "subslide"}}
 
 * Vi trenger nå å slå sammen data som går over forskjellige tidsspenn
 * Indeksen vår består av *tekststrenger* -- dette byr på problemer
