@@ -3,6 +3,8 @@ title: Utkast til læringsmateriale i data og programmering
 ---
 
 + [[Praktiske tips til utvikling av kurset]]
++ [[Emneskildring]]
++ [[Gamle utkast til emneskildring]]
 + [[Skisse til opplegg]]
 	 + Typisk veke
 		 + *videoføredrag* 15min
