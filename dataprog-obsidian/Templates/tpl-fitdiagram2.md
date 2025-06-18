@@ -26,7 +26,7 @@
   justify-content: center;
   width: 100%;
   height: 100%;
-  max-height: 75vh;   /* You can tweak this */
+  max-height: 50vh;   /* You can tweak this */
   max-width: 60vw;
   object-fit: contain;
 }
