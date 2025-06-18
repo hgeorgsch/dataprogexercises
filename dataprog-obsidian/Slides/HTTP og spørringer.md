@@ -3,13 +3,10 @@ tags:
   - lecture/video
 ---
 
-<!-- slide template="[[tpl-fitdiagram2]]" -->
 ### Hente data programmatisk
 
 ![[pythonijungel.png]]
-::: credit
-Bilde generert av DALL-E
-:::
+
 
 note:
 
@@ -23,7 +20,7 @@ I denne videoen skal vi se på hvordan man kan hente inn data programmatisk gjen
 
 #### HTTP
 
-![[osi_prot.svg]]
+![[osi_prot.svg ]]
 
 
 ::: credit
@@ -49,7 +46,7 @@ Det er det øverste laget og henger tett sammen med programmet du faktisk ser p�
 note:
 http-protokollen beskriver hvordan en klient  kan sende en forsepørsel om en ressurs hos en tjener og hvordan tjener skal svare.
 
-Klient og tjener er i prinsippet begge datamaskiner på et nettverk, men tjeneren er typisk en web-server av en sort og tjeneren er et program på datamaskinen din.
+Klient og tjener er i prinsippet begge datamaskiner på et nettverk, men tjeneren er typisk en web-server av en sort og klienten er et program på datamaskinen din.
 
 Feks kan klienten være nettleseren din som sender en forespørsel om å få nyhetsforsiden til www.nrk.no, som da er tjeneren.
 
@@ -108,7 +105,6 @@ I praksis trenger vi stort sett kun å bry oss med GET-metoder som henter ressur
 
 <!-- slide template="[[tpl-fitdiagram2]]" -->
 <!-- slide bg="white" -->
-##### Oppbygging
 
 ![[http-form.svg]]
 ::: credit
@@ -128,7 +124,6 @@ Så kommer det en tom linje, eventuelt etterfulgt av noe data, om vi skal sende 
 <!-- slide template="[[tpl-fitdiagram2]]" -->
 <!-- slide bg="white" -->
 
-#### HTTP-respons
 
 ![[http-response.svg]]
 ::: credit
@@ -182,7 +177,6 @@ Dere kjenner kanskje igjen 404 fra når dere har tastet inn en feil URL i nettle
 + Uniform resource locator
 
 note:
-
 Og når vi først nevnt URL - Vi bruker ofte URL eller nettaddresser om hverandre, men det er ikke helt det samme. URL er en forkortelse for uniform resource locator - og er en måte å oppgi plassering til en eller annen ressurs på internett (som oftest)
 
 Protokollen forteller hvordan vi skal få tak i ressursen
@@ -199,6 +193,7 @@ Disse url-parameterene gjør det mulig å sende med litt data i GET-metoden ogs�
 Vi kan ikke sende med like mye data som i body'en til en post-spørring, og dataene er ikke godt sikret, så brukernavn og passord bør heller legges i bodien eller i headerene
 
 ---
+
 <font size=6>
 
 | Protokoll  | Tjener              | Port | Sti           | Parametre                     |
@@ -216,6 +211,10 @@ Her ser vi noen eksempler på URL
 Og med det tror jeg vi skal sende noen http-spørringer så vi ser hvordan det fungerer
 
 (Viser en demonstrasjon i terminal og åpner resultatet i nettleser)
+script telnet-out.txt
+telnet www.google.com 80
+GET /search?qDonald+Duck+og+Co HTTP/1.1
+Host: www.google.com
 
 ---
 
@@ -229,6 +228,12 @@ Skal vi hente ressurser over et nettverk via HTTP må vi ha kontroll på:
 + Hvilken data som skal sendes med (for POST spørringer)
 
 note:
+Så hva må vi ha kontroll på for å sende en http-spørring?
+Vi må ha kontroll på metoden (get/post)
+VI må vite stien vi finner ressursen på
+Vi må ha kontroll på eventuelle parametre som skal sendes med, og hva de gjør
+Hvilken headere som trengs være med
+Og hvis vi det er en POST eller PUT spørring, hvilken data som kan sendes.
 
 Dette slepper vi heldigvis å gjøre i telnet -- Det er innebygde metoder som langt på vei hjelper oss å sende slike forespørsler. I python bruker vi gjerne requests biblioteket
 
@@ -244,17 +249,40 @@ url_parametre = {
 }
 headers = {"User-Agent": "myApp/1.2.0"}
 
-respons = requests.get(url, parameters=url_parametre, headers=headers)
+respons = requests.get(url, 
+	parameters=url_parametre, headers=headers)
 print("Status", respons.status_code)
 print(respons.text)
 ```
+
+note:
+Her gjør vi det samme søket som i telnet.
+Når vi sender en http-spørring med requests, bruker vi de innbygde .get eller .post funksjonen, og gir den byggesteinene til http-spørringen som argumenter: Url med protokoll, tjener og sti - url_parameterene som en dictionary (requests formaterer den for oss) - eventuelle headere som en dictionary (requests legger til en del for oss, slik som host, men om vi trenger kanskje å legge med ed brukerid og passord osv). Til en post spørring kunne vi også lagt til data i bodien - det er ikke gjort her men er tilsvarende lettvint.
+
 ---
 ### Et siste eksempel
 
 <iframe src="https://open-meteo.com" height="600" width="900"><iframe>
 
 note:
+Forrige lille kodesnutt er ikke et godt eksempel på bruk av requests - Som et siste eksempel, skal vi se hvordan vi kan sette det vi har lært og hente inn værmeldigen fra open-meteo.com.
 
-Som et siste eksempel, skal vi se hvordan vi kan sette alt dette sammen og hente inn fra
+(Viser api-dokumentasjonen, og gjør et kall til API i python):
+url = "https://api.open-meteo.com/v1/forecast"
+url_parametre = {
+   "latitude": 62,
+   "longitude": 6,
+   "hourly": "temperature_2m"
+}
 
-(Viser api-dokumentasjonen, og gjør et kall til API i python)
+respons = requests.get(url, params=url_parametre)
+print("Statuskode", respons.status_code)
+print("Format:", respons.headers["content-type"])
+data = respons.json()
+df = pd.DataFrame({"time": data["hourly"]["time"], "temp": data["hourly"]["temperature_2m"]})
+df["time"] = pd.to_datetime(df["time"])
+df.set_index("time").plot()
+plt.show()
+
+(Ferdig kode og ser i kamera):
+Det er ikke nødvendigvis lett å finne hale og ende på hvordan et web-api som det vi så fungerer, og hvordan datastrukturene de serverer er bygget opp, men om man har litt kontroll på rollen og oppbyggingen til http-protokollen, er det ganske grei skuring å sende forespørsler med et bibliotek som requests
