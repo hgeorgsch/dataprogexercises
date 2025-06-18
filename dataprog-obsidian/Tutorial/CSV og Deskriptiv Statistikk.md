@@ -13,33 +13,32 @@ tags:
 		+ kunna kjenna igjen og byta teiknkoding
 		+ kjenna ulike filformat og dialektar av CSV
 	+ Kunna bruka pandas til deskriptiv statistikk og plotting
-+ *Oversiktsførelesing*  [[Filhandtering]]
-+ *Oversiktsførelesing*  [[Konseptuell forståing av  pandas]]  veke 40-41/2024
++ *Perspektivførelesing*
+	+ [[Filhandtering]]
+	+ [[CSV-formatet]]
+	+  [[Konseptuell forståing av  pandas]]  veke 40-41/2024
 + *Demovideo*
 	+ [[Filkonvertering og -import]]
 	+ [[Plot i pandas]]
 	+ [[Gjennomsnitt og spreding]] 
 + Step 1.  Pandas
 	+ Step 1a.  Extracting Series and making plots.
-	+ Step 1b.  Mean and standard deviation 
-+ Step 2. SciKitLearn
-	+ [Lineær regresjon](notebook/Linear%20Regression%20in%20SciKitLearn)
-	+ [Evaluering av regresjonsmodellen](notebook/Evaluering%20for%20regresjon)
-+ Step 3. Eksporting plots
-
+	+ Step 1b.   Gjennomsnitt og standardavvik
+	+ Kombinasjon (fletting) av datasett
++ Step 2. Plott
+    + Plot/subplot og eksport av figurar
+    + Ulike plot: histogram/scatter/kakediagram
+	+ Eksporting plots
 + Oppgåver
-	+ [[Manipulere-Dataframes]]   (primært oppgåver)  veke 42/2024
-		+ grunnteknikkar
-	+ [[Arbeidsledige]] : Latin 1, combination of datasets
-	+ [[Eksportdata]] requires extensive pre-processing to extract comparrable data
+	+ [[Arbeidsledige]] : Latin 1,  Kombiner arbeidsledige og konkurser
+		+ Utfordring: Konverter 1980M1 til dato
+		+ Oppgåve: Plott begge datasett
+		+ Refleksjon: samanheng?
+		+ Utfordring: aggreger kvartalsdata
+		+ Oppgåve: Korrelasjonskoeffisient
+		+ Oppgåve: Korrelasjonskoeffisient med forskjøvede data
+	+ [[Eksportdata]] requires extensive pre-processing to extract comparable data
 
-+ Deskriptiv statistikk 
-    + Gjennomsnitt og standardavvik
-    + plot/subplot og eksport av figurar
-    + ulike plot: histogram/scatter/kakediagram
-    + Simulering av ein utvalsstudie
-+ Maskinlæring i scikitlearn
-+ Kombinasjon (fletting) av datasett
 
 + Grunnleggjande pandas
 	+ index
@@ -49,10 +48,35 @@ tags:
 + Plott
 + Vidaregåande
 	+ snitt og union
++ ToDo
+	+ [ ] Samla gode døme på CSV-filer
+	+ [ ] Set saman øvingar
 
-+ [[Pandas-Lese-Data-JH]] frå CSV veke 43/2024
-	+ Bruker blackboard-data
 + [[Semi-avansert-Pandas]]  veke 44/2024
-	+ mykje interessant, men treng betre oppgåver
+	+ Filtrering (viktig)
+	+ melt og pivot (?)
 	+ [[example-piechart]]
 	+ [[example-encoding]]
++ Relatert stoff frå tidlegare år	
+	+ [[Manipulere-Dataframes]]    veke 42/2024
+		+ grunnteknikkar - manuell opprettning av *Series* og *DataFrame*
+		+ éi oppgåve
+		+ kun for spesielt interesserte
+	+ [[Pandas-Lese-Data-JH]] frå CSV veke 43/2024
+		+ Bruker blackboard-data
+		+ I stor grad dekt i opningsseminaret
+	+ [[Multiindex]]
++ Oversikt of CSV-data under
+	
+| Topic                   | File                        | Type                | Encoding                                 | Newline                    |
+| :---------------------- | :-------------------------- | ------------------- | ---------------------------------------- | -------------------------- |
+|                         | arbeidsledige.csv           | Semikolon+ metadata | ASCII text                               | with CRLF line terminators |
+| User data (kvalitativt) | blackboard.csv              | Tab                 | Unicode text, UTF-16, little-endian text |                            |
+| GDP                     | eu_GDP.csv                  | CSV                 | Unicode text, UTF-8 text                 |                            |
+|                         | folketall.csv               | Tab                 | ISO-8859 text                            | with CRLF line terminators |
+|                         | helsepersonell.csv          | Semikolon+ metadata | ISO-8859 text                            | with CRLF line terminators |
+|                         | konkurser.csv               | Tab                 | ISO-8859 text                            | with CRLF line terminators |
+|                         | laksedata.csv               | Semikolon+ metadata | ASCII text                               | with CRLF line terminators |
+|                         | namq_10_gdp_page_linear.csv | CSV                 | ASCII text                               |                            |
+|                         | teina010_linear.csv         | CSV                 | ASCII text                               |                            |
+| Valutalurs              | `EXR20250401.csv`           | semicolon           | UTF8                                     |                            |

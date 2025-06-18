@@ -2,10 +2,10 @@
 tags:
   - lecture/perspective
 ---
-
-+ Teiknkoding
-	+ Latin 1
-	+ UTF-8
++ Filtransformasjonar og orden
+	+ kjeldefiler
+	+ programkode
+	+ genererte filer
 + Filformat
 	+ Binær- og tekstfiler
 	+ Format som me bruker
@@ -20,6 +20,14 @@ tags:
 		+ Excel
 		+ MS-Word
 		+ PDF
+
++ Teiknkoding
+	+ ASCII  128 teikn inkl. kontrollteikn
+	+ Latin 1  $\sim$ 230 teikn, nok til norsk, svensk, samisk og islandsk
+	+ Latin 15  €, œ, Œ, mfl. men manglar ¼, ½, fransk og finsk
+	+ UTF-8 millionar av teikn, og høve til utviding
+	+ Windows-1252
++ Lineskiftkonvensjonar
 + Lagring og organisering
 	+ app versys filsystem
 	+ versjonskontroll

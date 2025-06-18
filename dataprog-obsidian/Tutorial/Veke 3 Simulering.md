@@ -4,7 +4,7 @@ tags:
 author: Hans Georg Schaathun
 ---
 
-# Veke 2. Simulering og Datastrukturar
+# Veke 3. Simulering og Datastrukturar
 
 
 + Byggjer på  [[Simulering av kontantstraum]] og [[Numeriske Metodar og Kontrollflyt]]

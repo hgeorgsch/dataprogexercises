@@ -36,6 +36,18 @@ title: Utkast til læringsmateriale i data og programmering
 + Idéar 
 	+ lat studentane testa AI på oppgåvene tidleg i semesteret
 	+ *Live* koding på video
+	+ Automatisering av oppgåver (innspel frå Lars Ole)
+		+ Kva er utfordringa i Excel?
+		+ Kva slags problem treng folk å automatisere?
+		+ Programmering av frittståande program med IDE
+		+ Køyring frå kommandolina
+			+ fil inn
+			+ fil(er) ut
+		+ Strukturering of notebook-dokument
+			+ endra input-fil i starten
+			+ oversyn over produserte filer på slutten
+			+ sanking av produserte filer.
+		+ Bruk av WebAPI i sanntid
 
 ## Program
 
@@ -47,11 +59,11 @@ title: Utkast til læringsmateriale i data og programmering
 		+ Notar til [[Imperativ programmering og maskinarkitektur]]
 			+ [[Notar til Imperativ programmering og maskinarkitektur]]
 			+ [[Spørsmål til Studio Akrinn - Fyrste føredrag]]
-		+ Notar til [[Kontrollflyt i Python]]
+		+ Notar til [[Kontrollflyt i Python (script)]]
 			+ Vis i Python Tutor e.l.
 				+ Fire vindauga (minimum): Kode - Utdata - Global tilstand - Lokal tilstand
-2. [[Simulering02]]                      
-3. [[CSV og Deskriptiv Statistikk]]
+2. [[CSV og Deskriptiv Statistikk]]
+3. [[Veke 3 Simulering]]                      
 4. [[Agent-basert simulering]]
 	1. [[Notar til Agent-basert simulering]]
 5. [[WebAPI]] 

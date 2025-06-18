@@ -22,6 +22,8 @@ Me freistar å gje eit par forskjellige innfallsvinklar til kvart tema. Det typi
 + **Øvingar**
 	+ [Halveringsmetoden](notebook/Halveringsmetoden)
 	+ [[Folkevekst]]
+	+ [[Simulering av ein utvalsstudie]]
+	
 	+ [[CodeRunner Basic]]
 	+ [[CodeRunner Control]]
 
