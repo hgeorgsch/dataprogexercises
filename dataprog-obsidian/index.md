@@ -2,9 +2,10 @@
 title: Utkast til læringsmateriale i data og programmering
 ---
 
++ [[Project Management]]
 + [[Praktiske tips til utvikling av kurset]]
-+ [[Emneskildring]]
-+ [[Gamle utkast til emneskildring]]
++ [[Masinlæring i Biologiske Fag]]
++ [[Emneskildringar]]
 + [[Skisse til opplegg]]
 	 + Typisk veke
 		 + *videoføredrag* 15min
