@@ -14,6 +14,14 @@ kernelspec:
 
 # H-R diagrammet med stjernedata
 
+::: {admonition} License
+
+Arbeidet er lånt frå Morten Munthe ved UiB.
+Datasettet er publisert under CC BY-SA 4.0 frå
+[HYG Stellar database](https://codeberg.org/astronexus/hyg).
+
+:::
+
 Her bruker vi en fil med informasjon om 110 000 til 120 000 stjerner,
 se [HYG v 3.0](hygdata_v3.csv).
 
@@ -168,10 +176,9 @@ $$T = \frac{4600}{0.92\cdot\text{B-V} + 1.7} + \frac{4600}{0.92\cdot \text{B-V} 
 
 +++
 
-### Oppgave
+::: {admonition} Oppgave
 
 Endre slik at vi plotter spektralklassene langs x-aksen. (Dette skal komme senere, men har ikke hatt tid til å fikse det enda)
 
-```{code-cell} ipython3
+:::
 
-```
