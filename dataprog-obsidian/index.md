@@ -75,6 +75,7 @@ title: Utkast til læringsmateriale i data og programmering
 		1. [[Notar til Om å læra frå data]]
 	
 	
+![[kjapp-telnet.mkv]]
 
 
 
