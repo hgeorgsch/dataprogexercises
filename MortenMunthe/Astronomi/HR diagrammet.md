@@ -14,7 +14,17 @@ kernelspec:
 
 # H-R diagrammet med stjernedata
 
-Her bruker vi en fil med informasjon om 110 000 til 120 000 stjerner. Se hygdata_v3.txt som ligger i Canvas.
+Her bruker vi en fil med informasjon om 110 000 til 120 000 stjerner,
+se [HYG v 3.0](hygdata_v3.csv).
+
+::: {admonition} Merknad
+
+Data er hentet fra [HYG-prosjektet på github](https://github.com/astronexus/HYG-Database).
+Dette er nu arkivert, og erstatta av [eit nytt repo](https://codeberg.org/astronexus/hyg).
+Me har kopiert [[Dataskildringa for HYG]] frå det 
+[README](https://github.com/astronexus/HYG-Database/blob/main/hyg/README.md).
+
+:::
 
 ```{code-cell} ipython3
 import numpy as np
@@ -26,7 +36,8 @@ data_S.head(10)                                  # Printer de 10 første radene
 ```
 
 For HR-diagrammet trenger vi kun 2 av de 37 kolonnene og fjerner resten.
-Vi trenger kun *absmag* og *ci* kolonnene. Liste over hva hver kolonne representerer er finner du [her](https://github.com/astronexus/HYG-Database).
+Vi trenger kun *absmag* og *ci* kolonnene.
+[[Dataskildringa for HYG]] forteller hva kolonne representerer.
 
 ::: {admonition} Oppgave 1
 
@@ -154,7 +165,6 @@ Dette ser jo lekkert ut, og herifra så er det opp til dere hva dere ønsker. Je
 Vi må først konvertere B-V fargen til Kelvin for å kunne sette klassene. Dette gjør vi ved å bruke [denne formelen](https://en.wikipedia.org/wiki/Color_index).
 
 $$T = \frac{4600}{0.92\cdot\text{B-V} + 1.7} + \frac{4600}{0.92\cdot \text{B-V} + 0.62}$$
-
 
 +++
 
