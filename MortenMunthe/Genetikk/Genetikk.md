@@ -1,5 +1,6 @@
 ---
 jupytext:
+  formats: md:myst,ipynb
   text_representation:
     extension: .md
     format_name: myst
@@ -30,6 +31,13 @@ i biologi på VGS-nivå.
     - gjere greie for transkripsjon og translasjon av gen og forklare korleis regulering av gen kan styre biologiske prosessar
 :::
 
+::: {admonition} Læringsutbytter i Programmering
+
++ Bli kjent med biblioteket pandas og hvordan det kan brukes til å strukturere
+  og visualisere data.
+
+:::
+
 +++
 
 ## Celletyper og genregulering
@@ -37,7 +45,10 @@ i biologi på VGS-nivå.
 Kroppen vår består av hundrevis av ulike 
 [celletyper](https://en.wikipedia.org/wiki/List_of_distinct_cell_types_in_the_adult_human_body)
 som utfører spesialiserte oppgaver i kroppen.
-Alle celler inneholder det samme DNAet og dermed den samme informasjonen om proteinoppskrifter. Men celler har ulik funksjon (litt forenklet) fordi de ikke produserer de samme proteinene proteiner. Det som avgjør hvilke protein som skal produseres i de ulike celltypene er defineres av reguleringen av transkripsjon i hver celle og vev.
+Alle celler inneholder det samme DNAet og dermed den samme informasjonen om proteinoppskrifter.
+Men celler har ulik funksjon (litt forenklet) fordi de ikke produserer de samme proteinene proteiner.
+Det som avgjør hvilke proteiner som skal produseres i de ulike celltypene er definert
+av reguleringen av transkripsjon i hver celle og vev.
 
 Sekvenseringen av det humane genom i 2000 var en teknologisk bragd, som på mange måter revolusjonerte molekylærbiologien og genetikkfagene. Etter dette har store ressurser har blitt satt inn på å kartlegge hvordan gener blir regulert i ulike utviklingstrinn og i ulike vev/celletyper.
 
@@ -45,7 +56,9 @@ Sekvenseringen av det humane genom i 2000 var en teknologisk bragd, som på mang
 
 ## Datasettet
 
-Ett prosjekt som har som mål om å forstå ‘funksjonen’ og reguleringen til alle gener i vårt genom er Encyclopedia of DNA Elements (ENCODE, https://www.encodeproject.org). Dette prosjektet er et stort internasjonalt samarbeid som samler inn og systematiserer data som gir innsikt i hvordan geners transkripsjon reguleres.
+Ett prosjekt som har som mål om å forstå «funksjonen» og reguleringen til alle gener i vårt genom
+er Encyclopedia of DNA Elements ([ENCODE](https://www.encodeproject.org)).
+Dette prosjektet er et stort internasjonalt samarbeid som samler inn og systematiserer data som gir innsikt i hvordan geners transkripsjon reguleres.
 
 I denne øvelsen har vi hentet inn et datasett fra ENCODE prosjektet, nærmere bestemt målinger av mRNA nivå (genuttrykk), fra ulike vev fra menneske og mus.
 
@@ -57,7 +70,8 @@ import pandas as pd
 import numpy as np
 ```
 
-Les inn datafilen "genuttrykk_menneske_data.txt" og gjør deg kjent med hvilke vev og hvor mange gener vi har målt uttrykket til. I filen "genuttrykk_menneske_data.txt" er dataene separert med mellomrom. For at det ikke skal fylles altfor mye opp, så printer vi kun de 5 første kolonnene i filen. Kan godt bytte ut "data_H.head(5)" med "data_H" for å se "hele" datamengden.
+Les inn datafilen "genuttrykk_menneske_data.txt" og gjør deg kjent med hvilke vev og hvor mange gener vi har målt uttrykket til. I filen "genuttrykk_menneske_data.txt" er dataene separert med mellomrom. For at det ikke skal fylles altfor mye opp, så printer vi kun de 5 første kolonnene i filen.
+Kan godt bytte ut `data_H.head(5)` med `data_H` for å se «hele» datamengden.
 
 ```{code-cell} ipython3
 data_H = pd.read_csv("genuttrykk_menneske_data.txt", sep=' ')  # Menneskedata
@@ -65,7 +79,6 @@ print(data_H.head(5))   # Printer de 5 første radene
 ```
 
 ::: {admonition} Oppgave 1
-
 1. Hva er de forskjellige typene vev på norsk?
 2. Hent inn for dataene for mus på samme måte. Filen for mus heter "genuttrykk_mus_data.txt"
 3. Er de samme vevene samlet inn fra begge artene?
@@ -322,7 +335,7 @@ plt.legend()
 
 Diskuter hva denne grafen viser og hvorfor det er rimelig at det må være slik
 
-::: 
+:::
 
 +++
 
