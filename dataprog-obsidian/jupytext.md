@@ -19,7 +19,7 @@ make notebook.ipynb
 ```
 
 
-It is also possible to convert the other way, or to use the py:percent format to convert to and from python scripts. It is even possible to pair files and have Jupyter notebook do live coversion.  See the [full documentation](https://jupytext.readthedocs.io/en/latest/index.html).
+It is also possible to convert the other way, or to use the py:percent format to convert to and from python scripts. It is even possible to pair files and have Jupyter notebook do live conversion.  See the [full documentation](https://jupytext.readthedocs.io/en/latest/index.html).
 
 + I have tried paired files, but it seems to strip metadata used in markdown but not in Jupyter.
 
