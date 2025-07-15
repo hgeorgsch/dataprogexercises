@@ -14,6 +14,9 @@ kernelspec:
 
 # Genuttrykk
 
++ original oppgave ved Morten Munthe, Universitetet i Bergen
++ redigert og tilrettelagt av Hans Georg Schaathun, NTNU
+
 Denne øvelsen har en dobbel hensikt.
 For det første skal den illustrere ulike funksjoner i python, for å analysere
 og visualiser data, og skal dermed øve generelle programmerigns- og
@@ -383,6 +386,3 @@ plt.tight_layout()
 2. **Hvordan kan dere forklare dette ut ifra evolusjonsprinsipper?**
 :::
 
-```{code-cell} ipython3
-
-```
