@@ -385,4 +385,3 @@ plt.tight_layout()
 1. **Studer likheten mellom vevene i mus og menneske. Hva er grunnen til likheten? Hvorfor er noe vev likere enn annet vev?**
 2. **Hvordan kan dere forklare dette ut ifra evolusjonsprinsipper?**
 :::
-
