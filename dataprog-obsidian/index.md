@@ -20,6 +20,10 @@ title: Utkast til læringsmateriale i data og programmering
 			+ *fading examples* à la Clark *et al* 2005
 			+ drilloppgåver i Coderunner
 			+ prosjektoppgåver - opne oppgåver - egna til mappa
++ Enkle øvingar frå Morten Munthe
+	+ [[Jordskjelv]]
+	+ [[Genetikk]]
+	+ [[HR diagrammet]] (stjernedata)
 + [[Medstudentvurdering]]
 + [[samle noen tanker]] frå Jonas
 + IIF2001 - to delar
