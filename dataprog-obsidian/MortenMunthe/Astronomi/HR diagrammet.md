@@ -16,7 +16,7 @@ kernelspec:
 
 ::: {admonition} License
 
-Arbeidet er lånt frå Morten Munthe ved UiB.
+Arbeidet er lånt fra Morten Munthe ved UiB.
 Datasettet er publisert under CC BY-SA 4.0 frå
 [HYG Stellar database](https://codeberg.org/astronexus/hyg).
 
