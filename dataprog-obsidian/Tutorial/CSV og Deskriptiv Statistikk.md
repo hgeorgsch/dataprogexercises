@@ -28,6 +28,7 @@ tags:
 + Step 2. Plott
     + Plot/subplot og eksport av figurar
     + Ulike plot: histogram/scatter/kakediagram
+    + [[Jordskjelv]] demonstrerer animasjon og plotting oppå kart
 	+ Eksporting plots
 + Oppgåver
 	+ [[Arbeidsledige]] : Latin 1,  Kombiner arbeidsledige og konkurser

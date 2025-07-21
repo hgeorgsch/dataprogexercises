@@ -63,12 +63,12 @@ title: Utkast til læringsmateriale i data og programmering
 	+ [[Seminar om Motivasjon og Ynskjer]]
 + **Periode 1** Forslag vert utarbeidd Jupyter Books:  [[Tutorial/first|first]]
 1. [[Numeriske Metodar og Kontrollflyt]] 
-		+ Notar til [[Imperativ programmering og maskinarkitektur]]
-			+ [[Notar til Imperativ programmering og maskinarkitektur]]
-			+ [[Spørsmål til Studio Akrinn - Fyrste føredrag]]
-		+ Notar til [[Kontrollflyt i Python (script)]]
-			+ Vis i Python Tutor e.l.
-				+ Fire vindauga (minimum): Kode - Utdata - Global tilstand - Lokal tilstand
+	+ Notar til [[Imperativ programmering og maskinarkitektur]]
+		+ [[Notar til Imperativ programmering og maskinarkitektur]]
+		+ [[Spørsmål til Studio Akrinn - Fyrste føredrag]]
+	+ Notar til [[Kontrollflyt i Python (script)]]
+		+ Vis i Python Tutor e.l.
+			+ Fire vindauga (minimum): Kode - Utdata - Global tilstand - Lokal tilstand
 2. [[CSV og Deskriptiv Statistikk]]
 3. [[Veke 3 Simulering]]                      
 4. [[Agent-basert simulering]]
