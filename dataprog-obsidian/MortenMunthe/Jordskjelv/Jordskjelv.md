@@ -24,10 +24,15 @@ etter ein originalt frå [NASA (sensor Terra/MODIS)](http://visibleearth.nasa.go
 
 # Jordskjelv
 
-Her skal me bruka ei  fil med over 200 000 jordskjelv fra 1973 til 2014.
-Den store utfordringa som me skal løysa er å plotta jordskjelvdata på verdskartet. 
-Dette kan vera vanskeleg fordi jorda er rund og kartet er flatt, og koordinatane 
-stemmerikkje alltid over eins.  Det kjem me tilbake til.
+Her skal me bruka ei fil med over 200 000 jordskjelv fra 1973 til 2014,
+og sjå korleis me kan visualisera geografisk spreidning, styrke og djupne
+på skjelva.
+
+::: {admonition} Læringsutbyte
+Denne løysinga skal visa korleis ein kan
++ plotta oppå bilete, som t.d. kart.
++ animera plot.
+:::
 
 ## Datasettet
 
@@ -83,7 +88,7 @@ Kan du finna (empiriske) standardavvik òg?
 Me skal i hovudsak sjå styrken og djupna, so me definerer dei med eigne variabelnamn.
 
 ```{code-cell} ipython3
-djupna = data_J["Depth"]
+djupne = data_J["Depth"]
 styrke = data_J["Magnitude"]
 ```
 
@@ -141,7 +146,7 @@ I akkurat dette tilfellet, kunne me ha fått det same resultatet ved å runda av
 Me kan studera djupna på same måte.  Stolpediagrammet, som eit fyrste forsøk, ser slik ut.
 
 ```{code-cell} ipython3
-values, counts = np.unique(djupna, return_counts = True)
+values, counts = np.unique(djupne, return_counts = True)
 plt.bar(values, counts, width = 1.0)
 ```
 
@@ -149,11 +154,11 @@ Dette var både treigt, og ikkje spesielt nyttig.  Djupe skjelv er openbert so s
 Me ser at det meste skjer mellom 0 og 150 meter, so me kan laga eit grovt histogram i dette intervallet.
 
 ```{code-cell} ipython3
-plt.hist(djupna, bins=10, range=(0,150) )
+plt.hist(djupne, bins=10, range=(0,150) )
 ```
 
 ::: {admonition} Oppgåve
-Bruk dokumentasjonen til å laga pene og informative histogram over djupna.
+Bruk dokumentasjonen til å laga pene og informative histogram av djupna.
 Bør du bruka fleire eller færre båser?  Bruk gjerne fleire histogram for å
 illustrera både grunne skjelv og heile spennet ned til 700m.
 Legg tittel på diagrammet og på aksene.
@@ -174,7 +179,7 @@ Då bruker me eit spreideplott (*scatter plot*).
 
 ```{code-cell} ipython3
 plt.figure(figsize=(8, 10), dpi=80)
-plt.scatter(djupna, styrke, s = 0.1)
+plt.scatter(djupne, styrke, s = 0.1)
 ```
 
 ::: {admonition} Refleksjon
@@ -260,7 +265,7 @@ Ei enkel løysing er berre å plotta dei sterkaste skjelva.
 Då kan me definera ein minstestyrke og filtrera datasettet.
 
 ```{code-cell} ipython3
-minstestyrke = 7
+minstestyrke = 6
 
 dat = data_J[ data_J["Magnitude"] >= minstestyrke ]
 
@@ -275,65 +280,89 @@ Kva område i verda har dei sterkaste skjelva?
 Du kan godt variera minstestyrken for å få fram andre detaljar.
 :::
 
-```{code-cell} ipython3
-# Plotter styrke som størrlse
+::: {admonition} Oppgåve
+Det kan vera vanskeleg å få oversikt når ein ser på heile 
+datasettet samstundes.  Ein enkel måte å sjå eit utsnitt er
+å plotta berre eitt eller nokre få år.
 
+Kopier koden over, og legg til eit filter som filtrerer ut
+eitt år. 
+:::
+
+I eit meir rafinert plot kan me plotta store sirklar for sterke skjelv
+og små sirklar for svake.
+Parameteren `s` i `plt.scatter()` kan ta ei liste e.l. for å definera forskjellig
+storleik på kvart punkt, og det kan me utnytta.
+For å vera sikre på at storleiken høyrer til rett punkt, legg me han som ei
+ny søyle i datasettet, slik.
+
+```{code-cell} ipython3
 fig = mapplot()
 
-year = float(input("Hvilket år vil du plotte (1973 - 2014)? "))
+dat.loc[:,"size"] = (dat["Magnitude"]-minstestyrke) * (100/(9.1-minstestyrke))
 
-ar = data_J["Year"]
-mag = data_J["Magnitude"]
-leng = data_J["Latit"]
-bred = data_J["Longit"]
-
-n = len(data_J["Magnitude"])
-size = []
-lg = []
-bg = []
-
-styrke = 5.5
-
-for i in range(n):
-    if ar[i+1] == year and mag[i+1] > styrke:
-        size.append((mag[i+1]-styrke) * (400/(9.1-styrke))) 
-        lg.append(leng[i+1])
-        bg.append(bred[i+1])
-
-plt.scatter(bg, lg, s = size, facecolor = 'none', edgecolor = 'r') # Lager sirkler slik at det er letter å skille de ulike styrkene
+plt.scatter(dat["Longit"], dat["Latit"], s = dat["size"], facecolor="none", color = 'r')
 plt.xlabel('Breddegrad')
 plt.ylabel('Lengdegrad')
 ```
 
-```{code-cell} ipython3
-# Plotter styrke som størrlse og dybde med farge
+::: {admonition} Oppgåve
+Freist å variera koden for å læra kva dei ulike parametrane tyder.
++ Kva skjer om du endrar `facecolor` til `"y"` eller `"b"`?
++ Kva skjer om du endrar verdien på `minstestyrke`?
++ Kva skjer om du endrer konstanten 100 i utrekninga av storleik?
+:::
 
+På same måten som storleiken, kan ogso fargen variera for kvart punkt.
+Dermed kan me t.d. representera styrke med storleik og djupne med farge,
+slik.
+
+```{code-cell} ipython3
 fig = mapplot()
 
-year = float(input("Hvilket år vil du plotte (1973 - 2014)? "))
+plt.scatter(dat["Longit"], dat["Latit"],
+    s=dat["size"], c=dat["Depth"], cmap = 'YlOrRd') 
+plt.colorbar(label = 'Dybde i meter', fraction = 0.024)
+plt.xlabel('Breddegrad')
+plt.ylabel('Lengdegrad')
+```
 
-ar = data_J["Year"]
-mag = data_J["Magnitude"]
-leng = data_J["Latit"]
-bred = data_J["Longit"]
-depth = djupna
+::: {hint}
+Parameteren `cmap` er ganske kryptisk.
+Namnet står for *colour map*, og `YlOrRd` er berre namnet på eitt bestemt fargekart.
+Sjå dokumentasjonen på
+[fargar i pyplot](https://matplotlib.org/stable/users/explain/colors/colormaps.html).
+:::
 
-n = len(data_J["Magnitude"])
-size = []
-lg = []
-bg = []
-dyb = []
+::: {admonition} Oppgåve
+Ser det betre ut med eit anna fargekart?
+Slå opp i dokumentasjonen og finn eit som du liker.
+:::
 
-styrke = 5.5
+::: {admonition} Refleksjon
+Kva fortel dei siste plotta om fordelinga av skjelv i styrke og djupne?
 
-for i in range(n):
-    if ar[i+1] == year and mag[i+1] > styrke:
-        size.append((mag[i+1]-styrke) * (400/(9.1-styrke))) 
-        lg.append(leng[i+1])
-        bg.append(bred[i+1])
-        dyb.append(depth[i+1])
+Hugs at du kan filtrera datasettet akkurat som du vil, for å sjå det som 
+interesserer deg.  Då kan det vera lurt å kopiera all koden inn i éin kodeblokk,
+for å vera sikker på at resultatet ikkje avheng av tidlegare blokkar og du kan endra
+alt på ein plass.  Du kan bruka dømet under om du vil.
+:::
 
-plt.scatter(bg, lg, s = size, c=dyb, cmap = 'YlOrRd') # Lager sirkler slik at det er letter å skille de ulike styrkene
+For å oppsummera alt me har brukt over, kan me samla alt i ein kodesnutt.
+Her bruker me `query`-funksjonen for å filtrera datasettet.
+Det er den enklaste løysinga når me filtrerer på fleire kriterium.
+
+```{code-cell} ipython3
+minstestyrke = 6
+startar = 1983
+sluttar = 1990
+
+dat = data_J.query("Magnitude >= @minstestyrke & Year >= @startar & Year <= @sluttar")
+dat.loc[:,"size"] = (dat["Magnitude"]-minstestyrke) * (100/(9.1-minstestyrke))
+
+fig = mapplot()
+plt.scatter(dat["Longit"], dat["Latit"],
+    s=dat["size"], c=dat["Depth"], cmap = 'YlOrRd') 
 plt.colorbar(label = 'Dybde i meter', fraction = 0.024)
 plt.xlabel('Breddegrad')
 plt.ylabel('Lengdegrad')
@@ -341,42 +370,61 @@ plt.ylabel('Lengdegrad')
 
 ## Animasjon
 
+For å gå eitt steg vidare, kan me freista å animera kartet, for å visa
+jordskjelv år for år.  I praksis vil det seia at me lagar eitt kart for
+kvart år, men speler dei saman som ein slags video.
+Sjølve animasjonseffekten får me frå `display`-funksjonen som me 
+importerer frå `IPython`.
+
+For å ta eitt steg åt gongen, lagar me ein funksjon som plottar datasettet
+for eitt år, og testar han.
+
 ```{code-cell} ipython3
-# Plotter animasjon av skjelv per år over gitt styrke
-
 from IPython import display
-
-fig = mapplot()
-
-styrke = float(input("Hva er den laveste styrken du vil plotte? "))
-
-mag = data_J["Magnitude"]
-leng = data_J["Latit"]
-bred = data_J["Longit"]
-n = len(data_J["Magnitude"])
-lg = []
-bg = []
-startar = data_J["Year"][1]
-ar = data_J["Year"][1]
-
-for i in range(n):
-    if mag[i+1] > styrke:
-        startar = data_J["Year"][i+1]
-        lg.append(leng[i+1])
-        bg.append(bred[i+1])
-
-    if ar != startar:                              
-        #figure(figsize=(10,10))
-        display.clear_output(wait=True)             # Her oppdatere vi plottet vårt
-        img = plt.imread("Equirectangular-projection.jpg")
-        fig, ax = plt.subplots(figsize=(10, 12), dpi=100)
-        ax.imshow(img, extent=[-180, 180, -90, 90])
-        plt.scatter(bg, lg, s = 5, color = 'r')
-        plt.xlabel('Breddegrad')
-        plt.ylabel('Lengdegrad')
-        tid = "Årstall = " + str(ar)
-        plt.title(tid)
-        plt.pause(0.3)                                  # Pause mellom hver gang den oppdaterer plottet i sekunder
-        ar = startar
-        
+def yearplot(df,y=1973):
+   df0 = df[ df["Year"] == y ]
+   fig = mapplot()
+   plt.scatter(df0["Longit"], df0["Latit"], s = 5, color = 'r')
+   plt.xlabel('Breddegrad')
+   plt.ylabel('Lengdegrad')
+   plt.title("Årstall = " + str(y))
+yearplot(data_J,1980)
 ```
+
+::: {admonition} Refleksjon
+Her skulle det meste vera kjend frå føregåande døme.
+Skjøner du korleis funksjonen er bygd opp?
+Kva gjer `plt.title()`?
+:::
+
+For å køyra animasjonen over riktig periode, må me finna fyrste og siste år, slik:
+```{code-cell} ipython3
+startar = data_J["Year"].min()
+sluttar = data_J["Year"].max()
+```
+
+Då er alt klart for sjølve animasjonskoden.
+Det er rett og slett ei løkke som itererer år for år over perioden,
+og plottar for kvart år.
+
+```{code-cell} ipython3
+for y in range(startar,sluttar+1):
+   display.clear_output(wait=True)             
+   yearplot(data_J,y)
+   plt.pause(0.25)
+```
+
+::: {admonition} Refleksjon
+Er animasjonen nyttig for å forstå datasettet?
+Gjev han eit betre inntrykk en tidlegare døme?
+:::
+
+::: {admonition} Refleksjon
+Er animasjonen nyttig for å forstå datasettet?
+Gjev han eit betre inntrykk en tidlegare døme?
+:::
+
+::: {admonition} Oppgåve
+Skriv om `yearplot()` slik at me får ein animasjon som viser
+styrke og djupne med storleik og fargekoding.
+:::
