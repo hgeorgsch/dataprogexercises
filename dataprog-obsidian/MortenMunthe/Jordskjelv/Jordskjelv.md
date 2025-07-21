@@ -10,18 +10,44 @@ kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
   name: python3
+tags:
+  - exercise
+  - data/map
 ---
 
 # Jordskjelv
 
-Bruker en fil med over 200 000 jordskjelv fra 1973 og til 2014.
+Her skal me bruka ei  fil med over 200 000 jordskjelv fra 1973 til 2014.
+Den store utfordringa som me skal løysa er å plotta jordskjelvdata på verdskartet. 
+Dette er vanskeleg fordi jorda er rund og kartet er flatt, slik at me må rekna om geografisk posisjon frå jordkula til plankoordinatar på kartet.
 
+## Datasettet
+
+Me bruker dei vanlege biblioteka:
 ```{code-cell} ipython3
 import pandas as pd
-
-data_J = pd.read_csv("NEIC_global_1973-2014.txt", sep='\t', decimal = ',')  # Jordskjelvdata (tab som separator)
-data_J.head(10)                                                             # Printer de 10 første radene 
+import numpy as np
+import matplotlib.pyplot as plt
 ```
+
+Datafila heiter `NEIC_global_1973-2014.txt`.
+
+::: {admonition} Oppgåve
+Opna datafila og sjå kva slags format det er.
+Kva skiljeteikn er brukt mellom søylene?
+Korleis vert desimaltal skrive?
+:::
+
+Me kan importera datasettet slik:
+```{code-cell} ipython3
+data_J = pd.read_csv("NEIC_global_1973-2014.txt", sep='\t', decimal = ',')  
+data_J.head(10)
+```
+
+::: {admonition} Oppgåve
++ Kva tyder argumentet `sep='\t'`?
++ Kva tyder argumentet `decimal=','`?
+:::
 
 ```{code-cell} ipython3
 print(max(data_J["Latit"])) # y-akse (kommer først)
@@ -34,11 +60,11 @@ print(max(data_J["Magnitude"])) # maks er 9.1
 print(min(data_J["Magnitude"])) # Min er 4.5
 ```
 
+## Numeriske plott
+
 ```{code-cell} ipython3
 # Plotter antall skjelv av de ulike typene
 
-import numpy as np
-import matplotlib.pyplot as plt
 
 values, counts = np.unique((data_J["Magnitude"]).values, return_counts = True)
 plt.bar(values, counts, width = 1.0)
@@ -62,6 +88,8 @@ print(dybde[0:10])
 plt.figure(figsize=(8, 10), dpi=80)
 plt.scatter(dybde, styrke, s = 0.1)
 ```
+
+## Kartplott
 
 Henter området vi vil plotte jordskjelv over fra https://www.openstreetmap.org/export#map=5/51.500/-0.100
 
@@ -234,8 +262,4 @@ for i in range(n):
         plt.pause(0.3)                                  # Pause mellom hver gang den oppdaterer plottet i sekunder
         ar = startar
         
-```
-
-```{code-cell} ipython3
-
 ```
