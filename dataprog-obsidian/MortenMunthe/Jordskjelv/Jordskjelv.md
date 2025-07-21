@@ -15,6 +15,13 @@ tags:
   - data/map
 ---
 
+::: {admonition} Opphavsrett
+
+Arbeidet er lånt frå Morten Munthe ved UiB.
+Bruksvilkår må avklarast.
+
+:::
+
 # Jordskjelv
 
 Her skal me bruka ei  fil med over 200 000 jordskjelv fra 1973 til 2014.

@@ -14,6 +14,13 @@ kernelspec:
 
 # Genuttrykk
 
+::: {admonition} Opphavsrett
+
+Arbeidet er lånt frå Morten Munthe ved UiB.
+Bruksvilkår må avklarast.
+
+:::
+
 + original oppgave ved Morten Munthe, Universitetet i Bergen
 + redigert og tilrettelagt av Hans Georg Schaathun, NTNU
 
