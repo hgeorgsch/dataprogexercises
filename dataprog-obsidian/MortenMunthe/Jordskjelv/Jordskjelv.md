@@ -17,13 +17,17 @@ kernelspec:
 Arbeidet er lånt frå Morten Munthe ved UiB.
 Bruksvilkår må avklarast.
 
+Kartet som er brukt offentleg eige (*public domain*) og henta
+frå [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=1288245)
+etter ein originalt frå [NASA (sensor Terra/MODIS)](http://visibleearth.nasa.gov/).
 :::
 
 # Jordskjelv
 
 Her skal me bruka ei  fil med over 200 000 jordskjelv fra 1973 til 2014.
 Den store utfordringa som me skal løysa er å plotta jordskjelvdata på verdskartet. 
-Dette er vanskeleg fordi jorda er rund og kartet er flatt, slik at me må rekna om geografisk posisjon frå jordkula til plankoordinatar på kartet.
+Dette kan vera vanskeleg fordi jorda er rund og kartet er flatt, og koordinatane 
+stemmerikkje alltid over eins.  Det kjem me tilbake til.
 
 ## Datasettet
 
@@ -195,16 +199,27 @@ plt.scatter(breddegrad, lengdegrad, s = 0.1)
 Kva kan me kjenna igjen i denne figuren?
 :::
 
-Henter området vi vil plotte jordskjelv over fra https://www.openstreetmap.org/export#map=5/51.500/-0.100
 
-Skriv inn begrensningene for lengde og breddegrad og last ned
+Me får eit betre inntrykk om me kan plotta skjelva oppå eit kart.
+Då bør me bruka eit
+[ekvirektangulært kart](https://simple.wikipedia.org/wiki/Equirectangular_projection),
+Der ein lengde- og breiddegradane har same avstand overalt på kartet.
+Me finn eit slikt kart på [Wikimedia Commons](https://simple.wikipedia.org/wiki/Equirectangular_projection#/media/File:Equirectangular-projection.jpg):
+[Equirectangular-projection.jpg](Equirectangular-projection.jpg).
 
+Lat oss fyrst sjå berre på kartet:
+```{code-cell} ipython3
+img = plt.imread("Equirectangular-projection.jpg")
+fig, ax = plt.subplots(figsize=(10, 12), dpi=100)
+ax.imshow(img, extent=[-180, 180, -90, 90])
+```
+
+Merk at me oppgjev omfanget på karted, frå 180° vest til 180° aust og
+frå 90° sør til 90° nord.  Dette vert koordinatsystemet i figuren,
+når me legg andre plott oppå.
+No kan me kombinera koden frå spreideplottet og kartet, slik:
 
 ```{code-cell} ipython3
-# Plotter posisjon overlagt et kart
-
-import matplotlib.pyplot as plt
-
 img = plt.imread("Equirectangular-projection.jpg")
 fig, ax = plt.subplots(figsize=(10, 12), dpi=100)
 ax.imshow(img, extent=[-180, 180, -90, 90])
@@ -214,7 +229,10 @@ plt.xlabel('Breddegrad')
 plt.ylabel('Lengdegrad')
 ```
 
-Kartet er et rektangelkart med ekvidistanse både langs lengde- og breddegradene. Kartet er hentet fra https://simple.wikipedia.org/wiki/Equirectangular_projection
+::: {admonition} Refleksjon
+Kva seier dette plottet om førekomsten av jordskjelv?
+Kjenner du igjen dei mynstra som du gjorde på spreideplottet utan kart?
+:::
 
 ```{code-cell} ipython3
 # Plotter alle over en gitt styrke
@@ -246,8 +264,6 @@ plt.ylabel('Lengdegrad')
 
 ```{code-cell} ipython3
 # Plotter styrke som størrlse
-
-import matplotlib.pyplot as plt
 
 img = plt.imread("Equirectangular-projection.jpg")
 fig, ax = plt.subplots(figsize=(10, 12), dpi=100)
