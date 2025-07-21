@@ -19,6 +19,7 @@ kernelspec:
 Arbeidet er lånt frå Morten Munthe ved UiB.
 Bruksvilkår må avklarast.
 
+**TODO** Kjelde for datasettet
 :::
 
 + original oppgave ved Morten Munthe, Universitetet i Bergen
