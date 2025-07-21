@@ -208,6 +208,7 @@ Me finn eit slikt kart på [Wikimedia Commons](https://simple.wikipedia.org/wiki
 [Equirectangular-projection.jpg](Equirectangular-projection.jpg).
 
 Lat oss fyrst sjå berre på kartet:
+
 ```{code-cell} ipython3
 img = plt.imread("Equirectangular-projection.jpg")
 fig, ax = plt.subplots(figsize=(10, 12), dpi=100)
@@ -234,40 +235,50 @@ Kva seier dette plottet om førekomsten av jordskjelv?
 Kjenner du igjen dei mynstra som du gjorde på spreideplottet utan kart?
 :::
 
+## Meir detaljerte kartplott
+
+På kartet over ser me ingen forskjell mellom svake og sterke skjelv.  
+T.d. ser me fleire skjelv i Europa, i område der me sjelden høyrer om skjelv.
+Dei katastrofale skjelva som me høyrer om ligg andre plassar.
+
+Lat oss sjå korleis me kan variera visualiseringa for å få fram meir informasjon.
+Fyrst lagar me ein funksjon for å laga kartet, slik at me kan gjenbruka det med éi line, i staden for tre.
+
 ```{code-cell} ipython3
-# Plotter alle over en gitt styrke
+img0 = plt.imread("Equirectangular-projection.jpg")
+def mapplot(img=img0):
+   fig, ax = plt.subplots(figsize=(10, 12), dpi=100)
+   ax.imshow(img, extent=[-180, 180, -90, 90])
+   return fig, ax
+```
 
-import matplotlib.pyplot as plt
+::: {admonition} Refleksjon
+Skjøner du koden som er brukt i funksjonen?
+:::
 
-img = plt.imread("Equirectangular-projection.jpg")
-fig, ax = plt.subplots(figsize=(10, 12), dpi=100)
-ax.imshow(img, extent=[-180, 180, -90, 90])
+Ei enkel løysing er berre å plotta dei sterkaste skjelva.
+Då kan me definera ein minstestyrke og filtrera datasettet.
 
-styrke = float(input("Hva er den laveste styrken du vil plotte? "))
+```{code-cell} ipython3
+minstestyrke = 7
 
-mag = data_J["Magnitude"]
-leng = data_J["Latit"]
-bred = data_J["Longit"]
+dat = data_J[ data_J["Magnitude"] >= minstestyrke ]
 
-n = len(data_J["Magnitude"])
-lg = []
-bg = []
-for i in range(n):
-    if mag[i+1] > styrke:
-        lg.append(leng[i+1])
-        bg.append(bred[i+1])   
-
-plt.scatter(bg, lg, s = 5, color = 'r')
+fig = mapplot()
+plt.scatter(dat["Longit"], dat["Latit"], s = 5, color = 'r')
 plt.xlabel('Breddegrad')
 plt.ylabel('Lengdegrad')
 ```
 
+::: {admonition} Refleksjon
+Kva område i verda har dei sterkaste skjelva?
+Du kan godt variera minstestyrken for å få fram andre detaljar.
+:::
+
 ```{code-cell} ipython3
 # Plotter styrke som størrlse
 
-img = plt.imread("Equirectangular-projection.jpg")
-fig, ax = plt.subplots(figsize=(10, 12), dpi=100)
-ax.imshow(img, extent=[-180, 180, -90, 90])
+fig = mapplot()
 
 year = float(input("Hvilket år vil du plotte (1973 - 2014)? "))
 
@@ -297,11 +308,7 @@ plt.ylabel('Lengdegrad')
 ```{code-cell} ipython3
 # Plotter styrke som størrlse og dybde med farge
 
-import matplotlib.pyplot as plt
-
-img = plt.imread("Equirectangular-projection.jpg")
-fig, ax = plt.subplots(figsize=(10, 12), dpi=100)
-ax.imshow(img, extent=[-180, 180, -90, 90])
+fig = mapplot()
 
 year = float(input("Hvilket år vil du plotte (1973 - 2014)? "))
 
@@ -332,15 +339,14 @@ plt.xlabel('Breddegrad')
 plt.ylabel('Lengdegrad')
 ```
 
+## Animasjon
+
 ```{code-cell} ipython3
 # Plotter animasjon av skjelv per år over gitt styrke
 
-import matplotlib.pyplot as plt
 from IPython import display
 
-img = plt.imread("Equirectangular-projection.jpg")
-fig, ax = plt.subplots(figsize=(10, 12), dpi=100)
-ax.imshow(img, extent=[-180, 180, -90, 90])
+fig = mapplot()
 
 styrke = float(input("Hva er den laveste styrken du vil plotte? "))
 
