@@ -419,11 +419,6 @@ Er animasjonen nyttig for å forstå datasettet?
 Gjev han eit betre inntrykk en tidlegare døme?
 :::
 
-::: {admonition} Refleksjon
-Er animasjonen nyttig for å forstå datasettet?
-Gjev han eit betre inntrykk en tidlegare døme?
-:::
-
 ::: {admonition} Oppgåve
 Skriv om `yearplot()` slik at me får ein animasjon som viser
 styrke og djupne med storleik og fargekoding.
