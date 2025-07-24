@@ -328,41 +328,47 @@ Da skal vi bruke koding til å sjekke om dere har tenkt i riktige baner. For å 
 - Lagre dette variasjonsmålet for hver rad
 - Bruke verdien for hvor mye variasjon det er i genuttrykkene til å trekke ut de mest/minst varierende genene og visualiser/studer resultatene.
 
+Vi kan legge alle disse målene inn som nye søyler i tabellen, og `pandas` gir oss innebygde funksjoner for å finne gjennomsnitt (`mean`) og standardavvik (`std`). Vi laver nye søyler for disse to, samt variasjonskoeeffisienten som vi definerer som $100\cdot s/\bar x$.
+
 ```{code-cell} ipython3
-variasjonskoeffisienter = []
-gjennomsnitt_vev = []
-std_vev = []
-antall_rader = len(gener)       # Lengden på listen over gener er lik antall rader vi har
-for i in range(antall_rader):   # Løper gjennom alle radene
-    m = np.mean(vev_H.iloc[i])  # Bruker innebygde metoder for gjennomsnitt og standardavvik.
-    stdev = np.std(vev_H.iloc[i])
-    var_koeff = stdev / m * 100
-    gjennomsnitt_vev.append(m)
-    std_vev.append(stdev)
-    variasjonskoeffisienter.append(var_koeff)
+data_H["mean"] = data_H.loc[:,vev_navn].mean(axis=1)
+data_H["std"] = data_H.loc[:,vev_navn].std(axis=1)
+data_H["varkoef"] = 100*data_H["std"]/data_H["mean"]
+data_H
 ```
 
-Her får vi noe litt rart utifra dataene våre. To av verdiene blir under null. Disse fjerner vi, men hvorfor skjer de i utgangspunktet?
+Her får vi noe litt rart utifra dataene våre. To av variasjonskoeffisientene blir under null. 
 
 ```{code-cell} ipython3
-print('Antall verdier under 0 (før): ', np.sum(np.array(variasjonskoeffisienter) < 0))
+data_H[ data_H["varkoef"] < 0 ]
+```
 
-for i in range(antall_rader):
-    if variasjonskoeffisienter[i] < 0:
-        variasjonskoeffisienter[i] = 0
+::: {admonition} Refleksjon
+Se på dataene over.  Hvorfor blir variasjonskoeffisientene negative?
+:::
+
++++
+
+Det virker underlig at genuttrykket kan være negativt, så det er naturlig å tenke at dette skyldes målefeil.
+I så fall er det fornuftig å regne dette som ugyldige data, f.eks. ved å sette variasjonskoeffisienten til null.
+Det kan vi gjøre slik, og for sikkerhets skyld sjekker vi minimum for å se at der ikke finnes negative verdier igjen.
+
+```{code-cell} ipython3
+data_H[ data_H["varkoef"] < 0 ]  = 0
+print( data_H["varkoef"].min() )
 ```
 
 Tilslutt plotter vi et histogram over variasjonskoeffisient til genuttrykket
 
 ```{code-cell} ipython3
 plt.figure()
-plt.hist(variasjonskoeffisienter, bins=100)
+plt.hist(data_H["varkoef"], bins=100)
 plt.title("Histogram over variasjonskoeffisienter")
 plt.xlabel("Variasjonskoeffisientverdi")
 plt.ylabel("Antall")
 ```
 
-::: {admonition} Oppgave 
+::: {admonition} Refleksjon 
 
 Er det vanligst at gener har stor variasjon i genuttrykk mellom vev?
 
