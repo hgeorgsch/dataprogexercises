@@ -217,72 +217,97 @@ Legg til koden for å plotte `rs` på samme måte som `r1` over.
 
 ## Mønster
 
-La oss nå se nærmere på noen hovedmønstre i datasettet vårt. Start med å lage en kode som først trekker ut de 100 høyest uttrykte genene for hvert vev. Dette er ganske kompekst så dette bør man hoppe over med elever.
+La oss nå se nærmere på noen hovedmønstre i datasettet vårt.
+Vi starter med å se på de gener som har høyest uttrykk, dvs. høyest
+verdi for vevstypene i datasettet.
 
-::: {admonition} For læreren
-
-Starter med å sortere genuttrykk basert på en vevstype. Deretter tar vi ut de 100 med størst frekvens for alle vevstypene.
-
-:::
+Vi laver først en funksjon som finner de 100 sterkeste genene for én
+vevstype i ett datasett.  Vi tester den raskt med det samme på et par
+vilkårlige eksempler.
 
 ```{code-cell} ipython3
-def hent_høye_genuttrykk(df, navn): 
-    sortert_df = df.sort_values(navn) # Henter ut kun kolonnen med genuttrykk or sort ordner dem etter størrelse
-    genuttrykk_sortert = sortert_df["genes"]
-    gener_høyt = list(genuttrykk_sortert[-100:]) # De bakerste 100 elementene tilsvarer de største verdiene
+def hent_høye_genuttrykk(df, vevstype): 
+    sortert_df = df.sort_values(vevstype,ascending=False) # Sorter etter søylen «vevstype»
+    genuttrykk_sortert = sortert_df["genes"]          # Kun navn på genene
+    gener_høyt = list(genuttrykk_sortert[:100])  # De 100 første (sterkeste) genene
     return gener_høyt
+print(hent_høye_genuttrykk(data_H,"pancreas"))
+print(hent_høye_genuttrykk(data_M,"brain"))
+```
 
-alle_høye_lister = []
-for navn in vev_navn:   # Løper gjennom alle gentypene og sjekker om de er tilstede
-    alle_høye_lister.append(hent_høye_genuttrykk(data_H, navn))
+Vi ønsker nu å finne gener som er viktige for alle vevstypene.  I praksis
+skal vi identifisere de genere som dukker opp som topp-100 i alle vevstypene.
+Der er mange velprøvde teknikker for å finne de elementer er felles for flere lister.
+Her skal vi bruke en teknikk som er syntaktisk enkel, og der pythons implementasjon
+er regnet for å være god.
+
+Hvis vi ser på listene som mengder, er vi på jakt efter det som i i mengdelæren kalles snitt.
+Python har innebygd syntaks for å håndtere mengder og snitt.  Vi kan konvertere listene
+til mengder og regne ut snittet slik:
+
+```{code-cell} ipython3
+liste1 = (hent_høye_genuttrykk(data_M,"kidney"))
+liste2 = (hent_høye_genuttrykk(data_M,"heart"))
+mengde1 = set(liste1)
+mengde2 = set(liste2)
+print(mengde1)
+print(mengde2)
+snitt = mengde1 & mengde2
+print(snitt)
+```
+
+Snittoperatoren i python er altså `&`.  
+Det går òg an å skrive det som en funksjon, slik:
+
+```{code-cell} ipython3
+snitt = set.intersection( mengde1, mengde2 )
+print(snitt)
+```
+
+::: {admonition} Merknad
+Mengder skiller seg fra lister ved at rekkefølgen ikke spiller nogen rolle og
+elementer kan opptre bare en gang.
+Vi vet at hvert gen bare opptrer én gang i datasettet, så vi taper ingen informasjon her.
+Vi er nødt til å se bort fra rekkefølgen, fordi den kan være forskjellig i de to listene.
+:::
+
+La oss nu gå videre til å se på alle vevstypene samtidig.
+Først laver vi en liste med topp-hundrede for alle vevstypene.
+Vi bruke listekomprehensjon for å få det kompakt og lettleselig.
+
+```{code-cell} ipython3
+alle_høye_lister = [ hent_høye_genuttrykk(data_H, navn)
+                     for navn in vev_navn ]
 print("Antall lister: ", len(alle_høye_lister))
 print("Lengde første liste: ", len(alle_høye_lister[0]))
 ```
 
-Søker deretter gjennom de 100 med størst frekvens i alle genuttrykene. Hvis et getuttrykk *ikke* finnes i en annen topp 100 blir det tatt vekk fra listen. Vi står da igjen med genuttrykkene som er representert i alle de topp 100 for alle vevstypene.
+Her har vi en liste av lister, med alle topp-hundrede-genenene.
+For å finne snittet av alle (de indre) listene, trenger vi to triks.
+Vi må konvertere alle listene til mengder, og vi må anvende
+`set.intersection` på elementene i en liste.
+Vi så at `set.intersection` tar flere argumenter, der alle argumentene
+er mengder.  Den en liste som ett enkelt argument.
+Heldigvis har python et syntakstriks for å pakke opp listen, og sende
+alle elementene som argumenter til en funksjon.
+Da bruker vi asteriskes `*`, slik:
 
 ```{code-cell} ipython3
-hovedliste = alle_høye_lister[0]
-potensielle_høye = hovedliste.copy()   # Lager en kopi av listen slik at elementer kan slettes underveis
-for i in range(100):
-    pot_gen = hovedliste[i]
-    for vev in alle_høye_lister[1:]: # Løkker over listene fra og med den andre listen
-        if pot_gen not in vev:
-            potensielle_høye.remove(pot_gen)
-            break    # Bryter ut av løkken hvis vi fjerner et element
-print("Antall høyt uttrykte gen: ", len(potensielle_høye))
-print("Navn på høyt uttrykte gen: ", potensielle_høye)
-```
-
-Gjør tilsvarende for lavt uttrykte gen.
-
-```{code-cell} ipython3
-def hent_lave_genuttrykk(df, navn):
-    sortert_df = df.sort_values(navn)
-    genuttrykk_sortert = sortert_df["genes"]
-    gener_lavt = list(genuttrykk_sortert[:100])
-    return gener_lavt
-
-
-alle_lave_lister = []
-for navn in vev_navn:
-    alle_lave_lister.append(hent_lave_genuttrykk(data_H, navn))
-
-hovedliste = alle_lave_lister[0]
-potensielle_lave = hovedliste.copy()   # Kopierer listen over de 100 potensielle uttrykkene for å kunne slette elementer underveis
-for i in range(100):
-    pot_gen = hovedliste[i]
-    for vev in alle_lave_lister[1:]: # Løkker over listene fra og med den andre listen
-        if pot_gen not in vev:
-            potensielle_lave.remove(pot_gen)
-            break    # Bryter ut av løkken hvis vi fjerner et element
-print("Antall lavt uttrykte gen: ", len(potensielle_lave))
-print("Navn på høyt uttrykte gen: ", potensielle_lave)
+alle_høye_mengder = [ set(x) for x in alle_høye_lister ]
+toppgener = set.intersection( *alle_høye_mengder )
+print( toppgener )
 ```
 
 ::: {admonition} Oppgave 
+Bruk internet for å finne funksjonen til de seks (?) genene som er høyt uttrykt i alle vev. Diskuter hva slags funksjoner som er felles for disse genene.
+:::
 
-Bruk internet for å finne funksjonen til de 6 genene som er høyt uttrykt i alle vev. Diskuter hva slags funksjoner som er felles for disse genene.
+::: {admonition} Oppgave 
+Finn de lavest uttrykte genene på samme måte.
+1. Begynn med å definere en funksjon `hent_lave_genuttrykk()` tilsvarende `hent_høye_genuttrykk()`.
+   Du kan enten sortere omvendt (`ascending=True`) eller ta hundrede elementer fra slutten
+   av listen i stedet for begynnelsen.
+2. Kopier koden for toppgener og bruk `hent_lave_genuttrykk()` for å finne «bunngener».
 :::
 
 +++
