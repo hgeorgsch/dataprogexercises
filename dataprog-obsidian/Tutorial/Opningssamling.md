@@ -49,7 +49,7 @@ annan grunn ikkje får gjort dette på førehand.
 
 ## Arbeidsnotat
 
-+ [ ] Vurder programmet   📅 2025-06-20
++ [ ] Vurder programmet   📅 2025-11-20
     + [ ] Kor lang bør kvar økt vera?
     + [ ] Fleire oppgåver?
 

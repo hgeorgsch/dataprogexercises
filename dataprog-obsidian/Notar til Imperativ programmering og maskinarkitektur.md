@@ -4,7 +4,8 @@ tags:
 ---
 
 + Sjå [[Imperativ programmering og maskinarkitektur]]
-- [ ] Kan DALL-E o.l ta imot et fargekart vi bruker i digital profil / brand?
++ Hunden $\to$  idéar til betre bilete? 
+	- Kan DALL-E o.l ta imot et fargekart vi bruker i digital profil / brand?
 
 ## Innspel frå Ben  David
 
@@ -37,7 +38,6 @@ tags:
        fokus: “Python, som vi altså skal fokusere på i dette kurset (?), kom
        først i 1991, …"
 
-+ [ ] Hunden $\to$ #jonas ? idéar til betre bilete?
 
 ## Gamle skisser og idéar
 
