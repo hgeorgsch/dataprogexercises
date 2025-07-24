@@ -16,14 +16,13 @@ kernelspec:
 
 ::: {admonition} Opphavsrett
 
-Arbeidet er lånt frå Morten Munthe ved UiB.
++ Original oppgave ved Morten Munthe, Universitetet i Bergen
++ Redigert og tilrettelagt av Hans Georg Schaathun, NTNU
+
 Bruksvilkår må avklarast.
 
 **TODO** Kjelde for datasettet
 :::
-
-+ original oppgave ved Morten Munthe, Universitetet i Bergen
-+ redigert og tilrettelagt av Hans Georg Schaathun, NTNU
 
 Denne øvelsen har en dobbel hensikt.
 For det første skal den illustrere ulike funksjoner i python, for å analysere
@@ -73,7 +72,10 @@ Dette prosjektet er et stort internasjonalt samarbeid som samler inn og systemat
 
 I denne øvelsen har vi hentet inn et datasett fra ENCODE prosjektet, nærmere bestemt målinger av mRNA nivå (genuttrykk), fra ulike vev fra menneske og mus.
 
-Vi skal her blant annet bruke et bibliotek vi ikke har sett på før som heter pandas, som er spesielt godt egnet til å vise denne type data. Dette er ikke nødvendig å sette seg inn i med mindre man er veldig ivrig.
+Som vanlig bruker vi [pandas](https://pandas.pydata.org/docs/)-biblioteket til å håndtere datasettet,
+[pyplot](https://matplotlib.org/stable/tutorials/pyplot.html) til plotting,
+og [numpy](https://numpy.org/doc/stable/) til noen kvantitative beregninger på 
+hele datasett.
 
 ```{code-cell} ipython3
 import matplotlib.pyplot as plt
@@ -81,37 +83,62 @@ import pandas as pd
 import numpy as np
 ```
 
-Les inn datafilen "genuttrykk_menneske_data.txt" og gjør deg kjent med hvilke vev og hvor mange gener vi har målt uttrykket til. I filen "genuttrykk_menneske_data.txt" er dataene separert med mellomrom. For at det ikke skal fylles altfor mye opp, så printer vi kun de 5 første kolonnene i filen.
-Kan godt bytte ut `data_H.head(5)` med `data_H` for å se «hele» datamengden.
+Last ned de to datafilene
++ [genuttrykk_menneske_data.txt](genuttrykk_menneske_data.txt)
++ [genuttrykk_mus_data.txt](genuttrykk_mus_data.txt)
+
+::: {admonition} Oppgåve
+Åpne filene.  Hvorden er de formatert med skilletegn og desimaltegn?
+Er begge filene formattert likt?
+:::
+
+La oss begynne med å lese inn menneskedata og vise noen rader, f.eks. slik,
 
 ```{code-cell} ipython3
-data_H = pd.read_csv("genuttrykk_menneske_data.txt", sep=' ')  # Menneskedata
-print(data_H.head(5))   # Printer de 5 første radene 
+data_H = pd.read_csv("genuttrykk_menneske_data.txt", sep=' ')
+print(data_H.head(12))   
 ```
 
-::: {admonition} Oppgave 1
+::: {admonition} Oppgave 
 1. Hva er de forskjellige typene vev på norsk?
-2. Hent inn for dataene for mus på samme måte. Filen for mus heter "genuttrykk_mus_data.txt"
+2. Hent inn for dataene for mus på samme måte. Kall datasettet for `data_M`.
 3. Er de samme vevene samlet inn fra begge artene?
 :::
 
 +++
 
-Vi skal nå fokuserer på enkelte av vevstypene, og tar vekk vevene "testies", "ovary", "sigmoid", og "adipose" med følgende kodesnutt.
+Vi skal nå fokuserer på enkelte av vevstypene,
+og tar vekk søyler "testies", "ovary", "sigmoid", og "adipose".
+Det kan vi gjøre med funksjonen `drop`, slik:
 
 ```{code-cell} ipython3
 data_H = data_H.drop(columns=["testis", "ovary", "sigmoid", "adipose"], axis=1)
 ```
 
-Vi lager så en liste med navnet på vevene, merk at vi derfor tar vekk kolonnenavnet "genes". Dette kommer vi til å få bruk for litt senere i koden vår.
+Hver søyle svarer til en vevstype, bortsett fra søylen `genes`.
+Vi kommer til å trenge en liste over vevstypene som vi studerer, uten `genes`, og
+det kan vi lage slik.
 
 ```{code-cell} ipython3
 vev_navn = list(data_H.columns)
 vev_navn.remove("genes")
 ```
 
-### Tips 
-I denne hele oppgaven må vi være detektiver og lese oss opp på funksjoner til ulike gener ved hjelp av ulike databaser på nettet. Vi anbefaler www.genecards.org eller www.proteinatlas.org for å finne detaljert informasjon om gener og deres proteinprodukt. I tillegg har wikipedia også ofte gode sider om disse genene/proteinene.
+::: {admonition} Oppgåve
+Dropp dei same søylene frå datasettet for mus.
+:::
+
+::: {admonition} Oppgåve
+Skriv ut innhaldet av `vev_navn` og samanlikn det med visinga av datasettet over.
+
+Stemmer lista over vevstypar med søylene både for mus og menneske?
+:::
+
+::: {hint}
+I denne hele oppgaven må vi være detektiver og lese oss opp på funksjoner til ulike gener ved hjelp av ulike databaser på nettet.
+Vi anbefaler [www.genecards.org](www.genecards.org) eller [www.proteinatlas.org](www.proteinatlas.org)  for å finne detaljert informasjon om gener og deres proteinprodukt.
+I tillegg har wikipedia også ofte gode sider om disse genene/proteinene.
+:::
 
 +++
 
@@ -119,40 +146,38 @@ I denne hele oppgaven må vi være detektiver og lese oss opp på funksjoner til
 
 Nå skal vi utforske datasettet vårt ved å grave litt i genuttrykksmønstrene. Vi starter å kun se på data fra mennesket.
 
-To av vevene i vårt datasett er hormonproduserende, binyrer (engelsk: adrenal) og bukspyttkjertelen (engelsk: pancreas). En av de viktigste oppgavene til binyrene er å produsere adrenalin, mens en av bukspyttkjertelens viktigste oppgaver er å produsere insulin og glucagon som regulerer glukoseinnholdet i blodet. Produksjon av adrenalin skjer ved kjemisk modifisering (methylering) av noradrenalin. Denne reaksjonen blir katalysert av ensymet phenylethanolamine N-methyltransferase som kodes for av **PNMT** genet. Glucagon produseres ved å spalte preglucagon, et protein kodet for av genet **GCG**.
+To av vevene i vårt datasett er hormonproduserende, binyrer (engelsk: adrenal) og bukspyttkjertelen (engelsk: pancreas). En av de viktigste oppgavene til binyrene er å produsere adrenalin, mens en av bukspyttkjertelens viktigste oppgaver er å produsere insulin og glucagon som regulerer glukoseinnholdet i blodet. Produksjon av adrenalin skjer ved kjemisk modifisering (methylering) av noradrenalin. Denne reaksjonen blir katalysert av ensymet phenylethanolamine N-methyltransferase som kodes for av **PNMT**-genet. Glucagon produseres ved å spalte preglucagon, et protein kodet for av genet **GCG**.
 
 +++
 
-Vi starter med å finne hvilken rad PNMT og GCG genet er i tabellen over vevsuttrykk.
-
-Hint: Her må vi først hente ut kun kolonnen med genuttrykk og gjøre om til en liste. En liste har muligheten til å returnere indeksen til et element med .indeks() metoden.
+For å hente ut de genene vi er interesserte i, can vi bruke `pandas`-funksjonene for å filtrere data, og rett og slett finne de to genene i `genes`-søylen.
 
 ```{code-cell} ipython3
-gener = list(data_H["genes"])
-rad_GCG = gener.index("GCG")
-rad_PNMT = gener.index("PNMT")
-print("GCG er i rad", rad_GCG)
-print("PNMT er i rad", rad_PNMT)
+r1 = data_H[ data_H["genes"] == "GCG" ]
+print(r1) 
+r2 = data_H[ data_H["genes"] == "PNMT" ]
+print(r2) 
 ```
 
-Henter så ut verdien for alle vevstypene i de to radene.
-
-Hint: Anbefaler her å droppe kolonnen med gentypen, siden den ikke skal brukes lengere. Kommandoen for å hente ut en rad er `.iloc[]`.
+Legg merke til at `r1` og `r2` er tabellen eller *data frames* med én rad hver.
+Det er ikke det samme som enkeltrader, eller *Series* i `pandas`.
+Hvis vi henter ut den ene raden, ser vi forskjellen:
 
 ```{code-cell} ipython3
-vev_H = data_H.drop('genes', axis=1) 
-GCG_vals = vev_H.iloc[rad_GCG]         
-PNMT_vals = vev_H.iloc[rad_PNMT]
-print("Vevstypene for GCG er gitt ved:\n")
-print(GCG_vals)
+rad_GCG = r1.iloc[0]
+rad_PNMT = r2.iloc[0]
+print( "Typer:", type(r1), type(r1.iloc[0]) )
 print()
-print("Vevstypene for PNMT er gitt ved:\n")
-print(PNMT_vals)
+print("GCG som serie")
+print(rad_GCG)
+print()
+print("PNMT som serie")
+print(rad_PNMT)
 ```
 
-Lag en figur som viser uttrykket av disse genene over alle vev. 
-
-Hint: Her kommer panda-pakken i bruk. Den gjør at vi kan plotte en "bar"-plot veldig enkelt og elegant, se kode under.
+Nu kan vi bruke `pandas`-funksjonene for å plotte de to genene.
+Det blir seende litt forskjellig ut, om vi bruker *Data Frame*-objektet
+eller *Series*-objektet, men koden er nesten lik.
 
 ```{code-cell} ipython3
 plt.figure()
@@ -161,26 +186,44 @@ plt.ylabel("log2(Genuttrykk)")            # Navn på y-aksen
 plt.tight_layout()                        # Dette gjøre at plottet ser ryddigere ut
 ```
 
-::: {admonition} Oppgave 2
-
-1. Lag et tilsvarende plot for PNMT.
-2. Virker resultatene logiske utifra det dere kan om produksjonen av disse hormonene?
-:::
-
 ```{code-cell} ipython3
 plt.figure()
-PNMT_vals.plot(kind='bar', title="PNMT")
-plt.ylabel("log2(Genuttrykk)")
-plt.tight_layout()
+r1.plot(kind='bar', title="GCG")    # Lager et barplott (histogram) med tittel GCG
+plt.ylabel("log2(Genuttrykk)")      # Navn på y-aksen
+plt.tight_layout()                  # Dette gjøre at plottet ser ryddigere ut
 ```
+
+::: {admonition} Oppgave
+Lag tilsvarende plot for PNMT.  Du velger selv hvilket format du vil ha, og
+om du har tid, kan du søke på nett og se om du kan flikke på formateringen
+og få finere farger og titler.
+:::
+
+::: {admonition} Refleksjon
+Virker resultatene logiske utifra det dere kan om produksjonen av disse hormonene?
+:::
+
+Det er også mulig å sette sammen de to radene til én tabell og plotte dem sammen.
+
+```{code-cell} ipython3
+rs = pd.concat([r1,r2])
+print(rs)
+```
+
+::: {admonition} Oppgave
+Legg til koden for å plotte `rs` på samme måte som `r1` over.
+:::
+
 
 ## Mønster
 
 La oss nå se nærmere på noen hovedmønstre i datasettet vårt. Start med å lage en kode som først trekker ut de 100 høyest uttrykte genene for hvert vev. Dette er ganske kompekst så dette bør man hoppe over med elever.
 
-**For læreren:**
+::: {admonition} For læreren
 
 Starter med å sortere genuttrykk basert på en vevstype. Deretter tar vi ut de 100 med størst frekvens for alle vevstypene.
+
+:::
 
 ```{code-cell} ipython3
 def hent_høye_genuttrykk(df, navn): 
@@ -237,14 +280,14 @@ print("Antall lavt uttrykte gen: ", len(potensielle_lave))
 print("Navn på høyt uttrykte gen: ", potensielle_lave)
 ```
 
-::: {admonition} Oppgave 3
+::: {admonition} Oppgave 
 
 Bruk internet for å finne funksjonen til de 6 genene som er høyt uttrykt i alle vev. Diskuter hva slags funksjoner som er felles for disse genene.
 :::
 
 +++
 
-::: {admonition} Oppgave 4
+::: {admonition} Oppgave 
 
 Legg vekk PCen og diskuter:
 
@@ -294,7 +337,7 @@ plt.xlabel("Variasjonskoeffisientverdi")
 plt.ylabel("Antall")
 ```
 
-::: {admonition} Oppgave 5
+::: {admonition} Oppgave 
 
 Er det vanligst at gener har stor variasjon i genuttrykk mellom vev?
 
@@ -342,7 +385,7 @@ plt.ylabel("variasjonskoeffisient")
 plt.legend()
 ```
 
-::: {admonition} Oppgave 6
+::: {admonition} Oppgave 
 
 Diskuter hva denne grafen viser og hvorfor det er rimelig at det må være slik
 
@@ -358,7 +401,7 @@ Så langt har vi sett at gener som er høyt uttrykt også oftest varierer lite i
 
 Her skal vi bruke hele det originale datasettet, med genuttrykk fra både mus og menneske, for å belyse viktige prinsipp innen evolusjon.
 
-::: {admonition} Oppgave 7
+::: {admonition} Oppgave 
 
 Diskuter ut ifra det dere kan om evolusjonsbiologi, om vi vil forvente at genuttrykksmønstrene fra samme vev i menneske og mus er likere hverandre enn de er andre vev i samme art?
 :::
@@ -388,8 +431,12 @@ plt.ylim([0, 1])
 plt.tight_layout()
 ```
 
-::: {admonition} Oppgave 8
+::: {admonition} Oppgave 
 
-1. **Studer likheten mellom vevene i mus og menneske. Hva er grunnen til likheten? Hvorfor er noe vev likere enn annet vev?**
-2. **Hvordan kan dere forklare dette ut ifra evolusjonsprinsipper?**
+1. Studer likheten mellom vevene i mus og menneske. Hva er grunnen til likheten? Hvorfor er noe vev likere enn annet vev?
+2. Hvordan kan dere forklare dette ut ifra evolusjonsprinsipper?
 :::
+
+```{code-cell} ipython3
+
+```

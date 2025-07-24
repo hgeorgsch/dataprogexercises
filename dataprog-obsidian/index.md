@@ -60,7 +60,6 @@ title: Utkast til læringsmateriale i data og programmering
 
 + Sjå òg [[Tutorial/intro|intro]] til Jupyter Books
 +  [[Opningssamling]] (program)
-	+ [[Seminar om Motivasjon og Ynskjer]]
 + **Periode 1** Forslag vert utarbeidd Jupyter Books:  [[Tutorial/first|first]]
 1. [[Numeriske Metodar og Kontrollflyt]] 
 	+ Notar til [[Imperativ programmering og maskinarkitektur]]
