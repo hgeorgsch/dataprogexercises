@@ -77,7 +77,9 @@ title: Utkast til læringsmateriale i data og programmering
 6. [[Statistikk og Maskinlæring]]     
 	1. Notar til [[Om å læra frå data]]
 		1. [[Notar til Om å læra frå data]]
-	
+
++ Andre idéar
+	+ [[Intervju med Lars Ole Hjelkrem i Sparebank 1 Møre]]
 	
 ![[kjapp-telnet.mkv]]
 
