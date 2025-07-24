@@ -12,7 +12,7 @@ tags:
 	+ Vegleiing etter behov
 + Jupyter Notebook eller Jupyter Lab
 
-+ [ ] Installasjonstutorials 📅 2025-06-20
++ [ ] Installasjonstutorials 📅 2025-11-20
 	+ [ ] Tutorial for MS-Windows
 	+ [ ] Tutorial for MacOS
 	+ [ ] Tutorial for Linux/Unix
