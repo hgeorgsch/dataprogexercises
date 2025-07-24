@@ -14,10 +14,11 @@ bruka *Jupyter notebook* på eiga maskin, samt at me har ei
 felles forståing av kva me søkjer å oppnå i laupet av semesteret.
 
 **Førebuing** me tilrår at alle installerer programvaren på eiga
-maskin før samlinga (sjå [Installasjon](Installasjon)), gjerne i
-samråd med IT-tenesta dersom ein bruker jobbmaskin.  
+maskin før samlinga (sjå [Installasjon](Installasjon)).
+Dersom ein bruker ei jobbmaskin, er det greitt å kunna gjera dette i 
+samråd med IT-tenesta i verksemda.
 Vegleiingstida før lønsj fyrste dagen er for dei som av ein eller
-annan grunn ikkje får gjort dette på førehand.
+annan grunn ikkje får gjort dette ferdig på førehand.
 
 
 ## Dag 1
