@@ -40,12 +40,13 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 data_S = pd.read_csv("hygdata_v3.csv", sep=',')  # Stjernedata
-data_S.head(10)                                  # Printer de 10 første radene 
+display(data_S)
 ```
 
 For HR-diagrammet trenger vi kun 2 av de 37 kolonnene og fjerner resten.
 Vi trenger kun *absmag* og *ci* kolonnene.
-[[Dataskildringa for HYG]] forteller hva kolonne representerer.
+[Dataskildringa for HYG](Dataskildringa%20for%20HYG.md)
+forteller hva kolonne representerer.
 
 ::: {admonition} Oppgave 1
 
@@ -62,22 +63,12 @@ color = data_S["ci"]
 magnitude = data_S["absmag"]
 
 name = data_S["proper"]
-#for i in range(100000):
-#    if name[i] == str(name[i]) :
-#        print(name[i])
 
-#figure(figsize=(8, 10), dpi=80)
-#scatter(color, magnitude, s = 0.1)
+plt.figure(figsize=(8, 10), dpi=80)
+plt.scatter(color, magnitude, s = 0.1)
 ```
 
-::: {admonition} Oppgave 2
-
-Klarer du å se hvorfor dette ble galt?
-:::
-
-+++
-
-Korrigerer her plottet slik at det ligner på det vi kjenner.
+Det kan være fornuftig å begrense omfanget på aksene, for bedre å se detaljer der vi har mest data. Vi kan også snu aksen, og plotte fra $y=18$ og ned til $y=-16$, slik det vanligvis vises.
 
 ```{code-cell} ipython3
 plt.figure(figsize=(8, 10), dpi=80)
@@ -182,3 +173,6 @@ Endre slik at vi plotter spektralklassene langs x-aksen. (Dette skal komme sener
 
 :::
 
+```{code-cell} ipython3
+
+```
