@@ -164,15 +164,15 @@ Det er ikke det samme som enkeltrader, eller *Series* i `pandas`.
 Hvis vi henter ut den ene raden, ser vi forskjellen:
 
 ```{code-cell} ipython3
-rad_GCG = r1.iloc[0]
-rad_PNMT = r2.iloc[0]
+GCG_vals = r1.iloc[0]
+PNMT_vals = r2.iloc[0]
 print( "Typer:", type(r1), type(r1.iloc[0]) )
 print()
 print("GCG som serie")
-print(rad_GCG)
+print(GCG_vals)
 print()
 print("PNMT som serie")
-print(rad_PNMT)
+print(PNMT_vals)
 ```
 
 Nu kan vi bruke `pandas`-funksjonene for å plotte de to genene.
@@ -181,10 +181,14 @@ eller *Series*-objektet, men koden er nesten lik.
 
 ```{code-cell} ipython3
 plt.figure()
-GCG_vals.plot(kind='bar', title="GCG")    # Lager et barplott (histogram) med tittel GCG
+GCG_vals.drop("genes").plot(kind='bar', title="GCG")    # Lager et barplott (histogram) med tittel GCG
 plt.ylabel("log2(Genuttrykk)")            # Navn på y-aksen
 plt.tight_layout()                        # Dette gjøre at plottet ser ryddigere ut
 ```
+
+::: {hint}
+Merk at vi måtte droppe `genes` før vi plotter. Det er ikke nødvendig når vi plotter en tabell under, men når vi plotter en serie, vil pandas protestere på ikke-numeriske verdier.
+:::
 
 ```{code-cell} ipython3
 plt.figure()
@@ -246,8 +250,8 @@ Python har innebygd syntaks for å håndtere mengder og snitt.  Vi kan konverter
 til mengder og regne ut snittet slik:
 
 ```{code-cell} ipython3
-liste1 = (hent_høye_genuttrykk(data_M,"kidney"))
-liste2 = (hent_høye_genuttrykk(data_M,"heart"))
+liste1 = (hent_høye_genuttrykk(data_H,"kidney"))
+liste2 = (hent_høye_genuttrykk(data_H,"heart"))
 mengde1 = set(liste1)
 mengde2 = set(liste2)
 print(mengde1)
@@ -298,8 +302,9 @@ toppgener = set.intersection( *alle_høye_mengder )
 print( toppgener )
 ```
 
-::: {admonition} Oppgave 
-Bruk internet for å finne funksjonen til de seks (?) genene som er høyt uttrykt i alle vev. Diskuter hva slags funksjoner som er felles for disse genene.
+::: {admonition} Biologioppave 1 
+Bruk internet for å finne funksjonen til de seks (?) genene som er høyt uttrykt i alle vev.
+Diskuter hva slags funksjoner som er felles for disse genene.
 :::
 
 ::: {admonition} Oppgave 
@@ -312,7 +317,7 @@ Finn de lavest uttrykte genene på samme måte.
 
 +++
 
-::: {admonition} Oppgave 
+::: {admonition} Biologioppave 2 
 
 Legg vekk PCen og diskuter:
 
@@ -337,7 +342,7 @@ data_H["varkoef"] = 100*data_H["std"]/data_H["mean"]
 data_H
 ```
 
-Her får vi noe litt rart utifra dataene våre. To av variasjonskoeffisientene blir under null. 
+Her får vi noe litt rart utifra dataene våre. To av variasjonskoeffisientene blir under null.
 
 ```{code-cell} ipython3
 data_H[ data_H["varkoef"] < 0 ]
@@ -376,11 +381,11 @@ Er det vanligst at gener har stor variasjon i genuttrykk mellom vev?
 
 +++
 
-I **oppgave 3** og i **oppgave 4** fant vi ut at høyt uttrykte gener ofte er høyt uttrykte i flere vev. Dersom dette er en generell trend foventer vi å se en sammenheng mellom geners ‘vevsspesifisitet’ (som vi har målt som variasjonskoeffisient) og geners uttrykksnivå. Vi plotter variasjonskoeffisienten mot gjenomsnittet (som vi regnet ut for hvert vev over).
+I **biologioppgave 1** og **2** fant vi ut at høyt uttrykte gener ofte er høyt uttrykte i flere vev. Dersom dette er en generell trend foventer vi å se en sammenheng mellom geners ‘vevsspesifisitet’ (som vi har målt som variasjonskoeffisient) og geners uttrykksnivå. Vi plotter variasjonskoeffisienten mot gjenomsnittet (som vi regnet ut for hvert vev over).
 
 ```{code-cell} ipython3
 plt.figure()
-plt.scatter(gjennomsnitt_vev, variasjonskoeffisienter)
+plt.scatter(data_H["mean"], data_H["varkoef"])
 plt.xlabel("Gjennomsnittlig vevsuttrykk")
 plt.ylabel("Variasjonskoeffisient")
 ```
@@ -390,33 +395,34 @@ Vi skal se på to eksempler på gener som er høyt uttrykt. Beta-aktin (**ACTB**
 La oss legge på informasjon om hvor slike typiske ‘housekeeping genes’ befinner seg i plottet over. Finner først radene som har gener som koder for ribosomale subinuts (disse begynner på ‘**RPS**’) og deretter beta-aktin (**ACTB**).
 
 ```{code-cell} ipython3
-rps_rader = []
-actb_rader = []
-for i in range(antall_rader):
-    if gener[i].startswith("RPS"):
-        rps_rader.append(i)
-    elif gener[i].startswith("ACTB"):
-        actb_rader.append(i)
+rps_data = data_H.loc[ data_H["genes"].str.startswith( "RPS", na=False ) ]
+print(rps_data)
+```
 
-x = np.array(gjennomsnitt_vev)
-y = np.array(variasjonskoeffisienter)
-rps_arr = np.array(rps_rader)
-actb_arr = np.array(actb_rader)
+::: {hint}
+Dette er antagelig en ny variant av filtrering av datasett.
+Vi bruke `str.startswith` for å identifisere gennavn som begynner med en bestemt streng.
+Vi må spesifisere `na=False` som eksluderer rader der `genes` er udefinert.
+:::
+
+```{code-cell} ipython3
+actb_data = data_H.loc[ data_H["genes"].str.startswith( "ACTB", na=False ) ]
+print(actb_data)
 ```
 
 Vi kan nå legge på et nytt lag av informasjon på plottet over der vi uthever disse genene spesifikt
 
 ```{code-cell} ipython3
 plt.figure()
-plt.scatter(x, y)
-plt.scatter(x[rps_arr], y[rps_arr], label='Ribosomale protein-subenheter')
-plt.scatter(x[actb_arr], y[actb_arr], label='Beta-aktin')
+plt.scatter( data_H["mean"], data_H["varkoef"] )
+plt.scatter( rps_data["mean"], rps_data["varkoef"], label='Ribosomale protein-subenheter')
+plt.scatter( actb_data["mean"], actb_data["varkoef"] , label='Beta-aktin')
 plt.xlabel("Gjennomsnittlig vevsuttrykk")
 plt.ylabel("variasjonskoeffisient")
 plt.legend()
 ```
 
-::: {admonition} Oppgave 
+::: {admonition} Biologioppgave 3 
 
 Diskuter hva denne grafen viser og hvorfor det er rimelig at det må være slik
 
@@ -432,7 +438,7 @@ Så langt har vi sett at gener som er høyt uttrykt også oftest varierer lite i
 
 Her skal vi bruke hele det originale datasettet, med genuttrykk fra både mus og menneske, for å belyse viktige prinsipp innen evolusjon.
 
-::: {admonition} Oppgave 
+::: {admonition} Refleksjon 
 
 Diskuter ut ifra det dere kan om evolusjonsbiologi, om vi vil forvente at genuttrykksmønstrene fra samme vev i menneske og mus er likere hverandre enn de er andre vev i samme art?
 :::
@@ -441,12 +447,17 @@ Vi starter med å hente inn filen med data fra mus. Mye av denne koden er lik de
 
 ```{code-cell} ipython3
 data_M = pd.read_csv("genuttrykk_mus_data.txt", sep=' ') 
-
 data_M = data_M.drop(columns=["testis", "ovary", "sigmoid", "adipose"], axis=1)
-vev_M = data_M.drop('genes', axis=1) 
 ```
 
-Korrelerer deretter dette med filen for mennesker. Dersom de samme genene er høyt/lavt uttrykt i samme vev i mus og menneske, så vil korrelasjonen være høy.
+Før vi regner på korrelasjon, lager vi alternative tabeller uten den ikke-numeriske `genes`-søylen. Vi dropper også ekstrasøylene som vi la til for mennesker.
+
+```{code-cell} ipython3
+vev_H = data_H.drop( columns=[ "genes", "mean", "std", "varkoef" ] )
+vev_M = data_M.drop( columns=[ "genes" ] )
+```
+
+Nu regner vi ut korrelasjonen mellom mellom menneske og mus, for hver vevstype. Dersom de samme genene er høyt/lavt uttrykt i samme vev i mus og menneske, så vil korrelasjonen være høy.
 
 ```{code-cell} ipython3
 korrelasjon = vev_H.corrwith(vev_M) 
@@ -454,7 +465,7 @@ print("Korrelasjon mellom genuttrykk i menneske og mus\n")
 print(korrelasjon)
 ```
 
-Visualiserer tabellen over.
+Vi kan vise det samme som et søylediagram.
 
 ```{code-cell} ipython3
 korrelasjon.plot(kind="bar")
@@ -467,6 +478,10 @@ plt.tight_layout()
 1. Studer likheten mellom vevene i mus og menneske. Hva er grunnen til likheten? Hvorfor er noe vev likere enn annet vev?
 2. Hvordan kan dere forklare dette ut ifra evolusjonsprinsipper?
 :::
+
+```{code-cell} ipython3
+
+```
 
 ```{code-cell} ipython3
 
