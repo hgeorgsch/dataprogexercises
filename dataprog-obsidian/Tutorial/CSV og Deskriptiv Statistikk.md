@@ -28,9 +28,10 @@ tags:
 + Step 2. Plott
     + Plot/subplot og eksport av figurar
     + Ulike plot: histogram/scatter/kakediagram
-    + [[Jordskjelv]] demonstrerer animasjon og plotting oppå kart
 	+ Eksporting plots
 + Oppgåver
+    + [[Jordskjelv]] demonstrerer animasjon og plotting oppå kart
+    + [[Genetikk]] demonstrerer korrelasjon m.m.
 	+ [[Arbeidsledige]] : Latin 1,  Kombiner arbeidsledige og konkurser
 		+ Utfordring: Konverter 1980M1 til dato
 		+ Oppgåve: Plott begge datasett
