@@ -15,8 +15,15 @@ tags:
 	+ Kunna bruka pandas til deskriptiv statistikk og plotting
 + *Perspektivførelesing*
 	+ [[Filhandtering]]
-	+ [[CSV-formatet]]
 	+  [[Konseptuell forståing av  pandas]]  veke 40-41/2024
++ Utsett til seinare
+	+ Lagring og organisering
+		+ app versys filsystem
+		+ versjonskontroll
+		+ git og github
+	+ Moglege øvingar og demoar
+		+ git og github
+
 + *Demovideo*
 	+ [[Filkonvertering og -import]]
 	+ [[Plot i pandas]]
