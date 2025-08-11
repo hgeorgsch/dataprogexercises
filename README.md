@@ -39,6 +39,7 @@ sets, and sometimes supplementary documentation.
 Two exercises have been prepared for use,
 + [Genetikk](Genetikk/Genetikk.md)
 + [Jordskjelv](Jordskjelv/Jordskjelv.md)
+
 Other directories contain work in progress.
 
 ## Contributors
