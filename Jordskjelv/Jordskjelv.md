@@ -25,7 +25,7 @@ Kartet som er brukt offentleg eige (*public domain*) og henta
 frå [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=1288245)
 etter ein originalt frå [NASA (sensor Terra/MODIS)](http://visibleearth.nasa.gov/).
 
-**TODO** Kjelde for datasettet.
+Datasettet er henta frå [USGS](https://earthquake.usgs.gov/earthquakes/search/).
 :::
 
 # Jordskjelv

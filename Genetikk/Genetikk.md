@@ -23,7 +23,13 @@ kernelspec:
 Oppgåva kan brukast fritt under
 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
-**TODO** Kjelde for datasettet
+Datasetta er henta frå [ENCODE](https://www.encodeproject.org/)
+med mindre endringar.
+Sjå òg
+Luo Y, Hitz BC, Gabdank I, Hilton JA, Kagda MS, Lam B, Myers Z, Sud P, Jou J, Lin K, Baymuradov UK, Graham K, Litton C, Miyasato SR, Strattan JS, Jolanki O, Lee JW, Tanaka FY, Adenekan P, O'Neill E, Cherry JM. 
+«New developments on the Encyclopedia of DNA Elements (ENCODE) data portal.»
+*Nucleic Acids Res.* 2020 Jan 8;48(D1):D882-D889. 
+doi: 10.1093/nar/gkz1062. PMID: 31713622; PMCID: PMC7061942.
 :::
 
 Denne øvelsen har en dobbel hensikt.
