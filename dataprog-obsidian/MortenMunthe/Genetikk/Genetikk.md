@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.17.0
+    jupytext_version: 1.17.2
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -16,10 +16,12 @@ kernelspec:
 
 ::: {admonition} Opphavsrett
 
-+ Original oppgave ved Morten Munthe, Universitetet i Bergen
-+ Redigert og tilrettelagt av Hans Georg Schaathun, NTNU
++ Original oppgåve ved Morten Munthe, Universitetet i Bergen, 2025.
++ Redigert og tilrettelagt av Hans Georg Schaathun, NTNU, 2025, med
+  kodeforenkling og utdjuping.
 
-Bruksvilkår må avklarast.
+Oppgåva kan brukast fritt under
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
 **TODO** Kjelde for datasettet
 :::
