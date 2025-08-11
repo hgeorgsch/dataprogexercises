@@ -14,8 +14,12 @@ kernelspec:
 
 ::: {admonition} Opphavsrett
 
-Arbeidet er lånt frå Morten Munthe ved UiB.
-Bruksvilkår må avklarast.
++ Original oppgåve ved Morten Munthe, Universitetet i Bergen, 2025.
++ Redigert og tilrettelagt av Hans Georg Schaathun, NTNU, 2025, med
+  kodeforenkling og utdjuping.
+
+Oppgåva kan brukast fritt under
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
 Kartet som er brukt offentleg eige (*public domain*) og henta
 frå [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=1288245)

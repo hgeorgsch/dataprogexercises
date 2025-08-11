@@ -14,9 +14,14 @@ kernelspec:
 
 # H-R diagrammet med stjernedata
 
-::: {admonition} License
+::: {admonition} Opphavsrett
 
-Arbeidet er lånt fra Morten Munthe ved UiB.
+Oppgåva er skriven av Morten Munthe ved UiB, og
+berre kosmetisk redigert av Hans Georg Schaathun, NTNU, 2025.
+
+Oppgåva kan brukast fritt under
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+
 Datasettet er publisert under CC BY-SA 4.0 frå
 [HYG Stellar database](https://codeberg.org/astronexus/hyg).
 
