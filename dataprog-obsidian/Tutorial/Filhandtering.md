@@ -28,7 +28,38 @@ Hver fil er et objekt som vi stort sett behandler samlet som en enhet.
 
 ---
 
-+ Binær- og tekstfiler
+<!-- slide template="[[tpl-twocolumn]]" -->
+
+
+::: leftimage
+
+**Tekstfiler**
+
+```
+Den glade vandrer kalles jeg,
+for sorgløs går jeg på,
+den endeløse landevei,
+der liker jeg å gå.
+```
+:::
+
+::: leftcredit
+:::
+
+::: rightimage
+
+ **... og binæfiler**
+```
+6544 206e 6c67 6461 2065 6176 646e 6572
+2072 616b 6c6c 7365 6a20 6765 0a2c 6f66
+2072 6f73 6772 c36c 73b8 6720 a5c3 2072
+656a 2067 c370 2ca5 640a 6e65 6520 646e
+6c65 b8c3 6573 6c20 6e61 6564 6576 2c69
+```
+:::
+
+::: rightcredit
+:::
 
 note:
 Filer kommer som sagt i ulike filtyper:
