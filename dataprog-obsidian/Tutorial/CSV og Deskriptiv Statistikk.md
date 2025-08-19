@@ -14,8 +14,8 @@ tags:
 		+ kjenna ulike filformat og dialektar av CSV
 	+ Kunna bruka pandas til deskriptiv statistikk og plotting
 + *Perspektivførelesing*
-	+ [[Filhandtering]]
-	+  [[Konseptuell forståing av  pandas]]  veke 40-41/2024
+	+ [Filhandtering](https://iirevu.org.ntnu.no/Filhandtering/)
+	+ [[Konseptuell forståing av  pandas]]  veke 40-41/2024
 + Utsett til seinare
 	+ Lagring og organisering
 		+ app versys filsystem
