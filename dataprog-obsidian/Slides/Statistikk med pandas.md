@@ -32,17 +32,20 @@ note:
 
 ---
 
+<!-- slide template="[[tpl-quote-header]]" -->
+
+# *pan*el *da*ta (pandas)
+
 + Datasett med *radar* og *søyler*
 	+ datapunkt
 	+ drag eller *features*
 + [[Døme med pickle]]
 
-# Introduksjon til *pan*el *da*ta: Pandas
-
-Nyttig ressurs: [https://pandas.pydata.org/docs/user_guide/](https://pandas.pydata.org/docs/user_guide/)
 
 * Pandas er et bibliotek for python for å manipulere og analysere data
 	* me brukte det fyrst i [[Fyrste datasett med CSV]]
+
+---
 	
 * Vi bruker pandas til å laste inn eller lage datasett
     - Rydde opp i data

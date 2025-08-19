@@ -6,6 +6,7 @@
   } 
   .reveal .quoteslideheader h1 {
      font-size: 32pt ;
+     text-transform: none;
   }
   
   .reveal .quoteslideheader .credit {
