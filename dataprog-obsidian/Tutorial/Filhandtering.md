@@ -3,15 +3,15 @@ tags:
   - lecture/video/perspective
 ---
 
-<!-- slide template="[[tpl-quote]]" -->
+<!-- slide template="[[tpl-quote-header]]" -->
 
-# Filhandtering
+# Filbehandling
 
-![[1328101950_Network-Folder.png]]
-+ Binær- og tekstfiler
+![[1328101950_Network-Folder.png|480]]
 
 ::: credit
-By VistaICO.com - VistaICO Toolbar Icons, CC BY 3.0, https://commons.wikimedia.org/w/index.php?curid=18244879
+Bilete frå VistaICO.com - VistaICO Toolbar Icons, CC BY 3.0,
+via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=18244879)
 :::
 
 note:
@@ -24,9 +24,9 @@ Det vi skal snakke om her er filer som er lavet for å deles mellom ulike progra
 
 ---
 
-<!-- slide template="[[tpl-quote]]" -->
+<!-- slide template="[[tpl-quote-header]]" -->
 
-![[DDR2_ram_mounted]]
+![[DDR2_ram_mounted.jpg|400]]
 
 | Primærminne | Langtidsminne |
 | ----------- | ------------- |
@@ -70,7 +70,7 @@ der liker jeg å gå.
 
 ::: rightimage
 
- **... og binæfiler**
+ **... og binærfiler**
 ```
 6544 206e 6c67 6461 2065 6176 646e 6572
 2072 616b 6c6c 7365 6a20 6765 0a2c 6f66
@@ -95,15 +95,39 @@ Tekstfiler er de enkleste å arbeide med, fordi de er kodet med vanlige tegn og 
 Ofte er de kodet slik at vi kan forstå hva de betyr, dersom vi åpner dem i en teksteditor.
 Binærfiler er vilkårlige kombinasjoner av 0 og 1. Uten ytterligere informasjon om filformatet, har vi ikke håp om å forstå innholdet.
 
+Foilen viser binærfilen som heksadesimaler, som er vanlig fordi er mer kompakt.  Heksadesimaler bruker 16 sifre: 0-9 og A-F, slik at fire *bits* blir skrevet sammen som ett tegn med verdier fra 0-15, men det er en digresjon. Poenget er at disse symbolene kan bety hva som helst og de er ikke ment for menneskelige lesere.
+
+---
+
+```csv
+dato,DKK,GBP
+2020-04-01,150.97,12.7385
+2020-04-02,150.47,12.8046
+2020-04-03,150.8,12.8205
+2020-04-06,152.52,12.9698
+2020-04-07,148.57,12.5941
+2020-04-08,149.97,12.728
+2020-04-14,151.59,12.9644
+2020-04-15,153.41,13.1033
+2020-04-16,152.97,13.0956
+2020-04-17,151.26,12.974
+2020-04-20,151.1,12.9029
+```
+
+note:
+CSV-filene som vi skal arbeide mye med, er tekstfiler. De inneholder data som kan være vanskelig eller stundom umulig å forstå uten kontekst, men grunnelementet er bokstaver og tall som gir oss en mulighet.  Søyleoverskriftene forteller oss at vi ser på datoer, danske kroner og britiske pund, og i resten av linjene kan vi ganske riktig kjenne igjen både datoer og desimaltall som kan være valutakurser.
+
+Jeg sier *kan være* for litt kontekst trenger vi for å være sikre, men vi har en god hypotese bare ved å se på filen. Det hadde vi ikke hatt med det samme datasettet i binærformat.
+
 ---
 	
 visa nautilus
-+ csv
-+ jpeg
-+ ipynb
-+ md
-+ katalog
-+ docx
+- csv
+- jpeg
+- ipynb
+- md
+- katalog
+- docx
 
 note:
 Uansett hva slags maskin du har, kan du sikkert finne en filbehandler.
@@ -168,10 +192,10 @@ Det går an å kjenne igjen strukturen, med en liste av celler, der hver celle h
 
 Identifikasjon av filtype
 
-+ Magic bytes
-+ file extension
-+ MIME
-+ Koding i filsystemet
+- Magic bytes
+- file extension
+- MIME
+- Koding i filsystemet
 
 note:
 Maskinen vil ofte prøve å identifisere filtypen og åpne den i et egnet program.
@@ -198,16 +222,18 @@ Dessuten er det slik at en fil først og fremst får et navn når den lagres på
 En fil som overføres over epost eller på andre måter, trenger ikke å ha et navn i det hele tatt.
 
 ---
+<!-- slide template="[[tpl-smalltext]]" -->
 
-| MIME                                                                    | *Extensions*      | Format             |
-| :---------------------------------------------------------------------- | ----------------- | :----------------- |
-| image/jpeg                                                              | jpeg jpg jpe jfif | JFIF               |
-| text/csv           | csv | CSV |
-| text/plain           | txt text pot brf srt | Ren tekst |
-| application/msword                                                      | .doc              | MS-Word            |
-| application/vnd.openxmlformats-officedocument.wordprocessingml.document | docx              | MS-Word            |
-| application/octet-stream                                                | .bin *m.fl.*      | Vilkårleg Binørfil |
-
+| MIME                                                                    | *Extensions*         | Format             |
+| :---------------------------------------------------------------------- | -------------------- | :----------------- |
+| image/jpeg                                                              | jpeg jpg jpe jfif    | JFIF               |
+| text/csv                                                                | csv                  | CSV                |
+| text/plain                                                              | txt text pot brf srt | Ren tekst          |
+| application/msword                                                      | .doc                 | MS-Word            |
+| application/vnd.openxmlformats-officedocument.wordprocessingml.document | docx                 | MS-Word            |
+| application/octet-stream                                                | .bin *m.fl.*         | Vilkårlig Binærfil |
+::: credit
+:::
 
 note:
 Standarden for å definere filtype når filer overføres over nettet, f.eks. på epost eller en vevside, heter MIME.
