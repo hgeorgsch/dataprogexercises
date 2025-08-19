@@ -24,11 +24,21 @@ Det vi skal snakke om her er filer som er lavet for å deles mellom ulike progra
 
 ---
 
+<!-- slide template="[[tpl-quote]]" -->
+
+![[DDR2_ram_mounted]]
+
 | Primærminne | Langtidsminne |
 | ----------- | ------------- |
 | RAM         | Disk          |
 | Variabler   | Filer         |
 
+
+::: credit
+Bilete frå 
+[Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=1403981)
+under GFDL 1.2, 
+:::
 
 note:
 Vi skiller gjerne mellom primærminne og sekundærminne i maskinen.
