@@ -5,8 +5,9 @@
      border: none ;
      margin: 10px ;
   } 
-  .reveal .smalltext  table {
+  .reveal .smalltext table td, th {
      font-size: 14pt ;
+     text-align: center ;
   }
   .reveal .smalltext .credit {
      font-size: 18pt ;
