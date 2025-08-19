@@ -42,8 +42,15 @@ under GFDL 1.2,
 
 note:
 Vi skiller gjerne mellom primærminne og sekundærminne i maskinen.
-Vi har sett hvordan vi kan arbeide med variabler som er lagret i primærminnet, men denne informasjonen er tapt når strømmen går.
-Informasjon som vi skal spare over tid, må lagres i sekundærminnet eller langtidsminnet, og her er informasjonen organisert i filer, og ikke i variabler.
+
+Primærminnet er raskt med plass til mange milliarder tegn.
+Sekundærminnet er tregere, men har gjerne plass til hundrede eller tusen
+ganger mer data.
+
+Vi har sett hvordan vi kan arbeide med variabler som er lagret i primærminnet,
+men denne informasjonen er tapt når strømmen går.
+Informasjon som vi skal spare over tid, må lagres i sekundærminnet eller langtidsminnet,
+og her er informasjonen organisert i filer, og ikke i variabler.
 
 Hver fil er et objekt som vi stort sett behandler samlet som en enhet.
 
@@ -132,23 +139,34 @@ visa nautilus
 note:
 Uansett hva slags maskin du har, kan du sikkert finne en filbehandler.
 Denne maskinen kjører Gnome, og filbehandleren heter nautilus.
-Her vises *hele* filnavnet, som er nyttig informasjon for oss. Det kan tenkes at din maskin skjuler den delen av filnavnet som brukes til å bestemme filtypen.  I så fall vil jeg anbefale å bla i instillingene og se om du kan skru den funksjonen av, slik at du ser hva vi jobber med.
+Her vises *hele* filnavnet, som er nyttig informasjon for oss.
+Det kan tenkes at din maskin skjuler den delen av filnavnet markerer filtypen.
+I så fall vil jeg anbefale å bla i instillingene og se om du kan skru den funksjonen av, slik at du ser hva vi jobber med.
 
-La oss se på CSV-filen først.  Hvis jeg dobbelklikker vil maskinen åpne den i et regneark.
+La oss se på CSV-filen først.  Hvis vi dobbelklikker vil maskinen åpne den i et regneark.
 Den spør om noen konfigureringsalternativ, men det skal vi komme tilbake til.  Hvis vi
 bare klikker videre så ser det vel ok ut.
 
+---
+
+Teksteditor
+
+note:
 Det jeg hadde lyst til å vise er at vi kan åpne samme fil med andre programmer.  Tilbake i filbehandleren kan vi høyreklikke.  Vi ser at førstevalget er å åpne i regnearket, men vi kan også velge *open with* og velge program, f.eks. *Text Editor*.
 Fordi CSV er et tekstformat, kan *Text Editor* vise oss nøyaktig hva som står i filen. 
 Hvis vi ser på en enkelt linje, ser vi at den er én observasjon av en valutakurs.  Linjen inneholder mange variabler, som her er skilt med semikolon.  Navn på valutaen, danske kroner; valutaen som kursen er oppgitt i, norske kroner, tidspunktet 14:15 CET, datoen og selve kursen, samt en del verdier som sikkert er viktige for dem som driver med valutahandel.
 
 Vi leser denne filen som en tabell, der søylene er skilt med semikolon.
 Den første linjen, ser vi, inneholder søyleoverskrifter.
-Dette formatet er så enkelt at det er ganske enkelt å lese det inn i våre egne python-programmer.
-Det er også så utbredd at der finnes ferdiglavede funksjoner til å gjøre det.
+Dette formatet er så enkelt at det er ganske enkelt å lese det inn i våre egne
+python-programmer.
+Det er også så utbredd at der finnes ferdiglavede funksjoner for å gjøre det.
 
-Likevel er det lett å gjøre feil.  Søylene er skilt med semikolon, men CSV står for *comma-separated values*.  Som regel er det komma og ikke semikolon som brukes som skilletegn.
-I denne filen ser vi derimot at komma brukes som desimaltegn i kursen.  Det er vanlig i de fleste land, men som vi vet bruker engelsktalende land punktum i stedet.
+Likevel er det lett å gjøre feil.  
+Søylene er her skilt med semikolon, selv om CSV står for *comma-separated values*.
+Som regel er det komma og ikke semikolon som brukes som skilletegn.
+I denne filen ser vi derimot at komma brukes som desimaltegn i kursen.
+Det er vanlig i de fleste land, men som vi vet bruker engelsktalende land punktum i stedet.
 
 ---
 
@@ -156,15 +174,22 @@ Rekneark
 
 note:
 Hvis vi går tilbake til regnearket, ser vi at vi gjorde en feil.  Her har vi delt opp kronebeløpet og ørebeløpet i hver sin søyle.  Hvis vi lukker ned og prøver en gang til, ser vi hvorfor.
-Fordi ulike skilletegn blir brukt, lar programmet oss velge, og i utgangspunktet bruker både semikolon, komma og tabulator som skilletegn, men vi kan ta vekk de som ikke passer.
+Fordi ulike skilletegn blir brukt, lar programmet oss velge, og i utgangspunktet leses både semikolon, komma og tabulator som skilletegn, men vi kan ta vekk de som ikke passer.
 
-Når vi åpner filen ser vi også at desimalkomma er tolket riktig, og vises som punktum.
+Når vi åpner filen uten komma som skilletegn, ser vi også at desimalkomma er tolket riktig,
+og vises som punktum.
 
-Ulike programmer gjør dette forskjellig.  I Excel kan det være at du ikke får opp konfigurasjonsdialogen når du åpner en CSV-fil fra filbehandleren.  I så fall kan du prøve å starte Excel med en tom fil, og så bruke «åpne» eller «import» i Fil-menyen.
+Ulike programmer gjør dette forskjellig.  I Excel kan det være at du ikke får opp konfigurasjonsdialogen når du åpner en CSV-fil fra filbehandleren.  I så fall kan du prøve å starte Excel med en ny og tom fil, og så bruke «åpne» eller «import» i Fil-menyen.
 
-Poenget mitt er at ved å se hvordan filen ser ut i en teksteditor, er det ganske lett å skjønne hva som er gått galt hvis dataene ikke gir mening i andre programmer.
+Når vi vet å lese og studere filen i en teksteditor, er det ofte lett å skjønne hva
+som er gått galt hvis filen ikke gir mening i andre programmer.  Der er et utall ting
+som kan gå galt.  Noen er lette å forstå, andre forstår man med mer erfaring.
 
 ---
+
+```
+genuttrykk_mus_data.txt
+```
 
 note:
 Vi skal se på en datafil til. Den heter `.txt` og filbehandleren vil helst åpne den i teksteditoren.
@@ -180,6 +205,9 @@ Dette ser helt fælt ut fordi JPEG er et binærformat,
 
 Vi ser bare nogen få strenger innimellom.  JFIF er navnet på filformatet, som inneholder en del metadata i tillegg til selve bildet som er kodet som JPEG.
 
+Hvis du er usikker på om en fil er binær eller i tekstformat, så er der ingen
+fare i åpne den i teksteditoren for å se.  Bare pass på at du ikke lagrer den ...
+
 ---
 
 note:
@@ -189,6 +217,11 @@ Dette er også en tekst-fil, strukturert i et format som heter JSON og som vi sk
 Det går an å kjenne igjen strukturen, med en liste av celler, der hver celle har type, metadata, *input* og stundom *output*.
 
 ---
+
+::: credit
+By YASHAR.Y.A.M.6.T.B - Own work, CC BY-SA 4.0, 
+via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=148507118)
+:::
 
 Identifikasjon av filtype
 
