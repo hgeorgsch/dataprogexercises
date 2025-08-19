@@ -2,7 +2,17 @@
 tags:
   - lecture/video/perspective
 ---
+
+<!-- slide template="[[tpl-quote]]" -->
+
 # Filhandtering
+
+![[1328101950_Network-Folder.png]]
++ Binær- og tekstfiler
+
+::: credit
+By VistaICO.com - VistaICO Toolbar Icons, CC BY 3.0, https://commons.wikimedia.org/w/index.php?curid=18244879
+:::
 
 note:
 Dere er helt sikkert vant til å arbeide med filer.
@@ -19,12 +29,14 @@ Det vi skal snakke om her er filer som er lavet for å deles mellom ulike progra
 | RAM         | Disk          |
 | Variabler   | Filer         |
 
+
 note:
 Vi skiller gjerne mellom primærminne og sekundærminne i maskinen.
 Vi har sett hvordan vi kan arbeide med variabler som er lagret i primærminnet, men denne informasjonen er tapt når strømmen går.
 Informasjon som vi skal spare over tid, må lagres i sekundærminnet eller langtidsminnet, og her er informasjonen organisert i filer, og ikke i variabler.
 
 Hver fil er et objekt som vi stort sett behandler samlet som en enhet.
+
 
 ---
 
@@ -60,6 +72,9 @@ der liker jeg å gå.
 
 ::: rightcredit
 :::
+
+
+
 
 note:
 Filer kommer som sagt i ulike filtyper:
