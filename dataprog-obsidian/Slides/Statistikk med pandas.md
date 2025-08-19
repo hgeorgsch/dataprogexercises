@@ -36,6 +36,23 @@ note:
 
 # *pan*el *da*ta (pandas)
 
+
+| Varegruppe | År | Uke | Vekt (tonn) | Kilopris (kr) |
+| :- | -: | -: | -: | -: |
+| Fersk oppalen laks | 2000 |  1 | 3728 | 30,98 |
+| Fersk oppalen laks | 2000 |  2 | 4054 | 31,12 |
+| Fersk oppalen laks | 2000 |  3 | 4043 | 31,03 |
+| Fersk oppalen laks | 2000 |  4 | 3730 | 30,95 |
+| Fersk oppalen laks | 2000 |  5 | 3831 | 31,30 |
+| Fersk oppalen laks | 2000 |  6 | 4415 | 32,53 |
+| Fersk oppalen laks | 2000 |  7 | 4617 | 32,46 |
+| Fersk oppalen laks | 2000 |  8 | 4463 | 32,19 |
+| Fersk oppalen laks | 2000 |  9 | 4025 | 32,04 |
+| Fersk oppalen laks | 2000 | 10 | 4274 | 32,00 |
+| Fersk oppalen laks | 2000 | 11 | 4797 | 33,29 |
+| Fersk oppalen laks | 2000 | 12 | 5004 | 33,77 |
+
+note:
 + Datasett med *radar* og *søyler*
 	+ datapunkt
 	+ drag eller *features*
