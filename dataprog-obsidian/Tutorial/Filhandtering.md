@@ -931,7 +931,7 @@ samt eurosymbolet.
 
 ---
 
-<!-- slide template="[[tpl-quote-header]]" -->
+<!-- slide template="[[tpl-quote]]" -->
 
 ![[Popular_Emoji_Groups_Noto_Color_Emoji.svg]]
 
@@ -966,7 +966,7 @@ Det går greit side ASCII bare bruker syv *bits* slik at den åttende
 
 ---
 
-<!-- slide template="[[tpl-twocolumn]]" -->
+<!-- slide template="[[tpl-twocolumn-large]]" -->
 
 ::: leftimage
 ![[latin1.png]]
@@ -995,7 +995,7 @@ vanlige tegn i Latin-1 blir udefinert i UTF-8.
 
 ---
 
-<!-- slide template="[[tpl-twocolumn]]" -->
+<!-- slide template="[[tpl-twocolumn-large]]" -->
 
 ::: leftimage
 ![[latin1.png]]
