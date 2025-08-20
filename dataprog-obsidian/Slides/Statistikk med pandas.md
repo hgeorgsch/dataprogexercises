@@ -1,15 +1,10 @@
 ---
-jupytext:
-  text_representation:
-    extension: .md
-    format_name: myst
-    format_version: 0.13
-    jupytext_version: 1.17.0
-kernelspec:
-  display_name: Python 3 (ipykernel)
-  language: python
-  name: python3
+tags:
+  - lecture/video/perspective
+  - statistics
+  - pandas
 ---
+
 
 <!-- slide template="[[tpl-quote-header]]" -->
 
@@ -23,7 +18,7 @@ By Jcwf, CC BY-SA 3.0, via
 :::
 
 note:
-Statistikk er et område hvor programmering er til stor hjelp, særlig hvis man har analyser som skal gjentas på lignende datasett, f.eks. for ulike perioder, eller datasettene er meget store.
+Statistikk er et område hvor programmering er til stor hjelp, særlig hvis man har analyser som skal gjentas mange ganger på lignende datasett, f.eks. for ulike perioder, eller datasettene er meget store og sammensatte.
 
 *pandas* er et av de mest populære bibliotekene for å håndtere store datasett i python og inkluderer god støtte for deskriptiv statistikk.
 
@@ -310,7 +305,14 @@ Out[53]:
 ::: credit
 :::
 
+note:
+Ved siden av indeksering, trenger vi ofte å hente ut delmengder av datasettet etter bestemte kriterier. Jeg sa innledningsvis at eksportdatasettet vårt ikke egentlig er paneldata. Vi har forskjellige observasjoner på samme tidspunkt.
+
+For å gå videre med et rent og pent eksempel på paneldata, kan vi hente ut et datasett for bare én varegruppe. Igjen bruker vi klammeparenteser, men i stedet for en indeks, gir vi et kriterium, f.eks. at varegruppen i datasettet må være lik «fersk oppalen laks».
+
 ---
+
+# Datatypar
 
 ```
 In [57]: df.dtypes
@@ -323,8 +325,10 @@ dtype: object
 
 ```
 
-
 note: 
+Hver søyle i en  *data frame*  har en datatype.  Til forskjell fra lister, tillater ikke pandas oss å blande ulike datatyper i samme søyle eller serie. Dette gjør at vi alltid kan behandle hele søyler på en konsistent måte. Vi kan bruke `dtypes`-attributten til å se hvilke datatyper søylene har.
+
+Det er de numeriske søylene som er interessant i statistikk.  I eksportdatasettet vårt er det volumet i tonn og kiloprisen i kroner. Ukenummeret er en streng som samler år og uke, og den er vanskelig å regne på.  Vi kan bruke indeksen, som forsåvidt nummererer ukene kronologisk i vårt tilfelle.  Det er mulig å skille år og uke i ukestrengen, men det får vi ta en anden gang.
 
 ---
 
@@ -348,52 +352,9 @@ max    29238.000000   123.280000
 ::: credit
 :::
 
----
-
-## Utdjupin
-
-
-* Når vi behandler store mengder data og data fra ulike kilder trenger vi å ha kontroll på hvordan dataen vår representeres internt i datamaskinen
-```python
-data = np.array([..... ], dtype=«numpy datatype»)
-```
-* `numpy` har flere ulike datatyper vi kan bruke
-
-
-| **Type**       | **Name**     | **Description**                                                   |
-| -------------- | ------------ | ----------------------------------------------------------------- |
-| Integer        | `int8`       | Integer (-128 to 127)                                             |
-| Integer        | `int16`      | Integer (-32,768 to 32,767)                                       |
-| Integer        | `int32`      | Integer (-2,147,483,648 to 2,147,483,647)                         |
-| Integer        | `int64`      | Integer (-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807) |
-| Unsigned Int   | `uint8`      | Unsigned integer (0 to 255)                                       |
-| Unsigned Int   | `uint16`     | Unsigned integer (0 to 65,535)                                    |
-| Unsigned Int   | `uint32`     | Unsigned integer (0 to 4,294,967,295)                             |
-| Unsigned Int   | `uint64`     | Unsigned integer (0 to 18,446,744,073,709,551,615)                |
-| Floating Point | `float16`    | Half precision floating point                                     |
-| Floating Point | `float32`    | Single precision floating point                                   |
-| Floating Point | `float64`    | Double precision floating point                                   |
-| Complex Number | `complex64`  | Complex number (real and imaginary as `float32`)                  |
-| Complex Number | `complex128` | Complex number (real and imaginary as `float64`)                  |
-| Boolean        | `bool_`      | Boolean (True or False)                                           |
-| String         | `string_`    | Fixed-size string data                                            |
-| Unicode String | `unicode_`   | Fixed-size Unicode string data                                    |
-
----
-
-### DataFrame-data
-* Merk at dersom vi forandrer datavariabelen, forandres også pandas serien
-* Vi sier at dataframen inneholder «refererer» til data som er lagret et annet sted
-* Dersom dette ikke er ønskelig kan vi bruke `copy=True` når vi lager serien
-* Av og til vil vi ha en kopi som ikke forstyrrer «datakilden»
-* Av og til vil vi ikke gjøre det slik -- det er raskere og bruker mindre minne
-
-```{code-cell} ipython3
-ddataserie = pd.Series(data, name=navn, index=indeks, copy=True)
-print(dataserie)
-data[2]=66
-dataserie
-```
+note:
+Den enkleste måten å få ut en statistisk oppsummering av datasettet er `describe()`-metoden.
+Vi får en oppsummering av alle de numeriske søylene, med antall rader, gjennomsnitt eller *mean*, standardavvik eller std for *standard deviation*, minimum, maksimum, samt 25de, 50de og 75de persentil.
 
 ---
 
@@ -506,4 +467,20 @@ df_land.insert(2,"arbeidsledighet", ["1.0%","4.9%","3.2%","1.6%","12.5%" ])
 df_land.loc["DE", "populasjonsstørrelse"]  = 83
 df_land.loc["US"] = ["USA", 300, "50%"]
 df_land
+```
+
+---
+
+### DataFrame-data
+* Merk at dersom vi forandrer datavariabelen, forandres også pandas serien
+* Vi sier at dataframen inneholder «refererer» til data som er lagret et annet sted
+* Dersom dette ikke er ønskelig kan vi bruke `copy=True` når vi lager serien
+* Av og til vil vi ha en kopi som ikke forstyrrer «datakilden»
+* Av og til vil vi ikke gjøre det slik -- det er raskere og bruker mindre minne
+
+```{code-cell} ipython3
+ddataserie = pd.Series(data, name=navn, index=indeks, copy=True)
+print(dataserie)
+data[2]=66
+dataserie
 ```
