@@ -312,152 +312,44 @@ Out[53]:
 
 ---
 
-## Pandas DataFrame
-
-* `data` variabelen vi fyller dataframen vår med kan ha flere former:
- - 2d-array
- - dictionary -> `{col0: [data0], col1: [data1], ...}`
- - pandas Series
-
-```{code-cell} ipython3
----
-slideshow:
-  slide_type: subslide
----
-import pandas as pd
-import numpy as np
-data1 = np.array([[1,2,3],
-                  [4,5,6],
-                  [7,8,9]])
-print(data1)
-df1 = pd.DataFrame(data1, columns=["høyde", "vekt", "omkrets"], index=range(2,5))
-df1
 ```
+In [57]: df.dtypes
+Out[57]: 
+varegruppe     object
+uke            object
+Tonn            int64
+kr/kg         float64
+dtype: object
 
-```{code-cell} ipython3
----
-slideshow:
-  slide_type: subslide
----
-data2 = {"BNP": [1,2,3,4], "levealder": [88,88,99,102], 
-         "styresett": ["demokrati", "diktatur", "demokrati", "monarki"]}
-df2 = pd.DataFrame(data2, index=["Norge", "Uganda", "Sverige", "England"])
-df2
-```
-
-```{code-cell} ipython3
----
-slideshow:
-  slide_type: subslide
----
-indeks = ["BNP", "levealder", "styresett"]
-serie1 = pd.Series([1,88,"demokrati"], name="Norge", index =indeks )
-serie2 = pd.Series([2,88,"diktatur"], name="UGanda", index=indeks)
-df3 = pd.DataFrame([serie1, serie2])
-df3
-```
-
----
-
-## Manipulere Frame/Series
-
-Vi vil kanskje kunne trenge å:
-* Forandre indeks, navn på serie, eller navn på kolonner
-* Legge til rad, eller kolonne til dataframe
-* Bytte om på rad/kolonne
-* Fjerne rad eller kolonne
-
-```{code-cell} ipython3
----
-slideshow:
-  slide_type: subslide
----
-data_land = ["England", "Norge", "Sverige"]
-land = pd.Series(data_land)
-
-#Forandre/hente navn på serie med min_serie.name
-land.name = "land"
-
-indeks = ["GB", "NO", "SE"]
-
-#Hent eller sett en series index med min_sere.index
-land.index= indeks
-land["NO"] = "Danmark"
-
-#land.index[1] = "DK" Vi må skifte hele indeksen
-indeks = ["GB", "DK", "SE"]
-land.index = indeks
-
-#Vi legger til nye element på samme måte som i dictionaries
-land["NOO"]= "Norge" # Legg til nytt element.
-
-land = land.rename({"NOO": "NU"}) #Skift navn 
-#Merk at .rename() ikke skifter navnet, men returnerer en ny Serie med skiftet
-land.rename({"NU": "NO"}, inplace=True) #inplace=True gjør "fikser" på dette
-land
-```
-
-```{code-cell} ipython3
----
-slideshow:
-  slide_type: subslide
----
-data_innbyggere = [56, 6, 10]
-land_innbyggere = pd.Series(data_innbyggere, name="innbyggere", index=indeks)
-
-df_land = pd.DataFrame([land, land_innbyggere])
-df_land = df_land.T # Bytter om på kolonner/rader (Transponerer)
-df_land = df_land.rename(columns=({'land': 'navn'})) #Nytt navn til kolonne
-df_land.loc['DK', 'navn'] = "Island" #Skifter landenavn til island
-df_land.loc['DK', 'innbyggere'] = 0.4 #antall innbyggere til 0.4
-df_land.rename(index={'DK': 'IS'}, inplace=True) #Nytt navn på indeks "DK"
-df_land.loc["NO", "innbyggere"] = 5 # Oppdaterer data
-
-df_land.loc["DK"] = ["Danmark", 6] #Legg til ny rad
-df_land.loc["DE"] = {"navn": "Tyskland"} #Legg til rad med manglende data
-df_land.loc["DE", "innbyggere"] = 80 #Oppdater data
-df_land
-```
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-### Oppg 5:
-Ta utgangpunkt i tabellen over for å lage tabellen under
-![oppg5](img/df_oppg5v2.png)
-
-les [her](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.insert.html) for å finne ut hvordan du legger til en kolonne med `insert`
-
-```{code-cell} ipython3
----
-slideshow:
-  slide_type: subslide
----
-df_land.rename(columns=({"innbyggere": "populasjonsstørrelse"}), inplace=True)
-df_land.drop(index=['NO'], inplace=True)
-df_land.insert(2,"arbeidsledighet", ["1.0%","4.9%","3.2%","1.6%","12.5%" ])
-df_land.loc["DE", "populasjonsstørrelse"]  = 83
-df_land.loc["US"] = ["USA", 300, "50%"]
-df_land
-```
-
----
-
-### Oppg 6
-Hva er gjennomsnittlig arbeidsledighet til landene over?
-
-```{code-cell} ipython3
----
-slideshow:
-  slide_type: subslide
----
-arbeids_ledighet = df_land["arbeidsledighet"]
-arbeidsledighet_formatert = [float(s[:-1]) for s in arbeids_ledighet]
-gjennomsnitt = sum(arbeidsledighet_formatert)/len(arbeidsledighet_formatert)
-print(f"Gjennomsnittlig arbeidsledighet er {round(gjennomsnitt,1)}%")
 ```
 
 
+note: 
+
 ---
+
+<!-- slide template="[[tpl-header]]" -->
+# Deskriptiv statistikk
+
+```
+In [55]: df.describe()
+Out[55]: 
+               Tonn        kr/kg
+count   2590.000000  2590.000000
+mean    6782.083398    44.835591
+std     7373.273168    21.268257
+min       60.000000    17.460000
+25%      565.750000    27.722500
+50%     1717.500000    39.005000
+75%    13357.750000    58.517500
+max    29238.000000   123.280000
+```
+
+::: credit
+:::
+
+---
+
 ## Utdjupin
 
 
@@ -487,7 +379,7 @@ data = np.array([..... ], dtype=«numpy datatype»)
 | String         | `string_`    | Fixed-size string data                                            |
 | Unicode String | `unicode_`   | Fixed-size Unicode string data                                    |
 
-+++ {"editable": true, "slideshow": {"slide_type": "subslide"}}
+---
 
 ### DataFrame-data
 * Merk at dersom vi forandrer datavariabelen, forandres også pandas serien
@@ -497,53 +389,42 @@ data = np.array([..... ], dtype=«numpy datatype»)
 * Av og til vil vi ikke gjøre det slik -- det er raskere og bruker mindre minne
 
 ```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: fragment
----
-dataserie = pd.Series(data, name=navn, index=indeks, copy=True)
+ddataserie = pd.Series(data, name=navn, index=indeks, copy=True)
 print(dataserie)
 data[2]=66
 dataserie
 ```
 
-+++ {"editable": true, "slideshow": {"slide_type": "subslide"}}
+---
 
 
-## Metoder
-
-* Pandas Series objekter har flere nyttige *metoder*
-
-+++ {"editable": true, "slideshow": {"slide_type": "fragment"}}
-
-| **Metode**            | **Beskrivelse**                                                                  |
-|-----------------------|----------------------------------------------------------------------------------|
-| `unique()`            | Returnerer unike verdier i Series.                                                |
-| `value_counts()`      | Returnerer antall forekomster av unike verdier i Series.                          |
-| `describe()`          | Genererer beskrivende statistikk som antall, gjennomsnitt, std, min og maks.      |
-| `sum()`               | Returnerer summen av elementene i Series.                                         |
-| `mean()`              | Returnerer gjennomsnittet av elementene i Series.                                 |
-| `median()`            | Returnerer medianen av elementene i Series.                                       |
-| `min()`               | Returnerer minimumsverdien i Series.                                              |
-| `max()`               | Returnerer maksimumsverdien i Series.                                             |
-| `std()`               | Returnerer standardavviket til Series.                                            |
-| `sort_values()`       | Sorterer Series etter verdiene.                                                   |
-| `sort_index()`        | Sorterer Series etter indeksen.                                                   |
-| `apply(func)`         | Anvender en funksjon element for element på Series.                               |
-| `map(func)`           | Mapper verdier i Series ved hjelp av funksjon eller dictionary.                       |
-| `dropna()`            | Fjerner `NaN`-verdier fra Series.                                                 |
-| `fillna(value)`       | Fyller inn `NaN`-verdier med en spesifisert verdi.                                |
-| `astype(dtype)`       | Endrer datatypen til Series til spesifisert datatype.                             |
-| `clip(lower, upper)`  | Begrenser verdier til et spesifisert område (nedre og øvre grenser).              |
-| `between(left, right)`| Returnerer True for verdier mellom spesifiserte grenser.                          |
-| `shift(periods)`      | Skifter verdiene med et spesifisert antall perioder.                             |
-| `cumsum()`            | Returnerer den kumulative summen av elementene i Series.                          |
-| `cumprod()`           | Returnerer det kumulative produktet av elementene i Series.                       |
-| `rolling(window)`     | Gir glidende beregninger med et gitt vindu                                          |
-| `expanding()`         | Gir ekspanderende beregninger (f.eks. kumulative beregninger).               |
-| `resample(rule)`      | Resampler tidsseriedata i henhold til en spesifisert frekvens.                    |
-| `plot()`              | Plotter dataen i Series ved hjelp av Matplotlib.                                  |
+| **Metode**             | **Beskrivelse**                                                              |
+| ---------------------- | ---------------------------------------------------------------------------- |
+| `unique()`             | Returnerer unike verdier i Series.                                           |
+| `value_counts()`       | Returnerer antall forekomster av unike verdier i Series.                     |
+| `describe()`           | Genererer beskrivende statistikk som antall, gjennomsnitt, std, min og maks. |
+| `sum()`                | Returnerer summen av elementene i Series.                                    |
+| `mean()`               | Returnerer gjennomsnittet av elementene i Series.                            |
+| `median()`             | Returnerer medianen av elementene i Series.                                  |
+| `min()`                | Returnerer minimumsverdien i Series.                                         |
+| `max()`                | Returnerer maksimumsverdien i Series.                                        |
+| `std()`                | Returnerer standardavviket til Series.                                       |
+| `sort_values()`        | Sorterer Series etter verdiene.                                              |
+| `sort_index()`         | Sorterer Series etter indeksen.                                              |
+| `apply(func)`          | Anvender en funksjon element for element på Series.                          |
+| `map(func)`            | Mapper verdier i Series ved hjelp av funksjon eller dictionary.              |
+| `dropna()`             | Fjerner `NaN`-verdier fra Series.                                            |
+| `fillna(value)`        | Fyller inn `NaN`-verdier med en spesifisert verdi.                           |
+| `astype(dtype)`        | Endrer datatypen til Series til spesifisert datatype.                        |
+| `clip(lower, upper)`   | Begrenser verdier til et spesifisert område (nedre og øvre grenser).         |
+| `between(left, right)` | Returnerer True for verdier mellom spesifiserte grenser.                     |
+| `shift(periods)`       | Skifter verdiene med et spesifisert antall perioder.                         |
+| `cumsum()`             | Returnerer den kumulative summen av elementene i Series.                     |
+| `cumprod()`            | Returnerer det kumulative produktet av elementene i Series.                  |
+| `rolling(window)`      | Gir glidende beregninger med et gitt vindu                                   |
+| `expanding()`          | Gir ekspanderende beregninger (f.eks. kumulative beregninger).               |
+| `resample(rule)`       | Resampler tidsseriedata i henhold til en spesifisert frekvens.               |
+| `plot()`               | Plotter dataen i Series ved hjelp av Matplotlib.                             |
 
 ---
 
@@ -608,3 +489,21 @@ dataserie = pd.Series(data, name=navn, index=indeks, copy=True)
 dataserie
 ```
 
+
+
+---
+
+### Oppg 5:
+Ta utgangpunkt i tabellen over for å lage tabellen under
+![oppg5](img/df_oppg5v2.png)
+
+les [her](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.insert.html) for å finne ut hvordan du legger til en kolonne med `insert`
+
+```{code-cell} ipython3
+df_land.rename(columns=({"innbyggere": "populasjonsstørrelse"}), inplace=True)
+df_land.drop(index=['NO'], inplace=True)
+df_land.insert(2,"arbeidsledighet", ["1.0%","4.9%","3.2%","1.6%","12.5%" ])
+df_land.loc["DE", "populasjonsstørrelse"]  = 83
+df_land.loc["US"] = ["USA", 300, "50%"]
+df_land
+```
