@@ -17,6 +17,12 @@
      font-size: 12pt ;
      // background: #6096d0 ;
   }
+  .reveal .quoteslideheader code {
+     font-size: 10pt ;
+     width: 800px ;
+     height: 600px ;
+     line-height: 1.1 ;
+  }
   
   .reveal .quoteslideheader .credit {
      font-size: 18pt ;
