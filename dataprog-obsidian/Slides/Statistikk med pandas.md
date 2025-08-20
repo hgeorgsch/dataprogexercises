@@ -284,14 +284,35 @@ men fordi pandas ønsker å gjøre det enkelt å bruke både tallindeks og *labe
 å indeksere både rader og søyler, trengs disse ekstra variantene med `loc` og `iloc`.
 
 ---
+<!-- slide template="[[tpl-smalltext]]" -->
+# Filtrering
+```
+In [52]: df2 = df[ df["varegruppe"] == "Fersk oppalen laks" ]
+
+In [53]: df2
+Out[53]: 
+              varegruppe      uke   Tonn  kr/kg
+0     Fersk oppalen laks  2000U01   3728  30.98
+1     Fersk oppalen laks  2000U02   4054  31.12
+2     Fersk oppalen laks  2000U03   4043  31.03
+3     Fersk oppalen laks  2000U04   3730  30.95
+4     Fersk oppalen laks  2000U05   3831  31.30
+...                  ...      ...    ...    ...
+1290  Fersk oppalen laks  2024U39  29238  73.23
+1291  Fersk oppalen laks  2024U40  26543  69.70
+1292  Fersk oppalen laks  2024U41  25180  72.76
+1293  Fersk oppalen laks  2024U42  25561  76.02
+1294  Fersk oppalen laks  2024U43  24910  77.59
+
+[1295 rows x 4 columns]
+```
+
+::: credit
+:::
+
+---
 
 ## Pandas DataFrame
-
-* Vi er som regel interessert i å jobbe med DataFrames, en samling av serier
-* Vi lager de med `pd.DataFrames(data, index=None, columns=None, dtype=None, copy=None)`
-* Vi har de samme feltene som serier, men dataen er nå *todimensjonal*
-
-+++ {"slideshow": {"slide_type": "subslide"}}
 
 * `data` variabelen vi fyller dataframen vår med kan ha flere former:
  - 2d-array
@@ -336,78 +357,7 @@ df3 = pd.DataFrame([serie1, serie2])
 df3
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
-### Oppgave 3:
-
-
-Under har vi et lite pandas dataframe.
-![oppg1](img/dataframe_oppg3.png)
-
-Prøv å lage tabellen ved å bruke metodene over
-
-```{code-cell} ipython3
 ---
-slideshow:
-  slide_type: subslide
----
-testdat = {"Arbeidsledighet": ["2.0%","2.3%","2.6%","3.1%"],
-           "Konkurser": [100,120,250,180],
-           "BNP": [2e6,3e6,1.8e6,1.5e6]
-          }
-testdf = pd.DataFrame(testdat, index=range(2010,2014))
-testdf
-```
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-## Slå opp i Frame/Series
-
-### Series
-* Vi kan slå opp verdi nr. $i$ med serie[$i$]
-* Eller vi kan bruke indeks: serie["indeks"]
-
-### Dataframes
-* Vi får tak i kolonne med `df["kolonnenavn"]`
-* Vi får tak i rad med df.loc["rad_indeks"]
-* Vi kan få tak i rad med df.iloc[i] hvor i er mellom 0 og antall rader i tabellen
-* Vi får tak i et datapunkt med df.loc["rad", "kolonne"]
-
-```{code-cell} ipython3
----
-slideshow:
-  slide_type: subslide
----
-print(f"Levealder i {serie1.name} er {serie1['levealder']}")
-print(f"Levealder i {serie2.name} er {serie2[1]}")
-```
-
-```{code-cell} ipython3
----
-slideshow:
-  slide_type: subslide
----
-#kolonne BNP:
-print("Kolonne 'BNP':\n", df2['BNP'])
-
-#Rad med indeks
-print("\nRad 'Sverige':\n", df2.loc['Sverige'])
-
-#Rad med radnummer
-print("\nRad nr. 3:\n", df2.iloc[2])
-
-#Levalder i England:
-print("\nLevealder i England er:", df2.loc["England", "levealder"])
-df2
-```
-
-+++ {"slideshow": {"slide_type": "slide"}}
-
-### Oppg 4
-
-Se at du kan slå opp fra oppgave 3 og hente ut en gitt kolonne, rad eller datapunkt
-
-+++ {"slideshow": {"slide_type": "slide"}}
 
 ## Manipulere Frame/Series
 
@@ -506,9 +456,6 @@ gjennomsnitt = sum(arbeidsledighet_formatert)/len(arbeidsledighet_formatert)
 print(f"Gjennomsnittlig arbeidsledighet er {round(gjennomsnitt,1)}%")
 ```
 
-```{code-cell} ipython3
-
-```
 
 ---
 ## Utdjupin
@@ -564,52 +511,14 @@ dataserie
 +++ {"editable": true, "slideshow": {"slide_type": "subslide"}}
 
 
-
-## Attributter
-* Pandas Series objekter har ulike *atributter*
-
-+++ {"editable": true, "slideshow": {"slide_type": "fragment"}}
-
-| **Attribute**      | **Description**                                                                 |
-|--------------------|---------------------------------------------------------------------------------|
-| `index`            | The index (labels) of the Series.                                               |
-| `values`           | The values (data) of the Series as a NumPy array.                               |
-| `name`             | The name of the Series.                                                         |
-| `dtype`            | The data type of the values in the Series.                                      |
-| `size`             | The number of elements in the Series.                                           |
-| `shape`            | The dimensionality of the Series (always a single dimension).                   |
-| `empty`            | Returns `True` if the Series is empty (i.e., has no elements).                  |
-| `nbytes`           | The total number of bytes consumed by the Series' elements.                     |
-| `hasnans`          | Returns `True` if there are any `NaN` values in the Series.                     |
-| `is_unique`        | Returns `True` if all values in the Series are unique.                          |
-| `is_monotonic`     | Returns `True` if the Series is sorted in increasing order.                     |
-| `str`              | Provides access to string methods (if the Series contains strings).             |
-| `dt`               | Provides access to datetime methods (if the Series contains datetime objects).  |
-| `T`                | The transpose of the Series (no effect for 1D data, but included for consistency). |
-
-```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: subslide
----
-print(dataserie.name)
-print(dataserie.values)
-print(dataserie.index)
-print(dataserie.nbytes)
-```
-
-+++ {"editable": true, "slideshow": {"slide_type": "subslide"}}
-
 ## Metoder
+
 * Pandas Series objekter har flere nyttige *metoder*
 
 +++ {"editable": true, "slideshow": {"slide_type": "fragment"}}
 
 | **Metode**            | **Beskrivelse**                                                                  |
 |-----------------------|----------------------------------------------------------------------------------|
-| `head(n)`             | Returnerer de første `n` elementene i Series (standard er 5).                     |
-| `tail(n)`             | Returnerer de siste `n` elementene i Series (standard er 5).                      |
 | `unique()`            | Returnerer unike verdier i Series.                                                |
 | `value_counts()`      | Returnerer antall forekomster av unike verdier i Series.                          |
 | `describe()`          | Genererer beskrivende statistikk som antall, gjennomsnitt, std, min og maks.      |
@@ -635,17 +544,6 @@ print(dataserie.nbytes)
 | `expanding()`         | Gir ekspanderende beregninger (f.eks. kumulative beregninger).               |
 | `resample(rule)`      | Resampler tidsseriedata i henhold til en spesifisert frekvens.                    |
 | `plot()`              | Plotter dataen i Series ved hjelp av Matplotlib.                                  |
-
-```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: subslide
----
-print(dataserie.describe())
-dataserie.dropna()
-```
-
 
 ---
 
