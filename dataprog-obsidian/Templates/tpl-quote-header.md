@@ -8,6 +8,15 @@
      font-size: 32pt ;
      text-transform: none;
   }
+  .reveal .quoteslideheader table th {
+     font-size: 12pt ;
+     // color: #6096d0 ;
+     background: #404040 ;
+  }
+  .reveal .quoteslideheader table td {
+     font-size: 12pt ;
+     // background: #6096d0 ;
+  }
   
   .reveal .quoteslideheader .credit {
      font-size: 18pt ;
