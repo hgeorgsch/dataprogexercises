@@ -76,206 +76,215 @@ Ordbruken varierer en del mellom fagfelt og anvendelsesdomener. For å unngå fo
 
 ```python
 import pandas as pd
+df= pd.read_csv("dataset.csv",
+                encoding="utf-8",
+                sep="\t",
+                decimal=",")
 ```
 
 note:
-* Vi importerer pandas med som regel med `import pandas as pd`
-* Pandas er bygd på numpy, så man trenger ofte også å bruke numpy
-
----
-	
-* Vi bruker pandas til å laste inn eller lage datasett
-    - Rydde opp i data
-    - Få det over på annet format
-    - Gjøre statistikk
-    - Plotte data
-    
-
+Vi skal stort sett arbeide med datasett som vi importerter fra andre kilder.
+Når vi laster CSV-filer i pandas med `read_csv`-funksjonen kan vi oppgi hvordan filen er formatter. 
+Her sier vi at tegnkodingen er UTF-8, at skilletegnet mellom søylene er tabulator, og at komma brukes som desimaltegn. Hvis dette utelates brukes UTF-8, komma som skilletegn og punktum som desimaltegn.
 
 ---
 
-```{code-cell} ipython3
-sdata = {"frukt": ["epler", "pærer", "moreller", "rips"], "produksjon": [12,23,1,9], "subsidiert": [True, False, True, False], "pris": [10, 25, 40, 5]}
-df_bilde = pd.DataFrame(sdata)
-df_bilde
+<!-- slide template="[[tpl-smalltext]]" -->
+
+
+```
+In [2]: df = pd.read_csv("laksedata.csv",sep=";")
+
+In [3]: print(df)
+               varegruppe      uke  Vekt (tonn)  Kilopris (kr)
+0      Fersk oppalen laks  2000U01         3728          30.98
+1      Fersk oppalen laks  2000U02         4054          31.12
+2      Fersk oppalen laks  2000U03         4043          31.03
+3      Fersk oppalen laks  2000U04         3730          30.95
+4      Fersk oppalen laks  2000U05         3831          31.30
+...                   ...      ...          ...            ...
+2585  Frosen oppalen laks  2024U39          578          71.97
+2586  Frosen oppalen laks  2024U40          987          78.32
+2587  Frosen oppalen laks  2024U41          780          73.69
+2588  Frosen oppalen laks  2024U42          793          81.90
+2589  Frosen oppalen laks  2024U43          677          71.49
+
+[2590 rows x 4 columns]
 ```
 
-```{code-cell} ipython3
+::: credit
+:::
+
+note:
+Resultatet av `read_csv` kalles en *data frame*. I tillegg til rådataene fra filen, inneholder en *data frame* gjerne en del metadata. Bl.a. vil pandas indeksere både rekker og søyler.  Når vi viser vår *data frame* med `print`, ser vi at radene har fått nummer. Søylene hadde overskrifter som vises som indeks.
+
+Vi vil stort sett bruke numerisk indeks på radene og *label*-indeks på søylene, men dette er ingen begrensning. Søylene har en numerisk indeks, som vi kan bruke, selv om den normalt ikke vises når der finnes en *label*. Vi kan også definere *labels* på rekkene, selv om det sjelden er praktisk med tusenvis av rekker.
+
+Med pandas kan vi manipulere våre *data frames* på mange ulike måter.  Vi kan ta utsnitt av datasettet, definere nye søyler, sette sammen datasett, finne gjennomsnitt og standardavvik og tegne plott.
+
 ---
-slideshow:
-  slide_type: skip
----
-sdata2 = { "produksjon": [12,23,1,9], "subsidiert": [True, False, True, False], "pris": [10, 25, 40, 5]}
-df_bilde2 = pd.DataFrame(sdata2, index = ["epler", "pærer", "moreller", "rips"])
-df_bilde2
+
+<!-- slide template="[[tpl-smalltext]]" -->
+
+# Indeksering
+
+```python
+In [7]: col = df["kr/kg"]
+
+In [8]: col
+Out[8]: 
+0       30.98
+1       31.12
+2       31.03
+3       30.95
+4       31.30
+        ...  
+2585    71.97
+2586    78.32
+2587    73.69
+2588    81.90
+2589    71.49
+Name: kr/kg, Length: 2590, dtype: float64
+
+In [9]: type(col)
+Out[9]: pandas.core.series.Series
+
 ```
 
----
+::: credit
+:::
+note:
+Indeksering er kritisk for å hente utsnitt av data.  Den enkleste formen for indeksering er den samme som for *dictionaries*, med klamme-parenteser.
+Vi bruker klammeparenteser og *label*.
 
-## Data Frame og Series
+Resultatet er en ny datatype, *Series*, som er den andre sentrale typen i pandas-verden, ved side av *DataFrame*.
 
-* Pandas er bygd opp av objekter kalt *DataFrames* og *Series*
-* Vi jobber for det meste med DataFrames
-* DataFrames likner litt på hvordan man strukturerer data i feks excel
-* De består av rader, og kolonner kalt *Series*
-<img src="img/dfnavn1.jpg" width="550">
+Der *DataFrame* er en todimensjonal tabell, er *Series* éndimensjonal som en liste. Hvis vi bare observerer én variabel, kan det være naturlig å bruke *Series*. Når vi observerer flere variabler, trenger vi *DataFrame*.
 
-
-* Hvert rad har en index
-* Ut av boksen har radene indeks med heltall 0,1,2,3...
-* Man kan også ha navn på radene (indeks er liste med strenger) slik som kolonnenavnene
-![dataframe_indeksnavn](img/dfnavn2.png)
+Til forskjell fra vanlige lister inneholder derimot *Series* metadata, og vi ser at indeksene vises med `print`, som de gjør for *DataFrame*.
 
 ---
-## Pandas Series
 
-* Pandas series er som kolonnene i en tabell
-* Dataserier har en *index*, et *navn* og *data* av en eller annen datatype (`dtype`)
-* Vi lager serier med `pd.Series( ... )`
+<!-- slide template="[[tpl-smalltext]]" -->
 
-```{code-cell} ipython3
----
-slideshow:
-  slide_type: fragment
----
-dataserie = pd.Series([1,2,3,4,5])
-dataserie_2 = pd.Series(["Bil", "Båt", "Sykkel", "Tog", "Fly"])
-dataserie
+# Indeksering
+
+```python
+In [10]: df1 = df[["Tonn","kr/kg"]]
+
+In [11]: df1
+Out[11]: 
+      Tonn  kr/kg
+0     3728  30.98
+1     4054  31.12
+2     4043  31.03
+3     3730  30.95
+4     3831  31.30
+...    ...    ...
+2585   578  71.97
+2586   987  78.32
+2587   780  73.69
+2588   793  81.90
+2589   677  71.49
+
+[2590 rows x 2 columns]
+
+In [12]: type(df)
+Out[12]: pandas.core.frame.DataFrame
 ```
 
+::: credit
+:::
+note:
+Vi kan ogzå be om flere søyler samtidig, ved å oppgi en liste med *labels*.  Det er meget nyttig når vi har et overdrevent komplekst datasett, og bare noen søyler er interessante.
 
-* Her mangler vi navn på serien
-
-* Vi kan navngi serien ved å gi *keyword* argumentet "name"
-* `pd.Series(data, name="Navnet")`
-
-```{code-cell} ipython3
 ---
-slideshow:
-  slide_type: fragment
----
-dataserie = pd.Series([1,2,3,4,5], name="Heltall")
-dataserie
+<!-- slide template="[[tpl-smalltext]]" -->
+
+# .loc og .iloc
+
+```
+In [38]: df.loc[2]
+Out[38]: 
+varegruppe    Fersk oppalen laks
+uke                      2000U03
+Tonn                        4043
+kr/kg                      31.03
+Name: 2, dtype: object
+
+In [39]: df.iloc[2]
+Out[39]: 
+varegruppe    Fersk oppalen laks
+uke                      2000U03
+Tonn                        4043
+kr/kg                      31.03
+Name: 2, dtype: object
 ```
 
----
+::: credit
+:::
 
-* Vi kan gi en annen indeks med *keyword* argumentet "index"
-* `pd.Series(data, name="Navnet", index = [ .... ])`
+note:
+Når vi skal indeksere på rader, bruker vi notasjonen `loc` og `iloc`. De er ganske like, men `iloc` er ment for numerisk indeksering og `loc` for *labels*.
 
-```{code-cell} ipython3
+Vi skal merke oss at `.loc` og `.iloc` ikke er funksjoner.
+De følges av klammeparenteser som for anden indeksering, og
+ikke av runde paranteser som funksjoner bruker.
+
 ---
-slideshow:
-  slide_type: fragment
----
-dataserie = pd.Series([1,2,3,4,5], name="Heltall", index=["en", "to", "tre", "fire", "fem"])
-dataserie
+<!-- slide template="[[tpl-smalltext]]" -->
+
+# Slices
+
+```
+In [40]: df.iloc[2:4]
+Out[40]: 
+           varegruppe      uke  Tonn  kr/kg
+2  Fersk oppalen laks  2000U03  4043  31.03
+3  Fersk oppalen laks  2000U04  3730  30.95
+
+In [41]: df.loc[2:4]
+Out[41]: 
+           varegruppe      uke  Tonn  kr/kg
+2  Fersk oppalen laks  2000U03  4043  31.03
+3  Fersk oppalen laks  2000U04  3730  30.95
+4  Fersk oppalen laks  2000U05  3831  31.30
+
+In [42]: 
 ```
 
----
+::: credit
+:::
 
-* Tidligere eksempel gir lister til `pd.Series()`
-* Det kan være lurt å lage variabler med listene som skal bruke
-* Når det passer seg bør listene være numpy *arrays*
+note:
+Ofte indekserer vi får å ta et utvalg av rader, det som gjerne kalles
+*slicing*.  Den enkleste formen for dette er ved å oppgi et spenn av
+indekser med kolon, slik som vi også kan gjøre med lister.
 
-```{code-cell} ipython3
----
-slideshow:
-  slide_type: fragment
----
-data = np.array([1,2,3,4,5], dtype="int64")
-navn = "heltall"
-indeks = np.array(["en", "to", "tre", "fire", "fem"])
-dataserie = pd.Series(data, name=navn, index=indeks)
-#data[2] = 55
-dataserie
-```
+Her oppfører `loc` og `iloc` seg forskjellig.  `loc` tar med sluttindeksen
+i spennet, mens `iloc` gjør det ikke.
 
 ---
 
-* Merk at dersom vi forandrer datavariabelen, forandres også pandas serien
-* Dersom dette ikke er ønskelig kan vi bruke `copy=True` når vi lager serien
++ `[]` - søyler
++ `.loc[]` - rader
++ `.iloc[]` - rader
++ `.loc[2:10,"Tonn"]`
 
-```{code-cell} ipython3
----
-slideshow:
-  slide_type: fragment
----
-dataserie = pd.Series(data, name=navn, index=indeks, copy=True)
-print(dataserie)
-data[2]=66
-dataserie
-```
+note:
+Beklager.  Dette blir lett rotete, og det kommer til å bli litt 
+prøving og feiling, før dere blir fortrolige med *data frames*.
+For å oppsummere, bruker pandas tre forskjellige indekseringsformater.
+Bare klammeparenteser for søyler og `loc` og `iloc` for rader.
+I tillegg kan `loc` brukes til å indeksere på både rader og søyler
+samtidig.
 
----
-
-### Oppgave 1:
-
-* Lag dataserien under i pandas:
-![oppg1](img/series_oppg1.png)
-
-```{code-cell} ipython3
----
-slideshow:
-  slide_type: fragment
----
-data = np.array([187,177,195,159], dtype="float64")
-indeks = ["Per", "Pål", "Espen", "Askeladd"]
-navn = "EventyrfigurHøyde"
-dataserie = pd.Series(data, name=navn, index=indeks, copy=True)
-dataserie
-```
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-* Vi kan lage serier også med dictionaries `{indeks0: data0, indeks1: data1}`
-* Da blir indeksen satt til nøklene i dictionary'en
-
-```{code-cell} ipython3
----
-slideshow:
-  slide_type: fragment
----
-transport_data = {"land": "bil", "sjø": "båt", "luft": "fly"}
-serie = pd.Series(transport_data, name="transportmetoder")
-serie
-```
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-### Oppgave 2:
-
-* Lag samme dataserie som tidligere i pandas
-* Denne gangen bruk en dictionary til å sette data/indeks
-![oppg1](img/series_oppg1.png)
-
-```{code-cell} ipython3
----
-slideshow:
-  slide_type: fragment
----
-data =  {"Per": 187, "Pål": 177, "Espen": 195, "Askeladd": 159}
-navn = "EventyrfigurHøyde"
-dataserie = pd.Series(data, name=navn, dtype="float64")
-dataserie
-```
-
-+++ {"slideshow": {"slide_type": "subslide"}}
-
-* Dersom vi mangler noe data for en indeks bruker vi `np.NaN`som data
-
-```{code-cell} ipython3
----
-slideshow:
-  slide_type: fragment
----
-data =  {"Per": 187, "Pål": 177, "Espen": np.NaN, "England": 159}
-navn = "EventyrfigurHøyde"
-dataserie = pd.Series(data, name=navn, dtype="float64")
-dataserie
-```
+Prinsippene er stort sett de samme som for å indeksere andre typer objekter, 
+men fordi pandas ønsker å gjøre det enkelt å bruke både tallindeks og *labels*, og
+å indeksere både rader og søyler, trengs disse ekstra variantene med `loc` og `iloc`.
 
 ---
+
 ## Pandas DataFrame
 
 * Vi er som regel interessert i å jobbe med DataFrames, en samling av serier
@@ -647,3 +656,57 @@ dataserie.dropna()
 + [[Døme med pickle]]
 * Pandas er et bibliotek for python for å manipulere og analysere data
 	* me brukte det fyrst i [[Fyrste datasett med CSV]]
+* Vi importerer pandas med som regel med `import pandas as pd`
+* Pandas er bygd på numpy, så man trenger ofte også å bruke numpy
+	
+* Vi bruker pandas til å laste inn eller lage datasett
+    - Rydde opp i data
+    - Få det over på annet format
+    - Gjøre statistikk
+    - Plotte data
+* Dersom vi mangler noe data for en indeks bruker vi `np.NaN`som data
+    
+---
+<img src="img/dfnavn1.jpg" width="550">
+
+
+![dataframe_indeksnavn](img/dfnavn2.png)
+
+---
+
+```{code-cell} ipython3
+sdata = {"frukt": ["epler", "pærer", "moreller", "rips"], "produksjon": [12,23,1,9], "subsidiert": [True, False, True, False], "pris": [10, 25, 40, 5]}
+df_bilde = pd.DataFrame(sdata)
+df_bilde
+```
+
+```{code-cell} ipython3
+---
+slideshow:
+  slide_type: skip
+---
+sdata2 = { "produksjon": [12,23,1,9], "subsidiert": [True, False, True, False], "pris": [10, 25, 40, 5]}
+df_bilde2 = pd.DataFrame(sdata2, index = ["epler", "pærer", "moreller", "rips"])
+df_bilde2
+```
+
+
+---
+
+### Oppgave 1:
+
+* Lag dataserien under i pandas:
+![oppg1](img/series_oppg1.png)
+
+```{code-cell} ipython3
+---
+slideshow:
+  slide_type: fragment
+---
+data = np.array([187,177,195,159], dtype="float64")
+indeks = ["Per", "Pål", "Espen", "Askeladd"]
+navn = "EventyrfigurHøyde"
+dataserie = pd.Series(data, name=navn, index=indeks, copy=True)
+dataserie
+```
+
