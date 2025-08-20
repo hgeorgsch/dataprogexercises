@@ -13,9 +13,9 @@ kernelspec:
 
 <!-- slide template="[[tpl-quote-header]]" -->
 
-# Statistikk med pandas
+# Deskriptiv statistikk med pandas
 
-![[Panda_closeup.jpg]]
+![[Panda_closeup.jpg|480]]
 
 ::: credit
 By Jcwf, CC BY-SA 3.0, via
@@ -23,8 +23,11 @@ By Jcwf, CC BY-SA 3.0, via
 :::
 
 note:
-*Basert på førelesingsnotat frå veke 41/2024.  Sjå nokre andre notat og oppslagstabellar i [[Pandas-Series-DataFrames-JH]]*
+Statistikk er et område hvor programmering er til stor hjelp, særlig hvis man har analyser som skal gjentas på lignende datasett, f.eks. for ulike perioder, eller datasettene er meget store.
 
+*pandas* er et av de mest populære bibliotekene for å håndtere store datasett i python og inkluderer god støtte for deskriptiv statistikk.
+
+**TODO** Fullfør disposisjon og vurder omfang før målene beskrives
 + **Læringsmål**
 	+ Konseptuell oversikt over pandas
 		+  Data frame og Series
@@ -37,30 +40,47 @@ note:
 # *pan*el *da*ta (pandas)
 
 
-| Varegruppe | År | Uke | Vekt (tonn) | Kilopris (kr) |
-| :- | -: | -: | -: | -: |
-| Fersk oppalen laks | 2000 |  1 | 3728 | 30,98 |
-| Fersk oppalen laks | 2000 |  2 | 4054 | 31,12 |
-| Fersk oppalen laks | 2000 |  3 | 4043 | 31,03 |
-| Fersk oppalen laks | 2000 |  4 | 3730 | 30,95 |
-| Fersk oppalen laks | 2000 |  5 | 3831 | 31,30 |
-| Fersk oppalen laks | 2000 |  6 | 4415 | 32,53 |
-| Fersk oppalen laks | 2000 |  7 | 4617 | 32,46 |
-| Fersk oppalen laks | 2000 |  8 | 4463 | 32,19 |
-| Fersk oppalen laks | 2000 |  9 | 4025 | 32,04 |
-| Fersk oppalen laks | 2000 | 10 | 4274 | 32,00 |
-| Fersk oppalen laks | 2000 | 11 | 4797 | 33,29 |
-| Fersk oppalen laks | 2000 | 12 | 5004 | 33,77 |
+| Varegruppe         |   År | Uke | Vekt (tonn) | Kilopris (kr) |
+| :----------------- | ---: | --: | ----------: | ------------: |
+| Fersk oppalen laks | 2000 |   1 |        3728 |         30,98 |
+| Fersk oppalen laks | 2000 |   2 |        4054 |         31,12 |
+| Fersk oppalen laks | 2000 |   3 |        4043 |         31,03 |
+| Fersk oppalen laks | 2000 |   4 |        3730 |         30,95 |
+| Fersk oppalen laks | 2000 |   5 |        3831 |         31,30 |
+| Fersk oppalen laks | 2000 |   6 |        4415 |         32,53 |
+| Fersk oppalen laks | 2000 |   7 |        4617 |         32,46 |
+| Fersk oppalen laks | 2000 |   8 |        4463 |         32,19 |
+| Fersk oppalen laks | 2000 |   9 |        4025 |         32,04 |
+| Fersk oppalen laks | 2000 |  10 |        4274 |         32,00 |
+| Fersk oppalen laks | 2000 |  11 |        4797 |         33,29 |
+| Fersk oppalen laks | 2000 |  12 |        5004 |         33,77 |
+
+::: credit
+Utdrag av datasett frå Statistisk Sentralbyrå
+:::
 
 note:
-+ Datasett med *radar* og *søyler*
-	+ datapunkt
-	+ drag eller *features*
-+ [[Døme med pickle]]
+*pandas* står for «panel data» som egentlig betyr data som er observert langs en tidsakse.
+De samme subjektene er observert på ulike tidspunkt.
+Det gir opphav til en tabell, der hver rekke er en observasjon med et bestemt tidspunkt, og hver søyle er en observert egenskap eller variabel.
 
+Der er i og for seg ingen spesiell grunn for at datasettene i pandas må være observert langs en tidsakse. Det sentrale poenget er denne tabellen, med rader som svarer til observasjoner og søyler som svarer til ulike egenskaper som er observert.
 
-* Pandas er et bibliotek for python for å manipulere og analysere data
-	* me brukte det fyrst i [[Fyrste datasett med CSV]]
+Vi har sett at vi kan representere slike datatabeller både i CSV-filer og som regneark, eller vi kan føre dem pent i et rutenett på papir. Vi skal aldri glemme at det er det samme datasettet vi ser på, uansett verktøy. Dataene er uavhengige av representasjonen, som gjør at vi kan velge verktøy efter hvordan vi ønsker å bruke dataene, eller kombinere verktøy, uten at det påvirker innholdet i datasettet.
+
+Datasettet på foilen er eksportdata fra SSB.  Kvantum og kilopris er observert ukentlig. Søylen for varegruppe er unødvendig her, siden alt er samme vare, men dette er bare et utdrag.  Det fullstendige datasettet har rader for andre varegrupper, og er dermed ikke egentlig formattert som paneldata. Radene svarer ikke bare til ulike tidspunkt, men også til ulike varegrupper, men det er en utfordring som vi kan komme tilbake til.
+
+Ordbruken varierer en del mellom fagfelt og anvendelsesdomener. For å unngå forvirring skal vi holde på tabellperspektivet, og tale om rader eller rekker på den ene siden og søyler eller kolonner på den andre.
+
+---
+
+```python
+import pandas as pd
+```
+
+note:
+* Vi importerer pandas med som regel med `import pandas as pd`
+* Pandas er bygd på numpy, så man trenger ofte også å bruke numpy
 
 ---
 	
@@ -71,9 +91,8 @@ note:
     - Plotte data
     
 
-* Vi importerer pandas med som regel med `import pandas as pd`
-* Pandas er bygd på numpy, så man trenger ofte også å bruke numpy
 
+---
 
 ```{code-cell} ipython3
 sdata = {"frukt": ["epler", "pærer", "moreller", "rips"], "produksjon": [12,23,1,9], "subsidiert": [True, False, True, False], "pris": [10, 25, 40, 5]}
@@ -91,6 +110,8 @@ df_bilde2 = pd.DataFrame(sdata2, index = ["epler", "pærer", "moreller", "rips"]
 df_bilde2
 ```
 
+---
+
 ## Data Frame og Series
 
 * Pandas er bygd opp av objekter kalt *DataFrames* og *Series*
@@ -105,7 +126,7 @@ df_bilde2
 * Man kan også ha navn på radene (indeks er liste med strenger) slik som kolonnenavnene
 ![dataframe_indeksnavn](img/dfnavn2.png)
 
-
+---
 ## Pandas Series
 
 * Pandas series er som kolonnene i en tabell
@@ -137,7 +158,7 @@ dataserie = pd.Series([1,2,3,4,5], name="Heltall")
 dataserie
 ```
 
-+++ {"slideshow": {"slide_type": "subslide"}}
+---
 
 * Vi kan gi en annen indeks med *keyword* argumentet "index"
 * `pd.Series(data, name="Navnet", index = [ .... ])`
@@ -151,7 +172,7 @@ dataserie = pd.Series([1,2,3,4,5], name="Heltall", index=["en", "to", "tre", "fi
 dataserie
 ```
 
-+++ {"slideshow": {"slide_type": "subslide"}}
+---
 
 * Tidligere eksempel gir lister til `pd.Series()`
 * Det kan være lurt å lage variabler med listene som skal bruke
@@ -170,7 +191,7 @@ dataserie = pd.Series(data, name=navn, index=indeks)
 dataserie
 ```
 
-+++ {"slideshow": {"slide_type": "subslide"}}
+---
 
 * Merk at dersom vi forandrer datavariabelen, forandres også pandas serien
 * Dersom dette ikke er ønskelig kan vi bruke `copy=True` når vi lager serien
@@ -186,7 +207,7 @@ data[2]=66
 dataserie
 ```
 
-+++ {"slideshow": {"slide_type": "subslide"}}
+---
 
 ### Oppgave 1:
 
@@ -254,8 +275,7 @@ dataserie = pd.Series(data, name=navn, dtype="float64")
 dataserie
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
-
+---
 ## Pandas DataFrame
 
 * Vi er som regel interessert i å jobbe med DataFrames, en samling av serier
@@ -461,7 +481,7 @@ df_land.loc["US"] = ["USA", 300, "50%"]
 df_land
 ```
 
-+++ {"slideshow": {"slide_type": "slide"}}
+---
 
 ### Oppg 6
 Hva er gjennomsnittlig arbeidsledighet til landene over?
@@ -481,7 +501,7 @@ print(f"Gjennomsnittlig arbeidsledighet er {round(gjennomsnitt,1)}%")
 
 ```
 
-
+---
 ## Utdjupin
 
 
@@ -617,3 +637,13 @@ print(dataserie.describe())
 dataserie.dropna()
 ```
 
+
+---
+
+# Notar
+
+
++ *Basert på førelesingsnotat frå veke 41/2024.  Sjå nokre andre notat og oppslagstabellar i [[Pandas-Series-DataFrames-JH]]*
++ [[Døme med pickle]]
+* Pandas er et bibliotek for python for å manipulere og analysere data
+	* me brukte det fyrst i [[Fyrste datasett med CSV]]
