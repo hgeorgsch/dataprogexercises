@@ -15,7 +15,7 @@ tags:
 	+ Kunna bruka pandas til deskriptiv statistikk og plotting
 + *Perspektivførelesing*
 	+ [Filhandtering](https://iirevu.org.ntnu.no/Filhandtering/)
-	+ [[Konseptuell forståing av  pandas]]  veke 40-41/2024
+	+ [[Statistikk med pandas]]
 	
 + Utsett til seinare
 	+ Lagring og organisering
