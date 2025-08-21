@@ -18,6 +18,8 @@ By Jcwf, CC BY-SA 3.0, via
 :::
 
 note:
+(Sjå òg [[Notar til Statistikk med pandas]])
+
 Statistikk er et område hvor programmering er til stor hjelp, særlig hvis man har analyser som skal gjentas mange ganger på lignende datasett, f.eks. for ulike perioder, eller datasettene er meget store og sammensatte.
 
 *pandas* er et av de mest populære bibliotekene for å håndtere store datasett i python og inkluderer god støtte for deskriptiv statistikk.
@@ -64,6 +66,10 @@ Der er i og for seg ingen spesiell grunn for at datasettene i pandas må være o
 Vi har sett at vi kan representere slike datatabeller både i CSV-filer og som regneark, eller vi kan føre dem pent i et rutenett på papir. Vi skal aldri glemme at det er det samme datasettet vi ser på, uansett verktøy. Dataene er uavhengige av representasjonen, som gjør at vi kan velge verktøy efter hvordan vi ønsker å bruke dataene, eller kombinere verktøy, uten at det påvirker innholdet i datasettet.
 
 Datasettet på foilen er eksportdata fra SSB.  Kvantum og kilopris er observert ukentlig. Søylen for varegruppe er unødvendig her, siden alt er samme vare, men dette er bare et utdrag.  Det fullstendige datasettet har rader for andre varegrupper, og er dermed ikke egentlig formattert som paneldata. Radene svarer ikke bare til ulike tidspunkt, men også til ulike varegrupper, men det er en utfordring som vi kan komme tilbake til.
+
+Vi skal bruke det samme datasettet gjennom hele foredraget.  Der er bare
+to varegrupper, observert med eksportvolum og kilopris hver uke i
+1295 uker.
 
 Ordbruken varierer en del mellom fagfelt og anvendelsesdomener. For å unngå forvirring skal vi holde på tabellperspektivet, og tale om rader eller rekker på den ene siden og søyler eller kolonner på den andre.
 
@@ -261,10 +267,10 @@ i spennet, mens `iloc` gjør det ikke.
 
 ---
 
-+ `[]` - søyler
-+ `.loc[]` - rader
-+ `.iloc[]` - rader
-+ `.loc[2:10,"Tonn"]`
+- `[]` - søyler
+- `.loc[]` - rader
+- `.iloc[]` - rader
+- `.loc[2:10,"Tonn"]`
 
 note:
 Beklager.  Dette blir lett rotete, og det kommer til å bli litt 
@@ -328,7 +334,7 @@ dtype: object
 note: 
 Hver søyle i en  *data frame*  har en datatype.  Til forskjell fra lister, tillater ikke pandas oss å blande ulike datatyper i samme søyle eller serie. Dette gjør at vi alltid kan behandle hele søyler på en konsistent måte. Vi kan bruke `dtypes`-attributten til å se hvilke datatyper søylene har.
 
-Det er de numeriske søylene som er interessant i statistikk.  I eksportdatasettet vårt er det volumet i tonn og kiloprisen i kroner. Ukenummeret er en streng som samler år og uke, og den er vanskelig å regne på.  Vi kan bruke indeksen, som forsåvidt nummererer ukene kronologisk i vårt tilfelle.  Det er mulig å skille år og uke i ukestrengen, men det får vi ta en anden gang.
+Det er de numeriske søylene som er interessante i statistikk.  I eksportdatasettet vårt er det volumet i tonn og kiloprisen i kroner. Ukenummeret er en streng som samler år og uke, og den er vanskelig å regne på.  Vi kan bruke indeksen, som forsåvidt nummererer ukene kronologisk i vårt tilfelle.  Det er mulig å skille år og uke i ukestrengen, men det får vi ta en anden gang.
 
 ---
 
@@ -354,133 +360,143 @@ max    29238.000000   123.280000
 
 note:
 Den enkleste måten å få ut en statistisk oppsummering av datasettet er `describe()`-metoden.
-Vi får en oppsummering av alle de numeriske søylene, med antall rader, gjennomsnitt eller *mean*, standardavvik eller std for *standard deviation*, minimum, maksimum, samt 25de, 50de og 75de persentil.
+Vi får en oppsummering av hver av de numeriske søylene, med antall rader,
+gjennomsnitt eller *mean*, standardavvik eller std for *standard deviation*, minimum, maksimum, samt 25de, 50de og 75de persentil.
 
 ---
 
+```
+In [38]: df1["kr/kg"].min()
+Out[38]: 17.46
 
-| **Metode**             | **Beskrivelse**                                                              |
-| ---------------------- | ---------------------------------------------------------------------------- |
-| `unique()`             | Returnerer unike verdier i Series.                                           |
-| `value_counts()`       | Returnerer antall forekomster av unike verdier i Series.                     |
-| `describe()`           | Genererer beskrivende statistikk som antall, gjennomsnitt, std, min og maks. |
-| `sum()`                | Returnerer summen av elementene i Series.                                    |
-| `mean()`               | Returnerer gjennomsnittet av elementene i Series.                            |
-| `median()`             | Returnerer medianen av elementene i Series.                                  |
-| `min()`                | Returnerer minimumsverdien i Series.                                         |
-| `max()`                | Returnerer maksimumsverdien i Series.                                        |
-| `std()`                | Returnerer standardavviket til Series.                                       |
-| `sort_values()`        | Sorterer Series etter verdiene.                                              |
-| `sort_index()`         | Sorterer Series etter indeksen.                                              |
-| `apply(func)`          | Anvender en funksjon element for element på Series.                          |
-| `map(func)`            | Mapper verdier i Series ved hjelp av funksjon eller dictionary.              |
-| `dropna()`             | Fjerner `NaN`-verdier fra Series.                                            |
-| `fillna(value)`        | Fyller inn `NaN`-verdier med en spesifisert verdi.                           |
-| `astype(dtype)`        | Endrer datatypen til Series til spesifisert datatype.                        |
-| `clip(lower, upper)`   | Begrenser verdier til et spesifisert område (nedre og øvre grenser).         |
-| `between(left, right)` | Returnerer True for verdier mellom spesifiserte grenser.                     |
-| `shift(periods)`       | Skifter verdiene med et spesifisert antall perioder.                         |
-| `cumsum()`             | Returnerer den kumulative summen av elementene i Series.                     |
-| `cumprod()`            | Returnerer det kumulative produktet av elementene i Series.                  |
-| `rolling(window)`      | Gir glidende beregninger med et gitt vindu                                   |
-| `expanding()`          | Gir ekspanderende beregninger (f.eks. kumulative beregninger).               |
-| `resample(rule)`       | Resampler tidsseriedata i henhold til en spesifisert frekvens.               |
-| `plot()`               | Plotter dataen i Series ved hjelp av Matplotlib.                             |
+In [39]: df1["Tonn"].max()
+Out[39]: 29238
 
----
+In [40]: df1["Tonn"].mean()
+Out[40]: 12937.647104247104
 
-# Notar
-
-
-+ *Basert på førelesingsnotat frå veke 41/2024.  Sjå nokre andre notat og oppslagstabellar i [[Pandas-Series-DataFrames-JH]]*
-+ [[Døme med pickle]]
-* Pandas er et bibliotek for python for å manipulere og analysere data
-	* me brukte det fyrst i [[Fyrste datasett med CSV]]
-* Vi importerer pandas med som regel med `import pandas as pd`
-* Pandas er bygd på numpy, så man trenger ofte også å bruke numpy
-	
-* Vi bruker pandas til å laste inn eller lage datasett
-    - Rydde opp i data
-    - Få det over på annet format
-    - Gjøre statistikk
-    - Plotte data
-* Dersom vi mangler noe data for en indeks bruker vi `np.NaN`som data
-    
----
-<img src="img/dfnavn1.jpg" width="550">
-
-
-![dataframe_indeksnavn](img/dfnavn2.png)
-
----
-
-```{code-cell} ipython3
-sdata = {"frukt": ["epler", "pærer", "moreller", "rips"], "produksjon": [12,23,1,9], "subsidiert": [True, False, True, False], "pris": [10, 25, 40, 5]}
-df_bilde = pd.DataFrame(sdata)
-df_bilde
+In [41]: df1["Tonn"].std()
+Out[41]: 5730.168860496539
 ```
 
-```{code-cell} ipython3
+note:
+Hvis vi skal bruke statistiske størrelser i videre beregninger, så er det enkleste å trekke ut en enkelt søyle og bruke metoder på *Series*-objektet i stedet.  
+
+Der finnes metoder for alle de vanlige statistikkene som brukes.  Det er bare å slå opp i dokumentasjonen for å finne flere.
+
 ---
-slideshow:
-  slide_type: skip
----
-sdata2 = { "produksjon": [12,23,1,9], "subsidiert": [True, False, True, False], "pris": [10, 25, 40, 5]}
-df_bilde2 = pd.DataFrame(sdata2, index = ["epler", "pærer", "moreller", "rips"])
-df_bilde2
+
+![[df1plot.svg]]
+
+```python
+import matplotlib.pyplot as plt
+plt.plot( df1["kr/kg"] )
 ```
 
+note:
+Søylene i datasettet er det grunnleggende objektet for dataanalyse.
+Hver søyle er en serie med observasjoner av samme variabel.
+
+Vi kan hente ut slike enkeltsøyler og bruke dem i funksjoner fra andre
+biblioteker, f.eks. kan vi bruke *pyplot* til å plotte.
+I bildet har vi plottet kiloprisen for fersklaks.
 
 ---
 
-### Oppgave 1:
+![[df2plot.svg]]
 
-* Lag dataserien under i pandas:
-![oppg1](img/series_oppg1.png)
-
-```{code-cell} ipython3
----
-slideshow:
-  slide_type: fragment
----
-data = np.array([187,177,195,159], dtype="float64")
-indeks = ["Per", "Pål", "Espen", "Askeladd"]
-navn = "EventyrfigurHøyde"
-dataserie = pd.Series(data, name=navn, index=indeks, copy=True)
-dataserie
+```python
+import matplotlib.pyplot as plt
+plt.plot( df1["kr/kg"] )
+plt.plot( df2["kr/kg"] )
 ```
 
+note:
+Vi må likevel være varsomme, fordi indeksen er en del av serieobjektet
+i pandas.
+Hvis vi har flere serier, skjer det ofte at disse indeksene ikke er
+kompatible.
+Det skjer typisk når indeksen blott viser til rekkenummer i datasettet,
+og ikke er direkte knyttet til tidspunkt eller andre fysiske størrelser.
 
-
----
-
-### Oppg 5:
-Ta utgangpunkt i tabellen over for å lage tabellen under
-![oppg5](img/df_oppg5v2.png)
-
-les [her](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.insert.html) for å finne ut hvordan du legger til en kolonne med `insert`
-
-```{code-cell} ipython3
-df_land.rename(columns=({"innbyggere": "populasjonsstørrelse"}), inplace=True)
-df_land.drop(index=['NO'], inplace=True)
-df_land.insert(2,"arbeidsledighet", ["1.0%","4.9%","3.2%","1.6%","12.5%" ])
-df_land.loc["DE", "populasjonsstørrelse"]  = 83
-df_land.loc["US"] = ["USA", 300, "50%"]
-df_land
-```
+Her har vi plottet kiloprisen for fersklaks og frossenlaks, men $x$-aksen
+viser ikke tidspunkt, men indeksen i det opprinnelige datasettet, der
+frossenlaksen kom efter fersklaksen, selv om den var observert i samme 
+periode.
 
 ---
 
-### DataFrame-data
-* Merk at dersom vi forandrer datavariabelen, forandres også pandas serien
-* Vi sier at dataframen inneholder «refererer» til data som er lagret et annet sted
-* Dersom dette ikke er ønskelig kan vi bruke `copy=True` når vi lager serien
-* Av og til vil vi ha en kopi som ikke forstyrrer «datakilden»
-* Av og til vil vi ikke gjøre det slik -- det er raskere og bruker mindre minne
+![[dfplot.svg]]
 
-```{code-cell} ipython3
-ddataserie = pd.Series(data, name=navn, index=indeks, copy=True)
-print(dataserie)
-data[2]=66
-dataserie
+```python
+df1 = df1.reset_index()
+df2 = df2.reset_index()
 ```
+
+note:
+Vi har muligheten til å endre indeksene, f.eks. ved
+`reset_index()`-funksjonen som renummererer rekkene.
+Det fungerer i dette tilfellet, fordi fersk- og frossenlaks
+er observert på nøyaktig samme tidspunkter.
+
+---
+
+<!-- slide template="[[tpl-smalltext]]" -->
+
+# Fletting av *data frames*
+
+- `merge()` - horisontal sammenstilling
+- `concat()` - vertikal sammenstilling
+
+note:
+Reindeksering vil være nyttig i mange sammenhenger, men skal vi 
+en mer robust løsning, må vi bruke ukenummer som nøgle når
+vi sammenligner seriene.
+
+Dette kan gjøres på mange måter.  En teknikk som ofte trengs er
+å flette sammen flere ulike datasett til én dataframe.
+*pandas* har to funksjoner til dette:
+
+`concat()` forutsetter at radene er unike, og legger sammen alle
+radene fra begge datasettene under hverandre.
+
+`merge()` forutsetter at radene i de to datasettene overlapper
+og representerer de samme tidspunkter eller objekter, og 
+kombinerer alle søylene fra begge datasettene side om side.
+
+---
+
+<!-- slide template="[[tpl-smalltext]]" -->
+
+```
+In [5]: join = df1.merge( df2, on="uke" )
+
+In [6]: join
+Out[6]:
+            varegruppe_x      uke  Tonn_x  ...         varegruppe_y Tonn_y  kr/kg_y
+0     Fersk oppalen laks  2000U01    3728  ...  Frosen oppalen laks    383    32.54
+1     Fersk oppalen laks  2000U02    4054  ...  Frosen oppalen laks    216    33.63
+2     Fersk oppalen laks  2000U03    4043  ...  Frosen oppalen laks    633    36.06
+3     Fersk oppalen laks  2000U04    3730  ...  Frosen oppalen laks    393    34.27
+4     Fersk oppalen laks  2000U05    3831  ...  Frosen oppalen laks    453    33.91
+...                  ...      ...     ...  ...                  ...    ...      ...
+1290  Fersk oppalen laks  2024U39   29238  ...  Frosen oppalen laks    578    71.97
+1291  Fersk oppalen laks  2024U40   26543  ...  Frosen oppalen laks    987    78.32
+1292  Fersk oppalen laks  2024U41   25180  ...  Frosen oppalen laks    780    73.69
+1293  Fersk oppalen laks  2024U42   25561  ...  Frosen oppalen laks    793    81.90
+1294  Fersk oppalen laks  2024U43   24910  ...  Frosen oppalen laks    677    71.49
+
+[1295 rows x 7 columns]
+```
+
+note: 
+La oss se hva vi trenger i vårt tilfelle.
+Vi har fersklaks i df1 og frossenlaks i df2, begge observert
+på de samme tidspunktene.  
+
+---
+
+# *View* eller *Copy*
+
+---
+
