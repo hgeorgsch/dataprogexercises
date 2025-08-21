@@ -193,6 +193,7 @@ Out[11]:
 In [12]: type(df)
 Out[12]: pandas.core.frame.DataFrame
 ```
+<!-- element class="fragment" -->
 
 ::: credit
 :::
@@ -315,6 +316,61 @@ note:
 Ved siden av indeksering, trenger vi ofte å hente ut delmengder av datasettet etter bestemte kriterier. Jeg sa innledningsvis at eksportdatasettet vårt ikke egentlig er paneldata. Vi har forskjellige observasjoner på samme tidspunkt.
 
 For å gå videre med et rent og pent eksempel på paneldata, kan vi hente ut et datasett for bare én varegruppe. Igjen bruker vi klammeparenteser, men i stedet for en indeks, gir vi et kriterium, f.eks. at varegruppen i datasettet må være lik «fersk oppalen laks».
+
+---
+
+<!-- slide template="[[tpl-smalltext]]" -->
+
+
+```python
+df2 = df[ df["varegruppe"] == "Fersk oppalen laks" ]
+```
+
+
+<p class="fragment">
+
+```
+In [41]: x = df["varegruppe"] == "Fersk oppalen laks"
+
+In [42]: x
+Out[42]:
+0        True
+1        True
+2        True
+3        True
+4        True
+        ...
+2585    False
+2586    False
+2587    False
+2588    False
+2589    False
+Name: varegruppe, Length: 2590, dtype: bool
+
+In [43]: type(x)
+Out[43]: pandas.core.series.Series
+```
+
+</p>
+
+::: credit
+:::
+
+note:
+Filtreringsnotasjonen som vi brukte er egentlig et spesialtilfelle
+av *bolsk indeksering*.
+
+Hvis vi evaluerer uttrykket 
+`df["varegruppe"] == "Fersk oppalen laks"`,
+ser vi at dette er et *Series*-objekt med bolske verdier.
+Vi sammeligner rett og slett hvert element i serien på venstre side
+med strengen på høyre side.
+
+Når vi bruker en bolsk serie til å indeksere, får vi med de
+elementene som svarer til sann i serien og dropper dem som
+som svarer til usann.
+
+Dette er en kraftfull finesse, men det tar en del 
 
 ---
 
@@ -469,10 +525,10 @@ kombinerer alle søylene fra begge datasettene side om side.
 <!-- slide template="[[tpl-smalltext]]" -->
 
 ```
-In [5]: join = df1.merge( df2, on="uke" )
+In [30]: join = df1.merge(df2,on="uke")
 
-In [6]: join
-Out[6]:
+In [31]: join
+Out[31]: 
             varegruppe_x      uke  Tonn_x  ...         varegruppe_y Tonn_y  kr/kg_y
 0     Fersk oppalen laks  2000U01    3728  ...  Frosen oppalen laks    383    32.54
 1     Fersk oppalen laks  2000U02    4054  ...  Frosen oppalen laks    216    33.63
@@ -491,14 +547,237 @@ Out[6]:
 
 note: 
 La oss se hva vi trenger i vårt tilfelle.
-Vi har fersklaks i df1 og frossenlaks i df2, begge observert
-på de samme tidspunktene.  
+Vi har fersklaks i df1 og frossenlaks i df2, begge observert på de samme tidspunktene eller ukene.
+Dvs. at uke-søylen identifiserer radene, og rader med samme uke hører sammen.
+Det må dermed være riktig å flette på uke, og vi bruke `on="uke"` som parameter til `merge`.
+
+Siden de to tabellene har de samme søylenavnene, har pandas lagt til underscore-x og -y for å skille søylene fra de to tabellene.  Det er dog ikke så lett å se siden vi har flere søyler enn det som får plass på skjermen.  Men varegruppene er nu overflødige, så vi kan droppe dem.
 
 ---
+
+<!-- slide template="[[tpl-smalltext]]" -->
+
+```
+In [33]: join0 = join.drop( columns=[ "varegruppe_x", "varegruppe_y" ] )
+
+In [34]: join0
+Out[34]: 
+          uke  Tonn_x  kr/kg_x  Tonn_y  kr/kg_y
+0     2000U01    3728    30.98     383    32.54
+1     2000U02    4054    31.12     216    33.63
+2     2000U03    4043    31.03     633    36.06
+3     2000U04    3730    30.95     393    34.27
+4     2000U05    3831    31.30     453    33.91
+...       ...     ...      ...     ...      ...
+1290  2024U39   29238    73.23     578    71.97
+1291  2024U40   26543    69.70     987    78.32
+1292  2024U41   25180    72.76     780    73.69
+1293  2024U42   25561    76.02     793    81.90
+1294  2024U43   24910    77.59     677    71.49
+
+[1295 rows x 5 columns]
+```
+
+
+note:
+*Data frame* har en metode `drop()` for å kvitte seg med overflødige søyler.
+Der er også en `rename()`-metode som vi kunne ha brukt for å få mer informative søylenavn.
+
+---
+
+![[dfplot.svg]]
+
+```python
+plt.plot( join0["kr/kg_x"] )
+plt.plot( join0["kr/kg_y"] )
+plt.savefig( "join.png" )
+```
+
+note:
+Nu kan vi være helt sikre på at tidspunktene er de samme når vi sammenligner kiloprisene for fersk og frossen laks.
+
+Dette blir ennu viktigere å tenke på når vi  sammenligner data fra ulike kilder.
+I dette tilfellet visste vi at vi hadde alle observasjonene på hvert tidspunkt, men når dataene kommer fra ulike kilder, er det ofte ikke tilfellet.
+
+---
+
+<!-- slide template="[[tpl-quote]]" -->
+
+<table>
+<tr> <th>Indeks</th> <th>Venstre</th> <th>Høgre</th></tr>
+<tr> <td> Venstre</td>
+     <td style="background: yellow ;"> </td>
+     <td style="background: grey ;"> </td>
+</tr>
+<tr> <td> Felles</td>
+     <td style="background: yellow ;"> </td>
+     <td style="background: yellow ;"> </td>
+</tr>
+<tr> <td> Høgre</td>
+     <td style="background: grey ;"> </td>
+     <td style="background: yellow ;"> </td>
+</tr>
+</table>
+
+::: credit
+:::
+
+note:
+Vi trenger selvsagt å tenke på hva man gjør når man mangler data.
+Sett at vi skal flette en venstre og en høyre tabell som har noen
+felles og noen unike rader.
+
+*pandas* lar oss definere en flettestrategi, med en *how*-parameter.
+
+---
+
+<!-- slide template="[[tpl-small2]]" -->
+
+::: leftimage
+
+# *Inner join*
+<table>
+<tr> <th>Indeks</th> <th>Venstre</th> <th>Høgre</th></tr>
+<tr> <td> Venstre</td>
+     <td style="background: red ;"> Droppa </td>
+     <td style="background: gray ;"> </td>
+</tr>
+<tr> <td> Felles</td>
+     <td style="background: yellow ;"> </td>
+     <td style="background: yellow ;"> </td>
+</tr>
+<tr> <td> Høgre</td>
+     <td style="background: grey ;"> </td>
+     <td style="background: red ;"> Droppa </td>
+</tr>
+</table>
+
+# *Left join*
+<table>
+<tr> <th>Indeks</th> <th>Venstre</th> <th>Høgre</th></tr>
+<tr> <td> Venstre</td>
+     <td style="background: yellow ;"> </td>
+     <td style="background: green ;"> NaN </td>
+</tr>
+<tr> <td> Felles</td>
+     <td style="background: yellow ;"> </td>
+     <td style="background: yellow ;"> </td>
+</tr>
+<tr> <td> Høgre</td>
+     <td style="background: grey ;"> </td>
+     <td style="background: red ;"> Droppa </td>
+</tr>
+</table>
+
+:::
+::: leftcredit
+:::
+
+::: rightimage
+
+# *Outer join*
+<table>
+<tr> <th>Indeks</th> <th>Venstre</th> <th>Høgre</th></tr>
+<tr> <td> Venstre</td>
+     <td style="background: yellow ;"> </td>
+     <td style="background: green ;"> NaN </td>
+</tr>
+<tr> <td> Felles</td>
+     <td style="background: yellow ;"> </td>
+     <td style="background: yellow ;"> </td>
+</tr>
+<tr> <td> Høgre</td>
+     <td style="background: green ;"> NaN</td>
+     <td style="background: yellow ;"> </td>
+</tr>
+</table>
+
+# *Right join*
+<table>
+<tr> <th>Indeks</th> <th>Venstre</th> <th>Høgre</th></tr>
+<tr> <td> Venstre</td>
+     <td style="background: red ;"> Droppa </td>
+     <td style="background: grey ;"> </td>
+</tr>
+<tr> <td> Felles</td>
+     <td style="background: yellow ;"> </td>
+     <td style="background: yellow ;"> </td>
+</tr>
+<tr> <td> Høgre</td>
+     <td style="background: green ;"> NaN </td>
+     <td style="background: yellow ;"> </td>
+</tr>
+</table>
+
+:::
+::: rightcredit
+:::
+
+note:
+Der er fire vanlige valg.  Terminologien er den samme som brukes i 
+databasebehandling, der vi skiller mellom indre,  ytre, venstre og
+høyre *join*.
+
+Indre *join* dropper alle rader som ikke finnes i begge tabellene, 
+mens ytre join tar med alle radene og fyller inn såkalte NaN-verdier
+der data mangler.
+
+NaN står for *Not a Number* og er et standardbegrep som dere kan
+støte på ofte i datasett.  Det kan godt være at dere laster nede
+datasett med NaN-verdier fordi måledata av en eller anden grunn
+mangler.
+
+Venstre og høyre *join* bruker radene fra henholdsvis venstre og
+høyre tabell, og dropper eller fyller inn verdier i søylene fra 
+den andre tabellen.
+
+
+---
+
+<!-- slide template="[[tpl-smalltext]]" -->
 
 # *View* eller *Copy*
 
+```python
+df2 = df[ df["varegruppe"] == "Fersk oppalen laks" ]
+```
+
+
+```python
+df2 = df2.copy()
+```
+<!-- element class="fragment" -->
+
+
+::: credit
+:::
+
+note:
+Det siste begrepet jeg vil prøve å forklare i dag er *views*.
+Da vi filtrerte filtrerte datasettet tidligere, og lavet `df2`
+med data om frossenlaks, fikk vi *ikke* et nytt datasett.
+
+Den nye variabelen `df2` gir oss et nytt *view* til det gamle
+datasettet, hvilket betyr at om vi gjør endringer i `df2`, 
+gjør vi også endringer i det opprinnelige datasettet `df`, og
+vise versa.
+
+Dette kan være både nyttig og problematisk, avhengig av hva vi
+skal gjøre videre, og derfor er det viktig å være oppmerksom.
+
+(fragment)
+Vi kan godt lave en kopi av datasettet, slik at vi kan bruke dem
+uavhengig av hverandre.  Det gjør vi med `copy()`-metoden.
+
 ---
 
-
 # Slutt
+
+Jeg beklager hvis jeg har overveldet dere med detaljer.
+
+Det vi skal ta med oss videre i dag er dette perspektivet på
+datasett som tabeller med rader og søyler som vi kan manipulere.
+
+python og pandas gir oss meget kraftfulle verktøy for å manipulere
+datasett, men slike verktøy må man lære ett ad gangen.
+
