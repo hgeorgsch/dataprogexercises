@@ -38,8 +38,6 @@ tags:
     + Ulike plot: histogram/scatter/kakediagram
 	+ Eksporting plots
 + Oppgåver
-    + [[Jordskjelv]] demonstrerer animasjon og plotting oppå kart
-    + [[Genetikk]] demonstrerer korrelasjon m.m.
 	+ [[Arbeidsledige]] : Latin 1,  Kombiner arbeidsledige og konkurser
 		+ Utfordring: Konverter 1980M1 til dato
 		+ Oppgåve: Plott begge datasett
@@ -48,6 +46,9 @@ tags:
 		+ Oppgåve: Korrelasjonskoeffisient
 		+ Oppgåve: Korrelasjonskoeffisient med forskjøvede data
 	+ [[Eksportdata]] requires extensive pre-processing to extract comparable data
+    + [Genetikk](Genetikk/Genetikk) demonstrerer korrelasjon m.m.
++ Meir avanserte oppgåver
+    + [Jordskjelvdata](Jordskjelv/Jordskjelv) som demonstrerer animasjon og plotting oppå kart.
 
 
 + Grunnleggjande pandas
