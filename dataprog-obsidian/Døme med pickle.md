@@ -1,6 +1,7 @@
 ---
 tags:
-  - old
+  - legacy/iif
+  - pickle
 ---
 
 
@@ -10,12 +11,9 @@ tags:
 + [x] Bør me introdusera `pickle`? #primitives/pickle 📅 2025-05-07 ✅ 2025-05-08
 	+ Neppe !
 
+
 ```{code-cell} ipython3
----
-slideshow:
-  slide_type: subslide
----
-#EKSEMPEL
+# EKSEMPEL
 
 import pandas as pd
 import numpy as np

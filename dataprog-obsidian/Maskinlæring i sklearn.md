@@ -1,4 +1,8 @@
-
+---
+tags:
+   - legacy/iif
+   - machine-learning
+---
 
 # Noen eksempler fra sklearn
 * Klynger

@@ -1,6 +1,7 @@
 ---
 tags:
   - lecture/video/perspective
+  - stub
 ---
 
 Deskriptiv statistikk vs. Statistisk inferens

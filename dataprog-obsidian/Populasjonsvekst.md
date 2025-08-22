@@ -1,6 +1,11 @@
+---
+tags:
+   - legacy/iif
+   - exercise
+---
 
 # Oppgave 1: Populasjonsvekst
-----
+
 
 Ta utgangspunkt i eksempelet fra plenumsøkten om populasjonsveksten på Island og skriv følgende program:
 

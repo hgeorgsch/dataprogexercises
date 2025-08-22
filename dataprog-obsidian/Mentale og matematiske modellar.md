@@ -2,6 +2,7 @@
 tags:
    - lecture
    - modelling
+   - stub
 ---
 
 + Utfordringar

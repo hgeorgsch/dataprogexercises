@@ -1,3 +1,8 @@
+---
+tags:
+   - pandas
+   - legacy/iif
+---
 
 Materiale frå 44/2024
 # Multiindex dataframes

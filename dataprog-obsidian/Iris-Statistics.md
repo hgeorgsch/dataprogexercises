@@ -10,6 +10,9 @@ kernelspec:
   display_name: dataprog
   language: python
   name: dataprog
+tags:
+  - stub
+  - machine-learning
 ---
 
 # Iris-datasettet

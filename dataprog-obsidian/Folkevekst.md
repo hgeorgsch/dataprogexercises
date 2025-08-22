@@ -1,3 +1,8 @@
+---
+tags:
+  - exercise
+  - stub
+---
 
 + [ ] Logistisk vekt, repetisjon av [[Simulering av kontantstraum]]
 + [ ] Lasta folketalsdata  i pandas

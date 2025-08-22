@@ -1,3 +1,8 @@
+---
+tags:
+  - exercise
+  - stub
+---
 
 # Oppgave 2: Sparekalkulator
 

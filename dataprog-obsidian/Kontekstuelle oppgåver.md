@@ -1,3 +1,8 @@
+---
+tags:
+   - exercise
+   - legacy/iif
+---
 
 
 + Oppgåve 1.  

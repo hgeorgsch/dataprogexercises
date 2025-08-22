@@ -1,4 +1,8 @@
-
+---
+tags:
+  - legacy/iif
+  - pandas
+---
 
 # Pandas i praksis
 
