@@ -4,7 +4,7 @@ title: Utkast til læringsmateriale i data og programmering
 
 + [[Project Management]]
 + [[Praktiske tips til utvikling av kurset]]
-+ [[Masinlæring i Biologiske Fag]]
++ [[Maskinlæring i Biologiske Fag]]
 + [[Emneskildringar]]
 + [[Skisse til opplegg]]
 	 + Typisk veke
