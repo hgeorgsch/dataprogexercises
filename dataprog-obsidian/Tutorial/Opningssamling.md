@@ -26,11 +26,11 @@ annan grunn ikkje får gjort dette ferdig på førehand.
 + 10.00-11.30: Vegleiing til [Installasjon](Installasjon),
     for dei som ikkje er ferdig med det på førehand.
 + 11.30-12.15: Lønsjpause
-+ 12.15-12.30: [Velkommen](Velkomen (foilar)).  
++ 12.15-12.30: [Velkommen](Velkomen%20(foilar)).  
    Sjå og praktisk informasjon på [forsida](../intro).
 + 12.30-13.00: 
   [Presentasjon av Økt 1.](Fyrste%20dokument%20i%20Jupyter%20Lab%20(foilar).md)
-  Fyrste dokument i Jupyter Lab]
+  Fyrste dokument i Jupyter Lab
 + 13.00-13.20: Presentasjon av deltakarane 
 + 13.30-15.30: Økt 1. [Fyrste dokument i Jupyter Lab](Fyrste%20dokument%20i%20Jupyter%20Lab)
 + 15.30-16.30: Debrief                     
