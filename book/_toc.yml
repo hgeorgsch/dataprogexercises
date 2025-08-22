@@ -42,7 +42,7 @@ chapters:
     - file: WebAPI
     - file: Statistikk og Maskinlæring
       sections:
-      - file: notebook/Fisher Linear Discriminant in sklearn
+      - file: notebook/Fisher Linear Discriminant in SciKitLearn
       - file: notebook/Evaluering
   - file: midway
   - file: second
