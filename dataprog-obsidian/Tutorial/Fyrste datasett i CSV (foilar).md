@@ -1,5 +1,5 @@
 ---
-title: Introduksjon til datasett i CSV
+title: Fyrste datasett med CSV
 tags:
   - csv
   - plot

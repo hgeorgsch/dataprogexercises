@@ -1,6 +1,10 @@
+---
+tags:
+  - lecture/samling
+---
 
 
-# Fyrste leksjon
+# Fyrste dokument i Jupyter Lab
 
 + *Tutorial* [[Introduksjon til Jupyter Notebook]]
 + *Læringsmål*
