@@ -14,7 +14,7 @@ demonstrating the use of python and jupyter to explore large datasets.
 Each exercise is written in `md:myst` which is easily converted
 to Jupyter notebook format using jupytext.
 To use, say, the Genetics exercise, you can download the git repo,
-and rund
+and run
 ```sh
 pip install -r requirements
 cd Genetikk
@@ -22,8 +22,8 @@ jupytext --sync Genetikk.md
 jupyter lab Genetikk.ipynb
 ```
 
-If you edit the file, Jupyter lab will update both the notebook
-and markdown versions.
+If you edit the file in Jupyter lab, it will update both the 
+notebook and markdown versions.
 The reason for publishing in the `md:myst` format, is to make
 better use of the version control in git, which is important
 for the development process.
