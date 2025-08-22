@@ -1,3 +1,0 @@
-jupytext
-pandas
-numpy
