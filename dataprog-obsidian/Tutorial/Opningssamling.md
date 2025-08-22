@@ -32,7 +32,7 @@ annan grunn ikkje får gjort dette ferdig på førehand.
   [Presentasjon av Økt 1.](Fyrste%20dokument%20i%20Jupyter%20Lab%20(foilar).md)
   Fyrste dokument i Jupyter Lab
 + 13.00-13.20: Presentasjon av deltakarane 
-+ 13.30-15.30: Økt 1. [Fyrste dokument i Jupyter Lab](Fyrste%20dokument%20i%20Jupyter%20Lab)
++ 13.30-15.30: Økt 1. [Fyrste dokument i Jupyter Lab](notebook/Fyrste%20dokument%20i%20Jupyter%20Lab)
 + 15.30-16.30: Debrief                     
 
 ## Dag 2
