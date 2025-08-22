@@ -1,6 +1,7 @@
 ---
 tags:
   - development
+  - technical
 ---
 
 I have started [[2025-04-23]] to set up tutorials written in markdown and converted to Jupyter notebook.  These are found in the directory `dataprog-obsidian/Tutorial`. 

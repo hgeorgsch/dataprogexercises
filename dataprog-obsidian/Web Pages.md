@@ -1,3 +1,7 @@
+---
+tags:
+   - legacy/iif
+---
 
 + URL for kursporteføljen https://iirevu.org.ntnu.no/
 + Innhold ligg på /home/groupswww/iirevu på login.ansatt.ntnu.no

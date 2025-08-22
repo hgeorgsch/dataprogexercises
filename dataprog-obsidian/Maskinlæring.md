@@ -1,6 +1,8 @@
 ---
 tags:
   - lecture/video/perspective
+  - machine-learning
+  - stub
 ---
 
 

@@ -1,6 +1,8 @@
 ---
 title: Game Theory
-categories: session
+tags: 
+   - session
+   - legacy/ai
 ---
 
 # Reading

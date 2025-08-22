@@ -2,7 +2,9 @@
 tags:
   - exercise/intro
   - csv
+  - legacy/iif
 ---
+
 + Oppgave 6 - kunstig datasett med tilfeldige tal
 + `Untitled.ipynb` døme med konkurstal
 

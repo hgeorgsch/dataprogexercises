@@ -12,6 +12,7 @@ kernelspec:
 tags:
   - jupyter
   - ai/llm
+  - technical/ollama
 ---
 
 Me kan setja opp jupyter lab med ein stor språkmodell (AI-LLM). For å få tilgang til KI-grensesnittet, installerer me jupyter-ai:

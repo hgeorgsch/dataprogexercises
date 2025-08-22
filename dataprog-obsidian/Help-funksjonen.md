@@ -1,3 +1,7 @@
+---
+tags:
+   - legacy/iif
+---
 
 ## Første steg: `print()` og `help()`
 

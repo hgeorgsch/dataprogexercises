@@ -1,6 +1,7 @@
 ---
 tags:
   - program
+  - admin/emne
 ---
 
 + Tidsbruk for studentane

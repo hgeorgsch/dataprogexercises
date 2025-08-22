@@ -12,6 +12,7 @@ kernelspec:
 tags:
   - lecture
   - simulering
+  - stub
 ---
 
 # Simulere med `While`

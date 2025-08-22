@@ -1,6 +1,7 @@
 ---
 tags:
   - programming-elementals
+  - legacy/iif
 ---
 
 + [[If-else-while-JH]]

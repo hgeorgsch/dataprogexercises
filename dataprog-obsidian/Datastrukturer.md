@@ -1,3 +1,8 @@
+---
+tags:
+  - legacy/iif
+  - MOC
+---
 
 + [[Dictionaries]] 
 + [[Datatypar og aritmetriske operatorar]]

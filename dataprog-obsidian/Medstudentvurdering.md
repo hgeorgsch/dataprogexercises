@@ -1,6 +1,7 @@
 ---
 tags:
   - vurdering
+  - stub
 ---
 
 + 2024

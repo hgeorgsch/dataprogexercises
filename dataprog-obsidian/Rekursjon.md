@@ -1,5 +1,8 @@
 ---
 title: Halveringsmetoden ved Rekursjon
+tags:
+   - stub
+   - recursion
 ---
 
 # Halveringsmetoden ved Rekursjon

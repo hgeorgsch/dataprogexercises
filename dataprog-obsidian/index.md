@@ -1,5 +1,7 @@
 ---
 title: Utkast til læringsmateriale i data og programmering
+tags:
+   - MOC/index
 ---
 
 + [[Project Management]] (budsjett og rekneskap)

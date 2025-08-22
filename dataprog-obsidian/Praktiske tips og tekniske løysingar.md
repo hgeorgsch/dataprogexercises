@@ -1,6 +1,8 @@
 ---
 tags:
   - development
+  - technical
+  - MOC
 ---
 
 + Jupyter to run git  [[/assets/hent-innhold.ipynb]] (teke frå 2024)

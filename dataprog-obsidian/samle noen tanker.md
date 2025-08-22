@@ -1,3 +1,7 @@
+---
+tags:
+  - notes/jonas
+---
 
 # EVU programmering og data i økonomiske fag
 

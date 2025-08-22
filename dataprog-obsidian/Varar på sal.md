@@ -1,3 +1,8 @@
+---
+tags:
+   - exercise
+   - legacy/iif
+---
 
 + `Oppgave5-JH-LF.ipynb`
 

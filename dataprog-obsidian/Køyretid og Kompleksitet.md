@@ -1,6 +1,7 @@
 ---
 tags:
   - lecture/video
+  - stub
 ---
 
 - køyretid og kompleksitet
