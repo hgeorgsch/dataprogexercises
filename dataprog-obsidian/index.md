@@ -21,10 +21,7 @@ tags:
 			+ *fading examples* à la Clark *et al* 2005
 			+ drilloppgåver i Coderunner
 			+ prosjektoppgåver - opne oppgåver - egna til mappa
-+ Enkle øvingar frå Morten Munthe
-	+ [[Jordskjelv]]
-	+ [[Genetikk]]
-	+ [[HR diagrammet]] (stjernedata)
++ [Enkle øvingar frå Morten Munthe}(https://github.com/hgeorgsch/dataprogexercises)
 + [[Medstudentvurdering]]
 + [[samle noen tanker]] frå Jonas
 + IIF2001 - to delar
