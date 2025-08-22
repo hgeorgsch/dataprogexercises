@@ -1,5 +1,5 @@
 ---
-title: Introduksjon til Simulering
+title: Simulering av kontantstraum
 tags:
   - simulering
   - lecture/samling

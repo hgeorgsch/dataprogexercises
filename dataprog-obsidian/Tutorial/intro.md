@@ -40,3 +40,6 @@ di gjev riktig og nyttig innsikt i dei dataa som du ser på.
 Denne boka er eit levande dokument.  Det vert retta og utvida etter
 behov i laupet av kurset.  Dersom der er noko som er for dårleg (evt.
 feil) forklart, er det berre å gje eit ord, og so fiksar me det.
+
+Annan praktisk informasjon
++ [Mappevurdering](Mappevurdering)

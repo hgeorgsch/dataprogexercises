@@ -3,6 +3,9 @@
 format: jb-book
 root: intro
 chapters:
+  - file: Praktisk informasjon
+    sections:
+    - file: Mappevurdering
   - file: Opningssamling
     sections:
     - file: Installasjon
@@ -10,12 +13,12 @@ chapters:
     - file: notebook/Fyrste datasett med CSV
     - file: notebook/Simulering av kontantstraum
     - file: Seminar om Motivasjon og Ynskjer
-    - file: Mappevurdering
     - file: Førelesingsnotat frå Opningssamlinga
       sections:
-      - file: Introduksjon til datasett i CSV
-      - file: Introduksjon til simulering
-      - file: Python og Jupyter Notebook
+      - file: Velkomen (foilar)
+      - file: Fyrste dokument i Jupyter Lab (foilar)
+      - file: Fyrste datasett i CSV (foilar)
+      - file: Simulering av kontantstraum (foilar)
   - file: first
     sections:
     - file: Numeriske Metodar og Kontrollflyt
