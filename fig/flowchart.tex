@@ -29,12 +29,13 @@
 \tikzstyle{decision} = [diamond, 
     minimum width=5cm, 
     % minimum height=1cm, 
-    text width=15mm, 
+    text width=18mm, 
     inner sep=-5pt,
+    align=center,
     text centered, 
     draw=black, 
     fill=green!30]
-\tikzstyle{tt} = [node distance=8.5mm]
+\tikzstyle{tt} = [node distance=7.5mm]
 \tikzstyle{arrow} = [thick,->,>=stealth]
 
 \begin{document}
@@ -46,7 +47,7 @@
 \draw [arrow] (start) -- (in1);
 
 \node (dec1) [tt,decision, below=of in1, yshift=-0.5cm] 
-   {\parbox{20mm}{\centering Amerikanske \emph{pancakes?}}} ;
+   {Amerikanske \emph{pancakes?}} ;
 \draw [arrow] (in1) -- (dec1);
 
 \node (skil) [process, left=of dec1] {Skil egga};
@@ -60,7 +61,7 @@
 \draw [arrow] (eggedosis) --(torr);
 
 \node (kefir) [tt,process, below=of torr] 
-   {tilsett litt surmjølk};
+   {Tilsett litt surmjølk};
 \draw [arrow] (torr) --(kefir);
 
 \node (meir) [tt,decision, below=of kefir] 
@@ -78,13 +79,13 @@
 \draw [arrow] (am1) --(am2);
 
 \node (am3) [process, below=of am2, yshift=-0.5cm] 
-    {\parbox{32mm}{Vend eggekvitane forsiktig inn i røra}} ;
+    {Vend eggekvitane forsiktig inn i røra} ;
 \draw [arrow] (am2) --(am3);
 
    \node (takke) at (am3-|dec1) [process] {Skru på takka} ;
    \draw [arrow] (am3) -- (takke);
 
-   \node (smor) at (takke-|meir) [process] {tilsett smelta smør};
+   \node (smor) at (takke-|meir) [process] {Tilsett smelta smør};
    \draw [arrow] (meir) -- node[anchor=west] {nei} (smor) ;
    \draw [arrow] (smor) -- (takke);
 
