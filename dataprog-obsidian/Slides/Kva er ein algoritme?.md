@@ -5,15 +5,30 @@ tags:
 
 # Kva er ein algoritme?
 
+note:
+*Algoritme* er et ord som vi hører stadig oftere brukt.
+Algoritmene får gjerne skylden for alle dårlige beslutninger i sosiale medier og kunstig intelligens, men helst uten en presis forklaring på hva det er for noe.
+
+Algoritmene fremstår lett, med rette eller urette, som en mystisk kraft som tar stadig større makt over livene våre.
+
 ---
 
 Algoritmen som ein oppskrift
 
 ---
 
+<!-- slide template="[[tpl-diagram]]" -->
+
+![[flowchart.svg]]
+
+::: credit
+:::
+
+note:
 Flytdiagram
 
 + Ulike representasjonar av algoritmen
+
 
 ---
 
