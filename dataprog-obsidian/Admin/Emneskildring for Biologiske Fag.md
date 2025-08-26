@@ -1,3 +1,9 @@
+---
+tags:
+  - emneskildring
+  - admin/emne
+---
+
 
 ## Utkast 2025
 
