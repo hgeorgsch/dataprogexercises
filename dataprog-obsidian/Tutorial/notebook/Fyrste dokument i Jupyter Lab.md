@@ -101,6 +101,62 @@ Legg merke til at python hugsar alle variablane frå forrige kodecelle.
 :::
 
 
+## Parenteser og presedens
+
+Parenteser går ofte i kluss, så det er verd å seia nokre ord om det med ein gong.
+Me bruker dei på same måte som i matematikken.
+\[  ( 5 + 3 ) \cdot 2 \]
+er ikkje det same som 
+\[  5 + 3 ( \cdot 2 ) \]
+
+::: {admonition} Refleksjon
+Korleis les du
+\[  5 + 3 \cdot 2\;\text{?} \]
+Som
+$( 5 + 3 ) \cdot 2$ eller $5 + 3 ( \cdot 2 )$?
+:::
+
+I python skriv me
+```{code-cell} ipython3
+print( (5+3)*2 )
+print( 5+(3*2) )
+```
+
+::: {admonition} Oppgåve
+Korleis reknar python $5 + 3 \cdot 2$?
+Prøv.
+:::
+
+Somme ting må skrivast om med ekstra parenteser i python, slik som kompliserte brøkar:
+\[ \frac{ 2\cdot(5+3) }{ 40-(7*5) } \]
+Det vert 
+```{code-cell} ipython3
+print( (2*(5+3))/(40-(7*5)) )
+```
+
+::: {admonition} Oppgåve
+Kva skjer om du sløyfer parentesar?
++ `2*(5+3)/(40-(7*5))`
++ `(2*(5+3))/40-(7*5)`
++ `2*(5+3)/40-(7*5)`
+Kvifor?
+:::
+
+::: {admonition} Oppgåve
+Korleis vil du skriva dette i python?
+\[ \frac{ (5+3)^2 }{ 5+3^2 } \]
+:::
+
+Enkelt sagt vert parenteser rekna innanfrå og ut.  
+Det inste parentesuttrykket vert rekna ut fyrst, og erstatta med resultatet, før neste vert rekna ut.
+
+Presedens tyder at nokre operatorar vert rekna ut før andre, dersom der ikkje er parenteser som
+styrer.  Det er relativt lett å hugsa dei grunnleggjande aritmetiske operatorane som me kjenner
+frå matematikken, der potens (`**`) kjem før multiplikasjon og divisjon (`*` og `/`) som kjem før 
+addisjon og subtraksjon (`+` og `-`).  Difor trong me ikkje parentes i uttrykket `m / h**2` for `bmi`.
+Når de lærer fleire operatorar, kan presedensreglane vera vanskelege å hugsa, og det er ofte
+enklare å setja nokre ekstra parentesar for å slippa å tenkja på presedens.
+
 ## Markdown
 
 Formatteringa av teksta er sikkert uvand for mange. Når me redigerer, ser me ikkje korleis teksta ser ut, men kodar som er ein del av teksta. Det er fyrst når me «køyrer» cella, med Shift-lineskift, at teksta vert vist pent formattert.
