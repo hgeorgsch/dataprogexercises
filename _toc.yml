@@ -1,0 +1,23 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro.md
+
+parts:
+  - caption: "Uke 1 - Spesialoppgave/intro"
+    chapters:
+      - file: markdown/Uke01/index.md
+        title: "Oversikt"
+      - file: markdown/Uke01/installasjon.md
+      - file: markdown/Uke01/Øving1.md
+      - file: notebooks/Uke01/first.ipynb
+        title: "Jupyter-eksempel"
+
+  - caption: "Uke 2 - Intro til Python"
+    chapters:
+      - file: markdown/Uke02/index.md
+  - caption: "Stikkordsregister"
+    chapters:
+      - file: genindex
+

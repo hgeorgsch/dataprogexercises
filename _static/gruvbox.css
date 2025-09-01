@@ -1,0 +1,968 @@
+:root {
+  /* Gruvbox palette */
+  --g-bg:        #282828;
+  --g-bg-soft:   #32302f;
+  --g-bg-alt:    #3c3836;
+  --g-fg:        #ebdbb2;
+  --g-muted:     #bdae93;
+  --g-yellow:    #d79921;
+  --g-orange:    #d65d0e;
+  --g-red:       #cc241d;
+  --g-green:     #98971a;
+  --g-aqua:      #689d6a;
+  --g-blue:      #458588;
+  --g-purple:    #b16286;
+  --g-gray:      #a89984;
+}
+
+/* ===== Base site colors ===== */
+body, .bd-main, .bd-header, .bd-sidebar {
+  background: var(--g-bg) !important;
+  color: var(--g-fg) !important;
+}
+
+/* Links */
+a, .bd-content a {
+  color: var(--g-aqua);
+  text-decoration: underline;
+}
+a:hover, .bd-content a:hover {
+  color: var(--g-purple);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--g-green) !important;
+}
+
+/* ===== Code blocks ===== */
+/*
+div.highlight pre, code, pre, .highlight {
+  background-color: var(--g-bg) !important;
+  color: var(--g-fg) !important;
+  border-radius: 4px;
+  font-size: 0.95em;
+  padding: 0.75em;
+}
+*/
+
+/* Inline code */
+/*
+code {
+  background-color: var(--g-bg) !important;
+  color: var(--g-orange) !important;
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+*/
+
+/* ===== Tables ===== */
+table, th, td {
+  border-color: var(--g-gray) !important;
+  color: var(--g-fg) !important;
+}
+
+/* ===== Selection highlight ===== */
+::selection {
+  background: var(--g-gray) !important;
+  color: var(--g-bg-alt) !important;
+}
+
+/* Bullet markers */
+ul li::marker, ol li::marker {
+  color: var(--g-yellow);
+}
+
+/* ===== Admonitions ===== */
+.admonition {
+  border-left: 6px solid var(--g-purple);
+  background: var(--g-bg-soft) !important;
+  color: var(--g-fg);
+  border-radius: 6px;
+  margin: 1em 0;
+  padding: 0.5em 1em 0.5em 1.2em;
+}
+.admonition-title {
+  color: var(--g-yellow);
+  font-weight: bold;
+}
+
+/* Specific admonition types */
+.admonition.note { border-left-color: var(--g-aqua); }
+.admonition.warning, .admonition.caution { border-left-color: var(--g-yellow); }
+.admonition.important, .admonition.attention { border-left-color: var(--g-red); }
+.admonition.tip, .admonition.hint { border-left-color: var(--g-green); }
+.admonition.error, .admonition.danger { border-left-color: var(--g-red); }
+
+/* ===== Sidebar / ToC ===== */
+.bd-sidebar {
+  background: var(--g-bg) !important;
+  color: var(--g-fg) !important;
+  border-right: 1px solid var(--g-bg-alt);
+}
+.bd-sidebar .nav > .toctree-l1 > a {
+  color: var(--g-yellow) !important;
+  font-weight: bold;
+  padding-left: 0.7em !important;
+}
+.bd-sidebar .nav > .toctree-l1 > a:hover,
+.bd-sidebar .nav > .toctree-l1.current > a {
+  background: var(--g-bg-alt) !important;
+  color: var(--g-green) !important;
+}
+.bd-sidebar .nav .toctree-l2 > a {
+  color: var(--g-muted) !important;
+  padding-left: 2em !important;
+}
+.bd-sidebar .nav .toctree-l2 > a:hover {
+  background: var(--g-bg-soft) !important;
+  color: var(--g-green) !important;
+}
+
+/* Sidebar scrollbar */
+.bd-sidebar ::-webkit-scrollbar {
+  width: 8px;
+  background: var(--g-bg);
+}
+.bd-sidebar ::-webkit-scrollbar-thumb {
+  background: var(--g-gray);
+  border-radius: 4px;
+}
+
+
+/* =========================
+   Primary sidebar (left)
+   ========================= */
+
+/* Column + inner containers */
+.bd-sidebar-primary,
+.bd-sidebar-primary .sidebar-primary,
+.bd-sidebar .sidebar-primary,
+.sidebar-primary__inner {
+  background: var(--g-bg) !important;
+  border-right: 1px solid var(--g-bg-alt);
+}
+
+/* Optional: brand/logo area at top */
+.sidebar-header,
+.sidebar-header a,
+.navbar-brand {
+  color: var(--g-yellow) !important;
+}
+.sidebar-header {
+  border-bottom: 1px solid var(--g-bg-alt);
+  padding-bottom: .4rem;
+}
+
+/* Section captions (e.g., “Contents”) */
+.bd-sidebar .caption,
+.bd-sidebar .sidebar-title {
+  color: var(--g-muted) !important;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  font-size: .75rem;
+  margin: .75rem .5rem .25rem;
+}
+
+/* Top-level items */
+.bd-sidebar .nav > .toctree-l1 > a,
+.bd-sidebar .nav > li.toctree-l1 > a {
+  color: var(--g-yellow) !important;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: .35rem .5rem;
+  margin: .1rem .25rem;
+  text-decoration: none;
+}
+.bd-sidebar .nav > .toctree-l1 > a:hover,
+.bd-sidebar .nav > li.toctree-l1 > a:hover {
+  background: var(--g-bg-alt) !important;
+  color: var(--g-green) !important;
+}
+
+/* Active/current top-level */
+.bd-sidebar .nav > .toctree-l1.current > a,
+.bd-sidebar .nav > .toctree-l1.active > a {
+  background: var(--g-bg-alt) !important;
+  color: var(--g-yellow) !important;
+}
+
+/* Sub-level links */
+.bd-sidebar .nav .toctree-l2 > a,
+.bd-sidebar .nav .toctree-l3 > a,
+.bd-sidebar .nav .toctree-l4 > a {
+  color: var(--g-muted) !important;
+  border-radius: 4px;
+  padding: .3rem .5rem .3rem 1.5rem;   /* indent */
+  margin: .05rem .25rem;
+}
+.bd-sidebar .nav .toctree-l2 > a:hover,
+.bd-sidebar .nav .toctree-l3 > a:hover,
+.bd-sidebar .nav .toctree-l4 > a:hover {
+  background: var(--g-bg-soft) !important;
+  color: var(--g-green) !important;
+}
+
+/* Active/current sub-level */
+.bd-sidebar .nav .current > a,
+.bd-sidebar .nav .active > a {
+  background: var(--g-bg-alt) !important;
+  color: var(--g-yellow) !important;
+  font-weight: 600;
+}
+
+/* Expand/collapse carets */
+.bd-sidebar .toctree-toggle,
+.bd-sidebar .pst-toggle {
+  color: var(--g-aqua);
+}
+.bd-sidebar .toctree-toggle:hover,
+.bd-sidebar .pst-toggle:hover {
+  color: var(--g-yellow);
+}
+
+/* Sidebar search (if shown in sidebar) */
+.bd-sidebar .bd-search {
+  background: var(--g-bg) !important;
+  border-bottom: 1px solid var(--g-bg-alt);
+  padding: .5rem .5rem .75rem;
+  margin-bottom: .25rem;
+}
+.bd-sidebar .bd-search .form-control {
+  background: var(--g-bg-alt);
+  color: var(--g-fg);
+  border: 1px solid var(--g-bg-alt);
+  border-radius: 6px;
+}
+.bd-sidebar .bd-search .form-control::placeholder {
+  color: var(--g-muted);
+}
+.bd-sidebar .bd-search .btn {
+  background: var(--g-bg-alt);
+  border: 1px solid var(--g-bg-alt);
+  color: var(--g-aqua);
+}
+.bd-sidebar .bd-search .btn:hover {
+  border-color: var(--g-yellow);
+  color: var(--g-yellow);
+}
+
+/* Remove bullets and tidy spacing */
+.bd-sidebar .nav ul,
+.bd-sidebar .nav ol { list-style: none; padding-left: 0; }
+
+/* Scrollbar (primary sidebar) */
+.bd-sidebar-primary ::-webkit-scrollbar { width: 8px; background: var(--g-bg); }
+.bd-sidebar-primary ::-webkit-scrollbar-thumb { background: var(--g-gray); border-radius: 4px; }
+
+
+/* =========================
+   Headings (sizes + spacing)
+   ========================= */
+.bd-content h1 {
+  font-size: clamp(2.0rem, 2.4vw, 2.6rem) !important;
+  color: var(--g-green) !important;
+  margin: 1.2em 0 0.5em;
+  line-height: 1.2;
+}
+.bd-content h2 {
+  font-size: clamp(1.6rem, 2.0vw, 2.1rem) !important;
+  color: var(--g-green) !important;
+  margin: 1.1em 0 0.5em;
+  line-height: 1.25;
+}
+.bd-content h3 {
+  font-size: clamp(1.35rem, 1.6vw, 1.7rem) !important;
+  color: var(--g-green) !important;
+  margin: 1em 0 0.5em;
+  line-height: 1.3;
+}
+.bd-content h4 {
+  font-size: 1.2rem !important;
+  color: var(--g-green) !important;
+  margin: 0.9em 0 0.4em;
+  line-height: 1.35;
+}
+.bd-content h5 {
+  font-size: 1.05rem !important;
+  color: var(--g-green) !important;
+  margin: 0.8em 0 0.3em;
+}
+.bd-content h6 {
+  font-size: 0.95rem !important;
+  color: var(--g-green) !important;
+  margin: 0.7em 0 0.3em;
+}
+
+/* Optional: tweak anchor icon visibility/contrast */
+.headerlink {
+  color: var(--g-muted);
+}
+.headerlink:hover {
+  color: var(--g-yellow);
+}
+
+/* =========================
+   Tables (pydata/sphinx)
+   ========================= */
+
+/* Scrollable container */
+.pst-scrollable-table-container {
+  background: var(--g-bg) !important;
+  border: 1px solid var(--g-bg-alt);
+  border-radius: 6px;
+  padding: 0.25rem;
+  overflow: auto; /* keep horizontal scroll if needed */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* Base table */
+.table {
+  width: 100%;
+  border-collapse: separate;         /* nicer with rounded corners */
+  border-spacing: 0;
+  color: var(--g-fg);
+  background: var(--g-bg-soft);
+  border-radius: 6px;
+  overflow: hidden;                  /* clip header corners */
+}
+
+/* Header row */
+.table thead th {
+  background: var(--g-bg-alt);
+  color: var(--g-yellow);
+  border-bottom: 2px solid var(--g-gray);
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  font-weight: 700;
+}
+
+/* Body cells */
+.table tbody td {
+  border-top: 1px solid var(--g-bg-alt);
+  padding: 0.55rem 0.75rem;
+  color: var(--g-fg);
+}
+
+/* Row striping: Sphinx emits row-odd/row-even classes */
+.table tbody tr.row-odd   { background: var(--g-bg-soft); }
+.table tbody tr.row-even  { background: #2b2a29; } /* subtle step from --g-bg-soft */
+
+/* Hover highlight */
+.table tbody tr:hover {
+  background: #353331;
+}
+
+/* Head cells with .head class (Sphinx adds .head on th) */
+.table .head {
+  color: var(--g-yellow);
+}
+
+/* Optional: compact tables variant */
+.table.compact tbody td,
+.table.compact thead th {
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+}
+
+/* Optional captions */
+table caption,
+.figcaption,
+div.caption {
+  color: var(--g-muted);
+  background: transparent;
+  padding: 0.4rem 0.2rem;
+}
+
+/* Links inside tables */
+.table a {
+  color: var(--g-aqua);
+  text-decoration: underline;
+}
+.table a:hover {
+  color: var(--g-purple);
+}
+
+/* =========================
+   Prev / Next navigation
+   ========================= */
+
+/* Container link boxes (left/right) */
+.prev-next-area a {
+  display: block;
+  background: var(--g-bg-soft);
+  border: 1px solid var(--g-bg-alt);
+  border-radius: 6px;
+  padding: 0.8rem 1rem;
+  color: var(--g-fg);
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s;
+}
+.prev-next-area a:hover {
+  background: var(--g-bg-alt);
+  border-color: var(--g-yellow);
+  text-decoration: none;
+}
+
+/* Info text wrapper */
+.prev-next-info {
+  display: flex;
+  flex-direction: column;
+}
+
+/* "previous"/"next" subtitles */
+.prev-next-subtitle {
+  color: var(--g-muted);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+/* Page title */
+.prev-next-title {
+  color: var(--g-yellow);
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0.15rem 0 0 0;
+}
+
+/* Optional: align prev/next boxes side-by-side with spacing */
+.prev-next-area {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.prev-next-area a.prev {
+  text-align: left;
+}
+.prev-next-area a.next {
+  text-align: right;
+}
+
+
+/* =========================
+   Search button styling (Gruvbox)
+   ========================= */
+
+.search-button__button {
+  background: var(--g-bg-alt) !important;
+  border: 1px solid var(--g-bg-alt) !important;
+  color: var(--g-fg) !important;
+  border-radius: 6px;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+/* Hover + focus */
+.search-button__button:hover,
+.search-button__button:focus {
+  background: var(--g-bg-soft) !important;
+  border-color: var(--g-yellow) !important;
+  color: var(--g-yellow) !important;
+}
+
+/* Icon color */
+.search-button__button svg {
+  color: var(--g-aqua);
+  width: 1em;
+  height: 1em;
+}
+
+/* Default text */
+.search-button__default-text {
+  color: var(--g-fg);
+}
+
+/* Keyboard shortcut badge */
+.search-button__kbd-shortcut {
+  display: inline-flex;
+  gap: 0.2rem;
+}
+.search-button__kbd-shortcut kbd {
+  background: var(--g-bg);
+  border: 1px solid var(--g-gray);
+  color: var(--g-muted);
+  border-radius: 4px;
+  padding: 0.05rem 0.25rem;
+  font-size: 0.75em;
+  line-height: 1.1;
+}
+
+
+/* =========================
+   Header utility buttons (Gruvbox)
+   ========================= */
+
+/* Base style for all small header buttons */
+.header-article-items .btn,
+.header-article-items .pst-navbar-icon {
+  background: var(--g-bg-soft) !important;
+  border: 1px solid var(--g-bg-soft) !important;
+  color: var(--g-fg) !important;
+  border-radius: 6px;
+  padding: 0.25rem 0.45rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+/* Hover/focus state */
+.header-article-items .btn:hover,
+.header-article-items .btn:focus,
+.header-article-items .pst-navbar-icon:hover,
+.header-article-items .pst-navbar-icon:focus {
+  background: var(--g-bg-alt) !important;
+  border-color: var(--g-yellow) !important;
+  color: var(--g-yellow) !important;
+}
+
+/* SVG icons in header buttons */
+.header-article-items .btn svg,
+.header-article-items .pst-navbar-icon svg {
+  width: 1em;
+  height: 1em;
+  color: var(--g-aqua);
+}
+
+/* Dropdown menu (download button) */
+.dropdown-menu {
+  background: var(--g-bg) !important;
+  border: 1px solid var(--g-bg-alt);
+  border-radius: 6px;
+  padding: 0.25rem 0;
+}
+.dropdown-menu .dropdown-item {
+  color: var(--g-fg) !important;
+}
+.dropdown-menu .dropdown-item:hover {
+  background: var(--g-bg-soft) !important;
+  color: var(--g-yellow) !important;
+}
+
+/* Download dropdown icons */
+.dropdown-menu svg {
+  color: var(--g-aqua);
+}
+
+/* Theme switch button icons */
+.theme-switch {
+  color: var(--g-yellow);
+}
+.theme-switch[data-mode="dark"] {
+  color: var(--g-purple);
+}
+.theme-switch[data-mode="auto"] {
+  color: var(--g-aqua);
+}
+
+
+/* =========================
+   Page-level ToC ("On this page")
+   ========================= */
+
+.page-toc.tocsection.onthispage {
+  background: var(--g-bg-soft);
+  color: var(--g-yellow);
+  border: 1px solid var(--g-bg-alt);
+  border-radius: 6px;
+  padding: 0.4rem 0.6rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Icon styling */
+.page-toc.tocsection.onthispage svg {
+  color: var(--g-aqua);
+  width: 1em;
+  height: 1em;
+}
+
+/* Hover / focus (if clickable) */
+.page-toc.tocsection.onthispage:hover {
+  background: var(--g-bg-soft);
+  border-color: var(--g-yellow);
+  color: var(--g-yellow);
+}
+
+/* Optional: make the text more distinct */
+.page-toc.tocsection.onthispage::after {
+  content: "";
+  flex-grow: 1;
+  border-bottom: 1px dashed var(--g-gray);
+  margin-left: 0.4rem;
+  opacity: 0.4;
+}
+
+
+
+/* =========================
+   Secondary sidebar (top-right ToC area)
+   ========================= */
+
+/* The column itself */
+.sidebar-secondary {
+  background: var(--g-bg) !important;
+  border-left: 1px solid var(--g-bg-alt);
+}
+.sidebar-secondary__inner,
+.sidebar-secondary-items {
+  background: var(--g-bg) !important;
+}
+
+/* "On this page" header badge (you added earlier) */
+.page-toc.tocsection.onthispage {
+  background: var(--g-bg-alt);
+  color: var(--g-yellow);
+  border: 1px solid var(--g-bg-alt);
+  border-radius: 6px;
+  padding: 0.4rem 0.6rem;
+  display: flex; align-items: center; gap: .4rem;
+  margin: 0 0 .5rem 0;
+}
+.page-toc.tocsection.onthispage svg { color: var(--g-aqua); }
+
+/* The list container under the badge */
+.bd-toc-nav.page-toc {
+  background: var(--g-bg-soft);
+  border: 1px solid var(--g-bg-alt);
+  border-radius: 6px;
+  padding: .4rem .6rem;
+}
+
+/* Links inside the page ToC */
+.bd-toc-nav.page-toc .nav-link {
+  color: var(--g-muted);
+  padding: .2rem .25rem;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.bd-toc-nav.page-toc .nav-link:hover {
+  background: var(--g-bg-alt);
+  color: var(--g-green);
+}
+.bd-toc-nav.page-toc .nav-item.active > .nav-link {
+  background: var(--g-bg-alt);
+  color: var(--g-yellow);
+  font-weight: 600;
+}
+
+
+
+
+/* =========================
+   Header bar background + chrome
+   ========================= */
+
+/* The whole header strip */
+.header-article,
+.bd-header,
+.bd-header .navbar {
+  background: var(--g-bg) !important;
+  border-bottom: 1px solid var(--g-bg-alt) !important;
+}
+
+/* The flex row that holds the buttons (your pasted node) */
+.header-article__inner,
+.header-article-items {
+  background: var(--g-bg) !important;
+}
+
+/* Left + right groups */
+.header-article-items__start,
+.header-article-items__end,
+.header-article-item {
+  background: transparent !important; /* keep groups transparent over the bar */
+}
+
+/* Buttons in the header (keeps your existing look) */
+.header-article .btn,
+.header-article .pst-navbar-icon {
+  background: var(--g-bg-alt) !important;
+  border: 1px solid var(--g-bg-alt) !important;
+  color: var(--g-fg) !important;
+  border-radius: 6px;
+}
+
+/* Icons inside header buttons */
+.header-article .btn svg,
+.header-article .pst-navbar-icon svg {
+  color: var(--g-aqua);
+}
+
+/* Hover/focus feedback */
+.header-article .btn:hover,
+.header-article .btn:focus,
+.header-article .pst-navbar-icon:hover,
+.header-article .pst-navbar-icon:focus {
+  background: var(--g-bg-soft) !important;
+  border-color: var(--g-yellow) !important;
+  color: var(--g-yellow) !important;
+}
+
+/* Download dropdown — override Bootstrap's .dropdown-menu-dark */
+.header-article .dropdown-menu,
+.header-article .dropdown-menu-dark {
+  background: var(--g-bg) !important;
+  border: 1px solid var(--g-bg-alt) !important;
+}
+.header-article .dropdown-item {
+  color: var(--g-fg) !important;
+}
+.header-article .dropdown-item:hover {
+  background: var(--g-bg-soft) !important;
+  color: var(--g-yellow) !important;
+}
+.header-article .dropdown-menu svg {
+  color: var(--g-aqua);
+}
+
+/* Tooltips (so they’re readable on dark bg) */
+.tooltip-inner {
+  background: var(--g-bg-alt) !important;
+  color: var(--g-fg) !important;
+  border: 1px solid var(--g-bg-alt);
+}
+.bs-tooltip-auto[data-popper-placement^="bottom"] .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^="top"] .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^="left"] .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^="right"] .tooltip-arrow::before {
+  border-color: var(--g-bg-alt) !important;
+}
+
+
+/* Make sure search + menu bar match */
+.bd-header,
+.bd-header .navbar,
+.bd-header-article {
+  background-color: var(--g-bg) !important;
+}
+/* Apply Gruvbox base to ANY code block */
+:is(.highlight, .bd-content pre) {
+  background: var(--g-bg) !important;
+  color: var(--g-fg) !important;
+  border-radius: 6px;
+  padding: .75rem;
+  overflow: auto;
+}
+
+/* Pygments tokens inside either .highlight or bare <pre> */
+:is(.highlight, .bd-content pre) :is(.c, .ch, .cm, .cs, .c1) { color: var(--g-gray); font-style: italic; }
+:is(.highlight, .bd-content pre) .err { color: var(--g-red); }
+:is(.highlight, .bd-content pre) :is(.k, .kc, .kd, .kn, .kp, .kr) { color: var(--g-purple); font-weight: 600; }
+:is(.highlight, .bd-content pre) .kt { color: var(--g-yellow); }
+:is(.highlight, .bd-content pre) .o { color: var(--g-orange); }
+:is(.highlight, .bd-content pre) :is(.m, .mb, .mf, .mh, .mi, .mo, .il) { color: var(--g-orange); }
+:is(.highlight, .bd-content pre) :is(.s, .sa, .sb, .sc, .sd, .s1, .s2, .se, .sh, .si, .sr, .ss, .sx) { color: var(--g-green); }
+:is(.highlight, .bd-content pre) .na { color: var(--g-blue); }
+:is(.highlight, .bd-content pre) .nb { color: var(--g-yellow); }
+:is(.highlight, .bd-content pre) .bp { color: var(--g-yellow); }
+:is(.highlight, .bd-content pre) .nc { color: var(--g-fg); font-weight: 600; }
+:is(.highlight, .bd-content pre) .no { color: var(--g-orange); }
+:is(.highlight, .bd-content pre) .nd { color: var(--g-aqua); }
+:is(.highlight, .bd-content pre) .ne { color: var(--g-red); }
+:is(.highlight, .bd-content pre) .nf { color: var(--g-aqua); }
+:is(.highlight, .bd-content pre) .nn { color: var(--g-yellow); }
+:is(.highlight, .bd-content pre) .nt { color: var(--g-purple); }
+:is(.highlight, .bd-content pre) :is(.nv, .vc, .vg, .vi) { color: var(--g-fg); }
+:is(.highlight, .bd-content pre) .p { color: var(--g-fg); }
+:is(.highlight, .bd-content pre) .w { color: var(--g-fg); }
+
+/* Optional: monospace + size */
+:is(.highlight, .bd-content pre),
+:is(.highlight, .bd-content pre) code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+/* =========================
+   sphinx-design <details> dropdowns
+   ========================= */
+
+/* Card container */
+.sd-dropdown.sd-card {
+  background: var(--g-bg-soft) !important;
+  border: 1px solid var(--g-bg-alt) !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+  overflow: hidden;
+}
+
+/* Summary header (the clickable bar) */
+.sd-dropdown .sd-summary-title.sd-card-header {
+  background: var(--g-bg-alt) !important;
+  color: var(--g-fg) !important;
+  border-bottom: 1px solid var(--g-bg-alt) !important;
+  padding: 0.5rem 0.75rem !important;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+/* Title text color */
+.sd-dropdown .sd-summary-text {
+  color: var(--g-yellow) !important;
+}
+
+/* Chevron icon */
+.sd-dropdown .sd-summary-chevron-right svg {
+  color: var(--g-aqua) !important;
+  transition: transform .15s ease;
+}
+
+/* Rotate chevron when open */
+.sd-dropdown[open] .sd-summary-chevron-right svg {
+  transform: rotate(90deg);
+}
+
+/* Content body */
+.sd-dropdown .sd-summary-content.sd-card-body {
+  background: var(--g-bg-soft) !important;
+  color: var(--g-fg) !important;
+  padding: 0.75rem !important;
+}
+
+/* Lists and paragraphs inside content */
+.sd-dropdown .sd-card-text,
+.sd-dropdown .sd-card-body p,
+.sd-dropdown .sd-card-body li {
+  color: var(--g-fg) !important;
+}
+
+/* Code blocks inside dropdowns */
+.sd-dropdown .highlight,
+.sd-dropdown pre {
+  background: var(--g-bg) !important;
+  color: var(--g-fg) !important;
+  border-radius: 6px;
+  padding: .6rem .7rem;
+}
+
+/* Copy button in dropdown code blocks */
+.sd-dropdown .copybtn {
+  background: var(--g-bg-alt) !important;
+  border: 1px solid var(--g-bg-alt) !important;
+}
+.sd-dropdown .copybtn:hover { border-color: var(--g-yellow) !important; }
+.sd-dropdown .copybtn svg { stroke: var(--g-aqua) !important; }
+
+/* Gruvbox-style dropdown */
+.sd-dropdown.sd-card {
+  background: var(--g-bg) !important;
+  border: 1px solid var(--g-bg-alt) !important;
+  border-radius: 6px;
+  color: var(--g-fg) !important;
+}
+
+/* Header (summary line) */
+.sd-dropdown .sd-summary-title {
+  background: var(--g-bg-soft) !important;
+  color: var(--g-muted) !important;
+  font-weight: 600;
+  padding: 0.4em 0.8em;
+  border-bottom: 1px solid var(--g-bg-alt) !important;
+}
+
+/* Chevron icon */
+.sd-dropdown .sd-summary-state-marker svg {
+  fill: var(--g-muted) !important;
+}
+.sd-dropdown[open] .sd-summary-state-marker svg {
+  fill: var(--g-yellow) !important;
+  transform: rotate(90deg);
+  transition: transform 0.2s ease;
+}
+
+/* Dropdown content */
+.sd-dropdown .sd-summary-content {
+  background: var(--g-bg) !important;
+  color: var(--g-fg) !important;
+  padding: 0.8em;
+}
+
+
+/* Force Gruvbox border colors on tab content panes */
+.sd-tab-set.docutils > .sd-tab-content.docutils {
+  border: 1px solid var(--g-bg-alt) !important;
+  border-top: none !important; /* so it merges cleanly with the tab labels */
+  background: var(--g-bg) !important;
+  color: var(--g-fg) !important;
+}
+
+/* Optional: style the tab labels to match Gruvbox */
+.sd-tab-set.docutils > label.sd-tab-label {
+  background: var(--g-bg-soft) !important;
+  color: var(--g-muted) !important;
+  padding: 0.4em 0.8em;
+  border: 1px solid var(--g-bg-alt) !important;
+  border-bottom: none !important;
+}
+
+.sd-tab-set.docutils > input:checked + label.sd-tab-label {
+  background: var(--g-bg) !important;
+  color: var(--g-yellow) !important;
+  font-weight: 600;
+}
+
+/* Kill default shadows */
+.sd-tab-set.docutils.sd-shadow-sm,
+.sd-tab-set.docutils.sd-shadow {
+  box-shadow: none !important;
+}
+/* ===== Copy button inside tabs ===== */
+.sd-tab-set.docutils > .sd-tab-content.docutils .copybtn {
+  position: absolute;              /* keep it in the code block corner */
+  top: .4rem;
+  right: .4rem;
+  background: var(--g-bg-alt) !important;
+  border: 1px solid var(--g-bg-alt) !important;
+  border-radius: 6px;
+  padding: .2rem .35rem;
+  opacity: .85;
+  transition: opacity .15s ease, border-color .15s ease;
+  z-index: 2;
+}
+
+.sd-tab-set.docutils > .sd-tab-content.docutils .copybtn:hover {
+  opacity: 1;
+  border-color: var(--g-yellow) !important;
+}
+
+/* Tabler/inline SVG inside the copy button */
+.sd-tab-set.docutils > .sd-tab-content.docutils .copybtn svg {
+  stroke: var(--g-aqua) !important;
+}
+
+/* Only show the button when hovering the code block (optional & tidy) */
+.sd-tab-set.docutils > .sd-tab-content.docutils .highlight,
+.sd-tab-set.docutils > .sd-tab-content.docutils pre {
+  position: relative;  /* anchor for absolute button */
+}
+.sd-tab-set.docutils > .sd-tab-content.docutils .copybtn {
+  display: none;
+}
+.sd-tab-set.docutils > .sd-tab-content.docutils .highlight:hover .copybtn,
+.sd-tab-set.docutils > .sd-tab-content.docutils pre:hover .copybtn {
+  display: inline-flex;
+}
+
+/* Tooltip on dark bg (pydata copy tooltip uses .o-tooltip--left etc.) */
+.o-tooltip--left[data-tooltip],
+.o-tooltip--right[data-tooltip],
+.o-tooltip--top[data-tooltip],
+.o-tooltip--bottom[data-tooltip] {
+  --o-tooltip-bg: var(--g-bg-alt);
+  --o-tooltip-fg: var(--g-fg);
+}
