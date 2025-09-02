@@ -88,6 +88,9 @@ Vi skal stort sett arbeide med datasett som vi importerter fra andre kilder.
 Når vi laster CSV-filer i pandas med `read_csv`-funksjonen kan vi oppgi hvordan filen er formatter. 
 Her sier vi at tegnkodingen er UTF-8, at skilletegnet mellom søylene er tabulator, og at komma brukes som desimaltegn. Hvis dette utelates brukes UTF-8, komma som skilletegn og punktum som desimaltegn.
 
+Vi må altså vite en del om filen for å bruke den riktig i *pandas*.
+Det er kanskje ikke like brukervennlig som vi er vant til, men til gjengjeld kan vi være trygge på at vi vet hva vi gjør.  Det hadde vært mulig å skrive *pandas* slik at den hadde klart å gjette på tegnsett og skilletegn *mesteparten* av tiden, men da ville den også stundom ha gjort feil. Den risikoen vil vi helst unngå.
+
 ---
 
 <!-- slide template="[[tpl-smalltext]]" -->
@@ -131,7 +134,9 @@ Med pandas kan vi manipulere våre *data frames* på mange ulike måter.  Vi kan
 
 ```python
 In [7]: col = df["kr/kg"]
+```
 
+```python
 In [8]: col
 Out[8]: 
 0       30.98
@@ -151,6 +156,7 @@ In [9]: type(col)
 Out[9]: pandas.core.series.Series
 
 ```
+<!-- element class="fragment" -->
 
 ::: credit
 :::
@@ -163,6 +169,8 @@ Resultatet er en ny datatype, *Series*, som er den andre sentrale typen i pandas
 Der *DataFrame* er en todimensjonal tabell, er *Series* éndimensjonal som en liste. Hvis vi bare observerer én variabel, kan det være naturlig å bruke *Series*. Når vi observerer flere variabler, trenger vi *DataFrame*.
 
 Til forskjell fra vanlige lister inneholder derimot *Series* metadata, og vi ser at indeksene vises med `print`, som de gjør for *DataFrame*.
+
+Merk at elementene beholder sine indekser om vi tar et utdrag av serien.  De er dermed ikke posisjonsnummer som vi ville ha måttet bruke med vanlige lister.
 
 ---
 
@@ -322,20 +330,6 @@ Ved siden av indeksering, trenger vi ofte å hente ut delmengder av datasettet e
 For å gå videre med et rent og pent eksempel på paneldata, kan vi hente ut et datasett for bare én varegruppe. Igjen bruker vi klammeparenteser, men i stedet for en indeks, gir vi et kriterium, f.eks. at varegruppen i datasettet må være lik «fersk oppalen laks».
 
 ---
-<!-- slide template="[[tpl-quote]]" -->
-
-![[table1.svg|600]]
-::: credit
-:::
-
----
-<!-- slide template="[[tpl-quote]]" -->
-
-![[table2.svg|800]]
-::: credit
-:::
-
----
 
 <!-- slide template="[[tpl-smalltext]]" -->
 
@@ -387,6 +381,20 @@ elementene som svarer til sann i serien og dropper dem som
 som svarer til usann.
 
 Dette er en kraftfull finesse, med erfaring vil vi se flere muligheter.
+
+---
+<!-- slide template="[[tpl-quote]]" -->
+
+![[table1.svg|600]]
+::: credit
+:::
+
+---
+<!-- slide template="[[tpl-quote]]" -->
+
+![[table2.svg|800]]
+::: credit
+:::
 
 ---
 
