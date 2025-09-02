@@ -13,7 +13,7 @@ tags:
 ![[Panda_closeup.jpg|480]]
 
 ::: credit
-By Jcwf, CC BY-SA 3.0, via
+Bilete ved Jcwf, CC BY-SA 3.0, via
 [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=836272)
 :::
 
@@ -323,6 +323,25 @@ For å gå videre med et rent og pent eksempel på paneldata, kan vi hente ut et
 
 ---
 
+| index | varegruppe | veke | data |
+| -:  | ---------- | --- | :-: |
+| 0        | Fersk laks  | 2000U01  | $A_0$ |
+| $\vdots$ | Fersk laks  | $\vdots$ | $\vdots$ |
+| 1294     | Fersk laks  | 2024U43  | $A_n$ |
+| 1295     | Frosen laks | 2000U01  | $B_0$ |
+| $\vdots$ | Frosen laks | $\vdots$ | $\vdots$ |
+| 2589     | Frosen laks | 2024U43  | $B_n$ |
+
+---
+
+|    index | veke     |  fersk   |  frosen  |
+| -------: | -------- | :------: | :------: |
+|        0 | 2000U01  |  $A_0$   |  $B_0$   |
+| $\vdots$ | $\vdots$ | $\vdots$ | $\vdots$ |
+|     1294 | 2024U43  |  $A_n$   |  $B_n$   |
+
+---
+
 <!-- slide template="[[tpl-smalltext]]" -->
 
 
@@ -454,7 +473,7 @@ plt.plot( df1["kr/kg"] )
 ```
 
 note:
-Søylene i datasettet er det grunnleggende objektet for dataanalyse.
+Søylene i datasettet er det grunnleggende det objektet for dataanalyse.
 Hver søyle er en serie med observasjoner av samme variabel.
 
 Vi kan hente ut slike enkeltsøyler og bruke dem i funksjoner fra andre
