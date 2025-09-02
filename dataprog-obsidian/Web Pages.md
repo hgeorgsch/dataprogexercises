@@ -4,6 +4,7 @@ tags:
 ---
 
 + URL for kursporteføljen https://iirevu.org.ntnu.no/
++ [IIRA2001 Jupyter Book](https://jonajh.folk.ntnu.no/IIRA2001H25/intro.html)
 + Innhold ligg på /home/groupswww/iirevu på login.ansatt.ntnu.no
 	+ /home/groups/iirevu er tilgjengeleg for intern deling
 	+ ) hvor unix-gruppe settes til overnevnte gruppe. Gruppa får skriverettigheter. Det kjøres en jevnlig jobb som rydder opp i rettighetene hvis disse settes feil. Det kan være lurt å sette umask g+w for prosesser som skal legge til filer og kataloger.
