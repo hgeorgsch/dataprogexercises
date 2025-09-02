@@ -2,9 +2,7 @@
 tags:
   - lecture/video/perspective
 ---
-
 <!-- slide template="[[tpl-quote-header]]" -->
-
 # Filbehandling
 
 ![[1328101950_Network-Folder.png|480]]
@@ -18,7 +16,7 @@ note:
 Dere er helt sikkert vant til å arbeide med filer.
 Dere har Word-filer som dere kan åpne med MS-Word, Excel-filer som dere kan åpne med MS-Excel, og kanskje bilder som dere åpner med et høvelig billedprogram.
 Mange filtyper er uløselig knyttet til et bestemt program.
-Andre programmer kan ikke lese den samme filen, og det eneste vi vet om innholdet i filen, er det som programmet viser oss.
+Andre programmer kan ikke lese den samme filen, og det eneste vi vet om innholdet i filen, er det som programmet vil vise oss.
 
 Det vi skal snakke om her er filer som er lavet for å deles mellom ulike programmer som gjør ulike ting; om filer der vi har selv trenger å se hva filen faktisk inneholder, og hvordan vi kan manipulere innholdet i programkode som vi skriver selv.
 
@@ -26,13 +24,13 @@ Det vi skal snakke om her er filer som er lavet for å deles mellom ulike progra
 
 <!-- slide template="[[tpl-quote-header]]" -->
 
-![[DDR2_ram_mounted.jpg|400]]
 
 | Primærminne | Langtidsminne |
 | ----------- | ------------- |
 | RAM         | Disk          |
 | Variabler   | Filer         |
 
+![[DDR2_ram_mounted.jpg|400]]
 
 ::: credit
 Bilete frå 
@@ -43,17 +41,12 @@ under GFDL 1.2,
 note:
 Vi skiller gjerne mellom primærminne og sekundærminne i maskinen.
 
-Primærminnet er raskt med plass til mange milliarder tegn.
-Sekundærminnet er tregere, men har gjerne plass til hundrede eller tusen
-ganger mer data.
-
 Vi har sett hvordan vi kan arbeide med variabler som er lagret i primærminnet,
 men denne informasjonen er tapt når strømmen går.
 Informasjon som vi skal spare over tid, må lagres i sekundærminnet eller langtidsminnet,
 og her er informasjonen organisert i filer, og ikke i variabler.
 
 Hver fil er et objekt som vi stort sett behandler samlet som en enhet.
-
 
 ---
 
@@ -64,7 +57,7 @@ Hver fil er et objekt som vi stort sett behandler samlet som en enhet.
 
 **Tekstfiler**
 
-```
+```txt
 Den glade vandrer kalles jeg,
 for sorgløs går jeg på,
 den endeløse landevei,
@@ -78,7 +71,7 @@ der liker jeg å gå.
 ::: rightimage
 
  **... og binærfiler**
-```
+```txt
 6544 206e 6c67 6461 2065 6176 646e 6572
 2072 616b 6c6c 7365 6a20 6765 0a2c 6f66
 2072 6f73 6772 c36c 73b8 6720 a5c3 2072
@@ -102,7 +95,7 @@ Tekstfiler er de enkleste å arbeide med, fordi de er kodet med vanlige tegn og 
 Ofte er de kodet slik at vi kan forstå hva de betyr, dersom vi åpner dem i en teksteditor.
 Binærfiler er vilkårlige kombinasjoner av 0 og 1. Uten ytterligere informasjon om filformatet, har vi ikke håp om å forstå innholdet.
 
-Foilen viser binærfilen som heksadesimaler, som er vanlig fordi er mer kompakt.  Heksadesimaler bruker 16 sifre: 0-9 og A-F, slik at fire *bits* blir skrevet sammen som ett tegn med verdier fra 0-15, men det er en digresjon. Poenget er at disse symbolene kan bety hva som helst og de er ikke ment for menneskelige lesere.
+Foilen viser binærfilen som heksadesimaler, som er vanlig fordi det er mer kompakt.  Heksadesimaler bruker 16 sifre: 0-9 og A-F, slik at fire *bits* blir skrevet sammen som ett tegn med verdier fra 0-15, men det er en digresjon. Poenget er at disse symbolene kan bety hva som helst og de er ikke ment for menneskelige lesere.
 
 ---
 
@@ -122,9 +115,11 @@ dato,DKK,GBP
 ```
 
 note:
-CSV-filene som vi skal arbeide mye med, er tekstfiler. De inneholder data som kan være vanskelig eller stundom umulig å forstå uten kontekst, men grunnelementet er bokstaver og tall som gir oss en mulighet.  Søyleoverskriftene forteller oss at vi ser på datoer, danske kroner og britiske pund, og i resten av linjene kan vi ganske riktig kjenne igjen både datoer og desimaltall som kan være valutakurser.
+CSV-filene som vi skal arbeide mye med, er tekstfiler. De inneholder data som kan være vanskelig eller stundom umulig å forstå uten kontekst, men grunnelementet er bokstaver og tall som gir oss en mulighet til å se og forstå hva som foregår under panseret.  
 
-Jeg sier *kan være* for litt kontekst trenger vi for å være sikre, men vi har en god hypotese bare ved å se på filen. Det hadde vi ikke hatt med det samme datasettet i binærformat.
+I eksempelet på skjermen ser vi søyleoverskrifter som forteller oss at vi ser på datoer, danske kroner og britiske pund, og i resten av linjene kan vi ganske riktig kjenne igjen både datoer og desimaltall som kan være valutakurser.
+
+Jeg sier *kan være*, for litt kontekst trenger vi for å være sikre, men vi har en god hypotese bare ved å se på filen. Det hadde vi ikke hatt med det samme datasettet i binærformat.
 
 ---
 	
@@ -139,11 +134,12 @@ visa nautilus
 note:
 Uansett hva slags maskin du har, kan du sikkert finne en filbehandler.
 Denne maskinen kjører Gnome, og filbehandleren heter nautilus.
-Her vises *hele* filnavnet, som er nyttig informasjon for oss.
-Det kan tenkes at din maskin skjuler den delen av filnavnet markerer filtypen.
-I så fall vil jeg anbefale å bla i instillingene og se om du kan skru den funksjonen av, slik at du ser hva vi jobber med.
+Her vises *hele* filnavnet, som er nyttig informasjon for oss.  Slutten av filnavnet, som .txt eller .jpeg gir en pekepinn på hva slags fil det er.
 
-La oss se på CSV-filen først.  Hvis vi dobbelklikker vil maskinen åpne den i et regneark.
+Det kan tenkes at din maskin skjuler den delen av filnavnet markerer filtypen.
+I så fall vil jeg anbefale å bla i instillingene og se om du kan skru den funksjonen av, slik at du også ser hele filnavnet.
+
+La oss se på CSV-filen først.  Når jeg dobbelklikker, åpner maskinen filen i et regneark.
 Den spør om noen konfigureringsalternativ, men det skal vi komme tilbake til.  Hvis vi
 bare klikker videre så ser det vel ok ut.
 
@@ -153,6 +149,7 @@ Teksteditor
 
 note:
 Det jeg hadde lyst til å vise er at vi kan åpne samme fil med andre programmer.  Tilbake i filbehandleren kan vi høyreklikke.  Vi ser at førstevalget er å åpne i regnearket, men vi kan også velge *open with* og velge program, f.eks. *Text Editor*.
+
 Fordi CSV er et tekstformat, kan *Text Editor* vise oss nøyaktig hva som står i filen. 
 Hvis vi ser på en enkelt linje, ser vi at den er én observasjon av en valutakurs.  Linjen inneholder mange variabler, som her er skilt med semikolon.  Navn på valutaen, danske kroner; valutaen som kursen er oppgitt i, norske kroner, tidspunktet 14:15 CET, datoen og selve kursen, samt en del verdier som sikkert er viktige for dem som driver med valutahandel.
 
@@ -174,6 +171,7 @@ Rekneark
 
 note:
 Hvis vi går tilbake til regnearket, ser vi at vi gjorde en feil.  Her har vi delt opp kronebeløpet og ørebeløpet i hver sin søyle.  Hvis vi lukker ned og prøver en gang til, ser vi hvorfor.
+
 Fordi ulike skilletegn blir brukt, lar programmet oss velge, og i utgangspunktet leses både semikolon, komma og tabulator som skilletegn, men vi kan ta vekk de som ikke passer.
 
 Når vi åpner filen uten komma som skilletegn, ser vi også at desimalkomma er tolket riktig,
@@ -182,7 +180,7 @@ og vises som punktum.
 Ulike programmer gjør dette forskjellig.  I Excel kan det være at du ikke får opp konfigurasjonsdialogen når du åpner en CSV-fil fra filbehandleren.  I så fall kan du prøve å starte Excel med en ny og tom fil, og så bruke «åpne» eller «import» i Fil-menyen.
 
 Når vi vet å lese og studere filen i en teksteditor, er det ofte lett å skjønne hva
-som er gått galt hvis filen ikke gir mening i andre programmer.  Der er et utall ting
+som er gått galt når filen ikke gir mening i andre programmer.  Der er et utall ting
 som kan gå galt.  Noen er lette å forstå, andre forstår man med mer erfaring.
 
 ---
@@ -192,10 +190,12 @@ genuttrykk_mus_data.txt
 ```
 
 note:
-Vi skal se på en datafil til. Den heter `.txt` og filbehandleren vil helst åpne den i teksteditoren.
-VI ser dog at prinsippet her er det samme som i CSV-filen.  Det er en tabell, med en observasjon per linje, men skilletegnet denne gangen er mellomrom.  Datasettet er genuttrykk for ulike vevstyper i mus.  Dere ser at den siste søylen er bokstaver og ikke en tallverdi.  Det er navnet på det observerte genet.
+Vi skal se på en datafil til. Den har navn på `.txt` og filbehandleren vil helst åpne den i teksteditoren.
+Vi ser dog at prinsippet her er det samme som i CSV-filen.  Det er en tabell, med en observasjon per linje, men skilletegnet denne gangen er mellomrom.  Datasettet er genuttrykk for ulike vevstyper i mus.  Dere ser at den siste søylen er bokstaver og ikke en tallverdi.  Det er navnet på det observerte genet.
 
 Vi kan åpne denne filen også i regnearket.  Vi må bare velge mellomrom som skilletegn.
+
+Vi velger *open with* og ser på forhåndsvisningen nederst.  Når vi endrer skilletegn, ser vi at søylene skilles riktig.
 
 ---
 
@@ -208,7 +208,7 @@ Dette ser helt fælt ut fordi JPEG er et binærformat,
 Vi ser bare nogen få strenger innimellom.  JFIF er navnet på filformatet, som inneholder en del metadata i tillegg til selve bildet som er kodet som JPEG.
 
 Hvis du er usikker på om en fil er binær eller i tekstformat, så er der ingen
-fare i åpne den i teksteditoren for å se.  Bare pass på at du ikke lagrer den ...
+fare i åpne den i teksteditoren for å se.  Bare pass på at du ikke lagrer og overskriver den ...
 
 ---
 
@@ -247,7 +247,7 @@ Identifikasjon av filtype
 :::
 
 note:
-Maskinen vil ofte prøve å identifisere filtypen og åpne den i et egnet program.
+Maskinen vil ofte prøve selv å identifisere filtypen og åpne den i et egnet program.
 Av og til er det meget brukervennlig.
 Andre ganger tar maskinen feil av formatet, og skaper masse problemer for oss.
 
@@ -268,14 +268,14 @@ En fil som overføres over epost eller på andre måter, trenger ikke å ha et n
 ---
 <!-- slide template="[[tpl-smalltext]]" -->
 
-| MIME                                                                    | *Extensions*         | Format             |
-| :---------------------------------------------------------------------- | -------------------- | :----------------- |
-| image/jpeg                                                              | jpeg jpg jpe jfif    | JFIF               |
-| text/csv                                                                | csv                  | CSV                |
-| text/plain                                                              | txt text pot brf srt | Ren tekst          |
-| application/msword                                                      | .doc                 | MS-Word            |
-| application/vnd.openxmlformats-officedocument.wordprocessingml.document | docx                 | MS-Word            |
-| application/octet-stream                                                | .bin *m.fl.*         | Vilkårlig Binærfil |
+| MIME                                                                    | *Extensions*              | Format             |
+| :---------------------------------------------------------------------- | ------------------------- | :----------------- |
+| image/jpeg                                                              | .jpeg .jpg .jpe .jfif     | JFIF               |
+| text/csv                                                                | .csv                      | CSV                |
+| text/plain                                                              | .txt .text .pot .brf .srt | Ren tekst          |
+| application/msword                                                      | .doc                      | MS-Word            |
+| application/vnd.openxmlformats-officedocument.wordprocessingml.document | .docx                     | MS-Word            |
+| application/octet-stream                                                | .bin *m.fl.*              | Vilkårlig Binærfil |
 ::: credit
 :::
 
@@ -289,8 +289,8 @@ Bl.a. blir `application/octet-stream` ofte brukt, selv om det ikke sier andet en
 Et andet problem er at det er maskinen som sender filen, som bestemmer hvilken MIME-type
 den skal ha, og det må altså gjette på filtypen.  Ikke så sjelden gjetter den feil.
 
-Dessuten er det litt hjelp i korrekt filtype dersom din maskin, som mottar filen, ikke kjenner formatet.  Hvis din maskin er i overkant hjelpsom, kan mye gå galt når den prøver å få filen til å passe i et kjent format som likevel ikke passer.
-Det er derfor jeg synes det er viktig at dere blir komfortable både med å åpne ukjente filer for selv å se hva det er for noe, med å endre filnavn og filtype selv, og med å velge hvilket program dere ønsker å åpne filen i.  Ingen klarer å få noe fornuftig ut av hva som helst, men det er verd et forsøk, og ofte lærer man noe nytt på veien.
+Dessuten er det lite hjelp i korrekt filtype dersom din maskin, som mottar filen, ikke kjenner formatet.  Hvis din maskin er i overkant hjelpsom, kan mye gå galt når den prøver å få filen til å passe i et kjent format som likevel ikke passer.
+Det er derfor jeg synes det er viktig at dere blir komfortable både med å åpne ukjente filer for selv å se hva det er for noe, med å endre filnavn og filtype selv, og med å velge hvilket program dere ønsker å åpne filen i.  Det er ikke alle formater vi kommer til å finne ut av, men med erfaring klarer vi flere og flere.
 
 ---
 
@@ -302,7 +302,7 @@ A1^@^B^@^@^@^K^@^@^@r^A2^@^B^@^@^@^T^@^@^@~<87>i^@^D^@^@^@^A^@^@^@<92>^@^@^@¼^@
 ```
 
 
-+ `ÿØÿ`  = `FF D8 FF` = (255, 232, 255)
++ `ÿØÿ`  = `FF D8 FF` = (255, 232, 255)  $\sim$  JFIF/JPEG
 
 note: 
 *Magic bytes* eller *magic numbers* er de par første *bytes* eller tegn i filen.
@@ -316,14 +316,16 @@ Likevel er ikke det den vanligste måten å identifisere filtyper i dag.
 Foilen viser toppen av en JPEG-fil slik den ser ut i en teksteditor.
 De første tre tegnene er tre *magic bytes*.  Vi ser dem som y med trema
 og stor Ø. *Byte*-verdiene, eller tallverdiene, er 255, 232 og 255,
-eller, i heksadesimal, slik de vanligvis blir vist FF-D8-FF.
+eller, i heksadesimal, slik de vanligvis blir vist, FF-D8-FF.
 
 Der finnes også andre metoder.
 F.eks. brukte gamle versjoner av MacOS å registrere hvilket program som hadde
 opprettet hver fil i filsystemet, slik at maskinen kunne være helt sikkert på
-å bruke samme program neste gang brukeren åpner filen.
+å bruke samme program neste gang brukeren åpner samme fil.
+
 Fordelen er at man unngår mange menneskelige feil, ved å ta typeidentifikasjonen
 ut av brukerens kontroll.
+
 Ulempen er at brukeren mister kontroll, og det blir vanskeligere å behandle
 samme fil på flere ulike måter.
 
@@ -640,6 +642,7 @@ Formattering frå Wikipedia
 note:
 Men nok om binærfiler.
 Vi har nok utfordringer med tekstfiler.
+
 Selv om vi om vi ofte tenker på tekstfiler som et primitivt
 format distinkt fra binærfiler, er *alt* egentlig binærfiler,
 med vilkårlier rekker av bytes med verdier mellom 0 og 255.
@@ -662,9 +665,9 @@ og sideskift, slutt-på-fil, avbryt eller *interrupt*,
 slett eller *backspace* og ... pipetone ... altså et lydsignal.
 Grunnen for alle kontrolltegnene var at på 1960-tallets maskiner måtte
 alle tastene på tastaturet representeres som tegn.  Man hadde bare
-ett tegnsett til all kommunikasjon med maskinen.
+ett tegnsett til all kommunikasjon mellom maskinen og terminalen, dvs. skjerm og tastatur.
 
-Uansett gav dette under ett hundrede visuelle tegn, bare så vidt nok til 
+Uansett ga dette under ett hundrede visuelle tegn, bare så vidt nok til 
 26 bokstaver i stort og smått, ti sifre samt punktum, komma, parenteser
 og lignende.
 
@@ -917,12 +920,12 @@ tegn eller for å støtte sprog som norsk eller fransk.
 På åttitallet hadde gjerne hver leverandør sitt tegnsett, men etter
 hvert fikk vi internasjonale standarder.
 Foilen viser Latin 1, som ble dominerende her i landet utover 1990-tallet,
-og som fremdles brukes i CSV-filer fra *Statistisk Sentralbyrå. 
+og som fremdles brukes, f.eks., i CSV-filer fra *Statistisk Sentralbyrå*. 
 
 De 128 første tegnene er identisk med ASCII og de neste 32 plassene
 står ubrukt for å unngå forveksling med kontrolltegnene.
 Likevel ser vi at vi har tegnene for å skrive norsk, svensk, samisk
-og islandsk, men ikke f.eks. fransk og finsk.
+og islandsk, men f.eks. fransk og finsk mangler fremdeles noen tegn.
 
 For 25 år siden dukket også et nytt behov opp.
 Da kom euroen som valuta, med sitt eget symbol.
@@ -943,10 +946,9 @@ via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=16463285
 note:
 Det sier seg selv at dette var fryktelig tungvint.
 Maskinen kunne ikke kjenne igjen tegnsettet i en ren tekstfil,
-så brukeren ville måtte holde rede på alle de tegnsette som trengs
+så brukeren ville måtte holde rede på alle de tegnsett som trengs
 til de sprog som skrives.
-Tekstbehandlingsprogrammer kunne løse dette, men f.eks. CSV-filer
-blir lett feil.
+Tekstbehandlingsprogrammer kunne løse dette ved å bruke et binærformat med metadata, men f.eks. CSV-filer blir lett feil.
 
 Det sier seg selv at vi aldri ville ha fått *emojis* med 256 tegn. 
 
@@ -1014,7 +1016,7 @@ vanlige tegn i Latin-1 blir udefinert i UTF-8.
 note:
 Latin-1 er derimot ikke riktig tegnkoding.
 Hvis vi sammenligner Latin-1 og Latin-15, ser 
-vi at brøkene for en halv og en kvart skulle være franske
+vi at brøkene for en halv og en kvart skulle være den franske
 Œ-ligaturen.
 Eurosymbolet er også nytt i Latin-15.
 
@@ -1037,7 +1039,7 @@ ASCII tok mye av sin inspirasjon fra mekaniske skrivemaskiner, og der
 består linjeskiftet av to operasjoner.  
 Den ene er *line feed* som fører rullen og dermed arket et hakk opp,
 slik at neste tegn treffer siden en linje lenger ned.
-Den andre *carriage return* består i at «vognen» dvs. den delen 
+Den andre er *carriage return* består i at «vognen» dvs. den delen 
 av maskinen som holder rullen og arket, føres tilbake til høyre
 slik at neste tegn treffer helt til venstre på siden.
 
@@ -1046,12 +1048,12 @@ Dette gir opphav til to ASCII-tegn for *line feed* og for
 Windows bruker begge tegnene for å representere linjeskift,
 mens Unix, og dermed linux og MaxOS, bruker bare *line feed*.
 I gamle dager brukte MacOS endog bare *carriage return*, 
-men det var var før de skrev om kjerne til Unix-standard for
+men det var var før de skrev om kjernen til Unix-standard for
 25 år siden.
 
 De fleste programmer i dag klarer å håndtere alle linjeskiftkombinasjonene
 om hverandre, men hvis dere støter på ett som ikke gjør det, så skjønner
-dere nu forhåpentligvis hva som skjer.
+dere forhåpentligvis hva som skjer.
 
 ---
 
@@ -1060,7 +1062,7 @@ dere nu forhåpentligvis hva som skjer.
 note:
 Som dere skjønner er det mye i dataverden som ikke er helt gjennomtenkt.
 Det meste har utviklet seg gradvis, med behov for bakoverkompatibilitet.
-Dermed må ve fremdeles stri med løsninger fra 1960-tallet.
+Dermed må vi fremdeles stri med løsninger fra 1960-tallet.
 
 Jeg håper dette overordnete og historiske perspektivet gjør det litt
 lettere å forstå hva som går galt, når dere utforsker data fra nye

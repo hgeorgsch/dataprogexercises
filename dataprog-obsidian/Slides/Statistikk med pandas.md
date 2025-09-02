@@ -25,10 +25,10 @@ Statistikk er et område hvor programmering er til stor hjelp, særlig hvis man 
 *pandas* er et av de mest populære bibliotekene for å håndtere store datasett i python og inkluderer god støtte for deskriptiv statistikk.
 
 **TODO** Fullfør disposisjon og vurder omfang før målene beskrives
-+ **Læringsmål**
-	+ Konseptuell oversikt over pandas
-		+  Data frame og Series
-		+ indeks
+- **Læringsmål**
+	- Konseptuell oversikt over pandas
+		-  Data frame og Series
+		- indeks
 
 ---
 
@@ -156,7 +156,7 @@ Out[9]: pandas.core.series.Series
 :::
 note:
 Indeksering er kritisk for å hente utsnitt av data.  Den enkleste formen for indeksering er den samme som for *dictionaries*, med klamme-parenteser.
-Vi bruker klammeparenteser og *label*.
+Vi bruker klammeparenteser og *label* for å hente ut en enkelt søyle.
 
 Resultatet er en ny datatype, *Series*, som er den andre sentrale typen i pandas-verden, ved side av *DataFrame*.
 
@@ -171,7 +171,7 @@ Til forskjell fra vanlige lister inneholder derimot *Series* metadata, og vi ser
 # Indeksering
 
 ```python
-In [10]: df1 = df[["Tonn","kr/kg"]]
+In [10]: df1 = df[ ["Tonn","kr/kg"] ]
 
 In [11]: df1
 Out[11]: 
@@ -198,7 +198,7 @@ Out[12]: pandas.core.frame.DataFrame
 ::: credit
 :::
 note:
-Vi kan ogzå be om flere søyler samtidig, ved å oppgi en liste med *labels*.  Det er meget nyttig når vi har et overdrevent komplekst datasett, og bare noen søyler er interessante.
+Vi kan også be om flere søyler samtidig, ved å oppgi en liste med *labels*.  Det er meget nyttig når vi har et overdrevent komplekst datasett, og bare noen søyler er interessante.
 
 ---
 <!-- slide template="[[tpl-smalltext]]" -->
@@ -259,7 +259,7 @@ In [42]:
 :::
 
 note:
-Ofte indekserer vi får å ta et utvalg av rader, det som gjerne kalles
+Ofte indekserer vi for å ta et utvalg av rader, det som gjerne kalles
 *slicing*.  Den enkleste formen for dette er ved å oppgi et spenn av
 indekser med kolon, slik som vi også kan gjøre med lister.
 
@@ -288,9 +288,12 @@ men fordi pandas ønsker å gjøre det enkelt å bruke både tallindeks og *labe
 ---
 <!-- slide template="[[tpl-smalltext]]" -->
 # Filtrering
+
 ```
 In [52]: df2 = df[ df["varegruppe"] == "Fersk oppalen laks" ]
+```
 
+```
 In [53]: df2
 Out[53]: 
               varegruppe      uke   Tonn  kr/kg
@@ -308,6 +311,7 @@ Out[53]:
 
 [1295 rows x 4 columns]
 ```
+<!-- element class="fragment" -->
 
 ::: credit
 :::
@@ -325,9 +329,6 @@ For å gå videre med et rent og pent eksempel på paneldata, kan vi hente ut et
 ```python
 df2 = df[ df["varegruppe"] == "Fersk oppalen laks" ]
 ```
-
-
-<p class="fragment">
 
 ```
 In [41]: x = df["varegruppe"] == "Fersk oppalen laks"
@@ -350,8 +351,7 @@ Name: varegruppe, Length: 2590, dtype: bool
 In [43]: type(x)
 Out[43]: pandas.core.series.Series
 ```
-
-</p>
+<!-- element class="fragment" -->
 
 ::: credit
 :::
@@ -360,17 +360,19 @@ note:
 Filtreringsnotasjonen som vi brukte er egentlig et spesialtilfelle
 av *bolsk indeksering*.
 
-Hvis vi evaluerer uttrykket 
-`df["varegruppe"] == "Fersk oppalen laks"`,
-ser vi at dette er et *Series*-objekt med bolske verdier.
+Vi kan sammenligne én søyle, dvs. et *Series*-objekt, med en bestemt verdi, f.eks.
+`df["varegruppe"] == "Fersk oppalen laks"`.
+
+Når vi evaluerer dette uttrykket  får vi et *Series*-objekt med bolske verdier.
 Vi sammeligner rett og slett hvert element i serien på venstre side
 med strengen på høyre side.
+Dette er uttrykket vi brukte til å indeksere.
 
 Når vi bruker en bolsk serie til å indeksere, får vi med de
 elementene som svarer til sann i serien og dropper dem som
 som svarer til usann.
 
-Dette er en kraftfull finesse, men det tar en del 
+Dette er en kraftfull finesse, med erfaring vil vi se flere muligheter.
 
 ---
 
@@ -388,7 +390,9 @@ dtype: object
 ```
 
 note: 
-Hver søyle i en  *data frame*  har en datatype.  Til forskjell fra lister, tillater ikke pandas oss å blande ulike datatyper i samme søyle eller serie. Dette gjør at vi alltid kan behandle hele søyler på en konsistent måte. Vi kan bruke `dtypes`-attributten til å se hvilke datatyper søylene har.
+Hver søyle i en  *data frame*  har en datatype.  Til forskjell fra lister, tillater ikke pandas oss å blande ulike datatyper i samme søyle eller serie. Dette gjør at vi alltid kan behandle hele søyler på en konsistent måte. 
+
+Vi kan bruke `dtypes`-attributten til å se hvilke datatyper søylene har.
 
 Det er de numeriske søylene som er interessante i statistikk.  I eksportdatasettet vårt er det volumet i tonn og kiloprisen i kroner. Ukenummeret er en streng som samler år og uke, og den er vanskelig å regne på.  Vi kan bruke indeksen, som forsåvidt nummererer ukene kronologisk i vårt tilfelle.  Det er mulig å skille år og uke i ukestrengen, men det får vi ta en anden gang.
 
@@ -417,7 +421,7 @@ max    29238.000000   123.280000
 note:
 Den enkleste måten å få ut en statistisk oppsummering av datasettet er `describe()`-metoden.
 Vi får en oppsummering av hver av de numeriske søylene, med antall rader,
-gjennomsnitt eller *mean*, standardavvik eller std for *standard deviation*, minimum, maksimum, samt 25de, 50de og 75de persentil.
+gjennomsnitt eller *mean*, standardavvik eller std for *standard deviation*, minimum, maksimum, samt 25de, 50de og 75de prosentil.
 
 ---
 
