@@ -1,12 +1,13 @@
 ---
 title: Utkast til læringsmateriale i data og programmering
 tags:
-   - MOC/index
+  - MOC/index
 ---
 
 + [[Project Management]] (budsjett og rekneskap)
 + [[Praktiske tips og tekniske løysingar]]
 + [[Emneadministrasjon]]
++ [[Slides]]
 + [[Skisse til opplegg]]
 	 + Typisk veke
 		 + *videoføredrag* 15min
