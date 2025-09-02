@@ -1,0 +1,53 @@
+\documentclass[svgnames]{standalone}
+
+\usepackage{tikz}
+% The table is built using TikZ matrix library features:
+\usetikzlibrary{matrix,fit}
+\usepackage[active,tightpage]{preview}
+\usepackage{subfig}
+\PreviewEnvironment{tikzpicture}
+\setlength\PreviewBorder{5pt}%
+
+\usepackage{mathabx}
+
+% Defining some symbols:
+\newcommand*\up{\textcolor{YellowGreen}{$\blacktriangleup$}}
+\newcommand*\down{\textcolor{Red}{$\blacktriangledown$}}
+\newcommand*\const{\textcolor{darkgray}{\textbf{--}}}
+\newcommand*\head[1]{\textbf{#1}}
+% The table environment:
+%
+\begin{document}
+
+\def\ua{1.2cm}
+\def\ub{2.4cm}
+\def\uc{1.2cm}
+\def\ud{0.6cm}
+
+
+\begin{tikzpicture}[>=latex]
+\tikzstyle{std}=[draw,top color=blue!10,bottom color=blue!35,
+    rounded corners,yshift=-0.85ex]
+\tikzstyle{fitn}=[draw,top color=green!10,bottom color=green!35,
+    inner sep=0pt,rounded corners]
+  \matrix (table) [matrix of nodes,nodes in empty cells,
+   top color=blue!20,
+    bottom color=blue!80,draw=white,
+    nodes={inner sep=2pt,minimum height=3.1ex},
+    draw,column sep=1ex,row sep=0.6ex,inner sep=2ex,
+    column 1/.style={minimum width=10mm},
+    column 2/.style={minimum width=20mm},
+    column 3/.style={minimum width=30mm},
+    column 4/.style={minimum width=30mm}]
+    { \head{index}   &  \head{veke} & \head{fersk-data} & \head{frosen-data} \\
+   |[std]| {1} &  |[std]| 2000U01 &   & \\
+   |[std]| {2} &  |[std]| 2000U02 &    &  \\
+   $\vdots$  & $\vdots$      & $\vdots$ &  & \\
+   |[std]| 1294 &  |[std]| 2024U34 &     & \\
+ } ;
+   \node[fit=(table-2-3)(table-5-3),fitn] {A};
+   \node[fit=(table-2-4)(table-5-4),fitn] {B};
+
+\end{tikzpicture}
+
+\end{document}
