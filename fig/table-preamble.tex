@@ -1,0 +1,20 @@
+\usepackage{tikz}
+% The table is built using TikZ matrix library features:
+\usetikzlibrary{matrix,fit}
+\usepackage[active,tightpage]{preview}
+\usepackage{subfig}
+\PreviewEnvironment{tikzpicture}
+\setlength\PreviewBorder{5pt}%
+
+\usepackage{mathabx}
+
+% Defining some symbols:
+\newcommand*\up{\textcolor{YellowGreen}{$\blacktriangleup$}}
+\newcommand*\down{\textcolor{Red}{$\blacktriangledown$}}
+\newcommand*\const{\textcolor{darkgray}{\textbf{--}}}
+\newcommand*\head[1]{\textbf{#1}}
+
+\tikzstyle{std}=[draw,top color=blue!10,bottom color=blue!35,
+    rounded corners,yshift=-0.85ex]
+\tikzstyle{fitn}=[draw,top color=green!10,bottom color=green!35,
+    inner sep=0pt,rounded corners]

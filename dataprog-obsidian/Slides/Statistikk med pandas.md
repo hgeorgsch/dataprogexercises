@@ -322,23 +322,18 @@ Ved siden av indeksering, trenger vi ofte å hente ut delmengder av datasettet e
 For å gå videre med et rent og pent eksempel på paneldata, kan vi hente ut et datasett for bare én varegruppe. Igjen bruker vi klammeparenteser, men i stedet for en indeks, gir vi et kriterium, f.eks. at varegruppen i datasettet må være lik «fersk oppalen laks».
 
 ---
+<!-- slide template="[[tpl-quote]]" -->
 
-| index | varegruppe | veke | data |
-| -:  | ---------- | --- | :-: |
-| 0        | Fersk laks  | 2000U01  | $A_0$ |
-| $\vdots$ | Fersk laks  | $\vdots$ | $\vdots$ |
-| 1294     | Fersk laks  | 2024U43  | $A_n$ |
-| 1295     | Frosen laks | 2000U01  | $B_0$ |
-| $\vdots$ | Frosen laks | $\vdots$ | $\vdots$ |
-| 2589     | Frosen laks | 2024U43  | $B_n$ |
+![[table1.svg|600]]
+::: credit
+:::
 
 ---
+<!-- slide template="[[tpl-quote]]" -->
 
-|    index | veke     |  fersk   |  frosen  |
-| -------: | -------- | :------: | :------: |
-|        0 | 2000U01  |  $A_0$   |  $B_0$   |
-| $\vdots$ | $\vdots$ | $\vdots$ | $\vdots$ |
-|     1294 | 2024U43  |  $A_n$   |  $B_n$   |
+![[table2.svg|800]]
+::: credit
+:::
 
 ---
 
