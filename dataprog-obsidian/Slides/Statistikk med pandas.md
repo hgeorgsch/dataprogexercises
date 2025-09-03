@@ -62,7 +62,7 @@ Der er i og for seg ingen spesiell grunn for at datasettene i pandas må være o
 
 Vi har sett at vi kan representere slike datatabeller både i CSV-filer og som regneark, eller vi kan føre dem pent i et rutenett på papir. Vi skal aldri glemme at det er det samme datasettet vi ser på, uansett verktøy. Dataene er uavhengige av representasjonen, som gjør at vi kan velge verktøy efter hvordan vi ønsker å bruke dataene, eller kombinere verktøy, uten at det påvirker innholdet i datasettet.
 
-Datasettet på foilen er eksportdata fra SSB.  Kvantum og kilopris er observert ukentlig. Søylen for varegruppe er unødvendig her, siden alt er samme vare, men dette er bare et utdrag.  Det fullstendige datasettet har rader for andre varegrupper, og er dermed ikke egentlig formattert som paneldata. Radene svarer ikke bare til ulike tidspunkt, men også til ulike varegrupper, men det er en utfordring som vi kan komme tilbake til.
+Datasettet på foilen er eksportdata fra SSB.  Kvantum og kilopris er observert ukentlig. Søylen for varegruppe er unødvendig her, siden alt er samme vare, men dette er bare et utdrag.  Det fullstendige datasettet har rader for andre varegrupper, og er dermed ikke egentlig formattert som paneldata. Radene svarer ikke bare til ulike tidspunkt, men også til ulike varegrupper. Det er en utfordring som vi kan komme tilbake til.
 
 Vi skal bruke det samme datasettet gjennom hele foredraget.  Der er bare
 to varegrupper, observert med eksportvolum og kilopris hver uke i
@@ -111,6 +111,9 @@ In [3]: print(df)
 2589  Frosen oppalen laks  2024U43          677          71.49
 
 [2590 rows x 4 columns]
+
+In [3]: type(df)
+Out[3]: pandas.core.frame.DataFrame
 ```
 
 ::: credit
@@ -173,26 +176,6 @@ Den enkleste måten å få ut en statistisk oppsummering av datasettet er `descr
 Vi får en oppsummering av hver av de numeriske søylene, med antall rader,
 gjennomsnitt eller *mean*, standardavvik eller std for *standard deviation*, minimum, maksimum, samt 25de, 50de og 75de prosentil.
 
----
-
-```
-In [38]: df1["kr/kg"].min()
-Out[38]: 17.46
-
-In [39]: df1["Tonn"].max()
-Out[39]: 29238
-
-In [40]: df1["Tonn"].mean()
-Out[40]: 12937.647104247104
-
-In [41]: df1["Tonn"].std()
-Out[41]: 5730.168860496539
-```
-
-note:
-Hvis vi skal bruke statistiske størrelser i videre beregninger, så er det enkleste å trekke ut en enkelt søyle og bruke metoder på *Series*-objektet i stedet.  
-
-Der finnes metoder for alle de vanlige statistikkene som brukes.  Det er bare å slå opp i dokumentasjonen for å finne flere.
 
 ---
 
@@ -241,10 +224,35 @@ Til forskjell fra vanlige lister inneholder derimot *Series* metadata, og vi ser
 Merk at elementene beholder sine indekser om vi tar et utdrag av serien.  De er dermed ikke posisjonsnummer som vi ville ha måttet bruke med vanlige lister.
 
 ---
+<!-- slide template="[[tpl-header]]" -->
 
+# Statistikk på *Series*-objektet
+
+```
+In [38]: df1["kr/kg"].min()
+Out[38]: 17.46
+
+In [39]: df1["Tonn"].max()
+Out[39]: 29238
+
+In [40]: df1["Tonn"].mean()
+Out[40]: 12937.647104247104
+
+In [41]: df1["Tonn"].std()
+Out[41]: 5730.168860496539
+```
+
+note:
+Hvis vi skal bruke statistiske størrelser i videre beregninger,
+er det greitt å bruke metoder fra *Series*-objektet.
+
+Der finnes metoder for alle de vanlige statistikkene som brukes, inklusive minimum, maksimum, gjennomsnitt og standardavvik.
+Det er bare å slå opp i dokumentasjonen for å finne flere.
+
+---
 <!-- slide template="[[tpl-smalltext]]" -->
 
-# Indeksering
+# Indeksering av fleire søyler
 
 ```python
 In [10]: df1 = df[ ["Tonn","kr/kg"] ]
@@ -283,7 +291,7 @@ Vi kan også be om flere søyler samtidig, ved å oppgi en liste med *labels*.  
 
 # .loc og .iloc
 
-```
+```python
 In [38]: df.loc[2]
 Out[38]: 
 varegruppe    Fersk oppalen laks
@@ -301,6 +309,13 @@ kr/kg                      31.03
 Name: 2, dtype: object
 ```
 
+```python
+In [40]: type(df.loc[2])
+Out[40]: pandas.core.series.Series
+```
+<!-- element class="fragment" -->
+
+
 ::: credit
 :::
 
@@ -310,6 +325,8 @@ Når vi skal indeksere på rader, bruker vi notasjonen `loc` og `iloc`. De er ga
 Vi skal merke oss at `.loc` og `.iloc` ikke er funksjoner.
 De følges av klammeparenteser som for anden indeksering, og
 ikke av runde paranteser som funksjoner bruker.
+
+Vi kan merke oss at en slik enkeltrad også har type `Series`, akkurat som en søyle.
 
 ---
 <!-- slide template="[[tpl-smalltext]]" -->
@@ -399,6 +416,8 @@ Ved siden av indeksering, trenger vi ofte å hente ut delmengder av datasettet e
 
 For å gå videre med et rent og pent eksempel på paneldata, kan vi hente ut et datasett for bare én varegruppe. Igjen bruker vi klammeparenteser, men i stedet for en indeks, gir vi et kriterium, f.eks. at varegruppen i datasettet må være lik «fersk oppalen laks».
 
+(fragment)
+Det gir en tabell som dette, med kun én varegruppe representert.
 ---
 
 <!-- slide template="[[tpl-smalltext]]" -->
@@ -408,9 +427,12 @@ For å gå videre med et rent og pent eksempel på paneldata, kan vi hente ut et
 df2 = df[ df["varegruppe"] == "Fersk oppalen laks" ]
 ```
 
-```
+```python
 In [41]: x = df["varegruppe"] == "Fersk oppalen laks"
+```
+<!-- element class="fragment" -->
 
+```python
 In [42]: x
 Out[42]:
 0        True
@@ -450,9 +472,6 @@ Når vi bruker en bolsk serie til å indeksere, får vi med de
 elementene som svarer til sann i serien og dropper dem som
 som svarer til usann.
 
-Dette er en kraftfull finesse, som vi skal se mer på.
-
-
 ---
 <!-- slide template="[[tpl-quote]]" -->
 
@@ -489,7 +508,7 @@ side om side, slik at alle observasjoner på samme tidspunkt kommer på samme
 rad.
 
 I et regneark ville dette gjerne ha vært en enkel klipp-og-lim operasjon.
-Vi skal bare flytte deltabell $B$ fra under $A$ til høyre for $A$.
+Vi skal bare flytte deltabell B fra under A til høyre for A.
 
 Problemet er at det bare fungerer dersom vi er 100% sikre på at de registrerte
 tidsperiodene er nøyaktig de samme for begge delsettene.  Det ville ha fungert
@@ -497,7 +516,7 @@ med dette datasettet, men trenger ikke å gjøre det med neste, så derfor skal 
 tenke litt mer komplisert og litt mer robust.
 
 *pandas* gjør også den tilsynelatende enkle klipp-og-lim-operasjonen vanskelig.
-Radene fra $B$ har fremdeles sine opprinnelige indeksverdier som begynner på 1295.
+Radene fra B har fremdeles sine opprinnelige indeksverdier som begynner på 1295.
 *pandas* vil ikke uten videre slå sammen to rader med forskjellige indekser.
 
 ---
@@ -583,13 +602,13 @@ plt.plot( B["uke"], B["kr/kg"] )
 
 note:
 Normalt er det en bedre verdi å bruke noe andet enn indeks på
-$x$-aksen, f.eks. ukenummer.  
-Vi kan oppgi både en $x$-serie og en $y$-serie når vi plotter,
+x-aksen, f.eks. ukenummer.  
+Vi kan oppgi både en x-serie og en y-serie når vi plotter,
 og da brukes ikke indekksene.
 
 Det hadde sette bedre ut om ukenumrene hadde vært numeriske verdier
 eller faktiske tidspunkter, i stedet for strenger.  
-Her blir teksten langs $x$-aksen uleselig, fordi *pandas* ikke vet 
+Her blir teksten langs x-aksen uleselig, fordi *pandas* ikke vet 
 hvordan den kan formattere tekststrengene pent.
 
 Det er mulig å oversette uke-strengene til ordentlige
@@ -622,6 +641,7 @@ tidspunkter, men det får vi ta en anden gang.
 
 note:
 La oss gå tilbake til problemet med å sette sammen to datasett.
+
 *pandas* har grovt sett to funksjoner for å gjøre dette, en
 for vertikal og en for horisontal sammenstilling.
 
@@ -663,6 +683,9 @@ Out[31]:
 ```
 <!-- element class="fragment" -->
 
+::: credit
+:::
+
 note: 
 Akkurat som når vi plottet, er det ukenummeret som er felles for de to datasettene,
 og dermed er det det vi bør bruke some nøgle.
@@ -685,7 +708,7 @@ Varegruppene er derimot overflødige, så vi kan droppe dem.
 <!-- slide template="[[tpl-smalltext]]" -->
 
 ```python
-In [33]: join0 = join.drop( columns=[ "varegruppe_x", "varegruppe_y" ] )
+join0 = join.drop( columns=[ "varegruppe_x", "varegruppe_y" ] )
 ```
 
 ```python
@@ -708,6 +731,8 @@ Out[34]:
 ```
 <!-- element class="fragment" -->
 
+::: credit
+:::
 
 note:
 *Data frame* har en metode `drop()` for å kvitte seg med overflødige søyler.
@@ -766,7 +791,7 @@ mens ytre join tar med alle radene uten å droppe noe som helst.
 Da må vi fylle inn såkalte NaN-verdier der data mangler.
 
 NaN står for *Not a Number* og er et standardbegrep som dere kan
-støte på ofte i datasett.  Det kan godt være at dere laster nede
+støte på ofte i datasett.  Det kan godt være at dere laster ned
 datasett med NaN-verdier fordi måledata av en eller anden grunn
 mangler.
 
@@ -816,6 +841,7 @@ uavhengig av hverandre.  Det gjør vi med `copy()`-metoden.
 
 # Slutt
 
+note:
 Jeg beklager hvis jeg har overveldet dere med detaljer.
 
 Det vi skal ta med oss videre i dag er dette perspektivet på
