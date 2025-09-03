@@ -13,10 +13,6 @@ Algoritmene fremstår lett, med rette eller urette, som en mystisk kraft som tar
 
 ---
 
-Algoritmen som ein oppskrift
-
----
-
 <!-- slide template="[[tpl-diagram]]" -->
 
 ![[flowchart.svg]]
@@ -25,10 +21,28 @@ Algoritmen som ein oppskrift
 :::
 
 note:
-Flytdiagram
+En vanlig analogi er å se på algoritmen som en oppskrift.
+Kokeboken er egentlig full av algoritmer som forklarer steg for steg hvordan man går frem for å oppnå et bestemt resultat.
 
-+ Ulike representasjonar av algoritmen
+Det er viktig å merke seg at algoritmen er prosedyren og ikke teksten som beskriver prosedyren.  Dét er på mange måter også den kritiske forskjellen på en algoritme og et dataprogram.  Dataprogrammet er en konkret implementasjon, skrevet i et bestemt sprog, for å kjøre på en bestemt type maskin.  Algoritmen er en abstrakt beskrivelse av hvordan programmet skal gå frem.
 
+For å programmere ryddig og korrekt er det ofte nyttig å kunne beskrive algoritmen på forskjellige måter, slik at man ikke henger seg opp i særegenhetene i f.eks. python.  Det kan være nyttig å formulere algoritmene sine både i visuelle diagrammer, vanlig dagligsprog og matematiske formler.
+
+La oss ta et eksempel på visuell fremstilling.  Her «algoritmen» for å lave lapper.
+
+Denne typen diagrammer kalles gjerne flytdiagrammer; de viser flyten fra operasjon til operasjon; og de har vært mye brukt for å dokumentere programmer og algoritmer i industrien.  
+
+Vi begynner på start.  Det første steget er å hente ingrediensene.  Parallellogrammet signaliserer I/O dvs. *input/output*.  
+
+Romben indikerer en valgmulighet, eller *if*-sats.  Her må vi ta stilling til om vi ønsker lapper på amerikansk eller sunnmørsk manér.  Hvis vi vil ha amerikanske *pancakes* går vi til venstre og begynner med å skille eggene.  I motsatt fall går vi til høyre og pisker eggedosis.
+
+Rektanglene er operasjoner som utføres i rekkefølge langs pilene.
+
+**TODO
+
+---
+
+![[addition.png]]
 
 ---
 
