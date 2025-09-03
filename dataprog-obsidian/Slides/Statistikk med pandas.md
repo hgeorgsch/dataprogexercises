@@ -621,13 +621,9 @@ tidspunkter, men det får vi ta en anden gang.
 :::
 
 note:
-Reindeksering vil være nyttig i mange sammenhenger, men skal vi 
-en mer robust løsning, må vi bruke ukenummer som nøgle når
-vi sammenligner seriene.
-
-Dette kan gjøres på mange måter.  En teknikk som ofte trengs er
-å flette sammen flere ulike datasett til én dataframe.
-*pandas* har to funksjoner til dette:
+La oss gå tilbake til problemet med å sette sammen to datasett.
+*pandas* har grovt sett to funksjoner for å gjøre dette, en
+for vertikal og en for horisontal sammenstilling.
 
 `concat()` forutsetter at radene er unike, og legger sammen alle
 radene fra begge datasettene under hverandre.
@@ -636,13 +632,18 @@ radene fra begge datasettene under hverandre.
 og representerer de samme tidspunkter eller objekter, og 
 kombinerer alle søylene fra begge datasettene side om side.
 
+For å sette sammen fersklaks og frossenlaks trenger vi altså
+`merge()`-funksjonen.
+
 ---
 
 <!-- slide template="[[tpl-smalltext]]" -->
 
+```python
+In [30]: join = A.merge(B,on="uke")
 ```
-In [30]: join = df1.merge(df2,on="uke")
 
+```python
 In [31]: join
 Out[31]: 
             varegruppe_x      uke  Tonn_x  ...         varegruppe_y Tonn_y  kr/kg_y
@@ -660,22 +661,34 @@ Out[31]:
 
 [1295 rows x 7 columns]
 ```
+<!-- element class="fragment" -->
 
 note: 
-La oss se hva vi trenger i vårt tilfelle.
-Vi har fersklaks i df1 og frossenlaks i df2, begge observert på de samme tidspunktene eller ukene.
-Dvs. at uke-søylen identifiserer radene, og rader med samme uke hører sammen.
-Det må dermed være riktig å flette på uke, og vi bruke `on="uke"` som parameter til `merge`.
+Akkurat som når vi plottet, er det ukenummeret som er felles for de to datasettene,
+og dermed er det det vi bør bruke some nøgle.
 
-Siden de to tabellene har de samme søylenavnene, har pandas lagt til underscore-x og -y for å skille søylene fra de to tabellene.  Det er dog ikke så lett å se siden vi har flere søyler enn det som får plass på skjermen.  Men varegruppene er nu overflødige, så vi kan droppe dem.
+I `merge()`-funksjonen bruker vi `on`-argumentet for å fortelle *pandas* at ukenummeret skal identifisere unike rader.
+
+(fragment)
+Resultatet ser slik ut.
+
+Vi ser at de fleste søylene er duplisert, f.eks. som `varegruppe_x` og `varegruppe_y`, der én søyle kommer fra hvert datasett.
+Siden de to tabellene har de samme søylenavnene, har pandas lagt til underscore-x og -y for å skille søylene fra de to tabellene.
+
+Ukenummeret er ikke duplisert, fordi vi eksplisitt sa at vi skulle kombinere rader med samme ukenummer.
+
+Dessverre ser vi ikke alt, fordi der er flere søyler  enn det skjermen har plass til.
+Varegruppene er derimot overflødige, så vi kan droppe dem.
 
 ---
 
 <!-- slide template="[[tpl-smalltext]]" -->
 
-```
+```python
 In [33]: join0 = join.drop( columns=[ "varegruppe_x", "varegruppe_y" ] )
+```
 
+```python
 In [34]: join0
 Out[34]: 
           uke  Tonn_x  kr/kg_x  Tonn_y  kr/kg_y
@@ -693,6 +706,7 @@ Out[34]:
 
 [1295 rows x 5 columns]
 ```
+<!-- element class="fragment" -->
 
 
 note:
@@ -717,7 +731,9 @@ I dette tilfellet visste vi at vi hadde alle observasjonene på hvert tidspunkt,
 
 ---
 
-<!-- slide template="[[tpl-quote]]" -->
+<!-- slide template="[[tpl-quote-header]]" -->
+
+# Manglande data
 
 <table>
 <tr> <th>Indeks</th> <th>Venstre</th> <th>Høgre</th></tr>
