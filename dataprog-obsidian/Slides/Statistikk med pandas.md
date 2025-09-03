@@ -762,8 +762,8 @@ databasebehandling, der vi skiller mellom indre,  ytre, venstre og
 høyre *join*.
 
 Indre *join* dropper alle rader som ikke finnes i begge tabellene, 
-mens ytre join tar med alle radene og fyller inn såkalte NaN-verdier
-der data mangler.
+mens ytre join tar med alle radene uten å droppe noe som helst.
+Da må vi fylle inn såkalte NaN-verdier der data mangler.
 
 NaN står for *Not a Number* og er et standardbegrep som dere kan
 støte på ofte i datasett.  Det kan godt være at dere laster nede
