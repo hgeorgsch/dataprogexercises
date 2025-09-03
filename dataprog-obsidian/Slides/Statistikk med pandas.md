@@ -24,11 +24,8 @@ Statistikk er et område hvor programmering er til stor hjelp, særlig hvis man 
 
 *pandas* er et av de mest populære bibliotekene for å håndtere store datasett i python og inkluderer god støtte for deskriptiv statistikk.
 
-**TODO** Fullfør disposisjon og vurder omfang før målene beskrives
-- **Læringsmål**
-	- Konseptuell oversikt over pandas
-		-  Data frame og Series
-		- indeks
+Målet for dette foredraget er en konseptuell oversikt hvordan datasett er 
+modellert i pandas, og noen eksempler på hva vi kan gjøre med datasettene.
 
 ---
 
@@ -53,7 +50,7 @@ Statistikk er et område hvor programmering er til stor hjelp, særlig hvis man 
 | Fersk oppalen laks | 2000 |  12 |        5004 |         33,77 |
 
 ::: credit
-Utdrag av datasett frå Statistisk Sentralbyrå
+Utdrag av eksportdatasett frå Statistisk Sentralbyrå
 :::
 
 note:
@@ -389,12 +386,45 @@ Dette er en kraftfull finesse, med erfaring vil vi se flere muligheter.
 ::: credit
 :::
 
+note:
+Eksportdatasettet vårt er egentlig to datasett som er stilt under hverandre
+i samme tabell.
+Det første er for fersk laks og det andre for frossen laks.
+
+---
+
+```python
+df1 = df[ df["varegruppe"] == "Fersk oppalen laks" ]
+df2 = df[ df["varegruppe"] == "Frosen oppalen laks" ]
+```
+
+note:
+Vi kan skille de to datasettene fra hverandre ved å filtrere på
+varegruppe.
+
 ---
 <!-- slide template="[[tpl-quote]]" -->
 
 ![[table2.svg|800]]
 ::: credit
 :::
+
+note:
+Skal vi behandle dataene sammen, ønsker vi derefter å sammenstille dem 
+side om side, slik at alle observasjoner på samme tidspunkt kommer på samme
+rad.
+
+I et regneark ville dette gjerne ha vært en enkel klipp-og-lim operasjon.
+Vi skal bare flytte deltabell $B$ fra under $A$ til høyre for $A$.
+
+Problemet er at det bare fungerer dersom vi er 100% sikre på at de registrerte
+tidsperiodene er nøyaktig de samme for begge delsettene.  Det ville ha fungert
+med dette datasettet, men trenger ikke å gjøre det med neste, så derfor skal vi
+tenke litt mer komplisert og litt mer robust.
+
+*pandas* gjør også den tilsynelatende enkle klipp-og-lim-operasjonen vanskelig.
+Radene fra $B$ har fremdeles sine opprinnelige indeksverdier som begynner på 1295.
+*pandas* vil ikke uten videre slå sammen to rader med forskjellige indekser.
 
 ---
 
