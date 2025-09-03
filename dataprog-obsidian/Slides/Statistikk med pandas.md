@@ -592,18 +592,33 @@ eller faktiske tidspunkter, i stedet for strenger.
 Her blir teksten langs $x$-aksen uleselig, fordi *pandas* ikke vet 
 hvordan den kan formattere tekststrengene pent.
 
-Det er mulig å reformatere oversette uke-strengene til ordentlige
+Det er mulig å oversette uke-strengene til ordentlige
 tidspunkter, men det får vi ta en anden gang.
 
 
 ---
 
-<!-- slide template="[[tpl-smalltext]]" -->
+<!-- slide template="[[tpl-twocolumn]]" -->
 
 # Fletting av *data frames*
 
-- `merge()` - horisontal sammenstilling
-- `concat()` - vertikal sammenstilling
+::: leftimage
+![[table1.svg|400]]
+:::
+
+::: leftcredit
+::::
+
+::: rightimage
+
+- `merge()` 
+    - horisontal sammenstilling
+- `concat()`  
+    - vertikal sammenstilling
+:::
+
+::: rightcredit
+:::
 
 note:
 Reindeksering vil være nyttig i mange sammenhenger, men skal vi 
