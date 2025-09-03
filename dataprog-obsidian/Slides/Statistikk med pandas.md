@@ -735,21 +735,7 @@ I dette tilfellet visste vi at vi hadde alle observasjonene på hvert tidspunkt,
 
 # Manglande data
 
-<table>
-<tr> <th>Indeks</th> <th>Venstre</th> <th>Høgre</th></tr>
-<tr> <td> Venstre</td>
-     <td style="background: yellow ;"> </td>
-     <td style="background: grey ;"> </td>
-</tr>
-<tr> <td> Felles</td>
-     <td style="background: yellow ;"> </td>
-     <td style="background: yellow ;"> </td>
-</tr>
-<tr> <td> Høgre</td>
-     <td style="background: grey ;"> </td>
-     <td style="background: yellow ;"> </td>
-</tr>
-</table>
+![[join.svg]]
 
 ::: credit
 :::
@@ -763,86 +749,11 @@ felles og noen unike rader.
 
 ---
 
-<!-- slide template="[[tpl-small2]]" -->
+<!-- slide template="[[tpl-quote]]" -->
 
-::: leftimage
+![[joins.svg]]
 
-# *Inner join*
-<table>
-<tr> <th>Indeks</th> <th>Venstre</th> <th>Høgre</th></tr>
-<tr> <td> Venstre</td>
-     <td style="background: red ;"> Droppa </td>
-     <td style="background: gray ;"> </td>
-</tr>
-<tr> <td> Felles</td>
-     <td style="background: yellow ;"> </td>
-     <td style="background: yellow ;"> </td>
-</tr>
-<tr> <td> Høgre</td>
-     <td style="background: grey ;"> </td>
-     <td style="background: red ;"> Droppa </td>
-</tr>
-</table>
-
-# *Left join*
-<table>
-<tr> <th>Indeks</th> <th>Venstre</th> <th>Høgre</th></tr>
-<tr> <td> Venstre</td>
-     <td style="background: yellow ;"> </td>
-     <td style="background: green ;"> NaN </td>
-</tr>
-<tr> <td> Felles</td>
-     <td style="background: yellow ;"> </td>
-     <td style="background: yellow ;"> </td>
-</tr>
-<tr> <td> Høgre</td>
-     <td style="background: grey ;"> </td>
-     <td style="background: red ;"> Droppa </td>
-</tr>
-</table>
-
-:::
-::: leftcredit
-:::
-
-::: rightimage
-
-# *Outer join*
-<table>
-<tr> <th>Indeks</th> <th>Venstre</th> <th>Høgre</th></tr>
-<tr> <td> Venstre</td>
-     <td style="background: yellow ;"> </td>
-     <td style="background: green ;"> NaN </td>
-</tr>
-<tr> <td> Felles</td>
-     <td style="background: yellow ;"> </td>
-     <td style="background: yellow ;"> </td>
-</tr>
-<tr> <td> Høgre</td>
-     <td style="background: green ;"> NaN</td>
-     <td style="background: yellow ;"> </td>
-</tr>
-</table>
-
-# *Right join*
-<table>
-<tr> <th>Indeks</th> <th>Venstre</th> <th>Høgre</th></tr>
-<tr> <td> Venstre</td>
-     <td style="background: red ;"> Droppa </td>
-     <td style="background: grey ;"> </td>
-</tr>
-<tr> <td> Felles</td>
-     <td style="background: yellow ;"> </td>
-     <td style="background: yellow ;"> </td>
-</tr>
-<tr> <td> Høgre</td>
-     <td style="background: green ;"> NaN </td>
-     <td style="background: yellow ;"> </td>
-</tr>
-</table>
-
-:::
-::: rightcredit
+::: credit
 :::
 
 note:
