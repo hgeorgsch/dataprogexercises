@@ -450,7 +450,7 @@ Når vi bruker en bolsk serie til å indeksere, får vi med de
 elementene som svarer til sann i serien og dropper dem som
 som svarer til usann.
 
-Dette er en kraftfull finesse, som vi skal komme tilbake til om et øyeblikk.
+Dette er en kraftfull finesse, som vi skal se mer på.
 
 
 ---
@@ -500,7 +500,6 @@ tenke litt mer komplisert og litt mer robust.
 Radene fra $B$ har fremdeles sine opprinnelige indeksverdier som begynner på 1295.
 *pandas* vil ikke uten videre slå sammen to rader med forskjellige indekser.
 
-
 ---
 <!-- slide template="[[tpl-header]]" -->
 
@@ -511,11 +510,14 @@ Radene fra $B$ har fremdeles sine opprinnelige indeksverdier som begynner på 12
 
 ```python
 import matplotlib.pyplot as plt
-plt.plot( df1["kr/kg"] )
+plt.plot( A["kr/kg"] )
 ```
 
 note:
-Søylene i datasettet er det grunnleggende det objektet for dataanalyse.
+For å illustrere dette problemet, kan vi se på hvordan vi plotter data
+fra en *data frame*.
+
+Det grunnleggende objektet å jobbe med er en enkelt søyle eller *Series*.
 Hver søyle er en serie med observasjoner av samme variabel.
 
 Vi kan hente ut slike enkeltsøyler og bruke dem i funksjoner fra andre
@@ -528,37 +530,71 @@ I bildet har vi plottet kiloprisen for fersklaks.
 
 ```python
 import matplotlib.pyplot as plt
-plt.plot( df1["kr/kg"] )
-plt.plot( df2["kr/kg"] )
+plt.plot( A["kr/kg"] )
+plt.plot( B["kr/kg"] )
 ```
 
 note:
-Vi må likevel være varsomme, fordi indeksen er en del av serieobjektet
-i pandas.
-Hvis vi har flere serier, skjer det ofte at disse indeksene ikke er
-kompatible.
-Det skjer typisk når indeksen blott viser til rekkenummer i datasettet,
-og ikke er direkte knyttet til tidspunkt eller andre fysiske størrelser.
+Hvis vi prøver å plotte både fersklaks og frossenlaks i samme figur,
+ser det slik ut.
 
-Her har vi plottet kiloprisen for fersklaks og frossenlaks, men $x$-aksen
-viser ikke tidspunkt, men indeksen i det opprinnelige datasettet, der
-frossenlaksen kom efter fersklaksen, selv om den var observert i samme 
-periode.
+Dette var ikke særlig nyttig.  Vi ønsker antagelig å sammenligne de to
+produktene på samme tidspunkt, men vi får dem plottet efter indeks der
+produktene kommer efter hverandre.
+
+I *pandas* er indeksen er en del av serieobjektet, og når vi tar 
+utsnitt av datasettet, har vi alltid med oss de gamle indeksverdiene,
+helt til vi eksplicit reindekserer.
+
+Indeksene har sine bruksområder, men når vi skal kombinere datasett må
+vi være varsomme, fordi vi normalt ikke kan regne med at indeksene er
+kompatible.
+
 
 ---
 
 ![[dfplot.svg]]
 
 ```python
-df1 = df1.reset_index()
-df2 = df2.reset_index()
+Ax = A.reset_index()
+Bx = B.reset_index()
+plt.plot( Ax["kr/kg"] )
+plt.plot( Bx["kr/kg"] )
 ```
 
 note:
-Vi har muligheten til å endre indeksene, f.eks. ved
+Vi har muligheten til å endre indeksene.
+
+Ett nyttig triks er reindeksering, ved
 `reset_index()`-funksjonen som renummererer rekkene.
+
 Det fungerer i dette tilfellet, fordi fersk- og frossenlaks
 er observert på nøyaktig samme tidspunkter.
+
+
+---
+
+![[dfvplot.svg]]
+
+```python
+plt.plot( A["uke"], A["kr/kg"] )
+plt.plot( B["uke"], B["kr/kg"] )
+```
+
+note:
+Normalt er det en bedre verdi å bruke noe andet enn indeks på
+$x$-aksen, f.eks. ukenummer.  
+Vi kan oppgi både en $x$-serie og en $y$-serie når vi plotter,
+og da brukes ikke indekksene.
+
+Det hadde sette bedre ut om ukenumrene hadde vært numeriske verdier
+eller faktiske tidspunkter, i stedet for strenger.  
+Her blir teksten langs $x$-aksen uleselig, fordi *pandas* ikke vet 
+hvordan den kan formattere tekststrengene pent.
+
+Det er mulig å reformatere oversette uke-strengene til ordentlige
+tidspunkter, men det får vi ta en anden gang.
+
 
 ---
 
