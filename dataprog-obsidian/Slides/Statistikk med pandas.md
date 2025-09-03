@@ -124,6 +124,77 @@ Vi vil stort sett bruke numerisk indeks på radene og *label*-indeks på søylen
 Med pandas kan vi manipulere våre *data frames* på mange ulike måter.  Vi kan ta utsnitt av datasettet, definere nye søyler, sette sammen datasett, finne gjennomsnitt og standardavvik og tegne plott.
 
 ---
+<!-- slide template="[[tpl-header]]" -->
+
+# Datatypar
+
+```
+In [57]: df.dtypes
+Out[57]: 
+varegruppe     object
+uke            object
+Tonn            int64
+kr/kg         float64
+dtype: object
+
+```
+
+note: 
+Hver søyle i en  *data frame*  har en datatype.  Til forskjell fra lister, tillater ikke pandas oss å blande ulike datatyper i samme søyle eller serie. Dette gjør at vi alltid kan behandle hele søyler på en konsistent måte. 
+
+Vi kan bruke `dtypes`-attributten til å se hvilke datatyper søylene har.
+
+Det er de numeriske søylene som er interessante i statistikk.  I eksportdatasettet vårt er det volumet i tonn og kiloprisen i kroner. Ukenummeret er en streng som samler år og uke, og den er vanskelig å regne på.  Vi kan bruke indeksen, som forsåvidt nummererer ukene kronologisk i vårt tilfelle.  Det er mulig å skille år og uke i ukestrengen, men det får vi ta en anden gang.
+
+---
+<!-- slide template="[[tpl-header]]" -->
+
+# Deskriptiv statistikk
+
+```
+In [55]: df.describe()
+Out[55]: 
+               Tonn        kr/kg
+count   2590.000000  2590.000000
+mean    6782.083398    44.835591
+std     7373.273168    21.268257
+min       60.000000    17.460000
+25%      565.750000    27.722500
+50%     1717.500000    39.005000
+75%    13357.750000    58.517500
+max    29238.000000   123.280000
+```
+
+::: credit
+:::
+
+note:
+Den enkleste måten å få ut en statistisk oppsummering av datasettet er `describe()`-metoden.
+Vi får en oppsummering av hver av de numeriske søylene, med antall rader,
+gjennomsnitt eller *mean*, standardavvik eller std for *standard deviation*, minimum, maksimum, samt 25de, 50de og 75de prosentil.
+
+---
+
+```
+In [38]: df1["kr/kg"].min()
+Out[38]: 17.46
+
+In [39]: df1["Tonn"].max()
+Out[39]: 29238
+
+In [40]: df1["Tonn"].mean()
+Out[40]: 12937.647104247104
+
+In [41]: df1["Tonn"].std()
+Out[41]: 5730.168860496539
+```
+
+note:
+Hvis vi skal bruke statistiske størrelser i videre beregninger, så er det enkleste å trekke ut en enkelt søyle og bruke metoder på *Series*-objektet i stedet.  
+
+Der finnes metoder for alle de vanlige statistikkene som brukes.  Det er bare å slå opp i dokumentasjonen for å finne flere.
+
+---
 
 <!-- slide template="[[tpl-smalltext]]" -->
 
@@ -177,7 +248,9 @@ Merk at elementene beholder sine indekser om vi tar et utdrag av serien.  De er 
 
 ```python
 In [10]: df1 = df[ ["Tonn","kr/kg"] ]
+```
 
+```python
 In [11]: df1
 Out[11]: 
       Tonn  kr/kg
@@ -377,7 +450,8 @@ Når vi bruker en bolsk serie til å indeksere, får vi med de
 elementene som svarer til sann i serien og dropper dem som
 som svarer til usann.
 
-Dette er en kraftfull finesse, med erfaring vil vi se flere muligheter.
+Dette er en kraftfull finesse, som vi skal komme tilbake til om et øyeblikk.
+
 
 ---
 <!-- slide template="[[tpl-quote]]" -->
@@ -394,8 +468,8 @@ Det første er for fersk laks og det andre for frossen laks.
 ---
 
 ```python
-df1 = df[ df["varegruppe"] == "Fersk oppalen laks" ]
-df2 = df[ df["varegruppe"] == "Frosen oppalen laks" ]
+A = df[ df["varegruppe"] == "Fersk oppalen laks" ]
+B = df[ df["varegruppe"] == "Frosen oppalen laks" ]
 ```
 
 note:
@@ -426,79 +500,14 @@ tenke litt mer komplisert og litt mer robust.
 Radene fra $B$ har fremdeles sine opprinnelige indeksverdier som begynner på 1295.
 *pandas* vil ikke uten videre slå sammen to rader med forskjellige indekser.
 
----
-
-# Datatypar
-
-```
-In [57]: df.dtypes
-Out[57]: 
-varegruppe     object
-uke            object
-Tonn            int64
-kr/kg         float64
-dtype: object
-
-```
-
-note: 
-Hver søyle i en  *data frame*  har en datatype.  Til forskjell fra lister, tillater ikke pandas oss å blande ulike datatyper i samme søyle eller serie. Dette gjør at vi alltid kan behandle hele søyler på en konsistent måte. 
-
-Vi kan bruke `dtypes`-attributten til å se hvilke datatyper søylene har.
-
-Det er de numeriske søylene som er interessante i statistikk.  I eksportdatasettet vårt er det volumet i tonn og kiloprisen i kroner. Ukenummeret er en streng som samler år og uke, og den er vanskelig å regne på.  Vi kan bruke indeksen, som forsåvidt nummererer ukene kronologisk i vårt tilfelle.  Det er mulig å skille år og uke i ukestrengen, men det får vi ta en anden gang.
 
 ---
-
 <!-- slide template="[[tpl-header]]" -->
-# Deskriptiv statistikk
 
-```
-In [55]: df.describe()
-Out[55]: 
-               Tonn        kr/kg
-count   2590.000000  2590.000000
-mean    6782.083398    44.835591
-std     7373.273168    21.268257
-min       60.000000    17.460000
-25%      565.750000    27.722500
-50%     1717.500000    39.005000
-75%    13357.750000    58.517500
-max    29238.000000   123.280000
-```
-
-::: credit
-:::
-
-note:
-Den enkleste måten å få ut en statistisk oppsummering av datasettet er `describe()`-metoden.
-Vi får en oppsummering av hver av de numeriske søylene, med antall rader,
-gjennomsnitt eller *mean*, standardavvik eller std for *standard deviation*, minimum, maksimum, samt 25de, 50de og 75de prosentil.
-
----
-
-```
-In [38]: df1["kr/kg"].min()
-Out[38]: 17.46
-
-In [39]: df1["Tonn"].max()
-Out[39]: 29238
-
-In [40]: df1["Tonn"].mean()
-Out[40]: 12937.647104247104
-
-In [41]: df1["Tonn"].std()
-Out[41]: 5730.168860496539
-```
-
-note:
-Hvis vi skal bruke statistiske størrelser i videre beregninger, så er det enkleste å trekke ut en enkelt søyle og bruke metoder på *Series*-objektet i stedet.  
-
-Der finnes metoder for alle de vanlige statistikkene som brukes.  Det er bare å slå opp i dokumentasjonen for å finne flere.
-
----
+# Plotting
 
 ![[df1plot.svg]]
+
 
 ```python
 import matplotlib.pyplot as plt
