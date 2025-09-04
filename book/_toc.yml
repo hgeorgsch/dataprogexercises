@@ -9,7 +9,7 @@ chapters:
   - file: Opningssamling
     sections:
     - file: Installasjon
-    - file: notebook/Fyrste dokument i Jupyter Notebook
+    - file: notebook/Fyrste dokument i Jupyter Lab
     - file: notebook/Fyrste datasett med CSV
     - file: notebook/Simulering av kontantstraum
     - file: Seminar om Motivasjon og Ynskjer
@@ -42,7 +42,7 @@ chapters:
     - file: WebAPI
     - file: Statistikk og Maskinlæring
       sections:
-      - file: notebook/Fisher Linear Discriminant in SciKitLearn
+      - file: notebook/Fisher Linear Discriminant in sklearn
       - file: notebook/Evaluering
   - file: midway
   - file: second
