@@ -244,7 +244,7 @@ def hent_høye_genuttrykk(df, vevstype):
     gener_høyt = list(genuttrykk_sortert[:100])  # De 100 første (sterkeste) genene
     return gener_høyt
 print(hent_høye_genuttrykk(data_H,"pancreas"))
-print(hent_høye_genuttrykk(data_M,"brain"))
+print(hent_høye_genuttrykk(data_H,"brain"))
 ```
 
 Vi ønsker nu å finne gener som er viktige for alle vevstypene.  I praksis
