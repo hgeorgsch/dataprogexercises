@@ -13,6 +13,7 @@ do
    mkdir -p $N1
 
    cp $N/*.csv $N1 
+   cp $N/*.txt $N1 
    cp $N/*.json $N1 
    cp $N/*.ipynb $N1 
    cp $N/*.jpg $N1 
