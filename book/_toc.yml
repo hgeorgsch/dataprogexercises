@@ -26,7 +26,6 @@ chapters:
       - file: notebook/Halveringsmetoden
     - file: CSV og Deskriptiv Statistikk
       sections:
-      - file: Filhandtering
       - file: notebook/Linear Regression in SciKitLearn
       - file: notebook/Evaluering for regresjon
     - file: Veke 3 Simulering

@@ -3,18 +3,21 @@
 # from markdown.
 
 T=../dataprog-obsidian/Tutorial/
-N=$T/notebook
+NS="notebook Genetikk Jordskjelv"
 ls $T
-ls $N
 
-( cd $N ; for i in *.md ; do jupytext --to notebook "$i" ; done )
+for N1 in $NS
+do
+   N=${T}/${N1}
+   ( cd $N ; for i in *.md ; do jupytext --to notebook "$i" ; done )
+   mkdir -p $N1
 
-mkdir -p notebook
+   cp $N/*.csv $N1 
+   cp $N/*.json $N1 
+   cp $N/*.ipynb $N1 
+   cp $N/*.jpg $N1 
+done
 
-cp $N/*.csv notebook 
-cp $N/*.json notebook 
-cp $N/*.ipynb notebook 
-cp $N/*.jpg notebook 
 
 cp $T/*.md .
 
