@@ -49,6 +49,18 @@ den minimumsforståinga som krevst for å få emnet godkjend.
 
 ## Vurderingskriterium
 
+Mappa vert vurdert etter fem aspekt som oppsummert i tabellen.  Ståkarakter (E) krev at alle aspekta vert vurderte tilfredstillande (E eller betre).  Dersom alle aspekta er tilfredsstillande, vert karakteren fastsett som gjennomsnitt av aspekta og avrunda etter vanlege reglar.
+
+| Aspekt       | Ikkje bra (F/0)                                                       | Tvilsomt (E/1)                                                                         | Dugleg (C/3)                                                                                                                | Imponerande (A/5)                                                                              |
+| :----------- | :-------------------------------------------------------------------- | :------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------- |
+| Originalitet |                                                                       | Mappa inneheld enkle variasjonar over utleverte øvingar og døme                        | Mappa bruker gjennomgåtte teknikkar i nye kombinasjonar og på nye datasett, særleg i Del 2.                                 | Mappa viser stor variasjon og originalitet både i løysingsteknikkar og spørsmål.               |
+| Analyse      | Der er lite eller ingen kommentar til koden.                          | Resultat er kommentert på ein fornuftig om ikkje innsiktsfull måte.                    | Mappa bruker resultat til å seia noko konstruktivt og nyttig om problemet, særleg i Del 2.                                  | Mappa viser kreativ og innsiktsfull analyse av resultata.                                      |
+| Teknisk nivå |                                                                       | Mappa viser kompetent bruk av python innanfor eitt av områda simulering og dataanalyse | Mappa viser kompetent bruk av python innanfor båe områda simulering og dataanalyse                                          | Mappa viser stor breidd av tekniske løysingar.                                                 |
+| Kodekvalitet | Der er mykje feil i koden, og koden gjer ofte ikkje det teksta seier. | Koden er korrekt, men vond for lesaren å forstå.                                       | Koden er lesbar, med stort sett god bruk av variabelnamn og komentarar, sjølv om nokon løysingar kan vera unødig tungvinte. | Koden er plettfri og lesarvenleg, med god bruk av effektive og enkle løysingar der det er råd. |
+| Refleksjon   |                                                                       |                                                                                        |                                                                                                                             |                                                                                                |
+
+## Generelle karakterskildringar
+
 Til sensuren har vi tatt utgangspunkt i Karakterbeskrivelsen til NTNU for teknologiske fag.
 
 A (Fremragende)

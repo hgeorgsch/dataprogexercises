@@ -50,9 +50,12 @@ Poenget er likevel å illustrere det generelle i algoritmisk tenkning. Kontrollf
 Det er heller ikke noe galt i å bruke slurvete og ufullstendige fremstillinger.  Det er som regel plassen å begynne for 
 
 ---
+<!-- slide template="[[tpl-quote]]" -->
 
 ![[addition.png]]
 
+::: credit
+:::
 
 note:
 Et bedre eksempel på algoritmer er addisjon og multiplikasjon slik som vi lærer det på barneskolen.  Vi stiller tallene pent opp, og regner ett siffer ad gangen.  Hvert siffer behandles likt, slik at vi kan bruke en løkke, og hvert siffer behandles uavhengig av det foregående, bortsett fra den lille variabelen som vi kaller mente. 
@@ -123,8 +126,12 @@ Mohammad fra Khawarismi skrev flere bøker.  En av de viktigste, som ble spredd 
 Disse tallene kaller vi  gjerne for arabertall i motsetning til romertall, selv om Muhammad antagelig hentet dem fra Indien.
 
 ---
+<!-- slide template="[[tpl-quote]]" -->
 
 ![[roman.png]]
+
+::: credit
+:::
 
 note:
 Hvis vi prøver å forestille oss norditalienske renesansekjøbmenn som skulle føre sine regnskaber i romertall, og nitidig legge sammen inntekter og utgifter, er det lett å se at tallene fra Khwarizmi har hatt stor betydning for vår del av verden.
