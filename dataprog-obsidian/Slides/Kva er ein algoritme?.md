@@ -55,7 +55,7 @@ Det er heller ikke noe galt i å bruke slurvete og ufullstendige fremstillinger.
 
 
 note:
-Et bedre eksempel på algoritmer er addisjon og multiplikasjon slik som vi lærer det på barneskolen.  Vi stiller tallene pent opp, og regner ett siffer ad gangen.  Hvert siffer behandles likt, slik at vi kan bruke en løkke, og hvert siffer behandles uavhengig av det foregående, bortsett fra den lille variabelen som vi kaller mente. 
+Det erketypiske eksempelet på algoritmer er addisjon og multiplikasjon slik som vi lærer det på barneskolen.  Vi stiller tallene pent opp, og regner ett siffer ad gangen.  Hvert siffer behandles likt, slik at vi kan bruke en løkke, og hvert siffer behandles uavhengig av det foregående, bortsett fra den lille variabelen som vi kaller mente. 
 
 Dette er faktisk den opprinnelige betydningen av ordet *algoritme*.
 
