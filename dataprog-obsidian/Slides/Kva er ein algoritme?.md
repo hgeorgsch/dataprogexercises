@@ -50,9 +50,12 @@ Poenget er likevel å illustrere det generelle i algoritmisk tenkning. Kontrollf
 Det er heller ikke noe galt i å bruke slurvete og ufullstendige fremstillinger.  Det er som regel plassen å begynne for 
 
 ---
+<!-- slide template="[[tpl-quote]]" -->
 
 ![[addition.png]]
 
+::: credit
+:::
 
 note:
 Det erketypiske eksempelet på algoritmer er addisjon og multiplikasjon slik som vi lærer det på barneskolen.  Vi stiller tallene pent opp, og regner ett siffer ad gangen.  Hvert siffer behandles likt, slik at vi kan bruke en løkke, og hvert siffer behandles uavhengig av det foregående, bortsett fra den lille variabelen som vi kaller mente. 
@@ -123,35 +126,44 @@ Mohammad fra Khawarismi skrev flere bøker.  En av de viktigste, som ble spredd 
 Disse tallene kaller vi  gjerne for arabertall i motsetning til romertall, selv om Muhammad antagelig hentet dem fra Indien.
 
 ---
+<!-- slide template="[[tpl-quote]]" -->
 
 ![[roman.png]]
+
+::: credit
+:::
 
 note:
 Hvis vi prøver å forestille oss norditalienske renesansekjøbmenn som skulle føre sine regnskaber i romertall, og nitidig legge sammen inntekter og utgifter, er det lett å se at tallene fra Khwarizmi har hatt stor betydning for vår del av verden.
 
-De som regnet med arabertall ble efter hvert kjent som algoritmikere, altså efterfølgere efter al-Khwarizmi, i motsetning til f.eks. abakister som brukte kuleramme.
+De som regnet med arabertall ble efter hvert kjent som algoritmikere, altså de som følger al-Khwarizmi, i motsetning til f.eks. abakister som brukte kuleramme.
 
 ---
 <!-- slide template="[[tpl-quote]]" -->
 
+![[Babbages_Analytical_Engine,_1834-1871._(9660574685).jpg]]
 ::: credit
 By Charles Babbage - Upload by Mrjohncummings 2013-08-28 15:10, CC BY-SA 2.0,
 via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=28024313)
 :::
+
+note:
+Det som kjennetegner algoritmer er at de er så presist og abstrakt formulert at vi kan gjennomføre dem rent mekanisk, helt uten skjønn.
+
+Charles Babbage tok denne idéen helt ut på første halvdel av 1800-tallet, da han designet en mekanisk regnemaskin, under navnet *Analytical Engine*.  
 
 ---
 <!-- slide template="[[tpl-quote]]" -->
 
 ![[Ada_Lovelace_portrait.jpg]]
 
-note:
-Den moderne algoritmen tilskrives gjerne Ada Lovelace, som utviklet algoritmer til *the Analytical Engine*.
 
 ::: credit
 By Alfred Edward Chalon - Science Museum Group, Public Domain
 via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=28131684").
 :::
 
----
+note:
+Den moderne algoritmen tilskrives gjerne Ada Lovelace, som utviklet algoritmer til *the Analytical Engine*.
 
-# Slutt
+Selv om the *Analytical Engine* aldri ble bygd, i alle fall ikke slik at den ble brukbar i praksis, består Ada Lovelace sitt arbeide som en del av fundamentet for informatikk og programmering, selv ett hundrede år før vi fikk elektroniske datamaskiner.
