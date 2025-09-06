@@ -18,7 +18,7 @@ Me freistar å gje eit par forskjellige innfallsvinklar til kvart tema. Det typi
 	+ [Imperativ programmering og maskinarkitektur](https://iirevu.org.ntnu.no/Imperativ%20programmering%20og%20maskinarkitektur)
 	+ [Kontrollflyt i Python](https://iirevu.org.ntnu.no/Kontrollflyt%20i%20Python)
     + [Exact Instructions Challenge](https://www.youtube.com/watch?v=cDA3_5982h8) ved Josh Darnit
-    + [[Kva er ein algoritme?]]
+    + [Kva er ein algoritme?](https://iirevu.org.ntnu.no/Slides/Kva%20er%20ein%20algoritme%3f/)
 + **Demovideo**
 	+ [[Kontrollflyt]]
 + **Øvingar**

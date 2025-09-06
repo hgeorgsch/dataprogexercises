@@ -144,7 +144,7 @@ Stemmer lista over vevstypar med søylene både for mus og menneske?
 
 ::: {hint}
 I denne hele oppgaven må vi være detektiver og lese oss opp på funksjoner til ulike gener ved hjelp av ulike databaser på nettet.
-Vi anbefaler [www.genecards.org](www.genecards.org) eller [www.proteinatlas.org](www.proteinatlas.org)  for å finne detaljert informasjon om gener og deres proteinprodukt.
+Vi anbefaler [www.genecards.org](https://www.genecards.org) eller [www.proteinatlas.org](https://www.proteinatlas.org)  for å finne detaljert informasjon om gener og deres proteinprodukt.
 I tillegg har wikipedia også ofte gode sider om disse genene/proteinene.
 :::
 
@@ -244,7 +244,7 @@ def hent_høye_genuttrykk(df, vevstype):
     gener_høyt = list(genuttrykk_sortert[:100])  # De 100 første (sterkeste) genene
     return gener_høyt
 print(hent_høye_genuttrykk(data_H,"pancreas"))
-print(hent_høye_genuttrykk(data_M,"brain"))
+print(hent_høye_genuttrykk(data_H,"brain"))
 ```
 
 Vi ønsker nu å finne gener som er viktige for alle vevstypene.  I praksis

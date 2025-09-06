@@ -50,10 +50,7 @@ Hver fil er et objekt som vi stort sett behandler samlet som en enhet.
 
 ---
 
-<!-- slide template="[[tpl-twocolumn]]" -->
 
-
-::: leftimage
 
 **Tekstfiler**
 
@@ -63,13 +60,6 @@ for sorgløs går jeg på,
 den endeløse landevei,
 der liker jeg å gå.
 ```
-:::
-
-::: leftcredit
-:::
-
-::: rightimage
-
  **... og binærfiler**
 ```txt
 6544 206e 6c67 6461 2065 6176 646e 6572
@@ -78,13 +68,6 @@ der liker jeg å gå.
 656a 2067 c370 2ca5 640a 6e65 6520 646e
 6c65 b8c3 6573 6c20 6e61 6564 6576 2c69
 ```
-:::
-
-::: rightcredit
-:::
-
-
-
 
 note:
 Filer kommer som sagt i ulike filtyper:
