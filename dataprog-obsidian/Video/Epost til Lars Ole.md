@@ -1,9 +1,31 @@
----
-tags:
-  - lecture/video/eksterne
----
 
-+ [[Epost til Lars Ole]]
+```
+From: Hans Georg Schaathun <hasc@ntnu.no>
+To: larsole.hjelkrem@sbm.no
+Cc: Audun Christoffer Havnegjerde Andreassen <audun.andreassen@ntnu.no>,
+        Andreas Schille <andreas.h.schille@ntnu.no>
+Bcc:
+Subject: Intervju-video med Sparebank 1 Møre
+Reply-To:
+
+Hei Lars Ole,
+
+vi pratet om muligheten for å ta opp et videointervju med deg, om
+kompetanse- og utdannelsesbehov i sparebanken.  Nu har jeg fått
+samlet sammen intervjuer og kamerafolk, og jeg håper vi kan planlegge
+et tidspunkt.
+
+Det som vi ser for oss er et intervju med deg på ditt kontor, eller
+muligens en anden plass i banken.  Hvis det er mulig, så ønsker vi 
+også å ta noen andre bilder av folk som arbeider, kanskje i et 
+kontorlandskap, samt inngangspartiet og resepsjonen.  Tror du det
+lar seg gjøre?  
+
+Jeg har lagt inn utkast til spørsmålene under, i fall du har innvendinger.
+
+:-- Hans Georg
+
+# Skisse til manus
 
 +  Scene 1.  Eksteriørbilder - Ålesund -> bankbygget
     + «Hva er det sparebankene ser efter når de ansetter folk?»
@@ -24,10 +46,4 @@ tags:
     + Har du noen flere tips til studenter som kanskje ser for seg en bankkariere?
     + Takk for praten.
 
-## Idéar
-
-+ Avhengig av hva Lars Ole synes, kan det være aktuelt å vise bilder av andre som arbeider i banken.  Eller vi kan kun film Lars Ole på hans kontor.
-
-## Gjereliste
-
-+ [ ] Samtykkeskjema
+```
