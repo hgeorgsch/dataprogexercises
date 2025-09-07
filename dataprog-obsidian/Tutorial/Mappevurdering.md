@@ -1,3 +1,9 @@
+---
+tags:
+  - assessment
+  - practical-info
+---
+
 # Mappevurdering
 
 Vurdering (studiepoeng og karakter) vert basert på ei innlevert mappe,
@@ -12,7 +18,7 @@ Mappa består av to delar.
     + Eit kort refleksjonsnotat (maks éi side) der kandidaten fortel kvifor desse
       to oppgåvene er vald, og drøfter kva innsikt frå kurset som
       er mest verdifull for vidare karriere.
-+ Del 2, frå andre periode, skal praktisk bruk på profesjonelle problem.
++ Del 2, frå andre periode, skal visa praktisk bruk på profesjonelle problem.
     + Løysing på éi større prosjektoppgåve etter eige val, der ein bruker 
       programmeringsteknikkar for å få ny innsikt i eit problem frå røynda.
       Problemstillinga må gjerne koma frå eige dagleg virke,
@@ -22,7 +28,7 @@ Mappa består av to delar.
     + Kvar del skal presenterast på høvesvis midtvegs- og avslutningssamlinga,
       som ein del av erfaringsutvekslinga.
     + Presentasjonen av Del 1 er eit **obligatorisk arbeidskrav** og må vera
-      tilfredsstillande for å få lov til å levera inn mappa.  
+      tilfredsstillande for å få lov til å levera inn mappa.
 
 **Bruk av Kunstig Intelligens (store språkmodellar).**
 Vurderinga legg vekt på at særleg refleksjonsnotatet er personleg og drøftar
@@ -42,23 +48,26 @@ typen oppgåver, men ståkarakter er mogleg.  Ein av funksjonane til det
 obligatoriske arbeidskravet er å sikra at alle som leverer mappa, har 
 den minimumsforståinga som krevst for å få emnet godkjend.
 
-
-+ [ ] Konsept for mappevurdering   📅 2025-09-15
-	+ [ ] Vurderingskriterium for mappa
-	+ [ ] Deklarasjonsskjema for KI
++ [ ] Revisjon med Truls    📅 2025-09-08
++ [ ] Deklarasjonsskjema for KI  jf. [[IIRA2001]]
++ [ ] Reinskriving av mappevurdering - til boa  📅 2025-12-15
 
 ## Vurderingskriterium
 
-Mappa vert vurdert etter fem aspekt som oppsummert i tabellen.  Ståkarakter (E) krev at alle aspekta vert vurderte tilfredstillande (E eller betre).  Dersom alle aspekta er tilfredsstillande, vert karakteren fastsett som gjennomsnitt av aspekta og avrunda etter vanlege reglar.
+Mappa vert vurdert etter fem aspekt som oppsummert i tabellen.  Ståkarakter (E) krev at alle aspekta vert vurderte tilfredstillande (E eller betre).  Dersom alle aspekta er tilfredsstillande, vert karakteren fastsett som gjennomsnitt av aspekta og avrunda etter vanlege avrundingsreglar.
 
-| Aspekt       | Ikkje bra (F/0)                                                       | Tvilsomt (E/1)                                                                         | Dugleg (C/3)                                                                                                                | Imponerande (A/5)                                                                              |
-| :----------- | :-------------------------------------------------------------------- | :------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------- |
-| Originalitet |                                                                       | Mappa inneheld enkle variasjonar over utleverte øvingar og døme                        | Mappa bruker gjennomgåtte teknikkar i nye kombinasjonar og på nye datasett, særleg i Del 2.                                 | Mappa viser stor variasjon og originalitet både i løysingsteknikkar og spørsmål.               |
-| Analyse      | Der er lite eller ingen kommentar til koden.                          | Resultat er kommentert på ein fornuftig om ikkje innsiktsfull måte.                    | Mappa bruker resultat til å seia noko konstruktivt og nyttig om problemet, særleg i Del 2.                                  | Mappa viser kreativ og innsiktsfull analyse av resultata.                                      |
-| Teknisk nivå |                                                                       | Mappa viser kompetent bruk av python innanfor eitt av områda simulering og dataanalyse | Mappa viser kompetent bruk av python innanfor båe områda simulering og dataanalyse                                          | Mappa viser stor breidd av tekniske løysingar.                                                 |
-| Kodekvalitet | Der er mykje feil i koden, og koden gjer ofte ikkje det teksta seier. | Koden er korrekt, men vond for lesaren å forstå.                                       | Koden er lesbar, med stort sett god bruk av variabelnamn og komentarar, sjølv om nokon løysingar kan vera unødig tungvinte. | Koden er plettfri og lesarvenleg, med god bruk av effektive og enkle løysingar der det er råd. |
-| Refleksjon   |                                                                       |                                                                                        |                                                                                                                             |                                                                                                |
+Mappa vert vurdert som ein heilskap, og det er opp til kandidaten å velja ut oppgåver som demonstrerer breidd og djupna. Som kriteria under viser er det ein del av læringsmålet å sjå den praktiske verdien i *eigen* karriere.
 
+| Aspekt       | Ikkje greidd (F/0)                                                                       | Greidd under tvil (E/1)                                                                           | Dugleg (C/3)                                                                                                                | Imponerande (A/5)                                                                              |
+| :----------- | :--------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------- |
+| Originalitet | Oppgåvene i mappa er kopi av kjende døme utan variasjon.                                 | Mappa inneheld enkle variasjonar over utleverte øvingar og døme                                   | Mappa bruker gjennomgåtte teknikkar i nye kombinasjonar og på nye datasett, særleg i Del 2.                                 | Mappa viser stor variasjon og originalitet både i løysingsteknikkar og spørsmål.               |
+| Analyse      | Der er lite eller ingen kommentar til koden.                                             | Resultat er kommentert på ein fornuftig om ikkje innsiktsfull måte.                               | Mappa bruker resultat til å seia noko konstruktivt og nyttig om problemet, særleg i Del 2.                                  | Mappa viser kreativ og innsiktsfull analyse av resultata.                                      |
+| Teknisk nivå | Mappa viser ikkje tilstrekkelege teknikkar til å løyse meiningsfulle, praktiske problem. | Mappa viser kompetent bruk av python innanfor eitt av områda simulering og dataanalyse            | Mappa viser kompetent bruk av python innanfor båe områda simulering og dataanalyse                                          | Mappa viser stor breidd og djup forståing av teknikkar og konsept.                             |
+| Kodekvalitet | Der er mykje feil i koden, og koden gjer ofte ikkje det teksta seier.                    | Koden er korrekt, men vond for lesaren å forstå.                                                  | Koden er lesbar, med stort sett god bruk av variabelnamn og komentarar, sjølv om nokon løysingar kan vera unødig tungvinte. | Koden er plettfri og lesarvenleg, med god bruk av effektive og enkle løysingar der det er råd. |
+| Refleksjon   | Refleksjon manglar.                                                                      | Kandidaten freister å sjå kurset i sin yrkeskontekst, men refleksjonen vert knapp og overflatisk. | Kandidaten har gjort kursinnhaldet til sitt eige, og har konstruktive døme på praktisk verdi av kurset.                     | Kandidaten er kreativ og visjonær i sin refleksjon over framtidig nytte av kurset.             |
+
+
+# Gamle skisser til mappevurdering
 ## Generelle karakterskildringar
 
 Til sensuren har vi tatt utgangspunkt i Karakterbeskrivelsen til NTNU for teknologiske fag.
