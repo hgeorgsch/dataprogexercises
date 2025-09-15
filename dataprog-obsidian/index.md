@@ -7,7 +7,10 @@ tags:
 + [[Project Management]] (budsjett og rekneskap)
 + [[Praktiske tips og tekniske løysingar]]
 + [[Emneadministrasjon]]
-+ [[Slides]]
++ Føredrag
+	+ [[Slides]]
+	+ [Panopto recordings](https://ntnu.cloud.panopto.eu/Panopto/Pages/Sessions/List.aspx?folderID=1ed05bcf-ae8f-429a-8c25-b330009a4114)
+	+ [Panopto Tool Login](https://ntnu.cloud.panopto.eu/)
 + [[Skisse til opplegg]]
 	 + Typisk veke
 		 + *videoføredrag* 15min
