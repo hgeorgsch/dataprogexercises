@@ -26,9 +26,13 @@ Referanse: [Using jupyter-ai with ollama](https://medium.com/@kamelyoussef1996/u
 
 # Oppsett av Ollama i docker
 
+Prerequisites
+```sh
+apt-get install cuda cuda-toolkit nvidia-gds nvidia-container-toolkit
+```
 
 
-Eg sette opp Ollama i docker, for å slippa å stola like mykje på installasjonsscriptet til Ollama. Det krev at du har [docker installert](https://docs.docker.com/engine/install/). Me docker installert, startar me ollama med
+Eg sette opp Ollama i docker, for å slippa å stola like mykje på installasjonsscriptet til Ollama. Det krev at du har [docker installert](https://docs.docker.com/engine/install/). Med docker installert, startar me ollama med
 
 ```sh
 docker run -d --gpus=all -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
