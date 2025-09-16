@@ -18,7 +18,7 @@ Mohammad fra Khawarismi skrev flere bøker.  En av de viktigste, som ble spredd 
 Disse tallene kaller vi  gjerne for arabertall i motsetning til romertall, selv om Muhammad antagelig hentet dem fra Indien.
 
 ## Slide 5
-Hvis vi prøver å forestille oss norditalienske renesansekjøbmenn som skulle føre sine regnskaber i romertall, og nitidig legge sammen inntekter og utgifter, er det lett å se at tallene fra Khwarizmi har hatt stor betydning for vår del av verden.
+Hvis vi prøver å forestille oss norditalienske renesansekjøbmenn som skulle føre sine regnskaber i romertall, og nitidig legge sammen inntekter og utgifter, er det lett å se at tallene fra Khwarizmi har hatt stor betydning for utvikling og velstand i vår del av verden.
 
 De som regnet med arabertall ble efter hvert kjent som algoritmikere, altså de som følger al-Khwarizmi, i motsetning til f.eks. abakister som brukte kuleramme.
 
@@ -30,4 +30,11 @@ Charles Babbage tok denne idéen helt ut på første halvdel av 1800-tallet, da 
 ## Slide 7
 Den moderne algoritmen tilskrives gjerne Ada Lovelace, som utviklet algoritmer til *the Analytical Engine*.
 
-Selv om the *Analytical Engine* aldri ble bygd, i alle fall ikke slik at den ble brukbar i praksis, består Ada Lovelace sitt arbeide som en del av fundamentet for informatikk og programmering, selv ett hundrede år før vi fikk elektroniske datamaskiner.
+Selv om the *Analytical Engine* aldri ble bygd, i alle fall ikke slik at den ble brukbar i praksis, består Ada Lovelace sitt arbeide som en del av fundamentet for informatikk og programmering, selv om hun virket ett hundrede år før vi fikk elektroniske datamaskiner.
+
+## Slide 8
+Vi kan kanskje ta med oss dette perspektivet når vi programmerer.
+Algoritmer handler om å beskrive det vi ønsker å gjøre med presisjon og detaljnivå, slik at det kan gjennomføres mekanisk, helt uten å tenke.
+Mange algoritmer kan vi gjøre for hånd; det er ikke datamaskinen som gjør oppskriften til en algoritme, men at de kan gjennomføres uten skjønnsmessige vurderinger.
+Datamaskiner gjør dem bare raskere, på kortere tid, uten slurv og uten å klage eller kjede seg.
+
