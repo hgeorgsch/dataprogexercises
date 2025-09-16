@@ -167,3 +167,18 @@ note:
 Den moderne algoritmen tilskrives gjerne Ada Lovelace, som utviklet algoritmer til *the Analytical Engine*.
 
 Selv om the *Analytical Engine* aldri ble bygd, i alle fall ikke slik at den ble brukbar i praksis, består Ada Lovelace sitt arbeide som en del av fundamentet for informatikk og programmering, selv ett hundrede år før vi fikk elektroniske datamaskiner.
+
+---
+<!-- slide template="[[tpl-quote]]" -->
+
+![[ComputerProgrammer.jpg]]
+
+::: credit
+By Free-Photos from Pixabay - https://pixabay.com/photos/work-typing-computer-notebook-731198/, CC0, https://commons.wikimedia.org/w/index.php?curid=99618818
+:::
+
+note:
+Vi kan kanskje ta med oss dette perspektivet når vi programmerer.
+Algoritmer handler om å beskrive det vi ønsker å gjøre med presisjon og detaljnivå, slik at det kan gjennomføres mekanisk, helt uten å tenke.
+Mange algoritmer kan vi gjøre for hånd; det er ikke datamaskinen som gjør oppskriften til en algoritme, men at de kan gjennomføres uten skjønnsmessige vurderinger.
+Datamaskiner gjør dem bare raskere, på kortere tid, uten slurv og uten å klage eller kjede seg.
