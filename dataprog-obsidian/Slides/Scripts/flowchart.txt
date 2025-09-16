@@ -31,5 +31,9 @@ Dette flytdiagrammet er selvsagt litt slurvete og ufullstendig oppstilt. Det ver
 
 Poenget er likevel å illustrere det generelle i algoritmisk tenkning. Kontrollflyt med løkker og *if*-satser er ikke noe som bare forekommer i programkode, og kode er ikke den eneste måten å presentere programmet på.  Det er viktig å kunne heve blikket, og tenke på *hva som skjer* og ikke bare hvordan det *skrives*-
 
-Det er heller ikke noe galt i å bruke slurvete og ufullstendige fremstillinger.  Det er som regel plassen å begynne for 
+Det er heller ikke noe galt i å bruke slurvete og ufullstendige fremstillinger som en del av prosessen.  Det er som regel plassen å begynne, for å få oversikt over hva et nytt program skal gjøre, før man går inn i alle detaljene. Når man først skriver programkode, er det lett å miste oversikten, og dermed gjøre feil.
+
+Der blir minst feil hvis man klarer å ha en god mental modell av hva som skjer i datamaskinen, og da hjelper det å mestre flere måter å presentere og forklare programmet på.
+
+Lykke til videre.
 
