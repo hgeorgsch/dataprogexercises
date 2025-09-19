@@ -16,7 +16,7 @@ parts:
 
   - caption: "Uke 2-5 - Intro til Python"
     chapters:
-      - file: markdown/Uke02/index.md
+      - file: early/uke02.md
       - file: early/oppgave01jh.ipynb
       - file: early/oppgave02jh.ipynb
       - file: early/oppgave03.ipynb
