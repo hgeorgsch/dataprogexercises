@@ -7,19 +7,19 @@ root: intro.md
 parts:
   - caption: "Uke 1 - Spesialoppgave/intro"
     chapters:
-      - file: markdown/Uke01/index.md
+      - file: early/index.md
         title: "Oversikt"
-      - file: markdown/Uke01/installasjon.md
-      - file: markdown/Uke01/Øving1.md
+      - file: early/installasjon.md
+      - file: early/Øving1.md
       - file: notebooks/Uke01/first.ipynb
         title: "Jupyter-eksempel"
 
   - caption: "Uke 2-5 - Intro til Python"
     chapters:
       - file: markdown/Uke02/index.md
-      - file: notebooks/oppgave01jh.ipynb
-      - file: notebooks/oppgave02jh.ipynb
-      - file: notebooks/oppgave03.ipynb
+      - file: early/oppgave01jh.ipynb
+      - file: early/oppgave02jh.ipynb
+      - file: early/oppgave03.ipynb
   - caption: "Stikkordsregister"
     chapters:
       - file: genindex
