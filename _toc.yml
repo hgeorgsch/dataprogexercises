@@ -20,7 +20,7 @@ parts:
       - file: early/oppgave01jh.ipynb
       - file: early/oppgave02jh.ipynb
       - file: early/oppgave03.ipynb
-  - caption: "Ny Start"
+  - caption: "Ny Start 22. september"
     chapters:
       - file: new/Ny start 22. september.md
         sections:
@@ -29,6 +29,9 @@ parts:
       - file: new/29. september.md
         sections:
         - file: notebooks/Fyrste datasett med CSV.md
+  - caption: "29. september"
+    chapters:
+      - file: new/29. september.md
   - caption: "Stikkordsregister"
     chapters:
       - file: genindex
