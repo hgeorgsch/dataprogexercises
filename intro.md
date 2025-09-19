@@ -11,4 +11,4 @@ her.  Materialet som ble brukt før dette vil nok forbli rotete, mens
 vi fokuserer på å samle opp stumpene og gå fremover.
 
 
-`:--` Hans Georg
+:-- Hans Georg
