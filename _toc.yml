@@ -29,6 +29,9 @@ parts:
      - file: new/29. september.md
        sections:
         - file: notebooks/Fyrste datasett med CSV.md
+  - caption: Praktisk        
+    chapters:
+     - file: Mappevurdering
 ###   - caption: "Stikkordsregister"
 ###     chapters:
 ###       - file: genindex

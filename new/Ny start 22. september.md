@@ -10,11 +10,30 @@ to delar.
 + **Del 2** skulle visa djupna, gjennom ei open prosjektoppgåve der de viser
   bruksområde som de finn interessante innanfor faget som de elles studerer.
 
+## Plan for Del 1.
+
 Del 2 skal me koma tilbake til, men Del 1 tek til å hasta.
 I hovudsak skal Del 1 visa ferdigheiter på to område.
 + Grunnleggjande programmering, med vilkårssatsar (*if*), løkker (*for/while*)
   og variablar.
 + Dataanalyse og handsaming av store datasett vha. python.
+
+Utkast til Del 1 skal leverast som obligatoriske arbeidskrav på BlackBoard,
++ Grunnleggjande programmering innan sundag 12. oktober
++ Dataanalyse innan sundag 24. oktober
+
+Karakteren vert basert utelukkande på den ferdige mappa som vert levert
+i desember.  Om de ikkje er nøgde med det som de leverte som obligatorisk
+arbeidskrav har de ei ny sjanse.
+Måndagen etter innleveringsfristen vert brukt til formativ vurdering
++ Refleksjonsseminar 13. oktober.  Dette vil føregå i to grupper, 2h kvar,
+  på det mindre rommet i femte etasje.  Dei som ikkje er på seminar, har
+  det store rommet til å arbeida med nye oppgåver.
++ Medstudentvurdering 27. oktober.  Her vil de arbeida i grupper.  Dei som
+  ikkje har høve til å koma på måndagen, kan skipa eigne grupper og bruka
+  det same opplegget i seinare i veka.
+
+## Øvingsopplegget
 
 Når me går vidare, vil eg publisera alle oppgåvene her.
 Kvar oppgåve er satt for lesing som ein del av boka.  
