@@ -14,9 +14,12 @@ parts:
       - file: notebooks/Uke01/first.ipynb
         title: "Jupyter-eksempel"
 
-  - caption: "Uke 2 - Intro til Python"
+  - caption: "Uke 2-5 - Intro til Python"
     chapters:
       - file: markdown/Uke02/index.md
+      - file: notebooks/oppgave01jh.ipynb
+      - file: notebooks/oppgave02jh.ipynb
+      - file: notebooks/oppgave03.ipynb
   - caption: "Stikkordsregister"
     chapters:
       - file: genindex

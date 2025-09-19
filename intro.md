@@ -1,17 +1,14 @@
 # IIRA2001
+
 ## Programmering og data i økonomiske fag
 
 Velkommen skal dere være :)
 
-- Vi skal i år forsøke å legge ut ressursene i faget på denne nettsiden 
-   - tidligere har det vært en salig blanding av github og blackboard.
+Beklager en fryktelig humpete oppstart, som skyldes flere sykmeldinger.
+
+F.o.m. 23. september vil vi prøve å samle og strukturere alt materiell
+her.  Materialet som ble brukt før dette vil nok forbli rotete, mens
+vi fokuserer på å samle opp stumpene og gå fremover.
 
 
-### Endring i plan for første uke
-
-Grunnet fødsel og ny baby er første uke med undervisning litt spesial.
-   - Prøv å få installert Anaconda (pythondistribusjon med masse datavitenskapspakker) og git.
-   - Gjør øving 1
-
-
-
+`:--` Hans Georg
