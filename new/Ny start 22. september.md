@@ -16,15 +16,24 @@ I hovudsak skal Del 1 visa ferdigheiter på to område.
   og variablar.
 + Dataanalyse og handsaming av store datasett vha. python.
 
+Når me går vidare, vil eg publisera alle oppgåvene her.
+Kvar oppgåve er satt for lesing som ein del av boka.  
+For å arbeida med oppgåvene, skal de lasta dei ned i ipynb-format
+som de kan opna i Jupyter Notebook eller Jupyter lab.
+Sjå nedlastingsmenyen øvst på sida på kvar oppgåve.
+Dersom ipynb ikkje er eit val, er sida ikkje ei oppgåve som de
+kan opna i Jupyter. 
+
 ## Programmering og Simulering
 
 Hittil har de mest arbeidd med den grunnleggjande programmeringa, i veke 2-5
 i innhaldslista til venstre.
-
 Dersom de ikkje kjenner at de har kontroll på dette, skal de gå gjennom 
 fylgjande to oppgåver.
 + [](Fyrste dokument i Jupyter Lab)
 + [](Simulering av kontantstraum)
+Desse to oppgåvene skal ikkje introdusera noko nytt, og skal i hovudsak vera
+ein meir kompakt eksemplifisering av de som de har arbeidd med.
 
 ## Dataanalyse
 
