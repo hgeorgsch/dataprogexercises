@@ -8,5 +8,4 @@ _build:
 	sh make.sh
 
 clean:
-	rm -f notebook/*.ipynb
 	rm -rf _build
