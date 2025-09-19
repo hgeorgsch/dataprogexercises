@@ -30,11 +30,12 @@ Hittil har de mest arbeidd med den grunnleggjande programmeringa, i veke 2-5
 i innhaldslista til venstre.
 Dersom de ikkje kjenner at de har kontroll på dette, skal de gå gjennom 
 fylgjande to oppgåver.
-+ [](Fyrste dokument i Jupyter Lab)
-+ [](Simulering av kontantstraum)
++ [](../notebooks/Fyrste%20dokument%20i%20Jupyter%20Lab)
++ [](../notebooks/Simulering%20av%20kontantstraum)
+
 Desse to oppgåvene skal ikkje introdusera noko nytt, og skal i hovudsak vera
 ein meir kompakt eksemplifisering av de som de har arbeidd med.
 
 ## Dataanalyse
 
-+ [](Fyrste datasett med CSV)
++ [](../notebooks/Fyrste%20datasett%20med%20CSV)

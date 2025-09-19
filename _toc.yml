@@ -23,7 +23,12 @@ parts:
   - caption: "Ny Start"
     chapters:
       - file: new/Ny start 22. september.md
+        sections:
+        - file: notebooks/Fyrste dokument i Jupyter Lab.md
+        - file: notebook/Simulering av kontantstraum.md
       - file: new/29. september.md
+        sections:
+        - file: notebooks/Fyrste datasett med CSV.md
   - caption: "Stikkordsregister"
     chapters:
       - file: genindex

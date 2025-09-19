@@ -1,7 +1,7 @@
 
 title: IIRA2001 - Programmering og data i økonomiske fag
 author: Jonas Julius Harang and Hans Georg Schaathun
-logo: logo.png
+logo: ntnu.svg
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -18,37 +18,5 @@ bibtex_bibfiles:
   - references.bib
 
 sphinx:
-  recursive_update: true
-  html_context:
-    default_mode: dark
-  config:
-    html_use_index: True
-    pygments_style: gruvbox-dark
-    myst_enable_extensions:
-      - deflist
-      - colon_fence
-      - dollarmath
-      - linkify
-      - substitution
-      - tasklist
-      - attrs_block
-      - attrs_inline
-      - html_admonition
-      - html_image
-      - strikethrough
-      - fieldlist
-      - smartquotes
-      - replacements
-        
-# Information about where the book exists on the web
-### repository:
-###   url: https://git.ntnu.no/iirevu/iira2001h25-book.git
-###   repository_provider: NTNU
-###   # path_to_book: docs  # Optional path to your book, relative to the repository root
-###   branch: master  # Which branch of the repository should be used when creating links (optional)
-
-# Add GitHub buttons to your book
-# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
-html:
-  use_issues_button: false
-  use_repository_button: false
+  extra_extensions:
+     - sphinx_iframes
