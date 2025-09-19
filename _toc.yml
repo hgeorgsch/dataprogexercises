@@ -20,6 +20,11 @@ parts:
       - file: early/oppgave01jh.ipynb
       - file: early/oppgave02jh.ipynb
       - file: early/oppgave03.ipynb
+  - caption: "Ny Start"
+    chapters:
+      - file: new/Ny start.md
+      - file: new/22. september.md
+      - file: new/29. september.md
   - caption: "Stikkordsregister"
     chapters:
       - file: genindex
