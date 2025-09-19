@@ -1,4 +1,4 @@
-# Ny start
+# Ny start 22. september
 
 Før me går i gang med nye øvingar, er det greitt å gjera opp status, og freista
 å få auga på kvar me ynskjer å koma før semesteret er slutt.

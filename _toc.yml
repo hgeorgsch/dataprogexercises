@@ -20,19 +20,16 @@ parts:
       - file: early/oppgave01jh.ipynb
       - file: early/oppgave02jh.ipynb
       - file: early/oppgave03.ipynb
-  - caption: "Ny Start 22. september"
+  - caption: Ny start
     chapters:
-      - file: new/Ny start 22. september.md
-        sections:
+     - file: new/Ny start 22. september.md
+       sections:
         - file: notebooks/Fyrste dokument i Jupyter Lab.md
         - file: notebook/Simulering av kontantstraum.md
-      - file: new/29. september.md
-        sections:
+     - file: new/29. september.md
+       sections:
         - file: notebooks/Fyrste datasett med CSV.md
-  - caption: "29. september"
-    chapters:
-      - file: new/29. september.md
-  - caption: "Stikkordsregister"
-    chapters:
-      - file: genindex
+###   - caption: "Stikkordsregister"
+###     chapters:
+###       - file: genindex
 
