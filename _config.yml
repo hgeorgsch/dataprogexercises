@@ -41,13 +41,14 @@ sphinx:
       - replacements
         
 # Information about where the book exists on the web
-repository:
-  url: https://git.ntnu.no/iirevu/iira2001h25-book.git
-  # path_to_book: docs  # Optional path to your book, relative to the repository root
-  branch: master  # Which branch of the repository should be used when creating links (optional)
+### repository:
+###   url: https://git.ntnu.no/iirevu/iira2001h25-book.git
+###   repository_provider: NTNU
+###   # path_to_book: docs  # Optional path to your book, relative to the repository root
+###   branch: master  # Which branch of the repository should be used when creating links (optional)
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
   use_issues_button: true
-  use_repository_button: true
+  use_repository_button: false
