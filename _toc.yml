@@ -11,7 +11,7 @@ parts:
         title: "Oversikt"
       - file: early/installasjon.md
       - file: early/Øving1.md
-      - file: notebooks/Uke01/first.ipynb
+      - file: early/first.ipynb
         title: "Jupyter-eksempel"
 
   - caption: "Uke 2-5 - Intro til Python"
