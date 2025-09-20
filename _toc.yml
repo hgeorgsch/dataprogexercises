@@ -22,7 +22,7 @@ parts:
       - file: early/oppgave03.ipynb
   - caption: Ny start
     chapters:
-     - file: new/Ny start 22. september.md
+     - file: new/Ny start.md
        sections:
         - file: notebooks/Fyrste dokument i Jupyter Lab.md
         - file: notebook/Simulering av kontantstraum.md
