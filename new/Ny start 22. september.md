@@ -64,7 +64,7 @@ Måndagen etter innleveringsfristen vert brukt til formativ vurdering
 
 ## Programmering og Simulering
 
-Hittil har de mest arbeidd med den grunnleggjande programmeringa, i veke 2-5
+Hittil har de mest arbeidd med den grunnleggjande programmeringa, i veke 2-4
 i innhaldslista til venstre.
 Dersom de ikkje kjenner at de har kontroll på dette, skal de gå gjennom 
 fylgjande to oppgåver.

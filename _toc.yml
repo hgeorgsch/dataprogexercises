@@ -20,6 +20,9 @@ parts:
       - file: early/oppgave01jh.ipynb
       - file: early/oppgave02jh.ipynb
       - file: early/oppgave03.ipynb
+      - file: early/Datastrukturer-lokker-plotting-JH .ipynb
+      - file: early/Forelesning uke 38 Programmering  og data.ipynb
+      - file: early/Funksjoner-lister-bibliotek.ipynb
   - caption: Ny start
     chapters:
      - file: new/Ny start 22. september.md
