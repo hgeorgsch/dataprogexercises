@@ -25,10 +25,22 @@ parts:
      - file: new/Ny start 22. september.md
        sections:
         - file: notebooks/Fyrste dokument i Jupyter Lab.md
-        - file: notebook/Simulering av kontantstraum.md
+        - file: notebooks/Simulering av Kontantstraum.md
+        - file: notebooks/Fyrste datasett med CSV.md
      - file: new/29. september.md
        sections:
-        - file: notebooks/Fyrste datasett med CSV.md
+        - file: notebooks/Halveringsmetoden.md
+        - file: notebooks/Iskrem på ei strand.md
+        - file: notebooks/Marknadssimulering.md
+        - file: notebooks/Shrimp-Game.md
+        - file: notebooks/Simulering og Datastrukturar.md
+        - file: notebooks/Tilfeldigheit.md
+     - file: new/Statistikk og Maskinlæring.md
+       sections:
+        - file: notebooks/Evaluering for regresjon.md
+        - file: notebooks/Evaluering.md
+        - file: notebooks/Fisher Linear Discriminant in sklearn.md
+        - file: notebooks/Linear Regression in SciKitLearn.md
   - caption: Praktisk        
     chapters:
      - file: Mappevurdering
