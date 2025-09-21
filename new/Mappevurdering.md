@@ -3,35 +3,31 @@ tags:
   - assessment
   - practical-info
 ---
-
 # Mappevurdering
 
 **Dette er eit utkast.  Endelig oppgåve og vurderingskriterium vert 
 fastsett etter drøfting i referansegruppa.**
 
++ **Frist** Sjå eksamensplan
++ **Innlevering** i Inspera
+
 Vurdering (studiepoeng og karakter) vert basert på ei innlevert mappe,
 der kandidaten viser fram utvalde arbeid frå semesteret og reflekterer
 over korleis dei er nyttige i praktisk virke.
-I tillegg er det eit obligatorisk arbeidskrav at den fyrste delen av
-mappa vert presentert munnleg på midtvegssamlingsa.
-Mappa består av to delar.
 
-+ Del 1 skal demonstrera grunnteknikkar, og skal innehalda,
-    + Løysing på to utvalde oppgåver frå fyrste periode.
-    + Eit kort refleksjonsnotat (maks éi side) der kandidaten fortel kvifor desse
-      to oppgåvene er vald, og drøfter kva innsikt frå kurset som
-      er mest verdifull for vidare karriere.
-+ Del 2, frå andre periode, skal visa praktisk bruk på profesjonelle problem.
-    + Løysing på éi større prosjektoppgåve etter eige val, der ein bruker 
-      programmeringsteknikkar for å få ny innsikt i eit problem frå røynda.
-      Problemstillinga må gjerne koma frå eige dagleg virke,
-    + Eit refleksjonsnotat (1-2 sider) der kandidaten oppsummerer kurset
-      og den verdien det har for vidare virke.
-+ Munnleg presentasjon.  
-    + Kvar del skal presenterast på høvesvis midtvegs- og avslutningssamlinga,
-      som ein del av erfaringsutvekslinga.
-    + Presentasjonen av Del 1 er eit **obligatorisk arbeidskrav** og må vera
-      tilfredsstillande for å få lov til å levera inn mappa.
+Mappa skal bestå av fire dokument
++ Del 1a ihht.  [](./Oblig1)  i Jupyter Notebook
++ Del 1b ihht.  [](./Oblig2)  i Jupyter Notebook
++ Del 2a er ei større prosjektoppgåve etter eige val, der ein bruker 
+  programmeringsteknikkar for å få ny innsikt i eit problem frå røynda.
+  Problemstillinga må gjerne koma frå eige dagleg virke,
+    + Dette er normalt i Jupyter Notebook, men dersom du ynskjer å skriva
+      frittståande program i python, so er det lov.  Ta i so fall kontakt
+      for å drøfta korleis dette vert gjort best mogleg.
++ Del 2b.  Eit refleksjonsnotat (1-2 sider) i Jupyter Notebook eller PDF.
+    + Her skal kandidaten oppsummerer kurset og den verdien det har for studiet
+      og vidare virke, og også vurdera prosjektoppgåva og korleis ho er nyttig
+      og relevant.
 
 **Bruk av Kunstig Intelligens (store språkmodellar).**
 Vurderinga legg vekt på at særleg refleksjonsnotatet er personleg og drøftar
@@ -45,11 +41,6 @@ er nyttig.  Der er berre eit par vilkår,
   frå andre kjelder.
 + de må reflektera over bruken av KI i refleksjonsnotatet, og ta stilling
   kvifor de bruker det som de bruker det.
-
-Røynsler frå liknande emne viser at KI ikkje får toppkarakterer på denne
-typen oppgåver, men ståkarakter er mogleg.  Ein av funksjonane til det
-obligatoriske arbeidskravet er å sikra at alle som leverer mappa, har 
-den minimumsforståinga som krevst for å få emnet godkjend.
 
 ## Vurderingskriterium
 

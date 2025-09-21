@@ -22,6 +22,7 @@ parts:
   - caption: Ny start
     chapters:
      - file: new/Ny start.md
+       title: Oversikt
      - file: new/22sep.md
        sections:
         - file: notebooks/Fyrste dokument i Jupyter Lab.md
