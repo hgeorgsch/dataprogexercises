@@ -1,6 +1,4 @@
-# IIRA2001
-
-## Programmering og data i økonomiske fag
+# IIRA2001: Programmering og data i økonomiske fag
 
 Velkommen skal dere være :)
 

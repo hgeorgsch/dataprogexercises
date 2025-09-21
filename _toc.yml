@@ -5,34 +5,31 @@ format: jb-book
 root: intro.md
 
 parts:
-  - caption: "Uke 1 - Spesialoppgave/intro"
+  - caption: Uke 1-4
     chapters:
       - file: early/index.md
-        title: "Oversikt"
+        title: Oversikt
       - file: early/installasjon.md
       - file: early/Øving1.md
       - file: early/first.ipynb
         title: "Jupyter-eksempel"
-
-  - caption: "Uke 2-5 - Intro til Python"
-    chapters:
-      - file: early/uke02.md
       - file: early/oppgave01jh.ipynb
       - file: early/oppgave02jh.ipynb
       - file: early/oppgave03.ipynb
-      - file: early/Datastrukturer-lokker-plotting-JH .ipynb
+      - file: early/Datastrukturer-lokker-plotting-JH.ipynb
       - file: early/Forelesning uke 38 Programmering  og data.ipynb
       - file: early/Funksjoner-lister-bibliotek.ipynb
   - caption: Ny start
     chapters:
      - file: new/Ny start.md
+     - file: new/22sep.md
        sections:
         - file: notebooks/Fyrste dokument i Jupyter Lab.md
         - file: notebooks/Simulering av kontantstraum.md
         - file: notebooks/Fyrste datasett med CSV.md
         - file: notebooks/Genetikk/Genetikk.md
         - file: notebooks/Jordskjelv/Jordskjelv.md
-     - file: new/29. september.md
+     - file: new/29sep.md
        sections:
         - file: notebooks/Halveringsmetoden.md
         - file: notebooks/Iskrem på ei strand.md
@@ -48,7 +45,9 @@ parts:
         - file: notebooks/Linear Regression in SciKitLearn.md
   - caption: Praktisk        
     chapters:
-     - file: Mappevurdering
+     - file: new/Mappevurdering
+     - file: new/Oblig1
+     - file: new/Oblig2
 ###   - caption: "Stikkordsregister"
 ###     chapters:
 ###       - file: genindex

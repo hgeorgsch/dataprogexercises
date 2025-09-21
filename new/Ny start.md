@@ -1,4 +1,4 @@
-# Ny start 22. september
+# Ny start
 
 Før me går i gang med nye øvingar, er det greitt å gjera opp status, og freista
 å få auga på kvar me ynskjer å koma før semesteret er slutt.
@@ -19,7 +19,7 @@ to delar.
   bruksområde som de finn interessante innanfor faget som de elles studerer.
 
 Vurderingskriterium og annan utfyllande informasjon om mappa finst under
-[](./Mappevurdering).
+[](../Mappevurdering).
 
 ## Plan for Del 1.
 
@@ -28,31 +28,34 @@ Me skal bruka dei neste fem vekene på få kontroll på Del 1,
 som i hovudsak skal Del 1 visa ferdigheiter på to område.
 + Grunnleggjande programmering, med vilkårssatsar (*if*), løkker (*for/while*)
   og variablar.
-+ Dataanalyse og handsaming av store datasett vha. python.
++ Dataanalyse og handsaming av store datasett vha. python (pandas-biblioteket,
+  lesing av CSV- og JSON-filer, plotting, statistisk analyse, etc.)
 
 Utkast til Del 1 skal leverast som obligatoriske arbeidskrav på BlackBoard,
-+ Grunnleggjande programmering innan sundag 12. oktober
-+ Dataanalyse innan sundag 24. oktober
++ [Grunnleggjande programmering](./Oblig1) innan sundag 12. oktober
++ [Dataanalyse](./Oblig2) innan sundag 24. oktober
 
 Karakteren vert basert utelukkande på den ferdige mappa som vert levert
 i desember.  Om de ikkje er nøgde med det som de leverte som obligatorisk
 arbeidskrav har de ei ny sjanse.
+Det er uansett viktig at de leverer so godt de kan innan dei obligatoriske
+fristane, ogso får å kunna få tilbakemelding.
 Måndagen etter innleveringsfristen vert brukt til formativ vurdering
 + Refleksjonsseminar 13. oktober.  Dette vil føregå i to grupper, 2h kvar,
-  på det mindre rommet i femte etasje.  Dei som ikkje er på seminar, har
-  det store rommet til å arbeida med nye oppgåver.
+  på seminarrommet i femte etasje.  Det store rommet er ledig for dei
+  som ikkje er på refleksjonsseminaret.
 + Medstudentvurdering 27. oktober.  Her vil de arbeida i grupper.  Dei som
   ikkje har høve til å koma på måndagen, kan skipa eigne grupper og bruka
   det same opplegget i seinare i veka.
 
 ## Program t.o.m. 27. oktober
 
-+ 22. september: Oppsummering, statusrapport og nye oppgåver i dataanalyse.
++ [22. september](./22sep): Oppsummering, statusrapport og nye oppgåver i dataanalyse.
     + 23. september: eigenarbeid med oppgåvene
     + 25. september: eg håper å vera tilgjengeleg for vegleiing
 + 29. september: Nye oppgåver i programmering/simulering.
     + 30. sept. og 2. oktober: vegleiing
-+ 6.-10. oktober: Eigenarbeid med Del 1 til mappa.
++ 6.-10. oktober: Eigenarbeid med Del 1 til mappa.  Der er ingen førelesar tilgjengeleg.
 + 13. oktober: Refleksjonsseminar.  Tilbakemelding på fyrste obligatoriske innlevering.
 + 14. oktober: Nytt stoff i dataanalyse
     + 16. oktober: Vegleiing på oppgåvene
@@ -61,21 +64,3 @@ Måndagen etter innleveringsfristen vert brukt til formativ vurdering
 + 27. oktober: Medstudentvurdering på andre obligatoriske innlevering
 + 28. oktober: Nytt og meir avansert stoff.
 
-
-## Programmering og Simulering
-
-Hittil har de mest arbeidd med den grunnleggjande programmeringa, i veke 2-4
-i innhaldslista til venstre.
-Dersom de ikkje kjenner at de har kontroll på dette, skal de gå gjennom 
-fylgjande to oppgåver.
-+ [](../notebooks/Fyrste%20dokument%20i%20Jupyter%20Lab)
-+ [](../notebooks/Simulering%20av%20kontantstraum)
-
-Desse to oppgåvene skal ikkje introdusera noko nytt, og skal i hovudsak vera
-ein meir kompakt eksemplifisering av de som de har arbeidd med.
-
-## Dataanalyse
-
-+ [](../notebooks/Fyrste%20datasett%20med%20CSV)
-+ [](../notebooks/Genetikk/Genetikk)
-+ [](../notebooks/Jordskjelv/Jordskjelv)
