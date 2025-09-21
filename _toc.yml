@@ -20,15 +20,32 @@ parts:
       - file: early/oppgave01jh.ipynb
       - file: early/oppgave02jh.ipynb
       - file: early/oppgave03.ipynb
+      - file: early/Datastrukturer-lokker-plotting-JH .ipynb
+      - file: early/Forelesning uke 38 Programmering  og data.ipynb
+      - file: early/Funksjoner-lister-bibliotek.ipynb
   - caption: Ny start
     chapters:
      - file: new/Ny start.md
        sections:
         - file: notebooks/Fyrste dokument i Jupyter Lab.md
-        - file: notebook/Simulering av kontantstraum.md
+        - file: notebooks/Simulering av kontantstraum.md
+        - file: notebooks/Fyrste datasett med CSV.md
+        - file: notebooks/Genetikk/Genetikk.md
+        - file: notebooks/Jordskjelv/Jordskjelv.md
      - file: new/29. september.md
        sections:
-        - file: notebooks/Fyrste datasett med CSV.md
+        - file: notebooks/Halveringsmetoden.md
+        - file: notebooks/Iskrem på ei strand.md
+        - file: notebooks/Marknadssimulering.md
+        - file: notebooks/Shrimp-Game.md
+        - file: notebooks/Simulering og Datastrukturar.md
+        - file: notebooks/Tilfeldigheit.md
+     - file: new/Statistikk og Maskinlæring.md
+       sections:
+        - file: notebooks/Evaluering for regresjon.md
+        - file: notebooks/Evaluering.md
+        - file: notebooks/Fisher Linear Discriminant in sklearn.md
+        - file: notebooks/Linear Regression in SciKitLearn.md
   - caption: Praktisk        
     chapters:
      - file: Mappevurdering
