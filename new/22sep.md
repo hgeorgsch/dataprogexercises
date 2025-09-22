@@ -26,6 +26,8 @@ Førelesinga 22. september vil prioritera *briefinga* om
 opplegget framover samt spørsmål og svar.  Dette omfattar ein
 introduksjon til øvingane over.  
 
++ [IIRA2001 Ny Start](https://iirevu.org.ntnu.no/Slides/IIRA2001%20New%20Start/#/)
+
 Dersom eg rekk det, vil eg gå gjennom fylgjande to førebudde
 føredrag.  Når du viser foilane, kan du trykka S for å sjå
 talarvisinga med manuskriptet.
