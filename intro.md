@@ -14,4 +14,4 @@ vi fokuserer på å samle opp stumpene og gå fremover.
 ## Praktisk informasjon
 
 + Kontakt meg på hasc@ntnu.no
-+ [](Mappevurdering)
++ [](new/Mappevurdering)
