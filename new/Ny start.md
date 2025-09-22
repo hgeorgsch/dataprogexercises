@@ -25,7 +25,7 @@ Vurderingskriterium og annan utfyllande informasjon om mappa finst under
 
 Del 2 skal me koma tilbake til, men Del 1 tek til å hasta.
 Me skal bruka dei neste fem vekene på få kontroll på Del 1,
-som i hovudsak skal Del 1 visa ferdigheiter på to område.
+som i hovudsak skal visa ferdigheiter på to område.
 + Grunnleggjande programmering, med vilkårssatsar (*if*), løkker (*for/while*)
   og variablar.
 + Dataanalyse og handsaming av store datasett vha. python (pandas-biblioteket,
