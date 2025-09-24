@@ -3,12 +3,24 @@
 + Levering på BlackBoard
 + **Frist** Sundag 12. oktober (før midnatt natt til måndag).
 + **Format** Eitt Jupyter Notebook-dokument (.ipynb-fil) 
-+ **Innhald** Dokumentet skal innehalda 
-    1. Svar på éi oppgåve innanfor programmering/simulering
-       etter eige val.
+    + De skal skriva eit *essay* som drøftar eit eller anna problem
+      som de finn interessant, gjerne fordi det er relevant for
+      studiet dykkar.
+    + Eit essay, som andre gode historiar, omfattar ei byrjing,
+      ein midte, og ei avslutting (Aristoteles *Etikken*)
+        + byrjinga skal ta opp problemet, gjerne med undring,
+          slik at lesaren og forfattaren har sams utgangspunkt
+        + midten skal utforska problemet, og det er her de bruker
+          python for å gjera utrekningar og simuleringar.
+        + avsluttinga skal tolka resultat og konkludera, og reflektera
+          over kvifor dette er interessant.
++ **Innhald** Oppgåva innber
+    1. Svar på éi oppgåve innanfor programmering/simulering etter eige val.
+       Dette vert utforskinga i midten av *essayet*.
     2. Kort refleksjonsnotat (normalt ikkje meir enn 200 ord)
        som forklarer kvifor denne oppgåva er interessant for deg
        (ditt studium/karriereplanar).
+       Dette inngår i avsluttinga.
 + **Mål**  Oppgåva skal visa at
     + du kan bruka grunnleggjande programmeringsstrukturar som *if*,
       løkker (*for*/*while*) og variablar
@@ -22,7 +34,9 @@
     + Bruker du mykje hjelp, skal du reflektera over det i refleksjonsnotatet,
       og vurdera kva slags hjelp du har brukt, kvifor du har brukt ho, og
       korleis du kan stola på svaret som du ender opp med.
-+ **Moglege oppgåver**  Du kan løysa ei av fylgjande oppgåver, eller ei som du
++ **Oppgåve**  Du skal, som sagt, ta for deg eitt praktisk problem som du analyserer vha.
+  ei simulering i python.
+  Som utgangspunkt kan du bruka ei av fylgjande oppgåver, eller ei som du
   finn sjølv
     1. [](../notebooks/Simulering%20av%20kontantstraum) (sjå òg liknande
        oppgåver frå veke 1-4)
