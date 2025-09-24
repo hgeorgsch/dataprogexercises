@@ -1,14 +1,9 @@
 #!/bin/bash
 # This is to build the Jupyter Book, including generating notebook files
 # from markdown.
-
-NS="notebooks"
-
-for N in $NS
-do
-   ( cd $N ; for i in *.md ; do jupytext --to notebook "$i" ; done )
-done
-
+#
+# Also requires:
+# cd .. ; sh mkpynb.sh
 
 jupyter-book build .
 
