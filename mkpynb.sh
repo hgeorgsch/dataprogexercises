@@ -3,16 +3,19 @@
 # from markdown.
 
 T=dataprog-obsidian/notebook/
-$D=iir2001/notebooks/
+D=iira2001/notebooks/
+R=`pwd`
 
 cd $T
-ls $T
+ls 
 
 for i in *.md ; do jupytext --to notebook "$i" ; done
 
-cp $T/*.csv $N
-cp $T/*.txt $N 
-cp $T/*.json $N
-cp $T/*.ipynb $N
-cp $T/*.jpg $N
+cd $R
+
+cp $T/*.csv $D
+cp $T/*.txt $D
+cp $T/*.json $D
+cp $T/*.ipynb $D
+cp $T/*.jpg $D
 
