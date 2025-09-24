@@ -16,7 +16,12 @@ kernelspec:
 
 Eitt hovudmål i dette kurset er å kunna handtera store datasett frå røynda vha. programmering, i praksis i python. Me skal starta med datasettet, og so tek me programmeringsteknikkane etter kvart. Mange har gjort liknande ting i Excel eller andre rekneark, og då vil det ta ein del tid før føremonane ved programmering kjem til syne. Enkle oppgåver er som regel enklare å gjera, og i alle fall raskare å læra, i rekneark. Det er berre samansette oppgåver og store datasett som vert enklare ved programmering. Eitt problem med Excel spesifikt er maksgrensa på ein million radar. Me skal etter kvar sjå på datasett som er større enn det.
 
-Merk at dette dokumentet er tenkt presentert munnleg i eit seminar. Forklaringane kan difor vera litt knappe til sjølvstudium.
+Merk at dette dokumentet er tenkt presentert munnleg i eit seminar.
+Forklaringane kan difor vera litt knappe til sjølvstudium.
+Det er likevel meininga at du skal fikla med koden min og gjera oppgåvene 
+ved å føra inn nye celler i dokumentet.
+
+Problemet me skal sjå på er valutakursar.  Korleis har dei utvikla seg dei siste fem åra?
 
 ## Fyrste datasett
 
@@ -32,16 +37,16 @@ Dette må ein vera merksam på når ein skal lesa fila.
 Fila er rein tekst, slik at me kan opna ho i ei teksteditor (vim, notepad, e.l.).
 Dersom du vil opna ho i Excel, kan det løna seg å opna Excel med eitt tomt ark, og so bruka import-funksjonen frå menyane. Då skal du få opp ein dialogboks der du kan fortelja maskina at semikolon er skiljeteikn, og komma er det ikkje.
 
-:::{admonition} Oppgåve
+::: {admonition} Oppgåve
 Opna fila i eit program du kjenner og sjå korleis ho ser ut.
-Du kan godt opna både i ein teksthandsamar og i eit rekneark.
+Du kan godt opna både i ein teksteditor og i eit rekneark.
 Kan du finna att kursen på pund sterling for fem år sidan?  Kva med svenske kroner 1. januar i år?
 :::
 
 Fila inneheld gjerne meir data enn me er interesserte i. Det skal me ikkje tenkja på.  
 Me legg vekt på å forstå det som er nyttig for oss.
 
-:::{hint}
+::: {hint}
 Når du skal arbeida med eit nytt datasett, løner det seg å sjå på fila for å forsikra deg om at du har fått det du ville.
 :::
 No kan me gå vidare til å opna fila i python.  Me bruker modulen pandas.
@@ -94,7 +99,7 @@ I det tredje dømet er funksjonen `plot()` definert i *objektet* `df`, som fekk 
 
 ## Plottet
 
-:::{admonition} Refleksjon
+::: {admonition} Refleksjon
 Kva søyler er interessante å plotta?
 :::
 
@@ -191,7 +196,7 @@ Det er ein god start, men kva er dei rake krosslinene?
 Problemet finn me i fila, som har fem ulike valutaar. Dei fem valuataane har ikkje kvar si søyle.
 I staden er der ei søyle for valutakode.
 
-:::{admonition} Refleksjonsspørsmål
+::: {admonition} Refleksjonsspørsmål
 Kva del av plottet svarer til kva valuta?
 :::
 
@@ -238,7 +243,7 @@ mrg.plot()
 
 OK.  Datasettet ser fint ut, men plottet var ikkje det som me venta.
 
-:::{admonition} Refleksjon
+::: {admonition} Refleksjon
 Kva er det eigentleg som er plotta?
 :::
 
@@ -248,7 +253,7 @@ Når me vel $x$- og $y$-akse i `plot`-funksjonen, kan me gje ei liste med søyle
 mrg.plot( x="dato", y = [ "GBP", "DKK" ])
 ```
 
-:::{admonition} Oppgåve  
+::: {admonition} Oppgåve  
 Bruk det som me har lært til no for å plotta alle dei fem valutaane i eitt diagram.
 :::
 
@@ -268,7 +273,7 @@ mrg.to_csv("EXR-formattert.csv", index=False)
 
 Me ser ikkje noko utdata frå denne funksjonen, so for å sjå kva som skjedde, må me finna att fila i filsystemet.
 
-:::{admonition} Oppgåve
+::: {admonition} Oppgåve
 Finn fila i filsystemet og opna ho i Excel eller eit anna program. Inneheld ho det ho skal?
 :::
 
@@ -281,6 +286,10 @@ Der er mykje å halda styr på i pandas. Her har me berre sett eitt døme og nok
 * [Kokebok](https://www.skytowner.com/explore/pandas_recipes_reference) 
 
 Det er ikkje sikkert at det er mykje hjelp i desse kjeldene enno, før du har lært litt meir. I neste demo skal me forklara nokre fleire grunnleggjande konsept. Målet er å læra nok til å søkja etter resten, lesa dokumentasjon og å stilla gode spørsmål når du treng det.
+
+::: {admonition} Oppgåve
+Kva kan du seia om valutakursane basert på dei plotta og visningane som me har laga?
+:::
 
 ## Materiale som ikkje fekk pass
 
