@@ -7,7 +7,7 @@
       som de finn interessant, gjerne fordi det er relevant for
       studiet dykkar.
     + Eit essay, som andre gode historiar, omfattar ei byrjing,
-      ein midte, og ei avslutting (Aristoteles *Etikken*)
+      ein midte, og ei avslutting (Aristoteles *Poetikken*)
         + byrjinga skal ta opp problemet, gjerne med undring,
           slik at lesaren og forfattaren har sams utgangspunkt
         + midten skal utforska problemet, og det er her de bruker
