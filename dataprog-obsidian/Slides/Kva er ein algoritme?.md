@@ -12,44 +12,6 @@ Algoritmene får gjerne skylden for alle dårlige beslutninger i sosiale medier 
 Algoritmene fremstår lett, med rette eller urette, som en mystisk kraft som tar stadig større makt over livene våre.
 
 ---
-
-<!-- slide template="[[tpl-diagram]]" -->
-
-![[flowchart.svg]]
-
-::: credit
-:::
-
-note:
-En vanlig analogi er å se på algoritmen som en oppskrift.
-Kokeboken er egentlig full av algoritmer som forklarer steg for steg hvordan man går frem for å oppnå et bestemt resultat.
-
-Det er viktig å merke seg at algoritmen er prosedyren og ikke teksten som beskriver prosedyren.  Dét er på mange måter også den kritiske forskjellen på en algoritme og et dataprogram.  Dataprogrammet er en konkret implementasjon, skrevet i et bestemt sprog, for å kjøre på en bestemt type maskin.  Algoritmen er en abstrakt beskrivelse av hvordan programmet skal gå frem.
-
-For å programmere ryddig og korrekt er det ofte nyttig å kunne beskrive algoritmen på forskjellige måter, slik at man ikke henger seg opp i særegenhetene i f.eks. python.  Det kan være nyttig å formulere algoritmene sine både i visuelle diagrammer, vanlig dagligsprog og matematiske formler.
-
-La oss ta et eksempel på visuell fremstilling.  Her «algoritmen» for å lave lapper.
-
-Denne typen diagrammer kalles gjerne flytdiagrammer; de viser flyten fra operasjon til operasjon; og de har vært mye brukt for å dokumentere programmer og algoritmer i industrien.  
-
-Vi begynner på start.  Det første steget er å hente ingrediensene.  Parallellogrammet signaliserer I/O dvs. *input/output*.  
-
-Romben indikerer en valgmulighet, eller *if*-sats.  Her må vi ta stilling til om vi ønsker lapper på amerikansk eller sunnmørsk manér.  Hvis vi vil ha amerikanske *pancakes* går vi til venstre og begynner med å skille eggene.  I motsatt fall går vi til høyre og pisker eggedosis.
-
-Rektanglene er operasjoner som utføres i rekkefølge langs pilene.
-
-Etter eggedosisen skal vi tilsette surmelk og mel vekselvis. Da ser vi at pilene går i ring. Så lenge der er mer mel elller melk igjen, må vi gå tilbake og tilsette mer.
-I programmering kaller vi det en løkke, som i python gjerne skrives med *while* eller *for*.
-
-På slutten går de to programgrenene sammen, for stekingen er den samme uansett røre. Vi har en ny løkke når vi venter på at takken skal bli varm, og periodisk må sjekke om den er varm nok.  Serveringen har jeg notert som en I/O-boks, dvs. at lappene er *output* fra oppskriften.
-
-Dette flytdiagrammet er selvsagt litt slurvete og ufullstendig oppstilt. Det verste er sikkert at ingrediensene ikke er spesifisert. Om en maskin skulle ha kjørt programmet, ville den også hatt problem med skjønnsmessige vurderings som «litt mel» eller hvorvidt takken er *passe* varm. 
-
-Poenget er likevel å illustrere det generelle i algoritmisk tenkning. Kontrollflyt med løkker og *if*-satser er ikke noe som bare forekommer i programkode, og kode er ikke den eneste måten å presentere programmet på.  Det er viktig å kunne heve blikket, og tenke på *hva som skjer* og ikke bare hvordan det *skrives*-
-
-Det er heller ikke noe galt i å bruke slurvete og ufullstendige fremstillinger.  Det er som regel plassen å begynne for 
-
----
 <!-- slide template="[[tpl-quote]]" -->
 
 ![[addition.png]]
