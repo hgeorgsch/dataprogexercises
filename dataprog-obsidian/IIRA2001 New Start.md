@@ -1,6 +1,8 @@
 
 # Ny start
 
+## IIRA2001 Data og Programmering i Økonomiske Fag
+
 ---
 
 # Mappevurdering
@@ -25,6 +27,7 @@
 
 # Poll
 
++ [Mentimeter](https://www.mentimeter.com/app/presentation/alp99yg47su83rv6d1p9ktckvchpiowx/edit?question=uf86czb493cj)
 + *Kva har de lært so langt?*
 
 ---
@@ -37,6 +40,27 @@
 
 ---
 
+## Program t.o.m. 27. oktober
+
+- [22. september](./22sep): Oppsummering, statusrapport og nye oppgåver i dataanalyse.
+- 29. sept: Nye oppgåver i programmering/simulering.
+- 6.-10. okt: Eigenarbeid med Del 1 til mappa.  
+- 13. okt: Refleksjonsseminar.  Oblig 1.
+- 14. okt: Nytt stoff i dataanalyse
+- 20. okt: Nytt stoff i dataanalyse
+- 27. okt: Medstudentvurdering på Oblig 2
+- 28. okt: Nytt og meir avansert stoff.
+
+
+---
+
 # Programmering og Simulering
 
 + Poll: *Kva er programmering?*
+
+---
+
+# Arbeida med Datasett
+
+
++ [Hovudoppgåva denne veka](https://iirevu.org.ntnu.no/iira2001/notebooks/Fyrste%20datasett%20med%20CSV.html)
