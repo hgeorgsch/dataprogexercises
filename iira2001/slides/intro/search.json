@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "intro.html#section",
+    "href": "intro.html#section",
+    "title": "Introduksjon til programmering og data i økonomiske fag",
+    "section": "",
+    "text": "På hver tidssteg ser maskinen tilstanden sin og ett tegn på båndet. Dette avjør både den nye tilstanden og hvilket tegn som blir skrevet på båndet. I tillegg kan båndet flytte et steg til høyre eller til venstre. Turingmaskinen har en fast oppslagstabell som definerer resultatet for en gitt tilstand og et gitt tegn på båndet. Samme tilstand og tegn gir alltid samme resultat.\nDenne maskinen er selvsagt absurd enkel. Den må òg være uhyre treg siden det tar mange steg og dermed lang tid å lete gjennom båndet hvis man er ut efter bestemte data. Likevel viser Turing at den i prinsippet kan løse mange komplekse problemer.\nAlt vi trenger er et minne som vi kan bla igjennom og en operasjon som virker på to inputtverdier, tilstanden og verdien fra minnet. Ennu i dag regner vi turingmaskinen som målestokk for hva som overhode er mulig å beregne."
+  },
+  {
+    "objectID": "intro.html#von-neumann-arkitekturen",
+    "href": "intro.html#von-neumann-arkitekturen",
+    "title": "Introduksjon til programmering og data i økonomiske fag",
+    "section": "von Neumann-arkitekturen",
+    "text": "von Neumann-arkitekturen\n\n\nElementene fra turingmaskinen kjenner vi igjen i John von Neumann sin arkitektur fra 1945. Hans modell er blitt førende for praktisk konstruksjon av datamaskiner.\nPapirremsen er blit til Random Access Memory, eller RAM. Random Access betyr at maskinen kan lese og skrive på en hvilken som helst posisjon, uten å bruke tid på å lete langs remsen\nSelve prosesseringsenheten er blitt mer kompleks. Kontrollenheten holder styr på programmet og hvilken instruksjon den logiske og aritmetiske enheten skal utføre neste gang. Tilstanden er ikke lenger én atomær verdi, men flere registre der hvert register inneholder en verdi.\nInstruksjonene er typisk enkle aritmetiske og logiske operasjoner, som pluss, minus, og og eller, samt instruksjoner for å hoppe i programmet eller lese og skrive til minnet.\nI tillegg er maskina koblet til det vi gjerne kaller perifere enheter, eller input/output devices i figuren. Det omfatter skjerm for output, og tastatur for input, men kan òg være nettverksgrensesnitt eller harddisk. Du la kanskje merke til at turingmaskinen ikke hadde noen mekanisme for å kommunisere omverdenen. I praksis må den logiske enheten ha instruksjoner for å sende og motta data til og fra perifere enheter.\nEt hovedpoeng i von Neumann-arkitekturen er at det samme RAM-minnet blir brukt både til de data som programmet arbeider på og til selve programmet."
+  },
+  {
+    "objectID": "intro.html#section-1",
+    "href": "intro.html#section-1",
+    "title": "Introduksjon til programmering og data i økonomiske fag",
+    "section": "",
+    "text": "En instruksjon som print er i virkeligheten uhyre komplisert. Tallverdier må oversettes til tegnstrenger. Adressen tl terminalen må finnes. Hvert tegn må kopieres fra registeret til riktig posisjon på terminalen. Feil kan oppstå og må håndteres fornuftig når det skjer. Det er godt vi har tredjgegenerasjonssprog så vi slipper å tenke på alle disse detaljene selv.\nDet grunnleggende prinsippet er likevel det samme som Turing og von Neumann la til grunn for tre mannsaldre sidan. Gjennom programmet gir vi imperativer til CPUen, som utfører ordren avhengig av tilstanden sin. Noen instruksjoner oppdaterer variabler i tilstanden. Andre kommuniserer med verden utenfor maskinen. CPUen har òg en programpeiker som viser til neste instruksjon i programmet. Normalt går pekeren frå en linje til neste, men ikke alltid. I for-løkken kan hopper pekere tilbake til starten av løkken for å gjenta de samme kodelinjene med en ny tilstand.\nDenne samme modellen ligger til grunn for all imperativ programmering. Det som gjør programmering krevende, er at programmøren må kunne forutsi hva som skjer på CPUen, og ikke minst hvilken tilstand maskinen kan ende opp i. Det er lett å overse mulige tilstander, og skrive programmet slik at det bare virker i de vanligste situasjonene."
+  }
+]
