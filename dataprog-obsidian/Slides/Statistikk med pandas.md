@@ -6,7 +6,7 @@ tags:
 ---
 
 
-<!-- slide template="[[tpl-quote-header]]" -->
+d 
 
 # Deskriptiv statistikk med pandas
 
