@@ -2,11 +2,11 @@
 # This is to build the Jupyter Book, including generating notebook files
 # from markdown.
 
-TS=dataprog-obsidian/notebook/ exercises/Genetikk/ exercises/Jordskjelv/
+TS="dataprog-obsidian/notebook/ exercises/Genetikk/ exercises/Jordskjelv/"
 D=iira2001/notebooks/
 R=`pwd`
 
-for T in TS
+for T in $TS
 do
   cd $T
   ls 
