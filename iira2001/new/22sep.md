@@ -4,8 +4,8 @@ Eg har førebudd fem øvingar som me skal arbeida med denne veka:
 1. [](../notebooks/Fyrste%20dokument%20i%20Jupyter%20Lab)
 2. [](../notebooks/Simulering%20av%20kontantstraum)
 3. [](../notebooks/Fyrste%20datasett%20med%20CSV)
-4. [](../notebooks/Genetikk/Genetikk)
-5. [](../notebooks/Jordskjelv/Jordskjelv)
+4. [](../notebooks/Genetikk)
+5. [](../notebooks/Jordskjelv)
 
 Eg håper dei to fyrste er godt kjende etter dei fyrste fire vekene,
 men om der er noko her som er vanskeleg, so vil eg gjerne høyra om det,

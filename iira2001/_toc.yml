@@ -7,11 +7,10 @@ root: intro.md
 parts:
   - caption: Uke 1-4
     chapters:
-      - file: early/index.md
+      - file: early/index
         title: Oversikt
-      - file: early/installasjon.md
-      - file: early/Øving1.md
-      - file: early/first.ipynb
+      - file: early/installasjon
+      - file: early/Øving1
         title: "Jupyter-eksempel"
       - file: early/oppgave01jh.ipynb
       - file: early/oppgave02jh.ipynb
@@ -21,29 +20,29 @@ parts:
       - file: early/Funksjoner-lister-bibliotek.ipynb
   - caption: Ny start
     chapters:
-     - file: new/Ny start.md
+     - file: new/Ny start
        title: Oversikt
-     - file: new/22sep.md
+     - file: new/22sep
        sections:
-        - file: notebooks/Fyrste dokument i Jupyter Lab.md
-        - file: notebooks/Simulering av kontantstraum.md
-        - file: notebooks/Fyrste datasett med CSV.md
-        - file: notebooks/Genetikk/Genetikk.md
-        - file: notebooks/Jordskjelv/Jordskjelv.md
-     - file: new/29sep.md
+        - file: notebooks/Fyrste dokument i Jupyter Lab
+        - file: notebooks/Simulering av kontantstraum
+        - file: notebooks/Fyrste datasett med CSV
+        - file: notebooks/Genetikk
+        - file: notebooks/Jordskjelv
+     - file: new/29sep
        sections:
-        - file: notebooks/Halveringsmetoden.md
-        - file: notebooks/Iskrem på ei strand.md
-        - file: notebooks/Marknadssimulering.md
-        - file: notebooks/Shrimp-Game.md
-        - file: notebooks/Simulering og Datastrukturar.md
-        - file: notebooks/Tilfeldigheit.md
-     - file: new/Statistikk og Maskinlæring.md
+        - file: notebooks/Halveringsmetoden
+        - file: notebooks/Iskrem på ei strand
+        - file: notebooks/Marknadssimulering
+        - file: notebooks/Shrimp-Game
+        - file: notebooks/Simulering og Datastrukturar
+        - file: notebooks/Tilfeldigheit
+     - file: new/Statistikk og Maskinlæring
        sections:
-        - file: notebooks/Evaluering for regresjon.md
-        - file: notebooks/Evaluering.md
-        - file: notebooks/Fisher Linear Discriminant in sklearn.md
-        - file: notebooks/Linear Regression in SciKitLearn.md
+        - file: notebooks/Evaluering for regresjon
+        - file: notebooks/Evaluering
+        - file: notebooks/Fisher Linear Discriminant in sklearn
+        - file: notebooks/Linear Regression in SciKitLearn
   - caption: Praktisk        
     chapters:
      - file: new/Mappevurdering
