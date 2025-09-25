@@ -5,7 +5,26 @@ in programming and data analysis, including modules for business
 studies, biology, and other departments as well as continuing 
 education.
 
-It is based on a shallow clone of git@github.com:jonasjul/IIFprog.git 
+It is based on a shallow clone of git@github.com:jonasjul/IIFprog.git,
+with other subprojects added.
+
+## Contents
+
++ `dataprog-obsidian` is an obsidian vault with comprehensive notes 
+  from several taught modules under development
++ `iir2001` is a Jupyter Book for IIRA2001 for IIF
++ `iir6001` is a Jupyter Book for IIRA6001 for EVU
+
+## Build
+
++ `mkpynb.sh` makes Jupyter files from markdown (`jupytext`) and installs 
+  them under under iira2001
++ `install.sh` installs slides from obsidian on the web page, but these
+  have first to be built using obsidian
++ `iira2001/make.sh` builds the jupyter book, depending on the Jupyter
+  files already being built by `mkpynb.sh` above
++ `iira6001/make.sh` builds the jupyter book, but this has not been updated
+  and may not work
 
 ## git subtrees
 
