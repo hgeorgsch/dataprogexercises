@@ -1,11 +1,11 @@
 ---
 jupytext:
+  formats: md:myst,ipynb
   text_representation:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.17.0
-  formats: md:myst,ipynb
+    jupytext_version: 1.17.2
 kernelspec:
   name: dataprog
   language: python
@@ -241,7 +241,7 @@ ved å bruke `in`- eller `not in`-operatoren.
 liste = []
 while len(liste) < 7:
    idx = random.randint(0,n-1) 
-   person = klasse[liste] 
+   person = klasse[idx] 
    if person not in liste:
       liste.append( person )
 
@@ -286,6 +286,7 @@ og mange måtar å gjera det på, so lat oss ta eit døme.
 Roulette har mange rutar å satsa på, m.a. raudt og svart,
 der kvart tal utanom 0 er farga anten raudt eller sort.
 Desse tala er definert slik,
+
 ```{code-cell} ipython3
 red = [ 32, 19, 21, 25, 34, 27, 36, 30, 23, 5, 16, 1, 14, 9, 18, 7, 12, 3 ]
 black = [ 15, 4, 2, 17, 6, 13, 11, 8, 10, 24, 33, 20, 31, 22, 29, 28, 35, 26 ]
@@ -327,3 +328,11 @@ innsatsar, på jamne og ujamne tal, på intervall, hjørne, rekkjer,
 etc.
 
 :::
+
+```{code-cell} ipython3
+
+```
+
+```{code-cell} ipython3
+
+```
