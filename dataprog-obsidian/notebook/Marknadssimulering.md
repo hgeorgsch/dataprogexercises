@@ -167,14 +167,20 @@ Lat oss starta med å utvida varemodellen.
 I staden for berre pris, treng me ein vegleidande pris og
 ein salspris.  I utgangspunktet er dei to prisane like.
 ```{code-cell} ipython3
-varer = { "Epler": { "veilpris": 10.0, "salspris": 10.0 },
-          "Pærer": { "veilpris": 15.0, "salspris": 15.0 },
-          "Bleier": { "veilpris": 35.0, "salspris": 35.0 },
-          "Sjokolade": { "veilpris": 6.0, "salspris": 6.0 },
-          "Melk": { "veilpris": 20.0, "salspris": 20.0 },
-          "Rundstykker": { "veilpris": 13.0 "salspris": 13.0 },
-        }
+varer = [ { "vare" : "Epler", "vare" : "veilpris": 10.0, "salspris": 10.0 },
+          { "vare" : "Pærer", "veilpris": 15.0, "salspris": 15.0 },
+          { "vare" : "Bleier", "veilpris": 35.0, "salspris": 35.0 },
+          { "vare" : "Sjokolade", "veilpris": 6.0, "salspris": 6.0 },
+          { "vare" : "Melk", "veilpris": 20.0, "salspris": 20.0 },
+          { "vare" : "Rundstykker", "veilpris": 13.0 "salspris": 13.0 },
+        ]
 ```
+Her har me vald å representera vareutvalet som ei liste, der kvar
+vare er ein `dict`.  Me bruker ein `dict` til varene for å gjera
+det lettare å sjå kva pris som er kva.  Me kunne ha late
+vareutvalet forbli ein `dict` sjølv om han inneheld andre `dict`*s*,
+men det ville ha gjeve oss litt fleire nye syntakselement å læra,
+og me har nok som det er.
 
 Me treng ein funksjon som reknar ut sannsynet for at kunden
 kjøper ei vare.  Me skal ikkje seia mykje om denne modellen,
@@ -223,12 +229,12 @@ def tilbodshandling(varer,budsjett=200):
     handlekurv = []
     total_pris = 0.0
 
-    for namn, vare in varer.items():
+    for vare in varer:
         p = kjopssannsyn(vare)
         if random.random() < p and vare["salspris"] <= rest:
-            rest -= data["salspris"]
-            total_pris += data["salspris"]
-            handlekurv.append( (name,vare) )
+            rest -= vare["salspris"]
+            total_pris += vare["salspris"]
+            handlekurv.append( vare )
 
     return total_pris, handlekurv, rest
 ```
@@ -246,12 +252,64 @@ Ser handlekorgane fornuftige ut?
 
 :::
 
+::: {admonition} Oppgåve
+
+Lag ein ny variabel som liknar `varer` men der salsprisane er endra.
+Prøvekøyr kundemodellen med dei nye prisane.
+Ser handlekorgane fornuftige ut?
+Korleis er dei endra?
+
+:::
+
 Legg merke til at varelista (`dict`-objektet) er no ein parameter
 til funksjonen, slik at me kan ha fleire varemodellar i spel, med
 ulike tilbod og rabattar, og testa kunden på kvar varemodell.
 
 
-##  Steg 4: Simulera butikken
+##  Steg 4: Ein dag i butikken
+
+Lat oss gå ut frå at butikken ikkje endrar prisane i laupet av
+dagen, slik at det same vareutvalet og dei same prisane gjeld
+heile dagsperioden.  Då kan me simulera ein dag i butikken
+ved å setja opp eitt vareutval og ei rekkje kundar.
+
+
+```{code-cell} ipython3
+def simuler_dag(n, vareutvalg):
+    kurvliste = []
+    salgsliste = []
+    
+    for _ in range(n):
+        pris, kurv, _ = tilbodshandling(vareutvalg)
+        kurvliste.append(kurv)
+        salgsliste.append(pris)
+
+    return salgsliste, kurvliste
+```
+
+::: {admonition} Oppgåve
+Prøvekøyr `simuler_dag()` og skriv ut resultatet.
+Verkar resultatet fornuftig?
+:::
+
+
+## Steg 5: Ulike kundar
+
+
+```{code-cell} ipython3
+def simuler_dag_v2(n, vareutvalg):
+    kurvliste = []
+    salgsliste = []
+    
+    for _ in range(n):
+        kundevarer = list(vareutvalg.items())
+        random.shuffle( kundevarer )
+        pris, kurv, _ = tilbodshandling(kundevarer)
+        kurvliste.append(kurv)
+        salgsliste.append(pris)
+
+    return salgsliste, kurvliste
+```
 
 **TODO**
 
@@ -288,23 +346,7 @@ def lag_kunde(varedata):
     random.shuffle(kundevarer)
     return budsjett, kundevarer
     
-def simuler_dag(n, vareutvalg):
-    kjop = []
-    forbruk = []
-    
-    for _ in range(n):
-        budsjett, kundevarer = lag_kunde(vareutvalg)
-        varekjop, totpris, _ = handle(kundevarer, budsjett)
-        kjop.append(varekjop)
-        forbruk.append(totpris)
-    return forbruk, kjop
 
-
-def lag_salg(discount= 0.2):
-    for vare, data in varersalg.items():
-        data["rabatt"] = discount
-        data["sannsynlighet"] = Ps(discount, P0=data["sannsynlighet"])
-    
 
 daglig_salg = []
 daglig_salg_rabatt = []
