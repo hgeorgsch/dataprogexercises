@@ -43,7 +43,7 @@ Ein vare har mange eigenskapar, men me treng i utgangspunktet
 berre to; namnet og prisen.  
 Dette kan me modellera som ein *dictionary* eller `dict` i python.
 
-```
+```{code-cell} ipython3
 varer = { "Epler": 10.0,
           "Pærer": 15.0,
           "Bleier": 35.0,
@@ -116,6 +116,10 @@ Gå gjennom koden steg for steg.
     `random.random() < sluttsjanse`.  Kva testar me på her?
 :::
 
+::: {admontion} Oppgåve 
+Køyr funksjonen og skriv ut resultatet.  Kva er returverdien?
+:::
+
 ::: {hint}
 Eit vanleg problem er å simulera ei hending som opptrer med
 $x$% sannsyn.
@@ -125,33 +129,131 @@ Om $X$ er uniformt fordelt, er det $x$% sjanse for at $X<\frac{x}{100}$,
 og dette vert kriteriet for at hendinga skjer.
 :::
 
+
 ## Steg 2:  Mange kundar i butikken 
 
-* Simuler voldsomt mange kunder som handler slik som i eksempelt over
-* Regn ut gjennomsnittlig pris kundene handler for
-* Plott hvordan fordelingen av pengebruk i butikken er
+::: {admonition} Oppgåve
 
-```{code-cell} ipython3
-pengebruk = []
-n = 10000
-for _ in range(n):
-    kundens_pengebruk = simuler_handling()
-    pengebruk.append(kundens_pengebruk)
+Simuler valdsamt mange kundar som handlar og plott
+eit histogram over pengebruken per kunde.
+Du finn grunnteknikkane du treng i øvinga om
+[](Tilfeldigheit).
 
-snitt = sum(pengebruk)/n
-print(f"Kunder legger i snitt igjen {snitt:.2f} kroner per handletur")
+:::
 
-plt.hist(pengebruk, 20)
-plt.show()
+::: {hint}
+
+Me er berre interessert i kor mykje kundane handlar for, men
+funksjonen som me skreiv over, returnerer både totalprisen og
+handlekurven.  For å skilja desse to variablane kan me skriva
+```ipython
+kr, kurv = simuler_handling()
 ```
+
+:::
 
 ## Steg 3: Varer på salg
 
-Vi ønsker å undersøke hvordan det å sette varer på tilbud påvirker salg og omsetning
+Me ynskjer å undersøkja korleis sal og omsetting vert påverka
+om me set varer på tilbod. 
+Me tek utgangspunkt i ein butikk med eit lite knippe varer til
+fast pris, som skildra og simulert over.
+Vidare går me ut frå
++ at når ein kunde kjem inn i butikken, har kvar vare ei viss sjanse
+  for at kunden kjøper det.
+* at når ei vare kjem på sal aukar denne sjansen.
 
-* Anta at en butikk ar et knippe produkter til en viss pris
-* Når en kunde kommer inn i butikken er det en viss sjanse knyttet til hvert produkt for at kunden kjøper det
-* Dersom varene kommer på salg øker denne sjansen
+Lat oss starta med å utvida varemodellen.
+I staden for berre pris, treng me ein vegleidande pris og
+ein salspris.  I utgangspunktet er dei to prisane like.
+```{code-cell} ipython3
+varer = { "Epler": { "veilpris": 10.0, "salspris": 10.0 },
+          "Pærer": { "veilpris": 15.0, "salspris": 15.0 },
+          "Bleier": { "veilpris": 35.0, "salspris": 35.0 },
+          "Sjokolade": { "veilpris": 6.0, "salspris": 6.0 },
+          "Melk": { "veilpris": 20.0, "salspris": 20.0 },
+          "Rundstykker": { "veilpris": 13.0 "salspris": 13.0 },
+        }
+```
+
+Me treng ein funksjon som reknar ut sannsynet for at kunden
+kjøper ei vare.  Me skal ikkje seia mykje om denne modellen,
+berre definera han som ein funksjon, slik:
+
+```{code-cell} ipython3
+import numpy as np
+
+def kjopssannsyn(vare,P0=0.2):
+    """
+    Logistisk modell for salgssannsynlighet gitt %vis avlsag.
+    Parameteren `P0` er en basissannsynlighet uten avslag.
+    """
+    K = 1
+    A = (K-P0)/P0
+    # disc er rabatten
+    disc = ( vare["veilpris"] - vare["salspris"] ) / vare["veilpris"]
+    return K/(1+A*np.exp(-(r*disc)))
+```
+
+::: {admonition} Oppgåve
+
+Test funksjonen `kjopssannsyn()`.
+Parameteren `vare` skal ha same form som i `varer`-katalogen over,
+dvs. t.d. `{ "veilpris" : 10, "salspris" : 6 }`.
+Test nokre varer me ulike prisar for å sjå kva kjøpssannsyn du
+får.
+
+1. Aukar eller avtar sannsynet med aukande rabatt?
+2. Samanlikna to varer med same salspris og ulike vegleidande pris.
+   Korleis varierer sannsynet med veil. pris?
+3. Samanlikna to varer som er sett ned med 20%.  Avheng sannsynet
+   av salsprisen eller berre av rabatten (i prosent)?
+
+:::
+
+No må me laga ein ny kundemodell, som tek omsyn til tilbodsprisar.
+Den nedanståande funksjonen fylgjer malen frå den forrige kundemodellen
+i stor grad, men kunden vurdererer no kvar vare éin gong og kjøper
+med eit vist sannsyn om han har råd.
+
+```{code-cell} ipython3
+def tilbodshandling(varer,budsjett=200):
+
+    rest = budsjett
+    handlekurv = []
+    total_pris = 0.0
+
+    for namn, vare in varer.items():
+        p = kjopssannsyn(vare)
+        if random.random() < p and vare["salspris"] <= rest:
+            rest -= data["salspris"]
+            total_pris += data["salspris"]
+            handlekurv.append( (name,vare) )
+
+    return total_pris, handlekurv, rest
+```
+
+::: {admonition} Refleksjon
+
+Korleis forstår du endringaene frå den fyrste kundemodellen?
+
+:::
+
+::: {admonition} Oppgåve
+
+Prøvekøyr kundemodellen nokre gongar.
+Ser handlekorgane fornuftige ut?
+
+:::
+
+Legg merke til at varelista (`dict`-objektet) er no ein parameter
+til funksjonen, slik at me kan ha fleire varemodellar i spel, med
+ulike tilbod og rabattar, og testa kunden på kvar varemodell.
+
+
+##  Steg 4: Simulera butikken
+
+**TODO**
 
 * Gjør noen antagelser om hvor mange kunder som kommer innom butikken hver dag
 * Når en kunde kommer inn i butikken har de et visst budjsett som vi trekker tilfeldig fra en passende fordeling
@@ -163,28 +265,7 @@ Vi ønsker å undersøke hvordan det å sette varer på tilbud påvirker salg og
 * Fremstill resultatet av simulering grafisk med `matplotlib`
 
 ```{code-cell} ipython3
-import math
-import numpy as np
-import matplotlib.pyplot as plt
-import random
-import pprint
 
-pp = pprint.PrettyPrinter(indent=4)
-
-
-def Ps(disc,P0=0.2,r=5):
-    """
-    Logistisk modell for salgssannsynlighet gitt %vis avlsag
-    """
-    K = 1
-    A = (K-P0)/P0
-    return K/(1+A*np.exp(-(r*disc)))
-
-
-varer = {"Vare_A": {"pris": 100, "DG": 0.4, "sannsynlighet": 0.2}, 
-         "Vare_B": {"pris": 200, "DG": 0.4, "sannsynlighet": 0.2},
-         "Vare_C": {"pris": 300, "DG": 0.4, "sannsynlighet": 0.2}
-        }
 
 varersalg = {key: val.copy() for key, val in varer.items()} # Deepcopy av varer
 
@@ -192,25 +273,6 @@ varersalg = {key: val.copy() for key, val in varer.items()} # Deepcopy av varer
 middelverdi_budjsett = sum([data["pris"] for _,data in list(varer.items())])/3
 standardavvik = 0.2*middelverdi_budjsett
 
-def handle(varer, budsjett):
-    """ Funksjon som simulerer en handlene kunde
-    Kunden ser på varene i varer [("Vare_A", {"pris": ...}), ("Vare_B", data), ...]
-    Kunden har et visst budsjett
-    Kunden ser igjennom varene og kjøper de med sannsynlighet data["sannsynlighet"], gitt at det er innenfor budsjett
-
-    Vi returnerer varene som ble kjøpt, totalprisen og det som er igjen på budsjett
-    """
-    rest = budsjett
-    kjop = []
-    totpris = 0.0
-    for vare, data in varer:
-        if random.random() < data["sannsynlighet"] and data["pris"] <= rest:
-            rest -= data["pris"]
-            totpris += data["pris"]
-            kjop.append(vare)
-    #pp.pprint(kjop)
-    #pp.pprint(totpris)
-    return kjop, totpris, rest
 
 def lag_kunde(varedata):
     """ Funksjon som "lager" en kunde
@@ -273,12 +335,6 @@ rabs = np.linspace(0,1,1000)
 prob = Ps(rabs)
 plt.plot(rabs, prob)
 plt.show()
-
-    
-    
-            
-            
-        
 ```
 
 ## Oppgave 5.2: Simulere markedsdynamikk
