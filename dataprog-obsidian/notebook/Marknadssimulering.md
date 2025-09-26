@@ -265,15 +265,15 @@ ulike tilbod og rabattar, og testa kunden på kvar varemodell.
 * Fremstill resultatet av simulering grafisk med `matplotlib`
 
 ```{code-cell} ipython3
-
-
 varersalg = {key: val.copy() for key, val in varer.items()} # Deepcopy av varer
 
 
 middelverdi_budjsett = sum([data["pris"] for _,data in list(varer.items())])/3
 standardavvik = 0.2*middelverdi_budjsett
+```
 
 
+```{code-cell} ipython3
 def lag_kunde(varedata):
     """ Funksjon som "lager" en kunde
     Vi trekker et budsjett fra en normalfordeling
