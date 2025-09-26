@@ -25,57 +25,107 @@ Det veit psykologar og marknadsanalytikarar meir om.
 Her får me nøya oss med enkle og naïve modellar og heller
 fokusera på korleis me kan setja saman simuleringa i python.
 
-## Steg 1: handlande kundar
-
-* Vi simulerer en kunde som handler
-* Den fyller handlekurven med varer helt til budsjettet er tomt
-* Eller kunden har fått det den trenger
-
-* Vi sier at etter hver vare kunden handler, er det 10% sjanse for at den er ferdig å handle
-* Kunden trekker en tilfeldig vare hver gang
+Me vil trengja to bibliotek, både `random` som me studerte
+under [](Tilfeldigheit), og `pyplot` som me har brukt mange
+gongar til plotting.
 
 ```{code-cell} ipython3
 import random
 import matplotlib.pyplot as plt
+```
 
-varer = {"Epler": 10.0,
-         "Pærer": 15.0,
-         "Bleier": 35.0,
-         "Sjokolade": 6.0,
-         "Melk": 20.0,
-         "Rundstykker": 13.0
+## Steg 1: Handlande kundar
+
+Lat oss sjå for oss kolonialen på hjørnet.
+Før me ser på den handlande kunden, lat oss skipa ein
+modell for varene i butikken.
+Ein vare har mange eigenskapar, men me treng i utgangspunktet
+berre to; namnet og prisen.  
+Dette kan me modellera som ein *dictionary* eller `dict` i python.
+
+```
+varer = { "Epler": 10.0,
+          "Pærer": 15.0,
+          "Bleier": 35.0,
+          "Sjokolade": 6.0,
+          "Melk": 20.0,
+          "Rundstykker": 13.0
         }
+```
 
-def simuler_handling():
+Ein *dictionary* er ein samling av par, nykel:verdi, som stort
+sett vert brukt når me treng å kunna slå opp verdien for ein
+gjeven nykel raskt og enkelt.
+Her let me nykelen vera namnet og verdien vera prisen.
+Ein kan sjølvsagt stussa på at butikken berre har seks varer, og
+om epleprisen er per stykk eller per kilo, men det lèt me liggja
+til me har kontroll på det grunnleggjande.
+
+Me skal simulera ein ganske dum kunde, som handlar på måfå, og
+som plukkar tilfeldige varer til han anten er lei eller tom for
+pengar.
+Dette kan gje ein funksjon som ser slik ut.
+
+```{code-cell} ipython3
+def simuler_handling(budsjett=200,sluttsjanse=0.1):
+
     handlekurv = []
-    budsjett = 200
-    sluttsjanse = 0.1
     total_pris = 0.0
 
     varenavn = list(varer.keys())
 
-    shopper = True
-    while shopper:
+    fortsett = True
+    while fortsett:
         vare = random.choice(varenavn)
         varepris = varer[vare]
+
         if budsjett > varepris:
-            handlekurv.append(vare)
+            handlekurv.append( (vare,varepris) )
             total_pris += varepris
             budsjett -= varepris
         else:
-            shopper = False
+            fortsett = False
     
         if random.random()<sluttsjanse:
-            shopper = False
-    return total_pris
-
-# print(f"""Kunden handlet følgende varer {handlekurv}
-# Det koster kroner {total_pris:.1f}
-# Da er det igjen {budsjett} kroner i budsjettet
-# """)
+            fortsett = False
+    return total_pris, handlekurv
 ```
 
-# Oppgåve 
+::: {admontion} Oppgåve 
+Gå gjennom koden steg for steg.
+1.  Funksjonen har parameter, kor mykje pengar har kunden å handla for
+    og kor stor er sjansen for at han er lei etter ei vare.
+2.  Kunden startar med ein tom handlekurv med ein totalpris på 0.
+3.  Me lager ei liste med varer `dict`-objektet.
+    Lista fungerer betre med `random`.
+4.  Me må ha ei løkke for å plukka fleire varer, og fordi der er fleire
+    sluttkriterium, er det enklast å ha ein bolsk variabel `fortsett`
+    saman med ei *while*-løkke.  Me skal setja `fortsett` til `False` 
+    når me finn ein grunn til å avslutta.
+5.  Kjenner du igen dei to neste linene, `vare =` og `varepris =`.
+    Kva gjer dei?  Om det ikkje er openbert, lag ei ny celle med
+    desse to linene, saman med `varenavn = list(varer.keys())` for
+    å testa kva som skjer.
+6.  No treng me ein test.  Kva tyder `budsjett > varepris` i praktiske
+    termar?  Kvifor må me sjekka dette?
+7.  I `if`-blokken ser me at me legg vara til handlekurven, aukar
+    totalprisen og reduserer budsjettet.  Gjev dette meining?
+8.  I `else`-blokken set me `fortsett` til usann.  Kvifor skal dette
+    avslutta løkka?
+9.  Den siste `if`-satsen avsluttar løkka dersom
+    `random.random() < sluttsjanse`.  Kva testar me på her?
+:::
+
+::: {hint}
+Eit vanleg problem er å simulera ei hending som opptrer med
+$x$% sannsyn.
+Standardløysinga er å dra eit tilfeldig tal $X$ i intervalet
+0 til 1.  
+Om $X$ er uniformt fordelt, er det $x$% sjanse for at $X<\frac{x}{100}$,
+og dette vert kriteriet for at hendinga skjer.
+:::
+
+## Steg 2:  Mange kundar i butikken 
 
 * Simuler voldsomt mange kunder som handler slik som i eksempelt over
 * Regn ut gjennomsnittlig pris kundene handler for
@@ -95,9 +145,7 @@ plt.hist(pengebruk, 20)
 plt.show()
 ```
 
-*Dette kjem frå veke 37 hausten 2024*
-
-## Oppgave 5.1: Varer på salg
+## Steg 3: Varer på salg
 
 Vi ønsker å undersøke hvordan det å sette varer på tilbud påvirker salg og omsetning
 

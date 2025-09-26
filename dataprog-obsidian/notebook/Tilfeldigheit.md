@@ -222,11 +222,12 @@ for listekomprehensjon.  Det ser slik ut.
 liste = []
 while len(liste) < 7:
    idx = random.randint(0,n-1) 
-   person = klasse[liste] 
+   person = klasse[idx] 
    liste.append( person )
 
 print( liste )
 ```
+
 
 ::: {admonition} Refleksjon
 Me har sikkert sett mindre av `while` enn av `for`.
@@ -247,6 +248,18 @@ while len(liste) < 7:
 
 print( liste )
 ```
+
+::: {admonition} Oppgåve
+Dette kunne ha vore gjort enklare.  Der er faktisk
+ein funksjon `random.choice()` som lèt oss plukke eit
+tilfeldig element frå ei liste.
+
+Skriv om koden over for å bruka `random.choice()` i
+staden for å gjera det i to steg ved å trekkja indeksen
+fyrst.  
+Om du ikkje kan gissa korleis du gjer det, kan du søkja på 
+nettet etter eit døme.
+:::
 
 ## Andre fordelingar
 
