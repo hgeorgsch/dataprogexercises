@@ -396,7 +396,11 @@ plt.plot(rabs, prob)
 plt.show()
 ```
 
-## Oppgave 5.2: Simulere markedsdynamikk
+## Variant: Simulere markedsdynamikk
+
+Oppgåva under er kopiert frå i fjor og ikkje redigert.
+
+::: {admonition} Oppgåve
 
 1. Set opp en markedsmodell for et gode:
  
@@ -430,6 +434,4 @@ Velg fornuftige verdier for $a,b,c$ og $d$
 5. Plot resultat med matplotlib
    * Plot likevektspris og likevektskvantum over tid
 
-```{code-cell} ipython3
-
-```
+:::
