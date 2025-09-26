@@ -34,6 +34,13 @@ import random
 import matplotlib.pyplot as plt
 ```
 
+::: {hint}
+Hugs at oppgåver er vegleiiande.  Målet ditt er å utforska 
+korleis du kan modellera omsettinga i ein butikk og kva
+som skjer med ulike føresetnader.
+Oppgåvene er berre forslag til retningar.
+:::
+
 ## Steg 1: Handlande kundar
 
 Lat oss sjå for oss kolonialen på hjørnet.
@@ -273,7 +280,6 @@ dagen, slik at det same vareutvalet og dei same prisane gjeld
 heile dagsperioden.  Då kan me simulera ein dag i butikken
 ved å setja opp eitt vareutval og ei rekkje kundar.
 
-
 ```{code-cell} ipython3
 def simuler_dag(n, vareutvalg):
     kurvliste = []
@@ -287,29 +293,40 @@ def simuler_dag(n, vareutvalg):
     return salgsliste, kurvliste
 ```
 
+::: {admonition} Refleksjon
+Kva gjer funksjonen over?
+:::
+
 ::: {admonition} Oppgåve
 Prøvekøyr `simuler_dag()` og skriv ut resultatet.
 Verkar resultatet fornuftig?
 :::
 
+::: {admonition} Oppgåve
+
+Prøvekøyr `simuler_dag()` og skriv ut resultatet.
+Verkar resultatet fornuftig?
+
+:::
+
+::: {admonition} Oppgåve
+Legg inn nokon tilbodsprisar, og sjå korleis det påverkar omsettinga.
+Merk at det er enkelt å rekna ut omsettinga, frå lista over handlesummar.
+```python
+kr, kurvar = simuler_fag(100,varer)
+omsetting = sum(kr)
+```
+:::
+
+::: {admonition} Oppgåve
+Plott omsettinga som ein funksjon av rabatten på eple.
+:::
+
+
 
 ## Steg 5: Ulike kundar
 
 
-```{code-cell} ipython3
-def simuler_dag_v2(n, vareutvalg):
-    kurvliste = []
-    salgsliste = []
-    
-    for _ in range(n):
-        kundevarer = list(vareutvalg.items())
-        random.shuffle( kundevarer )
-        pris, kurv, _ = tilbodshandling(kundevarer)
-        kurvliste.append(kurv)
-        salgsliste.append(pris)
-
-    return salgsliste, kurvliste
-```
 
 **TODO**
 
