@@ -37,11 +37,16 @@
 + **Oppgåve**  Du skal, som sagt, ta for deg eitt praktisk problem som du analyserer vha.
   ei simulering i python.
   Som utgangspunkt kan du bruka ei av fylgjande oppgåver, eller ei som du
-  finn sjølv
-    1. [](../notebooks/Simulering%20av%20kontantstraum) (sjå òg liknande
-       oppgåver frå veke 1-4)
+  finn sjølv.  Alle oppgåvene kan varierast etter eige ambisjons- og
+  ferdigheitsnivå.
+    1. [](../notebooks/Simulering%20av%20kontantstraum)
+        + sjå òg liknande oppgåver frå veke 1-4 for variasjonar
+        + [Fleire variasjonar](Kundedata) frå tidlegare år
     1. [](../notebooks/Marknadssimulering) (utkast, vert utbetra før 29. september)
     1. [](../notebooks/Shrimp-Game) (utkast, vert utbetra før 29. september)
+    2. Roulette-oppgåva frå [](../notebooks/Tilfeldigheit).
+       Dette er ikkje den mest relevante oppgåva frå studieprogrammet,
+       men han kan illustrera dei tekniske ferdigheitene godt.
 + **Vurdering**
     + Meininga er at det skal kunna bruka den obligatoriske innleveringa
       som ein del av mappa, og de bør difor tenkja på kriteria for mappa,

@@ -14,6 +14,87 @@ kernelspec:
 
 # Marknadssimulering
 
+Eit nyttig område for simulering er marknadsanalyse.
+Det er ikkje trivielt, for simuleringa krev at me har ein
+modell for korleis kundane oppfører seg, men dersom me har
+det, kan me testa konsekvensane av ulike foretningsmessige
+grep, som rabattar og tilbodskampanjar.
+
+Me skal ikkje gå inn på korleis ein modellerer kundane.
+Det veit psykologar og marknadsanalytikarar meir om.
+Her får me nøya oss med enkle og naïve modellar og heller
+fokusera på korleis me kan setja saman simuleringa i python.
+
+## Steg 1: handlande kundar
+
+* Vi simulerer en kunde som handler
+* Den fyller handlekurven med varer helt til budsjettet er tomt
+* Eller kunden har fått det den trenger
+
+* Vi sier at etter hver vare kunden handler, er det 10% sjanse for at den er ferdig å handle
+* Kunden trekker en tilfeldig vare hver gang
+
+```{code-cell} ipython3
+import random
+import matplotlib.pyplot as plt
+
+varer = {"Epler": 10.0,
+         "Pærer": 15.0,
+         "Bleier": 35.0,
+         "Sjokolade": 6.0,
+         "Melk": 20.0,
+         "Rundstykker": 13.0
+        }
+
+def simuler_handling():
+    handlekurv = []
+    budsjett = 200
+    sluttsjanse = 0.1
+    total_pris = 0.0
+
+    varenavn = list(varer.keys())
+
+    shopper = True
+    while shopper:
+        vare = random.choice(varenavn)
+        varepris = varer[vare]
+        if budsjett > varepris:
+            handlekurv.append(vare)
+            total_pris += varepris
+            budsjett -= varepris
+        else:
+            shopper = False
+    
+        if random.random()<sluttsjanse:
+            shopper = False
+    return total_pris
+
+# print(f"""Kunden handlet følgende varer {handlekurv}
+# Det koster kroner {total_pris:.1f}
+# Da er det igjen {budsjett} kroner i budsjettet
+# """)
+```
+
+# Oppgåve 
+
+* Simuler voldsomt mange kunder som handler slik som i eksempelt over
+* Regn ut gjennomsnittlig pris kundene handler for
+* Plott hvordan fordelingen av pengebruk i butikken er
+
+```{code-cell} ipython3
+pengebruk = []
+n = 10000
+for _ in range(n):
+    kundens_pengebruk = simuler_handling()
+    pengebruk.append(kundens_pengebruk)
+
+snitt = sum(pengebruk)/n
+print(f"Kunder legger i snitt igjen {snitt:.2f} kroner per handletur")
+
+plt.hist(pengebruk, 20)
+plt.show()
+```
+
 *Dette kjem frå veke 37 hausten 2024*
 
 ## Oppgave 5.1: Varer på salg
