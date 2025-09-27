@@ -39,6 +39,7 @@ Hugs at oppgåver er vegleiiande.  Målet ditt er å utforska
 korleis du kan modellera omsettinga i ein butikk og kva
 som skjer med ulike føresetnader.
 Oppgåvene er berre forslag til retningar.
+Det er bra å vera kreative.
 :::
 
 ## Steg 1: Handlande kundar
@@ -320,81 +321,56 @@ omsetting = sum(kr)
 
 ::: {admonition} Oppgåve
 Plott omsettinga som ein funksjon av rabatten på eple.
+
+Her må du laga ei liste med ulike epleprisar som vert $x$-verdiane dine,
+ei liste med vareutval for kvar eplepris, og ei liste med $y$-verdiar
+som du får ved å køyra simuleringa og notera omsettinga.
 :::
 
+::: {hint} 
+Det går an å automatisera alle stega i oppgåva over i eit program,
+men om du ikkje sjølv ser korleis, bør du gjera det for hand fyrst,
+sjølv om det er tungvint.
+:::
 
 
 ## Steg 5: Ulike kundar
 
+So langt er alle kundane like i simuleringa.
+Det er sikkert meir realistisk om dei har ulike budsjett.
 
+Det kan òg vera problematisk at dei går gjennom varene i same rekkjefylgje,
+fordi det gjer at det alltid er den same varen som ikkje vert vurdert, når
+kunden går tom for pengar.
 
-**TODO**
+Me kan løysa båe problema ved å laga tilfeldig kundar. 
+Kvar kunde må då ha si eiga vareliste, som er stokka i tilfeldig orden.
+Dessutan må dei ha kvart sitt tilfeldige budsjett.
 
-* Gjør noen antagelser om hvor mange kunder som kommer innom butikken hver dag
-* Når en kunde kommer inn i butikken har de et visst budjsett som vi trekker tilfeldig fra en passende fordeling
-  - Her kan dere bruke feks `random.gauss()`,`numpy.random.normal()`, `random.uniform()`
-* Kunden ser så gjennom produktene og kjøper de basert på tilfeldighet (produktets parametre) og om de har penger igjen i budsjettet
++ For å stokka ei liste, kan me bruka `random.shuffle()`.
++ For å få eit tilfeldig budsjett, må du velja fordeling. 
+  - Me kan bruka t.d. `random.gauss()` eller `random.uniform()`
 
-* Sammenlign salg og omsetning for en måned med og uten produkter på tilbud
-* Du velger selv hvordan sjansen for salg skal øke med tilbudsrate -- men den logistiske modellen er en god kandidat
-* Fremstill resultatet av simulering grafisk med `matplotlib`
-
-```{code-cell} ipython3
-varersalg = {key: val.copy() for key, val in varer.items()} # Deepcopy av varer
-
-
-middelverdi_budjsett = sum([data["pris"] for _,data in list(varer.items())])/3
-standardavvik = 0.2*middelverdi_budjsett
-```
-
+Då kan me få noko slikt:
 
 ```{code-cell} ipython3
-def lag_kunde(varedata):
-    """ Funksjon som "lager" en kunde
-    Vi trekker et budsjett fra en normalfordeling
-    Vi må også "shuffle" varene slik at kundene ikke ser på de i samme rekkefølge
-    hele tiden
-
-    funksjonen returnerer varene som liste av [("Vare_A", {"pris": ...,...}), ("Vare_B": data), ...]
-    og budsjettet til kunden
-    """
+def lag_kunde(varer):
     budsjett = random.gauss(mu=middelverdi_budjsett, sigma=standardavvik)
-    kundevarer = list(varedata.items())
+    kundevarer = varer
     random.shuffle(kundevarer)
     return budsjett, kundevarer
-    
-
-
-daglig_salg = []
-daglig_salg_rabatt = []
-lag_salg(discount=0.2)
-
-salg_kunde = []
-salg_kunde_rabatt = []
-
-for i in range(30):
-    salg, _ = simuler_dag(1000,varer)
-    daglig_salg.append(sum(salg))
-    salg_rabatt, _ = simuler_dag(1000, varersalg)
-    daglig_salg_rabatt.append(sum(salg_rabatt))
-
-
-plt.plot(list(range(30)), daglig_salg, label="Fullpris")
-plt.plot(list(range(30)), daglig_salg_rabatt, label="Kampanje")
-plt.legend()
-plt.show()
-plt.hist(daglig_salg, alpha=0.5, label="Fullpris")
-plt.hist(daglig_salg_rabatt, alpha=0.5, label="Kampanje")
-plt.legend()
-plt.show()
-print(f"Under kampanjen øker omsetningen med {sum(daglig_salg_rabatt)/sum(daglig_salg)-1:.0%}")
-
-    
-rabs = np.linspace(0,1,1000)
-prob = Ps(rabs)
-plt.plot(rabs, prob)
-plt.show()
 ```
+
+::: {admonition} Oppgåve
+Skriv om `simuler_dag()` med tilfeldige kundar.
+Dvs. inni løkka må du generera ein tilfeldig kunde, i staden for
+å bruka dei faste verdiane.
+:::
+
+::: {admonition} Oppgåve
+Køyr simuleringa med ulike tilbodskampanjar og visualiser resultatet.
+:::
+
 
 ## Variant: Simulere markedsdynamikk
 
