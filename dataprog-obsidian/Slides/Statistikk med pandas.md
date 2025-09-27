@@ -4,10 +4,6 @@ tags:
   - statistics
   - pandas
 ---
-
-
-d 
-
 # Deskriptiv statistikk med pandas
 
 ![[Panda_closeup.jpg|480]]

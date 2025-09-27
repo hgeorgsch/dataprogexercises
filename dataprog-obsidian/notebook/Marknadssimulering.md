@@ -1,11 +1,11 @@
 ---
 jupytext:
+  formats: md:myst,ipynb
   text_representation:
     extension: .md
     format_name: myst
     format_version: 0.13
     jupytext_version: 1.17.0
-  formats: md:myst,ipynb
 kernelspec:
   display_name: dataprog
   language: python
@@ -99,7 +99,7 @@ def simuler_handling(budsjett=200,sluttsjanse=0.1):
     return total_pris, handlekurv
 ```
 
-::: {admontion} Oppgåve 
+::: {admonition} Oppgåve 
 Gå gjennom koden steg for steg.
 1.  Funksjonen har parameter, kor mykje pengar har kunden å handla for
     og kor stor er sjansen for at han er lei etter ei vare.
@@ -124,7 +124,7 @@ Gå gjennom koden steg for steg.
     `random.random() < sluttsjanse`.  Kva testar me på her?
 :::
 
-::: {admontion} Oppgåve 
+::: {admonition} Oppgåve 
 Køyr funksjonen og skriv ut resultatet.  Kva er returverdien?
 :::
 
@@ -174,15 +174,17 @@ Vidare går me ut frå
 Lat oss starta med å utvida varemodellen.
 I staden for berre pris, treng me ein vegleidande pris og
 ein salspris.  I utgangspunktet er dei to prisane like.
+
 ```{code-cell} ipython3
-varer = [ { "vare" : "Epler", "vare" : "veilpris": 10.0, "salspris": 10.0 },
+varer = [ { "vare" : "Epler", "veilpris": 10.0, "salspris": 10.0 },
           { "vare" : "Pærer", "veilpris": 15.0, "salspris": 15.0 },
           { "vare" : "Bleier", "veilpris": 35.0, "salspris": 35.0 },
           { "vare" : "Sjokolade", "veilpris": 6.0, "salspris": 6.0 },
           { "vare" : "Melk", "veilpris": 20.0, "salspris": 20.0 },
-          { "vare" : "Rundstykker", "veilpris": 13.0 "salspris": 13.0 },
+          { "vare" : "Rundstykker", "veilpris": 13.0, "salspris": 13.0 },
         ]
 ```
+
 Her har me vald å representera vareutvalet som ei liste, der kvar
 vare er ein `dict`.  Me bruker ein `dict` til varene for å gjera
 det lettare å sjå kva pris som er kva.  Me kunne ha late
@@ -411,3 +413,4 @@ Velg fornuftige verdier for $a,b,c$ og $d$
    * Plot likevektspris og likevektskvantum over tid
 
 :::
+
