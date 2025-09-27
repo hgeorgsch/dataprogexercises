@@ -42,8 +42,8 @@
     1. [](../notebooks/Simulering%20av%20kontantstraum)
         + sjå òg liknande oppgåver frå veke 1-4 for variasjonar
         + [Fleire variasjonar](Kundedata) frå tidlegare år
-    1. [](../notebooks/Marknadssimulering) (utkast, vert utbetra før 29. september)
-    1. [](../notebooks/Shrimp-Game) (utkast, vert utbetra før 29. september)
+    1. [](../notebooks/Marknadssimulering) 
+    1. [](../notebooks/Shrimp-Game) (orsak at denne er dårleg forklart)
     2. Roulette-oppgåva frå [](../notebooks/Tilfeldigheit).
        Dette er ikkje den mest relevante oppgåva frå studieprogrammet,
        men han kan illustrera dei tekniske ferdigheitene godt.
