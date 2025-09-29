@@ -9,9 +9,12 @@ fire vekene.
 1. [](../notebooks/Simulering%20av%20kontantstraum) 
 1. [](../notebooks/Tilfeldigheit) 
 1. [](../notebooks/Marknadssimulering) 
+1. [](../notebooks/Halveringsmetoden) - døme på numerisk analyse for 
+   å løysa likningar
 1. [](../notebooks/Shrimp-Game).  Denne oppgåva er krevjande, og eg vert
    ikkje ferdig med all forklaringa og døma som skulle ha vore med.
    Ho vart likevel gjeven i fjor.
+1. [](../notebooks/Iskrem%20på%20ei%20strand) - berre ein idé til oppgåve.
 
 ## Førelesingsnotat
 
