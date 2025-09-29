@@ -14,6 +14,8 @@
           python for å gjera utrekningar og simuleringar.
         + avsluttinga skal tolka resultat og konkludera, og reflektera
           over kvifor dette er interessant.
+    + Der er ingen ordgrense, korkje maksimum eller minimum.  Det må
+      vurdera behovet for ord opp mot vurderingskriteria.
 + **Innhald** Oppgåva innber
     1. Svar på éi oppgåve innanfor programmering/simulering etter eige val.
        Dette vert utforskinga i midten av *essayet*.
