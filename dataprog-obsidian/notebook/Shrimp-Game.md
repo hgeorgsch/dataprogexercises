@@ -44,7 +44,7 @@ $$ \pi_A (Q_A, Q_B, Q_C) = Q_A \left[ P (Q_A, Q_B, Q_C) – 5 \right]$$
 
 Her er det enklast å tenkja på fleire parallelle program. Kvar fiskar har sitt program som avgjer kor mykje han vil fiska. Tilsvarande har marknaden, eller borgarmeistaren, sitt program som fastsett prisen basert på levert fangst. Når me deler opp problemet på denne måten, vert kvart program ganske enkelt. 
 
-![[agents.svg]]
+![](agents.svg)
 
 Fiskarane og borgarmeistaren er agentar, dvs. dei *gjer* ting i marknaden.  Ordet *agent* kjem frå latin og tyder ein som gjer noko eller som handlar. Agentbasert simulering er ein form for simulering der kvar agent i systemet vert modellert og implementert som ei autonom eining.
 
