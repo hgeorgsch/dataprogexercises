@@ -33,7 +33,7 @@ Det er matematiske formlar som gjer at me kan rekna ut lange seriar
 med tal som *ser tilfeldige ut*.
 Det mest kjente tilfellet er lineær kongruens, der det $i$te talet
 i serien er definert som
-\[ s_i = a\cdot s_{i-1} \mod p \]
+$$ s_i = a\cdot s_{i-1} \mod p $$
 der $\mod p$ gjev resten ved divisjon med $p$, og $a$ og $p$ er
 høveleg valde konsantar.
 
@@ -121,6 +121,7 @@ listekomprehensjon.
 
 ```{code-cell} ipython3
 test = [ random.randint(1,10) for i in range(8) ]
+print(test)
 ```
 
 ::: {admonition} Oppgåve
@@ -133,6 +134,7 @@ Me kan velja frø med `random.seed()`, slik:
 ```{code-cell} ipython3
 random.seed(42)
 test = [ random.randint(1,10) for i in range(8) ]
+print(test)
 ```
 
 ::: {admonition} Oppgåve
@@ -300,7 +302,7 @@ Roulette har mange rutar å satsa på, m.a. raudt og svart,
 der kvart tal utanom 0 er farga anten raudt eller sort.
 Desse tala er definert slik,
 
-```{code-cell} ipython3
+```python
 red = [ 32, 19, 21, 25, 34, 27, 36, 30, 23, 5, 16, 1, 14, 9, 18, 7, 12, 3 ]
 black = [ 15, 4, 2, 17, 6, 13, 11, 8, 10, 24, 33, 20, 31, 22, 29, 28, 35, 26 ]
 ```
@@ -342,10 +344,3 @@ etc.
 
 :::
 
-```{code-cell} ipython3
-
-```
-
-```{code-cell} ipython3
-
-```
