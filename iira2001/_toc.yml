@@ -31,12 +31,11 @@ parts:
         - file: notebooks/Jordskjelv
      - file: new/29sep
        sections:
-        - file: notebooks/Halveringsmetoden
-        - file: notebooks/Iskrem på ei strand
-        - file: notebooks/Marknadssimulering
-        - file: notebooks/Shrimp-Game
-        - file: notebooks/Simulering og Datastrukturar
         - file: notebooks/Tilfeldigheit
+        - file: notebooks/Marknadssimulering
+        - file: notebooks/Halveringsmetoden
+        - file: notebooks/Shrimp-Game
+        - file: notebooks/Iskrem på ei strand
      - file: new/Statistikk og Maskinlæring
        sections:
         - file: notebooks/Evaluering for regresjon

@@ -373,6 +373,13 @@ Dvs. inni løkka må du generera ein tilfeldig kunde, i staden for
 Køyr simuleringa med ulike tilbodskampanjar og visualiser resultatet.
 :::
 
+::: {admonition} Oppgåve
+Kva kan me læra av simuleringa?
+Skriv eit lite refleksjonsnotat (oppsummering/avslutning av øvinga)
+der du drøftar kva du har lært, kva som er nyttig og korleis ein
+kunne ha godt vidare for å få ein betre og meir realistisk simulering.
+:::
+
 
 ## Variant: Simulere markedsdynamikk
 
