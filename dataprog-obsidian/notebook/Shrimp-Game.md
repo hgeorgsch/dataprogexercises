@@ -14,9 +14,9 @@ kernelspec:
 
 # The Shrimp Game
 
-Problemet er teke frå *AE201808 Næringsøkonomi*
-
-+ *Topic* Competition and cooperation in oligopolies: 
+Problemet er teke frå *AE201808 Næringsøkonomi* og temaet
+*Competition and cooperation in oligopolies*.
+Sjølve problemskildirnga original og ikkje omsett.
 
 ## The game 
 
