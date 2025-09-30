@@ -44,7 +44,14 @@ $$ \pi_A (Q_A, Q_B, Q_C) = Q_A \left[ P (Q_A, Q_B, Q_C) – 5 \right]$$
 
 Her er det enklast å tenkja på fleire parallelle program. Kvar fiskar har sitt program som avgjer kor mykje han vil fiska. Tilsvarande har marknaden, eller borgarmeistaren, sitt program som fastsett prisen basert på levert fangst. Når me deler opp problemet på denne måten, vert kvart program ganske enkelt. 
 
-Fiskarane og borgarmeistaren er agentar, dvs. dei *gjer* ting i marknaden.  Ordet *agent* kjem frå latin og tyder ein som gjer noko eller som handlar. Agentbasert simulering er ein form for simulering der kvar agent i systemet vert modellert og implementert som ein autonom eining.  
+![[agents.svg]]
+
+Fiskarane og borgarmeistaren er agentar, dvs. dei *gjer* ting i marknaden.  Ordet *agent* kjem frå latin og tyder ein som gjer noko eller som handlar. Agentbasert simulering er ein form for simulering der kvar agent i systemet vert modellert og implementert som ei autonom eining.
+
+Figuren viser korleis agentane i reketrålarmodellen samhandlar.  
+Fiskarane bestemmer seg for eit fangsvolum og leverer til marknaden.
+Borgarmeistaren observerer den samla fangsten i marknaden, og set prisen,
+og fiskarane ser prisen til slutt frå marknaden.
 
 Python er eit sokalla objektorientert språk. Me kan bruka eit objekt for å modellera ein agent.  I rekespelet treng me altso fire objekt, tre fiskarar og ein marknad.  Dei tre fiskarane har mange felles eigenskapar, og me seier at dei høyrer til same *klasse*.  Me kan t.d. definera ei klasse `Fisherman` slik:
 
@@ -56,7 +63,8 @@ class Fisherman:
 ```
 
 Denne klassa inneheld ein funksjon (definert med `def` som andre funksjonar).
-Parameteren `self` er ein referanse til objektet sjølv.
+Parameteren `self` er ein referanse til objektet sjølv, og denne må alltid vera
+med, sjølv om du ikkje brukar han.
 Fiskaren fiskar eit tilfeldig volum som vert returnert.
 Marknaden kan kalla denne funksjonen for å ha data til å rekna ut prisen.
 
