@@ -39,6 +39,8 @@ parts:
         - file: new/Kundedata
      - file: new/refleksjonsseminar
      - file: new/14okt
+       sections:
+        - file: exercises/Eksportdata
      - file: new/Statistikk og Maskinlæring
        sections:
         - file: notebooks/Evaluering for regresjon
