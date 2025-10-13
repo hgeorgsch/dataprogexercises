@@ -12,15 +12,21 @@ på alle dei innleverte arbeida.  Det einaste me kan gjera er
 
 ## Program for seminaret
 
+### Del 1.
 
-+ Innleiing
-    + Kva lærte du av arbeidet?
-    + Kva utfordringar treng du arbeida vidare med?
+Me startar med ei runde i klassa, om fylgjande to spørsmål.
 
-+ Systematisk refleksjon
-    + Kva spørsmål tok du opp?
-    + Kva fann du ut?
-    + Kva programmeringsteknikkar brukte du?
-    + Kva treng du læra meir om?
-    + Kvifor er spørsmålet interessant?
++ Kva lærte du av arbeidet?
++ Kva utfordringar treng du arbeida vidare med?
+
+### Del 2.
+
+Me tek for oss eit par døme på innleverte oppgåver, og ser særleg
+på fylgjande spørsmål.
+
++ Kva spørsmål vert teke opp?
++ Kva fann dei ut?
++ Kva programmeringsteknikkar vert brukte?
++ Kva treng forfattaren å læra meir om?  
++ Kvifor er spørsmålet interessant?
    
