@@ -36,6 +36,8 @@ parts:
         - file: notebooks/Halveringsmetoden
         - file: notebooks/Shrimp-Game
         - file: notebooks/Iskrem på ei strand
+     - file: new/refleksjonsseminar
+     - file: new/14okt
      - file: new/Statistikk og Maskinlæring
        sections:
         - file: notebooks/Evaluering for regresjon
