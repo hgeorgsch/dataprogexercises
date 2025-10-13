@@ -17,4 +17,11 @@ Dei som går glipp av denne økta må bruka *tutorials* frå
 2. [](../notebooks/Genetikk)
 3. [](../notebooks/Jordskjelv)
 
+## Nye oppgåver
+
+Eg freistar å leggja til fleire oppgåver her etter kvart.
+Ein bør starta med oppgåvene over.
+
+1. [](../exercises/Eksportdata) er ei oppgåve for vidarekomande.
+
 

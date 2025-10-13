@@ -6,6 +6,10 @@ TS="dataprog-obsidian/notebook/ exercises/Genetikk/ exercises/Jordskjelv/"
 D=iira2001/notebooks/
 R=`pwd`
 
+E=iira2001/exercises/
+mkdir -p $E
+cp dataprog-obsidian/Exercises/* $E
+
 for T in $TS
 do
   cd $T
