@@ -14,6 +14,9 @@ kernelspec:
 
 # Arbeidsledigheit 14de oktober 2025
 
+**NB** Dette er notata som vart skrivne *under* førelesinga 14. oktober.
+Det er ikkje alt som verkar, og ingenting er forklart.
+
 + Datasett 1054 frå [](https://data.ssb.no/api/)
 
 ```{code-cell} ipython3

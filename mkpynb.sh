@@ -23,6 +23,7 @@ do
   cp $T/*.json $D
   cp $T/*.ipynb $D
   cp $T/*.jpg $D
+  cp $T/*.svg $D
 done
 
 
