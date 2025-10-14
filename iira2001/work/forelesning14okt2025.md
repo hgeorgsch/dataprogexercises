@@ -126,6 +126,49 @@ list( ledighet3 )
 ledighet3.plot( )
 ```
 
+## Notat etter førelesing
+
+Eitt problem me hadde er at me må filtrera på (nesten) alle søylane for å få ein tidsserie.
+
+```{code-cell} ipython3
+df = pd.read_csv( "1054.csv", encoding="latin1", sep=";", decimal="," )
+df1 = df[ df["statistikkvariabel"] == "Arbeidsledige (1000 personer)" ]
+df1 = df1[ df1["kjønn"] == "0 Begge kjønn" ]
+df1 = df1[ df1["alder"] == "15-74 15-74 år" ]
+df1 = df1[ df1["type justering"] == "T Trend" ]
+
+display(df1)
+```
+
+Eit anna problem var å byta namn på søylen med det lange og uskikkelege namnet.
+Me kan henta ut namnet direkte utan klipp og lim, for so å byta det ut, slik:
+
+```{code-cell} ipython3
+idx = list(df1.columns)[-1]
+df2 = df1.rename( columns={ idx : "arbeidsledige" } ) 
+
+print(idx)
+df2
+```
+
+Neste problem er at `arbeidsledige` ikkje er ein numerisk søyle.
+Det er truleg fordi nokre radar i den opprinnelege tabellen ikkje lét seg tolka som tal.
+Det er truleg betre å bruka ein numpy-type, men for ikkje å importera numpy, gjer me det slik i full fart.
+
+```{code-cell} ipython3
+df2["arbeidsledige"] = df2["arbeidsledige"].astype(float)
+```
+
+Dette er nok til å kunna plotta.
+
+```{code-cell} ipython3
+df2.plot( y="arbeidsledige" )
+```
+
+```{code-cell} ipython3
+list(df2["arbeidsledige"])
+```
+
 ```{code-cell} ipython3
 
 ```

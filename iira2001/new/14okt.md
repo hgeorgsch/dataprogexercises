@@ -17,6 +17,12 @@ Dei som går glipp av denne økta må bruka *tutorials* frå
 2. [](../notebooks/Genetikk)
 3. [](../notebooks/Jordskjelv)
 
+Eg har publisert [førelesingsnotata](../work/work/forelesning14okt2025),
+men dei er primært nyttige for dei som var til stades.  Eg har òg lagt 
+til nokre døme på slutten for å løysa problema som me stod fast på.
+
+Torsdag 16de oktober vert øvingstime med vegleiing.
+
 ## Nye oppgåver
 
 Eg freistar å leggja til fleire oppgåver her etter kvart.
