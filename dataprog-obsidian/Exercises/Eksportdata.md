@@ -32,12 +32,12 @@ Kva er den totale importverdien?
 Plott eksport og import over tid.  Utviklar dei seg likt?
 :::
 
-::: {adminition}  Oppgåve
+::: {admonition}  Oppgåve
 Vel éin vare og summer opp eksportverdien over dei siste fem åra for kvart land.
 Lag eitt søylediagram som samanliknar eksporten til dei ulike landa.
 :::
 
-::: {adminition}  Oppgåve
+::: {admonition}  Oppgåve
 Korleis utviklar handelsbalansen seg over tid?
 Set saman data og lag relevante plott.
 :::
