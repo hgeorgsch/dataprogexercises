@@ -41,6 +41,7 @@ parts:
      - file: new/14okt
        sections:
         - file: exercises/Eksportdata
+        - file: work/forelesing14oct2025
      - file: new/Statistikk og Maskinlæring
        sections:
         - file: notebooks/Evaluering for regresjon
