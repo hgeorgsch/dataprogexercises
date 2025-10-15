@@ -4,6 +4,7 @@ tags:
   - legacy
 ---
 
+# Eksportdata
 
 Datasett : https://www.ssb.no/en/utenriksokonomi/utenrikshandel/artikler/import-og-eksport-alle-land-og-varenummer
 
