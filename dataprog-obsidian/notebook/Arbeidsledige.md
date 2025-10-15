@@ -263,14 +263,15 @@ Ser plottet rimeleg ut?
 
 ### Tid og dato
 
-::: {warning}
-Resten av dokumentet er ikkje ferdig.
-:::
 
 ::: {admonition} Oppgåve
 Gjer oppgåvene om [](Tid og dato).
 Når me går vidare skal me bruka ganske mange nye teknikkar, og
 det er best å gjera seg kjent med dei med enklare døme.
+:::
+
+::: {warning}
+Resten av dokumentet er ikkje ferdig.
 :::
 
 ### Legacy notes
@@ -314,11 +315,6 @@ Vi må passe på en rekke ting når vi skal slå sammen data:
 * Vi kan nå prøve å konvertere tidsseriene våres til et ordentlig format, og slå de sammen
 
 ```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: fragment
----
 display(konkurser_df.head(2))
 display(arbeidsledige_df.head(2))
 ```
@@ -329,11 +325,6 @@ display(arbeidsledige_df.head(2))
 * "1972K1" skulle vært "1972Q1" for at `pd.Periods` skal skunne "lese det riktig"
 
 ```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: fragment
----
 arbeidsledige_df = pd.read_csv("arbeidsledige.csv", sep=";", header=1, index_col=0)
 arbeidsledige_df.index.name = None
 
@@ -387,11 +378,6 @@ konkurser_df.index.name="kvartal"
 * Nå kan vi slå sammen datasettene med `.merge(...)`
 
 ```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: ''
----
 df = pd.merge(konkurser_df, arbeidsledige_df, how='outer', on="kvartal")
 df = df.dropna(axis=0)
 df = df.rename(columns={"Arbeidsledige (1 000 personer)": "Arbeidsledige", "Opna konkursar": "Konkurser"})
@@ -416,25 +402,11 @@ plt.xlabel("Tid")
 df.plot.scatter("Arbeidsledige", "Konkurser")
 ```
 
-```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: ''
----
-
-```
-
-+++ {"editable": true, "slideshow": {"slide_type": "subslide"}}
+## Korrelasjon
 
 * Å finne kovarians og korrelasjon er også lett
 
 ```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: fragment
----
 df.cov()
 ```
 
@@ -446,11 +418,13 @@ df.corr()
 
 
 ### Kovarians (video)
+
 <a href="https://www.youtube.com/watch?v=9Y0Alg8huJk" 
   target="_blank"><img src="https://img.youtube.com/vi/9Y0Alg8huJk/0.jpg" 
 alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 
 ### Korrelasjon (video)
+
 <a href="https://www.youtube.com/watch?v=WpZi02ulCvQ" 
   target="_blank"><img src="https://img.youtube.com/vi/WpZi02ulCvQ/0.jpg" 
 alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
