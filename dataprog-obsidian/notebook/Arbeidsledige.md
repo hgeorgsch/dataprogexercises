@@ -14,6 +14,12 @@ kernelspec:
 
 # Arbeidsledigheit og konkursar
 
+::: {warning}
+Dokumentet er under arbeide.
+Den fyrste delen skal vera brukbar, men frå «Tid og dato» er
+det berre skissar.
+:::
+
 I denne øvinga skal me sjå på datasett frå 
 [statistisk sentralbyrå](http://www.ssb.no).
 Der er mykje å velja i, både forenkla datasett som er brukt til
@@ -124,6 +130,9 @@ mellomrom.
 Dersom me kan ta ut alle radane med same verdi i alle søylene,
 bortsett frå tidspunktet og den siste søyla med talverdien,
 so har me ei tidsrekkje.
+
+Det fyrste delproblemet me skal løysa er å formattere éi slik
+tidsrekkje slik at me kan plotta ho.
 
 ### Filtering
 
@@ -252,28 +261,16 @@ men det får me koma inn på ein annan dag.
 Ser plottet rimeleg ut?
 :::
 
-### Nye søyler
+### Tid og dato
 
-Legger til kolonne med arbeidsledighet i prosent
-
-```{code-cell} ipython3
-df1["prosent"] = df1["Arbeidsledige (1 000 personer)"]/1000
-```
+::: {warning}
+Resten av dokumentet er ikkje ferdig.
+:::
 
 ### Legacy notes
 
 ```{code-cell} ipython3
 arbeidsledige_df.index.name = None
-
-#med apply og lambdafunksjon
-#arbeidsledige_df["prosent"] = arbeidsledige_df["Arbeidsledige (1 000 personer)"].apply(lambda x: f"{x/1000:.2%}") 
-```
-
-```{code-cell} ipython3
-arbeidsledige_df["Arbeidsledige (1 000 personer)"].plot()
-arbeidsledige_df.describe()
-display(arbeidsledige_df) #Vi kan bruke display istedet for print for en "fin" tabell
-arbeidsledige_df = arbeidsledige_df.drop("prosent", axis=1)
 ```
 
 ## Konkursar
