@@ -81,7 +81,7 @@ Kva skjer om du fjernar `encoding`?
 ::: {admonition} Oppgåve
 :::
 
-::: {hint} Oppgåve
+::: {hint}
 :::
 
 * SSB bruker tegnkodinger «UTF-8» og «ISO-8859-1»
