@@ -4,14 +4,81 @@ tags:
   - pandas
 ---
 
-# Pandas i praksis
+# Arbeidsledigheit og konkursar
 
-* Vi kan hente data å analysere, feks fra [statistisk sentralbyrå](http://www.ssb.no)
+I denne øvinga skal me sjå på datasett frå 
+[statistisk sentralbyrå](http://www.ssb.no).
+Der er mykje å velja i, både forenkla datasett som er brukt til
+konkrete rapportar og grafiske framstillingar, og meir komplekse
+grunnlagsdata.
+Seinare i kurset skal me sjå på [API-et](https://data.ssb.no/api/?lang=no)
+som lèt oss velja ut data direkte frå databasen.
+I denne øvingas skal me heller ta utgangspunkt i
+[lista over ferdiglagde datasett](https://data.ssb.no/api/?lang=no).
+Det òg verd å bla gjennom artiklane for å sjå kva slags analysar ein 
+kan gjera.
+
+Eg har freista å gjera denne øvinga mest mogleg realistisk.  
+Andre øvingar tek gjerne utgangspunkt i programmeringsteknikkar som me vil
+undervisa, og lagar eit forenkla datasett for å illustrera akkurat det som
+skal undervisast.
+Her tek me utgangspunkt i eit spørsmål som me vil ha svar på, finn eit
+relevant datasett, og løyser dei problema som oppstår.
+Dette gjer øvinga lang med mange krumspring, men det gjev oss eit realistisk
+bilete av korleis ein arbeider med data frå røynda.
+
+Når oppgåva ser stor og uoverstigeleg ut, skal me dela han opp, og zooma inn
+på eitt delproblem åt gongen.  Ver merksame på dette, og ta delproblema alvorleg.
+Kvart delproblem illustrerer teknikkar som er verd å læra.
+
+Forskingsspørsmålet vårt er:
+
+> Kva samanhengar er der mellom arbeidsledigheit og talet på bedriftskonkursar?
+
+## Datasett frå SSB
+
+::: {admonition} Oppgåve
+Sjå på lista over [ferdiglagde datasett](https://data.ssb.no/api/?lang=no)
+frå SSB.  Finn du datasett som kan brukast til å svara på forskingsspørsmålet? 
+:::
+
+For å ta ein ting åt gongen, startar me med data over arbeidsledige.
+
+::: {admonition} Oppgåve
+Last ned datasettet med ID 1054 i CSV-format.
+Opna fila i ein teksteditor eller eit rekneark.
+Korleis er ho formattert?
+Kva data inneheld ho?
+
+Plasser fila i same katalog som Jupyter-dokumentet som du arbeider med.
+:::
+
+Når me skal arbeida med slike datasett i python, bruker me eit biblotek
+som heiter pandas.
+
+```{code-cell} ipython3
+import pandas as pd
+arbeidsledige_df = pd.read_csv("1054.csv", sep=";", encoding="latin1", header=1, index_col=0)
+```
+
+Legg merke til at me spesifiserer skiljeteiknet (`sep`) som semikolon i staden for
+komma, og teikncodingen, som er Latin 1.
+
+::: {admonition} Oppgåve
+Kva skjer om du fjernar `sep`-argumentet?
+
+Kva skjer om du fjernar `encoding`?
+:::
+
+::: {admonition} Oppgåve
+:::
+
+::: {hint} Oppgåve
+:::
+
 * SSB bruker tegnkodinger «UTF-8» og «ISO-8859-1»
 
 ```{code-cell} ipython3
-#Vi går til ssb.no og henter et datasett om arbeidsledige
-arbeidsledige_df = pd.read_csv("arbeidsledige.csv", sep=";", header=1, index_col=0)
 
 arbeidsledige_df.index.name = None
 
@@ -38,6 +105,7 @@ konkurser_df
 
 
 ### Analyse:
+
 * Vi vil slå sammen dataene våre om arbeidsledighet og åpnede konkurser
 * Er det en sammenheng?
 
