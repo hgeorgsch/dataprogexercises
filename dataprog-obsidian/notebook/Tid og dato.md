@@ -255,7 +255,7 @@ Andre frekvensar som ein kan velja er lista i tabellen under.
 Resten av dokumentet er ikkje ferdig.
 :::
 
-### pd.PeriodIndex
+### Periodeindeks i pandas
 
 * Vi vil som regel ha mange perioder som indeks i et dataset
 * Da kan vi bruke:
@@ -271,16 +271,12 @@ tidserie2 = pd.period_range('1980', '2000', freq='M')
 tidserie2
 ```
 
-+++ {"editable": true, "slideshow": {"slide_type": "subslide"}}
-
 ### Konvertere mellom `datetime` og `Period`
 
-* Ofte trenger man å konvertere mellom `datetime` og `Period`
-* Kanskje har man brukt `strptime(...)` til å lese inn riktig dato først
-* Vi bruker da `df['date'].dt.to_period('frekvenskode')`
-* Skal vi gå andre veien bruker vi `df["periode"].to_timestamp()`
++ Ofte trenger man å konvertere mellom `datetime` og `Period`
++ Kanskje har man brukt `strptime(...)` til å lese inn riktig dato først
++ Vi bruker da `df['date'].dt.to_period('frekvenskode')`
++ Skal vi gå andre veien bruker vi `df["periode"].to_timestamp()`
 
-+++ {"editable": true, "slideshow": {"slide_type": "subslide"}}
-
-* Det er mye mer vi kunne sett på her
-* Tid/dato kan bli uhyre komplisert i det virkelige liv
++ Det er mye mer vi kunne sett på her
++ Tid/dato kan bli uhyre komplisert i det virkelige liv
