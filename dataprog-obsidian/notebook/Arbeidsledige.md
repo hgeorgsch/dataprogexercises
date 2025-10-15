@@ -291,7 +291,7 @@ konkurser_df
 konkurser_df+arbeidsledige_df #Det funket dårlig....
 ```
 
-# Slå sammen data
+## Slå sammen data
 
 Vi må passe på en rekke ting når vi skal slå sammen data:
 * Matchende datatyper: 2 kolonner blir ansett som forkjellige dersom de har forskjellige datatyper men matchende data
@@ -303,7 +303,7 @@ Vi må passe på en rekke ting når vi skal slå sammen data:
 * Indeksen vår består av *tekststrenger* -- dette byr på problemer
 * [[Tid og dato]]
 
-# Tilbake til analysen vår:
+## Tilbake til analysen vår:
 
 * Vi kan nå prøve å konvertere tidsseriene våres til et ordentlig format, og slå de sammen
 

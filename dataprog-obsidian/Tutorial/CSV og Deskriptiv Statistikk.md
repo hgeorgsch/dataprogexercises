@@ -45,6 +45,7 @@ tags:
 		+ Utfordring: aggreger kvartalsdata
 		+ Oppgåve: Korrelasjonskoeffisient
 		+ Oppgåve: Korrelasjonskoeffisient med forskjøvede data
+		+ [[Tid og dato]]
 	+ [[Eksportdata]] requires extensive pre-processing to extract comparable data
     + [Genetikk](Genetikk/Genetikk) demonstrerer korrelasjon m.m.
 + Meir avanserte oppgåver

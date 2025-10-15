@@ -3,31 +3,23 @@
 
 <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgCOoEr1biiaMsoejCtfdvgJAq_T6TfbjVkrc-zyfJ8ReSf8BvldJXPjyNy1gjfGVmB2hk2i39ybpaLHKDK4kTn4n2Zh-dXlaayliZoiygxhTQ3W7mC2LoxzTOARAhltRmSn84pdQdmqrbu/s1600/AD951881-737E-4F2C-AE8E-D80E280CFFD5.png">
 
-## Datetime, pandas.Period
+## Tid og tidsrekkjer
+
 
 * Veldig mye av data tilgjengelig viser statistiske variabler over tid.
 * For ingeniører er tid veldig enkelt: Det er en fysisk størrelse og en av grunnenhetene i SI-system: *sekund*
 * I business er det verre. Vi måler tid i dager, sekunder, minutter, uker, måneder, kvartaler eller år
 * År er delt inn i måneder med ujevnt fordelte dager, vi har skuddår og tidssoner, sommertid/vintertid osv...
 * Vi kan få masse hjelp dersom tidsseriene vår bruker datatyper for tid fra `datetime` eller `pandas.Period`
+## Tid og data i python
 
 ```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: subslide
----
 #Jeg måtte gjøre følgende for å få norsk output
 #import locale
 #locale.setlocale(locale.LC_ALL, "nb_NO.utf8")
 ```
 
 ```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: subslide
----
 import datetime
 from zoneinfo import ZoneInfo
 #Henter tid/dato fra datetime.datetime
@@ -41,11 +33,6 @@ print("Mer nøyaktig er vi nå", dato_og_tid)
 ```
 
 ```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: subslide
----
 #Vi kan lage et spesifikt tidspunkt eller dato:
 
 min_dato = datetime.date(1990,4, 23) #År, måned, dag
@@ -73,6 +60,7 @@ print(ny_tid > tid)
 +++ {"editable": true, "slideshow": {"slide_type": "subslide"}}
 
 # Formattere dato ut
+
 * vi bruker `min_tid.strftime("FORMATTERINGSSTRENG")` for å formatere en dato eller tid
 * Formateringsstrenger er litt som en f-streng, men vi limer inn feks året for `"%Y"` i stedet for `f"{year}"`
 
@@ -127,7 +115,8 @@ print("Dato som datetime objekt:", dato_lest)
 
 +++ {"editable": true, "slideshow": {"slide_type": "slide"}}
 
-## Pandas.period
+## Period i pandas
+
 * Pandas har en egen klasse/type for å jobbe med perioder og tidsintervall
 * Vi jobber da med spenn av tid, pandas kaller det `frekvenser`
 
@@ -148,11 +137,6 @@ print("Dato som datetime objekt:", dato_lest)
 | `N`          | Nanosekund                | 2024-10-21 15:30:45.123456789         |
 
 ```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: subslide
----
 #pd.Period('verdi', freq='frekvenskode')
 periode = pd.Period('2024-10-21 15:00', freq='Q') #Verdien er en gyldig tekststreng i en periode med frekvens freq=..
 langt_frem = periode+26

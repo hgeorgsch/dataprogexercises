@@ -17,7 +17,7 @@ Dei som går glipp av denne økta må bruka *tutorials* frå
 2. [](../notebooks/Genetikk)
 3. [](../notebooks/Jordskjelv)
 
-Eg har publisert [førelesingsnotata](../work/work/forelesning14okt2025),
+Eg har publisert [førelesingsnotata](../notebooks/forelesning14okt2025),
 men dei er primært nyttige for dei som var til stades.  Eg har òg lagt 
 til nokre døme på slutten for å løysa problema som me stod fast på.
 
@@ -28,6 +28,9 @@ Torsdag 16de oktober vert øvingstime med vegleiing.
 Eg freistar å leggja til fleire oppgåver her etter kvart.
 Ein bør starta med oppgåvene over.
 
+1. [](../notebooks/Arbeidsledige) er under utarbeiding, basert på 
+   same problem som førelesinga
+   [14. oktober](../notebooks/forelesning14okt2025).
 1. [](../exercises/Eksportdata) er ei oppgåve for vidarekomande.
 
 
