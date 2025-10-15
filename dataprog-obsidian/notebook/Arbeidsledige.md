@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.17.0
+    jupytext_version: 1.17.2
 kernelspec:
   name: dataprog
   language: python
@@ -66,7 +66,8 @@ som heiter pandas.
 
 ```{code-cell} ipython3
 import pandas as pd
-arbeidsledige_df = pd.read_csv("1054.csv", sep=";", encoding="latin1", header=1, index_col=0)
+df = pd.read_csv("1054.csv", sep=";", encoding="latin1",
+                             header=0, index_col=None)
 ```
 
 Legg merke til at me spesifiserer skiljeteiknet (`sep`) som semikolon i staden for
@@ -78,30 +79,204 @@ Kva skjer om du fjernar `sep`-argumentet?
 Kva skjer om du fjernar `encoding`?
 :::
 
-::: {admonition} Oppgåve
+::: {hint}
+Dei viktigaste teiknkodinge for oss er `latin1`, eller meir
+korrekt «ISO-8859-1», og `utf-8`, som er standard i pandas
+dersom me ikkje seier noko anna.
+UTF-8 er ein av fleire kodingar av eit teiknsett som heiter
+Unicode, og dersom de vel feil teiknkoding, vil feilmeldingane
+ofte referera til «Unicode» heller enn UTF-8.
 :::
+
+Dei to siste argumenta fortel pandas at den fyrste lina (nr. 0)
+inneheld søyleoverskrifter og at der ikkje er noka søyle med
+rekkjeindekser.
+
+::: {admonition} Oppgåve
+Kva skjer om du fjernar `header`- og `index_col`-argumenta?
+
+Det er ikkje sikkert det gjer nokon forskjell.
+:::
+
+## Arbeidsledigheitsdatasettet
+
+Datasettet 1054 inneheld mange forskjellige variablar, men dei
+har ikkje fått eigne søyler.
+I staden er der ein søyle `statistikkvariabel` som identifiserer
+kva som er observert, og kvart tidspunkt har ein rad for kvar
+variabel.
+
+::: {admonition} Refleksjon
+Sjå på søyla `statistikkvariabel`.  Kva variablar er observerte?
+:::
+
+I tillegg innheld datasettet fullstendige datasett for kvart kjønn
+forutan båe kjønn samla, og for ulike og overlappande aldersgrupper.
+For å kunna analysera datasettet, må me kunna isolera dei ulike 
+tidsrekkjene.
+
+::: {admonition} Tidsrekkje
+Ei **tidsrekkje** er ei samling registreringar av éin bestemt
+variabel på etterfylgjande tidspunkt, normalt med regelmessige
+mellomrom.
+:::
+
+Dersom me kan ta ut alle radane med same verdi i alle søylene,
+bortsett frå tidspunktet og den siste søyla med talverdien,
+so har me ei tidsrekkje.
+
+### Filtering
+
+*Data frames* kan indekserast på mange ulike måtar,
+inklusive bolsk indeksering, der me kan gje vilkår basert
+på innhaldet i søylene.
+Me kan t.d. velja ut éi tidsrekkje frå datasettet vårt slik:
+
+```{code-cell} ipython3
+df1 = df[ df["statistikkvariabel"] == "Arbeidsledige (1000 personer)" ]
+df1 = df1[ df1["kjønn"] == "0 Begge kjønn" ]
+df1 = df1[ df1["alder"] == "15-74 15-74 år" ]
+df1 = df1[ df1["type justering"] == "T Trend" ]
+
+display(df1)
+```
+
+Me samanliknar rett og slett innhaldet i søyla med ein fast streng,
+og får med alle radane der vilkåret er sant.
+
+Når me filtrerer, får me ikkje ein ny *data frame* men eit nytt *view*
+på den gamle.  
+Dette kan skapa problem når me skal manipulera utdraget og kanskje leggja
+til utrekna søyler.
+Difor kan det løna seg å kopiera *view*et, og dermed laga ein ny
+*data frame*, slik:
+
+```{code-cell} ipython3
+df1 = df1.copy()
+display( df1 )
+```
+
+### Plotting
+
+For å sjekka at datasettet er ryddig og pent, er det alltid
+verd å plotta.
+Eg hadde store vanskar med å henta ut den aktuelle søyla, pga.
+det frykteleg lange søylenamnet.
+Det løner seg å byta namn, men då må me triksa litt.
+Det er betre å henta ut namnet programmatisk enn å klippa og lima
+frå visinga.
+Me kan henta ut alle søyleindeksene med `columns`-attributten.
+
+```{code-cell} ipython3
+print( df1.columns )
+print( type( df1.columns ) )
+```
+
+Dette gjev oss derimot ikkje namna som teiknstrengar, men eit
+spesielt `Index`-objekt. Me kan konvertera til ei liste med strengar, slik:
+
+```{code-cell} ipython3
+idxlist = list( df1.columns )
+print(idxlist)
+```
+
+Me kan henta ut det siste elementet frå lista, slik at me får
+ein variabel `idx` med det vonde søylenamnet.
+
+```{code-cell} ipython3
+idx = idxlist[-1]
+print(idx)
+```
+
+No har me det me treng for å byta namn på søyla med
+`rename`-metoden.  Me lager eit nytt variabelnamn for
+å minimera feil dersom me skulle gå tilbake og køyra 
+gamle cellar om att.
+
+```{code-cell} ipython3
+df2 = df1.rename( columns={ idx : "Arbeidsledige" } ) 
+display(df2)
+```
 
 ::: {hint}
+Legg merke til syntaksen. Argumentet til `rename`
+er ein *dictionary* som avbildar gamle søylenamn til nye.
+Søylename som ikkje er med i denne *dictionary* vert ikkje endra.
 :::
 
-* SSB bruker tegnkodinger «UTF-8» og «ISO-8859-1»
+No kan me enkelt henta ut den søyla som me er interesterte i,
+ved å indeksera på søylenamn.
+
+```{code-cell} ipython3
+print( df2["Arbeidsledige"] )
+```
+
+Resultatet her er eit *Series*-objekt, som òg har ein
+`plot()`-metode.
+
+::: {admonition} Oppgåve
+Test plotting av *Series*-objektet, slik
+```
+df1["Arbeidsledige"].plot()
+```
+Kva skjer?
+:::
+
+Oppgåva står der fordi dette faktisk var det som eg gjorde,
+når eg skulla løysa problemet sjølv.  Det viser seg då at
+søyla vår ikkje vert gjenkjend som tal.  Sannsynlegvis er
+det fordi der var manglande data i det opprinnelege datasettet,
+sjølv om utdraget ser ut som om det er rett.
+
+Me ser at søyla ikkje er tal når me ser på utskrifta av objektet
+over, der det står `dtype: object`.  Hadde det vore tal, so hadde
+der stått namnet på ein numerisk type.
+
+```{code-cell} ipython3
+df2["Arbeidsledige"] = df2["Arbeidsledige"].astype( float )
+```
+
+No skal plottinga verka.
+
+```{code-cell} ipython3
+df2["Arbeidsledige"].plot()
+```
+
+::: {hint}
+Her har me brukt den innebygde typen `float`.
+Det er ofte betre å bruka typar frå numpy-biblioteket,
+men det får me koma inn på ein annan dag.
+:::
+
+::: {admonition} Refleksjon
+Ser plottet rimeleg ut?
+:::
+
+### Nye søyler
+
+Legger til kolonne med arbeidsledighet i prosent
+
+```{code-cell} ipython3
+df1["prosent"] = df1["Arbeidsledige (1 000 personer)"]/1000
+```
+
+### Legacy notes
 
 ```{code-cell} ipython3
 arbeidsledige_df.index.name = None
 
-#Legger til kolonne med arbeidsledighet i prosent
-
 #med apply og lambdafunksjon
 #arbeidsledige_df["prosent"] = arbeidsledige_df["Arbeidsledige (1 000 personer)"].apply(lambda x: f"{x/1000:.2%}") 
+```
 
-#Med serialisering/vektorisering
-arbeidsledige_df["prosent"] = arbeidsledige_df["Arbeidsledige (1 000 personer)"]/1000
-
+```{code-cell} ipython3
 arbeidsledige_df["Arbeidsledige (1 000 personer)"].plot()
 arbeidsledige_df.describe()
 display(arbeidsledige_df) #Vi kan bruke display istedet for print for en "fin" tabell
 arbeidsledige_df = arbeidsledige_df.drop("prosent", axis=1)
 ```
+
+## Konkursar
 
 ```{code-cell} ipython3
 # Vi henter et datasett med åpnede konkurser fra SSB
