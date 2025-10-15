@@ -5,34 +5,61 @@
 
 ## Tid og tidsrekkjer
 
+Me arbeider med tidsrekkjer og tida er openbert sentral.
+Der er fleire utfordringar som me må tenkja på for tidsrekkjer,
+og der er særleg to som me må bruka tid på.
 
-* Veldig mye av data tilgjengelig viser statistiske variabler over tid.
-* For ingeniører er tid veldig enkelt: Det er en fysisk størrelse og en av grunnenhetene i SI-system: *sekund*
-* I business er det verre. Vi måler tid i dager, sekunder, minutter, uker, måneder, kvartaler eller år
-* År er delt inn i måneder med ujevnt fordelte dager, vi har skuddår og tidssoner, sommertid/vintertid osv...
-* Vi kan få masse hjelp dersom tidsseriene vår bruker datatyper for tid fra `datetime` eller `pandas.Period`
+1.  Tid vert skrive på ulike måtar, med ulike presisjonsnivå.
+    Måler me i sekund eller i år, f.eks.?
+2.  Når me skal samanlikna tidsseriar, treng med kompatible
+    tidsaksar.  Dersom tidsseriane er observert på ulike tidspunkt,
+    må me finna ein måte å gjera dei samanliknbare.
+3.  Tidsseriar med svært hyppige observasjonar kan ofte gje mykje
+    tilfeldig støy.  Ofte løner det seg å rekna gjennomsnitt over
+    lengre periodar.
+
+For å kunna løysa desse tre utfordringane, treng med ein datatype for
+tid.  Me treng ein type som let python forstå samanhengen mellom 
+ulike einingar, som sekund, månad og år. 
+Månad er særleg problematisk sidan februar ikkje er like lang som juli.
+Me må kunna skilja mellom tidspunkt og tidsperiode.
+Me treng og teknikkar for å lesa alle dei representasjonane som me
+finn i disribuerte datasett og lesa dei inn i dei valde datatypane.
+    
+Her skal me studera to typar, `datetime` eller `pandas.Period`.
+Fyrstnemnde er ein del av kjernedistribusjonen av python, medan den
+andre er ein del av pandas.
+
 ## Tid og data i python
 
-```{code-cell} ipython3
-#Jeg måtte gjøre følgende for å få norsk output
-#import locale
-#locale.setlocale(locale.LC_ALL, "nb_NO.utf8")
+::: {admonition} Merknad
+Det er mogleg at me treng desse to linene for å få norsk
+vising.  Det må sjekkast.
 ```
+import locale
+locale.setlocale(locale.LC_ALL, "nb_NO.utf8")
+```
+:::
+
+For å starta med eit enkelt døme, lat oss sjå korleis me
+finn tida akkurat no.
 
 ```{code-cell} ipython3
 import datetime
-from zoneinfo import ZoneInfo
-#Henter tid/dato fra datetime.datetime
-dato_og_tid = datetime.datetime.now()
 
-#Henter dato fra datetime.date
+dato_og_tid = datetime.datetime.now()
 dato = datetime.date.today()
 
 print("I dag er datoen", dato)
 print("Mer nøyaktig er vi nå", dato_og_tid)
 ```
 
+::: {admonition}
+Kva er skilnaden mellom metodane `now()` og `today()`?
+:::
+
 ```{code-cell} ipython3
+from zoneinfo import ZoneInfo
 #Vi kan lage et spesifikt tidspunkt eller dato:
 
 min_dato = datetime.date(1990,4, 23) #År, måned, dag
