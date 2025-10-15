@@ -267,6 +267,12 @@ Ser plottet rimeleg ut?
 Resten av dokumentet er ikkje ferdig.
 :::
 
+::: {admonition} Oppgåve
+Gjer oppgåvene om [](Tid og dato).
+Når me går vidare skal me bruka ganske mange nye teknikkar, og
+det er best å gjera seg kjent med dei med enklare døme.
+:::
+
 ### Legacy notes
 
 ```{code-cell} ipython3
