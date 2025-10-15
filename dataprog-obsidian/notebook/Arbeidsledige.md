@@ -391,11 +391,6 @@ df
 * Vil vi feks plotte:
 
 ```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: ''
----
 import matplotlib.pyplot as plt
 df.plot()
 plt.xlabel("Tid")

@@ -186,14 +186,32 @@ dato_lest = datetime.datetime.strptime(dato_inn, "%d/%m/%Y")
 print("Dato som datetime objekt:", dato_lest)
 ```
 
-Biblioteket kan lesa dei formata som det kan skriva.
-Det vert litt vanskelegare når me skal lesa strengar som ikkje 
-er koda av `datetime`, men det tek me når det dukkar opp.
+Mange datasett kodar månader som t.d. `"2012M03"` og kvartal
+som t.d. `"2012K1"`.  
+Månadsformatet kan me dekoda slik,
+```{code-cell} ipython3
+kdatostr = "2021M04"
+kdato = datetime.datetime.strptime(kdatostr, "%YM%m")
+print("Dato som datetime objekt:", kdato)
+```
+Kvartal er verre med `datetime`, men me skal få det til med `Period`.
 
 ## Period i pandas
 
-* Pandas har en egen klasse/type for å jobbe med perioder og tidsintervall
-* Vi jobber da med spenn av tid, pandas kaller det `frekvenser`
+I tidsrekkjer arbeider med periodar og tidsintervall, eller frekvensar
+som pandas kaller det.
+I prinsippet er der ein nyanseskilnad.
+I somme datasett er variabelen observert på bestemte *tidspunkt*,
+og me veit ingenting om kva som skjer mellom observasjonstidspunkta.
+Då kan me tala om intervall mellom observasjonane.
+
+I andre datasett er variabelen eit mål for kva som har skjedd i laupet
+av ein *periode*, anten ved at ein observerer eit gjennomsnitt over
+perioden eller ved at ein observerer noko som har skjedd gradvis
+over perioden (t.d. prisvekst).  Då er det rett å tala om periodar.
+
+Observasjonsfrekvens dekkjer båe desse falla, og det er difor hensiktsmessig
+å halda seg til pandas-terminologien.
 
 | Frekvenskode | Beskrivelse              | Eksempel                               |
 |--------------|--------------------------|----------------------------------------|
@@ -212,15 +230,15 @@ er koda av `datetime`, men det tek me når det dukkar opp.
 | `N`          | Nanosekund                | 2024-10-21 15:30:45.123456789         |
 
 ```{code-cell} ipython3
-#pd.Period('verdi', freq='frekvenskode')
+import pandas as pd
+
 periode = pd.Period('2024-10-21 15:00', freq='Q') #Verdien er en gyldig tekststreng i en periode med frekvens freq=..
 langt_frem = periode+26
 langt_frem
 ```
 
-+++ {"editable": true, "slideshow": {"slide_type": "subslide"}}
-
 ### pd.PeriodIndex
+
 * Vi vil som regel ha mange perioder som indeks i et dataset
 * Da kan vi bruke:
   *  `pd.PeriodIndex([«liste med perioder»], freq='frekvenskode')`
