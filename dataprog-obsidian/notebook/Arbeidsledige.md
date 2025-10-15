@@ -1,7 +1,15 @@
 ---
-tags:
-  - legacy/iif
-  - pandas
+jupytext:
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.17.0
+  formats: md:myst,ipynb
+kernelspec:
+  name: dataprog
+  language: python
+  display_name: dataprog
 ---
 
 # Arbeidsledigheit og konkursar
@@ -79,7 +87,6 @@ Kva skjer om du fjernar `encoding`?
 * SSB bruker tegnkodinger «UTF-8» og «ISO-8859-1»
 
 ```{code-cell} ipython3
-
 arbeidsledige_df.index.name = None
 
 #Legger til kolonne med arbeidsledighet i prosent
@@ -103,7 +110,6 @@ konkurser_df.index.name=None
 konkurser_df
 ```
 
-
 ### Analyse:
 
 * Vi vil slå sammen dataene våre om arbeidsledighet og åpnede konkurser
@@ -112,7 +118,6 @@ konkurser_df
 ```{code-cell} ipython3
 konkurser_df+arbeidsledige_df #Det funket dårlig....
 ```
-
 
 # Slå sammen data
 
@@ -209,7 +214,6 @@ editable: true
 slideshow:
   slide_type: ''
 ---
-
 df = pd.merge(konkurser_df, arbeidsledige_df, how='outer', on="kvartal")
 df = df.dropna(axis=0)
 df = df.rename(columns={"Arbeidsledige (1 000 personer)": "Arbeidsledige", "Opna konkursar": "Konkurser"})
