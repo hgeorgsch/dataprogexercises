@@ -155,11 +155,6 @@ langt_frem
 *Vi har også en `pd.date_range(start, perioder, frekvens)` om vi vil ha `datetime` i stedet*
 
 ```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: fragment
----
 tidserie = pd.period_range('1980Q1', periods=15, freq="Q")
 tidserie2 = pd.period_range('1980', '2000', freq='M')
 tidserie2
@@ -168,6 +163,7 @@ tidserie2
 +++ {"editable": true, "slideshow": {"slide_type": "subslide"}}
 
 ### Konvertere mellom `datetime` og `Period`
+
 * Ofte trenger man å konvertere mellom `datetime` og `Period`
 * Kanskje har man brukt `strptime(...)` til å lese inn riktig dato først
 * Vi bruker da `df['date'].dt.to_period('frekvenskode')`
