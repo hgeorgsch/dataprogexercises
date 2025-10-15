@@ -12,6 +12,8 @@ kernelspec:
   display_name: dataprog
 ---
 
+# Tid og dato
+
 + Utdrag frå øving om [[Arbeidsledige]] 2024
 
 <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgCOoEr1biiaMsoejCtfdvgJAq_T6TfbjVkrc-zyfJ8ReSf8BvldJXPjyNy1gjfGVmB2hk2i39ybpaLHKDK4kTn4n2Zh-dXlaayliZoiygxhTQ3W7mC2LoxzTOARAhltRmSn84pdQdmqrbu/s1600/AD951881-737E-4F2C-AE8E-D80E280CFFD5.png">
@@ -213,6 +215,25 @@ over perioden (t.d. prisvekst).  Då er det rett å tala om periodar.
 Observasjonsfrekvens dekkjer båe desse falla, og det er difor hensiktsmessig
 å halda seg til pandas-terminologien.
 
+Lat oss ta eit døme.
+
+```{code-cell} ipython3
+import pandas as pd
+
+periode = pd.Period('2024-10-21 15:00', freq='Q') 
+langt_frem = periode + 26
+print( "Frå", periode, "til", langt_frem )
+```
+
+Her har me laga eit kvartal, ved å spesifisera frekvensen
+`Q` for *Quarter*.  Tidspunktet som er gjeve er nok ganske
+vilkårleg innanfor det aktulle kvartalet.
+Legg òg merke til korleis addisjon fungerer.  Me legg til
+26 *periodar*, altso kvartal, eller 6½ år.
+
+Andre frekvensar som ein kan velja er lista i tabellen under.
+
+
 | Frekvenskode | Beskrivelse              | Eksempel                               |
 |--------------|--------------------------|----------------------------------------|
 | `A` or `Y`   | Årlig (Year-End)          | 2024                                  |
@@ -229,13 +250,10 @@ Observasjonsfrekvens dekkjer båe desse falla, og det er difor hensiktsmessig
 | `U`          | Mikrosekund               | 2024-10-21 15:30:45.123456            |
 | `N`          | Nanosekund                | 2024-10-21 15:30:45.123456789         |
 
-```{code-cell} ipython3
-import pandas as pd
 
-periode = pd.Period('2024-10-21 15:00', freq='Q') #Verdien er en gyldig tekststreng i en periode med frekvens freq=..
-langt_frem = periode+26
-langt_frem
-```
+::: {warning}
+Resten av dokumentet er ikkje ferdig.
+:::
 
 ### pd.PeriodIndex
 
