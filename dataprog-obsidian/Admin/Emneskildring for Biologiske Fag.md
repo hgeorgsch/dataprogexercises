@@ -3,7 +3,53 @@ tags:
   - emneskildring
   - admin/emne
 ---
+**Tittel** Maskinlæring i Biologiske Fag
+**Forslag til Kode** IIRA2011
 
+**Fagleg Innhald**
+
+Emnet gir en introduksjon i kunstig intelligens, med fokus på maskinlæring og objektgjenkjenning. Studentene skal oppnå grunnleggende kunnskap om alle stegene i maskinlæringsprosessen. Dette innebærer innsamling og annotering av bildedata, datahåndtering, samt trening og evaluering av modeller. Emnet legger stor vekt på praktisk og kontekstuell opplæring innenfor biologiske fag.
+
+I emnet inngår:
+- Bruk av Jupyter Lab og Python.
+- Formattering og visualisering av datasett
+- Grunnleggende statistisk analyse og maskinlæring
+- Personvern, sikkerhet og etikk
+- Samling, annotering, røkting og evaluering av datasett til maskinlæring i biologiske fag
+- Trening, testing og statistisk evaluering av maskinlæringsmodeller
+
+Kurset åpner for at studentene kan velge ulike tema som fordypning.
+
+**Læringsutbyte**
+
+- Kunnskap. Etter kurset vet kandidaten
+    - om de viktigste muligheter og begrensninger som programmering, maskinlæring og andre digitale verktøy gir for håndtering og analyse av biologiske data.
+    - Hvordan kunstig intelligens bruker data og kva KI dermed kan og ikke kan gjøre.
+    - hvilke lover som begrenser lagring og bruk av data.
+- Ferdigheter. Etter kurset kan kandidaten
+    - bruke programmering til å hente, formater, kombinere, visualisere og analysere relevant data.
+- Kompetanse. Etter kurset kan kandidaten
+    - samle, annotere og kuratere data innenfor biologiske fag og velge relevante verktøy og metoder for å handtere disse.
+    - kritisk evaluere nye digitale verktøy, modeller og prosesser innen eget fagområde
+
+**Læringsformer og aktiviteter**
+
+- Forelesninger
+- Seminar
+- Videoforedrag og videodemonstrasjoner.
+- Øvings- og prosjektoppgaver
+
+**Obligatoriske aktiviteter** Deltagelse og muntlig presentasjon av utvalgte oppgaver på seminar. Oppgavene som presentertes kan senere brukes i mappen.
+
+**Mer om vurdering** Karakteren blir satt på grunnlag av mappen. Oppgavetekst og vurderingskriterium blir kunngjort i første undervisingsuke.
+
+Der er ingen konteeksamen. Kandidater som er fraværende, får stryk eller som vil forbedre karakteren, må ta hele mappen og de obligatoriske arbeidskravene på nytt neste gang emnet blir undervist. Sjukdom og lignende omstendligheter kan gi grunnlag for utsatt levering.
+
+**Anbefalte forkunnskaper** Ingen spesielle.
+
+**Kursmateriell** blir kunngjort i første undervisningsuke.
+
+**Studiepoengreduksjon** 4sp IIRA2001/IIRA6001
 
 ## Utkast 2025
 
