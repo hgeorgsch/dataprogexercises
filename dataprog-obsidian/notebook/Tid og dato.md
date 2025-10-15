@@ -1,3 +1,16 @@
+---
+jupytext:
+  formats: md:myst,ipynb
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.17.2
+kernelspec:
+  name: dataprog
+  language: python
+  display_name: dataprog
+---
 
 + Utdrag frå øving om [[Arbeidsledige]] 2024
 
@@ -32,14 +45,6 @@ andre er ein del av pandas.
 
 ## Tid og data i python
 
-::: {admonition} Merknad
-Det er mogleg at me treng desse to linene for å få norsk
-vising.  Det må sjekkast.
-```
-import locale
-locale.setlocale(locale.LC_ALL, "nb_NO.utf8")
-```
-:::
 
 For å starta med eit enkelt døme, lat oss sjå korleis me
 finn tida akkurat no.
@@ -47,49 +52,100 @@ finn tida akkurat no.
 ```{code-cell} ipython3
 import datetime
 
-dato_og_tid = datetime.datetime.now()
-dato = datetime.date.today()
+no = datetime.datetime.now()
+idag = datetime.date.today()
 
-print("I dag er datoen", dato)
-print("Mer nøyaktig er vi nå", dato_og_tid)
+print("I dag er datoen", idag)
+print("Mer nøyaktig er vi nå", no)
 ```
 
 ::: {admonition}
 Kva er skilnaden mellom metodane `now()` og `today()`?
 :::
 
+Lat oss sjå på nokre fleire døme.
+Me importerer ZoneInfo` for å handtera ulik
+
 ```{code-cell} ipython3
 from zoneinfo import ZoneInfo
-#Vi kan lage et spesifikt tidspunkt eller dato:
 
-min_dato = datetime.date(1990,4, 23) #År, måned, dag
+min_dato = datetime.date(1990,4, 23) 
 print("Jeg valgte dato: ", min_dato)
 
-tid = datetime.datetime(2024,12,13,12, tzinfo=ZoneInfo("Europe/Oslo")) #År, måned, dag, time, minutt, sekund, tzinfo=TIDSSONE
+tid = datetime.datetime(2024,12,13,12, tzinfo=ZoneInfo("Europe/Oslo")) 
 print("Mappeinnlevering stenger", tid)
+```
 
-#Vi kan også lage en ENDRING I TID:
-#datetime.timedelta(days=0, seconds=0, microseconds=0, milliseconds=0, minutes=0, hours=0, weeks=0)
+::: {admonition} Refleksjon
+Kva tyder dei ulike argumenta til `datetime.date()`?
+:::
+
+::: {admonition} Oppgåve
+Samanlikna kva du får med ulike tidssonar; samanlikna t.d.
++ `datetime.datetime(2024,12,13,12, tzinfo=ZoneInfo("Europe/Oslo"))`
++ `datetime.datetime(2024,12,13,12, tzinfo=ZoneInfo("GMT"))`
++ `datetime.datetime(2024,12,13,12 )`
+:::
+
+::: {admonition} Oppgåve
+Samanlikna eit tidspunkt på sumaren med eitt på vinteren, t.d.
++ `datetime.datetime(2024,12,13,12, tzinfo=ZoneInfo("Europe/Oslo"))`
++ `datetime.datetime(2024,6,13,12, tzinfo=ZoneInfo("Europe/Oslo"))`
+Kva ser du?
+
+Gjer den same samanlikninga med tidssonen GMT.  Kva ser du då?
+:::
+
+Me kan òg rekna med endring i tid.
+
+```{code-cell} ipython3
 utsettelse = datetime.timedelta(days=1, hours=4)
-ny_tid = tid+utsettelse
+ny_tid = tid + utsettelse
 print("Ny tid for mappeinnlevering:", ny_tid)
+```
 
-#Vi kan sammenligne tider/datoer
+Mange matematiske operatorar er definerte på `datetime` og
+`timedelta`, t.d. samanlikning.
+
+```{code-cell} ipython3
 print(ny_tid > tid)
 ```
 
-+++ {"editable": true, "slideshow": {"slide_type": "subslide"}}
+Den dedikerte datatypen gjer det enkelt å samanlikna tider og
+rekna på tidsinterval og utsetjingar.
+Det er ikkje umogleg, men langt frå enkelt, å klara det same med
+tida representert som tal eller strengar.
 
-* Fordelen med en slik datatype er at biblioteket selv kan holde kontroll på tidssoner og denslags
-* Biblioteket lar oss plusse/trekke fra tider eller datoer med hverandre
-* Vi kan sammenligne tid/datoer som betyr at vi lett kan sortere de
+## Pen utskrift
 
-+++ {"editable": true, "slideshow": {"slide_type": "subslide"}}
+Når me skal visa eit tidspunk kan me velja nøyaktig korleis det
+skal sjå ut, med `strftime()`-metoden.
 
-# Formattere dato ut
+```{code-cell} ipython3
+print("Mappen skal leveres: ",
+      ny_tid.strftime("Senest klokken %H:%M %A den %d."))
+print(ny_tid.strftime("%c"))
+```
 
-* vi bruker `min_tid.strftime("FORMATTERINGSSTRENG")` for å formatere en dato eller tid
-* Formateringsstrenger er litt som en f-streng, men vi limer inn feks året for `"%Y"` i stedet for `f"{year}"`
+::: {hint} 
+Det kan vera at utskrifta ser dårleg ut på norsk.  
+På Unix (MacOS og linux) kan ein fiksa dette ved å leggja til
+fylgjande liner, men det er tvilsomt om det vil verka på Windows.
+```
+import locale
+locale.setlocale(locale.LC_ALL, "nb_NO.utf8")
+```
+Her bruker me *locale* som er ein standard for å handtera ulike
+språk og teiknsett i operativsystemet.
+:::
+
+
+Formateringsstrengen som er argument til `strftime()` er litt
+som ein f-streng, men me bruke prosentteikn (%) i staden
+for krøllparentesar ({}) for å markera dei ulike variablane som 
+skal inn, slik som `%Y` for årstal.
+Sjå lista under for andre kodar du kan bruka.
+
 
 | Formatkode | Beskrivelse                          | Eksempel (med dato: 2024-10-21 15:30:45) |
 | ---------- | ------------------------------------ | ---------------------------------------- |
@@ -118,29 +174,21 @@ print(ny_tid > tid)
 | `%X`       | Lokal tid (kort format)              | 15:30:45                                 |
 | `%%`       | Et prosenttegn                       | %                                        |
 
-```{code-cell} ipython3
-print("Mappen skal leveres: ", ny_tid.strftime("Senest klokken %H:%M %A den %d."))
-print(ny_tid.strftime("%c"))
-```
+## Lesa inn tid og dato
 
-+++ {"editable": true, "slideshow": {"slide_type": "subslide"}}
-
-## Lese inn et datoformat
-* Enda mer nyttig er det å kunne lese inn tid/dato skrevet i rare formater
-* Da bruker vi samme tabell som for `strftime`, men bruker `datetime.datetime.strptime(dato, "FORMATERINGSSTRENG")`
+Mekanismen for å lesa inn tid og dato fylgjer det same prinsippet.
+Metoden heiter `strptime()` og bruker ein liknande formateringsstreng.
+I metodenamnet står p-en sikkert for *parse*, medan f-en står for *format*.
 
 ```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: fragment
----
 dato_inn = "21/04/1987"
 dato_lest = datetime.datetime.strptime(dato_inn, "%d/%m/%Y")
 print("Dato som datetime objekt:", dato_lest)
 ```
 
-+++ {"editable": true, "slideshow": {"slide_type": "slide"}}
+Biblioteket kan lesa dei formata som det kan skriva.
+Det vert litt vanskelegare når me skal lesa strengar som ikkje 
+er koda av `datetime`, men det tek me når det dukkar opp.
 
 ## Period i pandas
 
