@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.17.2
+    jupytext_version: 1.17.0
 kernelspec:
   name: dataprog
   language: python
@@ -277,7 +277,7 @@ Resten av dokumentet er ikkje ferdig.
 ### Legacy notes
 
 ```{code-cell} ipython3
-arbeidsledige_df.index.name = None
+df.index.name = None
 ```
 
 ## Konkursar

@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.17.2
+    jupytext_version: 1.17.0
 kernelspec:
   name: dataprog
   language: python
@@ -191,11 +191,13 @@ print("Dato som datetime objekt:", dato_lest)
 Mange datasett kodar månader som t.d. `"2012M03"` og kvartal
 som t.d. `"2012K1"`.  
 Månadsformatet kan me dekoda slik,
+
 ```{code-cell} ipython3
 kdatostr = "2021M04"
 kdato = datetime.datetime.strptime(kdatostr, "%YM%m")
 print("Dato som datetime objekt:", kdato)
 ```
+
 Kvartal er verre med `datetime`, men me skal få det til med `Period`.
 
 ## Period i pandas
@@ -250,6 +252,22 @@ Andre frekvensar som ein kan velja er lista i tabellen under.
 | `U`          | Mikrosekund               | 2024-10-21 15:30:45.123456            |
 | `N`          | Nanosekund                | 2024-10-21 15:30:45.123456789         |
 
+### Innlesing av periodedata
+
+I dømet over såg me at `Period`-objektet instantieres med en streng,
+og det fungerer òg med strengar som representerer ein månad eller eit kvartal.
+Det gjer det relativt enkelt å konvertera til `Period`, bortsett frå at
+pandas berre kjenner igjen eitt strengformat for kvar frekvenskode.
+Månad vert skrive med bindestrek, som `2020-04` for april 2020, og
+kvartal med Q, som `2020Q2` for andre kvartal 2020.
+
+```{code-cell} ipython3
+print( pd.Period('2024-10') )
+print( pd.Period('2024Q3') )
+```
+
+Ikkje sjeldan får me data der månad er koda med M, som i `2024M10`, og
+kvartal kan skrivast med K som på norsk, i staden for Q.
 
 ::: {warning}
 Resten av dokumentet er ikkje ferdig.
