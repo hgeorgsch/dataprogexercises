@@ -270,15 +270,53 @@ Når me går vidare skal me bruka ganske mange nye teknikkar, og
 det er best å gjera seg kjent med dei med enklare døme.
 :::
 
+For å formattera tidssøyla treng me ein funksjon for å omsetja
+SSB sitt format til det som pandas bruker.
+Det gjer fylgjande funksjon.
+
+```{code-cell} ipython3
+def formatmonth(streng_inn):
+    streng_ut = streng_inn.replace('M', '-')
+    return streng_ut
+```
+
+Me kan laga ein ny månadssøyle ved å *mappa* den gamle
+over denne funksjonen. slik
+```{code-cell} ipython3
+df2["månad"] = df2["måned"].map(formatmonth)
+display( df2 )
+```
+
+::: {admonition} Merknad
+Eg har laga ein ny søyle, «månad», til skilnad frå «måned» med vilje.
+Når me held på å læra oss pandas, er det greitt å ha både den nye og den
+gamle søyla for betre å sjå kva som føregår.  Med meir erfaring kan
+ein greit overskriva den gamle søyla i staden for å laga ein ny.
+:::
+
+Søyla er framleis ein teiknstreng, men me kan omsetja han til ein
+periodeindeks, slik
+```{code-cell} ipython3
+df2["månad"] = pd.PeriodIndex(df2["månad"], freq='M')
+df2 = df2.set_index('månad')
+display( df2 )
+```
+Legg merke til at set månadssøyla som indeks, som då erstattar talindeksen
+i utlistinga.
+No kan me sjå om dette endrar plottet.
+```{code-cell} ipython3
+df2["Arbeidsledige"].plot()
+```
+
+::: {admonition} Refleksjon
+Ser plottet rimeleg ut?
+Er det forskellig frå det forrige?
+:::
+
 ::: {warning}
 Resten av dokumentet er ikkje ferdig.
 :::
 
-### Legacy notes
-
-```{code-cell} ipython3
-df.index.name = None
-```
 
 ## Konkursar
 
@@ -317,25 +355,6 @@ Vi må passe på en rekke ting når vi skal slå sammen data:
 ```{code-cell} ipython3
 display(konkurser_df.head(2))
 display(arbeidsledige_df.head(2))
-```
-
-+++ {"editable": true, "slideshow": {"slide_type": "subslide"}}
-
-* Arbeidsledige har nesten riktig format på indeks
-* "1972K1" skulle vært "1972Q1" for at `pd.Periods` skal skunne "lese det riktig"
-
-```{code-cell} ipython3
-arbeidsledige_df = pd.read_csv("arbeidsledige.csv", sep=";", header=1, index_col=0)
-arbeidsledige_df.index.name = None
-
-def formater_kvartal(streng_inn):
-    streng_ut = streng_inn.replace('K', 'Q')
-    return streng_ut
-
-arbeidsledige_df["kvartal"] = arbeidsledige_df.index.map(formater_kvartal)
-arbeidsledige_df["kvartal"] = pd.PeriodIndex(arbeidsledige_df["kvartal"], freq='Q')
-arbeidsledige_df =arbeidsledige_df.set_index('kvartal')
-arbeidsledige_df
 ```
 
 +++ {"editable": true, "slideshow": {"slide_type": "slide"}}
@@ -423,3 +442,9 @@ alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 <a href="https://www.youtube.com/watch?v=WpZi02ulCvQ" 
   target="_blank"><img src="https://img.youtube.com/vi/WpZi02ulCvQ/0.jpg" 
 alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+
+### Legacy notes
+
+```{code-cell} ipython3
+df.index.name = None
+```
