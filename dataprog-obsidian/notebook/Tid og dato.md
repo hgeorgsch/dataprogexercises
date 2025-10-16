@@ -280,8 +280,18 @@ print( pd.Period( pds ) + 3 )
 ```
 
 ::: {admonition} Oppgåve
+Korleis verkar `replace`-lina?
+Er der andre ting du kan bruka denne metoden til?
+:::
+
+::: {admonition} Oppgåve
 Skriv ein funksjon `monthPeriod(s)` som tek ein streng `s` på
 SSB sitt månadsformat og returnerer eit høveleg `Period`-objekt.
+:::
+
+::: {admonition} Oppgåve
+Kva skjer om du freistar å laga eit `Period`-objekt direkte frå
+strengen `"2012M09"`?
 :::
 
 ::: {warning}
