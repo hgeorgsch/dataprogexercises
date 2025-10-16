@@ -268,6 +268,21 @@ print( pd.Period('2024Q3') )
 
 Ikkje sjeldan får me data der månad er koda med M, som i `2024M10`, og
 kvartal kan skrivast med K som på norsk, i staden for Q.
+Dette kan me fiksa med `replace()`-metoden på `str`-typen.
+
+```{code-cell} ipython3
+ssb = "2012M09"
+pds = ssb.replace( "M", "-" )
+print( ssb, "->", pds )
+
+print( pd.Period( pds ) )
+print( pd.Period( pds ) + 3 )
+```
+
+::: {admonition} Oppgåve
+Skriv ein funksjon `monthPeriod(s)` som tek ein streng `s` på
+SSB sitt månadsformat og returnerer eit høveleg `Period`-objekt.
+:::
 
 ::: {warning}
 Resten av dokumentet er ikkje ferdig.
