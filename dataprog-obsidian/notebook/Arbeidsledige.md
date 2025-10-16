@@ -313,18 +313,26 @@ Ser plottet rimeleg ut?
 Er det forskellig frå det forrige?
 :::
 
-::: {warning}
-Resten av dokumentet er ikkje ferdig.
-:::
 
 
 ## Konkursar
 
+::: {admonition} Oppgåve
+Gå tilbake til [lista frå SSB](https://data.ssb.no/api/?lang=no)
+og sjå etter eit datasett om konkursar i same tidsperiode som arbeidsledigheita.
+Kva finn du?
+:::
+
+I det fylgjande vil me bruka filen med ID 62495, men du kan godt bruka ein annan.
+Eg har gjeve ho namnet `62495.csv`.
+
+::: {warning}
+Resten av dokumentet er ikkje ferdig.
+:::
+
 ```{code-cell} ipython3
-# Vi henter et datasett med åpnede konkurser fra SSB
-konkurser_df = pd.read_csv("konkurser.csv", encoding="ISO-8859-1", sep="\t", index_col = 0)
-konkurser_df.index.name=None
-konkurser_df
+konkursar = pd.read_csv("62495.csv", encoding="ISO-8859-1", sep=";")
+display( konkursar )
 ```
 
 ### Analyse:
