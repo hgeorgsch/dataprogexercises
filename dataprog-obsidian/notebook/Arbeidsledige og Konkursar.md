@@ -89,11 +89,6 @@ display( kondf["Konkurser"] )
 
 ## Slå saman data
 
-::: {warning}
-Dokumentet er under arbeide.
-Den fyrste delen skal vera brukbar, men frå «Tid og dato» er
-det berre skissar.
-:::
 
 For å studera samanhengar mellom arbeidsledigheit og konkursar 
 skal me slå saman dei to *Data Frames* til éin.  
@@ -110,18 +105,21 @@ Der er mange ting å tenkja på når me skal slå saman datasett:
 
 Me har gjort ein del av jobben allereie.  Me har koda indeks som `Period`-objekt,
 slik at desse er samanliknbare, men dei har ikkje same frekvens.
-
-## Tidsindeks med ulik frekvens
-
+For lett å kunna samanlikna, kan det vera greit å visa berre eit lite utsnitt
+av kvart datasett, t.d. ved å bruka `head()`-metoden.
 ```{code-cell} ipython3
 display(kondf.head(2))
 display(arbdf.head(2))
 ```
 
-* Dataframe av konkurser gjør vi litt mer arbeid med
-* '1923M01' er ikke gyldig/lesbart for `pd.Period` - det skulle vært '1923-01'
-* Vi kan gjøre som sist og bytte ut 'M' med '-', men hva om det var enda mer komplisert?
-* Da kan vi bruke `datetime.datetime.strptime(streng, formatstreng)`
+## Tidsindeks med ulik frekvens
+
+
+::: {warning}
+Dokumentet er under arbeide.
+Den fyrste delen skal vera brukbar, men frå «Tid og dato» er
+det berre skissar.
+:::
 
 * Nå trenger vi bare å summe sammen alle konkurser per kvartal
 * Vi kan bruke `.groupby(...)` til dette
@@ -131,11 +129,6 @@ display(arbdf.head(2))
 * Deretter får vi et nytt dataframe ut
 
 ```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: fragment
----
 konkurser_df = konkurser_df.groupby(by="date").sum()
 konkurser_df.index.name="kvartal"
 ```
