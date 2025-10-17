@@ -345,5 +345,5 @@ Plott tidsrekkja.  Ser resultatet rimeleg og korrekt ut?
 
 No har me to tidsrekkjer formattert i pandas.  Neste steg er samanlikning
 av dei to tidsrekkjene.  Dét tek me fatt på i eit nytt dokument om
-[](Arbeidsledige og Konkursar).
+[Arbeidsledige og Konkursar](Arbeidsledige%20og%20Konkursar.ipynb).
 
