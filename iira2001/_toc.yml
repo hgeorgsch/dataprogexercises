@@ -41,9 +41,13 @@ parts:
      - file: new/14okt
        sections:
         - file: notebooks/Arbeidsledige
-        - file: notebooks/Tid og dato
+          sections:
+            - file: notebooks/Arbeidsledige og Konkursar
+            - file: notebooks/Tid og dato
         - file: exercises/Eksportdata
         - file: notebooks/forelesning14okt2025
+     - file: new/20okt
+     - file: new/medstudentvurdering
      - file: new/Statistikk og Maskinlæring
        sections:
         - file: notebooks/Evaluering for regresjon
