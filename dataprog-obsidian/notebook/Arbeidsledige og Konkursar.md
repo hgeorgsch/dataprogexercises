@@ -15,13 +15,10 @@ kernelspec:
 # Samanheng mellom Arbeidsledige og Konkursar
 
 Denne oppgåva føreset at du har gjort oppgåva om
-[](Arbeidsledige) inklusive [](Tid og dato).
-
-::: {warning}
-Dokumentet er under arbeide.
-Den fyrste delen skal vera brukbar, men frå «Tid og dato» er
-det berre skissar.
-:::
+[](Arbeidsledige) inklusive [](Tid og dato) som
+forklarer korleis me formatterer dei to datasetta.
+Her går me vidare med å slå saman datasetta for å sjekka
+om der er samanheng mellom arbeidsledigheit og konkursar.
 
 ## Datasett
 
@@ -90,53 +87,41 @@ display( kondf )
 display( kondf["Konkurser"] )
 ```
 
-### Analyse:
+## Slå saman data
 
-* Vi vil slå sammen dataene våre om arbeidsledighet og åpnede konkurser
-* Er det en sammenheng?
+::: {warning}
+Dokumentet er under arbeide.
+Den fyrste delen skal vera brukbar, men frå «Tid og dato» er
+det berre skissar.
+:::
+
+For å studera samanhengar mellom arbeidsledigheit og konkursar 
+skal me slå saman dei to *Data Frames* til éin.  
+Der er fleire måtar å slå saman datasett på, og difor er ikkje
+dette like enkelt som å leggja saman med `+` som fungerer for
+mange andre datatypar.
+
+Der er mange ting å tenkja på når me skal slå saman datasett:
+* Matchande datatypar: to søyer er forkjellige dersom dei har forskjellige datatyper 
+  sjølv om innhaldet er det same
+* Kva radar høyrer saman i dei to datasetta?  Me må ha ei søyle (gjerne indeks) som
+  er felles for dei to datasetta.
+* Skal me behalda radar som berre finst i det eine datasettet?
+
+Me har gjort ein del av jobben allereie.  Me har koda indeks som `Period`-objekt,
+slik at desse er samanliknbare, men dei har ikkje same frekvens.
+
+## Tidsindeks med ulik frekvens
 
 ```{code-cell} ipython3
-konkurser_df+arbeidsledige_df #Det funket dårlig....
+display(kondf.head(2))
+display(arbdf.head(2))
 ```
-
-## Slå sammen data
-
-Vi må passe på en rekke ting når vi skal slå sammen data:
-* Matchende datatyper: 2 kolonner blir ansett som forkjellige dersom de har forskjellige datatyper men matchende data
-* Hva skal vi beholde (Alt som matcher, kun matchende data fra nr 1 eller 2 dataframe)
-* Dersom man slår sammen på index, må disse samsvare
-
-
-* Vi trenger nå å slå sammen data som går over forskjellige tidsspenn
-* Indeksen vår består av *tekststrenger* -- dette byr på problemer
-* [[Tid og dato]]
-
-## Tilbake til analysen vår:
-
-* Vi kan nå prøve å konvertere tidsseriene våres til et ordentlig format, og slå de sammen
-
-```{code-cell} ipython3
-display(konkurser_df.head(2))
-display(arbeidsledige_df.head(2))
-```
-
-+++ {"editable": true, "slideshow": {"slide_type": "slide"}}
 
 * Dataframe av konkurser gjør vi litt mer arbeid med
 * '1923M01' er ikke gyldig/lesbart for `pd.Period` - det skulle vært '1923-01'
 * Vi kan gjøre som sist og bytte ut 'M' med '-', men hva om det var enda mer komplisert?
 * Da kan vi bruke `datetime.datetime.strptime(streng, formatstreng)`
-
-```{code-cell} ipython3
-konkurser_df = pd.read_csv("konkurser.csv", encoding="ISO-8859-1", sep="\t", index_col = 0)
-konkurser_df.index.name=None
-
-konkurser_df["date"] = konkurser_df.index.map(lambda x: datetime.datetime.strptime(x, "%YM%m")) #med lambdafunksjon
-konkurser_df["date"] = konkurser_df["date"].dt.to_period('Q')
-konkurser_df
-```
-
-+++ {"editable": true, "slideshow": {"slide_type": "subslide"}}
 
 * Nå trenger vi bare å summe sammen alle konkurser per kvartal
 * Vi kan bruke `.groupby(...)` til dette
