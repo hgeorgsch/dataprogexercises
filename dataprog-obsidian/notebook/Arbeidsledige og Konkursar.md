@@ -188,6 +188,11 @@ Dette er forklart i meir detalj i øvinga
 ```{code-cell} ipython3
 df = pd.merge(kondf, argdf, how='outer', on="kvartal")
 display( df )
+
+::: {admonition} Repetisjonsspørsmål
+Kva tyder argumentet `how='outer'`?
+Kva med `on="kvartal"`?
+:::
 ```
 
 Me kan òg sjekka resultatet ved å plotta.
