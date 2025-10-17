@@ -148,38 +148,77 @@ arbdf = arbdf.drop( labels=idxs, axis=1 )
 display( arbdf )
 ```
 
+No er det råd å gruppera data per kvartal med `groupby()`-metoden.
+
+```{code-cell} ipython3
+arbgb = arbdf.groupby( "kvartal" )
+display(arbgb)
+```
+
+::: {admonition} Refleksjon
+Kva viser utskrifta her?  Kva er `arbgb` for noko?
+:::
+
+Det forvirra meg òg, at `groupby()` ikkje gjev ein ny *DataFrame*,
+men ein eigen datatype.
+Grunnen til det er at me ikkje har sagt korleis me skal aggregera radane
+innanfor gruppa.
+Dét gjer me i eit eige steg, og då vil me få den nye *DataFrame* som me
+ynskjer oss.
+
+
+```{code-cell} ipython3
+argdf = arbgb.mean()
+display(argdf)
+```
+
+::: {admonition} Merknad
+I staden for `.mean()` kan me bruka `.sum()`, `.median()`, `.max()`, `.min()`, eller
+kan henda andre.
+:::
+
+
+## Fletting av datasett
+
+
+No kan me slå saman datasetta med `.merge()`.
+Dette er forklart i meir detalj i øvinga
+[Fyrste datasett med CSV](Fyrste%20datasett%20med%20CSV.ipynb).
+
+```{code-cell} ipython3
+df = pd.merge(kondf, argdf, how='outer', on="kvartal")
+display( df )
+```
+
+Me kan òg sjekka resultatet ved å plotta.
+
+```{code-cell} ipython3
+df.plot()
+```
+
+::: {hint}
+Dette var enkelt, heilt utan argument til `plot()`.
+Han plottar med indeksen på $x$-aksen, og sidan me har brukt tidspunkt eller periode
+som indeks, vert det slik som me vil ha det.  Alle dei numeriske søylene vert 
+plotta, medan dei ikkje-numeriske vert ignorert, som òg er bra for oss.
+:::
+
+## Korrelasjon
+
 ::: {warning}
 Dokumentet er under arbeide.
 Den fyrste delen skal vera brukbar, men frå «Tid og dato» er
 det berre skissar.
 :::
 
-* Nå trenger vi bare å summe sammen alle konkurser per kvartal
-* Vi kan bruke `.groupby(...)` til dette
-* `groupby()` slår sammen deler av data i grupper
-* feks alle "menn" i en gruppe og alle kvinner i en annen gruppe om vi har en kolonne "kjønn" i dataene våre
-* Det returnes et spesialobjekt som vi kan gjøre noe med, typisk, `.sum(), .mean(), .median(), .max(), .min()`
-* Deretter får vi et nytt dataframe ut
 
 ```{code-cell} ipython3
-arbgb = arbdf.groupby( "kvartal" )
-
-display(arbdf)
-display(arbgb.mean())
-# konkurser_df.index.name="kvartal"
-```
-
-* Nå kan vi slå sammen datasettene med `.merge(...)`
-
-```{code-cell} ipython3
-df = pd.merge(konkurser_df, arbeidsledige_df, how='outer', on="kvartal")
 df = df.dropna(axis=0)
 df = df.rename(columns={"Arbeidsledige (1 000 personer)": "Arbeidsledige", "Opna konkursar": "Konkurser"})
 #df = df.set_index("kvartal")
 df
 ```
 
-+++ {"editable": true, "slideshow": {"slide_type": ""}}
 
 * Når vi har fått dataen slik vi vil ha den er det vanskelige over
 * Vil vi feks plotte:
