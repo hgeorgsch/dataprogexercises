@@ -107,6 +107,7 @@ Me har gjort ein del av jobben allereie.  Me har koda indeks som `Period`-objekt
 slik at desse er samanliknbare, men dei har ikkje same frekvens.
 For lett å kunna samanlikna, kan det vera greit å visa berre eit lite utsnitt
 av kvart datasett, t.d. ved å bruka `head()`-metoden.
+
 ```{code-cell} ipython3
 display(kondf.head(2))
 display(arbdf.head(2))
@@ -129,11 +130,16 @@ det berre skissar.
 * Deretter får vi et nytt dataframe ut
 
 ```{code-cell} ipython3
-konkurser_df = konkurser_df.groupby(by="date").sum()
-konkurser_df.index.name="kvartal"
+arbdf["kvartal"] = pd.PeriodIndex(arbdf.index, freq='Q')
+display(kondf.head(2))
+display(arbdf.head(2))
 ```
 
-+++ {"editable": true, "slideshow": {"slide_type": "subslide"}}
+```{code-cell} ipython3
+arbdf = arbdf.groupby("kvartal")
+display(arbdf)
+# konkurser_df.index.name="kvartal"
+```
 
 * Nå kan vi slå sammen datasettene med `.merge(...)`
 
