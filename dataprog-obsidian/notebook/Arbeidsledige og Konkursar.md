@@ -115,6 +115,38 @@ display(arbdf.head(2))
 
 ## Tidsindeks med ulik frekvens
 
+Datasetta gjev oss altso tre observasjonar av arbeidsledigheita og éin av
+konkursar for kvart kvartal.  Når me skal samanlikna vil me helst ha kvar
+variabel éin gong per periode.  Der kan vera fleire måtar å handtera dette
+på.  Ei enkel løysing er å ta gjennomsnittet over kvar periode.
+
+Det fyrste me gjer er å laga ein ny søyed med `PeriodIndex` i `arbdf`, slik
+at båe datasetta har ei søyle med same frekvens.
+
+```{code-cell} ipython3
+arbdf["kvartal"] = pd.PeriodIndex(arbdf.index, freq='Q')
+display(arbdf.head(4))
+```
+
+Sjølvsagt får me då tre radar per kvartal.
+
+No kan me bruka `kvartal`-søyla til å gruppera data, men når me gjer det,
+me må tenkja på alle søylene.  Numeriske søyler er greie, for der kan me
+slå saman data med gjennomsnitt (`mean`) eller sum.
+Den nye `kvartal`-søyla er òg grei fordi det dén me bruker til å definera
+gruppene.
+Dei andre søylene er uproblematiske i teorien, fordi alle radane har same verdi,
+men me må likevel fortelja python kva han skal gjera.
+
+Det enklaste er å droppa dei problematiske søylene.  Sidan alle radane har
+same verdi taper me inkje.
+
+```{code-cell} ipython3
+idxs = list( arbdf.columns )[0:4]
+print(idxs)
+arbdf = arbdf.drop( labels=idxs, axis=1 )
+display( arbdf )
+```
 
 ::: {warning}
 Dokumentet er under arbeide.
@@ -130,14 +162,10 @@ det berre skissar.
 * Deretter får vi et nytt dataframe ut
 
 ```{code-cell} ipython3
-arbdf["kvartal"] = pd.PeriodIndex(arbdf.index, freq='Q')
-display(kondf.head(2))
-display(arbdf.head(2))
-```
+arbgb = arbdf.groupby( "kvartal" )
 
-```{code-cell} ipython3
-arbdf = arbdf.groupby("kvartal")
 display(arbdf)
+display(arbgb.mean())
 # konkurser_df.index.name="kvartal"
 ```
 
