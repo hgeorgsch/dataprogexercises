@@ -14,11 +14,6 @@ kernelspec:
 
 # Arbeidsledigheit og konkursar
 
-::: {warning}
-Dokumentet er under arbeide.
-Den fyrste delen skal vera brukbar, men frå «Tid og dato» er
-det berre skissar.
-:::
 
 I denne øvinga skal me sjå på datasett frå 
 [statistisk sentralbyrå](http://www.ssb.no).
@@ -326,133 +321,29 @@ Kva finn du?
 I det fylgjande vil me bruka filen med ID 62495, men du kan godt bruka ein annan.
 Eg har gjeve ho namnet `62495.csv`.
 
-::: {warning}
-Resten av dokumentet er ikkje ferdig.
+::: {admonition} Oppgåve
+Last ned og last inn eit konkursdatasett i python.
+Er teiknkodinga og skiljeteiknet det same som i forrige datasett,
+eller må du bruka andre argument når du les fila?
 :::
 
-```{code-cell} ipython3
-konkursar = pd.read_csv("62495.csv", encoding="ISO-8859-1", sep=";")
-display( konkursar )
-```
+::: {admonition} Oppgåve
+Lag ein ny indekssøyle med `PeriodIndex` slik som me gjorde over.
+Det er ikkje sikkert frekvensen er den same i dei to datasetta, men
+det lèt me vera inntil vidare.
+:::
 
-### Analyse:
+::: {admonition} Oppgåve
+Trekk ut éi relevant tidsrekkje, igjen som me gjorde med arbeidsledige.
+:::
 
-* Vi vil slå sammen dataene våre om arbeidsledighet og åpnede konkurser
-* Er det en sammenheng?
+::: {admonition} Oppgåve
+Plott tidsrekkja.  Ser resultatet rimeleg og korrekt ut?
+:::
 
-```{code-cell} ipython3
-konkurser_df+arbeidsledige_df #Det funket dårlig....
-```
+## Neste steg
 
-## Slå sammen data
+No har me to tidsrekkjer formattert i pandas.  Neste steg er samanlikning
+av dei to tidsrekkjene.  Dét tek me fatt på i eit nytt dokument om
+[](Arbeidsledige og Konkursar).
 
-Vi må passe på en rekke ting når vi skal slå sammen data:
-* Matchende datatyper: 2 kolonner blir ansett som forkjellige dersom de har forskjellige datatyper men matchende data
-* Hva skal vi beholde (Alt som matcher, kun matchende data fra nr 1 eller 2 dataframe)
-* Dersom man slår sammen på index, må disse samsvare
-
-
-* Vi trenger nå å slå sammen data som går over forskjellige tidsspenn
-* Indeksen vår består av *tekststrenger* -- dette byr på problemer
-* [[Tid og dato]]
-
-## Tilbake til analysen vår:
-
-* Vi kan nå prøve å konvertere tidsseriene våres til et ordentlig format, og slå de sammen
-
-```{code-cell} ipython3
-display(konkurser_df.head(2))
-display(arbeidsledige_df.head(2))
-```
-
-+++ {"editable": true, "slideshow": {"slide_type": "slide"}}
-
-* Dataframe av konkurser gjør vi litt mer arbeid med
-* '1923M01' er ikke gyldig/lesbart for `pd.Period` - det skulle vært '1923-01'
-* Vi kan gjøre som sist og bytte ut 'M' med '-', men hva om det var enda mer komplisert?
-* Da kan vi bruke `datetime.datetime.strptime(streng, formatstreng)`
-
-```{code-cell} ipython3
-konkurser_df = pd.read_csv("konkurser.csv", encoding="ISO-8859-1", sep="\t", index_col = 0)
-konkurser_df.index.name=None
-
-konkurser_df["date"] = konkurser_df.index.map(lambda x: datetime.datetime.strptime(x, "%YM%m")) #med lambdafunksjon
-konkurser_df["date"] = konkurser_df["date"].dt.to_period('Q')
-konkurser_df
-```
-
-+++ {"editable": true, "slideshow": {"slide_type": "subslide"}}
-
-* Nå trenger vi bare å summe sammen alle konkurser per kvartal
-* Vi kan bruke `.groupby(...)` til dette
-* `groupby()` slår sammen deler av data i grupper
-* feks alle "menn" i en gruppe og alle kvinner i en annen gruppe om vi har en kolonne "kjønn" i dataene våre
-* Det returnes et spesialobjekt som vi kan gjøre noe med, typisk, `.sum(), .mean(), .median(), .max(), .min()`
-* Deretter får vi et nytt dataframe ut
-
-```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: fragment
----
-konkurser_df = konkurser_df.groupby(by="date").sum()
-konkurser_df.index.name="kvartal"
-```
-
-+++ {"editable": true, "slideshow": {"slide_type": "subslide"}}
-
-* Nå kan vi slå sammen datasettene med `.merge(...)`
-
-```{code-cell} ipython3
-df = pd.merge(konkurser_df, arbeidsledige_df, how='outer', on="kvartal")
-df = df.dropna(axis=0)
-df = df.rename(columns={"Arbeidsledige (1 000 personer)": "Arbeidsledige", "Opna konkursar": "Konkurser"})
-#df = df.set_index("kvartal")
-df
-```
-
-+++ {"editable": true, "slideshow": {"slide_type": ""}}
-
-* Når vi har fått dataen slik vi vil ha den er det vanskelige over
-* Vil vi feks plotte:
-
-```{code-cell} ipython3
-import matplotlib.pyplot as plt
-df.plot()
-plt.xlabel("Tid")
-df.plot.scatter("Arbeidsledige", "Konkurser")
-```
-
-## Korrelasjon
-
-* Å finne kovarians og korrelasjon er også lett
-
-```{code-cell} ipython3
-df.cov()
-```
-
-```{code-cell} ipython3
-df.corr()
-```
-
-* De som trenger en oppfriskning på kovarians og korrelasjon kan se her:
-
-
-### Kovarians (video)
-
-<a href="https://www.youtube.com/watch?v=9Y0Alg8huJk" 
-  target="_blank"><img src="https://img.youtube.com/vi/9Y0Alg8huJk/0.jpg" 
-alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
-
-### Korrelasjon (video)
-
-<a href="https://www.youtube.com/watch?v=WpZi02ulCvQ" 
-  target="_blank"><img src="https://img.youtube.com/vi/WpZi02ulCvQ/0.jpg" 
-alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
-
-### Legacy notes
-
-```{code-cell} ipython3
-df.index.name = None
-```
