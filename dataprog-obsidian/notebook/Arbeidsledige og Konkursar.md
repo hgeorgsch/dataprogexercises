@@ -1,4 +1,18 @@
-# Arbeidsledige og Konkursar
+---
+jupytext:
+  formats: md:myst,ipynb
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.17.0
+kernelspec:
+  name: dataprog
+  language: python
+  display_name: dataprog
+---
+
+# Samanheng mellom Arbeidsledige og Konkursar
 
 Denne oppgåva føreset at du har gjort oppgåva om
 [](Arbeidsledige) inklusive [](Tid og dato).
@@ -9,10 +23,71 @@ Den fyrste delen skal vera brukbar, men frå «Tid og dato» er
 det berre skissar.
 :::
 
+## Datasett
+
+Koden under lastar dei to datasetta som me kom fram til i
+øvinga om [](Arbeidsledige).  
+Koden er skrive meir kompakt, men bruker ingen nye teknikkar.
+Du kan godt bruka din eigen kode i staden.
+Merk at eg her kaller dei to *Data Frames* som me skal arbeida
+med for `arbdf` og `kondf`.
+
+### Arbeidsledige
 
 ```{code-cell} ipython3
-konkursar = pd.read_csv("62495.csv", encoding="ISO-8859-1", sep=";")
-display( konkursar )
+import pandas as pd
+df1 = pd.read_csv("1054.csv", sep=";", encoding="latin1",
+                             header=0, index_col=None)
+
+def formatertid(streng_inn):
+    """
+    Reformater ein periodestreng frå SSB-format til pandas-format.
+    Månad og kvartal er støtta.  Me kan trengja andre frekvensar i framtida. 
+    """
+    return streng_inn.replace('M', '-').replace('K', 'Q')
+
+df1["måned"] = df1["måned"].map(formatertid)
+df1["måned"] = pd.PeriodIndex(df1["måned"], freq='M')
+df1 = df1.set_index('måned')
+
+arbdf = df1[ df1["statistikkvariabel"] == "Arbeidsledige (1000 personer)" ]
+arbdf = arbdf[ arbdf["kjønn"] == "0 Begge kjønn" ]
+arbdf = arbdf[ arbdf["alder"] == "15-74 15-74 år" ]
+arbdf = arbdf[ arbdf["type justering"] == "T Trend" ]
+
+idx = list( df1.columns )[-1]
+
+arbdf = arbdf.copy()
+arbdf = arbdf.rename( columns={ idx : "Arbeidsledige" } ) 
+
+arbdf["Arbeidsledige"] = arbdf["Arbeidsledige"].astype( float )
+
+display(arbdf)
+arbdf["Arbeidsledige"].plot()
+```
+
+### Konkursar
+
+```{code-cell} ipython3
+df2 = pd.read_csv("62495.csv", encoding="ISO-8859-1", sep=";")
+display( df2 )
+
+df2["kvartal"] = df2["kvartal"].map(formatertid)
+df2["kvartal"] = pd.PeriodIndex(df2["kvartal"], freq='Q')
+df2 = df2.set_index('kvartal')
+
+kondf = df2[ df2["statistikkvariabel"] == "Konkurser" ]
+kondf = kondf[ kondf["organisasjonsform"] == "99 I alt" ]
+kondf = kondf[ kondf["næring (SN2007)"] == "01-99 Total" ]
+kondf = kondf[ kondf["region"] == "0 Hele landet" ]
+
+idx = list( df2.columns )[-1]
+
+kondf = kondf.copy()
+kondf = kondf.rename( columns={ idx : "Konkurser" } ) 
+
+display( kondf )
+display( kondf["Konkurser"] )
 ```
 
 ### Analyse:
@@ -136,4 +211,3 @@ alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 ```{code-cell} ipython3
 df.index.name = None
 ```
-
