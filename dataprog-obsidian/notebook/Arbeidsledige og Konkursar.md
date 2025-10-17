@@ -188,12 +188,12 @@ Dette er forklart i meir detalj i øvinga
 ```{code-cell} ipython3
 df = pd.merge(kondf, argdf, how='outer', on="kvartal")
 display( df )
+```
 
 ::: {admonition} Repetisjonsspørsmål
 Kva tyder argumentet `how='outer'`?
 Kva med `on="kvartal"`?
 :::
-```
 
 Me kan òg sjekka resultatet ved å plotta.
 
@@ -208,62 +208,66 @@ som indeks, vert det slik som me vil ha det.  Alle dei numeriske søylene vert
 plotta, medan dei ikkje-numeriske vert ignorert, som òg er bra for oss.
 :::
 
-## Korrelasjon
-
-::: {warning}
-Dokumentet er under arbeide.
-Den fyrste delen skal vera brukbar, men frå «Tid og dato» er
-det berre skissar.
-:::
-
-
-```{code-cell} ipython3
-df = df.dropna(axis=0)
-df = df.rename(columns={"Arbeidsledige (1 000 personer)": "Arbeidsledige", "Opna konkursar": "Konkurser"})
-#df = df.set_index("kvartal")
-df
-```
-
-
-* Når vi har fått dataen slik vi vil ha den er det vanskelige over
-* Vil vi feks plotte:
+Det går an å bruka funksjonar frå `pyplot` for å endra titlar og layout
+på figuren.  Det fylgjande er berre eit døme.
 
 ```{code-cell} ipython3
 import matplotlib.pyplot as plt
 df.plot()
 plt.xlabel("Tid")
-df.plot.scatter("Arbeidsledige", "Konkurser")
 ```
 
 ## Korrelasjon
 
-* Å finne kovarians og korrelasjon er også lett
+Ein annan måte å plotta på, er å plotta ein variabel på kvar akse,
+i det me gjerne kaller spreidingsplott.
 
 ```{code-cell} ipython3
-df.cov()
+df.plot()
+df.plot.scatter("Arbeidsledige", "Konkurser")
 ```
+
+::: {admonition} Refleksjon
+Kva kan du lesa frå spreidingsplottet.  Er der ein samanheng
+mellom ledigheit og konkursar, trur du?
+:::
+
+Eit vanleg kvantitativt mål for samanhengen mellom to tidsrekkjer
+er korrelasjonskoeffisienten, som mange kjenner frå statistikken.
+Når me bed om korrelasjonen i pandas, reknar han ut for kvart par
+av søyler, ogso for kvar søyle med seg sjølv, sjølv om denne alltid
+er 1, som tilseier maksimal korrelasjon.  Difor må me òg ta bort
+ikkje-numeriske søyler fyrst.
 
 ```{code-cell} ipython3
-df.corr()
+df1 = df[["Arbeidsledige","Konkurser"]]
+df1.corr()
 ```
-
-* De som trenger en oppfriskning på kovarians og korrelasjon kan se her:
-
-
-### Kovarians (video)
-
-<a href="https://www.youtube.com/watch?v=9Y0Alg8huJk" 
-  target="_blank"><img src="https://img.youtube.com/vi/9Y0Alg8huJk/0.jpg" 
-alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
-
-### Korrelasjon (video)
 
 <a href="https://www.youtube.com/watch?v=WpZi02ulCvQ" 
   target="_blank"><img src="https://img.youtube.com/vi/WpZi02ulCvQ/0.jpg" 
 alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 
-### Legacy notes
+
+### Kovarians 
+
+Korrelasjonskoeffisienten er ein normalisering av kovariansen, som
+me òg kan rekna ut.
 
 ```{code-cell} ipython3
-df.index.name = None
+df1.cov()
 ```
+
+<a href="https://www.youtube.com/watch?v=9Y0Alg8huJk" 
+  target="_blank"><img src="https://img.youtube.com/vi/9Y0Alg8huJk/0.jpg" 
+alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+
+
+## Oppsummering
+
+Det er alltid litt plunder å få nye datasett på ein kjend form, men straks
+me har samla fleire tidsrekkjer i éin *DataFrame* har me eit stort repertoir
+av statistiske verktøy for å analysera dei.  Me skal ikkje i dette kurset gå
+inn på nye statistiske metodar, men me vil gjerne ha utnytta dei metodane som
+er kjende frå før.  Då gjeld det å søkja i dokumentasjonen eller spørja andre.
+
