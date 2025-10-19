@@ -10,11 +10,13 @@ kernelspec:
   name: dataprog
   language: python
   display_name: dataprog
+tags:
+  - datetime
+  - tidsrekkje
 ---
 
 # Tid og dato
 
-+ Utdrag frå øving om [[Arbeidsledige]] 2024
 
 <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgCOoEr1biiaMsoejCtfdvgJAq_T6TfbjVkrc-zyfJ8ReSf8BvldJXPjyNy1gjfGVmB2hk2i39ybpaLHKDK4kTn4n2Zh-dXlaayliZoiygxhTQ3W7mC2LoxzTOARAhltRmSn84pdQdmqrbu/s1600/AD951881-737E-4F2C-AE8E-D80E280CFFD5.png">
 

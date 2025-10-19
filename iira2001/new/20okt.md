@@ -6,3 +6,13 @@ Utgangspunktet er oppgåva om [](Arbeidsledige) som me starta
 på tysdag ([](14okt)).
 Der er ingen nye oppgåver denne veka, men oppgåva om
 [](Arbeidsledige) som var publisert er no meir fullstendig.
+
+## Nye teknikkar denne veka
+
++ Utdrag frå datasett: filtrering på fleire søyler.
++ Datatype.  Numeriske søyler og teiknstrengar.
++ Manglande data og NaN (not a number).
++ Tid og dato.  Korleis formatterer me ei søyle slik at pandas
+  skjøner at det er ein dato.
++ Frekvens og gruppering av radar.
++ Fletting av datasett.  
