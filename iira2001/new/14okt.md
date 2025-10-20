@@ -28,8 +28,7 @@ Torsdag 16de oktober vert øvingstime med vegleiing.
 Eg freistar å leggja til fleire oppgåver her etter kvart.
 Ein bør starta med oppgåvene over.
 
-1. [](../notebooks/Arbeidsledige) er under utarbeiding, basert på 
-   same problem som førelesinga
+1. [](../notebooks/Arbeidsledige) er eit utarbeidd døme på same problem som frå
    [14. oktober](../notebooks/forelesning14okt2025).
 1. [](../exercises/Eksportdata) er ei oppgåve for vidarekomande.
 

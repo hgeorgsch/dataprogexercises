@@ -22,6 +22,12 @@
 + Veke 6-7: programmering og simulering til oblig 1 (Del 1a)
 + Veke 8-9: dataanalyse til oblig 2 (Del 1b)
 + Veke 10-14: maskinlæring og andre nye idéar og prosjektoppgåve
+	+ veke 10 måndag - medstudentvurdering
+	+ JSON og JSON-stat  
+	+ [[WebAPI og JSON]]
+	+ [[Statistikk og Maskinlæring]]
+	+ [[Skriva frittståande program]]
+	
 
 ---
 
