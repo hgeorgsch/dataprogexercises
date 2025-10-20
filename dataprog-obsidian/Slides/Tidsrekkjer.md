@@ -35,4 +35,10 @@ Hans Georg Schaathun
 
 ---
 
-# Problem 1.  Filtrering
+# Problem 1.
+
+> Korleis handterer me ... 
+
+1. ulik presisjon (år, kvartal, månad, dag, tidspunkt)?
+2. ulik representasjon som `2025-10-20` eller `20. okt 2025`?
+3. ulike tidssonar?
