@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.17.0
+    jupytext_version: 1.17.2
 kernelspec:
   name: dataprog
   language: python
@@ -166,7 +166,6 @@ innanfor gruppa.
 Dét gjer me i eit eige steg, og då vil me få den nye *DataFrame* som me
 ynskjer oss.
 
-
 ```{code-cell} ipython3
 argdf = arbgb.mean()
 display(argdf)
@@ -270,4 +269,3 @@ me har samla fleire tidsrekkjer i éin *DataFrame* har me eit stort repertoir
 av statistiske verktøy for å analysera dei.  Me skal ikkje i dette kurset gå
 inn på nye statistiske metodar, men me vil gjerne ha utnytta dei metodane som
 er kjende frå før.  Då gjeld det å søkja i dokumentasjonen eller spørja andre.
-
