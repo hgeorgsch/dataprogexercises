@@ -37,7 +37,6 @@ display(df1)
 Me skulle gjerne ha vist eit plott her, men me får ikkje det til før
 me har løyst fleire problem nedover.
 
-
 ```{code-cell} ipython3
 df1 = df1[ df1["kjønn"] == "0 Begge kjønn" ]
 df1 = df1[ df1["alder"] == "15-74 15-74 år" ]
@@ -72,9 +71,11 @@ display( arbdf["arbeidsledige"] )
 
 ```{code-cell} ipython3
 arbdf["arbeidsledige"] = arbdf["arbeidsledige"].astype(float)
+arbdf.plot()
 ```
 
 ```{code-cell} ipython3
+arbdf["arbeidsledige"] = pd.to_numeric(arbdf["arbeidsledige"], errors="coerce")
 arbdf.plot()
 ```
 
@@ -85,4 +86,3 @@ arbdf.plot()
 ## Problem 3.  Frekvens og gruppering av radar.
 
 ## Problem 4.  Fletting av datasett på tid.
-
