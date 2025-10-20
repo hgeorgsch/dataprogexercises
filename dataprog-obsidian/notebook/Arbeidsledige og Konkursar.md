@@ -15,7 +15,7 @@ kernelspec:
 # Samanheng mellom Arbeidsledige og Konkursar
 
 Denne oppgåva føreset at du har gjort oppgåva om
-[](./Arbeidsledige) inklusive [](./Tid og dato) som
+[Arbeidsledige](Arbeidsledige.ipynb) inklusive [Tid og dato](Tid%20og%20dato.ipynb) som
 forklarer korleis me formatterer dei to datasetta.
 Her går me vidare med å slå saman datasetta for å sjekka
 om der er samanheng mellom arbeidsledigheit og konkursar.
@@ -23,7 +23,7 @@ om der er samanheng mellom arbeidsledigheit og konkursar.
 ## Datasett
 
 Koden under lastar dei to datasetta som me kom fram til i
-øvinga om [](./Arbeidsledige).  
+øvinga om [Arbeidsledige](Arbeidsledige.ipynb).  
 Koden er skrive meir kompakt, men bruker ingen nye teknikkar.
 Du kan godt bruka din eigen kode i staden.
 Merk at eg her kaller dei to *Data Frames* som me skal arbeida
