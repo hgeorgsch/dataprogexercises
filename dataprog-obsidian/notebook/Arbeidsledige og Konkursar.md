@@ -15,7 +15,8 @@ kernelspec:
 # Samanheng mellom Arbeidsledige og Konkursar
 
 Denne oppgåva føreset at du har gjort oppgåva om
-[Arbeidsledige](Arbeidsledige.ipynb) inklusive [Tid og dato](Tid%20og%20dato.ipynb) som
+[Arbeidsledige](Arbeidsledige.ipynb) inklusive 
+[Tid og dato](Tid%20og%20dato.ipynb) som
 forklarer korleis me formatterer dei to datasetta.
 Her går me vidare med å slå saman datasetta for å sjekka
 om der er samanheng mellom arbeidsledigheit og konkursar.
