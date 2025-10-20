@@ -5,6 +5,9 @@
 # Also requires:
 # cd .. ; sh mkpynb.sh
 
+
+rm -rf _build
+
 jupyter-book build .
 
 rsync -av --delete _build/html/ hasc@login.ansatt.ntnu.no:/home/groupswww/iirevu/iira2001/
