@@ -27,7 +27,8 @@ Problemet me skal sjå på er valutakursar.  Korleis har dei utvikla seg dei sis
 
 Mange aktørar publiserer datasett. Me skal starta med valutakursar
 [Noregs Bank](https://www.norges-bank.no/tema/Statistikk/Valutakurser/?tab=api).
-Eg har lasta ned kursane for USD/EUR/GBP/DKK/SEK dei siste fem åra i fila `EXR20250401.csv`.
+Eg har lasta ned kursane for USD/EUR/GBP/DKK/SEK dei siste fem åra i fila 
+[](EXR20250401.csv).
 
 Dette er ei CSV-fil som står for «comma separated values». 
 Namnet er ikkje alltid dekkjande; fila frå Noregs Bank bruker semikolon, og ikkje komma, som skiljeteikn.
