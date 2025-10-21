@@ -38,19 +38,16 @@ tags:
     + Ulike plot: histogram/scatter/kakediagram
 	+ Eksporting plots
 + Oppgåver
-	+ [[Arbeidsledige]] : Latin 1,  Kombiner arbeidsledige og konkurser
-		+ Utfordring: Konverter 1980M1 til dato
-		+ Oppgåve: Plott begge datasett
-		+ Refleksjon: samanheng?
-		+ Utfordring: aggreger kvartalsdata
-		+ Oppgåve: Korrelasjonskoeffisient
-		+ Oppgåve: Korrelasjonskoeffisient med forskjøvede data
-		+ [[Tid og dato]]
+	+ Arbeidsledigheit og Konkursar, i to delar
+        + [Formattering av tidsrekkjer](Arbeidsledige) 
+        + [Samanlikning av tidsrekkjer](Arbeidsledige%20og%29Konkursar) 
+	+ [Tid og dato](Tid%20og%20dato)
 	+ [[Eksportdata]] requires extensive pre-processing to extract comparable data
     + [Genetikk](notebooks/Genetikk) demonstrerer korrelasjon m.m.
 + Meir avanserte oppgåver
     + [Jordskjelvdata](notebooks/Jordskjelv) som demonstrerer animasjon og plotting oppå kart.
 
++ [ ] Oppgåve: Korrelasjonskoeffisient med forskjøvede data (til arbeidsledige)
 
 + Grunnleggjande pandas
 	+ index
@@ -60,9 +57,6 @@ tags:
 + Plott
 + Vidaregåande
 	+ snitt og union
-+ ToDo
-	+ [ ] Samla gode døme på CSV-filer
-	+ [ ] Set saman øvingar
 
 + [[Semi-avansert-Pandas]]  veke 44/2024
 	+ Filtrering (viktig)
@@ -79,16 +73,3 @@ tags:
 		+ I stor grad dekt i opningsseminaret
 	+ [[Multiindex]]
 + Oversikt of CSV-data under
-	
-| Topic                   | File                        | Type                | Encoding                                 | Newline                    |
-| :---------------------- | :-------------------------- | ------------------- | ---------------------------------------- | -------------------------- |
-|                         | arbeidsledige.csv           | Semikolon+ metadata | ASCII text                               | with CRLF line terminators |
-| User data (kvalitativt) | blackboard.csv              | Tab                 | Unicode text, UTF-16, little-endian text |                            |
-| GDP                     | eu_GDP.csv                  | CSV                 | Unicode text, UTF-8 text                 |                            |
-|                         | folketall.csv               | Tab                 | ISO-8859 text                            | with CRLF line terminators |
-|                         | helsepersonell.csv          | Semikolon+ metadata | ISO-8859 text                            | with CRLF line terminators |
-|                         | konkurser.csv               | Tab                 | ISO-8859 text                            | with CRLF line terminators |
-|                         | laksedata.csv               | Semikolon+ metadata | ASCII text                               | with CRLF line terminators |
-|                         | namq_10_gdp_page_linear.csv | CSV                 | ASCII text                               |                            |
-|                         | teina010_linear.csv         | CSV                 | ASCII text                               |                            |
-| Valutalurs              | `EXR20250401.csv`           | semicolon           | UTF8                                     |                            |
