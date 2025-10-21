@@ -34,6 +34,7 @@ chapters:
       - file: notebooks/Arbeidsledige
         sections:
          - file: notebooks/Arbeidsledige og Konkursar
+      - file: exercises/Eksportdata
     - file: Veke 3 Simulering
       sections:
       - file: Datastrukturar og Kompleksitet

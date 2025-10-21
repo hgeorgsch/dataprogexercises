@@ -6,9 +6,12 @@ TS="dataprog-obsidian/notebook/ exercises/Genetikk/ exercises/Jordskjelv/ work/"
 DS="iira2001/notebooks/ iira6001/notebooks/"
 R=`pwd`
 
-E=iira2001/exercises/
-mkdir -p $E
-cp dataprog-obsidian/Exercises/* $E
+ES="iira2001/exercises/ iira6001/exercises/"
+for E in $ES
+do
+    mkdir -p $E
+    cp dataprog-obsidian/Exercises/* $E
+done
 
 for T in $TS
 do
