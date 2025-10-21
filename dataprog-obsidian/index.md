@@ -58,26 +58,7 @@ tags:
 			+ sanking av produserte filer.
 		+ Bruk av WebAPI i sanntid
 
-## Program
-
-+ Sjå òg [[Tutorial/intro|intro]] til Jupyter Books
-+  [[Opningssamling]] (program)
-+ **Periode 1** Forslag vert utarbeidd Jupyter Books:  [[Tutorial/first|first]]
-1. [[Numeriske Metodar og Kontrollflyt]] 
-	+ Notar til [[Imperativ programmering og maskinarkitektur]]
-		+ [[Notar til Imperativ programmering og maskinarkitektur]]
-		+ [[Spørsmål til Studio Akrinn - Fyrste føredrag]]
-	+ Notar til [[Kontrollflyt i Python (script)]]
-		+ Vis i Python Tutor e.l.
-			+ Fire vindauga (minimum): Kode - Utdata - Global tilstand - Lokal tilstand
-2. [[CSV og Deskriptiv Statistikk]]
-3. [[Veke 3 Simulering]]                      
-4. [[Agent-basert simulering]]
-	1. [[Notar til Agent-basert simulering]]
-5. [[WebAPI]] 
-6. [[Statistikk og Maskinlæring]]     
-	1. Notar til [[Om å læra frå data]]
-		1. [[Notar til Om å læra frå data]]
++ Program IIRA6001: Sjå [[IIRA6001book]] som oversyn over læringsmateriell i Jupyter Books
 
 + Andre idéar
 	+ [[Intervju med Lars Ole Hjelkrem i Sparebank 1 Møre]]

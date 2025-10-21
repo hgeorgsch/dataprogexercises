@@ -15,6 +15,6 @@ title: Agent-basert simulering
 + *Demovideo*: Programmering i `.py`-filer
 + *Demovideo*: git og github?
 
-+ Utarbeidd døme: [Shrimp-Game](notebook/Shrimp-Game)
-+ Innfyllingsoppgåve: [Iskrem på ei strand](notebook/Iskrem%20på%20ei%20strand)
++ Utarbeidd døme: [Shrimp-Game](notebooks/Shrimp-Game)
++ Innfyllingsoppgåve: [Iskrem på ei strand](notebooks/Iskrem%20på%20ei%20strand)
 

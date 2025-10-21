@@ -11,10 +11,10 @@ title: Statistikk og Maskinlæring
     + [[Evaluering av modellar]]
 + *Demo* regresjon og korrelasjon i pandas:
 	+ [[Maskinlæringsbibliotek]]
-	+ [Lineær regresjon](notebook/Linear%20Regression%20in%20SciKitLearn)
-	+ [Evaluering av regresjonsmodellen](notebook/Evaluering%20for%20regresjon)
-	+ [Fisher Linear Discriminant in sklearn](notebook/Fisher%20Linear%20Discriminant%20in%20sklearn)
-	+ [Evaluering av modellar](notebook/Evaluering)
+	+ [Lineær regresjon](notebooks/Linear%20Regression%20in%20SciKitLearn)
+	+ [Evaluering av regresjonsmodellen](notebooks/Evaluering%20for%20regresjon)
+	+ [Fisher Linear Discriminant in sklearn](notebooks/Fisher%20Linear%20Discriminant%20in%20sklearn)
+	+ [Evaluering av modellar](notebooks/Evaluering)
 	+ Konvertering mellom SciKitLearn og pandas
 + *Tutorial* regresjon og korrelasjon i eit datasett
 + Notat og idéar

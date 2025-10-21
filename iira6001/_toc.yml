@@ -9,9 +9,9 @@ chapters:
   - file: Opningssamling
     sections:
     - file: Installasjon
-    - file: notebook/Fyrste dokument i Jupyter Lab
-    - file: notebook/Fyrste datasett med CSV
-    - file: notebook/Simulering av kontantstraum
+    - file: notebooks/Fyrste dokument i Jupyter Lab
+    - file: notebooks/Fyrste datasett med CSV
+    - file: notebooks/Simulering av kontantstraum
     - file: Seminar om Motivasjon og Ynskjer
     - file: Førelesingsnotat frå Opningssamlinga
       sections:
@@ -23,28 +23,28 @@ chapters:
     sections:
     - file: Numeriske Metodar og Kontrollflyt
       sections:
-      - file: notebook/Halveringsmetoden
+      - file: notebooks/Halveringsmetoden
     - file: CSV og Deskriptiv Statistikk
       sections:
-      - file: notebook/Linear Regression in SciKitLearn
-      - file: notebook/Evaluering for regresjon
+      - file: notebooks/Linear Regression in SciKitLearn
+      - file: notebooks/Evaluering for regresjon
       - file: Genetikk/Genetikk
       - file: Jordskjelv/Jordskjelv
     - file: Veke 3 Simulering
       sections:
       - file: Datastrukturar og Kompleksitet
-      - file: notebook/Tilfeldigheit
-      - file: notebook/Simulering og Datastrukturar
-      - file: notebook/Marknadssimulering
+      - file: notebooks/Tilfeldigheit
+      - file: notebooks/Simulering og Datastrukturar
+      - file: notebooks/Marknadssimulering
     - file: Agent-basert simulering
       sections:
-      - file: notebook/Shrimp-Game
-      - file: notebook/Iskrem på ei strand.ipynb
+      - file: notebooks/Shrimp-Game
+      - file: notebooks/Iskrem på ei strand.ipynb
     - file: WebAPI
     - file: Statistikk og Maskinlæring
       sections:
-      - file: notebook/Fisher Linear Discriminant in sklearn
-      - file: notebook/Evaluering
+      - file: notebooks/Fisher Linear Discriminant in sklearn
+      - file: notebooks/Evaluering
   - file: midway
   - file: second
   - file: closure

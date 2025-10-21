@@ -28,17 +28,17 @@ annan grunn ikkje får gjort dette ferdig på førehand.
 | 12.15-12.30 | Velkommen | |Foilar](Velkomen%20(foilar)).  Sjå og praktisk informasjon på [forsida](../intro). |
 | 12.30-13.00 | Presentasjon av Økt 1. | [Foilar](Fyrste%20dokument%20i%20Jupyter%20Lab%20(foilar).md) |
 | 13.00-13.20 | Presentasjon av deltakarane | |
-| 13.30-15.30 | Økt 1. Fyrste dokument i Jupyter Lab | [Oppgåvesett](notebook/Fyrste%20dokument%20i%20Jupyter%20Lab) |
+| 13.30-15.30 | Økt 1. Fyrste dokument i Jupyter Lab | [Oppgåvesett](notebooks/Fyrste%20dokument%20i%20Jupyter%20Lab) |
 | 15.30-16.30 | Debrief                      | |
 
 
 | Dag 2 | Tema | Materiell |
 | :- | :- | :- |
 | 9.00-9.30 | Presentasjon av Økt 2. | [Foilar](Fyrste%20datasett%20i%20CSV%20(foilar).md) |
-| 9.30-11.30 | Økt 2. Fyrste datasett med CSV | [Oppgåvesett](notebook/Fyrste%20datasett%20med%20CSV) |
+| 9.30-11.30 | Økt 2. Fyrste datasett med CSV | [Oppgåvesett](notebooks/Fyrste%20datasett%20med%20CSV) |
 | 11.30-12.30 | Lønsj | |
 | 12.30-13.00 | Presentasjon av Økt 3. | [Foilar](Simulering%20av%20kontantstraum%20(foilar).md) |
-| 13.00-14.30 | Økt 3.  Simulering av kontantstraum | [Oppgåvesett](notebook/Simulering%20av%20kontantstraum)  |
+| 13.00-14.30 | Økt 3.  Simulering av kontantstraum | [Oppgåvesett](notebooks/Simulering%20av%20kontantstraum)  |
 | 14.30-15.30 | [Seminar om motivasjon og ynskjer](Seminar%20om%20Motivasjon%20og%20Ynskjer) | |
 | 14.00-15.00 | Debrief og opplegg vidare. | [Mappevurdering](Mappevurdering) |
 

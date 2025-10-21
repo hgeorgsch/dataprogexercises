@@ -22,7 +22,7 @@ Me freistar å gje eit par forskjellige innfallsvinklar til kvart tema. Det typi
 + **Demovideo**
 	+ [[Kontrollflyt]]
 + **Øvingar**
-	+ [Halveringsmetoden](notebook/Halveringsmetoden)
+	+ [Halveringsmetoden](notebooks/Halveringsmetoden)
 	+ [[Folkevekst]]
 	+ [[Simulering av ein utvalsstudie]]
 	

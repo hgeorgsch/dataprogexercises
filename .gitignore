@@ -12,3 +12,4 @@ res/
 *.log
 pythonenv
 export
+.*.swp
