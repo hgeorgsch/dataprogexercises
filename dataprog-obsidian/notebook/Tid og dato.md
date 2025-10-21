@@ -60,7 +60,7 @@ print("I dag er datoen", idag)
 print("Mer nøyaktig er vi nå", no)
 ```
 
-::: {admonition}
+::: {admonition} Oppgåve
 Kva er skilnaden mellom metodane `now()` og `today()`?
 :::
 

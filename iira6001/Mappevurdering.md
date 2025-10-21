@@ -48,7 +48,6 @@ typen oppgåver, men ståkarakter er mogleg.  Ein av funksjonane til det
 obligatoriske arbeidskravet er å sikra at alle som leverer mappa, har 
 den minimumsforståinga som krevst for å få emnet godkjend.
 
-+ [ ] Revisjon med Truls    📅 2025-09-08
 + [ ] Deklarasjonsskjema for KI  jf. [[IIRA2001]]
 + [ ] Reinskriving av mappevurdering - til boa  📅 2025-12-15
 
