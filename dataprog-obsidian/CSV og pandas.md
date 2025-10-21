@@ -8,6 +8,29 @@ tags:
 
 # CSV og pandas
 
++ Grunnleggjande pandas
+	+ index
+	+ søyler og radar
+	+ tabellar og seriar
+	+ utdrag av tabellar
++ Plott
++ Vidaregåande
+	+ snitt og union
++ [[Semi-avansert-Pandas]]  veke 44/2024
+	+ Filtrering (viktig)
+	+ melt og pivot (?)
+	+ [[example-piechart]]
+	+ [[example-encoding]]
++ Relatert stoff frå tidlegare år	
+	+ [[Manipulere-Dataframes]]    veke 42/2024
+		+ grunnteknikkar - manuell opprettning av *Series* og *DataFrame*
+		+ éi oppgåve
+		+ kun for spesielt interesserte
+	+ [[Pandas-Lese-Data-JH]] frå CSV veke 43/2024
+		+ Bruker blackboard-data
+		+ I stor grad dekt i opningsseminaret
+	+ [[Multiindex]]
+
 
 ## Datasets 
 
