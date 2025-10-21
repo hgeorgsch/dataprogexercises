@@ -3,7 +3,7 @@
 # from markdown.
 
 TS="dataprog-obsidian/notebook/ exercises/Genetikk/ exercises/Jordskjelv/ work/"
-D=iira2001/notebooks/
+DS="iira2001/notebooks/ iira6001/notebooks/"
 R=`pwd`
 
 E=iira2001/exercises/
@@ -18,12 +18,15 @@ do
   for i in *.md ; do jupytext --to notebook "$i" ; done
   cd $R
 
-  cp $T/*.csv $D
-  cp $T/*.txt $D
-  cp $T/*.json $D
-  cp $T/*.ipynb $D
-  cp $T/*.jpg $D
-  cp $T/*.svg $D
+  for D in $DS
+  do
+    cp $T/*.csv $D
+    cp $T/*.txt $D
+    cp $T/*.json $D
+    cp $T/*.ipynb $D
+    cp $T/*.jpg $D
+    cp $T/*.svg $D
+  done     
 done
 
 
