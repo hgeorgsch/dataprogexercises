@@ -66,3 +66,8 @@ Mappa vert vurdert som ein heilskap, og det er opp til kandidaten å velja ut op
 | Refleksjon   | Refleksjon manglar.                                                                      | Kandidaten freister å sjå kurset i sin yrkes- eller studiekontekst, men refleksjonen vert knapp og overflatisk. | Kandidaten har gjort kursinnhaldet til sitt eige, og har konstruktive døme på praktisk verdi av kurset.                     | Kandidaten er kreativ og visjonær i sin refleksjon over framtidig nytte av kurset.             |
 
 
+## Kommentar til kriteria
+
++ Kommentar til koden treng ikkje vera kommentar *i* koden, men òg forklarande tekst markdown
+  i Jupyter Notebook.  Det som er vesentleg er at Jupyter Notebook-dokumenta er skrivne slik
+  at lesaren kan fylgja resonnementet rundt koden.
