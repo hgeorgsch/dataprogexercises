@@ -11,28 +11,23 @@ tags:
 	+ [[Slides]]
 	+ [Panopto recordings](https://ntnu.cloud.panopto.eu/Panopto/Pages/Sessions/List.aspx?folderID=1ed05bcf-ae8f-429a-8c25-b330009a4114)
 	+ [Panopto Tool Login](https://ntnu.cloud.panopto.eu/)
-+ [[Skisse til opplegg]]
-	 + Typisk veke
-		 + *videoføredrag* 15min
-			 + historiefortelling
-			 + drøfta konsekvensar av tekniske detaljar
-				 + (likskapsteiknet, flyttal, læring frå data, kan maskiner tenkja?)
-		+ *demovideo* (15 min) - førebuing til oppgåver
-		+ *tutorial* i Jupyter notebook
-			+ utarbeidd døme med høve til endringar
-		+ oppgåver av ulike slag
-			+ lukka oppgåver à la *tutorials* i Jupyter notebook
-			+ *fading examples* à la Clark *et al* 2005
-			+ drilloppgåver i Coderunner
-			+ prosjektoppgåver - opne oppgåver - egna til mappa
-+ [Enkle øvingar frå Morten Munthe}(https://github.com/hgeorgsch/dataprogexercises)
-+ [[Medstudentvurdering]]
-+ [[samle noen tanker]] frå Jonas
-+ IIF2001 - to delar
++ Program IIRA6001: 
+	+ Sjå [[IIRA6001book]] som oversyn over læringsmateriell i Jupyter Books
+	+ [[Skisse til opplegg]]
++ IIRA2001 - to delar
 	+ Del 1.  Grunnleggjande introduksjon
 		+ Sjå `Beregninger og funksjoner-JHmanus.ipynb` (oppsummering)
 	+ Del 2.  Store datasett
 	+ [[Mappe Del 2 Haust 2024]]
++ Tema
+	+ [[CSV og pandas]]
++ Materiell
+	+ [Enkle øvingar frå Morten Munthe}(https://github.com/hgeorgsch/dataprogexercises)
++ Aktivitetar
+	+ [[Medstudentvurdering]]
+	+ [[Intervju med Lars Ole Hjelkrem i Sparebank 1 Møre]]
++ Notat
+	+ [[samle noen tanker]] frå Jonas
 
 
 + Perspektivføredrag til **Periode 2**
@@ -58,10 +53,6 @@ tags:
 			+ sanking av produserte filer.
 		+ Bruk av WebAPI i sanntid
 
-+ Program IIRA6001: Sjå [[IIRA6001book]] som oversyn over læringsmateriell i Jupyter Books
-
-+ Andre idéar
-	+ [[Intervju med Lars Ole Hjelkrem i Sparebank 1 Møre]]
 	
 ![[kjapp-telnet.mkv]]
 

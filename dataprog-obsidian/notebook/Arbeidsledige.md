@@ -14,6 +14,11 @@ kernelspec:
 
 # Arbeidsledigheit og konkursar
 
+::: {admonition} Læringsmål
+I denne øvinga vert me kjende med utvalet av datasett frå Statistisk
+Sentralbyrå, repeterer innlasting av CSV-filer og plotting av data,
+og lærer å bruka tidsperiodar som indeks.
+:::
 
 I denne øvinga skal me sjå på datasett frå 
 [statistisk sentralbyrå](http://www.ssb.no).

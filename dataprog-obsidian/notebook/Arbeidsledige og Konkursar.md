@@ -14,6 +14,12 @@ kernelspec:
 
 # Samanheng mellom Arbeidsledige og Konkursar
 
+::: {admonition} Læringsmål
+I denne oppgåva lærer me å få ulike tidsrekkjer på kompatibel
+form, ved å aggregera data over lengre interval.
+Vidare lærer me å finna korrelasjonskoeffisienten vha. pandas. 
+:::
+
 Denne oppgåva føreset at du har gjort oppgåva om
 [Arbeidsledige](Arbeidsledige.ipynb) inklusive 
 [Tid og dato](Tid%20og%20dato.ipynb) som
