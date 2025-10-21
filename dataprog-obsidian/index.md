@@ -23,8 +23,6 @@ tags:
 	+ [[CSV og pandas]]
 + Materiell
 	+ [Enkle øvingar frå Morten Munthe}(https://github.com/hgeorgsch/dataprogexercises)
-+ Aktivitetar
-	+ [[Medstudentvurdering]]
 	+ [[Intervju med Lars Ole Hjelkrem i Sparebank 1 Møre]]
 + Notat
 	+ [[samle noen tanker]] frå Jonas

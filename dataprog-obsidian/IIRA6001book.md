@@ -20,15 +20,14 @@ Sjå boka.
 
 ## Øvingstema
 
-Veke 1
-: [Numeriske Metodar og Kontrollflyt](Numeriske%20Metodar%20og%20Kontrollflyt.md)
++ Veke 1 : [Numeriske Metodar og Kontrollflyt](Numeriske%20Metodar%20og%20Kontrollflyt.md)
 
-+ Notar til [[Imperativ programmering og maskinarkitektur]]
-    + [[Notar til Imperativ programmering og maskinarkitektur]]
-    + [[Spørsmål til Studio Akrinn - Fyrste føredrag]]
-+ Notar til [[Kontrollflyt i Python (script)]]
-	+ Vis i Python Tutor e.l.
-		+ Fire vindauga (minimum): Kode - Utdata - Global tilstand - Lokal tilstand
+	+ Notar til [[Imperativ programmering og maskinarkitektur]]
+	    + [[Notar til Imperativ programmering og maskinarkitektur]]
+	    + [[Spørsmål til Studio Akrinn - Fyrste føredrag]]
+	+ Notar til [[Kontrollflyt i Python (script)]]
+		+ Vis i Python Tutor e.l.
+			+ Fire vindauga (minimum): Kode - Utdata - Global tilstand - Lokal tilstand
 
 + Veke 2.  [[CSV og Deskriptiv Statistikk]]
 + [[Veke 3 Simulering]]                      
@@ -65,6 +64,7 @@ har starta, basert på tilbakemeldingar og behov.
 	+ planleggja arbeidet med mappa
 + Munnleg presentasjon av fyrste del av mappa
 
++ [[Medstudentvurdering]]
 
 + [ ] Tidsramme mellomsamling  📅 2025-10-31
 + [x] Vurdering: skal me ha munnleg presentasjon frå fyrste del av mappa. 📅 2025-09-15 ✅ 2025-07-24
