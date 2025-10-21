@@ -51,6 +51,14 @@ er nyttig.  Der er berre eit par vilkår,
 + de må reflektera over bruken av KI i refleksjonsnotatet, og ta stilling
   kvifor de bruker det som de bruker det.
 
+Merk at det er **juks** å bruka arbeide (tekst, modellar, kode) frå andre
+utan å oppgje kjelde.  Dette prinsippet er det same uansett om arbeidet kjem
+frå kunstig intelligens, medstudentar, bøker eller tilfeldige diskusjonar på
+nettet.  
+So lenge kjeldene er oppgjevne, er alt *lov*, men det kan stadig vera **slett arbeide**.  
+Godt arbeide er kjenneteikna ved eigen validering og grunngjeving, 
+kontekstualisering og bruk av fleire kjelder saman med eigne idéar.
+
 ## Vurderingskriterium
 
 Mappa vert vurdert etter fem aspekt som oppsummert i tabellen.  Ståkarakter (E) krev at alle aspekta vert vurderte tilfredstillande (E eller betre).  Dersom alle aspekta er tilfredsstillande, vert karakteren fastsett som gjennomsnitt av aspekta og avrunda etter vanlege avrundingsreglar.
