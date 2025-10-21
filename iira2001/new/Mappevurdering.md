@@ -44,12 +44,15 @@ enkle løysingar på dét.  Derimot er det mykje kunstig intelligens kan gjera,
 og det er ikkje berre tillate men òg eit ynskje at de tek i bruk KI der det
 er nyttig.  Der er berre eit par vilkår,
 + de må fylla ut NTNU sin standarddaklarasjon for bruk av KI og inkludera det 
-  i mappa.
+  i mappa.   Sjå 
+  [Kunstig intelligens i studentoppgaver](https://i.ntnu.no/wiki/-/wiki/Norsk/Kunstig+intelligens+i+studentoppgaver)
 + de må grunngje korleis de kan stola på dei resultata som de evt. får frå KI.
   Dette gjeld òg idéar og materiale som de får gjennom samarbeid eller hentar
   frå andre kjelder.
 + de må reflektera over bruken av KI i refleksjonsnotatet, og ta stilling
   kvifor de bruker det som de bruker det.
++ de må ikkje sitera kunstig intelligens som ein autoritet for å grunngje resultat.
+  Svar frå store språkmodellar må validerast av menneske.
 
 Merk at det er **juks** å bruka arbeide (tekst, modellar, kode) frå andre
 utan å oppgje kjelde.  Dette prinsippet er det same uansett om arbeidet kjem
