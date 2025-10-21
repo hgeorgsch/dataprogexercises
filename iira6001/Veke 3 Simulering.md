@@ -18,5 +18,5 @@ author: Hans Georg Schaathun
 	+ [[Datastrukturer]]
 + *Øvingar.*
 	+ [[CodeRunner Data Structures]]
-	+ [Marknadssimulering](notebook/Marknadssimulering)
-	+ [Simulering og Datastrukturar](notebook/Simulering%20og%20Datastrukturar)
+	+ [Marknadssimulering](notebooks/Marknadssimulering)
+	+ [Simulering og Datastrukturar](notebooks/Simulering%20og%20Datastrukturar)
