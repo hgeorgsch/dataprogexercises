@@ -28,8 +28,12 @@ chapters:
       sections:
       - file: notebooks/Linear Regression in SciKitLearn
       - file: notebooks/Evaluering for regresjon
-      - file: notebooks/Genetikk/Genetikk
-      - file: notebooks/Jordskjelv/Jordskjelv
+      - file: notebooks/Genetikk
+      - file: notebooks/Jordskjelv
+      - file: notebooks/Tid og dato
+      - file: notebooks/Arbeidsledige
+        sections:
+         - file: notebooks/Arbeidsledige og Konkursar
     - file: Veke 3 Simulering
       sections:
       - file: Datastrukturar og Kompleksitet

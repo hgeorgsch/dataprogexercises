@@ -47,9 +47,9 @@ tags:
 		+ Oppgåve: Korrelasjonskoeffisient med forskjøvede data
 		+ [[Tid og dato]]
 	+ [[Eksportdata]] requires extensive pre-processing to extract comparable data
-    + [Genetikk](Genetikk/Genetikk) demonstrerer korrelasjon m.m.
+    + [Genetikk](notebooks/Genetikk) demonstrerer korrelasjon m.m.
 + Meir avanserte oppgåver
-    + [Jordskjelvdata](Jordskjelv/Jordskjelv) som demonstrerer animasjon og plotting oppå kart.
+    + [Jordskjelvdata](notebooks/Jordskjelv) som demonstrerer animasjon og plotting oppå kart.
 
 
 + Grunnleggjande pandas
