@@ -5,6 +5,13 @@ tags:
   - stub
 ---
 
+# Tema å dekkja
+
+1. Klassifikasjon av bilete
+2. Regresjon
+3. Tidsrekkjer
+
+# Utdrag frå førelesing 2024
 
 ## Typer læring
 
