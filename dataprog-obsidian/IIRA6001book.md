@@ -16,7 +16,7 @@ Sjå boka.
 + [ ] Nedlasting av datafiler (CSV) og andre tilleggsresursar 📅 2025-06-20
 
 
-# Fyrste periode
+# Hovudinnhald
 
 ## Øvingstema
 
@@ -29,14 +29,29 @@ Sjå boka.
 		+ Vis i Python Tutor e.l.
 			+ Fire vindauga (minimum): Kode - Utdata - Global tilstand - Lokal tilstand
 
-+ Veke 2.  [[CSV og Deskriptiv Statistikk]]
++ Veke 2.  [[CSV og pandas]]
+    + **NB** Kan trengja å dela denne i to.
 + [[Veke 3 Simulering]]                      
 + Veke 4. [[Agent-basert simulering]]
 	1. [[Notar til Agent-basert simulering]]
 + Veke 5. [[WebAPI]] 
-+ Veke 6. [[Statistikk og Maskinlæring]]     
++ Veke 6. [[Maskinlæring]]     
 	1. Notar til [[Om å læra frå data]]
 		1. [[Notar til Om å læra frå data]]
+    2. To tema
+        1. Klassifikasjon
+        2. Klyngeanalyse
+
++ **Mål for andre periode**
+	+ bruka teknikkar frå fyrste periode på eit praktisk dataanalyseproblem frå eige virke 
+	+ gjennomføra eitt praktisk prosjekt etter eige val
+	+ setja saman vurderingsmappa
+
++ Veke.  Frittståande program med Spyder
+    + IDE (Spyder)
+    + Script
+    + GUI?
++ Veke.  Sikkerheit og etikk
 
 ## Førelesingstema
 
@@ -71,12 +86,6 @@ har starta, basert på tilbakemeldingar og behov.
 	+ ja, som obligatorisk arbeidskrav
 + [ ] *Live* koding-øving på mellomsamling   📅 2025-10-31
 
-# Andre periode
-
-+ **Mål for andre periode**
-	+ bruka teknikkar frå fyrste periode på eit praktisk dataanalyseproblem frå eige virke 
-	+ gjennomføra eitt praktisk prosjekt etter eige val
-	+ setja saman vurderingsmappa
 
 # Avslutningssamling
 
