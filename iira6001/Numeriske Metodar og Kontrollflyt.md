@@ -29,5 +29,3 @@ Me freistar å gje eit par forskjellige innfallsvinklar til kvart tema. Det typi
 	+ [[CodeRunner Basic]]
 	+ [[CodeRunner Control]]
 
-
-
