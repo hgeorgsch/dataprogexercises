@@ -1,6 +1,0 @@
----
-tags:
-   - lecture/samling
----
-
-# Velkomen
