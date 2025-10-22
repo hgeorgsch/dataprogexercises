@@ -7,12 +7,14 @@ tags:
 
 # Tema å dekkja
 
-1. Klassifikasjon av bilete
-2. Klassifikasjon av numeriske data
+1. Klassifikasjon av numeriske data
     + https://www.kaggle.com/datasets/anishdevedward/loan-approval-dataset
+2. Clustering
+    + https://www.kaggle.com/datasets/vjchoudhary7/customer-segmentation-tutorial-in-python
 3. Regresjon
 4. Tidsrekkjer
     + ikkje prioritert - krev meir tid
+5. Klassifikasjon av bilete
 
 # Utdrag frå førelesing 2024
 

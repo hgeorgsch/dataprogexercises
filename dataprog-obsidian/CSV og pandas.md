@@ -52,3 +52,4 @@ tags:
 |                         | teina010_linear.csv              | CSV                 | ASCII                          |         |                                |
 | Valutalurs              | `EXR20250401.csv`                | semicolon           | UTF8                           |         | [[Fyrste datasett med CSV]]    |
 | Lånesøknad | [loan_approval.csv](/notebook/loan_approval.csv) | CSV           | ASCII                           |         | [[Lånesøknad]]    |
+| Customer Segmentation | [Mall_Customers.csv](/notebook/Mall_Customers.csv) | CSV           | ASCII                           |         | [[Kundesegmentering]]    |
