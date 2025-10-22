@@ -25,6 +25,12 @@ Dette datasettet er gjort tilgjengeleg frå Kaggle under MIT-lisens.
 
 ::: {admonition} Oppgåve
 Last ned datasettet og last det inn i pandas, slik som me har gjort før.
+Vis datasettet.  Kva data inneheld det?
 :::
 
+```{code-cell} ipython3
+import pandas as pd
+df = pd.read_csv("loan_approval.csv")
+display(df)
+```
 
