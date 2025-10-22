@@ -19,6 +19,7 @@ with other subprojects added.
 + `fig` is the source for figures and diagrams developed in TeX, for inclusion in the book.
 + `exercises` is exercises from a separate repo, included as a git subtree from 
   git@github.com:hgeorgsch/dataprogexercises.git
++ `admin` - administrative documents not written in Markdown
 
 
 ## Build
