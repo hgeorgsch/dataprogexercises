@@ -5,8 +5,9 @@ tags:
   - MOC
 ---
 
-+ Jupyter to run git  [[/assets/hent-innhold.ipynb]] (teke frå 2024)
++ [[Web Pages]]
 
++ Jupyter to run git  [[/assets/hent-innhold.ipynb]] (teke frå 2024)
 + [[Fyrste test med Ollama]]
 
 ## Jupytext og Jupyter Books

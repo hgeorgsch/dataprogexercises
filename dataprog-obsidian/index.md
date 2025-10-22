@@ -21,6 +21,7 @@ tags:
 	+ [[Mappe Del 2 Haust 2024]]
 + Tema
 	+ [[CSV og pandas]]
+	+ [[Maskinlæring]]
 	+ Perspektivføredrag til **Periode 2**
 		+ [[Køyretid og Kompleksitet]] (periode 2)
 		+ [[Mappetips og persondata.pdf]]  (periode 2)
