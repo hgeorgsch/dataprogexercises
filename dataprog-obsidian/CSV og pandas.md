@@ -34,6 +34,18 @@ tags:
 + Øvingar
     + [[Tid og dato]]
 
+## Førelesingstema
+
++ Algoritma
+    + Historie
+    + Syntaks og semantikk
+    + Representasjon - pseudo-kode og programkode
+    + Generalisering og abstraksjon
++ Filer, format og filsystem
+    + Ulike verkty for same fil
+    + Kommandoline
+    + Tekst versus binærformat
+    + git og github - versjonskontroll
 
 ## Datasets 
 
