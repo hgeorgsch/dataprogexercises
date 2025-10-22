@@ -51,3 +51,4 @@ tags:
 |                         | namq_10_gdp_page_linear.csv      | CSV                 | ASCII                          |         |                                |
 |                         | teina010_linear.csv              | CSV                 | ASCII                          |         |                                |
 | Valutalurs              | `EXR20250401.csv`                | semicolon           | UTF8                           |         | [[Fyrste datasett med CSV]]    |
+| Lånesøknad | [loan_approval.csv](/notebook/loan_approval.csv) | CSV           | ASCII                           |         | [[Lånesøknad]]    |
