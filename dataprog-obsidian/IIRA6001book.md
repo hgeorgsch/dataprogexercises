@@ -16,6 +16,9 @@ Sjå boka.
 	+ [ ] Nedlasting av Jupyter Notebook - lagring/filnamn etc 
 	+ [ ]  byte av filnamn og organisering av filer i Jupyter Lab
 + [ ] Manglande data og NaN
++ [ ] Tidsramme mellomsamling  📅 2025-10-31
++ [ ] Tidsramme avslutningssamling   📅 2025-10-31
++ [ ] *Live* koding-øving på mellomsamling   📅 2025-10-31
 
 
 # Hovudinnhald
