@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.17.0
+    jupytext_version: 1.18.1
 kernelspec:
   name: dataprog
   language: python
@@ -37,15 +37,18 @@ $$ A =
    1{,}2 & 0 & 0 & 1{,}2 \\
 \end{bmatrix}$$
 I `numpy` kalles dette normalt for ein *array*.
+
 ```{code-cell} ipython3
 import numpy as np
 A = np.array( [
-   [ 1.0, 2.4, 5.5, 6.1 ]
-   [ 0, 2.0, 1.0, 2.1 ]
+   [ 1.0, 2.4, 5.5, 6.1 ],
+   [ 0, 2.0, 1.0, 2.1 ],
    [ 1.2, 0, 0, 1.2 ]
    ] )
-print(A)
+print("Verdi:", A)
+print("Type:", type(A))
 ```
+
 Her vert *array*en definert ved ei liste av lister, der dei indre listene
 vert radar i *array*en.
 
@@ -56,25 +59,35 @@ Dette høyrest ut som ei stor ulempe for numpy, men det gjer det enklare
 og raskare å rekna på heile datasettet.
 Det er difor me treng *arrays*.
 
+Me kan sjå den kva datatype elementa har i `dtype`-attributten, slik:
+
+```{code-cell} ipython3
+print(A.dtype)
+```
 
 Ein *array* kan lesast inn i ein ny *DataFrame* utan vidare.
+
 ```{code-cell} ipython3
 import pandas as pd
 df = pd.DataFrame(A)
 display(df)
 ```
+
 Me ser raskt at datainnhaldet er det same.
 Det som kanskje er uvant er at søylene ikkje har overskrifter, 
 slik som me er vane med.  
 Ein *array* har ingen overskrifter eller *labels*.
 
 Det går an å definera søyleoverskrifter når me definerer ein *DataFrame*.
+
 ```{code-cell} ipython3
 df2 = pd.DataFrame(A, columns=['ColA', 'ColB', 'ColC', 'ColD'])
 display(df2)
 ```
+
 For å visa konvertering motsett veg, kan me raskt definera ein enkel
 *DateFrame*, slik:
+
 ```{code-cell} ipython3
 data = {'ColA': [10, 20, 30], 'ColB': [11, 21, 31]}
 df3 = pd.DataFrame(data)
@@ -84,10 +97,21 @@ display(df3)
 ```{code-cell} ipython3
 B = df3.to_numpy()
 print(B)
-print(f"Type of result: {type(B)}")
+print(f"Type: {type(B)}")
+print(f"Elementtype: {B.dtype}")
 ```
 
-Legg merke til typen som vert skriven ut. **TODO**
+Det er mogleg å ha teiknstrengar i `numpy` *arrays*, men då vert elementtypa `object`, og ingenting vert kjent igjen som tal.
+Me kan raskt testa dette òg.
+
+```{code-cell} ipython3
+dd = {'ColA': [ "a", "b", "c"], 'ColB': [11, 21, 31]}
+df4 = pd.DataFrame(dd)
+C = df4.to_numpy()
+print(C)
+print("Type:", C.dtype)
+```
+
 
 ::: {admonition} Oppgåve
 Last inn eitt av datasetta som du har arbeidd med tidlegare i pandas,
@@ -102,6 +126,8 @@ ein *array* av dette resultatet.
 Kva datatypar får du no?
 :::
 
+Ta vare på resultata dine på desse oppgåvene.  Du treng dei når du seinare skal sjå på datasetta i SciKitLearn.
+
 ::: {hint}
 For å formattera datasettet kan du anten ta eit utsnitt ved å indeksera dei
 søylene du vil ha med, eller bruka `drop()`-metoden for å fjerna dei du ikkje
@@ -109,3 +135,5 @@ vil ha.
 I tillegg må du sjå om der er søyler med talverdiar som pandas har tolka som
 strengar.
 :::
+
++++
