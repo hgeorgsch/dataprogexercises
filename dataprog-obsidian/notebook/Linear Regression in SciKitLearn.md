@@ -21,6 +21,31 @@ av dei, nemleg eit for prediksjon av utvikling av diabetes.
 Detaljane står i 
 [dokumentasjonen på datasettet](https://scikit-learn.org/stable/datasets/toy_dataset.html#diabetes-dataset).
 
+
+::: {hint}
+Når me finn datasett skal me vera merksame på kvar dei kjem frå og
+med kva hensikt dei er gjort tilgjengeleg.  Data i dette kurset kan
+me grovt dela i vitskaplege og teknologiske data.
+
+Vitskaplege data er empiriske data som er samla og røkta for å la
+oss seia noko om røynda.
+[Statistisk Sentralbyrå](https://www.ssb.no/) og
+[EuroStat](https://ec.europa.eu/eurostat) publiserer slike data.
+Ein kan òg få børsdata, men dei er ikkje alltid gratis.
+
+Teknologiske data er røkta for å testa maskinlæringsmodellar,
+statistiske metodar og programvare. Slike data kan vera empiriske,
+men dei kan òg vera syntetisk generert for å likna empiriske datasett.
+Det kan vera viktig når empiriske data er sensitive.
+Empiriske datasett kan òg vera forenkla for å vera enklare å bruka og
+for å testa spesifikke teknikkar.
+
+I denne øvinga bruker me eit slikt teknologisk datasett.
+Andre populære kjelder til slike datasett er
+[Kaggle](https://www.kaggle.com/) og [UC Irvine](https://archive.ics.uci.edu/).
+:::
+
+
 ## Datasettet
 
 For å lasta datasettet importerer me `sklearn` og bruker biblioteket.
