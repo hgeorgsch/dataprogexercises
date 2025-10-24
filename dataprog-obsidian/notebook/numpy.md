@@ -57,29 +57,55 @@ og raskare å rekna på heile datasettet.
 Det er difor me treng *arrays*.
 
 
+Ein *array* kan lesast inn i ein ny *DataFrame* utan vidare.
 ```{code-cell} ipython3
+import pandas as pd
 df = pd.DataFrame(A)
 display(df)
 ```
+Me ser raskt at datainnhaldet er det same.
+Det som kanskje er uvant er at søylene ikkje har overskrifter, 
+slik som me er vane med.  
+Ein *array* har ingen overskrifter eller *labels*.
 
+Det går an å definera søyleoverskrifter når me definerer ein *DataFrame*.
 ```{code-cell} ipython3
 df2 = pd.DataFrame(A, columns=['ColA', 'ColB', 'ColC', 'ColD'])
 display(df2)
 ```
+For å visa konvertering motsett veg, kan me raskt definera ein enkel
+*DateFrame*, slik:
+```{code-cell} ipython3
+data = {'ColA': [10, 20, 30], 'ColB': [11, 21, 31]}
+df3 = pd.DataFrame(data)
+display(df3)
+```
 
 ```{code-cell} ipython3
-import pandas as pd
-import numpy as np
-
-# Create a DataFrame
-data = {'ColA': [10, 20, 30], 'ColB': [11, 21, 31]}
-df = pd.DataFrame(data)
-print("Original DataFrame:")
-print(df)
-
-# Convert the DataFrame to a NumPy array
-numpy_array_from_df = df.to_numpy()
-print("\nNumPy array from DataFrame:")
-print(numpy_array_from_df)
-print(f"Type of result: {type(numpy_array_from_df)}")
+B = df3.to_numpy()
+print(B)
+print(f"Type of result: {type(B)}")
 ```
+
+Legg merke til typen som vert skriven ut. **TODO**
+
+::: {admonition} Oppgåve
+Last inn eitt av datasetta som du har arbeidd med tidlegare i pandas,
+og konverter innhladet til ein `numpy` *array*.
+Kva datatype vert resultatet?
+:::
+
+::: {admonition} Oppgåve
+Sannsynlegvis fekk du ikkje ein numerisk *array* i forrige oppgåve.
+Formatter datasettet slik at alle søylene er talverdiar og lag
+ein *array* av dette resultatet.
+Kva datatypar får du no?
+:::
+
+::: {hint}
+For å formattera datasettet kan du anten ta eit utsnitt ved å indeksera dei
+søylene du vil ha med, eller bruka `drop()`-metoden for å fjerna dei du ikkje
+vil ha.
+I tillegg må du sjå om der er søyler med talverdiar som pandas har tolka som
+strengar.
+:::
