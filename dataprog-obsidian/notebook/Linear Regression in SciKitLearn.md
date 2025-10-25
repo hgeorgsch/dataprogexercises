@@ -232,7 +232,7 @@ ei liste av lister.  Grunnen er at `predict` kan predikare for mange $x$-verdiar
 (søyler).
 :::
 -
-::: {admonition} Merknad
+::: {admonition} Oppgåve
 Lag eit plott som samanliknar prediksjonane frå `f` og `reg.predict`.
 Er dei alltid like?
 :::
