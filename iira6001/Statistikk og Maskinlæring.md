@@ -12,14 +12,11 @@ title: Statistikk og Maskinlæring
 + *Demo* regresjon og korrelasjon i pandas:
 	+ [[Maskinlæringsbibliotek]]
     + [numpy](notebooks/numpy)
+	+ Konvertering mellom SciKitLearn og pandas
 	+ [Lineær regresjon](notebooks/Linear%20Regression%20in%20SciKitLearn)
 	+ [Evaluering av regresjonsmodellen](notebooks/Evaluering%20for%20regresjon)
-	+ [Fisher Linear Discriminant in sklearn](notebooks/Fisher%20Linear%20Discriminant%20in%20sklearn)
-	+ [Evaluering av modellar](notebooks/Evaluering)
-	+ Konvertering mellom SciKitLearn og pandas
 + *Tutorial* regresjon og korrelasjon i eit datasett
 + Notat og idéar
-	+ [[Maskinlæring med WebAPI 2024]]  (kodedøme)
 	+ [[Maskinlæring]] (perspektivføredrag til periode 2)
 	+ [[Maskinlæring i sklearn]] (kodedøme)
 	

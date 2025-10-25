@@ -14,7 +14,7 @@ tags:
 	+ [Panopto recordings](https://ntnu.cloud.panopto.eu/Panopto/Pages/Sessions/List.aspx?folderID=1ed05bcf-ae8f-429a-8c25-b330009a4114)
 	+ [Panopto Tool Login](https://ntnu.cloud.panopto.eu/)
 + Program IIRA6001: 
-	+ Sjå [[IIRA6001book]] som oversyn over læringsmateriell i Jupyter Books
+	+ Sjå [[IIRA6001]] som oversyn over læringsmateriell i Jupyter Books
 	+ [[Skisse til opplegg]]
 + IIRA2001 - to delar
 	+ Del 1.  Grunnleggjande introduksjon
