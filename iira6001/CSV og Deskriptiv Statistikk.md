@@ -42,5 +42,3 @@ tags:
 	+ [Tid og dato](Tid%20og%20dato)
 	+ [Eksportdata](Eksportdata) requires extensive pre-processing to extract comparable data
     + [Genetikk](notebooks/Genetikk) demonstrerer korrelasjon m.m.
-+ Meir avanserte oppgåver
-    + [Jordskjelvdata](notebooks/Jordskjelv) som demonstrerer animasjon og plotting oppå kart.

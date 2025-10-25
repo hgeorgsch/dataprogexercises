@@ -17,5 +17,6 @@ tags:
 
 + Oppgåver
 	+ [Samanlikning av tidsrekkjer](Arbeidsledige%20og%29Konkursar) 
+    + [Jordskjelvdata](notebooks/Jordskjelv) som demonstrerer animasjon og plotting oppå kart.
 
 + [ ] Oppgåve: Korrelasjonskoeffisient med forskjøvede data (til arbeidsledige)
