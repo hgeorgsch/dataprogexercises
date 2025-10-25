@@ -38,13 +38,9 @@ tags:
     + Ulike plot: histogram/scatter/kakediagram
 	+ Eksporting plots
 + Oppgåver
-	+ Arbeidsledigheit og Konkursar, i to delar
-        + [Formattering av tidsrekkjer](Arbeidsledige) 
-        + [Samanlikning av tidsrekkjer](Arbeidsledige%20og%29Konkursar) 
+	+ [Arbeidsledige](Arbeidsledige) 
 	+ [Tid og dato](Tid%20og%20dato)
 	+ [Eksportdata](Eksportdata) requires extensive pre-processing to extract comparable data
     + [Genetikk](notebooks/Genetikk) demonstrerer korrelasjon m.m.
 + Meir avanserte oppgåver
     + [Jordskjelvdata](notebooks/Jordskjelv) som demonstrerer animasjon og plotting oppå kart.
-
-+ [ ] Oppgåve: Korrelasjonskoeffisient med forskjøvede data (til arbeidsledige)
