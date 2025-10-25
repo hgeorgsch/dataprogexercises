@@ -1,6 +1,8 @@
 
 # Metodeemnet ved IIF
 
++ Frå møte 24. oktober 2025: [[metode-felles-20251024.pdf]]
+
 ## Epost frå Njål oktober 2025
 
 >    Hei og takk for en hyggelig prat etter tverrfaglig læringsforum forrige uke.
