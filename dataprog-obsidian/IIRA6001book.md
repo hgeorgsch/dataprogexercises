@@ -12,8 +12,13 @@ Sjå boka.
     + [ ] Fleire oppgåver?
 + [ ] Køyring av celler i feil rekkjefylgje 📅 2025-06-20
 + [ ] Er folketalsmodellen for stort eit sprang (Introdkusjon)   📅 2025-05-12 
-+ [ ] Nedlasting av Jupyter Notebook - lagring/filnamn etc  📅 2025-06-20
-+ [ ] Nedlasting av datafiler (CSV) og andre tilleggsresursar 📅 2025-06-20
++ [ ] Demovideo - nedlasting og filhandering på MacOS eller Windows  📅 2026-01-31 
+	+ [ ] Nedlasting av Jupyter Notebook - lagring/filnamn etc 
+	+ [ ]  byte av filnamn og organisering av filer i Jupyter Lab
++ [ ] Manglande data og NaN
++ [ ] Tidsramme mellomsamling  📅 2025-10-31
++ [ ] Tidsramme avslutningssamling   📅 2025-10-31
++ [ ] *Live* koding-øving på mellomsamling   📅 2025-10-31
 
 
 # Hovudinnhald
@@ -29,29 +34,29 @@ Sjå boka.
 		+ Vis i Python Tutor e.l.
 			+ Fire vindauga (minimum): Kode - Utdata - Global tilstand - Lokal tilstand
 
-+ Veke 2.  [[CSV og pandas]]
-    + **NB** Kan trengja å dela denne i to.
++ Veke 2.  [[CSV og pandas]] Del 1. Tidsrekkjer
++ Veke 3.  [[CSV og pandas]]  Del 2.  Samanlikning av tidsrekkjer
+	+ Fletting av datasett
 + [[Veke 3 Simulering]]                      
 + Veke 4. [[Agent-basert simulering]]
 	1. [[Notar til Agent-basert simulering]]
-+ Veke 5. [[WebAPI]] 
-+ Veke 6. [[Maskinlæring]]     
++ Veke 6. Klassifikasjon
 	1. Notar til [[Om å læra frå data]]
 		1. [[Notar til Om å læra frå data]]
-    2. To tema
-        1. Klassifikasjon
-        2. Klyngeanalyse
++ Veke 7. Regresjon
++ Veke 8. Klyngeanalyse
++ Veke 9. [[WebAPI]] 
++ Veke 10. [[Frittståande program]] 
+    + IDE (Spyder)
+    + Script
+    + GUI?
++ Veke 11.  Sikkerheit og etikk
 
 + **Mål for andre periode**
 	+ bruka teknikkar frå fyrste periode på eit praktisk dataanalyseproblem frå eige virke 
 	+ gjennomføra eitt praktisk prosjekt etter eige val
 	+ setja saman vurderingsmappa
 
-+ Veke.  Frittståande program med Spyder
-    + IDE (Spyder)
-    + Script
-    + GUI?
-+ Veke.  Sikkerheit og etikk
 
 ## Førelesingstema
 
@@ -65,7 +70,6 @@ Sjå boka.
     + Kommandoline
     + Tekst versus binærformat
     + git og github - versjonskontroll
-+ IDE og script
 
 # Midtvegssamling
 

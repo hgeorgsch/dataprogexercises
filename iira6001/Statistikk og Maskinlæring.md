@@ -11,6 +11,7 @@ title: Statistikk og Maskinlæring
     + [[Evaluering av modellar]]
 + *Demo* regresjon og korrelasjon i pandas:
 	+ [[Maskinlæringsbibliotek]]
+    + [numpy](notebooks/numpy)
 	+ [Lineær regresjon](notebooks/Linear%20Regression%20in%20SciKitLearn)
 	+ [Evaluering av regresjonsmodellen](notebooks/Evaluering%20for%20regresjon)
 	+ [Fisher Linear Discriminant in sklearn](notebooks/Fisher%20Linear%20Discriminant%20in%20sklearn)
