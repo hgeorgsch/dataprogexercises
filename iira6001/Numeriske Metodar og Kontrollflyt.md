@@ -14,11 +14,18 @@ Me freistar å gje eit par forskjellige innfallsvinklar til kvart tema. Det typi
 
 Øvingane kjem i fleire formar. Dei to fyrste vekene har me to typar. Nokre er utarbeidde døme av same type som på opningssamlinga. Her er meininga å reflektera over kva som skjer i dømet og testa eigne variasjonar av det. Dei andre øvingane er automatisk retta oppgåver, som er meint å testa nokre av dei mest fundamentale konstruksjonane i python.
 
-+ **Perspektiv**
-	+ [Imperativ programmering og maskinarkitektur](https://iirevu.org.ntnu.no/Slides/Imperativ%20programmering%20og%20maskinarkitektur)
-	+ [Kontrollflyt i Python](https://iirevu.org.ntnu.no/Slides/Kontrollflyt%20i%20Python)
++ *Perspektivførelesing*
+	+ [Imperativ programmering og maskinarkitektur](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=e6150884-d729-4296-a139-b330009a4a30)
+	  [(Slides)](https://iirevu.org.ntnu.no/Slides/Imperativ%20programmering%20og%20maskinarkitektur)
+	+ [Kontrollflyt i Python](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=243a22cb-08aa-47c6-b4ea-b34f00849d91)
+	  [(Slides)](https://iirevu.org.ntnu.no/Slides/Kontrollflyt%20i%20Python)
     + [Exact Instructions Challenge](https://www.youtube.com/watch?v=cDA3_5982h8) ved Josh Darnit
-    + [Kva er ein algoritme?](https://iirevu.org.ntnu.no/Slides/Kva%20er%20ein%20algoritme%3f/)
+    + [Kva er ein algoritme?](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=c4f223ea-4958-4c1c-b2ac-b3670162feef)
+      [(Slides)](https://iirevu.org.ntnu.no/Slides/Kva%20er%20ein%20algoritme%3f/)
+    + [Flytdiagram](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=c3aeebb8-4015-41d7-a625-b3670160556e)
+
++ [ ] Revurder utval.  Flytta føredrag til seinare?
+
 + **Demovideo**
 	+ [[Kontrollflyt]]
 + **Øvingar**
