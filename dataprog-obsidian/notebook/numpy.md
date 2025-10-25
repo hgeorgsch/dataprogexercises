@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.18.1
+    jupytext_version: 1.17.0
 kernelspec:
   name: dataprog
   language: python
@@ -112,7 +112,6 @@ print(C)
 print("Type:", C.dtype)
 ```
 
-
 ::: {admonition} Oppgåve
 Last inn eitt av datasetta som du har arbeidd med tidlegare i pandas,
 og konverter innhladet til ein `numpy` *array*.
@@ -135,5 +134,3 @@ vil ha.
 I tillegg må du sjå om der er søyler med talverdiar som pandas har tolka som
 strengar.
 :::
-
-+++
