@@ -4,3 +4,4 @@
 *.svg
 *.txt
 .ipynb_checkpoints
+datasets
