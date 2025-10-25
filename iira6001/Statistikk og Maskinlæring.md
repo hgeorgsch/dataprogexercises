@@ -6,8 +6,9 @@ title: Statistikk og Maskinlæring
 
 # Frå Statistikk til Maskinlæring
 
-+ *Føredrag*
-    + [Om å læra frå data](https://iirevu.org.ntnu.no/Om%20%c3%a5%20l%c3%a6ra%20fr%c3%a5%20data/)
++ *Perspektivføredrag*
+    + [Om å læra frå data](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=577242b1-0990-481f-a61e-b34d014a07d5)
+      [(Slides)](https://iirevu.org.ntnu.no/Slides/Om%20%c3%a5%20l%c3%a6ra%20fr%c3%a5%20data/)
     + [[Evaluering av modellar]]
 + *Demo* regresjon og korrelasjon i pandas:
 	+ [[Maskinlæringsbibliotek]]

@@ -14,8 +14,10 @@ tags:
 		+ kjenna ulike filformat og dialektar av CSV
 	+ Kunna bruka pandas til deskriptiv statistikk og plotting
 + *Perspektivførelesing*
-	+ [Filhandtering](https://iirevu.org.ntnu.no/Slides/Filhandtering/)
-	+ [Statistikk med pandas](https://iirevu.org.ntnu.no/Statistikk%20med%20pandas/)
+	+ [Filhandtering](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=00b91ed5-08f2-498f-8877-b367013600cc)
+	  [(Slides)](https://iirevu.org.ntnu.no/Slides/Filhandtering/)
+	+ [Statistikk med pandas](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=74a527da-e025-4d11-8ce8-b36701673d76)
+	  [(Slides)](https://iirevu.org.ntnu.no/Statistikk%20med%20pandas/)
 	
 + Utsett til seinare
 	+ Lagring og organisering
