@@ -45,6 +45,7 @@ Andre populære kjelder til slike datasett er
 [Kaggle](https://www.kaggle.com/) og [UC Irvine](https://archive.ics.uci.edu/).
 :::
 
++++
 
 ## Datasettet
 
@@ -105,6 +106,9 @@ Datastrukturen `diabetes` inneheld òg ei beskriving, som `diabetes.DESCR`.
 For å sjå beskrivinga, er det best å bruka `print` eller `display`?
 Kva tyder dei ulike søylene?
 :::
+
++++
+
 ## Modellen
 
 Normalt bruker ein fleire *input*-variablar i modellen, men for å
@@ -151,6 +155,8 @@ I aksenamna brukte me notasjonen `$x$` og `$y$`.
 Det er $\LaTeX$-notasjon som gjerne kan brukast til
 matematiske symbol både i matplotlib og markdown.
 :::
+
++++
 
 ## Modellen
 
