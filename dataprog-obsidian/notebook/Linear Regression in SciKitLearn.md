@@ -311,3 +311,4 @@ dei matematiske formlane sjølv.
 Dømet er basert på ein post frå
 [Medium](https://medium.com/@heyamit10/how-to-perform-linear-regression-using-pandas-scikit-learn-9fcfa6085fb0)
 
+I neste øving ser me på [Evaluering for regresjon](Evaluering%20for%20regresjon).
