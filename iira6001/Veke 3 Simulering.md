@@ -16,7 +16,7 @@ Dette kapittelet byggjer på
 	+ Tilfeldigheit
 	+ [Datastrukturar og Kompleksitet](Datastrukturar%20og%20Kompleksitet)
 + *Tekniske demonstrasjonar*
-	+ [[Datastrukturer]]
+	+ Datastrukturer
 + *Øvingar.*
 	+ [[CodeRunner Data Structures]]
 	+ [Tilfeldigheit](notebooks/Tilfeldigheit)
