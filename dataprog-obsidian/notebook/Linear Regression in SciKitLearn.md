@@ -47,9 +47,53 @@ Andre populære kjelder til slike datasett er
 
 +++
 
+## Rettleidd læring
+
+Den teknikken som me skal bruka her er kjend i maskinlæring som
+rettleidd læring eller *supevised learning*.
+Me har eit datasett der kvart individ eller objekt har nokre eigenskapar $x$
+som er enkle å observera og nokre eigenskapar $y$ som er vanskelegare.
+Me ynskjer å laga ein *prediksjonsmodell* som let oss predikera $y$ ved
+hjelp av $x$.
+
+I rettleidd læring føreset me eit datasett der både $x$ og $y$ er kjende
+for ei rekkje individ. 
+Merk at både $x$ og $y$ kan innehalda éin eller fleire variablar.
+
+::: {admonition} Definisjon
+Ein **modell** i maskinlæring og statistikk er ein matematisk funksjon
+$M(x) = y$.  Når me reknar ut $M(x)$ seier me gjerne at me predikerer $y$.
+
+Når me **trener** ein modell bruker me eit datasett med mange par $(x,y)$
+til å tilpassa koeffisientane (ofte kalt *vektene*) i modellen, slik
+at prediksjonane vert best mogleg.
+
+Når me **testar** modellen bruker me òg eit datasett med par$(x,y)$.
+For kvar $x$ finn me $\hat y=M(x)$ og samanliknar prediksjonen $\hat y$
+med den sanne verdien $y$ for å sjå kor god prediksjonen er.
+:::
+
+I *praktisk bruk* observerer me berre $x$, og den einaste måten me kan
+finna $y$ på, er å bruka prediksjonen $\hat y=M(x)$ frå modellen i
+staden.
+
+For å få ein påliteleg test av modellen, er det viktig at testdatasettet
+er uavhengig av treningsdatasettet.  Ein modell som gjer det godt på
+treningssettet treng ikkje generalisera til andre data.
+
+Desse prinsippa er dei same for klassiske teknikkar som lineær regresjon
+og for nevrale nettverk og andre moderne maskinlæringsalgoritmar.
+Biblioteket `sklearn` er generisk og støtter heile spekteret av modellar.
+I denne øvinga bruker me lineær regresjon.
+
+
++++
+
 ## Datasettet
 
 For å lasta datasettet importerer me `sklearn` og bruker biblioteket.
+Datasettet som me vil bruka er publisert som ein del av `sklearn` for
+testformål.
 
 ```{code-cell} ipython3
 from sklearn.datasets import load_diabetes
@@ -99,7 +143,7 @@ og andre kjelder som har utvikla datasettet, men det tek me oss ikkje
 tid til.
 :::
 
-## Førebuing av datasettet
+## Visualisering med spreidingsplott
 
 ::: {admonition} Oppgåve
 Datastrukturen `diabetes` inneheld og ei beskriving, som `diabetes.DESCR`.
@@ -108,9 +152,6 @@ For å sjå beskrivinga, er det best å bruka `print` eller `display`.
 Kva tyder dei ulike søylene?
 :::
 
-+++
-
-## Spreidingsplott
 
 Normalt bruker ein fleire *input*-variablar i modellen, men for å
 kunna visualisera han pent i 2D, skal me berre bruke éin.
@@ -161,20 +202,35 @@ matematiske symbol både i matplotlib og markdown.
 
 ## Prediksjonsmodell
 
-Fylgjande kode set opp regresjonsmodellen.
+Det fyrste me må gjera i `sklearn` er å instantiera ein modell.
 
 ```{code-cell} ipython3
 from sklearn import linear_model
 reg = linear_model.LinearRegression()
+```
+
+Desse kodelinene lagar ein lineær regresjonsmodell, men me har ikkje
+tilpassa vektene, so modellen representerer ingenting og evt. 
+prediksjonar vil vera vilårlege.
+For å tilpassa vektene til datasettet vårt, bruker me `fit()`-metoden.
+
+```{code-cell} ipython3
 reg.fit(x,y)
 ```
 
-Modellane i `sklearn` har derimot ein `predict`-metode som gjer det 
-same som `f`.
+No har me ein modell av datasettet, og alt er klart for å gjera
+prediksjonar.
+Lat oss sjå for oss at me observerer ein person med $x=0{,}1$. 
+Me kan predikera $y$ slik.
 
 ```{code-cell} ipython3
 print( reg.predict([[0.1]]) )
 ```
+
+::: {admonition} Refleksjon
+Samanlikna denne prediksjonen med spreidingsplottet over.
+Verker prediksjonen sannsynleg?
+:::
 
 ::: {admonition} Merknad
 Innparametern til `predict` er ein 2D-struktur, anten ein numpy-*array* eller her 
@@ -183,53 +239,7 @@ ei liste av lister.  Grunnen er at `predict` kan predikare for mange $x$-verdiar
 (søyler).
 :::
 
-::: {admonition} Merknad
-Lag eit plott som samanliknar prediksjonane frå `f` og `reg.predict`.
-Er dei alltid like?
-:::
-
-
-## Under panseret
-
-```{code-cell} ipython3
-print(reg.coef_)
-print(reg.intercept_)
-```
-
-Her gjer me to ting.  Fyrst instantierer me ein modell `reg`, som ein
-*LinearRegression*-modell frå `sklearn`. 
-Deretter tilpasser me modellen til datasettet, vha. `fit`-metoden,
-som bestemmer parametrane i modellen.
-Du hugsar kanskje frå statistikken at ein lineær regresjonsmodellen
-har likninga $y = ax + b$.
-Det er parametrane $a$ og $b$ som vert bestemte av `fit`-metoden.
-Her er `reg.coef_` $a$, og dette er gjerne kjende som *vektene* i
-modellen i maskinlæringsjargonen.  
-Dette er ei matrise fordi ein lineær modell treng éi vekt per *input*-variabel.
-Vanligvis vil matrisa ha meir enn eitt element.
-Konstantleddet $b$ finn me i `reg.intercept`.
-
-Dersom me no observerer eitt nytt individ, og måler $x$-variabelen til 0,1, kan
-me spørja modellen kva som er venta sykdomsutvikling $y$.
-Modellen definerer den lineære funksjonen $f(x) = ax+b$, som me kan definera i 
-python som,
-
-```{code-cell} ipython3
-a = reg.coef_.flatten()[0]
-b = reg.intercept_
-def f(x): return a*x + b
-```
-
-Modellen vår er altso funksjonen `f`, som me kan bruka som fylgjer,
-
-```{code-cell} ipython3
-print( f(0.1) )
-```
-
-## Visualisering
-
-Det er greit å visualisera regresjonsmodellen saman med 
-datasettet.
+Me kan plotta prediksjonsmodellen ved å predikera nokre verdier, slik:
 
 ```{code-cell} ipython3
 ax = plt.subplot()
@@ -240,6 +250,48 @@ xv = [ -0.1, 0, 0.1, 0.15 ]
 yv = [ f(x) for x in xv ]
 ax.plot( xv, yv, "r:" )
 ```
+
+::: {admonition} Refleksjon
+Er prediksjonsmodellen ein rimeleg modell av datasettet?
+:::
+
+## Under panseret
+
+For dei som kjenner matematikken i lineær regresjon er det nyttig å ta
+ein titt under panseret.
+Den lineære regresjonsmodellen er likninga
+$$\hat y = ax + b.$$
+Det er altso dei to koeffisientane $a$ og $b$ som vert bestemte
+av `fit()`-metoden.
+Me kan lesa desse koeffisientane ut av modellen.
+
+```{code-cell} ipython3
+print(reg.coef_)
+print(reg.intercept_)
+```
+
+Konstantleddet $b$ vert kalt *intercept*, medan stigningstalet $a$ er
+den eigentlege koeffisienten.
+Koeffisienten er ei matrise fordi ein lineær modell treng éi vekt per *input*-variabel.
+Vanligvis vil matrisa ha meir enn eitt element.
+Me kan definera regresjonslikninga $f(x) = ax+b$ som ein python-funksjon, slik:
+
+```{code-cell} ipython3
+a = reg.coef_.flatten()[0]
+b = reg.intercept_
+def f(x): return a*x + b
+```
+
+Me har brukt `flatten()` for å flata ut matrisa og henta det eine elementet ho
+inneheldt.
+
+I teoren skal denne funksjonen `f()` gjera akkurat det same som `reg.predict()`.
+
+::: {admonition} Oppgåve
+Lag eit plott som samanliknar prediksjonane frå `f` og `reg.predict`.
+Er dei alltid like?
+:::
+
 
 ## Oppsummering
 
