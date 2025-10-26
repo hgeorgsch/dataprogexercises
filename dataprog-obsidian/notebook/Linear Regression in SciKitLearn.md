@@ -45,6 +45,7 @@ Andre populære kjelder til slike datasett er
 [Kaggle](https://www.kaggle.com/) og [UC Irvine](https://archive.ics.uci.edu/).
 :::
 
++++
 
 ## Datasettet
 
@@ -58,6 +59,10 @@ display(diabetes)
 
 ::: {admonition} Oppgåve
 Kva datatype er `diabetes`?
+:::
+
+::: {admonition} Refleksjon
+Kva delar av `diabetes`-objektet er interessante for analyse?
 :::
 
 Dette datasettet er førebudd spesielt for testing av regresjonsmodellar.
@@ -80,6 +85,11 @@ print(diabetes.target[:3])
 print(diabetes.data[:3,:])
 ```
 
+::: {hint}
+Datatypen åt `diabetes.data` og `diabetes.target` er `numpy` *array*.
+Sjå [numpy](./numpy.ipynb)-øvinga for meir informasjon.
+:::
+
 ::: {admonition} Merknad
 Datasettet er skalert og normalisert.  Det har ein del føremonar for
 algoritmane, men for å kunne tolka data må me då finna ut korleis
@@ -97,6 +107,8 @@ For å sjå beskrivinga, er det best å bruka `print` eller `display`.
 
 Kva tyder dei ulike søylene?
 :::
+
++++
 
 ## Spreidingsplott
 
@@ -144,6 +156,8 @@ I aksenamna brukte me notasjonen `$x$` og `$y$`.
 Det er $\LaTeX$-notasjon som gjerne kan brukast til
 matematiske symbol både i matplotlib og markdown.
 :::
+
++++
 
 ## Prediksjonsmodell
 
@@ -225,23 +239,23 @@ ax.set(xlabel="$x$", ylabel="$y$")
 xv = [ -0.1, 0, 0.1, 0.15 ]
 yv = [ f(x) for x in xv ]
 ax.plot( xv, yv, "r:" )
-
 ```
 
 ## Oppsummering
 
-Læringsmålet i denne øvinga har vore å sjå ein mogleg syntaks 
+Læringsmålet i denne øvinga har vore å sjå ein mogleg syntaks
 for lineær regresjon i python.
 
 Me har vald scikit-learn her fordi det er eit utbreidd val for
 trening og testing av maskinlæringsmodellar, og ein kan bruka
-mange ulike algoritmar i det same rammeverket og med den same 
+mange ulike algoritmar i det same rammeverket og med den same
 syntaksen.
 
 Det er ikkje det beste valet for statistikk, der ein gjerne
 vil analysera dei einskilde parametrane i modellen.
 Då kan ein anten sjå etter andre bibliotek, eller implementera
-dei matematiske formlane sjølv. 
+dei matematiske formlane sjølv.
 
 Dømet er basert på ein post frå
 [Medium](https://medium.com/@heyamit10/how-to-perform-linear-regression-using-pandas-scikit-learn-9fcfa6085fb0)
+
