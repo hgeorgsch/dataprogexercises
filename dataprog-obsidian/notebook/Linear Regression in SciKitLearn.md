@@ -93,10 +93,12 @@ tid til.
 
 ::: {admonition} Oppgåve
 Datastrukturen `diabetes` inneheld og ei beskriving, som `diabetes.DESCR`.
-For å sjå beskrivinga, er det best å bruka `print` eller `display`?
+For å sjå beskrivinga, er det best å bruka `print` eller `display`.
+
 Kva tyder dei ulike søylene?
 :::
-## Modellen
+
+## Spreidingsplott
 
 Normalt bruker ein fleire *input*-variablar i modellen, men for å
 kunna visualisera han pent i 2D, skal me berre bruke éin.
@@ -143,7 +145,7 @@ Det er $\LaTeX$-notasjon som gjerne kan brukast til
 matematiske symbol både i matplotlib og markdown.
 :::
 
-## Modellen
+## Prediksjonsmodell
 
 Fylgjande kode set opp regresjonsmodellen.
 
@@ -151,6 +153,31 @@ Fylgjande kode set opp regresjonsmodellen.
 from sklearn import linear_model
 reg = linear_model.LinearRegression()
 reg.fit(x,y)
+```
+
+Modellane i `sklearn` har derimot ein `predict`-metode som gjer det 
+same som `f`.
+
+```{code-cell} ipython3
+print( reg.predict([[0.1]]) )
+```
+
+::: {admonition} Merknad
+Innparametern til `predict` er ein 2D-struktur, anten ein numpy-*array* eller her 
+ei liste av lister.  Grunnen er at `predict` kan predikare for mange $x$-verdiar
+(rader) samstundes, i tillegg til at der vanligvis er fleire inn-variablar
+(søyler).
+:::
+
+::: {admonition} Merknad
+Lag eit plott som samanliknar prediksjonane frå `f` og `reg.predict`.
+Er dei alltid like?
+:::
+
+
+## Under panseret
+
+```{code-cell} ipython3
 print(reg.coef_)
 print(reg.intercept_)
 ```
@@ -200,28 +227,6 @@ yv = [ f(x) for x in xv ]
 ax.plot( xv, yv, "r:" )
 
 ```
-
-## Prediksjon med modellen
-
-Me treng ikkje konstruera funksjonen `f` sjølv.  Me gjorde det over berre
-for å illustrera samanhengen med teorien i statistikken.
-Modellane i `sklearn` har derimot ein `predict`-metode som gjer det same som `f`.
-
-```{code-cell} ipython3
-print( reg.predict([[0.1]]) )
-```
-
-::: {admonition} Merknad
-Innparametern til `predict` er ein 2D-struktur, anten ein numpy-*array* eller her 
-ei liste av lister.  Grunnen er at `predict` kan predikare for mange $x$-verdiar
-(rader) samstundes, i tillegg til at der vanligvis er fleire inn-variablar
-(søyler).
-:::
-
-::: {admonition} Merknad
-Lag eit plott som samanliknar prediksjonane frå `f` og `reg.predict`.
-Er dei alltid like?
-:::
 
 ## Oppsummering
 
