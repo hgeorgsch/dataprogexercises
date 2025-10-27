@@ -113,23 +113,22 @@ Kva skjer her?  Kva representerer `error`?  Kva verdi svarer til feil og kva til
 rett prediksjon?
 :::
 
-**TODO** Histogram over feila
-
-For å telja feila, kan me t.d. gjera noko slikt:
+Me kan plotta eit histogram over alle `error`-verdiane.
 
 ```{code-cell} ipython3
-error[ error != 0 ] = 1
-print( sum(error)/len(error ) )
+plt.hist(error, bins=15, range=[-200, 200])
+plt.show()
 ```
 
-::: {admonition} Oppgåve
-Kva representerer dette talet `sum(error)/len(error)`?
+::: {admonition} Refleksjon
+Kva fortel histogrammet oss?
 :::
 
 
 ## Testing
 
-Me kan gjera akkurat den same testen som med treningssettet.
+Me kan gjera akkurat den same testen med testsettet,
+som med treningssettet.
 
 ```{code-cell} ipython3
 testpred = reg.predict( testx )
@@ -137,16 +136,17 @@ testerror = testpred - testy
 print( testerror )
 ```
 
-Sjølv om me hadde perfekt prediksjon på treningssettet, får me ein
-feil me testsettet.  Ein feil er derimot ikkje nok til å seia at
-modellen er dårleg.  Det kan vera uflaks, eller kan henda flaks.
-Dette skal me koma tilbake til med større datasett.
+::: {admonition} Oppgåve
+Lag eit histogram av `testerror`.
 
-Det kan vera nyttig å visualisera testen òg.
-På same måte som i den 
-[forrige øvinga](Fisher%20Linear%20Discriminant%20in%20sklearn),
-kan me definera `f` for å plotta diskriminanten.
+Kan du visa feila på test- og treningsettet i same figur?
+:::
 
+::: {admonition} Refleksjon
+Samanlikna feila på test- og treningssettet?
+Gjer denne modellen det like godt på det nye testsettet som det
+gjorde på treningssettet?
+:::
 
 ## Oppsummering
 
@@ -161,6 +161,3 @@ dårleg på testsettet.
 Difor skal de ta med dykk desse teknikkane og prøva dei ut på større
 og meir interessante datasett.
 
-```{code-cell} ipython3
-
-```
