@@ -15,7 +15,7 @@ Vurdering (studiepoeng og karakter) vert basert på ei innlevert mappe,
 der kandidaten viser fram utvalde arbeid frå semesteret og reflekterer
 over korleis dei er nyttige i praktisk virke.
 
-Mappa skal bestå av fire dokument
+Mappa skal bestå av fire dokument samt datafiler som vedlegg
 + Del 1a ihht.  [](./Oblig1)  i Jupyter Notebook
 + Del 1b ihht.  [](./Oblig2)  i Jupyter Notebook
 + Del 2a er ei større prosjektoppgåve etter eige val, der ein bruker 
@@ -33,6 +33,11 @@ Mappa skal bestå av fire dokument
     + Her skal kandidaten oppsummerer kurset og den verdien det har for studiet
       og vidare virke, og også vurdera prosjektoppgåva og korleis ho er nyttig
       og relevant.
++ Som vedlegg må ein ha med alle filer som programma treng for å køyra,
+  typisk CSV-filer.[^1]
+
+[^1]:  Dersom programmet hentar datasettet direkte frå nettet (over HTTP),
+       so treng ein ikkje ha med nedlasta versjon i tillegg.
 
 Inspera aksepterer berre éi fil i innleveringa (so vidt eg forstår) og de må i
 so fall pakka alle dokumenta saman i ein pkZIP- eller tar/gnuZIP-fil.
