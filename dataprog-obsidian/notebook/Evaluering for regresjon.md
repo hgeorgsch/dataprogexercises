@@ -19,9 +19,10 @@ dvs. dei er like tilfeldige som datasettet som ligg til grunn.
 Om me gjer nye observasjonar, vil dei se annleis ut, og me får ein
 annan modell.
 
-Dette ser me tydleg i meiningsmålingar.  Ofte er der fleire byrå
-ut og gjer meiningsmålingar på same tid, og dei bruker dei same
-statistiske metodane.  Likevel får dei forskjellige resultat, og
+Dette ser me tydleg i meiningsmålingar.
+Ofte er der fleire byrå ute og gjer meiningsmålingar på same tid,
+og dei bruker dei same statistiske metodane.
+Likevel får dei forskjellige resultat, og
 dei treff sjelden valresultatet presist.
 
 Regresjonsmodellen som me fann i 
@@ -29,7 +30,7 @@ Regresjonsmodellen som me fann i
 gjev ei optimal skildring av datasettet som det er trent på.
 Det som er interessant er derimot kor godt det skildrar resten
 av populasjonen og kor godt det kan predikera nye og hittil ukjende
-data.  Det finn me berre ut ved å testa.
+data.  Det finn me berre ut ved å testa.  På uavhengige data.
 
 Her skal me gå gjennom eit enkelt og standardisert testlaup,
 der me evaluerer modellen som me fann i den førre øvinga.
@@ -65,7 +66,9 @@ so kan du kanskje rekna ut kor
 mange datapunkt du treng i testsettet for å få eit statistisk
 signifikant resultat. Det er naudsynt for å kunna vita kor mykje
 me kan stola på modellen, men her skal me nøya oss med tommelfingerregelen.
+:::
 
+::: {admonition} Merknad
 Der større testsett gjev ein meir påliteleg evaluering, vil større 
 treningssett gje ein betre modell.  Det er eit dilemma.
 :::
@@ -90,7 +93,9 @@ reg.fit(trainx,trainy)
 ```
 
 ::: {admonition} Oppgåve
-Visualiser treningssettet og diskriminanten.
+Visualiser treningssettet og prediksjonsmodellen (regresjonslinen).
+Vert det svært forskjellig frå visualiseringa i forrige oppgåve,
+då du trente på heile datasettet?
 :::
 
 Me kan òg sjekka nøyaktig kor mykje feil modellen gjer på treningssettet.
@@ -103,10 +108,12 @@ print( error )
 
 Legg merke til at me kan køyra prediksjonen på heile datasettet i eitt kall.
 
-::: {admonition} Oppgåve
+::: {admonition} Refleksjon
 Kva skjer her?  Kva representerer `error`?  Kva verdi svarer til feil og kva til
 rett prediksjon?
 :::
+
+**TODO** Histogram over feila
 
 For å telja feila, kan me t.d. gjera noko slikt:
 
