@@ -50,7 +50,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 ```
 
-Datafila heiter `NEIC_global_1973-2014.txt`.
+Datafila heiter [NEIC_global_1973-2014.txt](NEIC_global_1973-2014.txt).
 
 ::: {admonition} Oppgåve
 Opna datafila og sjå kva slags format det er.
