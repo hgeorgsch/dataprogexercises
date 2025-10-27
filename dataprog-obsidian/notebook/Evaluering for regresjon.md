@@ -124,6 +124,14 @@ plt.show()
 Kva fortel histogrammet oss?
 :::
 
+Objektet `error` er ein `numpy` *array*, med alle dei metodane som 
+`numpy` gjev oss.  Det er dermed enkelt å finna gjennomsnittleg feil.
+
+```{code-cell} ipython3
+print( "Gjennomsnittsfeil:", error.mean() )
+print( "Minimum:", error.min() )
+print( "Maksimum:", error.max() )
+```
 
 ## Testing
 
@@ -161,3 +169,14 @@ dårleg på testsettet.
 Difor skal de ta med dykk desse teknikkane og prøva dei ut på større
 og meir interessante datasett.
 
+```{code-cell} ipython3
+
+```
+
+```{code-cell} ipython3
+
+```
+
+```{code-cell} ipython3
+
+```
