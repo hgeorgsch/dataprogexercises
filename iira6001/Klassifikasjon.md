@@ -15,3 +15,4 @@ title: Klassifikasjon med Maskinlæring
 + *Tutorial* regresjon og korrelasjon i eit datasett
 + Notat og idéar
 	+ [[Maskinlæring med WebAPI 2024]]  (kodedøme)
+	+ [[Maskinlæring]] (perspektivføredrag til periode 2)
