@@ -133,6 +133,22 @@ print( "Minimum:", error.min() )
 print( "Maksimum:", error.max() )
 ```
 
+::: {admonition} Refleksjon
+Kvifor er gjennomsnittsfeilen so liten, altso null i femten desimalar?
+:::
+
+Me kan finna gjennomsnittleg absoluttfeil òg, altso feil utan forteikn.
+
+```{code-cell} ipython3
+print( "Gjennomsnitleg absoluttfeil:", abs(error).mean() )
+```
+
+::: {admonition} Refleksjon
+Er dette gjennomsnittet konsistent med det som du ser i histogrammet?
+:::
+
++++
+
 ## Testing
 
 Me kan gjera akkurat den same testen med testsettet,
