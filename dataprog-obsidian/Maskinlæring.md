@@ -16,6 +16,11 @@ tags:
     + ikkje prioritert - krev meir tid
 5. Klassifikasjon av bilete
 
+## Øvingar
+
++ [[Klyngeanalyse]]
++ [[Support Vector Machine]]
+
 # Utdrag frå førelesing 2024
 
 ## Typer læring
