@@ -48,8 +48,8 @@
    \draw [ar] (p4) -> (s4) ;
    \node [above of=pop,head,node distance=21mm] {Populasjon} ;
    \node [above of=sam,head,node distance=12mm] {Utval} ;
-   \node (ds) [below of=sam,text=magenta,node distance=12mm,xshift=25mm] {Deskriptiv Statistikk} ;
-   \draw [ultra thick,magenta!50,->] (sam.east) -| (ds) ;
+   \node (ds) [right of=sam,text=magenta,node distance=18mm,yshift=-9mm] {\parbox{16mm}{Deskriptiv \\ Statistikk}} ;
+   \draw [ultra thick,magenta!50,<-] (sam.east) -| (ds) ;
    \draw [ultra thick,magenta!50,->] (sam.south) |- node [text=magenta,anchor=north] {Statistisk Inferens} ([yshift=-15mm]pop.east) ;
 \end{tikzpicture}
 \end{document}
