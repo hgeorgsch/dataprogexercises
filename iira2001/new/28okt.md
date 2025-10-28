@@ -61,13 +61,10 @@ Vi trenger å ha litt kontroll på:
 
 # OPPGAVE:
 
-- Let gjennom eurostat og last inn noen interessante dataset programmatisk.
+- Let gjennom eurostat og last inn noen interessante dataset programmatisk med `requests`
 - Se om du kan vaske og klargjøre dataene for videre behandling
 
 
 Ikke heng deg opp i analyse, øv i første omgang på å hente inn og klargjøre noen dataset.
 Jo flere jo bedre -- øvelse gjør mester, men prøv å lese inn minst 3
-
-
-
 
