@@ -9,4 +9,4 @@ title: Klassifikasjon med Maskinlæring
 + *Føredrag*
     + Unsupervised Learning
 + *Demo* regresjon og korrelasjon i pandas:
-    + [Klyngeanalyse](Klyngeanalyse)
+    + [Klyngeanalyse](notebooks/Klyngeanalyse)

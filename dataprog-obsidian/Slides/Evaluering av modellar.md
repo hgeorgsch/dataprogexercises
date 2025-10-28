@@ -4,6 +4,10 @@ tags:
   - stub
 ---
 
+# Evaluering av modellar
+
+---
+
 Deskriptiv statistikk vs. Statistisk inferens
 
 ---
