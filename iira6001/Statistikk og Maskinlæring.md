@@ -17,7 +17,3 @@ title: Statistikk og Maskinlæring
 	+ [Lineær regresjon](notebooks/Linear%20Regression%20in%20SciKitLearn)
 	+ [Evaluering av regresjonsmodellen](notebooks/Evaluering%20for%20regresjon)
 	+ Konvertering mellom SciKitLearn og pandas
-	+ Øving med nevrale nett
-+ Notat og idéar
-	+ [[Maskinlæring i sklearn]] (kodedøme)
-	
