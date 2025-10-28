@@ -1,0 +1,55 @@
+\documentclass{standalone}
+
+\usepackage{tikz,tikzpeople}
+\usetikzlibrary{arrows.meta,matrix,backgrounds,fit,shapes,positioning}
+
+
+\begin{document}
+\begin{tikzpicture}
+   \tikzstyle{sel}=[draw]
+   \tikzstyle{pn}=[outer sep=3mm]
+   \tikzstyle{ar}=[gray!50,->]
+   \tikzstyle{sel}=[rectangle,fill=yellow!10]
+   \tikzstyle{head}=[text=blue]
+
+   \matrix (pop) [draw,matrix of nodes,row sep=3mm,column sep=4mm] {
+      \node [pn,priest] {} ; &
+      \node [pn,conductor] {} ; &
+      \node [pn,sailor] {} ; &
+      \node (p2) [pn,builder] {} ; \\
+      \node [pn,surgeon] {} ; &
+      \node (p1) [pn,nurse] {} ; &
+      \node [pn,nun] {} ; &
+      \node [pn,pilot] {} ; \\
+      \node [pn,charlie] {} ; &
+      \node [pn,alice] {} ; &
+      \node (p4) [pn,chef] {} ; &
+      \node [pn,bride] {} ; \\
+      \node [pn,guard] {} ; &
+      \node (p3) [pn,groom] {} ; &
+      \node [pn,graduate] {} ; &
+      \node [pn,bob] {} ; \\
+   } ;
+   \matrix (sam) [draw,right=of pop,matrix of nodes,row sep=3mm,column sep=4mm,fill=yellow!15] {
+      \node (s1) [pn,nurse] {} ; &
+      \node (s2) [pn,builder] {} ; \\
+      \node (s3) [pn,groom] {} ; &
+      \node (s4) [pn,chef] {} ; \\
+   } ;
+   \begin{scope}[on background layer]
+      \node  [fit=(p1) (p1), sel]{};
+      \node  [fit=(p2) (p2), sel]{};
+      \node  [fit=(p3) (p3), sel]{};
+      \node  [fit=(p4) (p4), sel]{};
+   \end{scope}
+   \draw [ar] (p1) -> (s1) ;
+   \draw [ar] (p2) -> (s2) ;
+   \draw [ar] (p3) -> (s3) ;
+   \draw [ar] (p4) -> (s4) ;
+   \node [above of=pop,head,node distance=21mm] {Populasjon} ;
+   \node [above of=sam,head,node distance=12mm] {Utval} ;
+   \node (ds) [below of=sam,text=magenta,node distance=12mm,xshift=25mm] {Deskriptiv Statistikk} ;
+   \draw [ultra thick,magenta!50,->] (sam.east) -| (ds) ;
+   \draw [ultra thick,magenta!50,->] (sam.south) |- node [text=magenta,anchor=north] {Statistisk Inferens} ([yshift=-15mm]pop.east) ;
+\end{tikzpicture}
+\end{document}

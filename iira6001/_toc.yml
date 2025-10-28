@@ -50,6 +50,14 @@ chapters:
       sections:
       - file: notebooks/Fisher Linear Discriminant in sklearn
       - file: notebooks/Evaluering
+    - file: Klassifisering
+      sections:
+      - file: notebooks/Fisher Linear Discriminant in sklearn
+      - file: notebooks/Evaluering
+      - file: notebooks/Support Vector Machines
+    - file: Klassifisering-Kapittel
+      sections:
+      - file: Klassifisering
   - file: midway
   - file: second
   - file: closure
