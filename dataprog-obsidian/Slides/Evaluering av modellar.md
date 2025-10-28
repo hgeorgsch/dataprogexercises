@@ -74,3 +74,23 @@ note:
 Vi må da typisk unngå:
 * «Overfitting»: Modellen memoriserer kun testdataen vår
 * «Underfitting»: Modellen har ikke lært nok
+
+---
+<!-- slide template="[[tpl-diagram]]" -->
+
+![[Underfitting_e_overfitting.png]]
+
+::: credit
+By Leomaurodesenv - Own work, CC BY-SA 4.0,
+via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=103533707)
+:::
+
+---
+<!-- slide template="[[tpl-diagram]]" -->
+
+![[484261_1_En_4_Fig1_HTML.webp]]
+
+::: credit
+Montesinos López, O.A., Montesinos López, A., Crossa, J. (2022). Overfitting, Model Tuning, and Evaluation of Prediction Performance. In *Multivariate Statistical Machine Learning Methods for Genomic Prediction*. Springer, Cham. 
+[doi:10.1007/978-3-030-89010-0_4](https://doi.org/10.1007/978-3-030-89010-0_4)
+:::
