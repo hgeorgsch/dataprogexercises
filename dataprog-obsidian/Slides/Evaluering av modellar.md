@@ -7,7 +7,14 @@ tags:
 # Evaluering av modellar
 
 ---
+<!-- slide template="[[tpl-diagram]]" -->
 
+![[sampling.svg]]
+
+::: credit
+:::
+
+note:
 Deskriptiv statistikk vs. Statistisk inferens
 
 ---
