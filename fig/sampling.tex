@@ -1,45 +1,55 @@
 \documentclass{standalone}
 
 \usepackage{tikz,tikzpeople}
-\usetikzlibrary{arrows.meta,matrix}
+\usetikzlibrary{arrows.meta,matrix,backgrounds,fit,shapes,positioning}
 
 
 \begin{document}
 \begin{tikzpicture}
-   \tikzstyle{agent}=[draw,fill=magenta!20,minimum height=7mm,minimum width=20mm,node distance=12mm]]
    \tikzstyle{sel}=[draw]
+   \tikzstyle{pn}=[outer sep=3mm]
+   \tikzstyle{ar}=[gray!50,->]
+   \tikzstyle{sel}=[rectangle,fill=yellow!10]
+   \tikzstyle{head}=[text=blue]
 
-   \matrix (pop) [matrix of nodes,row sep=3mm,column sep=4mm] {
-      \node [priest] {} ; &
-      \node [conductor] {} ; &
-      \node [sailor] {} ; &
-      \node (p2) [builder] {} ; \\
-      \node [surgeon] {} ; &
-      \node (p1) [nurse] {} ; &
-      \node [nun] {} ; &
-      \node [pilot] {} ; \\
-      \node [charlie] {} ; &
-      \node [alice] {} ; &
-      \node (p4) [chef] {} ; &
-      \node [bride] {} ; \\
-      \node [guard] {} ; &
-      \node (p3) [groom] {} ; &
-      \node [graduate] {} ; &
-      \node [bob] {} ; \\
+   \matrix (pop) [draw,matrix of nodes,row sep=3mm,column sep=4mm] {
+      \node [pn,priest] {} ; &
+      \node [pn,conductor] {} ; &
+      \node [pn,sailor] {} ; &
+      \node (p2) [pn,builder] {} ; \\
+      \node [pn,surgeon] {} ; &
+      \node (p1) [pn,nurse] {} ; &
+      \node [pn,nun] {} ; &
+      \node [pn,pilot] {} ; \\
+      \node [pn,charlie] {} ; &
+      \node [pn,alice] {} ; &
+      \node (p4) [pn,chef] {} ; &
+      \node [pn,bride] {} ; \\
+      \node [pn,guard] {} ; &
+      \node (p3) [pn,groom] {} ; &
+      \node [pn,graduate] {} ; &
+      \node [pn,bob] {} ; \\
    } ;
-   \draw [gray,dotted] (p1.north west) rectangle (p1.south east) ;
-   \draw [gray,dotted] (p2.north west) rectangle (p2.south east) ;
-   \draw [gray,dotted] (p3.north west) rectangle (p3.south east) ;
-   \draw [gray,dotted] (p4.north west) rectangle (p4.south east) ;
-   \matrix [right=of pop,matrix of nodes,row sep=3mm,column sep=4mm] {
-      \node (s1) [nurse] {} ; &
-      \node (s2) [builder] {} ; \\
-      \node (s3) [groom] {} ; &
-      \node (s4) [chef] {} ; \\
+   \matrix (sam) [draw,right=of pop,matrix of nodes,row sep=3mm,column sep=4mm,fill=yellow!15] {
+      \node (s1) [pn,nurse] {} ; &
+      \node (s2) [pn,builder] {} ; \\
+      \node (s3) [pn,groom] {} ; &
+      \node (s4) [pn,chef] {} ; \\
    } ;
-   \draw [dotted,gray,->] (p1) -> (s1) ;
-   \draw [dotted,gray,->] (p2) -> (s2) ;
-   \draw [dotted,gray,->] (p3) -> (s3) ;
-   \draw [dotted,gray,->] (p4) -> (s4) ;
+   \begin{scope}[on background layer]
+      \node  [fit=(p1) (p1), sel]{};
+      \node  [fit=(p2) (p2), sel]{};
+      \node  [fit=(p3) (p3), sel]{};
+      \node  [fit=(p4) (p4), sel]{};
+   \end{scope}
+   \draw [ar] (p1) -> (s1) ;
+   \draw [ar] (p2) -> (s2) ;
+   \draw [ar] (p3) -> (s3) ;
+   \draw [ar] (p4) -> (s4) ;
+   \node [above of=pop,head,node distance=21mm] {Populasjon} ;
+   \node [above of=sam,head,node distance=12mm] {Utval} ;
+   \node (ds) [below of=sam,text=magenta,node distance=12mm,xshift=25mm] {Deskriptiv Statistikk} ;
+   \draw [ultra thick,magenta!50,->] (sam.east) -| (ds) ;
+   \draw [ultra thick,magenta!50,->] (sam.south) |- node [text=magenta,anchor=north] {Statistisk Inferens} ([yshift=-15mm]pop.east) ;
 \end{tikzpicture}
 \end{document}
