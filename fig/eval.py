@@ -13,43 +13,46 @@ def rotf(theta):
         [ np.sin(theta), np.cos(theta)  ],
       ] )
 
-rot1 = rotf( np.pi/5)
+def mkset(n,sigma1,sigma2,mu1,mu2,theta):
+   rot1 = rotf( theta )
+   x1 = (np.random.rand(n,1)+mu1)*sigma1
+   y1 = (np.random.rand(n,1)+mu2)*sigma2
+
+   return np.dot( np.hstack( [x1,y1] ), rot1 )
+
 n1 = 20
-x1 = np.random.rand(n1,1)*4
-y1 = (np.random.rand(n1,1)+0.4)*2
+xy1 = mkset( n1, 4, 2, 0, 0.4, np.pi/5 )
 z1 = np.zeros( [n1,1] )
 
-xy1 = np.dot( np.hstack( [x1,y1] ), rot1 )
-
-rot2 = rotf( np.pi/7)
 n2 = 21
-x2 = np.random.rand(n2,1)*3
-y2 = (np.random.rand(n2,1)-0.75)*4
+xy2 = mkset( n2, 3, 4, 0, -0.74, np.pi/7 )
 z2 = np.ones( [n2,1] )
-
-xy2 = np.dot( np.hstack( [x2,y2] ), rot2 )
 
 xy = np.vstack( [xy1,xy2] )
 z = np.vstack( [z1,z2] )
 
-lda = LinearDiscriminantAnalysis()  
-lda.fit(xy,z)
+def mklda(xy,z):
+   lda = LinearDiscriminantAnalysis()  
+   lda.fit(xy,z)
 
-x, y = lda.coef_.flatten()
-zz, = lda.intercept_
-beta = -zz/y
-alpha = -x/y
-def f(xx): return alpha*xx+beta
+   x, y = lda.coef_.flatten()
+   zz, = lda.intercept_
+   beta = -zz/y
+   alpha = -x/y
+   return lambda xx : alpha*xx+beta
+
+f = mklda(xy,z)
 
 xv = [-2, +4]
 yv = [ f(xx) for xx in xv ]
 
 
-scatter = plt.scatter(xy[:, 0], xy[:, 1], c=z)
+scatter = plt.scatter(xy1[:,0], xy1[:,1], color="blue" )
+scatter = plt.scatter(xy2[:,0], xy2[:,1], color="red" )
 
 ax = plt.gca()
 ax.set(xlabel="$x$", ylabel="$y$")
 
-ax.plot( xv, yv, "--" )
+ax.plot( xv, yv, "g--" )
 
 plt.savefig( "eval01.svg" )
