@@ -1,4 +1,6 @@
-# MÅL: Vi skal lære å hente data programmatisk!
+# 28.okt: Programmatisk innhenting av data
+
+## MÅL
 
 En skikkelig kjekk ting å kunne bruke python til er å hente inn data *programmatisk*.
 For å komme i gang med dette må vi:
@@ -10,16 +12,22 @@ For å komme i gang med dette må vi:
 
 Etter dette skal vi se nærmere på flere *web API* som lar oss hente inn data programmatisk
 
-
-
 ## Nettverksprotokoller og API
 
 - Vi tar en rask titt på disse slidsene -- trykk 'S' for å se «manuskriptet»:
-      - [Datakilder og nettverksprotokoller](https://jonajh.folk.ntnu.no/Datakilder%20og%20nettverksprotokoller/#/)
-      - [HTTP og WebAPI](https://jonajh.folk.ntnu.no/HTTP%20og%20Web-API/#/)
-- Video kan sees her:
-   - vid1
-   - vid2
+   - [Datakilder og nettverksprotokoller](https://jonajh.folk.ntnu.no/Datakilder%20og%20nettverksprotokoller/#/)
+   - [HTTP og WebAPI](https://jonajh.folk.ntnu.no/HTTP%20og%20Web-API/#/)
+
+### Video med eksempel:
+
+Slides om HTTP og WebAPI har en video under produksjon [her](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=180787ec-ec88-42af-98d4-b34e0096cff1)
+
+Det var litt sen informasjon om forelesning tirsdag og lavt oppmøte, så jeg gjorde et forsøk på opptak.
+Mikrofonen gikk dessverre tom for strøm midt første time, men vi fikk ladet den litt opp til andre time.
+
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
+	<iframe src="https://ntnu.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=17ea9a0a-69f8-4d4a-8705-b38400a0c41d&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=false&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="IIRA2001H25-Json-Protokoller-Requests"></iframe>
+</div>
 
 
 ## JSON, Python dictionaries og jsonstat
@@ -53,6 +61,8 @@ Vi trenger å ha litt kontroll på:
         - Vi burde bruke et programmeringsbibliotek til å bygge slik parametre
 
 
+
+
 ## Requests og pyjstat
 
 - Se egen jupyter notebook
@@ -64,7 +74,11 @@ Vi trenger å ha litt kontroll på:
 - Let gjennom eurostat og last inn noen interessante dataset programmatisk med `requests`
 - Se om du kan vaske og klargjøre dataene for videre behandling
 
-
 Ikke heng deg opp i analyse, øv i første omgang på å hente inn og klargjøre noen dataset.
 Jo flere jo bedre -- øvelse gjør mester, men prøv å lese inn minst 3
+
+Om du har tid å lyst kan du kanskje lage en funksjon `def hent_eurstatdata(tabellkode):` som automatisk henter den aktuelle tabellen fra eurostat med requests,
+leser den inn med `pyjstat`og returnerer et pandas dataframe
+
+
 
