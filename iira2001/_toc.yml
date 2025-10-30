@@ -50,9 +50,8 @@ parts:
      - file: new/medstudentvurdering
      - file: new/28okt
        sections:
-         - file: new/dicts-json-jsonstat.md
-         - file: new/requests.md
-          
+         - file: notebooks/dicts-json-jsonstat
+         - file: notebooks/requests
      - file: new/Statistikk og Maskinlæring
        sections:
         - file: notebooks/Evaluering for regresjon
