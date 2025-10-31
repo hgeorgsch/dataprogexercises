@@ -23,28 +23,10 @@ parts:
      - file: new/Ny start
        title: Oversikt
      - file: new/22sep
-       sections:
-        - file: notebooks/Fyrste dokument i Jupyter Lab
-        - file: notebooks/Simulering av kontantstraum
-        - file: notebooks/Fyrste datasett med CSV
-        - file: notebooks/Genetikk
-        - file: notebooks/Jordskjelv
      - file: new/29sep
-       sections:
-        - file: notebooks/Tilfeldigheit
-        - file: notebooks/Marknadssimulering
-        - file: notebooks/Halveringsmetoden
-        - file: notebooks/Shrimp-Game
-        - file: notebooks/Iskrem på ei strand
-        - file: new/Kundedata
      - file: new/refleksjonsseminar
      - file: new/14okt
        sections:
-        - file: notebooks/Arbeidsledige
-          sections:
-            - file: notebooks/Arbeidsledige og Konkursar
-            - file: notebooks/Tid og dato
-        - file: exercises/Eksportdata
         - file: notebooks/forelesning14okt2025
      - file: new/20okt
      - file: new/medstudentvurdering
@@ -58,6 +40,25 @@ parts:
         - file: notebooks/Evaluering
         - file: notebooks/Fisher Linear Discriminant in sklearn
         - file: notebooks/Linear Regression in SciKitLearn
+  - caption: Oppgåver        
+    chapters:
+     - file: Oppgåver
+       sections:
+        - file: notebooks/Fyrste dokument i Jupyter Lab
+        - file: notebooks/Simulering av kontantstraum
+        - file: notebooks/Fyrste datasett med CSV
+        - file: notebooks/Genetikk
+        - file: notebooks/Jordskjelv
+        - file: notebooks/Tilfeldigheit
+        - file: notebooks/Marknadssimulering
+        - file: notebooks/Halveringsmetoden
+        - file: notebooks/Shrimp-Game
+        - file: notebooks/Iskrem på ei strand
+        - file: new/Kundedata
+        - file: notebooks/Arbeidsledige
+        - file: notebooks/Arbeidsledige og Konkursar
+        - file: notebooks/Tid og dato
+        - file: exercises/Eksportdata
   - caption: Praktisk        
     chapters:
      - file: new/Mappevurdering
