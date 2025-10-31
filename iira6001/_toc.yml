@@ -26,8 +26,6 @@ chapters:
       - file: notebooks/Halveringsmetoden
     - file: CSV og Deskriptiv Statistikk
       sections:
-      - file: notebooks/Linear Regression in SciKitLearn
-      - file: notebooks/Evaluering for regresjon
       - file: notebooks/Genetikk
       - file: notebooks/Jordskjelv
       - file: notebooks/Tid og dato
@@ -48,16 +46,13 @@ chapters:
     - file: WebAPI
     - file: Statistikk og Maskinlæring
       sections:
-      - file: notebooks/Fisher Linear Discriminant in sklearn
-      - file: notebooks/Evaluering
-    - file: Klassifisering
+      - file: notebooks/Linear Regression in SciKitLearn
+      - file: notebooks/Evaluering for regresjon
+    - file: Klassifikasjon
       sections:
       - file: notebooks/Fisher Linear Discriminant in sklearn
       - file: notebooks/Evaluering
       - file: notebooks/Support Vector Machines
-    - file: Klassifisering-Kapittel
-      sections:
-      - file: Klassifisering
   - file: midway
   - file: second
   - file: closure
