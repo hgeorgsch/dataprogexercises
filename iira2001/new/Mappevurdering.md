@@ -35,9 +35,10 @@ Mappa skal bestå av fire dokument samt datafiler som vedlegg
        so treng ein ikkje ha med nedlasta versjon i tillegg.
 
 Inspera aksepterer berre éi fil i innleveringa (so vidt eg forstår) og 
-de må i so fall pakka alle dokumenta saman i ein 
-[pkZIP](https://i.ntnu.no/wiki/-/wiki/Norsk/%C3%85pne+og+pakke+zip-filer)-
-eller tar/gnuZIP-fil.
+de må i so fall pakka alle dokumenta saman i ein zip-fil
+(evt. tar/gnuZIP).
+Sjå [Åpne og pakke zip-filer](https://i.ntnu.no/wiki/-/wiki/Norsk/%C3%85pne+og+pakke+zip-filer[Åpne og pakke zip-filer) frå Orakeltenesta, om du
+ikkje har brukt slike filer før.
 
 **Bruk av Kunstig Intelligens (store språkmodellar).**
 Vurderinga legg vekt på at særleg refleksjonsnotatet er personleg og drøftar
