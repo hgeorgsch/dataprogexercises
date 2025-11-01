@@ -3,4 +3,5 @@
 *.jpg
 *.svg
 *.txt
+*.json
 .ipynb_checkpoints

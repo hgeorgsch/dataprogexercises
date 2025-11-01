@@ -9,7 +9,7 @@ Veke 7
 : [Klassifikasjon](Klassifikasjon)
 
 Veke 8
-: [Klyngeanalyse](Klyngeanalyse)
+: [Klyngeanalyse](Klyngeanalyse-Kapittel)
 
 Veke 9
 : [WebAPI](WebAPI) og JSON 
