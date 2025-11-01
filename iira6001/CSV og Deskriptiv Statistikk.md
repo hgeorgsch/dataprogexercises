@@ -40,7 +40,7 @@ tags:
     + Ulike plot: histogram/scatter/kakediagram
 	+ Eksporting plots
 + Oppgåver
-	+ [Arbeidsledige](Arbeidsledige) 
-	+ [Tid og dato](Tid%20og%20dato)
-	+ [Eksportdata](Eksportdata) requires extensive pre-processing to extract comparable data
+	+ [Arbeidsledige](notebooks/Arbeidsledige) 
+	+ [Tid og dato](notebooks/Tid%20og%20dato)
+	+ [Eksportdata](exercises/Eksportdata) requires extensive pre-processing to extract comparable data
     + [Genetikk](notebooks/Genetikk) demonstrerer korrelasjon m.m.

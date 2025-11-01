@@ -5,3 +5,4 @@
 *.txt
 *.json
 .ipynb_checkpoints
+datasets

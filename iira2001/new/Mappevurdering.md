@@ -1,8 +1,7 @@
 # Mappevurdering
 
-**Dette er eit utkast.  Endelig oppgåve og vurderingskriterium vert 
-fastsett etter drøfting i referansegruppa.**
-
++ **Dette er eit utkast.  Endelig oppgåve og vurderingskriterium vert 
+  fastsett etter drøfting i referansegruppa.**
 + **Frist** Sjå eksamensplan
 + **Innlevering** i Inspera
 
@@ -31,8 +30,6 @@ Mappa skal bestå av fire dokument samt datafiler som vedlegg
 + Som vedlegg må ein ha med alle filer som programma treng for å køyra,
   typisk CSV-filer.[^1]
 
-[^1]:  Dersom programmet hentar datasettet direkte frå nettet (over HTTP),
-       so treng ein ikkje ha med nedlasta versjon i tillegg.
 
 Inspera aksepterer berre éi fil i innleveringa (so vidt eg forstår) og 
 de må i so fall pakka alle dokumenta saman i ein zip-fil
@@ -82,6 +79,10 @@ Mappa vert vurdert som ein heilskap, og det er opp til kandidaten å velja ut op
 
 ## Kommentarar
 
+&nbsp;
+
+[^1]:  Dersom programmet hentar datasettet direkte frå nettet (over HTTP),
+       so treng ein ikkje ha med nedlasta versjon i tillegg.
 [^k]: Kommentar til koden treng ikkje vera kommentar *i* koden, men òg forklarande tekst markdown
       i Jupyter Notebook.  Det som er vesentleg er at Jupyter Notebook-dokumenta er skrivne slik
       at lesaren kan fylgja resonnementet rundt koden.
