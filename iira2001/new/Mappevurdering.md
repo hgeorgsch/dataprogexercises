@@ -39,8 +39,10 @@ Mappa skal bestå av fire dokument samt datafiler som vedlegg
 [^1]:  Dersom programmet hentar datasettet direkte frå nettet (over HTTP),
        so treng ein ikkje ha med nedlasta versjon i tillegg.
 
-Inspera aksepterer berre éi fil i innleveringa (so vidt eg forstår) og de må i
-so fall pakka alle dokumenta saman i ein pkZIP- eller tar/gnuZIP-fil.
+Inspera aksepterer berre éi fil i innleveringa (so vidt eg forstår) og 
+de må i so fall pakka alle dokumenta saman i ein 
+[pkZIP](https://i.ntnu.no/wiki/-/wiki/Norsk/%C3%85pne+og+pakke+zip-filer)-
+eller tar/gnuZIP-fil.
 
 **Bruk av Kunstig Intelligens (store språkmodellar).**
 Vurderinga legg vekt på at særleg refleksjonsnotatet er personleg og drøftar
