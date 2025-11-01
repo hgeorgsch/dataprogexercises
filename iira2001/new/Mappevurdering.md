@@ -1,8 +1,3 @@
----
-tags:
-  - assessment
-  - practical-info
----
 # Mappevurdering
 
 **Dette er eit utkast.  Endelig oppgåve og vurderingskriterium vert 
@@ -78,14 +73,23 @@ Mappa vert vurdert som ein heilskap, og det er opp til kandidaten å velja ut op
 | Aspekt       | Ikkje greidd (F/0)                                                                       | Greidd under tvil (E/1)                                                                           | Dugleg (C/3)                                                                                                                | Imponerande (A/5)                                                                              |
 | :----------- | :--------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------- |
 | Originalitet | Oppgåvene i mappa er kopi av kjende døme mest utan variasjon.                                 | Mappa inneheld enkle men tydelege variasjonar over utleverte øvingar og døme                                   | Mappa bruker gjennomgåtte teknikkar i nye kombinasjonar og på nye datasett, særleg i Del 2.                                 | Mappa viser stor variasjon og originalitet både i løysingsteknikkar og spørsmål.               |
-| Analyse      | Der er lite eller ingen kommentar til koden.                                             | Resultat er kommentert på ein fornuftig om ikkje innsiktsfull måte.                               | Mappa bruker resultat til å seia noko konstruktivt og nyttig om problemet, særleg i Del 2.                                  | Mappa viser kreativ og innsiktsfull analyse av resultata.                                      |
-| Teknisk nivå | Mappa viser ikkje tilstrekkelege teknikkar til å løyse meiningsfulle, praktiske problem. | Mappa viser kompetent bruk av python innanfor eitt av områda simulering og dataanalyse            | Mappa viser kompetent bruk av python innanfor båe områda simulering og dataanalyse                                          | Mappa viser stor breidd og djup forståing av teknikkar og konsept.                             |
+| Analyse      | Der er lite eller ingen kommentar til koden[^k].                                             | Resultat er kommentert på ein fornuftig om ikkje innsiktsfull måte.                               | Mappa bruker resultat til å seia noko konstruktivt og nyttig om problemet, særleg i Del 2.                                  | Mappa viser kreativ og innsiktsfull analyse av resultata.                                      |
+| Teknisk nivå | Mappa viser ikkje tilstrekkelege teknikkar til å løyse meiningsfulle, praktiske problem. | Mappa viser kompetent bruk av python innanfor eitt av områda simulering og dataanalyse            | Mappa viser kompetent bruk av python innanfor båe områda simulering[^s] og dataanalyse[^d]                                          | Mappa viser stor breidd og djup forståing av teknikkar og konsept.                             |
 | Kodekvalitet | Der er mykje feil i koden, og koden gjer ikkje det teksta seier.                    | Koden er korrekt, men vond for lesaren å forstå.                                                  | Koden er lesbar, med stort sett god bruk av variabelnamn og kommentarar, sjølv om nokon løysingar kan vera unødig tungvinte. | Koden er plettfri og lesarvenleg, med god bruk av effektive og enkle løysingar der det er råd. |
 | Refleksjon   | Refleksjon manglar.                                                                      | Kandidaten freister å sjå kurset i sin yrkes- eller studiekontekst, men refleksjonen vert knapp og overflatisk. | Kandidaten har gjort kursinnhaldet til sitt eige, og har konstruktive døme på praktisk verdi av kurset.                     | Kandidaten er kreativ og visjonær i sin refleksjon over framtidig nytte av kurset.             |
 
 
-## Kommentar til kriteria
+## Kommentarar
 
-+ Kommentar til koden treng ikkje vera kommentar *i* koden, men òg forklarande tekst markdown
-  i Jupyter Notebook.  Det som er vesentleg er at Jupyter Notebook-dokumenta er skrivne slik
-  at lesaren kan fylgja resonnementet rundt koden.
+[^k]: Kommentar til koden treng ikkje vera kommentar *i* koden, men òg forklarande tekst markdown
+      i Jupyter Notebook.  Det som er vesentleg er at Jupyter Notebook-dokumenta er skrivne slik
+      at lesaren kan fylgja resonnementet rundt koden.
+[^s]: Innanfor simulering er det venta at kandidaten som minimum kan bruka løkker,
+      vilkårssatsar (*if*) og variablar, typisk til å simulera prosessar som går over tid.  
+      Meir avanserte studentar vil gjerne bruka funksjonar til å forenkla koden og
+      klasser og objekt til agent-basert simulering.
+[^d]: Innanfor dataanalyse er det venta at kandidaten som minimum kan bruka henta inn, formattera
+      og plotta eksterne datasett og helst gjera enkle utrekningar på dei.
+      Der er mange tema som kan visa høgare måloppnåing, inkl. samanstilling av datasett frå
+      ulike kjelder, aggregering av data i større tidsintervall og klassifikasjon og regresjon med
+      maskinlæring.  Det er ikkje meininga at ein skal kunna alt, sjølv for toppkarakter.

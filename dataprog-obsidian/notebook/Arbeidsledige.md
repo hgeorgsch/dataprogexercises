@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.17.2
+    jupytext_version: 1.18.1
 kernelspec:
   name: dataprog
   language: python
@@ -282,6 +282,7 @@ def formatmonth(streng_inn):
 
 Me kan laga ein ny månadssøyle ved å *mappa* den gamle
 over denne funksjonen. slik
+
 ```{code-cell} ipython3
 df2["månad"] = df2["måned"].map(formatmonth)
 display( df2 )
@@ -296,14 +297,17 @@ ein greit overskriva den gamle søyla i staden for å laga ein ny.
 
 Søyla er framleis ein teiknstreng, men me kan omsetja han til ein
 periodeindeks, slik
+
 ```{code-cell} ipython3
 df2["månad"] = pd.PeriodIndex(df2["månad"], freq='M')
 df2 = df2.set_index('månad')
 display( df2 )
 ```
+
 Legg merke til at set månadssøyla som indeks, som då erstattar talindeksen
 i utlistinga.
 No kan me sjå om dette endrar plottet.
+
 ```{code-cell} ipython3
 df2["Arbeidsledige"].plot()
 ```
@@ -351,4 +355,3 @@ Plott tidsrekkja.  Ser resultatet rimeleg og korrekt ut?
 No har me to tidsrekkjer formattert i pandas.  Neste steg er samanlikning
 av dei to tidsrekkjene.  Dét tek me fatt på i eit nytt dokument om
 [Arbeidsledige og Konkursar](Arbeidsledige%20og%20Konkursar.ipynb).
-
