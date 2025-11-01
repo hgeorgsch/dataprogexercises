@@ -48,6 +48,7 @@ chapters:
       sections:
       - file: notebooks/Linear Regression in SciKitLearn
       - file: notebooks/Evaluering for regresjon
+      - file: notebooks/numpy
     - file: Klassifikasjon
       sections:
       - file: notebooks/Fisher Linear Discriminant in sklearn
