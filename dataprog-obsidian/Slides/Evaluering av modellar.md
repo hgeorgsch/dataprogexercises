@@ -29,8 +29,28 @@ Deskriptiv statistikk er relativt enkelt og beskrivelsene av utvalget er eksakte
 Statistisk inferens er mer utfordrende, fordi kunnskap om utvalget aldri gir eksakt kunnskap om populasjonen.
 
 ---
+<!-- slide template="[[tpl-diagram]]" -->
 
-Klassifisering med gode og dårlege utval
+![[eval01.svg]]
+
+note:
+Utval
+
+---
+<!-- slide template="[[tpl-diagram]]" -->
+
+![[eval02.svg]]
+
+note:
+Positiv test
+
+---
+<!-- slide template="[[tpl-diagram]]" -->
+
+![[eval03.svg]]
+
+note:
+Negativ test
 
 ---
 
