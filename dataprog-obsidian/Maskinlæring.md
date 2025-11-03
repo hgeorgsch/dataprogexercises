@@ -5,6 +5,7 @@ tags:
   - stub
 ---
 # Maskinlæring
+
 ## Førelesing
 	
 1. Notar til [[Om å læra frå data]]
