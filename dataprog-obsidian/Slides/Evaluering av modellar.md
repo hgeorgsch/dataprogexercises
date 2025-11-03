@@ -53,27 +53,46 @@ note:
 Negativ test
 
 ---
+<!-- slide template="[[tpl-quote]]" -->
 
-Testdata og treningsdata
+![[Training-and-validation-scheme-for-machine-learning-methods-The-database-is-split-and.png]]
+
+::: credit
+[Imbalzano *et al* 2022](https://www.mdpi.com/2077-0383/11/1/219)
+:::
 
 note:
-* For å anslå om modellen vår er god, eller om vi overtilpasser den, holder vi gjerne tilbake forskjellige subset av dataene våres:
-  * Vi kan feks trekkke ut tilfeldige 20% som ikke brukes til trening av modellen, men til å teste modellen etterpå
-* Ellers justerer man på parametre i modellen, forenkler data, straffer kompleksitet og mange andre "triks" for å lage gode modeller
+For å vurdere kvaliteten på modellen, holder vi gjerne tilbake en del av datasettet.
+Ofte fjerner man tilfeldig 20% av radene, som da ikke brukes til trening.
+Dette gir oss et lite datasett som i prinsippet er uavhengig av modellen.
+
+Slik har man et treningssett som brukes til å lave modellen, og tilpasse 
+vektene, og et treningssett som brukes til å teste hvor god modellen er.
 
 ---
-
-
-
-
-![https://www.researchgate.net/publication/357570421/figure/fig2/AS:11431281210648059@1702062985384/Training-and-validation-scheme-for-machine-learning-methods-The-database-is-split-and.tif](https://www.researchgate.net/publication/357570421/figure/fig2/AS:11431281210648059@1702062985384/Training-and-validation-scheme-for-machine-learning-methods-The-database-is-split-and.tif)
-
----
+<!-- slide template="[[tpl-quote]]" -->
 
 ![https://i0.wp.com/thaddeus-segura.com/wp-content/uploads/2021/06/Screen-Shot-2021-06-17-at-7.03.33-PM-1.png?resize=532%2C658&ssl=1](https://i0.wp.com/thaddeus-segura.com/wp-content/uploads/2021/06/Screen-Shot-2021-06-17-at-7.03.33-PM-1.png?resize=532%2C658&ssl=1)
 
+::: credit
+:::
+
 note:
-Best practice
+Ofte trener man flere forskjellige modeller og prøver seg frem med ulike
+design og varierer såkalte hyperparametre.  Da er det ikke nok å validere
+maskinlæringen, men òg det designet som vi tilpasser manuelt.
+
+Derfor er det vanlig å ha to testsett, gjerne kalt valideringssett og
+testsett.  Da bruker man valideringssettet til å evaluere hver enkelt
+modell som man trener, og når man er ferdig og velger den man synes er
+best, bruker man testsettet til å kontrollere at denne modellen faktisk
+er god nok.
+
+Merk at det er det samme prinsippet som ligger til grunn den automatiske
+maskinlæringen som tilpasser vektene i modelle og den modelle designprosessen
+som velger algoritme og tilpasser designparametrene.  I begge tilfeller 
+prøver vi oss frem til vi finner noe som passer med datasettet, og vi vet
+ikke om det generaliserer før vi tester på uavhengige data.
 
 ---
 
