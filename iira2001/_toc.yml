@@ -67,6 +67,7 @@ parts:
   - caption: Praktisk        
     chapters:
      - file: new/Mappevurdering
+     - file: new/Del 2 i mappa
      - file: new/Oblig1
      - file: new/Oblig2
 ###   - caption: "Stikkordsregister"

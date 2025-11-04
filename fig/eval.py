@@ -15,10 +15,11 @@ def rotf(theta):
 
 def mkset(n,sigma1,sigma2,mu1,mu2,theta):
    rot1 = rotf( theta )
-   x1 = (np.random.rand(n,1)+mu1)*sigma1
-   y1 = (np.random.rand(n,1)+mu2)*sigma2
+   x1 = (np.random.randn(n,1)+mu1)*sigma1
+   y1 = (np.random.randn(n,1)+mu2)*sigma2
 
-   return np.dot( np.hstack( [x1,y1] ), rot1 )
+   r = np.dot( np.hstack( [x1,y1] ), rot1 )
+   return r
 
 def mklda(xy,z):
     xy = np.vstack( xy )
@@ -33,7 +34,7 @@ def mklda(xy,z):
     alpha = -x/y
     return lambda xx : alpha*xx+beta
 
-def plotLDA(f,rng=(-2,+4),ax=None):
+def plotLDA(f,rng=(-20,+20),ax=None):
    xv = list(rng)
    yv = [ f(xx) for xx in xv ]
 
@@ -43,40 +44,59 @@ def plotLDA(f,rng=(-2,+4),ax=None):
    ax.plot( xv, yv, "g--" )
 
 n1 = 20
-xy1 = mkset( n1, 4, 2, 0, 0.4, np.pi/5 )
-z1 = np.zeros( [n1,1] )
+xy1a = mkset( n1, 5, 3.5, 0, 4.4, np.pi/5 )
+z1a = np.zeros( [n1,1] )
 
 n2 = 21
-xy2 = mkset( n2, 3, 4, 0, -0.74, np.pi/7 )
-z2 = np.ones( [n2,1] )
+xy1b = mkset( n2, 4, 6.2, 0, -2.74, np.pi/7 )
+z1b = np.ones( [n2,1] )
 
 
-f = mklda( [xy1,xy2], [z1,z2] )
+f = mklda( [xy1a,xy1b], [z1a,z1b] )
 
 plt.figure()
-scatter = plt.scatter(xy1[:,0], xy1[:,1], color="blue" )
-scatter = plt.scatter(xy2[:,0], xy2[:,1], color="red" )
-plotLDA(f,(-2,+4))
+scatter = plt.scatter(xy1a[:,0], xy1a[:,1], color="blue" )
+scatter = plt.scatter(xy1b[:,0], xy1b[:,1], color="red" )
+plotLDA(f)
 plt.savefig( "eval01.svg" )
 
-
-n2a = 2000
-xy2a = mkset( n2a, 4, 2, 0, 0.4, np.pi/5 )
-z2a = np.zeros( [n2a,1] )
-
-n2b = 2189
-xy2b = mkset( n2b, 3, 4, 0, -0.74, np.pi/7 )
-z2b = np.ones( [n2b,1] )
+n2a = 312
+n2b = 391
+xy2a0 = mkset( n2a, 5, 3.5, 0, 4.4, np.pi/5 )
+xy2b0 = mkset( n2b, 4, 6.2, 0, -2.74, np.pi/7 )
+xy2a = np.vstack( [ xy2a0, xy1a ] )
+xy2b = np.vstack( [ xy2b0, xy1b ] )
+z2a0 = np.zeros( [n2a,1] )
+z2b0 = np.ones( [n2b,1] )
+z2a = np.vstack( [z2a0,z1a] )
+z2b = np.vstack( [z2b0,z1b] )
 
 plt.figure()
 scatter = plt.scatter(xy2a[:,0], xy2a[:,1], color="blue" )
 scatter = plt.scatter(xy2b[:,0], xy2b[:,1], color="red" )
-plotLDA(f,(-2,+4))
+plotLDA(f)
 plt.savefig( "eval02.svg" )
 
 plt.figure()
 scatter = plt.scatter(xy2a[:,0], xy2a[:,1], color="blue" )
 scatter = plt.scatter(xy2b[:,0], xy2b[:,1], color="red" )
 f2 = mklda( [xy2a,xy2b], [z2a,z2b] )
-plotLDA(f2,(-2,+4))
+plotLDA(f2)
 plt.savefig( "eval02bis.svg" )
+
+n3a = 325
+n3b = 281
+xy3a0 = mkset( n3a, 9, 3.5, 0, 2.4, 0 )
+xy3b0 = mkset( n3b, 5, 2, -1, -1.24, 0 )
+xy3a = np.vstack( [ xy3a0, xy1a ] )
+xy3b = np.vstack( [ xy3b0, xy1b ] )
+z3a0 = np.zeros( [n3a,1] )
+z3b0 = np.ones( [n3b,1] )
+z3a = np.vstack( [z3a0,z1a] )
+z3b = np.vstack( [z3b0,z1b] )
+
+plt.figure()
+scatter = plt.scatter(xy3a[:,0], xy3a[:,1], color="blue" )
+scatter = plt.scatter(xy3b[:,0], xy3b[:,1], color="red" )
+plotLDA(f)
+plt.savefig( "eval03.svg" )
