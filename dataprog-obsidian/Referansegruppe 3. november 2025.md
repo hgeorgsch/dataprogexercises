@@ -28,6 +28,6 @@
 	1. **Tiltak**
 		1. [x]  Definer essay bedre
 		2. [x] Kommentar til markedsføring og hvordan de kan håndtere relevans
-		3. Kommentar om kommentarer (i kode og i *essay*)
+		3.  [x] Kommentar om kommentarer (i kode og i *essay*)
 		4. Gi skikkelig oppgavetekst til Del 2
 6.  Eventuelt.

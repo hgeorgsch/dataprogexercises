@@ -45,8 +45,9 @@ Del 1 fylgjer dei obligatoriske arbeidskrava, og skal fyrst og fremst
 visa minimumskompetansen.
 
 Det er viktig å merka seg at det vurderinga legg vekt på god forståing 
-og meiningsfull bruk av programkoden.  Det er ingen god idé å freista på
-ei oppgåve som er for vanskeleg. 
+og meiningsfull bruk av programkoden.  Det er ingen god idé å freista 
+ei oppgåve som er for vanskeleg.  Ein får meir igjen for å visa god
+forståing på eit enkelt problem.
 
 Del 2 skal gje rom for å visa meir djupna og yttergrensene for 
 læringsutbytet som er oppnådd i emnet.  Kandidaten lyt tenkja på kva
