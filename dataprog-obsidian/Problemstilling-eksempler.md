@@ -10,3 +10,6 @@ Problemstillingene ville vært gode utgangspunkt til deres essay i år også.
 * Student ønsker å undersøke om menn deltar mer i organisert idrett enn kvinner: Student laster inn spørreundersøkelse fra SSB om deltakelse i organisert og uorganisert trening, vasker og trekker ut data, visualiserer forskjellene og diskuterer resultat.
 * Student ønsker å undersøke målstatistikk til favorittlaget sitt: Henter data fra kaggle, leser inn og vasker data, trekker ut og aggregerer data og visualiserer seiersprosent på borte/hjemmebane, og gjennomsnittlig mål scoret på borte/hjemmebane
 * Student ønsker å undersøke sammenhengen mellom utdanningsnivå og fraflytting Nord-Norge: Student henter inn data fra SSB om utdanningsnivå og folketall for Bodø og 2 små kommuner, visualiserer utdanningsnivå og plotter prosentvis endring i innbyggertall for de tre kommunene. Drøfter resultater.
+
+
+Å komme på en ide til problemstilling er ikke lett -- ofte kan det være lurt å bla gjennom dataene for eksempel i statistikkbanken på ssb eller på kaggle.com, så kan det hende du ser noe interessant du kan utforske eller hente ut.
