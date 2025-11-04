@@ -58,3 +58,26 @@ strukturera han.
    til å ta det som Del 2a, og laga eit mindre arbeid til Del 1a/b.
 5. Delane i mappa vert ikkje vurdert separat.  Det er den samla kompetansen
    som er vist som tel.
+
+
+
+## Eksempler fra tidligere år
+
+I referansegruppemøte ble det uttrykt at det var vanskelig å vite omfang av mappeoppgavene, og hvor man lå an. 
+Vi lovde å gi noen eksempler fra tidligere år, og har sett litt på mappeinnleveringer fra 2024 med problemstillinger som har fungert godt til del 2.
+Opplegget var litt annerledes i fjor, studentene ble bedt om å levere en *rapport* og vurderingskriteriene er blitt endret i år.
+I tillegg skulle de levere 2 oppgaver i del 2, hvor begge var innen *dataanalyse* (dere kan gjøre en oppgave innen simulering, om dere vil). 
+I 1 av oppgavene *måtte* studentene også bruke data fra SSB
+
+Problemstillingene under var gode utgangspunkt for at studentene kunne vise forskjellige teknikker med Pandas eller bruk av webapi, 
+og la ofte et godt grunnlag for å trekke ut og diskutere og analysere resultat. 
+
+* Student har som mål å undersøke formel 1 seire: Student henter inn data gjennom et WebAPI, trekker ut og aggregerer data og lager tabulær og grafisk fremstilling av antall seire per lag, Gjennomsnittlige seire per år for de ulike lagene, og undersøker hvilke lag som bruker mercedes motor, og hvorvidt de har vunnet minst 1 gang
+* Student ønsker å undersøke om lønnen har økt i takt med boligprisene, og om det er store regionale forskjeller mellom Oslo og Møre og Romsdal: Student henter inn data fra SSB om lønnsutvikling og boligpriser, og visualiser kvadratmeterpris og månedslønn i ulike sammenstillinger. Til slutt lager studenten trendlinjer og sammenlikner stigningstall og drøfter resultater
+* Student ønsker å undersøke om menn deltar mer i organisert idrett enn kvinner: Student laster inn spørreundersøkelse fra SSB om deltakelse i organisert og uorganisert trening, vasker og trekker ut data, visualiserer forskjellene og diskuterer resultat
+* Student ønsker å undersøke sammenhengen mellom utdanningsnivå og fraflytting Nord-Norge: Student henter inn data fra SSB om utdanningsnivå og folketall for Bodø og 2 små kommuner, visualiserer utdanningsnivå og plotter prosentvis endring i innbyggertall for de tre kommunene. Drøfter resultater.
+* Student ønsker å undersøke målstatistikk til favorittlaget sitt: Henter data fra kaggle, leser inn og vasker data, trekker ut og aggregerer data og visualiserer seiersprosent på borte/hjemmebane, og gjennomsnittlig mål scoret på borte/hjemmebane
+
+
+
+
