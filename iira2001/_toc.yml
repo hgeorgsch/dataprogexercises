@@ -34,6 +34,11 @@ parts:
        sections:
          - file: notebooks/dicts-json-jsonstat
          - file: notebooks/requests
+     - file: new/3nov
+       sections:
+        - file: notebooks/WEBAPI
+        - file: notebooks/Multiindex
+        - file: notebooks/API-eksempel-sport
      - file: new/Statistikk og Maskinlæring
        sections:
         - file: notebooks/Evaluering for regresjon
