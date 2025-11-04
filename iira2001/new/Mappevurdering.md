@@ -12,21 +12,12 @@ over korleis dei er nyttige i praktisk virke.
 Mappa skal bestå av fire dokument samt datafiler som vedlegg
 + Del 1a ihht.  [](./Oblig1)  i Jupyter Notebook
 + Del 1b ihht.  [](./Oblig2)  i Jupyter Notebook
-+ Del 2a er ei større prosjektoppgåve etter eige val, der ein bruker 
-  programmeringsteknikkar for å få ny innsikt i eit problem frå røynda.
-  Problemstillinga må gjerne koma frå eige dagleg virke eller andre emne.
-    + Normalt er dette eit Jupyter Notebook-dokument.
-    + Studentar som skriv frittståande program kan levera ein pkZIP-fil
-      med programfilene (`.py`) og evt. andre filer det treng.
-      I dette tilfellet må refleksjonsnotatet (Del 2b) òg innehalda ei
-      forklaring på korleis programmet vert brukt og kva det gjer.
-      Dette inneber både ein instruksjon slik at sensor kan køyra programmet
-      sjølv og eit døme som viser korleis der har vore køyrd og korleis
-      utdata vert forstått.
-+ Del 2b.  Eit refleksjonsnotat (1-2 sider) i Jupyter Notebook eller PDF.
-    + Her skal kandidaten oppsummerer kurset og den verdien det har for studiet
-      og vidare virke, og også vurdera prosjektoppgåva og korleis ho er nyttig
-      og relevant.
++ [](./Del 2 i mappa) er ei større prosjektoppgåve etter eige val saman
+  med eit refleksjonsnotat over mappa og emnet som heilskap.
+    + Del 2a er sjølve prosjektoppgåva, anten i Jupyter Notebook
+      eller ei samling programfiler (.py).
+    + Del 2b er refleksjonsnotatet, anten i Jupyter Notebook eller
+      i PDF.
 + Som vedlegg må ein ha med alle filer som programma treng for å køyra,
   typisk CSV-filer.[^1]
 
@@ -35,56 +26,13 @@ og datafeilen saman i ein zip-fil (evt. tar/gnuZIP).
 Sjå [Åpne og pakke zip-filer](https://i.ntnu.no/wiki/-/wiki/Norsk/%C3%85pne+og+pakke+zip-filer[Åpne og pakke zip-filer) frå Orakeltenesta, om du
 ikkje har brukt slike filer før.
 
-## Oppgåve
-
 Mappa vert vurdert som ein heilskap ihht. vurderingskritera nedanfor,
 inkl. fotnotane.
 Kandidaten har ansvar for å visa at han kan gjera nytte av eit breidt
 utval av teknikkar og metodar som har vore presentert i kurset.
+Spesielt lyt ein velja ut Del 2 slik at han viser ting som ikkje er vist i Del 1.
 Del 1 fylgjer dei obligatoriske arbeidskrava, og skal fyrst og fremst
-visa minimumskompetansen.
-
-Det er viktig å merka seg at det vurderinga legg vekt på god forståing 
-og meiningsfull bruk av programkoden.  Det er ingen god idé å freista 
-ei oppgåve som er for vanskeleg.  Ein får meir igjen for å visa god
-forståing på eit enkelt problem.
-
-Del 2 skal gje rom for å visa meir djupna og yttergrensene for 
-læringsutbytet som er oppnådd i emnet.  Kandidaten lyt tenkja på kva
-kompetanse dei ikkje har vist i Del 1, og velja seg eit problem som 
-viser noko meir.   Studentar som har gjort eit stort arbeide til
-obligatorisk innlevering, kan vurdera å ta det vidare som Del 2, og
-gjera eit nytt og mindre arbeide til Del 1.
-
-Akkurat som i Del 1, kan Del 2 ta utgangspunkt i utleverte døme og oppgåver
-og variera dei etter eiga interesse, eller ein kan finna noko heilt for seg 
-sjølv.  
-
-Del 2 kan ta to ulike format.
-
-### Del 2 i Jupyter Notebook
-
-Dei fleste kandidatane bør arbeida med Del 2 som dei arbeidde med
-dei obligatoriske arbeidskrava.  
-Del 2a er eit då *essay* i same form som før, men treng ikkje refleksjon.
-Del 2b er ein refleksjon over mappa som heilskap (Del 1 og Del 2) og
-læringsutbytet frå emnet.
-
-### Del 2 som frittståande program
-
-På førelesing 17. november vil me drøfta korleis ein skriv 
-frittståande program og brukargrensesnitt vha. ein IDE.
-Studentar som ynskjer det, kan gjera dette i mappa.
-Dette er éin måte å visa breidare teknisk repertoire, men det er langt
-frå den einaste måten ein kan visa breidd til toppkarakter.
-
-Studentar som gjer dette leverer alle programfilene (.py) til programmet
-som Del 2a. 
-Del 2b må då innehalda både eit *essay* om Del 2a
-og refleksjon over mappa og læringsutbytet frå emnet.
-*Essayet* skal forklara både kva programmet gjer, kvifor det er verd å 
-gjera og korleis det er bygd opp.
-Tekniske detaljar er det som regel betre å skriva som kommentar i koden.
+visa minimumskompetansen.  Del 2 skal gje større rom for å imponera.
 
 ## Kva er eit *essay*?
 
