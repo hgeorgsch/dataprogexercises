@@ -28,6 +28,7 @@ Der vil koma fleire oppgåver i november.
     + [](notebooks/Arbeidsledige)
     + [](notebooks/Arbeidsledige%20og%20Konkursar)
 + Meir opne oppgåver i dataanalyse
+    + [](exercises/Kundedifferensiering)
     + [](notebooks/Iskrem%20på%20ei%20strand)
     + [](new/Kundedata)
     + [](exercises/Eksportdata)
