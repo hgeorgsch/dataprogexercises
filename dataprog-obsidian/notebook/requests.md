@@ -13,7 +13,7 @@ jupyter:
     name: python3
 ---
 
-# `requests` og `pyjstat`
+# requests og pyjstat
 
 
 ## MÅL: Hente data programmatisk

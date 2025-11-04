@@ -32,7 +32,7 @@ Mikrofonen gikk dessverre tom for strøm midt første time, men vi fikk ladet de
 
 ## JSON, Python dictionaries og jsonstat
 
-- Se egen jupyter notebook
+- Se egen jupyter notebook: [](../notebook/)
 
 
 ## URL
