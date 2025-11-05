@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.17.0
+    jupytext_version: 1.18.1
 kernelspec:
   name: dataprog
   language: python
@@ -85,7 +85,6 @@ Desse prinsippa er dei same for klassiske teknikkar som lineær regresjon
 og for nevrale nettverk og andre moderne maskinlæringsalgoritmar.
 Biblioteket `sklearn` er generisk og støtter heile spekteret av modellar.
 I denne øvinga bruker me lineær regresjon.
-
 
 +++
 
