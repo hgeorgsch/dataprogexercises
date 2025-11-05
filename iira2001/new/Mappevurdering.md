@@ -12,7 +12,7 @@ over korleis dei er nyttige i praktisk virke.
 Mappa skal bestå av fire dokument samt datafiler som vedlegg
 + Del 1a ihht.  [](./Oblig1)  i Jupyter Notebook
 + Del 1b ihht.  [](./Oblig2)  i Jupyter Notebook
-+ [](./Del 2 i mappa) er ei større prosjektoppgåve etter eige val saman
++ [](./Del%202%20i%20mappa) er ei større prosjektoppgåve etter eige val saman
   med eit refleksjonsnotat over mappa og emnet som heilskap.
     + Del 2a er sjølve prosjektoppgåva, anten i Jupyter Notebook
       eller ei samling programfiler (.py).
