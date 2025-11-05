@@ -58,6 +58,24 @@ Det tyder sjølvsagt ikkje at ein skal ta lett på koden.  Dette er eit kurs
 å bruka programmeringskode, men det skal helst vera eit kurs i bruka 
 programmeringskoden til noko nyttig og interessant.
 
+## Kva er refleksjon?
+
+Refleksjon i denne samanhengen er sjølvrefleksjon, dvs. eit kritisk blikk
+korleis du løyser oppgåva, kvifor du ynskjer å løysa ho, og kva du lærer av det.
+
+Det er viktig å bruka refleksjonen til å framheva læringsutbytet du har hatt
+gjennom arbeidet med oppgåva.  Målet med kurset er ikkje at de skal læra akkurat
+det som me har planlagt, men at de skal læra noko som vil vera nyttig for dykk.
+Av og til kjem det av ei utfordring litt på sida av planen, men det gjer det ikkje
+mindre verdifullt.  For å få uttelling for det som de har strevd med, so må de
+reflektera over utbytet dykkar.
+
+Likeeins er det viktig å framheva det som er verdifullt for dykk.  Sensuren skal
+leggja vekt på det som har verdi for dykk, og ikkje det som sensor finn verdifullt
+i si eiga kontekst.  Det tyder sjølvsagt ikkje at me kan gå utanom læringsutbyta
+i emneskildringa, men dei er vage nok til at de kan framheva på ulike ting i
+refleksjonen.
+
 ## Om Kunstig Intelligens og Juks
 
 (Med kunstig intelligens meiner me her store språkmodellar som ChatGPT.)
