@@ -31,6 +31,16 @@ Statistisk inferens er mer utfordrende, fordi kunnskap om utvalget aldri gir eks
 ---
 <!-- slide template="[[tpl-diagram]]" -->
 
+![[mlloan.svg]]
+::: credit
+:::
+
+note:
+Hva mener vi med en modell.
+
+---
+<!-- slide template="[[tpl-diagram]]" -->
+
 ![[eval01.svg]]
 
 note:
