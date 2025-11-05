@@ -15,9 +15,9 @@
 	    + Mer obligatorisk til neste år?
     + **Tiltak**
 	    + Lærebok/oppslagsbok om mulig
-	    + Anbefalt løype for studenter som fremdeles står på start
-	    + Dedikert øvelsestime for dem som henger efter
-	    + Kunngjøringer på epost
+	    + [x] Anbefalt løype for studenter som fremdeles står på start
+	    + [x] Dedikert øvelsestime for dem som henger efter
+	    + [ ] Kunngjøringer på epost
 3.  Innhold/pensum.  Er det relevant og nyttig?  Noe som mangler?
 	1. Trøbbel med å finne relevante CSV-filer
 	2. Trenger bredere utvalg av eksempler og datasett
