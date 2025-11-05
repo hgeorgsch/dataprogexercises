@@ -40,11 +40,6 @@ parts:
         - file: notebooks/Multiindex
         - file: notebooks/API-eksempel-sport
      - file: new/Statistikk og Maskinlæring
-       sections:
-        - file: notebooks/Evaluering for regresjon
-        - file: notebooks/Evaluering
-        - file: notebooks/Fisher Linear Discriminant in sklearn
-        - file: notebooks/Linear Regression in SciKitLearn
   - caption: Oppgåver        
     chapters:
      - file: Oppgåver
@@ -65,6 +60,11 @@ parts:
         - file: notebooks/Arbeidsledige og Konkursar
         - file: notebooks/Tid og dato
         - file: exercises/Eksportdata
+        - file: notebooks/numpy
+        - file: notebooks/Linear Regression in SciKitLearn
+        - file: notebooks/Evaluering for regresjon
+        - file: notebooks/Fisher Linear Discriminant in sklearn
+        - file: notebooks/Evaluering
   - caption: Praktisk        
     chapters:
      - file: new/Mappevurdering
