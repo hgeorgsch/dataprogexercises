@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.17.0
+    jupytext_version: 1.18.1
 kernelspec:
   name: dataprog
   language: python
@@ -30,7 +30,8 @@ vil måtte læra seg mykje meir om `numpy` og matriserekning.
 Hovudhensikta i `numpy` er matriserekning.  Dei som har lese litt
 matematikk veit at ein matrise er eit todimensjonalt system med
 talverdiar, t.d.
-$$ A = 
+
+$$A = 
 \begin{bmatrix}
    1{,}0 & 2{,}4 & 5{,}5 & 6{,}1 \\
    0 & 2{,}0 & 1{,}0 & 2{,}1 \\
@@ -45,7 +46,7 @@ A = np.array( [
    [ 0, 2.0, 1.0, 2.1 ],
    [ 1.2, 0, 0, 1.2 ]
    ] )
-print("Verdi:", A)
+print("Verdi:\n", A)
 print("Type:", type(A))
 ```
 
@@ -93,6 +94,8 @@ data = {'ColA': [10, 20, 30], 'ColB': [11, 21, 31]}
 df3 = pd.DataFrame(data)
 display(df3)
 ```
+
+Konvertering til `numpy` *array* ser då slik ut:
 
 ```{code-cell} ipython3
 B = df3.to_numpy()

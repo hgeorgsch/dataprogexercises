@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.17.0
+    jupytext_version: 1.18.1
 kernelspec:
   display_name: dataprog
   language: python
@@ -105,7 +105,7 @@ farge på punkta med `c`-argumentet.
 
 ::: {admonition} Oppgåve
 Kva gjer `ax.set`?  Og kva gjer `ax.legend`?
-(Kva skjer om du fjernar dei?
+(Kva skjer om du fjernar dei?)
 :::
 
 Det fyrste argumentet til `ax.legend` er sikkert vondt å forstå.
@@ -324,6 +324,10 @@ Der er to viktige ting som me ikkje har vist her:
 + Evaluering av modellen.
 Dette skal me koma tilbake til.
 
-+ Meir dokumentasjonen på klearn
++ Meir dokumentasjonen på sklearn
     +  [datasets.load_iris](https://scikit-learn.org/1.4/modules/generated/sklearn.datasets.load_iris.html#sklearn.datasets.load_iris "sklearn.datasets.load_iris")
     + [LinearDiscriminantAnalysis](https://scikit-learn.org/stable/modules/generated/sklearn.discriminant_analysis.LinearDiscriminantAnalysis.html)
+
+```{code-cell} ipython3
+
+```

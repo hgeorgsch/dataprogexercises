@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.17.0
+    jupytext_version: 1.18.1
 kernelspec:
   display_name: dataprog
   language: python
@@ -184,15 +184,3 @@ dårleg på testsettet.
 
 Difor skal de ta med dykk desse teknikkane og prøva dei ut på større
 og meir interessante datasett.
-
-```{code-cell} ipython3
-
-```
-
-```{code-cell} ipython3
-
-```
-
-```{code-cell} ipython3
-
-```
