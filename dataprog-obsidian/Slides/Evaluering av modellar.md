@@ -105,7 +105,58 @@ prøver vi oss frem til vi finner noe som passer med datasettet, og vi vet
 ikke om det generaliserer før vi tester på uavhengige data.
 
 ---
+<!-- slide template="[[tpl-twocolumn]]" -->
 
+::: leftimage
+![[mlloan.svg]]
+:::
+
+::: leftcredit
+:::
+
+::: rightimage
+![[Coin_Toss_(3635981474).jpg]]
+:::
+
+::: rightcredit
+By ICMA Photos - Coin Toss,
+CC BY-SA 2.0, via
+[Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=71147286)
+:::
+
+note:
+Sett nu at vi har en modell.  La oss si en modell for lånetilsagn.
+
++ Så sier jeg at denne har jeg testet.
++ Testane viser at vi tjener penger på 100% av tildelte lån.
++ Så sier jeg at jeg har testet på *to* lånesøknader.
+
+Hva tror du om testen?
+
+---
+
+<!-- slide template="[[tpl-twocolumn]]" -->
+
+::: leftimage
++ Faktisk feilsannsyn $p$
++ Sannsyn for rett svar $1-p$
++ Sannsyn for to rette testar $(1-p)^2$
+:::
+
+::: leftcredit
+:::
+
+::: rightimage
+# Til dømes
++ Faktisk feilsannsyn 50%
++ Sannsyn for rett svar 50%
++ Sannsyn for to rette testar 25%
+:::
+
+::: rightcredit
+:::
+
+note:
 Preposterous example.
 
 
