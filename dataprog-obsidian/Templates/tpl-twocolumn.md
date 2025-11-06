@@ -7,8 +7,8 @@
      font-size: 32pt ;
      text-transform: none;
   }
-  .reveal .twocolumnslide section img {
-     object-fit: contain   ;
+  .reveal .twocolumnslide img {
+     object-fit: contain   !important ;
      height: 600px ;
      border: none ;
      margin: 10px ;
