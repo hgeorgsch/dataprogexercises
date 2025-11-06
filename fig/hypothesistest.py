@@ -5,22 +5,36 @@ from scipy.stats import binom
 
 # Define the data
 n = 100
-m = int(n/5)
-x0 = list(range(m))
-y = binom.pmf(x0,n,0.05)
-x = np.array(x0)/n
+pe = 0.1
+sig = 0.05
 
-# Create the plot
-plt.plot(x, y, color='blue', label='$f(x)$')
+def mkplot(n,pe,sig,colour="blue"):
+   dist = binom(n,pe)
 
-# Fill the area under the curve
-# y2 defaults to 0 if not specified, filling down to the x-axis
-# plt.fill_between(x, y, color='lightblue', alpha=0.5) 
+   m = int(n*pe*2)
+   x0 = list(range(m))
+   y0 = dist.pmf(x0)
+   y = y0*n
+   x = np.array(x0)/n
 
-# Add labels and title
+   c0 = dist.ppf(sig)
+   p0 = dist.ppf(sig)/n
+   c1 = round(c0+1)
+   print( c0, p0 )
+
+   plt.plot(x, y, color=colour, label=f'$n={n}$')
+
+   plt.fill_between(x[:c1], y[:c1], color=colour, alpha=0.15) 
+
 plt.xlabel('Feilsannsyn')
 plt.ylabel('PDF')
-# plt.title('Area Under a Curve')
-# plt.legend()
 plt.grid(True)
+
+mkplot( 100, 0.1, 0.05 )
+plt.legend()
 plt.savefig( "hyp1.svg" )
+
+mkplot( 1000, 0.1, 0.05, colour="red" )
+mkplot( 10000, 0.1, 0.05, colour="green" )
+plt.legend()
+plt.savefig( "hyp2.svg" )
