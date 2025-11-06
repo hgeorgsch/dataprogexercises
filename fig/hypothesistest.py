@@ -1,7 +1,37 @@
+# ---
+# jupyter:
+#   jupytext:
+#     cell_metadata_filter: -all
+#     formats: ipynb,md:myst,py:percent
+#     text_representation:
+#       extension: .py
+#       format_name: percent
+#       format_version: '1.3'
+#       jupytext_version: 1.18.1
+# ---
+
+# %%
+# # Plots for Evaluation and Hypothesis Testing
+#
+# This script creates plot for the slides for one of the talks.
+# It is made available as examples and as a source of ideas, to
+# to showcase the constructions I use.
+
 import numpy as np
 import matplotlib.pyplot as plt
 
+# %%
+# We use `numpy` and `pyplot` as usual.
+# We also need the statistics package from `scipy`, but only
+# the binomial distribution, which is called `binom`.
+
 from scipy.stats import binom
+
+# %%
+# ## One experiment 
+# 
+# Imagine that we make one experiment
+
 
 # Define the data
 n = 100
@@ -24,6 +54,9 @@ def mkplot1(n,pe,sig=0.05,colour="blue"):
 mkplot1( 50, 0.1 )
 plt.savefig( "hyp0.svg" )
 plt.figure()
+
+# %%
+# ## Hypothesis testing
 
 def mkplot(n,pe,sig,colour="blue"):
    dist = binom(n,pe)
