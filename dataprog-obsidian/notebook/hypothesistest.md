@@ -6,7 +6,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.18.1
+    jupytext_version: 1.17.0
 kernelspec:
   display_name: dataprog
   language: python
@@ -151,7 +151,7 @@ Me kan visualisera dette i plottet vårt.
 plt.figure()
 c1 = int(c0)
 plt.plot(x, y, color="blue", label=f'$n={n}$')
-plt.fill_between(x[:c1], y[:c1], color="lightblue", alpha=0.15) 
+plt.fill_between(x[:c1], y[:c1], color="lightblue", alpha=0.5) 
 plt.xlabel('Feiltal')
 plt.ylabel('PDF')
 plt.xticks(range(0,20,2))

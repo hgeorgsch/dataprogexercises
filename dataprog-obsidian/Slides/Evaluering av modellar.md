@@ -176,10 +176,25 @@ Gjer me $n$ testart forventar me då $n\cdot p$ feil.
 $p_e=0.1$; $n=100$ testar
 :::
 
+note:
+Sett at me godtek 10% feil, og at me har 50 datapunkt å testa på.
+Hypotetisk kan me gå ut frå at systemet har feilsannsyn 0,1, og plotta sannsynsfordelinga for feiltalet når me testar på 50 datapunkt.
+
+Det ser slik ut.
+
+Ikkje uventa ligg tyngdepunktet på 5 feil, som svarer til 10% av 50 testar.  Det er om lag like sannsynleg å få fleire eller færre feil.  Om me observerer 4% feil, altso to feil, tyder ikkje det at feilsannsynet er 4%.  Det er faktisk 11% sannsyn for å sjå to eller færre feil når feilsannsynet er 10%.
+
 ---
 <!-- slide template="[[tpl-diagram]]" -->
 
 ![[hyp1.svg]]
+
+note:
+Når vi gjør en hypotesetest bestemmer vi et signifikansnivå, f.eks. 5%, og vi forkaster nullhypotesen når det observerte resultatet er mer usannsynlig enn signifikansnivået.
+
+Vi har merket dette i figuren.  Det lyseblå området har sannsynlighet under 5%.  Dvs. at hvis vi observerer null eller én feil, kan vi konkludere med at feillsannsynligheten er høyst 10%, på et signifikansnivå på 5%.  
+
+Problemet med hypotesetester er at vi trenger gode marginer for å konkludere med noe som helst. Vi begrenser risikoen for at vi stoler på et system som ikke er godt nok, men der er stor risiko for å forkaste et system som kunne vært brukt. I kritiske operasjoner, som f.eks. nye medisiner og vaksiner, er det nettopp slik vi vil ha det.
 
 ---
 <!-- slide template="[[tpl-diagram]]" -->
@@ -187,12 +202,17 @@ $p_e=0.1$; $n=100$ testar
 ![[hyp2.svg]]
 
 note:
-Binomialfordelinga
+Vi kan få mer presise tester hvis vi gjør flere forsøk.  Vi ser i figuren at dess større $n$ er, dess mer konsentrasjon for vi rundt forventet feiltall.  Da trenger ikke feilsannsynligheten være så mye mindre enn de postulerte 10% før det er mest sannsynlig at testen lar oss forkaste nullhypotesen.
+
+Den samme vurderingen gjelder om vi estimerer feilsannsynligheten.  Dess større $n$, dess mindre usikkerhet i estimatet.
 
 
 ---
 
 # Overlæring og underlæring
+
+note:
+Vi skal ta ett -- eller to -- begreper til: overlæring og underlæring.
 
 ---
 <!-- slide template="[[tpl-diagram]]" -->
@@ -218,3 +238,9 @@ Vi må da typisk unngå:
 Montesinos López, O.A., Montesinos López, A., Crossa, J. (2022). Overfitting, Model Tuning, and Evaluation of Prediction Performance. In *Multivariate Statistical Machine Learning Methods for Genomic Prediction*. Springer, Cham. 
 [doi:10.1007/978-3-030-89010-0_4](https://doi.org/10.1007/978-3-030-89010-0_4) (Open Access)
 :::
+
+---
+
+# Slutt
+
+note:
