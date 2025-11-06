@@ -1,4 +1,4 @@
-# 3. November: WebAPI og Pandas
+# 3. November WebAPI og Pandas
 
 I forrige time gikk vi gjennom prinsippene bak programmatisk innhenting av data i python.
 Denne skal vi se på hva et *Web-API* er, og vise praktisk bruk av pandas gjennom data fra disse.
@@ -19,6 +19,7 @@ Vi har vært gjennom mange av pandas-teknikkene dere trenger, det som gjenstår 
 I timen så vi kjapt på hvordan man setter seg inn i og bruker et WebAPI, og brukte [https://api-sports.io/]() som eksempel
 Jupyternotebook:
    * [](../notebooks/API-eksempel-sport)
+*Merk: jeg har endret API-nøkkelen så kontoen min ikke blir bannet -- dere må legge inn egen API-nøkkel (som vist i video) for å bruke programmet*
 
 Man refererer mye til dokumentasjon når man setter seg inn i webapi, og det kommer ikke godt frem når man bare leser koden fra timen,
 da er det kjekt med opptak fra gjennomgangen, men det gikk nok en gang tomt for strøm på mikrofonen underveis

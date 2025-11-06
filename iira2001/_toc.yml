@@ -71,6 +71,7 @@ parts:
      - file: new/Del 2 i mappa
      - file: new/Oblig1
      - file: new/Oblig2
+     - file: new/ekspresskurs
 ###   - caption: "Stikkordsregister"
 ###     chapters:
 ###       - file: genindex
