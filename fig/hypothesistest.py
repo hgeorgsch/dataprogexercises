@@ -8,6 +8,10 @@
 #       format_name: percent
 #       format_version: '1.3'
 #       jupytext_version: 1.18.1
+#   kernelspec:
+#     display_name: dataprog
+#     language: python
+#     name: dataprog
 # ---
 
 # %% [markdown]
@@ -33,7 +37,7 @@ from scipy.stats import binom
 
 # %% [markdown]
 # ## One experiment 
-# 
+#
 # Imagine that we make one experiment to test a classification model.
 # In the experiment, we make a number of trials, say $n=50$, and
 # for each trial we record either an error or a correct prediction.
@@ -126,7 +130,7 @@ dist.cdf(2)
 # T.d. kan me velja eit signifikansnivå på 5%, som vil seia at me forkastar $H_0$
 # dersom sannsynlegheita var høgst 5% for å få det observerte resultatet *eller*
 # noko mindre sannsynleg.
-# 
+#
 # Me kan finna terskelverdien med `ppf()`-funksjonen, slik:
 
 # %%
@@ -173,7 +177,7 @@ plt.savefig( "hyp1.svg" )
 # slil at me berre konkluderer når me har gode marginar.
 #
 # Me kan bøta på dette problemet ved å å gjera fleire testar.
-# 
+#
 # Lat oss fyrst definera ein funksjon for å teikna plottet.
 
 # %%
@@ -225,3 +229,4 @@ plt.savefig( "hyp2.svg" )
 # Det same prinsippet gjeld dersom du søkjer å estimera feilsannsynet $p_e$.
 # Di større $n$, di mindre usikkert vert estimatet.  Dersom du har lese
 # statistikk, kan det vera verd å rekna på kor stor $n$ du treng.
+
