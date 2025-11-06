@@ -8,6 +8,23 @@ n = 100
 pe = 0.1
 sig = 0.05
 
+def mkplot1(n,pe,sig=0.05,colour="blue"):
+   dist = binom(n,pe)
+
+   m = int(n*pe*2)
+   x = list(range(m))
+   y = dist.pmf(x)
+
+   plt.xlabel('Feiltal')
+   plt.ylabel('Sannsyn')
+
+   plt.xticks(range(0,m+1))
+   plt.plot(x, y, color=colour, label=f'$n={n}$')
+
+mkplot1( 50, 0.1 )
+plt.savefig( "hyp0.svg" )
+plt.figure()
+
 def mkplot(n,pe,sig,colour="blue"):
    dist = binom(n,pe)
 
@@ -26,7 +43,7 @@ def mkplot(n,pe,sig,colour="blue"):
 
    plt.fill_between(x[:c1], y[:c1], color=colour, alpha=0.15) 
 
-plt.xlabel('Feilsannsyn')
+plt.xlabel('Feilrate')
 plt.ylabel('PDF')
 plt.grid(True)
 
