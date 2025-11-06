@@ -1,4 +1,4 @@
-# 28.okt: Programmatisk innhenting av data
+# 28.okt Programmatisk innhenting av data
 
 ## MÅL
 
