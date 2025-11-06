@@ -30,7 +30,18 @@ from scipy.stats import binom
 # %%
 # ## One experiment 
 # 
-# Imagine that we make one experiment
+# Imagine that we make one experiment to test a classification model.
+# In the experiment, we make a number of trials, say $n=50$, and
+# for each trial we record either an error or a correct prediction.
+# The result of the experiment is the number $X$ of observed errors.
+#
+# Since the experiment depends on random events, $X$ is a stochastic
+# (that is random) variable.
+# we want to understand how this variable is distributed under different
+# True error rates $p_e$.
+#
+# We assume a particular error rate, say $p_e=0.1$, and try to model
+# probability distribution of the 
 
 
 # Define the data
