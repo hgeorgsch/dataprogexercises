@@ -7,7 +7,7 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.18.1
+#       jupytext_version: 1.17.0
 #   kernelspec:
 #     display_name: dataprog
 #     language: python
@@ -153,7 +153,7 @@ print( c0, n, pe )
 plt.figure()
 c1 = int(c0)
 plt.plot(x, y, color="blue", label=f'$n={n}$')
-plt.fill_between(x[:c1], y[:c1], color="lightblue", alpha=0.15) 
+plt.fill_between(x[:c1], y[:c1], color="lightblue", alpha=0.5) 
 plt.xlabel('Feiltal')
 plt.ylabel('PDF')
 plt.xticks(range(0,20,2))
@@ -197,7 +197,7 @@ def mkplot(fig,n,pe,sig,colour="blue"):
    print( c0, p0 )
 
    fig.plot(x1, y1, color=colour, label=f'$n={n}$')
-   fig.fill_between(x1[:c1], y1[:c1], color=colour, alpha=0.15) 
+   fig.fill_between(x1[:c1], y1[:c1], color=colour, alpha=0.25) 
 
 # %% [markdown]
 #
