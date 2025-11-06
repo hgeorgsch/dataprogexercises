@@ -23,7 +23,7 @@ Mappa skal bestå av fire dokument samt datafiler som vedlegg
 
 Inspera aksepterer berre éi fil i innleveringa  de må i so fall pakka alle dokumenta
 og datafeilen saman i ein zip-fil (evt. tar/gnuZIP).
-Sjå [Åpne og pakke zip-filer](https://i.ntnu.no/wiki/-/wiki/Norsk/%C3%85pne+og+pakke+zip-filer[Åpne og pakke zip-filer) frå Orakeltenesta, om du
+Sjå [Åpne og pakke zip-filer](https://i.ntnu.no/wiki/-/wiki/Norsk/%C3%85pne+og+pakke+zip-filer) frå Orakeltenesta, om du
 ikkje har brukt slike filer før.
 
 Mappa vert vurdert som ein heilskap ihht. vurderingskritera nedanfor,
@@ -130,6 +130,8 @@ Mappa vert vurdert som ein heilskap, og det er opp til kandidaten å velja ut op
       Det som er vesentleg er at Jupyter Notebook-dokumenta er skrivne slik
       at lesaren kan fylgja resonnementet rundt koden, og se både kvifor koden er
       der, korleis han verkar og kva han viser.
+      Kommentarane skal òg visa at kandidaten veit kva han gjer og at koden ikkje
+      er blindt kopiert frå KI eller andre kjelder. 
 [^s]: Innanfor simulering er det venta at kandidaten som minimum kan bruka løkker,
       vilkårssatsar (*if*) og variablar, typisk til å simulera prosessar som går over tid.  
       Meir avanserte studentar vil gjerne bruka funksjonar til å forenkla koden og
