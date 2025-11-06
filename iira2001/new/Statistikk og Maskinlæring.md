@@ -13,3 +13,6 @@
 	+ Konvertering mellom SciKitLearn og pandas
 	+ [Fisher Linear Discriminant in sklearn](notebooks/Fisher%20Linear%20Discriminant%20in%20sklearn)
 	+ [Evaluering av modellar](notebooks/Evaluering)
++ Kuriosa
+    + [Hypotesetesting](notebooks/hypothesistest) viser korleis plotta til førelesinga
+      vert laga og utdjuper resonnementet bak hypotesetesting.
