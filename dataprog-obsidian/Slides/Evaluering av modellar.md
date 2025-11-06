@@ -173,6 +173,19 @@ Verste fall gjev forventa feilrate $p$
 Gjer me $n$ testart forventar me då $n\cdot p$ feil.
 
 ---
+<!-- slide template="[[tpl-diagram]]" -->
+
+![[hyp0.svg]]
+
+---
+<!-- slide template="[[tpl-diagram]]" -->
+
+![[hyp1.svg]]
+
+---
+<!-- slide template="[[tpl-diagram]]" -->
+
+![[hyp2.svg]]
 
 Binomialfordelinga
 
