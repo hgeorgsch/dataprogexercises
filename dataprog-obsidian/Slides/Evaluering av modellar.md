@@ -105,7 +105,7 @@ prøver vi oss frem til vi finner noe som passer med datasettet, og vi vet
 ikke om det generaliserer før vi tester på uavhengige data.
 
 ---
-<!-- slide template="[[tpl-twocolumn]]" -->
+<!-- slide template="[[tpl-twocolumn]]" bg="white"-->
 
 ::: leftimage
 ![[mlloan.svg]]
@@ -135,26 +135,20 @@ Hva tror du om testen?
 
 ---
 
-<!-- slide template="[[tpl-twocolumn]]" -->
+| | Sannsyn |
+| :- | -: |
+| Feil | $p$ |
+| Rett svar | $1-p$ |
+| To rette testar | $(1-p)^2$ |
 
-::: leftimage
-+ Faktisk feilsannsyn $p$
-+ Sannsyn for rett svar $1-p$
-+ Sannsyn for to rette testar $(1-p)^2$
-:::
+---
 
-::: leftcredit
-:::
+| | Sannsyn | Døme |
+| :- | -: | -: |
+| Faktisk feilsannsyn | $p$ | 50% |
+| Sannsyn for rett svar | $1-p$ | 50% |
+| Sannsyn for to rette testar | $(1-p)^2$ | 25% |
 
-::: rightimage
-# Til dømes
-+ Faktisk feilsannsyn 50%
-+ Sannsyn for rett svar 50%
-+ Sannsyn for to rette testar 25%
-:::
-
-::: rightcredit
-:::
 
 note:
 Preposterous example.
@@ -162,12 +156,13 @@ Preposterous example.
 
 ---
 
-Hypotesetest
+# Hypotesetest
 
 $H_1$ Systemet svarer rett med sannsyn $> 1-p$
 
 $H_0$ Systemet svarer rett med sannsyn $\le 1-p$
 
+note:
 Verste fall gjev forventa feilrate $p$
 
 Gjer me $n$ testart forventar me då $n\cdot p$ feil.
@@ -176,6 +171,10 @@ Gjer me $n$ testart forventar me då $n\cdot p$ feil.
 <!-- slide template="[[tpl-diagram]]" -->
 
 ![[hyp0.svg]]
+
+::: credit
+$p_e=0.1$; $n=100$ testar
+:::
 
 ---
 <!-- slide template="[[tpl-diagram]]" -->
@@ -187,9 +186,13 @@ Gjer me $n$ testart forventar me då $n\cdot p$ feil.
 
 ![[hyp2.svg]]
 
+note:
 Binomialfordelinga
 
 
+---
+
+# Overlæring og underlæring
 
 ---
 <!-- slide template="[[tpl-diagram]]" -->

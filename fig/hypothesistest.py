@@ -85,6 +85,7 @@ plt.plot(x, y, color="blue", label=f'$n={n}$')
 plt.xlabel('Feiltal')
 plt.ylabel('Sannsyn')
 plt.xticks(range(0,20,2))
+plt.grid(True)
 plt.savefig( "hyp0.svg" )
 
 # %% [markdown]
@@ -136,7 +137,7 @@ dist.cdf(2)
 # %%
 sig = 0.05
 c0 = dist.ppf(sig)
-print( c0 )
+print( c0, n, pe )
 
 # %% [markdown]
 # Dette fortel oss at sannsynet for å få $X<2$ feil er mindre enn 5%.
@@ -181,22 +182,22 @@ plt.savefig( "hyp1.svg" )
 # Lat oss fyrst definera ein funksjon for å teikna plottet.
 
 # %%
-def mkplot(n,pe,sig,colour="blue"):
+def mkplot(fig,n,pe,sig,colour="blue"):
    dist = binom(n,pe)
 
    m = int(n*pe*2)
    x0 = list(range(m))
    y0 = dist.pmf(x0)
-   y = y0*n
-   x = np.array(x0)/n
+   y1 = y0*n
+   x1 = np.array(x0)/n
 
    c0 = dist.ppf(sig)
    p0 = dist.ppf(sig)/n
    c1 = round(c0+1)
    print( c0, p0 )
 
-   plt.plot(x, y, color=colour, label=f'$n={n}$')
-   plt.fill_between(x[:c1], y[:c1], color=colour, alpha=0.15) 
+   fig.plot(x1, y1, color=colour, label=f'$n={n}$')
+   fig.fill_between(x1[:c1], y1[:c1], color=colour, alpha=0.15) 
 
 # %% [markdown]
 #
@@ -208,17 +209,18 @@ def mkplot(n,pe,sig,colour="blue"):
 # Me denne funksjonen kan me raskt plotta for ulike verdiar av $n$
 
 # %%
+fig = plt.figure()
+ax = fig.gca()
 plt.xlabel('Feilrate')
 plt.ylabel('PDF')
-plt.grid(True)
+ax.grid(True)
 
-mkplot( 100, 0.1, 0.05 )
-plt.legend()
-plt.savefig( "hyp1.svg" )
+mkplot( ax, 100, 0.1, 0.05 )
+ax.legend()
 
-mkplot( 1000, 0.1, 0.05, colour="red" )
-mkplot( 10000, 0.1, 0.05, colour="green" )
-plt.legend()
+mkplot( ax, 1000, 0.1, 0.05, colour="red" )
+mkplot( ax, 10000, 0.1, 0.05, colour="green" )
+ax.legend()
 plt.savefig( "hyp2.svg" )
 
 # %% [markdown]
