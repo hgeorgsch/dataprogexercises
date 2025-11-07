@@ -28,5 +28,5 @@ tags:
 ## Øvingar
 
 + [[Klyngeanalyse]]
-+ [[Support Vector Machine]]
++ [[Support Vector Machines]]
 
