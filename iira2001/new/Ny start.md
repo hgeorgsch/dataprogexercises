@@ -19,7 +19,7 @@ to delar.
   bruksområde som de finn interessante innanfor faget som de elles studerer.
 
 Vurderingskriterium og annan utfyllande informasjon om mappa finst under
-[](../Mappevurdering).
+[](./Mappevurdering).
 
 ## Plan for Del 1.
 
