@@ -1,11 +1,14 @@
 ---
-tags:
-   - legacy/iif
-   - machine-learning
+jupytext:
+  formats: md:myst,ipynb
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.17.0
 ---
 
 # Klyngeanalyse
-
 
 ```{code-cell} ipython3
 import sklearn.cluster
@@ -53,8 +56,6 @@ plt.hist(kvinner_masse_liste, bins=20, alpha=0.5, label="Kvinner")
 plt.legend()
 plt.title("Vekt")
 plt.show()
-
-
 ```
 
 ```{code-cell} ipython3
@@ -143,4 +144,3 @@ df_test.dtypes
 ```{code-cell} ipython3
 
 ```
-
