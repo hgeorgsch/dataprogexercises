@@ -7,12 +7,12 @@
       [(Slides)](https://iirevu.org.ntnu.no/Slides/Om%20%c3%a5%20l%c3%a6ra%20fr%c3%a5%20data/)
     + Evaluering av modellar (kjem på måndag)
 + Øvingar og *tutorials*
-    + [numpy](notebooks/numpy)
-	+ [Lineær regresjon](notebooks/Linear%20Regression%20in%20SciKitLearn)
-	+ [Evaluering av regresjonsmodellen](notebooks/Evaluering%20for%20regresjon)
+    + [numpy](../notebooks/numpy)
+	+ [Lineær regresjon](../notebooks/Linear%20Regression%20in%20SciKitLearn)
+	+ [Evaluering av regresjonsmodellen](../notebooks/Evaluering%20for%20regresjon)
 	+ Konvertering mellom SciKitLearn og pandas
-	+ [Fisher Linear Discriminant in sklearn](notebooks/Fisher%20Linear%20Discriminant%20in%20sklearn)
-	+ [Evaluering av modellar](notebooks/Evaluering)
+	+ [Fisher Linear Discriminant in sklearn](../notebooks/Fisher%20Linear%20Discriminant%20in%20sklearn)
+	+ [Evaluering av modellar](../notebooks/Evaluering)
 + Kuriosa
-    + [Hypotesetesting](notebooks/hypothesistest) viser korleis plotta til førelesinga
+    + [Hypotesetesting](../notebooks/hypothesistest) viser korleis plotta til førelesinga
       vert laga og utdjuper resonnementet bak hypotesetesting.
