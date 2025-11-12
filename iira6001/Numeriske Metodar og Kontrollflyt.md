@@ -19,6 +19,8 @@ Me freistar å gje eit par forskjellige innfallsvinklar til kvart tema. Det typi
 	  [(Slides)](https://iirevu.org.ntnu.no/Slides/Imperativ%20programmering%20og%20maskinarkitektur)
 	+ [Kontrollflyt i Python](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=243a22cb-08aa-47c6-b4ea-b34f00849d91)
 	  [(Slides)](https://iirevu.org.ntnu.no/Slides/Kontrollflyt%20i%20Python)
+        + Føredraget bruker [Python Tutor](https://pythontutor.com/) som du òg
+          kan prøva ut sjølv.
     + [Exact Instructions Challenge](https://www.youtube.com/watch?v=cDA3_5982h8) ved Josh Darnit
     + [Kva er ein algoritme?](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=c4f223ea-4958-4c1c-b2ac-b3670162feef)
       [(Slides)](https://iirevu.org.ntnu.no/Slides/Kva%20er%20ein%20algoritme%3f/)

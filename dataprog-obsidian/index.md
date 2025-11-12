@@ -3,6 +3,7 @@ title: Utkast til læringsmateriale i data og programmering
 tags:
   - MOC/index
 ---
+Andreas: andreas.h.schille@ntnu.no
 
 + [[Project Management]] (budsjett og rekneskap)
 + [[Praktiske tips og tekniske løysingar]]
