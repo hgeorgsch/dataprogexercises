@@ -65,7 +65,7 @@ Vi har aldri hørt så mye om simulering som vi gjorde under koronapandemien.
 
 Folkehelseinstituttet brukte matematiske modeller for smittespredning, og kjørte simuleringer for å forutsi forventet smittespredning ved ulike regimere, med énmeters- eller tometersregler, og ulike maksgrenser for antall gjester på en samling.
 
-Datasimuleringer kan håndtere langt mer komplekse regler og spille langt flere trekk enn vi kan i spill som senet og sjakk, og dermed kan simuleringene bli meget realistiske.
+Datasimuleringer kan håndtere langt mer komplekse regler og spille langt flere trekk enn vi kan i spill som senet og sjakk, og dermed er det mulig å lave meget realistiske simuleringe. Det er ikke enkelt, og det krever både fagkompetanse i domenet som skal simuleres, og teknisk og matematisk kompetanse.
 
 ---
 
@@ -82,7 +82,6 @@ note:
 Simulering blir også brukt i mange slags økonomiske fagfelt og planarbeid.
 Markedssimuleringer kan brukes for å teste mulige produktendringer eller mulige lovendringer.
 Demografiske simuleringer gjør det mulig å kartlegge behov for skoler og sykehjem i fremtiden.
-
 I finansnæringer kan vi studere mulige rentebaner o.l.
 
 ---
@@ -97,7 +96,7 @@ via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=81083269
 :::
 
 note:
-Forutsetningen for at simuleringen skal være nyttig er at vi kan leve oss inn i den virkeligheten som simuleringen skal efterligne.
+Forutsetningen for at simuleringen skal være nyttig er at vi kan leve oss inn i den virkeligheten som simuleringen skal efterligne. Vi må ha en forestilling om hva som er mulig og hva som er sannsynlig hypotetiske situasjoner. Hvis vi ikke tror på resultatet av simuleringen, kan vi ikke bruke det.
 
 ---
 
@@ -111,7 +110,6 @@ via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=3226060)
 :::
 
 note:
-
 Ludo er og blir et barnespill, fordi vi ikke klarer å leve oss inn i historien til familien som skal rømme fra fengselet og komme hjem uten å bli fakket. Om det er fordi reglene er for enkle eller fantasien vår for dårlig, kan sikkert diskuteres.
 
 ---
@@ -120,7 +118,7 @@ Ludo er og blir et barnespill, fordi vi ikke klarer å leve oss inn i historien 
 
 note:
 Sparekalkulatoren som vi har jobbet med i dette kurset er på sett og vis en simulator.
-
+Ved å se for oss saldoen på kontoen, og transaksjonene år for år, eller dag for dag, blir modellen konkret og enkel å eftergår, selv uten å skjønne den matemtiske teorien for geometriske rekker.
 
 ---
 
@@ -154,6 +152,23 @@ print(saldo)
 
 note:
 Skal vi simulere en lengre periode, trenger vi en løkke som itererer år for år og legger til rentene hvert år.
+
+
+---
+
+| Dato | Tekst | Endring | Saldo |
+| 1. jan. 2025 | Sparing | +1000 | 1000 |
+| 31. des. 2025 | Sparing | +4%$\cdot$1000 | 1040 |
+| 1. jan. 2026 | Sparing | +1000 | 2040 |
+| 31. des. 2025 | Sparing | +4%$\cdot$2040 | 2136 |
+| 1. jan. 2027 | Sparing | +1000 | 3136 |
+
+note:
+De aller fleste simuleringer handler om prosesser som går over tid.
+Uten snarveier for å spå fremtiden, beregner vi hver eneste lille hendelse som skjer, tidspunkt for tidspunkt.
+
+Selvsagt vil ikke alle simuleringer være like enkle og presise som sparekalkulatoren.
+Vi må ofte forenkle og definere *omtrentlig* hva vi forventer i hver periode, men ved å brekke problemet opp i mindre, tidfestede hendelser, blir det likevel enklere å forstå og å argumentere for. 
 
 ---
 
