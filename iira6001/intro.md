@@ -20,18 +20,18 @@ mellom samlingane.
 Mange av sidene i denne boka er *tutorials* som du kan lasta ned
 og køyra i *Jupyter notebook*.  Bruk nedlastingsknappen oppe til
 høgre og sjå om du får `ipynb` som eit val.  Du må sjølvsagt
-òg installera *Python* og *Jupyter notebook*
+òg installera *Python* og *Jupyter Lab*
 (sjå [installasjon](Installasjon)).
 
-Opplegget byggjer på ein erfaring om at programmering sjelden handlar
+Opplegget byggjer på erfaringa at programmering sjelden handlar
 om å hugsa kommandoar og syntaks for å skriva heile programmet frå botnen.
 Programmering i praksis handlar langt oftare om å søkja opp gode døme og
 tilpassa dei til eigne behov.
 Dei fleste oppgåvene, særleg i starten, handlar difor om å lesa, testa
 og modifisera kode.
-Dette gjev eit anna perspektiv enn typiske lærebøker
+Dette gjev eit anna perspektiv enn typiske lærebøker.
 
-Målet med kurset er å gjera programmering og *Jupyter notebook*
+Målet med kurset er å gjera programmering og *Jupyter Lab*
 til nyttige verkty for deg som arbeider med taldata til vanleg.
 Når du løyser oppgåver skal du difor ikkje tenkja so mykje på om
 du klarer det som læraren hadde tenkt på førehand, men om løysinga
@@ -41,5 +41,8 @@ Denne boka er eit levande dokument.  Det vert retta og utvida etter
 behov i laupet av kurset.  Dersom der er noko som er for dårleg (evt.
 feil) forklart, er det berre å gje eit ord, og so fiksar me det.
 
-Annan praktisk informasjon
-+ [Mappevurdering](Mappevurdering)
+Sluttvurderinga, som gjev grunnlag for studiepoeng og karakter,
+er ei [Mappevurdering](Mappevurdering), der kvar og ein vel ut
+eit par oppgåver som dokumenterer kva dei har lært og tek med
+seg vidare.  Éi av desse oppgåvene må ein presentera og drøfta
+med resten av deltakarane på midtvegssamlinga.
