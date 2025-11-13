@@ -21,7 +21,7 @@ i marknadsføring.
 Det er naturleg å utvida marknadssimuleringa med kundar i ulike segment og
 med varar i ulike kategoriar med ulik priselastisitet.
 Det kan vera fornuftig å bruka objektorientert programmering slik som me
-gjorde i [Shrimp Game](/notebooks/Shrimp%20Game), men det er råd å klara 
+gjorde i [Shrimp Game](/notebooks/Shrimp-Game), men det er råd å klara 
 seg utan, so lat oss sjå på det fyrst.
 
 ## Primitiv løysing
@@ -55,7 +55,7 @@ og ein på Navarseter.
 ## Agent-basert løysing
 
 Før du går i gong med ein agent-basert løysing
-[Shrimp Game](/notebooks/Shrimp%20Game).
+[Shrimp Game](/notebooks/Shrimp-Game).
 
 ::: {admonition} Oppgåve
 Definer ei klasse for vare. 

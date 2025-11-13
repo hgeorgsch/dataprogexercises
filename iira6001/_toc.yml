@@ -33,6 +33,7 @@ chapters:
         sections:
          - file: notebooks/Arbeidsledige og Konkursar
       - file: exercises/Eksportdata
+    - file: Samanlikna Datasett
     - file: Veke 3 Simulering
       sections:
       - file: Datastrukturar og Kompleksitet
@@ -43,12 +44,17 @@ chapters:
       sections:
       - file: notebooks/Shrimp-Game
       - file: notebooks/Iskrem på ei strand.ipynb
+      - file: notebooks/Kundedifferensiering
     - file: WebAPI
+      sections:
+      - file: notebooks/requests
+      - file: notebooks/WEBAPI
     - file: Statistikk og Maskinlæring
       sections:
       - file: notebooks/Linear Regression in SciKitLearn
       - file: notebooks/Evaluering for regresjon
       - file: notebooks/numpy
+      - file: notebooks/hypothesistest
     - file: Klassifikasjon
       sections:
       - file: notebooks/Fisher Linear Discriminant in sklearn
@@ -56,4 +62,11 @@ chapters:
       - file: notebooks/Support Vector Machines
   - file: midway
   - file: second
+    sections:
+    - file: Klyngeanalyse-Kapittel
+      sections:
+      - file: notebooks/Klyngeanalyse
+      - file: notebooks/Kundesegmentering
+    - file: Spyder
+    - file: Sikkerheit
   - file: closure
