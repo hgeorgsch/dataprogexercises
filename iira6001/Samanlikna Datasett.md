@@ -16,7 +16,7 @@ tags:
 + *Demovideo*
 
 + Oppgåver
-	+ [Samanlikning av tidsrekkjer](notebooks/Arbeidsledige%20og%29Konkursar) 
+	+ [Samanlikning av tidsrekkjer](notebooks/Arbeidsledige%20og%20Konkursar) 
     + [Jordskjelvdata](notebooks/Jordskjelv) som demonstrerer animasjon og plotting oppå kart.
 
 + [ ] Oppgåve: Korrelasjonskoeffisient med forskjøvede data (til arbeidsledige)
