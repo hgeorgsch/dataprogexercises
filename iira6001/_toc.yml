@@ -60,6 +60,7 @@ chapters:
       - file: notebooks/Fisher Linear Discriminant in sklearn
       - file: notebooks/Evaluering
       - file: notebooks/Support Vector Machines
+      - file: notebooks/Yolo First Tutorial
   - file: midway
   - file: second
     sections:
