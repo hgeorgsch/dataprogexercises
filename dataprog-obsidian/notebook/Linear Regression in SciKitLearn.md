@@ -238,15 +238,40 @@ ei liste av lister.  Grunnen er at `predict` kan predikare for mange $x$-verdiar
 (søyler).
 :::
 
-Me kan plotta prediksjonsmodellen ved å predikera nokre verdier, slik:
+Me kan plotta prediksjonsmodellen ved å predikera nokre verdier.
+Me kan predikera for fleire $x$-verdiar vha. listekomprehensjon, slik vi har gjort før.
+Det kan se slik ut:
+
+```{code-cell} ipython3
+xv = [ -0.1, 0, 0.1, 0.15 ]
+yv = [ reg.predict([[x]]) for x in xv ]
+print( xv )
+print( yv )
+```
+
+Det er derimot meir effektivt å gje `predict()`-metoden alle $x$-verdiane samla.
+Det kan me få til med *numpy arrays*, men det er litt tricky.
+Kvar $x$-verdi må vera ein *rad* i *array*en.  Dvs. me må ha ein 2D-*array* med éi søyle.
+Om modellen hadde teke fleire variablar inn, ville me hatt fleire søyler.
+Dette får me til slik.
+
+```{code-cell} ipython3
+xv = np.array( [ xv ] ).T
+yv = reg.predict( xv )
+print( xv )
+print( yv )
+```
+
+Den fyrste lina krev forklaring.  Me lagar fyrst ein 2D-*array* frå ei liste av lister.
+Her er `xv` ei liste, og `[ xv ]` ei liste som inneheld ei liste, som vert éin rad i *array*en.
+Deretter transponerer me matrisa med `.T`-operatoren, slik at den eine raden vert ei søyle.
+No har med `xv` og `yv` som me kan plotta som fylgjer.
+Det speler inga rolle for `plot()` at det eine er ein søylevektor og det andre ein rekkjevektor.
 
 ```{code-cell} ipython3
 ax = plt.subplot()
 scatter = ax.scatter( x, y )
 ax.set(xlabel="$x$", ylabel="$y$")
-
-xv = [ -0.1, 0, 0.1, 0.15 ]
-yv = [ f(x) for x in xv ]
 ax.plot( xv, yv, "r:" )
 ```
 

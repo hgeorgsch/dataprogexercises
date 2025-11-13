@@ -6,7 +6,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.17.0
+    jupytext_version: 1.18.1
 kernelspec:
   display_name: dataprog
   language: python
@@ -21,7 +21,7 @@ to showcase the constructions I use.
 
 Sorry for the lanague mix; this is quick and dirty work.
 
-```{code-cell}
+```{code-cell} ipython3
 import numpy as np
 import matplotlib.pyplot as plt
 ```
@@ -30,7 +30,7 @@ We use `numpy` and `pyplot` as usual.
 We also need the statistics package from `scipy`, but only
 the binomial distribution, which is called `binom`.
 
-```{code-cell}
+```{code-cell} ipython3
 from scipy.stats import binom
 ```
 
@@ -51,7 +51,7 @@ probability distribution of $X$.
 
 We define the constants $n$ and $p_e$ as suggested above.
 
-```{code-cell}
+```{code-cell} ipython3
 n = 50
 pe = 0.1
 ```
@@ -60,7 +60,7 @@ Feiltalet $X$ vil vera binomialfordelt.  Me treng ikkje gå inn på kva det
 tyder, men om du har lese statistikk, kjenner du kanskje omgrepet.
 Me definerer denne fordelinga, med parametra våre.
 
-```{code-cell}
+```{code-cell} ipython3
 dist = binom(n,pe)
 ```
 
@@ -70,7 +70,7 @@ og andre eigenskapar ved fordelinga.
 Me vil fyrst plotta sannsynsfordelinga eller PMF (*Probability Mass Function*).
 Lat oss plotta for $x$-verdiar opp til 20 feil.
 
-```{code-cell}
+```{code-cell} ipython3
 x = range(20)
 y = dist.pmf(x)
 ```
@@ -78,7 +78,7 @@ y = dist.pmf(x)
 Her er $y$-verdiane rekna us som sannsynstettheiten frå `dist`-objektet vårt,
 og me kan plotta `y`, slik.
 
-```{code-cell}
+```{code-cell} ipython3
 plt.plot(x, y, color="blue", label=f'$n={n}$')
 plt.xlabel('Feiltal')
 plt.ylabel('Sannsyn')
@@ -92,7 +92,7 @@ til 10% ($p_e$) av $50$ ($n$).
 Det som er verd å merka seg er at det ikkje er usannsynleg å få to eller færre feil.
 Me kan rekna ut dette kjapt med CDF-funksjonen (*Cummulative Density Function*)
 
-```{code-cell}
+```{code-cell} ipython3
 dist.cdf(2)
 ```
 
@@ -132,7 +132,7 @@ noko mindre sannsynleg.
 
 Me kan finna terskelverdien med `ppf()`-funksjonen, slik:
 
-```{code-cell}
+```{code-cell} ipython3
 sig = 0.05
 c0 = dist.ppf(sig)
 print( c0, n, pe )
@@ -147,7 +147,7 @@ Med dette signifikansnivået kan me altso berre forkasta nullhypotesen når
 me observerer null eller éin feil.
 Me kan visualisera dette i plottet vårt.
 
-```{code-cell}
+```{code-cell} ipython3
 plt.figure()
 c1 = int(c0)
 plt.plot(x, y, color="blue", label=f'$n={n}$')
@@ -179,7 +179,7 @@ Me kan bøta på dette problemet ved å å gjera fleire testar.
 
 Lat oss fyrst definera ein funksjon for å teikna plottet.
 
-```{code-cell}
+```{code-cell} ipython3
 def mkplot(fig,n,pe,sig,colour="blue"):
    dist = binom(n,pe)
 
@@ -198,7 +198,6 @@ def mkplot(fig,n,pe,sig,colour="blue"):
    fig.fill_between(x1[:c1], y1[:c1], color=colour, alpha=0.15) 
 ```
 
-
 ::: {admonition} Merknad
 Me har skalert $x$ og $y$ med en faktor på $n$, slik at me får feilratar
 (mellom 0 og 1) i staden for feiltal (mellom 0 og $n$).
@@ -206,7 +205,7 @@ Me har skalert $x$ og $y$ med en faktor på $n$, slik at me får feilratar
 
 Me denne funksjonen kan me raskt plotta for ulike verdiar av $n$
 
-```{code-cell}
+```{code-cell} ipython3
 fig = plt.figure()
 ax = fig.gca()
 plt.xlabel('Feilrate')
