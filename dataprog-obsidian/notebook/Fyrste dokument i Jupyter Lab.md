@@ -24,9 +24,34 @@ kernelspec:
 
 Programmering er mykje rart. Folk som bruker programvareutvikling bruker gjerne andre verkty enn dei som programmerer matematiske modellar eller statistiske analysar. Målet med *dette* kurset er å bruka store datasett til å forstå verda, gjennom statistiske analysar, visualisering eller simulering. Mange bruker allereie rekneark til denne jobben, men mange nyttige datasett er for store til å lasta dei i rekneark, og då treng ein andre verkty.
 
-I denne samanhengen er *Jupyter Notebook*, som dette dokumentet er skrive i, eit nyttig verkty. Her kan me kombinera tekst, programkode og utdata frå programmet i eitt og same dokument, slik at det er lett å sjå kva som foregår.
+I denne samanhengen er *Jupyter Lab*, som dette dokumentet er skrive i, eit nyttig verkty. Her kan me kombinera tekst, programkode og utdata frå programmet i eitt og same dokument, slik at det er lett å sjå kva som foregår.
 
-Eit dokument er delt opp i to typar celler som du skriv, samt utdata-celler.  Denne teksta er ei *markdown*-cellae, som me bruker til tekst.  I tillegg kan me skriva kode-celler, som den fylgjande.
+::: {admonition} Oppgåve
+Når du les dette, bør du lasta ned heile dokumentet i Jupyter-format og opna det
+Jupyter Lab.
+I nedlastingsmenyen øvst på sida, vel du `.ipynb`, som er filendinga Jupyter bruker.
+Lasta ned denne sida og opna dokumentet i Jupyter Lab.
+:::
+
+::: {hint}
+Det er ikkje alltid heilt trivielt å opna eit Jupyter-dokument på Windows
+og MacOS.
+Det hender at vevlesaren endrar namnet slik at det sluttar på `.txt`, og då
+kjenner ikkje Jupyter Lab det att.
+
+Det enklaste plar vera å bruka filnavigatøren på venstre hand i Jupyter Lab.
+Kontekstmenyen (høgreklikk på filnamnet) gjev et val for *rename*, der du 
+kan endra filnament slik at det sluttar på `.ipynb`.  
+Når det er gjort, kan du dobbelklikka for å opna det i Jupyter Lab.
+:::
+
+Eit dokument er delt opp i to typar celler som du skriv, samt utdata-celler.
+Du kan dobbelklikka på ei celle for å redigera innhaldet, og du kan køyra
+ho med *play*-knappen øvst på sida.
+Der finst hurtigtastar som ein kan slå opp.
+
+Denne teksta er ei *markdown*-cellae, som me bruker til tekst.
+I tillegg kan me skriva kode-celler, som den fylgjande.
 
 ```{code-cell} ipython3
 print( "Hello World!" )
