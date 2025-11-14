@@ -8,10 +8,12 @@
 		+ Fire vindauga (minimum): Kode - Utdata - Global tilstand - Lokal tilstand
 + [[Folkevekst]]
 
++ [ ] Revurder utval.  Flytta føredrag til seinare?
 ## Del 2
 
 + [[Kva er simulering?]]
 + Tilfeldigheit
-+ Datastrukturar
++ Datastrukturar og -typar
+	+ Primitive typar int float, str, Boolean
+	+ Samansette typar: list, iterator,  dict
 
-+ [ ] Revurder utval.  Flytta føredrag til seinare?

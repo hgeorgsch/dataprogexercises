@@ -18,7 +18,10 @@ Dette kapittelet byggjer på
 	+ Datastrukturar og Kompleksitet
 + *Tekniske demonstrasjonar*
 	+ Datastrukturer
-+ *Øvingar.*
-	+ [[CodeRunner Data Structures]]
++ *Gjennomarbeidde Døme.*
 	+ [Tilfeldigheit](notebooks/Tilfeldigheit)
 	+ [Marknadssimulering](notebooks/Marknadssimulering)
++ *Opne Øvingar.*
+    + [](notebooks/Kundedifferensiering)
++ *Drilløving.*
+	+ [[CodeRunner Data Structures]]
