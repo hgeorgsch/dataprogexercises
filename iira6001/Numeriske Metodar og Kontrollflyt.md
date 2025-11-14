@@ -37,6 +37,7 @@ Me freistar å gje eit par forskjellige innfallsvinklar til kvart tema. Det typi
     + [](notebooks/Simulering%20av%20kontantstraum) frå opningssamlinga.
       Du bør gjera ferdig denne før du startar på noko nytt.
 	+ [Halveringsmetoden](notebooks/Halveringsmetoden)
+    + [](notebooks/Folkevekst)
 + **Opne oppgåver**
 	+ [Kontantstraum](exercises/Kontantstraum)
 	+ [[Folkevekst]]

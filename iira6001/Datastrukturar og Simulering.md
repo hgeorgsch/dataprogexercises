@@ -4,7 +4,7 @@ tags:
 author: Hans Georg Schaathun
 ---
 
-# Veke 3. Simulering og Datastrukturar
+# Datastrukturar og Simulering 
 
 ::: {admonition} Forkunnskapar
 Dette kapittelet byggjer på
@@ -15,7 +15,7 @@ Dette kapittelet byggjer på
 	+ Kva er simulering?
       ([Slides](https://iirevu.org.ntnu.no/Slides/Kva%20er%20simulering%3f/#/))
 	+ Tilfeldigheit
-	+ [Datastrukturar og Kompleksitet](Datastrukturar%20og%20Kompleksitet)
+	+ Datastrukturar og Kompleksitet
 + *Tekniske demonstrasjonar*
 	+ Datastrukturer
 + *Øvingar.*

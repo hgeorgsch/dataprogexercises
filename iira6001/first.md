@@ -11,13 +11,14 @@ Veke 1
 : [Numeriske Metodar og Kontrollflyt](Numeriske%20Metodar%20og%20Kontrollflyt.md)
 
 Veke 2
-: [CSV og Deskriptiv Statistikk](CSV%20og%20Deskriptiv%20Statistikk)
+: [Datastrukturar og Simulering](Datastrukturar%20og%20Simulering.md)
+
 
 Veke 3
-: [Samanlikna Datasett](Samanlikna%20Datasett)
+: [CSV og Deskriptiv Statistikk](CSV%20og%20Deskriptiv%20Statistikk)
 
 Veke 4
-: [Simulering og Datastrukturar](Veke%203%20Simulering.md)
+: [Samanlikna Datasett](Samanlikna%20Datasett)
 
 Veke 5
 : [Agent-basert simulering](Agent-basert%20simulering)
