@@ -77,4 +77,5 @@ chapters:
     - file: notebooks/Lånesøknad.ipynb
     - file: notebooks/Multiindex.ipynb
     - file: notebooks/dicts-json-jsonstat.ipynb
+    - file: notebooks/ShrimpSimulation.ipynb
 
