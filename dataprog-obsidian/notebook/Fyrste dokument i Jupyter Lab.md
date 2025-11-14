@@ -41,7 +41,7 @@ kjenner ikkje Jupyter Lab det att.
 
 Det enklaste plar vera å bruka filnavigatøren på venstre hand i Jupyter Lab.
 Kontekstmenyen (høgreklikk på filnamnet) gjev et val for *rename*, der du 
-kan endra filnament slik at det sluttar på `.ipynb`.  
+kan endra filnament slik at det sluttar på `.ipynb`.
 Når det er gjort, kan du dobbelklikka for å opna det i Jupyter Lab.
 :::
 
