@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.17.0
+    jupytext_version: 1.18.1
 kernelspec:
   display_name: dataprog
   language: python
@@ -44,7 +44,7 @@ Du kan godt opna både i ein teksteditor og i eit rekneark.
 Kan du finna att kursen på pund sterling for fem år sidan?  Kva med svenske kroner 1. januar i år?
 :::
 
-Fila inneheld gjerne meir data enn me er interesserte i. Det skal me ikkje tenkja på.  
+Fila inneheld gjerne meir data enn me er interesserte i. Det skal me ikkje tenkja på.
 Me legg vekt på å forstå det som er nyttig for oss.
 
 ::: {hint}
@@ -88,9 +88,10 @@ Lat oss dvela litt ved notasjonen. Me har sett fleire variantar av funksjonar.
 1. `print( df )` 
 2. `pd.read_csv("EXR20250401.csv", sep=";")`
 3. `df.plot()`
+
 Kvifor heiter det ikkje `df.print()` eller `plot(df)`?
 
-Grunnen er kvar funksjonen er definert.  I det fyrste dømet er `print` ein *global* funksjon.  
+Grunnen er kvar funksjonen er definert.  I det fyrste dømet er `print` ein *global* funksjon.
 Han er alltid tilgjengeleg.  Argumentet `df` fortel kva data `print` skal prenta.
 
 I det andre dømet hentar me funksjonen `read_csv` frå ein modul, pandas, som me døypte `pd` då me importerte det. Då er `pd` kjelda der me finn `read_csv` og `"EXR20250401.csv", sep=";"` er filnamn og konfigurasjon som funksjonen opererer på.
@@ -110,6 +111,10 @@ Me kan freista med `TIME_PERIOD` og `OBS_VALUE` som ser ut som dato og kurs.
 df.plot( x="TIME_PERIOD", y="OBS_VALUE" )
 ```
 
+::: {admonition}
+Lag ein kodeblokk og test kodelina over.
+:::
+
 Dette er òg for naivt.
 Om du set denne koden i ein kode-blokk, får du *«No numeric data to plot»*.
 Det er kanskje litt overraskande, men lat oss sjå nærare på dei to søylene.
@@ -125,7 +130,7 @@ Dei to søylene som interesserer oss har typen `object`, noko som kan vera nær 
 
 ## Datatypar
 
-Datattypar kan skapa mykje forvirring når me arbeider med data, og det kan vera komplisert fordi der er uendeleg mange datatypar, og kvar type vert representert ulikt internt i maskinen og overfor brukaren. Internt i maskina er alt representert som ein serie med *bits*, der kvar *bit* er 0 eller 1, av eller på, sann eller usann; kjært barn har mange namn.  Har ein åtte *bits* (ein *byte*), kan ein tolka dei saman som eit heiltal mellom 0 og 255, eller som eit tein (bokstav eller anna) frå ein eller annan tabell 
+Datattypar kan skapa mykje forvirring når me arbeider med data, og det kan vera komplisert fordi der er uendeleg mange datatypar, og kvar type vert representert ulikt internt i maskinen og overfor brukaren. Internt i maskina er alt representert som ein serie med *bits*, der kvar *bit* er 0 eller 1, av eller på, sann eller usann; kjært barn har mange namn.  Har ein åtte *bits* (ein *byte*), kan ein tolka dei saman som eit heiltal mellom 0 og 255, eller som eit teikn (bokstav eller anna) frå ein eller annan tabell 
 (t.d. [ASCII](https://en.wikipedia.org/wiki/ASCII)).
 Har ein fleire *bytes* kan ein tolka det som ein teiknstreng (t.d. `"Hello World"`).
 
@@ -292,8 +297,10 @@ Det er ikkje sikkert at det er mykje hjelp i desse kjeldene enno, før du har l�
 Kva kan du seia om valutakursane basert på dei plotta og visningane som me har laga?
 :::
 
-## Materiale som ikkje fekk pass
+```{code-cell} ipython3
 
-+ Sjå etter endring - differanse
-    1. plott differanse
-+ Korrelasjon mellom valutaar?
+```
+
+```{code-cell} ipython3
+
+```
