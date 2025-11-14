@@ -55,7 +55,7 @@ parts:
         - file: notebooks/Shrimp-Game
         - file: exercises/Kundedifferensiering
         - file: notebooks/Iskrem på ei strand
-        - file: new/Kundedata
+        - file: exercises/Kundedata
         - file: notebooks/Arbeidsledige
         - file: notebooks/Arbeidsledige og Konkursar
         - file: notebooks/Tid og dato

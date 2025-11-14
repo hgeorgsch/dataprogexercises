@@ -30,5 +30,5 @@ Der vil koma fleire oppgåver i november.
 + Meir opne oppgåver i dataanalyse
     + [](exercises/Kundedifferensiering)
     + [](notebooks/Iskrem%20på%20ei%20strand)
-    + [](new/Kundedata)
+    + [](exercises/Kundedata)
     + [](exercises/Eksportdata)
