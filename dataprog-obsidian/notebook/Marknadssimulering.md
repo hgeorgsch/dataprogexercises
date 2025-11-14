@@ -69,13 +69,24 @@ Ein kan sjølvsagt stussa på at butikken berre har seks varer, og
 om epleprisen er per stykk eller per kilo, men det lèt me liggja
 til me har kontroll på det grunnleggjande.
 
-Me skal simulera ein ganske dum kunde, som handlar på måfå, og
-som plukkar tilfeldige varer til han anten er lei eller tom for
-pengar.
-Dette kan gje ein funksjon som ser slik ut.
+Me skal simulera ein ganske dum kunde, som handlar på måfå.
+Før me kodar kunden, lat oss uttvetydig definera kva han gjer.
+
+::: {admonition} Definisjon
+Ein *måfåkunde* plukkar varer tilfeldig, heilt til han
+anten er lei eller er tom for pengar.
+Der er eit konstant sannsyn (t.d. 10%) for at han er lei etter
+kvar vare.
+
+Resultatet når måfåkunden handlar er ei liste med varer
+og ein totalpris for alle varene.
+:::
+
+Dette kan me omsetja til python, som ein funksjon som 
+simulerer handlinga åt kunden.
 
 ```{code-cell} ipython3
-def simuler_handling(budsjett=200,sluttsjanse=0.1):
+def måfåhandling(budsjett=200,sluttsjanse=0.1):
 
     handlekurv = []
     total_pris = 0.0
@@ -89,43 +100,38 @@ def simuler_handling(budsjett=200,sluttsjanse=0.1):
 
         if budsjett > varepris:
             handlekurv.append( (vare,varepris) )
+            print( f"Handlar {vare} til {varepris} kr." )
             total_pris += varepris
             budsjett -= varepris
         else:
+            print( f"Tom for pengar.  Vurderte {vare} til {varepris} kr." )
             fortsett = False
     
-        if random.random()<sluttsjanse:
+        if random.random() < sluttsjanse:
+            print( f"Lei!" )
             fortsett = False
     return total_pris, handlekurv
 ```
 
 ::: {admonition} Oppgåve 
 Gå gjennom koden steg for steg.
-1.  Funksjonen har parameter, kor mykje pengar har kunden å handla for
-    og kor stor er sjansen for at han er lei etter ei vare.
-2.  Kunden startar med ein tom handlekurv med ein totalpris på 0.
-3.  Me lager ei liste med varer `dict`-objektet.
-    Lista fungerer betre med `random`.
-4.  Me må ha ei løkke for å plukka fleire varer, og fordi der er fleire
-    sluttkriterium, er det enklast å ha ein bolsk variabel `fortsett`
-    saman med ei *while*-løkke.  Me skal setja `fortsett` til `False` 
-    når me finn ein grunn til å avslutta.
-5.  Kjenner du igen dei to neste linene, `vare =` og `varepris =`.
-    Kva gjer dei?  Om det ikkje er openbert, lag ei ny celle med
-    desse to linene, saman med `varenavn = list(varer.keys())` for
-    å testa kva som skjer.
-6.  No treng me ein test.  Kva tyder `budsjett > varepris` i praktiske
-    termar?  Kvifor må me sjekka dette?
-7.  I `if`-blokken ser me at me legg vara til handlekurven, aukar
-    totalprisen og reduserer budsjettet.  Gjev dette meining?
-8.  I `else`-blokken set me `fortsett` til usann.  Kvifor skal dette
-    avslutta løkka?
-9.  Den siste `if`-satsen avsluttar løkka dersom
-    `random.random() < sluttsjanse`.  Kva testar me på her?
+Ser det ut som om koden oppfører seg i tråd med definisjon?
+Bruk hinta under, som skildrar vanlege triks som me har brukt.
 :::
 
-::: {admonition} Oppgåve 
-Køyr funksjonen og skriv ut resultatet.  Kva er returverdien?
+::: {hint}
+Funksjonen `random.choice()` plukkar eit tilfeldig element frå ei liste.
+Han kan ikkje brukast på andre datastrukturar, so når me har ein `dict` 
+må me henta ut nyklane i ei liste.
+:::
+
+::: {hint}
+Ofte ynskjer me ei løkke med fleire ulike sluttvilkår.
+T.d. avbryt måfåkunden både når han er tom for pengar og når han er lei.
+Då er det vanleg å bruka ein bolsk variabel `fortsett` som me set til 
+`True` før løkka startar.
+Inni løkka testar me kvart vilkår, og set til `False` om testen seiar
+at løkka bør slutta.
 :::
 
 ::: {hint}
@@ -135,6 +141,16 @@ Standardløysinga er å dra eit tilfeldig tal $X$ i intervalet
 0 til 1.  
 Om $X$ er uniformt fordelt, er det $x$% sjanse for at $X<\frac{x}{100}$,
 og dette vert kriteriet for at hendinga skjer.
+:::
+
+::: {admonition} Oppgåve 
+Køyr funksjonen og skriv ut resultatet.
+Kva er returverdien?
+:::
+
+::: {admonition} Refleksjon 
+Funksjonen skriv ut informasjon for kvar iterasjon i løkka.
+Verker utskrifta rimeleg for ein måfåkunde?
 :::
 
 
@@ -155,7 +171,7 @@ Me er berre interessert i kor mykje kundane handlar for, men
 funksjonen som me skreiv over, returnerer både totalprisen og
 handlekurven.  For å skilja desse to variablane kan me skriva
 ```ipython
-kr, kurv = simuler_handling()
+kr, kurv = måfåhandling()
 ```
 :::
 
@@ -163,7 +179,7 @@ kr, kurv = simuler_handling()
 pengebruk = []
 n = 10000
 for _ in range(n):
-    kundens_pengebruk = simuler_handling()
+    kundens_pengebruk = måfåhandling()
     pengebruk.append(kundens_pengebruk)
 
 snitt = sum(pengebruk)/n
@@ -330,7 +346,7 @@ Verkar resultatet fornuftig?
 Legg inn nokon tilbodsprisar, og sjå korleis det påverkar omsettinga.
 Merk at det er enkelt å rekna ut omsettinga, frå lista over handlesummar.
 ```python
-kr, kurvar = simuler_fag(100,varer)
+kr, kurvar = simuler_dag(100,varer)
 omsetting = sum(kr)
 ```
 :::
