@@ -24,6 +24,7 @@ chapters:
     - file: Numeriske Metodar og Kontrollflyt
       sections:
       - file: notebooks/Halveringsmetoden
+      - file: notebooks/Kontantstraum
     - file: CSV og Deskriptiv Statistikk
       sections:
       - file: notebooks/Genetikk
@@ -38,7 +39,6 @@ chapters:
       sections:
       - file: Datastrukturar og Kompleksitet
       - file: notebooks/Tilfeldigheit
-      - file: notebooks/Simulering og Datastrukturar
       - file: notebooks/Marknadssimulering
     - file: Agent-basert simulering
       sections:
