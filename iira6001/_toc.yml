@@ -38,7 +38,6 @@ chapters:
       sections:
       - file: Datastrukturar og Kompleksitet
       - file: notebooks/Tilfeldigheit
-      - file: notebooks/Simulering og Datastrukturar
       - file: notebooks/Marknadssimulering
     - file: Agent-basert simulering
       sections:
