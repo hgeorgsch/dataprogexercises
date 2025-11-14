@@ -215,7 +215,7 @@ print( referansegruppe )
 3. Ser du potentielle problem med koden?  Du kan freista å
    køyra mange gongar for å sjå om du får feil eller dårlege
    resultat.
-```
+:::
 
 Ofte vil de sjå liknande kode skrive med ein `for`-løkke i staden
 for listekomprehensjon.  Det ser slik ut.
