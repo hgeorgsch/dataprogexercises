@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.17.2
+    jupytext_version: 1.18.1
 kernelspec:
   name: dataprog
   language: python
@@ -33,4 +33,3 @@ import pandas as pd
 df = pd.read_csv("loan_approval.csv")
 display(df)
 ```
-
