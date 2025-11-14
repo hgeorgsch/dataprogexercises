@@ -6,6 +6,7 @@ copyright: "2025"
 logo: ntnu.svg
 execute:
   execute_notebooks: force
+  timeout: 420 
 
 # Add a bibtex file so that we can create citations
 bibtex_bibfiles:
@@ -15,3 +16,4 @@ bibtex_bibfiles:
 sphinx: 
     extra_extensions:
         - sphinx_iframes
+

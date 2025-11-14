@@ -6,3 +6,5 @@
 *.json
 .ipynb_checkpoints
 datasets
+runs
+*.pt
