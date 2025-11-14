@@ -15,7 +15,8 @@ tags:
 
 +++ {"editable": true, "slideshow": {"slide_type": "slide"}}
 
-# Mer om hasmaps (dictionaries)
+# Mer om hashmaps (dictionaries)
+
 * Vi lagde hashmaps/dictionaries slik:
 
 
