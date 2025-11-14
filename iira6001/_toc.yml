@@ -25,6 +25,11 @@ chapters:
       sections:
       - file: notebooks/Halveringsmetoden
       - file: notebooks/Kontantstraum
+      - file: notebooks/Folkevekst
+    - file: Datastrukturar og Simulering
+      sections:
+      - file: notebooks/Tilfeldigheit
+      - file: notebooks/Marknadssimulering
     - file: CSV og Deskriptiv Statistikk
       sections:
       - file: notebooks/Genetikk
@@ -34,12 +39,6 @@ chapters:
         sections:
          - file: notebooks/Arbeidsledige og Konkursar
       - file: exercises/Eksportdata
-    - file: Samanlikna Datasett
-    - file: Veke 3 Simulering
-      sections:
-      - file: Datastrukturar og Kompleksitet
-      - file: notebooks/Tilfeldigheit
-      - file: notebooks/Marknadssimulering
     - file: Agent-basert simulering
       sections:
       - file: notebooks/Shrimp-Game
