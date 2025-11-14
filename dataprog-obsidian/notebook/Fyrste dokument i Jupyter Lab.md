@@ -57,7 +57,7 @@ I tillegg kan me skriva kode-celler, som den fylgjande.
 print( "Hello World!" )
 ```
 
-Kodecella innheld programkode som vert køyrd av maskina når du trykkjer Shift-Lineskift.
+Kodecella innheld programkode som vert køyrd av maskina når du trykkjer Skift-Lineskift.
 Koden er skrive i eit språk som heiter *python* og som er vorte mektig populært dei siste tjue åra. Jupyter er ikkje dei einast programmet som tolkar og køyrer *python*-kode.  Det kan me koma tilbake til.
 
 Målet i oppgåvene under er å testa at de har installert Jupyter,
@@ -119,10 +119,10 @@ Legg merke til at python hugsar alle variablane frå forrige kodecelle.
 1.  Sjekk at du kan redigera ei kodecelle.
     1. Dobbelklikk på kodecella med utrekninga.
     2. Endra tala.
-    3. Rekna ut BMI på nytt.  Trykk Shift-lineskift for å køyra koden.
+    3. Rekna ut BMI på nytt.  Trykk Skift-lineskift for å køyra koden.
     4. Ser det rett ut?
 2.  Kan du endra utskrifta slik at programmet skriv BMI med éin desimal?
-3. Kan du redigera ei *markdown*-celle òg?  Prinsippet er det same.  Dobbelklikk på cella, skriv kva du vil, og trykk Shift-lineskift for å *rendra* cella.
+3. Kan du redigera ei *markdown*-celle òg?  Prinsippet er det same.  Dobbelklikk på cella, skriv kva du vil, og trykk Skift-lineskift for å *rendra* cella.
 :::
 
 
@@ -130,13 +130,19 @@ Legg merke til at python hugsar alle variablane frå forrige kodecelle.
 
 Parenteser går ofte i kluss, så det er verd å seia nokre ord om det med ein gong.
 Me bruker dei på same måte som i matematikken.
-\[  ( 5 + 3 ) \cdot 2 \]
+```math
+( 5 + 3 ) \cdot 2
+```
 er ikkje det same som 
-\[  5 + 3 ( \cdot 2 ) \]
+```math
+5 + 3 ( \cdot 2 )
+```
 
 ::: {admonition} Refleksjon
 Korleis les du
-\[  5 + 3 \cdot 2\;\text{?} \]
+```math
+5 + 3 \cdot 2\;\text{?}
+```
 Som
 $( 5 + 3 ) \cdot 2$ eller $5 + 3 ( \cdot 2 )$?
 :::
@@ -153,7 +159,9 @@ Prøv.
 :::
 
 Somme ting må skrivast om med ekstra parenteser i python, slik som kompliserte brøkar:
-\[ \frac{ 2\cdot(5+3) }{ 40-(7*5) } \]
+```math
+\frac{ 2\cdot(5+3) }{ 40-(7*5) } 
+```
 Det vert 
 ```{code-cell} ipython3
 print( (2*(5+3))/(40-(7*5)) )
@@ -164,12 +172,15 @@ Kva skjer om du sløyfer parentesar?
 + `2*(5+3)/(40-(7*5))`
 + `(2*(5+3))/40-(7*5)`
 + `2*(5+3)/40-(7*5)`
+
 Kvifor?
 :::
 
 ::: {admonition} Oppgåve
 Korleis vil du skriva dette i python?
-\[ \frac{ (5+3)^2 }{ 5+3^2 } \]
+```math
+\frac{ (5+3)^2 }{ 5+3^2 } 
+```
 :::
 
 Enkelt sagt vert parenteser rekna innanfrå og ut.  
@@ -184,7 +195,7 @@ enklare å setja nokre ekstra parentesar for å slippa å tenkja på presedens.
 
 ## Markdown
 
-Formatteringa av teksta er sikkert uvand for mange. Når me redigerer, ser me ikkje korleis teksta ser ut, men kodar som er ein del av teksta. Det er fyrst når me «køyrer» cella, med Shift-lineskift, at teksta vert vist pent formattert.
+Formatteringa av teksta er sikkert uvand for mange. Når me redigerer, ser me ikkje korleis teksta ser ut, men kodar som er ein del av teksta. Det er fyrst når me «køyrer» cella, med Skift-lineskift, at teksta vert vist pent formattert.
 
 Som *python* er *markdown* eit maskinspråk. Det er ikkje eit programmeringsspråk, sidan det ikkje er program som vert uttrykte, men noko som me gjerne kallar *markup*-språk.  *Markdown* er eit ordspel, og uttrykkar at det skal vera enklare å skriva og å lesa enn andre kjende *markup*-språk som LaTeX og HTML.
 
@@ -200,11 +211,13 @@ I tillegg til formatteringane som eg har brukt over, kan me bruka **utheva** tek
 | Plommer |         45 |
 
 Markdown støtter også matematikk med $\LaTeX$ syntax
-$$ f(x) = 3x^2 + x - 10 $$
+```math
+f(x) = 3x^2 + x - 10. 
+```
 
 :::{admonition} Oppgåver
 Bruk teksta mi over som døme, og svar på fylgjande.
-Dobbelklikk for å sjå eller redigera koden og Shift-lineskift for å køyra (*rendra*).
+Dobbelklikk for å sjå eller redigera koden og Skift-lineskift for å køyra (*rendra*).
 
 1. Kva kode vert brukt til utheva skrift og kursiv?
 2. Kva er skilnaden på ein og fleire skigardard (`#`)?
@@ -249,13 +262,19 @@ Funksjonar i *python* kan gjera begge delar, både returnera verdi og gjera noko
 def f(x):
     print( f"x={x}" )
     return 3*x**2 + x - 10
-
-print( f(3) )
 ```
 
 :::{note}
-Sjølv om `print` her er ein funksjon som «gjer noko», så gjer han ingenting her, når `f` vert definert.  Han gjer noko når `f` seinare vert *brukt*.
+Sjølv om `print` er ein funksjon som «gjer noko»,
+så gjer han ingenting her, når `f` vert definert.
+Han gjer noko når `f` seinare vert *brukt*.
 :::
+
+Lat oss sjå kva `f` gjer.
+
+```{code-cell} ipython3
+print( f(3) )
+```
 
 ## Folketalsmodell
 
@@ -264,9 +283,9 @@ Sjølv om `print` her er ein funksjon som «gjer noko», så gjer han ingenting 
 Ofte har me matematiske modellar som skildrar forventa samfunns-
 og foretningsutvikling.  T.d. meiner ein at folkeveksten i eit land
 ofte kan skidrast som
-$$
-P(t) = \frac{K}{1+A\exp(-rt)}
-$$
+```math
+P(t) = \frac{K}{1+A\exp(-rt)} 
+```
 der
 + $P(t)$: folketal ved tiden $t$
 + $r$ er relativ vekstrate, feks 2% (0,02)
