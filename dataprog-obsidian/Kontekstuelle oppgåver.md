@@ -7,7 +7,6 @@ tags:
 
 + Oppgåve 1.  
 	+ [[Folkevekst]]
-	+ [[Sparekalkulator]]
 	+ Desse oppgåvene skal ha inndata frå terminal. 
 	+ Utrekning ved slutten av ein periode.  Ikkje plott.
 

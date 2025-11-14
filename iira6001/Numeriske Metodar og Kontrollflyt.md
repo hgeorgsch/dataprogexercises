@@ -30,13 +30,14 @@ Me freistar å gje eit par forskjellige innfallsvinklar til kvart tema. Det typi
 
 + **Demovideo**
 	+ [[Kontrollflyt]]
-+ **Øvingar**
++ **Drilløving**
+	+ [[CodeRunner Basic]]
+	+ [[CodeRunner Control]]
++ **Gjennomarbeidde døme**
     + [](notebooks/Simulering%20av%20kontantstraum) frå opningssamlinga.
       Du bør gjera ferdig denne før du startar på noko nytt.
 	+ [Halveringsmetoden](notebooks/Halveringsmetoden)
++ **Opne oppgåver**
+	+ [Kontantstraum](exercises/Kontantstraum)
 	+ [[Folkevekst]]
 	+ [[Simulering av ein utvalsstudie]]
-	
-	+ [[CodeRunner Basic]]
-	+ [[CodeRunner Control]]
-
