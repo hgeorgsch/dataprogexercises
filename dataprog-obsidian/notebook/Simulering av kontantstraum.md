@@ -4,13 +4,13 @@ author: Hans Georg Schaathun
 tags: [exercise, simulering, loop]
 jupytext:
   cell_metadata_filter: -all
+  formats: md:myst,ipynb
+  root_level_metadata_filter: -title,-author,-tags
   text_representation:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.17.0
-  formats: md:myst,ipynb
-  root_level_metadata_filter: -title,-author,-tags
+    jupytext_version: 1.18.1
 kernelspec:
   display_name: dataprog
   language: python
@@ -19,14 +19,16 @@ kernelspec:
 
 # Simulering av ein kontantstraum
 
-Simulering vert ofte brukt for å modellera og analysera moglege framtidsscenario. I staden for å laga utvikla éin modell som skildrar kva som må skje eller sannsynligvis skjer, simulerer ein eitt mogleg scenario, basert på eitt sett føresetnader. So kan ein evt. simulera fleire gongar med ulike færesetnader. Dette er særleg nyttig i komplekse og probabilistiske modellar, som det ofte er uråd å løysa analytisk. Me høyrer ofte om utgreiingar som refererer til simulering, t.d. i epidemologi og smittevern og i traffikkprogrnosar og vegplanleggjing. 
+Simulering vert ofte brukt for å modellera og analysera moglege framtidsscenario. I staden for å utvikla éin modell som skildrar kva som må skje eller sannsynligvis skjer, simulerer ein eitt mogleg scenario, basert på eitt sett føresetnader. So kan ein evt. simulera fleire gongar med ulike føresetnader. Dette er særleg nyttig i komplekse og probabilistiske modellar, som det ofte er uråd å løysa analytisk. Me høyrer ofte om utgreiingar som refererer til simulering, t.d. i epidemologi og smittevern og i traffikkprognosar og vegplanleggjing. 
 
 Her skal me sjå på eit ganske enkelt problem, for å illustrera dei mest grunnleggjande programmeringsteknikkane. Me tek for oss eit lån, fyrst med rentekostnader og nedbetaling. Dette kan me løysa matematisk og analytisk, men mange vil kanskje finna simuleringa enklare å forstå. Deretter skal me sjå på tilfeldige rentesvingingar, noko som krev langt meir avansert matematikk å løysa analytisk.
 
+::: {admonition} Læringsutbyte
 Etter økta skal de kunna
 1. sjå korleis simulering kan brukast til å forstå kva som kan skje i ulike samfunnsscenario.
 2. bruka *løkker* (`for` eller `ẁhile`) i programmering
 3. programmera med slumptal og tilfeldige hendingar
+:::
 
 ## Den fyrste løkka - rente kvart år
 
@@ -35,7 +37,7 @@ Eit lån, og mange andre kontantstraumar, er ein enkel prosess. Prosessen er dis
 Koden vert enklast å lesa dersom me bruker ein variabel med namn til rentesats.
 Lat oss starta med 5%.
 
-```{code-cell} python3
+```{code-cell} ipython3
 rentesats = 5  # Rentesats i prosent
 rente = 5/100  # Rentesats til utrekning
 ```
@@ -46,7 +48,7 @@ No treng me kode som gjentek den same operasjonen kvart år. Den mest grunnleggj
 Prøv fyrst å lesa koden under. Går det an å forstå kva som skjer utan å køyra koden? Køyr so koden og sjå på resultatet.
 :::
 
-```{code-cell} python3
+```{code-cell} ipython3
 saldo = 10000
 for year in range(2025,2045):
    print( f"Lånesaldo 1. januar {year}: {saldo}" )
@@ -61,16 +63,21 @@ til `for`.
 Denne blokken vert køyrd éin gong med kvar verdi av `year`.
 Lånet vert utbetalt berre ein gong, før løkka starta, her med eit lånebeløp på 10.000.
 
+::: {hint}
+Blokknotasjonen går igjen.  Me såg han fyrst då me definerte
+funksjonar med `def`.  Ogso `def`-lina slutta med kolon, og heile den indenterte blokken høyrde til funksjonen.
+:::
+
 **Merk** at `range` ikkje er ei liste, men ein sokalla iterator.
 Det speler inga rolle, bortsett frå når me ynskjer å inspisera objektet. Det går derimot an å konvertera til ei liste.
 
-```{code-cell} python3
+```{code-cell} ipython3
 print( list( range(2024,2045) ) )
 ```
 
 Me kan samanlikna det med sjølve iteratoren:
 
-```{code-cell} python3
+```{code-cell} ipython3
 print( range(2024,2045) )
 ```
 
@@ -82,7 +89,7 @@ print( range(2024,2045) )
 
 Den fyrste simuleringa viser korleis lånet veks med renter og rentesrente. I praksis betaler ein som regel lånet ned, gradvis år for år.  Sett at me startar med det same lånet som over, men betaler inn eit terminbeløp på 1000 kr same dagen som rentene vert kapitaliserte kvar år.
 
-```{code-cell} python3
+```{code-cell} ipython3
 terminbetaling = 1000
 ```
 
@@ -92,7 +99,7 @@ Korleis vil du endra koden over slik at nedbetalinga òg vert simulert?
 
 Kan henda kjem du opp med noko slikt som dette:
 
-```{code-cell} python3
+```{code-cell} ipython3
 saldo = 10000
 for year in range(2025,2045):
    print( f"Lånesaldo 1. januar {year}: {saldo}" )
@@ -111,7 +118,7 @@ Her er det litt vilkårleg om me klarer å betala ned lånet innanfor simulering
 Ser du kva koden under gjer før du køyrer han?
 :::
 
-```{code-cell} python3
+```{code-cell} ipython3
 saldo = 10000
 year = 2025
 while saldo > 0:
@@ -144,7 +151,7 @@ har me ikkje lagra noko undervegs, berre skrive ut til skjerm.
 Ein måte å endra dette på er å laga ein liste som samlar lagrar
 resultatet i kvar iterasjon.
 
-```{code-cell} python3
+```{code-cell} ipython3
 saldo = 10000
 y = [ saldo ]
 x = [ 2024 ]
@@ -164,7 +171,7 @@ kva som skjer.
 
 Me kan plotta som me har gjort før.
 
-```{code-cell} python3
+```{code-cell} ipython3
 import matplotlib.pyplot as plt
 plt.plot( x, y )
 plt.show()
@@ -181,7 +188,7 @@ og gjenta simuleringa.
 Me må kopiera fleire kodeliner og endra nokre få tal.
 Dette kan me gjera enklare ved å definera funksjonar.
 
-```{code-cell} python3
+```{code-cell} ipython3
 def loan(saldo=10000,rente=0.05,terminbetaling=0,year=2024,gebyr=0):
    y = [ saldo ]
    x = [ year ]
@@ -211,7 +218,7 @@ døme er `gebyr`.  Sjå på koden.  Kva representerer `gebyr`?
 
 Me kan t.d. bruka `loan`-funksjonen slik:
 
-```{code-cell} python3
+```{code-cell} ipython3
 import matplotlib.pyplot as plt
 x,y = loan(1000000,0.06,70000)
 plt.plot( x,y )
@@ -226,10 +233,10 @@ Når funksjonen vert kalt, får parametrane verdi etter argumenta.
 :::
 
 
-Det går òg an å namngje ein eller fleire arfgument, og det gjer
+Det går òg an å namngje ein eller fleire argument, og det gjer
 ofte koden enklare å lesa.  T.d. kan me skriva
 
-```{code-cell} python3
+```{code-cell} ipython3
 x,y = loan(1000000,terminbetaling=70000,gebyr=45)
 plt.plot( x,y )
 plt.show()
@@ -238,7 +245,7 @@ plt.show()
 :::{caution}
 Argument som ikkje er namngjevne, kaller me gjerne posisjonsargument.
 Dei gjev verdi til parameteren i same posisjon.  
-Nsmngjevne argument gjev verdi til parameter med same namn, og dei
+Namngjevne argument gjev verdi til parameter med same namn, og dei
 kan kome i vilkårleg rekkjefylgje.
 Bortsett frå éin ting.  Alle posisjonsargumenta må koma før dei
 namngjevne argumenta.
@@ -247,7 +254,7 @@ namngjevne argumenta.
 Lat oss no sjå på korleis me kan samanlikna simuleringar, t.d.
 med ulike rentenivå
 
-```{code-cell} python3
+```{code-cell} ipython3
 x5,y5 = loan(1000000,rente=0.05,terminbetaling=70000)
 x4,y4 = loan(1000000,rente=0.04,terminbetaling=70000)
 x3,y3 = loan(1000000,rente=0.03,terminbetaling=70000)
@@ -275,7 +282,7 @@ uendeleg, dersom nedbetalinga ikkje dekkjer rentene.
 Det er god skikk å leggja inn ekstra stoppreglar for å unngå dette.
 T.d. kan me stoppa simuleringa etter 100 år.
 
-```{code-cell} python3
+```{code-cell} ipython3
 def loan2(saldo=10000,rente=0.05,nedbetaling=0,year=2024,gebyr=0):
    y = [ saldo ]
    x = [ year ]
@@ -315,7 +322,7 @@ Her kan me bruka eit av dei enklaste, som heiter
 [random](https://docs.python.org/3/library/random.html).
 Lat oss testa det fyrst.
 
-```{code-cell} python3
+```{code-cell} ipython3
 import random
 random.randint(1,10)
 ```
@@ -325,7 +332,7 @@ Dette er den einaste funksjonen me treng i dag;
 tilfeldig frå ei uniform fordeling.  Me kan kjapt testa at
 me ikkje får same tal kvar gong, t.d.
 
-```{code-cell} python3
+```{code-cell} ipython3
 [ random.randint(1,10) for x in range(20) ]
 ```
 
@@ -343,7 +350,7 @@ som ulike hendingar.
 T.d. kan me seia at 1 gjev renteoppgang og 10 gjev rentenedgang.
 Då får me kanskje fylgjande som erstatning for `loan` og `loan2`.
 
-```{code-cell} python3
+```{code-cell} ipython3
 def loan3(saldo=10000,rente=0.05,nedbetaling=0,year=2024,gebyr=0):
    y = [ saldo ]
    x = [ year ]
@@ -378,7 +385,7 @@ prøver maskina `elif` og sjekkar om `slump == 10` er sant.
 I dette tilfellet vil me verkeleg simulera fleire gongar for å kunna
 sjå tilfeldigheitene.
 
-```{code-cell} python3
+```{code-cell} ipython3
 for i in range(12):
    (x,y) = loan3()
    plt.plot(x,y)
@@ -452,3 +459,7 @@ Det er litt plunder å få til, men du kan t.d.
     + me løyser det her for å demonstrera nokre grunnleggjande programeringskonsept og korleis me kan leika med ulike tankeeksperiment
     + med litt røynsle og litt kreativitet er der inga grense for kva de kan gjera
         + vert det komplekst nok, får de til meir med programmering enn med rekneark
+
+```{code-cell} ipython3
+
+```

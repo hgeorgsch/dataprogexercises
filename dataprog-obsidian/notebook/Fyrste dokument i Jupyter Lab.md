@@ -6,12 +6,12 @@ date: 20. mars 2025
 jupytext:
   cell_metadata_filter: -all
   root_level_metadata_filter: -tags,-title,-author,-date
+  formats: md:myst,ipynb
   text_representation:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.17.0
-  formats: md:myst,ipynb
+    jupytext_version: 1.18.1
 kernelspec:
   display_name: dataprog
   language: python
@@ -125,6 +125,10 @@ Legg merke til at python hugsar alle variablane frå forrige kodecelle.
 3. Kan du redigera ei *markdown*-celle òg?  Prinsippet er det same.  Dobbelklikk på cella, skriv kva du vil, og trykk Skift-lineskift for å *rendra* cella.
 :::
 
+::: {tip}
+Du må gjerne redigera dokumentet og fjerna det som 
+er overflødig for deg.
+:::
 
 ## Parenteser og presedens
 
@@ -148,6 +152,7 @@ $( 5 + 3 ) \cdot 2$ eller $5 + 3 ( \cdot 2 )$?
 :::
 
 I python skriv me
+
 ```{code-cell} ipython3
 print( (5+3)*2 )
 print( 5+(3*2) )
@@ -162,7 +167,8 @@ Somme ting må skrivast om med ekstra parenteser i python, slik som kompliserte 
 ```math
 \frac{ 2\cdot(5+3) }{ 40-(7*5) } 
 ```
-Det vert 
+Det vert
+
 ```{code-cell} ipython3
 print( (2*(5+3))/(40-(7*5)) )
 ```
@@ -278,7 +284,7 @@ print( f(3) )
 
 ## Folketalsmodell
 
-**TODO** Vurder om det fylgjande vert eit for stort sprang.
+Lat oss ta eitt litt meir avansert døme.
 
 Ofte har me matematiske modellar som skildrar forventa samfunns-
 og foretningsutvikling.  T.d. meiner ein at folkeveksten i eit land
@@ -351,8 +357,8 @@ Dette kan me gjera med fylgjande kode.
 import matplotlib.pyplot as plt
 
 xs = [ x for x in range(-5,+5) ]
-xs2 = [ x/4 for x in range(-20,+20) ]
 ys = [ f(x) for x in xs ]
+
 plt.plot( xs, ys )
 plt.show()
 ```
@@ -364,21 +370,39 @@ Dei to variablane, `xs` og `ys` vert definert som lister.
 Kva er `xs` lik?  Lag ei ny kodecelle med ein `print`-instruksjon for å sjå.
 :::
 
+::: {hint}
+Ofte har me lyst til å leggja inn kode midt i ein 
+*markdown*-blokk.  Kontekstmenyen (høgreklikk) har eit val
+for «split cell» som ein kan bruka, før ein legg inn den nye
+cella.
+:::
+
 Den andre lista, `ys` er definert ved det som vert kalla listekomprehensjon,
 elementa i lista er alle verdiane `f(x)` der `x` tek kvar verdi i `xs`.
 Dette tilsvarer mengekomprehensjon som de kanskje har sett i matematikken,
 $\{ f(x) | x\in X\}$.
 
 :::{admonition} Oppgåve
+Lag ei ny kodecelle med ein `print`-instruksjon for å sjå
+kva `ys` er lik.  Verker tala rimelege?
+:::
 
-1. Plottet over er kanskje litt grovkorna.  Kan du auka talet på punkt
-   ved å endra definisjonen på `xs`?
-2. Bruk døma over og lag eit plott over estimert folketal på Island over dei
-   neste åtte åra.
-3.  Kor mange $x$-verdiar treng du for å få eit pent plott?
-4.  Slå opp [dokumentasjonen på plot-funksjonen](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html) 
-    og sjå om du kan endra farge på kurva og setja namn på aksane.
-    Kva synest du trengst for å gjera grafen presentabel?
+
+:::{admonition} Oppgåve
+Plottet over er kanskje litt grovkorna.
+Kan du auka talet på punkt ved å endra definisjonen på `xs`?
+
+Kor mange $x$-verdiar treng du for å få eit pent plott?
+:::
+
+:::{admonition} Oppgåve
+Slå opp [dokumentasjonen på plot-funksjonen](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html) 
+og sjå om du kan endra farge på kurva og setja namn på aksane.
+Kva synest du trengst for å gjera grafen presentabel?
+::: 
+
+:::{admonition} Oppgåve
+Bruk døma over og lag eit plott over estimert folketal på Island over dei neste åtte åra.
 :::
 
 ## Nyttig?
@@ -386,12 +410,12 @@ $\{ f(x) | x\in X\}$.
 Døma over er sjølvsagt enkle, men me må kunna krabba før me lærer å gå.
 
 Me vert heller ikkje særleg flinke til å gå ved å få det forklart.
-Den einast måten ein vert god på, er å prøva seg fram og gå der ein 
-har lyst til.
+Den einast måten ein vert god på, er å prøva seg fram
+og gå der ein har lyst til.
 
 Over har me vist eit ganske breidt utval av ganske enkle operasjonar.
-Etter kvart skal me koma tilbake til fleire detaljar, men de må for all
-del spørja kva gong de snublar.
+Etter kvart skal me koma tilbake til fleire detaljar, 
+men de må for all del spørja kva gong de snublar.
 
 ## Meir stoff 
 

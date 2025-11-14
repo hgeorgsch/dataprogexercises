@@ -20,7 +20,6 @@ samråd med IT-tenesta i verksemda.
 Vegleiingstida før lønsj fyrste dagen er for dei som av ein eller
 annan grunn ikkje får gjort dette ferdig på førehand.
 
-
 | Dag 1 | Tema | Materiell |
 | :- | :- | :- |
 | 10.00-11.30 | Vegleiing til installasjon for dei som ikkje er ferdig med det på førehand. |  [Installasjonsvegleiing](Installasjon) |
@@ -39,28 +38,21 @@ annan grunn ikkje får gjort dette ferdig på førehand.
 | 11.30-12.30 | Lønsj | |
 | 12.30-13.00 | Presentasjon av Økt 3. | [Foilar](Simulering%20av%20kontantstraum%20(foilar).md) |
 | 13.00-14.30 | Økt 3.  Simulering av kontantstraum | [Oppgåvesett](notebooks/Simulering%20av%20kontantstraum)  |
-| 14.30-15.30 | [Seminar om motivasjon og ynskjer](Seminar%20om%20Motivasjon%20og%20Ynskjer) | |
+| 14.30-15.30 | Økt 4.  [Seminar om motivasjon og ynskjer](Seminar%20om%20Motivasjon%20og%20Ynskjer) | |
 | 14.00-15.00 | Debrief og opplegg vidare. | [Mappevurdering](Mappevurdering) |
 
-## Arbeidsnotat
+## Læringsmaterialet
 
-+ [ ] Vurder programmet   📅 2025-11-20
-    + [ ] Kor lang bør kvar økt vera?
-    + [ ] Fleire oppgåver?
+Programmet inneheld tre øvingsdokument.
+Dei er skrivne som gjenomarbeidde døme, med nokre oppgåver og
+refleksjonsspørsmål innimellom.
+Meininga er at de lastar dei ned og redigerer dei sjølve i Jupyter Lab,
+og prøver dykk fram for å finna svar på oppgåver og spørsmål.
 
-+ Treng tilpassing til deltakartal
+Dette er den viktigste arbeidsformen i kurset, å studera døme og variera
+dei til eigne behov.
+Det viktigaste målet med samlinga er at alle vert tilstrekkeleg vande med
+programvaren til at denne arbeidsformen fungerer resten av semesteret.
 
-+ Seminaret er primært ei samtale i plenum eller i grupper
-+ Dei øvrige tre har sams format	
-	+ *Jupyter notebook*-dokument
-	+ Motivasjonsføredrag med demonstrasjon av dokumentet
-	+ Øvingsoppgåver i dokumentet
-	+ Øving med vegleiing
-	+ Om mogleg, oppsummeringsvideo for å støtta vidare arbeid
-
-### Manglande konsept
-
-+ [ ] Køyring av celler i feil rekkjefylgje 📅 2025-06-20
-+ [ ] Er folketalsmodellen for stort eit sprang (Introdkusjon)   📅 2025-05-12 
-+ [ ] Nedlasting av Jupyter Notebook - lagring/filnamn etc  📅 2025-06-20
-+ [ ] Nedlasting av datafiler (CSV) og andre tilleggsresursar 📅 2025-06-20
+Det er ikkje sikkert at alle kjem gjennom alle oppgåvene.  Det er heilt greitt.
+Me kan halda fram med oppgåvene dei neste par vekene.
