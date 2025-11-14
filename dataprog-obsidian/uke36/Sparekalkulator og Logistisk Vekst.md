@@ -60,6 +60,7 @@ Prøv å modellere populasjonsveksten i et område
 +++
 
 # 3.1.2 Sammenligne vekst
+
 * Lag et program som modellerer og simulerer befolkningsvekst for to eller flere områder
 * Lag et plot av utviklingen
 * Programmet skriver ut nyttig info om utvikling feks:
