@@ -34,6 +34,13 @@ tags:
 + Øvingar
     + [[Tid og dato]]
 
+
+## Materiale som ikkje fekk plass med valuta 
+
++ Sjå etter endring - differanse
+    1. plott differanse
++ Korrelasjon mellom valutaar?
+
 ## Førelesingstema
 
 + Algoritma

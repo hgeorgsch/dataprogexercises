@@ -6,3 +6,5 @@
 	+ Vis i Python Tutor e.l.
 		+ Fire vindauga (minimum): Kode - Utdata - Global tilstand - Lokal tilstand
 + [[Folkevekst]]
+
++ [ ] Revurder utval.  Flytta føredrag til seinare?

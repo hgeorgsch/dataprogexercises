@@ -6,13 +6,29 @@ author: Hans Georg Schaathun
 
 # Veke 1. Numeriske Metodar og Kontrollflyt
 
-Me freistar å gje eit par forskjellige innfallsvinklar til kvart tema. Det typiske vekesprogrammet inneheld difor forskjellige ressursar som kan brukast på ulikt vis.
+Me freistar å gje eit par forskjellige innfallsvinklar til kvart tema.
+Det typiske vekesprogrammet inneheld difor forskjellige ressursar som
+kan brukast på ulikt vis.
 
-*Perspektivføredraga* er meint å gje eit konseptuelt overblikk eller kontekst. Det er ikkje meininga at alle skal hugsa alt, og ein kan godt sjå desse videoane litt avslappa når ein har tid til overs.
+Perspektivføredraga 
+: er meint å gje eit konseptuelt overblikk eller kontekst. Det er ikkje meininga at alle skal hugsa alt, og ein kan godt sjå desse videoane litt avslappa når ein har tid til overs.
 
-*Demonstrasjonsvideoane* fokuserer på tekniske detaljar. Dette er videoar som krev meir konsentrasjon, og ein bør absolutt testa ut dei teknikkane som vert demonstrert på eiga hand, før ein gløymer dei. Det er best å sjå dei saman med øvingane.
+Demonstrasjonsvideoane
+: fokuserer på tekniske detaljar. Dette er videoar som krev meir konsentrasjon, og ein bør absolutt testa ut dei teknikkane som vert demonstrert på eiga hand, før ein gløymer dei. Det er best å sjå dei saman med øvingane.
 
-Øvingane kjem i fleire formar. Dei to fyrste vekene har me to typar. Nokre er utarbeidde døme av same type som på opningssamlinga. Her er meininga å reflektera over kva som skjer i dømet og testa eigne variasjonar av det. Dei andre øvingane er automatisk retta oppgåver, som er meint å testa nokre av dei mest fundamentale konstruksjonane i python.
+Gjennomarbeidde døme
+: er den viktigaste læringsaktiviteten.  Dei viser nye teknikkar i kontekst med oppgåver og spørsmål som oppmodar til fikla med og variera koden for forstå kva som føregår.
+
+Opne oppgåver
+: er meir krevjande oppgåver, der ein må kombinera teknikkane og skriva meir kode frå botnen av.
+
+Drilloppgåver
+: fokuserer på grunnteknikkar og er automatisk retta.  Me vil ikkje oppfordra til å leggja for stor vekt på desse, men nokon finne dei nyttige tidleg i kurset.
+
+Der er rikeleg med oppgåver, og me reknar ikkje med at nokon gjer alt.
+Hensikta med oppgåvene er å visa eit breidt utval av løysingar til etterlikning,
+og kvar og ein må leggja vekt på det som dei finn nyttigast og mest interessant.
+
 
 + *Perspektivførelesing*
 	+ [Imperativ programmering og maskinarkitektur](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=e6150884-d729-4296-a139-b330009a4a30)
@@ -25,19 +41,16 @@ Me freistar å gje eit par forskjellige innfallsvinklar til kvart tema. Det typi
     + [Kva er ein algoritme?](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=c4f223ea-4958-4c1c-b2ac-b3670162feef)
       [(Slides)](https://iirevu.org.ntnu.no/Slides/Kva%20er%20ein%20algoritme%3f/)
     + [Flytdiagram](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=c3aeebb8-4015-41d7-a625-b3670160556e)
-
-+ [ ] Revurder utval.  Flytta føredrag til seinare?
-
 + **Demovideo**
 	+ [[Kontrollflyt]]
-+ **Drilløving**
-	+ [[CodeRunner Basic]]
-	+ [[CodeRunner Control]]
 + **Gjennomarbeidde døme**
     + [](notebooks/Simulering%20av%20kontantstraum) frå opningssamlinga.
       Du bør gjera ferdig denne før du startar på noko nytt.
 	+ [Halveringsmetoden](notebooks/Halveringsmetoden)
     + [](notebooks/Folkevekst)
++ **Drilløving**
+	+ [[CodeRunner Basic]]
+	+ [[CodeRunner Control]]
 + **Opne oppgåver**
 	+ [Kontantstraum](exercises/Kontantstraum)
 	+ [[Folkevekst]]
