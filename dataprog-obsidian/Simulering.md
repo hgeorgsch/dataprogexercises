@@ -1,3 +1,0 @@
-
-+ [[Kva er simulering?]]
-+ 

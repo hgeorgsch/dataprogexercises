@@ -5,7 +5,7 @@ tags:
 ---
 
 
-+ Veke 1.  [[Numeriske Metodar og Kontrollflyt]]
++ Veke 1.  [[Simulering og Kontrollflyt]]
     + [[Imperativ programmering og maskinarkitektur]]
         + [[Notar til Imperativ programmering og maskinarkitektur]]
     + [[Kontrollflyt i Python]]
