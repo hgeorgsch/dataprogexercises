@@ -38,7 +38,6 @@ chapters:
       sections:
       - file: Datastrukturar og Kompleksitet
       - file: notebooks/Tilfeldigheit
-      - file: notebooks/Simulering og Datastrukturar
       - file: notebooks/Marknadssimulering
     - file: Agent-basert simulering
       sections:
@@ -55,12 +54,12 @@ chapters:
       - file: notebooks/Evaluering for regresjon
       - file: notebooks/numpy
       - file: notebooks/hypothesistest
+      - file: notebooks/Iris-Statistics.ipynb
     - file: Klassifikasjon
       sections:
       - file: notebooks/Fisher Linear Discriminant in sklearn
       - file: notebooks/Evaluering
       - file: notebooks/Support Vector Machines
-      - file: notebooks/Yolo First Tutorial
   - file: midway
   - file: second
     sections:
