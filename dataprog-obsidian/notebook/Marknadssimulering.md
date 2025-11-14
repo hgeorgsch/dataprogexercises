@@ -69,13 +69,24 @@ Ein kan sjølvsagt stussa på at butikken berre har seks varer, og
 om epleprisen er per stykk eller per kilo, men det lèt me liggja
 til me har kontroll på det grunnleggjande.
 
-Me skal simulera ein ganske dum kunde, som handlar på måfå, og
-som plukkar tilfeldige varer til han anten er lei eller tom for
-pengar.
-Dette kan gje ein funksjon som ser slik ut.
+Me skal simulera ein ganske dum kunde, som handlar på måfå.
+Før me kodar kunden, lat oss uttvetydig definera kva han gjer.
+
+::: {admonition} Definisjon
+Ein *måfåkunde* plukkar varer tilfeldig, heilt til han
+anten er lei eller er tom for pengar.
+Der er eit konstant sannsyn (t.d. 10%) for at han er lei etter
+kvar vare.
+
+Resultatet når måfåkunden handlar er ei liste med varer
+og ein totalpris for alle varene.
+:::
+
+Dette kan me omsetja til python, som ein funksjon som 
+simulerer handlinga åt kunden.
 
 ```{code-cell} ipython3
-def simuler_handling(budsjett=200,sluttsjanse=0.1):
+def måfåhandling(budsjett=200,sluttsjanse=0.1):
 
     handlekurv = []
     total_pris = 0.0
@@ -89,22 +100,26 @@ def simuler_handling(budsjett=200,sluttsjanse=0.1):
 
         if budsjett > varepris:
             handlekurv.append( (vare,varepris) )
+            print( f"Handlar {vare} til {varepris} kr." )
             total_pris += varepris
             budsjett -= varepris
         else:
+            print( f"Tom for pengar.  Vurderte {vare} til {varepris} kr." )
             fortsett = False
     
-        if random.random()<sluttsjanse:
+        if random.random() < sluttsjanse:
+            print( f"Lei!" )
             fortsett = False
     return total_pris, handlekurv
 ```
 
 ::: {admonition} Oppgåve 
 Gå gjennom koden steg for steg.
+Ser det ut som om koden oppfører seg i tråd med definisjon?
 1.  Funksjonen har parameter, kor mykje pengar har kunden å handla for
     og kor stor er sjansen for at han er lei etter ei vare.
 2.  Kunden startar med ein tom handlekurv med ein totalpris på 0.
-3.  Me lager ei liste med varer `dict`-objektet.
+3.  Me lager ei liste med varer frå `dict`-objektet.
     Lista fungerer betre med `random`.
 4.  Me må ha ei løkke for å plukka fleire varer, og fordi der er fleire
     sluttkriterium, er det enklast å ha ein bolsk variabel `fortsett`
