@@ -22,4 +22,3 @@ Dette kapittelet byggjer på
 	+ [[CodeRunner Data Structures]]
 	+ [Tilfeldigheit](notebooks/Tilfeldigheit)
 	+ [Marknadssimulering](notebooks/Marknadssimulering)
-	+ [Simulering og Datastrukturar](notebooks/Simulering%20og%20Datastrukturar)

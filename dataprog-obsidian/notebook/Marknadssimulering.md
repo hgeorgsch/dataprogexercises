@@ -157,8 +157,22 @@ handlekurven.  For å skilja desse to variablane kan me skriva
 ```ipython
 kr, kurv = simuler_handling()
 ```
-
 :::
+
+```{code-cell} ipython3
+pengebruk = []
+n = 10000
+for _ in range(n):
+    kundens_pengebruk = simuler_handling()
+    pengebruk.append(kundens_pengebruk)
+
+snitt = sum(pengebruk)/n
+print(f"Kunder legger i snitt igjen {snitt:.2f} kroner per handletur")
+
+plt.hist(pengebruk, 20)
+plt.show()
+```
+
 
 ## Steg 3: Varer på salg
 
