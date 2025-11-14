@@ -30,6 +30,7 @@ chapters:
       sections:
       - file: notebooks/Tilfeldigheit
       - file: notebooks/Marknadssimulering
+      - file: exercises/Kundedifferensiering
     - file: CSV og Deskriptiv Statistikk
       sections:
       - file: notebooks/Genetikk
@@ -43,7 +44,6 @@ chapters:
       sections:
       - file: notebooks/Shrimp-Game
       - file: notebooks/Iskrem på ei strand.ipynb
-      - file: exercises/Kundedifferensiering
     - file: WebAPI
       sections:
       - file: notebooks/requests
