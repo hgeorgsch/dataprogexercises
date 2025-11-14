@@ -84,6 +84,10 @@ response = requests.get(url, params=params, headers=headers)
 # Sjekk status -- plott noe data
 print("status:", response.status_code)
 data = response.json()
+print(data)
+```
+
+```python
 df = pd.DataFrame(data["response"]["fixtures"])
 df.plot.bar()
 ```
