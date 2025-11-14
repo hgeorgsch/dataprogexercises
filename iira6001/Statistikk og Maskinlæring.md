@@ -18,6 +18,7 @@ title: Statistikk og Maskinlæring
 	+ [Lineær regresjon](notebooks/Linear%20Regression%20in%20SciKitLearn)
 	+ [Evaluering av regresjonsmodellen](notebooks/Evaluering%20for%20regresjon)
 	+ Konvertering mellom SciKitLearn og pandas
-+ Kuriosa
-    + [Hypotesetesting](notebooks/hypothesistest) viser korleis plotta til førelesinga
-      vert laga og utdjuper resonnementet bak hypotesetesting
++ *Kuriosa.* Desse dokumentaviser korleis plotta til førelesinga vert laga 
+    + [Hypotesetesting](notebooks/hypothesistest)
+      utdjuper òg resonnementet bak hypotesetesting
+    + [Iris-Statistics](notebooks/Iris-Statistics)
