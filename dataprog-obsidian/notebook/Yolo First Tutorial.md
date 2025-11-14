@@ -5,10 +5,11 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.17.0
+    jupytext_version: 1.18.1
 kernelspec:
   name: python3
-  display_name: Python 3
+  display_name: Python 3 (ipykernel)
+  language: python
 ---
 
 +++ {"id": "t6MPjfT5NrKQ"}
@@ -59,14 +60,14 @@ pip install `ultralytics` and [dependencies](https://github.com/ultralytics/ultr
 
 [![PyPI - Version](https://img.shields.io/pypi/v/ultralytics?logo=pypi&logoColor=white)](https://pypi.org/project/ultralytics/) [![Downloads](https://static.pepy.tech/badge/ultralytics)](https://clickpy.clickhouse.com/dashboard/ultralytics) [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/ultralytics?logo=python&logoColor=gold)](https://pypi.org/project/ultralytics/)
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 id: wbvMlHd_QwMG
 colab:
   base_uri: https://localhost:8080/
 outputId: 4de5a5c9-d3b5-4e4e-a4e5-cd80f159e4ce
 ---
-!uv pip install ultralytics
+!pip install ultralytics
 import ultralytics
 ultralytics.checks()
 ```
@@ -77,7 +78,7 @@ ultralytics.checks()
 
 YOLO11 may be used directly in the Command Line Interface (CLI) with a `yolo` command for a variety of tasks and modes and accepts additional arguments, i.e. `imgsz=640`. See a full list of available `yolo` [arguments](https://docs.ultralytics.com/usage/cfg/) and other details in the [YOLO11 Predict Docs](https://docs.ultralytics.com/modes/train/).
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 id: zR9ZbuQCH7FX
 colab:
@@ -98,7 +99,7 @@ outputId: 1d438406-032a-4ea9-9ad5-dd17078850d3
 # 2. Val
 Validate a model's accuracy on the [COCO](https://docs.ultralytics.com/datasets/detect/coco/) dataset's `val` or `test` splits. The latest YOLO11 [models](https://github.com/ultralytics/ultralytics#models) are downloaded automatically the first time they are used. See [YOLO11 Val Docs](https://docs.ultralytics.com/modes/val/) for more information.
 
-```{code-cell}
+```{code-cell} ipython3
 :id: WQPtK1QYVaD_
 
 # Download COCO val
@@ -107,7 +108,7 @@ from ultralytics.utils.downloads import download
 download('https://ultralytics.com/assets/coco2017val.zip', unzip=True, dir='datasets') # download (780MB - 5000 images)
 ```
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 id: X58w8JLpMnjH
 outputId: 27364fde-3aff-47ea-9458-18e4a044e27b
@@ -126,7 +127,7 @@ colab:
 
 Train YOLO11 on [Detect](https://docs.ultralytics.com/tasks/detect/), [Segment](https://docs.ultralytics.com/tasks/segment/), [Classify](https://docs.ultralytics.com/tasks/classify/) and [Pose](https://docs.ultralytics.com/tasks/pose/) datasets. See [YOLO11 Train Docs](https://docs.ultralytics.com/modes/train/) for more information.
 
-```{code-cell}
+```{code-cell} ipython3
 :id: ktegpM42AooT
 
 #@title Select YOLO11 🚀 logger {run: 'auto'}
@@ -140,7 +141,7 @@ elif logger == 'Weights & Biases':
   !yolo settings wandb=True
 ```
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 id: 1NcFxRcFdJ_O
 outputId: 849c2875-cd29-4a93-a7c7-e464a9b84dc6
@@ -179,7 +180,7 @@ Export a YOLO model to any supported format below with the `format` argument, i.
 | [IMX500](https://docs.ultralytics.com/integrations/sony-imx500) | `imx` | `yolo11n_imx_model/` | ✅ | `imgsz`, `int8`, `fraction`, `device`, `data` |
 | [RKNN](https://docs.ultralytics.com/integrations/rockchip-rknn) | `rknn` | `yolo11n_rknn_model/` | ✅ | `imgsz`, `batch`, `name`, `device` |
 
-```{code-cell}
+```{code-cell} ipython3
 ---
 colab:
   base_uri: https://localhost:8080/
@@ -195,7 +196,7 @@ outputId: f06e7d97-01d9-45f4-b24b-e90b08291675
 
 YOLO11 was reimagined using Python-first principles for the most seamless Python YOLO experience yet. YOLO11 models can be loaded from a trained checkpoint or created from scratch. Then methods are used to train, val, predict, and export the model. See detailed Python usage examples in the [YOLO11 Python Docs](https://docs.ultralytics.com/usage/python/).
 
-```{code-cell}
+```{code-cell} ipython3
 :id: bpF9-vS_DAaf
 
 from ultralytics import YOLO
@@ -225,7 +226,7 @@ YOLO11 can train, val, predict and export models for the most common tasks in vi
 
 YOLO11 _detection_ models have no suffix and are the default YOLO11 models, i.e. `yolo11n.pt` and are pretrained on COCO. See [Detection Docs](https://docs.ultralytics.com/tasks/detect/) for full details.
 
-```{code-cell}
+```{code-cell} ipython3
 :id: 8Go5qqS9LbC5
 
 # Load YOLO11n, train it on COCO128 for 3 epochs and predict an image with it
@@ -242,7 +243,7 @@ model('https://ultralytics.com/images/bus.jpg')  # predict on an image
 
 YOLO11 _segmentation_ models use the `-seg` suffix, i.e. `yolo11n-seg.pt` and are pretrained on COCO. See [Segmentation Docs](https://docs.ultralytics.com/tasks/segment/) for full details.
 
-```{code-cell}
+```{code-cell} ipython3
 :id: WFPJIQl_L5HT
 
 # Load YOLO11n-seg, train it on COCO128-seg for 3 epochs and predict an image with it
@@ -259,7 +260,7 @@ model('https://ultralytics.com/images/bus.jpg')  # predict on an image
 
 YOLO11 _classification_ models use the `-cls` suffix, i.e. `yolo11n-cls.pt` and are pretrained on ImageNet. See [Classification Docs](https://docs.ultralytics.com/tasks/classify/) for full details.
 
-```{code-cell}
+```{code-cell} ipython3
 :id: 5q9Zu6zlL5rS
 
 # Load YOLO11n-cls, train it on mnist160 for 3 epochs and predict an image with it
@@ -276,7 +277,7 @@ model('https://ultralytics.com/images/bus.jpg')  # predict on an image
 
 YOLO11 _pose_ models use the `-pose` suffix, i.e. `yolo11n-pose.pt` and are pretrained on COCO Keypoints. See [Pose Docs](https://docs.ultralytics.com/tasks/pose/) for full details.
 
-```{code-cell}
+```{code-cell} ipython3
 :id: si4aKFNg19vX
 
 # Load YOLO11n-pose, train it on COCO8-pose for 3 epochs and predict an image with it
@@ -293,7 +294,7 @@ model('https://ultralytics.com/images/bus.jpg')  # predict on an image
 
 YOLO11 _OBB_ models use the `-obb` suffix, i.e. `yolo11n-obb.pt` and are pretrained on the DOTA dataset. See [OBB Docs](https://docs.ultralytics.com/tasks/obb/) for full details.
 
-```{code-cell}
+```{code-cell} ipython3
 :id: IJNKClOOB5YS
 
 # Load YOLO11n-obb, train it on DOTA8 for 3 epochs and predict an image with it
@@ -310,14 +311,14 @@ model('https://ultralytics.com/images/boats.jpg')  # predict on an image
 
 Additional content below.
 
-```{code-cell}
+```{code-cell} ipython3
 :id: pIdE6i8C3LYp
 
 # Pip install from source
 !uv pip install git+https://github.com/ultralytics/ultralytics@main
 ```
 
-```{code-cell}
+```{code-cell} ipython3
 :id: uRKlwxSJdhd1
 
 # Git clone and run tests on 'main' branch
@@ -325,14 +326,14 @@ Additional content below.
 !uv pip install -qe ultralytics
 ```
 
-```{code-cell}
+```{code-cell} ipython3
 :id: GtPlh7mcCGZX
 
 # Run tests (Git clone only)
 !pytest ultralytics/tests
 ```
 
-```{code-cell}
+```{code-cell} ipython3
 :id: Wdc6t_bfzDDk
 
 # Validate multiple models
