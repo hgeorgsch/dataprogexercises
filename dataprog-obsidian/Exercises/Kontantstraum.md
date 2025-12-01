@@ -72,6 +72,6 @@ Lag et program som ber bruker av programmet om å taste inn terminbeløp, rente,
 
 *(Merk at $r$ i formelen ikke er i prosent, 2% = 0.02)*
 
-### Dersom du vil
+## Dersom du vil
 
 Dersom du vil kan du også ta inflasjon, formueskatt ($\approx 1\%$) og skatteprosent (22% av renteinntekter) med i beregningene

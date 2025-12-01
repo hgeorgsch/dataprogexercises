@@ -24,7 +24,7 @@ chapters:
     - file: Numeriske Metodar og Kontrollflyt
       sections:
       - file: notebooks/Halveringsmetoden
-      - file: notebooks/Kontantstraum
+      - file: exercises/Kontantstraum
       - file: notebooks/Folkevekst
     - file: Datastrukturar og Simulering
       sections:
