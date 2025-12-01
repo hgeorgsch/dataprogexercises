@@ -26,6 +26,7 @@ chapters:
       - file: notebooks/Halveringsmetoden
       - file: exercises/Kontantstraum
       - file: notebooks/Folkevekst
+      - file: exercises/Kundedata
     - file: Datastrukturar og Simulering
       sections:
       - file: notebooks/Tilfeldigheit
@@ -40,6 +41,7 @@ chapters:
         sections:
          - file: notebooks/Arbeidsledige og Konkursar
       - file: exercises/Eksportdata
+    - file: Samanlikna Datasett
     - file: Agent-basert simulering
       sections:
       - file: notebooks/Shrimp-Game

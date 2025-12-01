@@ -41,10 +41,10 @@ Me definerer to funksjonar for moglege oppførslar.
 Ei skute kan vera fiska anten grådig eller tilfeldig.
 
 ```{code-cell} ipython3
-def fisk_graadig():
+def fisk_graadig(s=None):
     return fiske_data["kapasitet"]
 
-def fisk_tilfeldig():
+def fisk_tilfeldig(s=None):
     return fiske_data["kapasitet"]*random.random()
 ```
     
@@ -75,7 +75,7 @@ def lag_tilfeldig_skute():
 def fisk_reker(reke_skuter):
     for skute in reke_skuter:
         fiskefunksjon = skute["fiskefunksjon"]
-        skute["fangst"] = fiskefunksjon()
+        skute["fangst"] = fiskefunksjon(skute)
   
 def selg_reker(reke_skuter):
     Q1, Q2, Q3 = (skute["fangst"] for skute in reke_skuter)
@@ -152,7 +152,7 @@ def lag_Cournot_skute():
 def fisk_reker(reke_skuter):
     for skute in reke_skuter:
         fiskefunksjon = skute["fiskefunksjon"]
-        skute["fangst"] = fiskefunksjon(reke_skuter)
+        skute["fangst"] = fiskefunksjon(skute)
         skute["tidligere_kvantum"].append(skute["fangst"])
   
 def selg_reker(reke_skuter):

@@ -53,5 +53,5 @@ og kvar og ein må leggja vekt på det som dei finn nyttigast og mest interessan
 	+ [[CodeRunner Control]]
 + **Opne oppgåver**
 	+ [Kontantstraum](exercises/Kontantstraum)
+	+ [Kundedata](exercises/Kundedata)
 	+ [[Folkevekst]]
-	+ [[Simulering av ein utvalsstudie]]
