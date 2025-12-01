@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.17.0
+    jupytext_version: 1.18.1
 kernelspec:
   display_name: dataprog
   language: python
@@ -177,9 +177,9 @@ kr, kurv = måfåhandling()
 
 ```{code-cell} ipython3
 pengebruk = []
-n = 10000
+n = 5
 for _ in range(n):
-    kundens_pengebruk = måfåhandling()
+    kundens_pengebruk, kurv = måfåhandling()
     pengebruk.append(kundens_pengebruk)
 
 snitt = sum(pengebruk)/n
@@ -189,6 +189,22 @@ plt.hist(pengebruk, 20)
 plt.show()
 ```
 
+::: {admonition} Oppgåve
+Fem simuleringar er litt lite til å laga eit interessant histogram.
+Auk $n$ og sjå om du får eit betre biliete av kva som er ein typisk
+kunde.
+:::
+
+::: {admonition} Oppgåve
+Grunnen til at eg hadde sett $n$ so lågt er at `måfåhandling` genererer 
+so mykje tekst ut.  Det er nyttig for å testa med liten $n$, men 
+ofte plagsomt for stor $n$.
+
+Legg til eit ekstra arguement `debug` og bruke `if`-satsar slik at
+`måfåhandling` berre skriv ut tekst når `debug` er sann.
+Om du gjer `debug`-parameteren valfri (med ein initialverdi), treng 
+du ikkje skriva om alle kalla til `måfåhandling()`.
+:::
 
 ## Steg 3: Varer på salg
 
@@ -206,7 +222,7 @@ I staden for berre pris, treng me ein vegleidande pris og
 ein salspris.  I utgangspunktet er dei to prisane like.
 
 ```{code-cell} ipython3
-varer = [ { "vare" : "Epler", "veilpris": 10.0, "salspris": 10.0 },
+salsvarer = [ { "vare" : "Epler", "veilpris": 10.0, "salspris": 10.0 },
           { "vare" : "Pærer", "veilpris": 15.0, "salspris": 15.0 },
           { "vare" : "Bleier", "veilpris": 35.0, "salspris": 35.0 },
           { "vare" : "Sjokolade", "veilpris": 6.0, "salspris": 6.0 },
@@ -244,7 +260,7 @@ def kjopssannsyn(vare,P0=0.2):
 ::: {admonition} Oppgåve
 
 Test funksjonen `kjopssannsyn()`.
-Parameteren `vare` skal ha same form som i `varer`-katalogen over,
+Parameteren `vare` skal ha same form som i `salsvarer`-katalogen over,
 dvs. t.d. `{ "veilpris" : 10, "salspris" : 6 }`.
 Test nokre varer me ulike prisar for å sjå kva kjøpssannsyn du
 får.
@@ -294,7 +310,7 @@ Ser handlekorgane fornuftige ut?
 
 ::: {admonition} Oppgåve
 
-Lag ein ny variabel som liknar `varer` men der salsprisane er endra.
+Lag ein ny variabel som liknar `salsvarer` men der salsprisane er endra.
 Prøvekøyr kundemodellen med dei nye prisane.
 Ser handlekorgane fornuftige ut?
 Korleis er dei endra?
@@ -346,7 +362,7 @@ Verkar resultatet fornuftig?
 Legg inn nokon tilbodsprisar, og sjå korleis det påverkar omsettinga.
 Merk at det er enkelt å rekna ut omsettinga, frå lista over handlesummar.
 ```python
-kr, kurvar = simuler_dag(100,varer)
+kr, kurvar = simuler_dag(100,salsvarer)
 omsetting = sum(kr)
 ```
 :::

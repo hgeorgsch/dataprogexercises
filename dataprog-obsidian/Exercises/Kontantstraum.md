@@ -7,7 +7,7 @@ tags: [exercise, simulering, loop]
 
 # Kontantstraum - Oppgåver for vidarekomande
 
-Desse oppgåvene byggjer på [](Simulering%20av%20kontantstraum).
+Desse oppgåvene byggjer på [](/notebooks/Simulering%20av%20kontantstraum).
 
 :::{admonition} Oppgåve
 So langt har me sett på annuitetslån, der terminbetalinga er eit fast beløp.
