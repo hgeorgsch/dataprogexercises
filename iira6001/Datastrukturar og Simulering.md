@@ -22,6 +22,7 @@ Dette kapittelet byggjer på
 	+ [Tilfeldigheit](notebooks/Tilfeldigheit)
 	+ [Marknadssimulering](notebooks/Marknadssimulering)
 + *Opne Øvingar.*
-    + [](notebooks/Kundedifferensiering)
+    + [](exercises/Kundedifferensiering)
+	+ [[Simulering av ein utvalsstudie]]
 + *Drilløving.*
 	+ [[CodeRunner Data Structures]]

@@ -134,19 +134,19 @@ er overflødig for deg.
 
 Parenteser går ofte i kluss, så det er verd å seia nokre ord om det med ein gong.
 Me bruker dei på same måte som i matematikken.
-```math
+$$
 ( 5 + 3 ) \cdot 2
-```
+$$
 er ikkje det same som 
-```math
+$$
 5 + 3 ( \cdot 2 )
-```
+$$
 
 ::: {admonition} Refleksjon
 Korleis les du
-```math
+$$
 5 + 3 \cdot 2\;\text{?}
-```
+$$
 Som
 $( 5 + 3 ) \cdot 2$ eller $5 + 3 ( \cdot 2 )$?
 :::
@@ -164,9 +164,9 @@ Prøv.
 :::
 
 Somme ting må skrivast om med ekstra parenteser i python, slik som kompliserte brøkar:
-```math
+$$
 \frac{ 2\cdot(5+3) }{ 40-(7*5) } 
-```
+$$
 Det vert
 
 ```{code-cell} ipython3
@@ -184,9 +184,9 @@ Kvifor?
 
 ::: {admonition} Oppgåve
 Korleis vil du skriva dette i python?
-```math
+$$
 \frac{ (5+3)^2 }{ 5+3^2 } 
-```
+$$
 :::
 
 Enkelt sagt vert parenteser rekna innanfrå og ut.  
@@ -217,9 +217,9 @@ I tillegg til formatteringane som eg har brukt over, kan me bruka **utheva** tek
 | Plommer |         45 |
 
 Markdown støtter også matematikk med $\LaTeX$ syntax
-```math
+$$
 f(x) = 3x^2 + x - 10. 
-```
+$$
 
 :::{admonition} Oppgåver
 Bruk teksta mi over som døme, og svar på fylgjande.
@@ -289,9 +289,9 @@ Lat oss ta eitt litt meir avansert døme.
 Ofte har me matematiske modellar som skildrar forventa samfunns-
 og foretningsutvikling.  T.d. meiner ein at folkeveksten i eit land
 ofte kan skidrast som
-```math
+$$
 P(t) = \frac{K}{1+A\exp(-rt)} 
-```
+$$
 der
 + $P(t)$: folketal ved tiden $t$
 + $r$ er relativ vekstrate, feks 2% (0,02)

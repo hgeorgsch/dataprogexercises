@@ -13,7 +13,6 @@ Veke 1
 Veke 2
 : [Datastrukturar og Simulering](Datastrukturar%20og%20Simulering.md)
 
-
 Veke 3
 : [CSV og Deskriptiv Statistikk](CSV%20og%20Deskriptiv%20Statistikk)
 

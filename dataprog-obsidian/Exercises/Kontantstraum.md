@@ -7,7 +7,7 @@ tags: [exercise, simulering, loop]
 
 # Kontantstraum - Oppgåver for vidarekomande
 
-Desse oppgåvene byggjer på [](Simulering%20av%20kontantstraum).
+Desse oppgåvene byggjer på [](/notebooks/Simulering%20av%20kontantstraum).
 
 :::{admonition} Oppgåve
 So langt har me sett på annuitetslån, der terminbetalinga er eit fast beløp.
@@ -72,6 +72,6 @@ Lag et program som ber bruker av programmet om å taste inn terminbeløp, rente,
 
 *(Merk at $r$ i formelen ikke er i prosent, 2% = 0.02)*
 
-### Dersom du vil
+## Dersom du vil
 
 Dersom du vil kan du også ta inflasjon, formueskatt ($\approx 1\%$) og skatteprosent (22% av renteinntekter) med i beregningene
