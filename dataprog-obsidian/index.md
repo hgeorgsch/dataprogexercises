@@ -41,6 +41,7 @@ Andreas: andreas.h.schille@ntnu.no
 		+ [[Sparekalkulator og Logistisk Vekst]]
 + Notat
 	+ [[samle noen tanker]] frå Jonas
+	+ [[Pensumkategoriar]]
 
 
 
