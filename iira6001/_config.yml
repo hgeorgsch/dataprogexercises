@@ -19,9 +19,12 @@ sphinx:
 
 parse:
     myst_enable_extensions:
-        - deflist
         - amsmath
+        - attrs_block
+        - attrs_inline
         - colon_fence
+        - deflist
+        - dollarmath
+        - linkify
         - smartquotes
         - strikethrough
-        - dollarmath

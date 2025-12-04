@@ -25,6 +25,7 @@ chapters:
       sections:
       - file: notebooks/Halveringsmetoden
       - file: exercises/Kontantstraum
+      - file: notebooks/Smittespreiing
       - file: notebooks/Folkevekst
       - file: exercises/Kundedata
     - file: Datastrukturar og Simulering
