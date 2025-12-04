@@ -24,10 +24,10 @@ chapters:
     - file: Numeriske Metodar og Kontrollflyt
       sections:
       - file: notebooks/Halveringsmetoden
-      - file: exercises/Kontantstraum
       - file: notebooks/Smittespreiing
-      - file: notebooks/Folkevekst
+      - file: exercises/Kontantstraum
       - file: exercises/Kundedata
+      - file: notebooks/Folkevekst
     - file: Datastrukturar og Simulering
       sections:
       - file: notebooks/Tilfeldigheit
