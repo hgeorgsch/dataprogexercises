@@ -4,7 +4,7 @@ tags:
 author: Hans Georg Schaathun
 ---
 
-# Veke 1. Numeriske Metodar og Kontrollflyt
+# Numeriske Metodar og Kontrollflyt
 
 Me freistar å gje eit par forskjellige innfallsvinklar til kvart tema.
 Vekesprogrammet inneheld difor forskjellige ressursar som kan brukast på ulikt vis.
