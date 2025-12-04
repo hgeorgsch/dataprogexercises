@@ -1,15 +1,15 @@
 ---
-title: Simulering av kontantstraum
+title: Kontantstraum
 author: Hans Georg Schaathun
 tags: [exercise, simulering, loop]
 ---
 
 
-# Kontantstraum - Oppgåver for vidarekomande
+# Kontantstraum (oppgåver for vidarekomande)
 
 Desse oppgåvene byggjer vidare på [](/notebooks/Simulering%20av%20kontantstraum).
 Dei skal ikkje krevja nye programmeringsteknikkar, men gjev øving i å variera
-å kombinera teknikkane frå det opprinnelege dømet.
+å kombinera og variera teknikkane frå det opprinnelege dømet.
 Den enklaste måten å arbeida på, er å samanlikna kvar ny oppgåve med kjende
 oppgåver og døme.  Reflekter fyrst over kva som er nytt i det nye problemet,
 og deretter over kva du kan endra i løysinga for å passa det nye problemet.
@@ -41,8 +41,7 @@ saldo frå nyttår til nyttår.
 
 
 :::{admonition} Oppgåve
-Sjå på dømet med rentedringar 
-({ref}`/notebooks/Simulering%20av%20kontantstraum:tilfeldige-renteendringar-i-framtida`).
+Sjå på dømet med rentedringar (i [](/notebooks/Simulering%20av%20kontantstraum)).
 I røynda kjem ei renteendring sjelden aleine.  
 Kan henda burde sannsynlegheita for renteauke auka når den fyrste renteendringa
 skjer, og ikkje gå ned før me ser ein rentenedgang.
@@ -67,9 +66,8 @@ me har simulert lån.
 
 Dei som har lese matematikk veit at me kan rekna ut sluttsaldoen som ei
 geometrisk rekkje.
-$$
-  S_n = \sum_{i=1}^{n} s\cdot (1+r)^i = \frac{1-(1+r)^n}{r}(1+r)s
-$$
+
+$$S_n = \sum_{i=1}^{n} s\cdot (1+r)^i = \frac{1-(1+r)^n}{r}(1+r)s$$
 
 Rekn ut sluttsaldoen $S_n$ både gjennom ei simulering og vha. formelen
 for geometriske rekkjer.  Plott båe utrekningane for kvart år.
