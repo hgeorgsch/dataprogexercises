@@ -206,7 +206,7 @@ Om du gjer `debug`-parameteren valfri (med ein initialverdi), treng
 du ikkje skriva om alle kalla til `måfåhandling()`.
 :::
 
-## Steg 3: Varer på salg
+## Steg 3: Varer på sal
 
 Me ynskjer å undersøkja korleis sal og omsetting vert påverka
 om me set varer på tilbod. 
