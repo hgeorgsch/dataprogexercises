@@ -41,3 +41,4 @@ Dette inneber
     + lister
     + iteratorar
 + Konvertering mellom datatypar
++ Formattert utskrift med `print( f"... {var:format}" )`
