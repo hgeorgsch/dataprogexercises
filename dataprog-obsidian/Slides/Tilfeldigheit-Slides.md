@@ -217,6 +217,30 @@ Out[5]: [8, 7, 6, 5, 3, 1, 2, 8, 1, 9, 6, 6]
 <!-- slide template="[[tpl-smalltext]]" -->
 
 ```
+In [12]: random.seed(42)
+
+In [13]: [ random.randint(1,10) for i in range(12) ]
+Out[13]: [2, 1, 5, 4, 4, 3, 2, 9, 2, 10, 7, 1]
+
+In [14]: [ random.randint(1,10) for i in range(12) ]
+Out[14]: [1, 2, 4, 4, 9, 10, 1, 9, 4, 9, 7, 4]
+
+In [15]: [ random.randint(1,10) for i in range(12) ]
+Out[15]: [8, 10, 5, 1, 3, 7, 6, 5, 3, 4, 6, 2]
+```
+<!-- element class="largercode" -->
+
+::: credit
+:::
+
+note:
+
+Me kan velja frø med `random.seed()`, slik:
+
+---
+<!-- slide template="[[tpl-smalltext]]" -->
+
+```
 In [6]: random.seed(42)
 
 In [7]: [ random.randint(1,10) for i in range(12) ]
@@ -243,6 +267,9 @@ Me kan velja frø med `random.seed()`, slik:
 
 ---
 
+## Andre variantar
+
+---
 
 ```python
 klasse = [ "Arne", "Bente", "Cecilie", "Denis", "Emil", "Freya",
@@ -250,44 +277,72 @@ klasse = [ "Arne", "Bente", "Cecilie", "Denis", "Emil", "Freya",
         "Nina", "Olga", "Petter", "Quentin", "Ruth", "Stine", 
         "Tore", "Unni", "Vidar", "Webjørn", "Xavier", "Yngve",
         "Zacharias", "Ægir", "Ølvar", "Åmund" ]
-
-n = len(klasse)
-indekser = [ random.randint(0,n-1) for _ in range(3) ]
-
-referansegruppe = [ klasse[x] for x in indekser ] 
-
-print( referansegruppe )
 ```
 
 ---
 
-Ofte vil de sjå liknande kode skrive med ein `for`-løkke i staden
-for listekomprehensjon.  Det ser slik ut.
+```python
+klasse = [ "Arne", "Bente", "Cecilie", "Denis", "Emil", "Freya",
+        "Gyda", "Holger", "Inger", "Jens", "Kim", "Line", "Merete",
+        "Nina", "Olga", "Petter", "Quentin", "Ruth", "Stine", 
+        "Tore", "Unni", "Vidar", "Webjørn", "Xavier", "Yngve",
+        "Zacharias", "Ægir", "Ølvar", "Åmund" ]
+```
 
-```{code-cell} ipython3
-liste = []
-while len(liste) < 7:
-   idx = random.randint(0,n-1) 
-   person = klasse[idx] 
-   liste.append( person )
+```
+In [32]: n = len(klasse)
 
-print( liste )
+In [33]: indekser = [ random.randint(0,n-1) for _ in range(3) ]
+
+In [34]: referansegruppe = [ klasse[x] for x in indekser ]
+
+In [35]: print( referansegruppe )
+['Line', 'Ølvar', 'Line']
 ```
 
 
-No er det mogleg å leggja til ein test for å hindra duplisering,
-ved å bruke `in`- eller `not in`-operatoren.
+---
 
-```{code-cell} ipython3
-liste = []
-while len(liste) < 7:
-   idx = random.randint(0,n-1) 
-   person = klasse[idx] 
-   if person not in liste:
-      liste.append( person )
-
-print( liste )
+```python
+klasse = [ "Arne", "Bente", "Cecilie", "Denis", "Emil", "Freya",
+        "Gyda", "Holger", "Inger", "Jens", "Kim", "Line", "Merete",
+        "Nina", "Olga", "Petter", "Quentin", "Ruth", "Stine", 
+        "Tore", "Unni", "Vidar", "Webjørn", "Xavier", "Yngve",
+        "Zacharias", "Ægir", "Ølvar", "Åmund" ]
 ```
 
-`random.choice()`
+```
+In [30]: referansegruppe = [ random.choice(klasse) for _ in range(3) ]
 
+In [31]: print( referansegruppe )
+```
+
+
+---
+
+```python
+klasse = [ "Arne", "Bente", "Cecilie", "Denis", "Emil", "Freya",
+        "Gyda", "Holger", "Inger", "Jens", "Kim", "Line", "Merete",
+        "Nina", "Olga", "Petter", "Quentin", "Ruth", "Stine", 
+        "Tore", "Unni", "Vidar", "Webjørn", "Xavier", "Yngve",
+        "Zacharias", "Ægir", "Ølvar", "Åmund" ]
+```
+
+```
+In [26]: import numpy.random as rnd
+
+In [27]: perm = rnd.permutation( klasse )
+
+In [28]: print( perm )
+['Petter' 'Ølvar' 'Åmund' 'Gyda' 'Inger' 'Vidar' 'Webjørn' 'Freya' 'Stine'
+ 'Denis' 'Yngve' 'Holger' 'Emil' 'Kim' 'Line' 'Xavier' 'Arne' 'Ægir'
+ 'Tore' 'Nina' 'Ruth' 'Merete' 'Quentin' 'Olga' 'Unni' 'Jens' 'Zacharias'
+ 'Cecilie' 'Bente']
+
+In [29]: print( perm[:5] )
+['Petter' 'Ølvar' 'Åmund' 'Gyda' 'Inger']
+```
+
+---
+
+# Slutt
