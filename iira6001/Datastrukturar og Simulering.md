@@ -28,6 +28,13 @@ Dette kapittelet byggjer på
 + Utkast til oppgåver
 	+ [[Simulering av ein utvalsstudie]]
 
+Kuriosa
+: er arbeidsdokument.  Dei vert publiserte for dei nyssgjerrige, og viser teknikkar som eg har brukt for å laga det andre materialet til leksjonen.
+
++ [](notebooks/Tilfeldigheit-Demo) viser korleis plotta til føredraget om
+  [Tilfeldigheit](https://iirevu.org.ntnu.no/Slides/Kva%20er%20simulering%3f/#/)
+  vart lagde.
+
 ## Oppsummering
 
 Hovudmålet denne veka er å kunna planleggja og implementera enkle
