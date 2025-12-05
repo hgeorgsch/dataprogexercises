@@ -1,3 +1,22 @@
+---
+title: Smittespreiing
+author: Hans Georg Schaathun
+tags: [exercise, simulering, loop]
+jupytext:
+  cell_metadata_filter: -all
+  formats: md:myst,ipynb
+  root_level_metadata_filter: -title,-author,-tags
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.18.1
+kernelspec:
+  display_name: dataprog
+  language: python
+  name: dataprog
+---
+
 # Smittespreiing
 
 ::: {admonition} Kjelde
@@ -16,7 +35,7 @@ Dette gjev oss ein modell som me kan simulera.
 
 Lat oss fyrst definera parametrane.  Me treng eit $r$-tal som 
 me kaller `r1` og talet `t1` på periodar som me skal simulera.
-Covid hadde kort inkubasjonstid, so me kan tenkja på `t1` som dagar.
+Me kan tenkja på `t1` som veker.
 
 ```{code-cell} ipython3
 r1 = 3.0
@@ -48,16 +67,41 @@ frittståande program, og mange forfattarar bruker han i Jupyter Notebook-dokume
 
 ## Modellen
 
+Storleiken som me skal modellera er talet på smitta personar.  
+Me tenkjar oss at det heile startar med éin smitta person.
+I tillegg må me ha ein liste over talet på smitta personar
+på kvart tidspunkt hittil i simuleringar.
+Dette kan me definera slik.
+
 ```{code-cell} ipython3
 pop = 1
 liste_smittet = [1]
+```
+
+Sjølve simuleringa må vera ei løkke som itererer over `t1`
+periodar.  I kvar runde smittar `pop` personar `r1*pop`
+nye personar, medan dei `pop` personane vert friske 
+(eller døyr).
  
+```{code-cell} ipython3
 for i in range(t1):
     pop *= r1
     liste_smittet.append(pop)
 ```
 
+::: {admonition} Oppgåve
+Lag eit plott over veksten i talet på smitta so langt.
+:::
+
 ## Periode 2
+
+Dette $r$-talet er ikkje konstant.  Når me tek omsyn til smitta
+ved å halda meir avstand (einmeter, tometer), går $r$-talet ned.
+Når me vert leie av tiltaka kan $r$-talet gå opp.
+
+Lat oss simulera ein periode til, med nytt $r$-tal `r2`.
+Legg merke til at den nye perioden held fram der den fyrste stoppa,
+slik at me ikkje redefinerer `pop` og `liste_smittet`.
  
 ```{code-cell} ipython3
 r2 = 1.2
@@ -67,6 +111,24 @@ for i in range(t2):
     pop *= r2
     liste_smittet.append(pop)
 ```
+
+::: {admonition} Oppgåve
+Her har me to nesten identiske `for`-løkker.  Koden vert enklare å lesa
+om me bruker ein funksjon i staden for å gjenta kode.
+Skriv ein funksjon `smittesim(liste_smittet,r,t)` som erstattar `for`-løkka.
+Funksjonen kan ta `liste_smittet` inn, leggja til nye datapunkt, og returnera
+den utvida lista.
+:::
+
+::: {hint} 
+Eg nemnde ikkje `pop` i oppgåva over, men `pop` vil alltid vera lik
+det siste elementet i lista.  Me kan difor finna `pop` som
+`liste_smittet[-1]`.
+:::
+
+## Plotting
+
+Til slutt kan me plotta det heile, slik.
    
 ```{code-cell} ipython3
 import matplotlib.pyplot as plt
@@ -78,3 +140,8 @@ plt.xlabel("Uker")
 plt.ylabel("Nye smittede")
 plt.show()
 ```
+
+::: {admonition} Oppgåve
+Prøv deg fram med andre $r$-tal, anten i standen for dei over, eller ved
+å leggja til ein periode.  Kva skjer når $r<1$?
+:::
