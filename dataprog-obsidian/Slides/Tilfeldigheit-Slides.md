@@ -1,48 +1,99 @@
 ---
-jupytext:
-  formats: md:myst,ipynb
-  text_representation:
-    extension: .md
-    format_name: myst
-    format_version: 0.13
-    jupytext_version: 1.17.2
-kernelspec:
-  name: dataprog
-  language: python
-  display_name: dataprog
+tags:
+  - lecture/video
 ---
 
 # Slumptalsgenerator
 
-
-Mange simuleringar handlar om tilfeldige prosessar, eller prosessar
-som er so kaotiske at me ikkje forstår heile samanhengen, og difor
-må tenkja på dei som tilfeldige.
-
-Slump, eller tilfeldighet, er vanskeleg for datamaskiner, som er
-konstruerte for å vera fullt ut deterministiske system.
-Verkeleg slump må difor koma utanfrå, som *input*.
-Dette er mogleg ved å henta data frå skjerm og tastatur, og særleg 
-då frå ørsmå variasjonar i tida mellom tastetrykk, men der er grenser
-for kor mykje slump me kan henta ut på denne måten.
-Store simuleringar krev meir slump enn me klarer å henta ut på 
-denne måten.
-
-I praksis bruker me difor som regel sokalla *pseudo-tilfeldige* tal.
-Det er matematiske formlar som gjer at me kan rekna ut lange seriar
-med tal som *ser tilfeldige ut*.
-Det mest kjente tilfellet er lineær kongruens, der det $i$te talet
-i serien er definert som
-$$ s_i = a\cdot s_{i-1} \mod p $$
-der $\mod p$ gjev resten ved divisjon med $p$, og $a$ og $p$ er
-høveleg valde konsantar.
-
-Den nøyaktige formelen er ikkje viktig for oss.  Det som er greitt
-å hugsa er at når me har det fyrste talet, $s_0$, som me gjerne
-kaller **frøet** (*seed*), vil slumptalsgeneratoren gje oss ei
-*uendeleg* rekkje med tilfeldigaktige tal.
+---
 
 ![newton](https://pbs.twimg.com/media/D2EZ4DwVAAApNdd?format=jpg&name=900x900)
+
+note:
+Mange simuleringer handler om tilfeldige prosesser.
+I tillegg er der mange prosesser som i teorien er deterministiske,
+men som er så kaotiske at vi ikke klarer å modellere dem deterministisk.
+Da er det òg naturlig å bruke tilfeldige prosesser som modell.
+
+---
+
+Stoakstiskte prosesser
+
+note:
+I statistikken kaller vi gjerne slike tilfeldige prosesser for
+*stokastiske* prosesser.  Enkelt sagt er «stokastisk» blott
+et penere ord for tilfeldig.
+
+---
+
+Monte Carlo-simuleringer
+
+note:
+I simuleringsliteraturen, blir tilfeldige simuleringer gjerne
+kalt for *Monte Carlo-simuleringer* efter de kjente kasinoene
+i Monte Carlo, med spill som roulette.
+
+---
+
++ Slumptal
+
+
+note:
+Slump, eller tilfeldighet, er vanskeleg for datamaskiner, som er
+konstruerte for å vera fullt ut deterministiske system.
+Virkeleg slump må derfor komme utanfrå, som *input*.
+
+Det er mulig å få det til, ved å måle ørsmå variasjoner i
+tastefrekvensen fra brukeren, eller i temperaturen i rommet,
+eller spenning på strømnettet.
+Der er derimot en grense for hvor mye slump man kan hente ut
+på denne måten på kort tid.
+Store simuleringer krever ofte mer slump.
+
+---
+
++ *Pseudo-random numbers*
+
+note:
+I praksis bruker vi som regel såkalte *pseudo-tilfeldige* tall.
+Det er matematiske formler som gjør at vi kan regne ut lange serier
+med tall som *ser tilfeldige ut*.
+
+---
+
+$$ s_i = a\cdot s_{i-1} \mod p $$
+
+note:
+Det mest kjente tilfellet er lineær kongruens.
+
+Her starter vi med ett tall $s_0$, som vi gjerne kaller frøet eller *seed*.
+Når vi har ett tall $s_{i-1}$, kan vi regne ut det neste tallet $s_i$ ved
+å gange med en konstant $a$ og ta resten ved divisjon med $p$.
+
+Dersom vi velger $a$ og $p$ fornuftig, vil føgen av tall $s_i$
+se tilfeldig ut.
+
+Den nøyaktige formelen er ikkje viktig for oss.  Det som er greitt
+å hugsa er at når me har det fyrste talet, eller **frøet** (*seed*),
+så vil slumptalsgeneratoren gi oss en *uendelig* følge med
+tilfeldigaktige tal.
+
+Der er mange kjente slumptallsgeneratorer, og lineær kongruens er 
+ikke den beste, blott den best kjente.
+Vi pleier derimot ikke være så kresne på slumptallsgeneratorene
+i simulering.  Hvis du skal lave lotterier, som nødvendigvis må
+være rettferdige, er det langt viktigere at slumptallene ikke
+bare ser tilfeldige men også er umulige å forutsi.
+
+De strengeste kravene til slumptall gjelder i kryptografi, som
+f.eks. brukes til å sikre pengeoverføringer og sensitive
+personopplysninger.
+
+---
+
+## Sannsynsfordelinger
+
+---
 
 ## Tilfeldige tal i python
 
@@ -279,68 +330,4 @@ plt.show()
 
 Om du ikkje har lesa nok statistikk, skal du ikkje dvela ved denne
 oppgåva.
-
-## Litt større oppgåva
-
-Nedanståande oppgåve er eit døme som illustrerer korleis ganske
-enkle og grunnleggjande teknikkar kan setjast saman til relativt
-store program.
-
-::: {admonition} Oppgåve (roulette)
-
-Lag ein funksjon som simulerer eit roulette-spel.
-Då treng du fleire funksjonar.
-
-1. Skriv ein funksjon som genererer eit tilfeldig tal.
-   Vanleg roulette gjev tal frå 0 til 36.
-
-Me treng ein funksjon som vurderer om ein innsats vinn og kor
-mykje han vinn.  Her er der mange tilfelle å vurdera,
-og mange måtar å gjera det på, so lat oss ta eit døme.
-
-Roulette har mange rutar å satsa på, m.a. raudt og svart,
-der kvart tal utanom 0 er farga anten raudt eller sort.
-Desse tala er definert slik,
-
-```python
-red = [ 32, 19, 21, 25, 34, 27, 36, 30, 23, 5, 16, 1, 14, 9, 18, 7, 12, 3 ]
-black = [ 15, 4, 2, 17, 6, 13, 11, 8, 10, 24, 33, 20, 31, 22, 29, 28, 35, 26 ]
-```
-
-2. Skriv ein funksjon som sjekkar om du vinn.  Dvs. om du satsar på
-   raudt, og talet som kjem opp er 27, skal du kunna skriva
-   `win(27,"red")` og få ut `True`.  Her kan du bruka `in`- eller
-   `not in`-konstruksjonen som me såg tidlegare.
-
-3. Utbetalinga når du vinn, inklusive refusjon av innsatsen, er 
-   36 delt på talet på vinnartal.  Der er 18 raude og 18 sorte
-   tal, so om du satsar $x$ kroner på raudt, og vinn, får du
-   tilbake $x\cdot 36/18=2x$.  Skriv ein `payoff`-funksjon.
-   Dersom du satsa tre kroner på raudt og 27 vinn, skal du
-   `payoff(27,"red",3)` gje 6, og om 15 (svart) vinn, skulle han
-   gje 0.
-
-Merk at du gjer koden meir generell om du reknar utbetalinga
-ut frå lengda på lista med tal som er satsa på, heller enn
-å hardkoda `2*x`.  Vinstfaktoren for raudt er t.d.
-`36/len(red)`.
-
-4. Skriv ein funksjon for å spela, som tek inn innsatsen,
-   triller kula, og returnerer utbetalinga.  Dvs. du skal
-   kunna kalla `play("red",3)` for å satsa tre kroner på
-   raudt.  Denne funksjonen må bruka funksjonane over,
-   og returnera 0 om raudt ikkje vinn.
-
-5. Køyr ein simulering der du speler 1000 gongar og satsar
-   ei krone på raudt kvar gong.  Kor mykje taper eller vinn
-   du netto?  
-
-6. Du kan godt køyra simuleringa frå 5 fleire gongar og
-   rekna gjennomsnitt.
-
-Du kan halda fram å byggja på programmet for å opna for andre
-innsatsar, på jamne og ujamne tal, på intervall, hjørne, rekkjer,
-etc.
-
-:::
 
