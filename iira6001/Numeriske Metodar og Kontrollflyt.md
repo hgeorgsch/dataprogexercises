@@ -57,4 +57,14 @@ Der er rikeleg med oppgåver, og me reknar ikkje med at nokon rekk å gjera alt.
 Hensikta med oppgåvene er å visa eit breidt utval av løysingar til etterlikning,
 og kvar og ein må leggja vekt på det som dei finn nyttigast og mest interessant.
 
+## Oppsummering
+
+Hovudmålet denne veka er å læra å bruka dei mest grunnleggjande konsepta
+i imperativ programmering.
++ Variablar og tilordningar
++ Bolske uttrykk med `==`, `<`, `>`
++ Vilårssatsar med `if` og `else`
++ Løkker med `for` og gjerne `while`
++ Utskrift med `print`
++ Plotting med `matplotlib`
 

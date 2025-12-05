@@ -7,14 +7,23 @@ title: Agent-basert simulering
 
 # Agent-basert simulering
 
-
 + *Oversiktsførelesing*:
 	+ Objektorientert modellering og programmering 
 	+  [[Mentale og matematiske modellar]]  
-+ *Demovideo*: [[Klasser-Objekter]] i python
-+ *Demovideo*: Programmering i `.py`-filer
-+ *Demovideo*: git og github?
++ *Demovideo*
+    + [[Klasser-Objekter]] i python
+    + Programmering i `.py`-filer
+    + git og github?
++ *Utarbeidd døme*
+    + [Shrimp-Game](notebooks/Shrimp-Game)
++ *Opne øvingar*
+    + [Iskrem på ei strand](notebooks/Iskrem%20på%20ei%20strand)
 
-+ Utarbeidd døme: [Shrimp-Game](notebooks/Shrimp-Game)
-+ Innfyllingsoppgåve: [Iskrem på ei strand](notebooks/Iskrem%20på%20ei%20strand)
+## Oppsummering
+
+Hovudmålet denne veka er å modellera simuleringsproblem som agentar
+og kunna implementera dette med objekt-orientert programmering.
+Dette inneber
++ Modellar med agentar som handlard uavhengig av kvarandre 
++ Klasser og objekt i python
 
