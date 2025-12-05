@@ -1,6 +1,8 @@
 ---
 tags:
   - lecture/video
+css:
+  - custom.css
 ---
 
 # Slumptalsgenerator
@@ -17,7 +19,7 @@ Da er det òg naturlig å bruke tilfeldige prosesser som modell.
 
 ---
 
-Stoakstiskte prosesser
+Stokastiske prosesser
 
 note:
 I statistikken kaller vi gjerne slike tilfeldige prosesser for
@@ -35,7 +37,7 @@ i Monte Carlo, med spill som roulette.
 
 ---
 
-+ Slumptal
+- Slumptal
 
 
 note:
@@ -52,7 +54,7 @@ Store simuleringer krever ofte mer slump.
 
 ---
 
-+ *Pseudo-random numbers*
+- *Pseudo-random numbers*
 
 note:
 I praksis bruker vi som regel såkalte *pseudo-tilfeldige* tall.
@@ -90,9 +92,9 @@ f.eks. brukes til å sikre pengeoverføringer og sensitive
 personopplysninger.
 
 ---
-<!-- slide template="[[tpl-twocolumn]]" -->
+<!-- slide template="[[tpl-smalltext]]" -->
 
-::: leftimage
+![[6sided_dice_(cropped).jpg|300]]
 
 ```python
 import random
@@ -105,28 +107,29 @@ In [5]: [ terning() for _ in range(10) ]
 Out[5]: [5, 1, 2, 6, 6, 4, 3, 3, 4, 3]
 ```
 
-:::
-
-::: leftcredit
-:::
-
-::: rightimage
-![[6sided_dice_(cropped).jpg]]
-:::
-
-::: rightcredit
-By Diacritica - Own work, CC BY-SA 3.0,
+::: credit
+Illustrasjon ved Diacritica - Own work, CC BY-SA 3.0,
 via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=99768017)
 :::
 
-
 ---
+<!-- slide template="[[tpl-smalltext]]" -->
 
+```python
+In [5]: [ random.randint(1,6) for _ in range(10) ]
+Out[5]: [5, 1, 2, 6, 6, 4, 3, 3, 4, 3]
+```
+
+![[diskretuniform.svg]]
+
+::: credit
+:::
+
+note:
 histogram uniform diskret
 
 ---
-
-histogram uniform kontinuerleg
+<!-- slide template="[[tpl-smalltext]]" -->
 
 ```
 In [6]: [ random.random() for _ in range(10) ]
@@ -143,9 +146,17 @@ Out[6]:
  0.6835356020355947]
 ```
 
+![[kontuniform.svg]]
+
+::: credit
+:::
+
+note:
+histogram uniform kontinuerleg
+
 ---
 
-histogram Gauss
+<!-- slide template="[[tpl-smalltext]]" -->
 
 ```
 In [9]: [ random.gauss() for _ in range(10) ]
@@ -162,10 +173,20 @@ Out[9]:
  -0.34163923642131283]
 ```
 
+![[gauss.svg]]
+
+::: credit
+:::
+
+note:
+histogram Gauss
+
+
 ---
 
 ## Frøet
 
+note:
 Som me nemnde over, må slumptala starta med eit frø.
 Om me ikkje oppgjev eit frø, vil maskina freista å finna noko
 tilfeldig, t.d. dei minst signifikante sifra i systemklokka.
@@ -174,36 +195,51 @@ Lat oss køyra nokre eksperiment.
 Me kan laga ein serie med tilfeldige tal ved å bruka
 listekomprehensjon.
 
-```{code-cell} ipython3
-test = [ random.randint(1,10) for i in range(8) ]
-print(test)
-```
+---
+<!-- slide template="[[tpl-smalltext]]" -->
 
-::: {admonition} Oppgåve
-Køyr cella over fleire gongar.  Får du dei same tala 
-kvar gong?
+```
+In [3]: [ random.randint(1,10) for i in range(12) ]
+Out[3]: [3, 9, 6, 6, 9, 4, 6, 2, 9, 9, 7, 4]
+
+In [4]: [ random.randint(1,10) for i in range(12) ]
+Out[4]: [3, 9, 4, 9, 4, 5, 9, 5, 1, 8, 1, 7]
+
+In [5]: [ random.randint(1,10) for i in range(12) ]
+Out[5]: [8, 7, 6, 5, 3, 1, 2, 8, 1, 9, 6, 6]
+```
+<!-- element class="largercode" -->
+
+::: credit
 :::
+
+---
+<!-- slide template="[[tpl-smalltext]]" -->
+
+```
+In [6]: random.seed(42)
+
+In [7]: [ random.randint(1,10) for i in range(12) ]
+Out[7]: [2, 1, 5, 4, 4, 3, 2, 9, 2, 10, 7, 1]
+
+In [8]: random.seed(42)
+
+In [9]: [ random.randint(1,10) for i in range(12) ]
+Out[9]: [2, 1, 5, 4, 4, 3, 2, 9, 2, 10, 7, 1]
+
+In [10]: random.seed(42)
+
+In [11]: [ random.randint(1,10) for i in range(12) ]
+Out[11]: [2, 1, 5, 4, 4, 3, 2, 9, 2, 10, 7, 1]
+```
+<!-- element class="largercode" -->
+
+::: credit
+:::
+
+note:
 
 Me kan velja frø med `random.seed()`, slik:
-
-```{code-cell} ipython3
-random.seed(42)
-test = [ random.randint(1,10) for i in range(8) ]
-print(test)
-```
-
-::: {admonition} Oppgåve
-Køyr cella over fleire gongar.  Får du no dei same tala kvar gong?
-:::
-
-::: {admonition} Oppgåve
-Endra frøet (42) til ein annan verdi.  Får du stadig same talrekkje?
-:::
-
-::: {admonition} Refleksjon
-Kva har me lært av eksperimenta over?
-:::
-
 
 ---
 
@@ -238,12 +274,6 @@ while len(liste) < 7:
 print( liste )
 ```
 
-
-::: {admonition} Refleksjon
-Me har sikkert sett mindre av `while` enn av `for`.
-Kva gjer `while`-lina over?
-Korleis ville du ha skrive løkka om som ei `for`-løkke?
-:::
 
 No er det mogleg å leggja til ein test for å hindra duplisering,
 ved å bruke `in`- eller `not in`-operatoren.

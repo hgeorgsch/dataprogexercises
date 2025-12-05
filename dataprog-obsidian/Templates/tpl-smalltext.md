@@ -18,8 +18,13 @@
      width: 800px ;
      line-height: 1.1 ;
   }
-  .reveal .smalltext .credit {
+  .reveal .smalltext .largercode code {
      font-size: 18pt ;
+     width: 800px ;
+     line-height: 1.1 ;
+  }
+  .reveal .smalltext .credit {
+     font-size: 16pt ;
   }
 </style>
 
