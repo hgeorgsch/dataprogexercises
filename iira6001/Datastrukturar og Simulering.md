@@ -15,6 +15,7 @@ Dette kapittelet byggjer på
 	+ Kva er simulering?
       ([Slides](https://iirevu.org.ntnu.no/Slides/Kva%20er%20simulering%3f/#/))
 	+ Tilfeldigheit
+      ([Slides](https://iirevu.org.ntnu.no/Slides/Tilfeldigheit-Slides))
 	+ Datastrukturar og Kompleksitet
 + *Tekniske demonstrasjonar*
 	+ Datastrukturer
