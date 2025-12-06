@@ -1,25 +1,86 @@
 ---
-jupytext:
-  text_representation:
-    extension: .md
-    format_name: myst
-    format_version: 0.13
-    jupytext_version: 1.17.0
-kernelspec:
-  display_name: Python 3 (ipykernel)
-  language: python
-  name: python3
+tags:
+  - lecture/video
+css:
+  - custom.css
+---
+# Datastrukturar
+
+note:
+
 ---
 
-+++ {"editable": true, "slideshow": {"slide_type": "slide"}}
+## Primitive datatypar
+
+- `int` : $\ldots, -1, 0, +1, +2, \ldots$
+- `float` :  t.d. $-50.1$, $0$, $0.1$, $2.4$,  $10.0$
+- `bool` : `True` eller `False`
+- `str` : t.d. `"Hello World!"`
+
+---
+## Samansette datatypar
+
+- `tuple` : t.d. `(1,0.5)`
+- `list` (liste) : t.d.  `[ 2, 3, 11, 3, 11, 11 ]`
+- `set` (mengd) :  `{ 1, 2, 3, 5, 7, 11, 13 }`
+- `dict` for *dictionary* (oppslag)  `{` nykel : verdi, $\ldots$ `}`
+
+---
+
+```python
+a = (1,2)
+b = [1,2]
+```
+
+```
+In [3]: print( a[0], b[0] )
+1 1
+
+In [4]: b[0] = 2
+
+In [5]: a[0] = 2
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+Cell In[5], line 1
+----> 1 a[0] = 2
+
+TypeError: 'tuple' object does not support item assignment
+
+```
+<!-- element class="fragment" -->
+
+---
+
+```python
+liste = [ "Ola", "Kari", "Mons" ]
+```
+
+---
+
+```pythoh
+kunde = { 
+    "fornamn" : "Ola",
+    "etternamn" : "Normann",
+    "postnummer" : 6016,
+    "gate" : "Borgundvegen",
+    "nummer" : 666,
+  }
+```
+
+```
+In [3]: print( kunde["fornamn"] )
+Ola
+
+In [4]: print( kunde["gate"], kunde["nummer"]  )
+Borgundvegen 666
+```
+---
 
 # Listekomprehension
 
-+++ {"editable": true, "slideshow": {"slide_type": "fragment"}}
+Snarvei til å lage lister, set og dictionaries
 
-### Snarvei til å lage lister, set og dictionaries
-
-+++ {"editable": true, "slideshow": {"slide_type": "fragment"}}
+---
 
 * Liste:
   ```python
@@ -185,3 +246,19 @@ data_rike_kunder
 ```{code-cell} ipython3
 
 ```
+
+---
+
+## Dynamiske datatypar
+
++ iterator
++ klasser
+
+---
+
+## numpy
+
+
+---
+
+# Slutt
