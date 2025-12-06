@@ -53,32 +53,45 @@ på denne måten på kort tid.
 Store simuleringer krever ofte mer slump.
 
 ---
+<!-- slide template="[[tpl-quote-header]]" -->
 
-- *Pseudo-random numbers*
+# Pseudo-random numbers
+
+![[prng]
+
+::: credit
+:::
 
 note:
 I praksis bruker vi som regel såkalte *pseudo-tilfeldige* tall.
 Det er matematiske formler som gjør at vi kan regne ut lange serier
 med tall som *ser tilfeldige ut*.
 
+Slumptallsgeneratoren, som vi ofte skrive PRNG for *pseudo-random
+number generator*, har en tilstand $s_i$.
+Hver gang funksjonen kalles, får vi en ny tilstand $s_{i+1}$.
+
+Det tilfeldige tallet som vi får er så en funksjon av den nye
+tilstanden.  Her bruker vi gjerne forskjellige funksjoner
+med den samme slumptallsgeneratoren, for å kunne generere
+heltall og slumptall i ulike intervaller.
+
 ---
+
 
 $$ s_i = a\cdot s_{i-1} \mod p $$
 
 note:
 Det mest kjente tilfellet er lineær kongruens.
-
-Her starter vi med ett tall $s_0$, som vi gjerne kaller frøet eller *seed*.
-Når vi har ett tall $s_{i-1}$, kan vi regne ut det neste tallet $s_i$ ved
-å gange med en konstant $a$ og ta resten ved divisjon med $p$.
-
+Her regner vi ut tilstanden ved å gange med et tall $a$ og ta resten
+ved divisjon med et tall $p$.
 Dersom vi velger $a$ og $p$ fornuftig, vil føgen av tall $s_i$
 se tilfeldig ut.
 
 Den nøyaktige formelen er ikkje viktig for oss.  Det som er greitt
-å hugsa er at når me har det fyrste talet, eller **frøet** (*seed*),
-så vil slumptalsgeneratoren gi oss en *uendelig* følge med
-tilfeldigaktige tal.
+å hugsa er at når me har bestemt den første tilstanden $s_0$, som
+vi gjerne kaller frøet eller *seed*, så vil slumptalsgeneratoren
+gi oss en *uendelig* følge med tilfeldigaktige tal.
 
 Der er mange kjente slumptallsgeneratorer, og lineær kongruens er 
 ikke den beste, blott den best kjente.
@@ -112,6 +125,17 @@ Illustrasjon ved Diacritica - Own work, CC BY-SA 3.0,
 via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=99768017)
 :::
 
+note:
+Når vi skal bruke slumptall i python, trenger vi ikke bekymre oss
+om alt som foregår inni slumptallsgeneratoren.
+Der finnes flere biblioteker som implementerer slumptall, men vi
+skal bruke et som heter `random`.
+
+Hvis vi skal simulere en terning, f.eks. kan vi bruke funksjonen
+`randint` og be om et tall mellom 1 og 6.
+Når vi laver en liste ved å kalle slumptallsfunksjonen flere ganger,
+får vi en serie som ser tilfeldig ut.
+
 ---
 <!-- slide template="[[tpl-smalltext]]" -->
 
@@ -126,7 +150,11 @@ Out[5]: [5, 1, 2, 6, 6, 4, 3, 3, 4, 3]
 :::
 
 note:
-histogram uniform diskret
+Terningen er et eksempel på en uniform fordeling, der
+alle verdier er like sannsynlige.
+Fordelingen er diskret, dvs. at der bare en enkelte
+punkter som forekommer; vi får bare heltall og ikke
+desimaltallene imellom.
 
 ---
 <!-- slide template="[[tpl-smalltext]]" -->
@@ -152,7 +180,34 @@ Out[6]:
 :::
 
 note:
-histogram uniform kontinuerleg
+Hvis vi vil ha desimaltall, kan vi bruke funksjonen `random()`
+som gir et tall mellom 0 og 1.
+Dette er også en uniform fordeling, der alle verdier er like
+sannsynlige, men den er kontinuerlig og ikke diskret.
+
+---
+```
+In [1]: import random
+
+In [2]: [ random.random()*100-50 for _ in range(10) ]
+Out[2]:
+[-39.035627812290464,
+ -8.432549451508578,
+ 5.600303172592014,
+ -30.240236134220456,
+ -18.705629447346116,
+ 29.174098952378884,
+ -14.896927031712046,
+ -9.60240063073671,
+ 28.873011654664353,
+ 7.719162441908011]
+
+```
+
+note:
+Hvis vi trenger tall fra et andet intervall en null til én, er det 
+vanlig å ordne det ved å skalere resultatet.  For å få et tall mellom 
+pluss/minus femti, kan vi gange med hundrede og trekke fra femit.
 
 ---
 
@@ -179,7 +234,12 @@ Out[9]:
 :::
 
 note:
-histogram Gauss
+Vi kan også få slumptall fra fordelinger som ikke er uniforme.
+Vi skal ikke gå inn på alle, men kan se på normalfordeling,
+eller gaussfordelingen, som er så mye brukt.
+
+Funksjonen `random.gauss()` gir et tall som er normalfordelt
+med standardavvik 1 rundt en middelverdi på 0.
 
 
 ---
@@ -213,6 +273,10 @@ Out[5]: [8, 7, 6, 5, 3, 1, 2, 8, 1, 9, 6, 6]
 ::: credit
 :::
 
+note:
+Vi kan bruke slumptallsgeneratoren uten å tenke på frøet.
+Da får vi nye tall hver gang.
+
 ---
 <!-- slide template="[[tpl-smalltext]]" -->
 
@@ -234,8 +298,9 @@ Out[15]: [8, 10, 5, 1, 3, 7, 6, 5, 3, 4, 6, 2]
 :::
 
 note:
-
-Me kan velja frø med `random.seed()`, slik:
+Hvis vi ønsker å sette frøet selv, bruker vi `random.seed()`.
+Her starter vi frøet på 42, og genererer tre forskjellige lister
+med tilfeldige tall.
 
 ---
 <!-- slide template="[[tpl-smalltext]]" -->
@@ -262,12 +327,20 @@ Out[11]: [2, 1, 5, 4, 4, 3, 2, 9, 2, 10, 7, 1]
 :::
 
 note:
+Hvis vi setter frøet til 42 før hver liste vi genererer,
+ser vi at alle listene blir like.  Hver gang vi laver en
+tilfeldig liste, har vi startet slumptallsgeneratoren på
+det samme punktet.
 
-Me kan velja frø med `random.seed()`, slik:
+Dette kan være særs nyttig ved simulering, fordi det lar
+oss kjøre den eksakt samme simuleringen flere ganger.
+Særlig når vi skal kvalitetssikre koden vår eller leter
+efter feil, kan det være greitt å kunne sammenligne kjøringer
+uten tilfeldige faktorer.
 
----
-
-## Andre variantar
+Det er derimot viktig at man ikke setter frøet i utide.
+Om du tilbakestiller frøet midt i en simulering, vil ikke
+fortsettelsen se like tilfeldig ut som starten.
 
 ---
 
@@ -278,6 +351,10 @@ klasse = [ "Arne", "Bente", "Cecilie", "Denis", "Emil", "Freya",
         "Tore", "Unni", "Vidar", "Webjørn", "Xavier", "Yngve",
         "Zacharias", "Ægir", "Ølvar", "Åmund" ]
 ```
+
+note:
+Så langt har vi sett på tilfeldige tall.  Det kan også skje
+at vi ønsker å plukke tilfeldige elementer fra en liste.
 
 ---
 
@@ -300,6 +377,9 @@ In [35]: print( referansegruppe )
 ['Line', 'Ølvar', 'Line']
 ```
 
+note:
+Det er mulig å gjøre det ved å trekke tilfeldige tal, med `randint`
+og bruke dem som indekser, for å hente elementer fra listen.
 
 ---
 
@@ -316,6 +396,11 @@ In [30]: referansegruppe = [ random.choice(klasse) for _ in range(3) ]
 
 In [31]: print( referansegruppe )
 ```
+
+note:
+Der finnes også en function `random.choice` som trekker et tilfeldig
+element fra en liste, uten å gå via en indeks.  Vi ser hvordan vi
+bare gir listen til `choice`-funksjonen og får et tilfeldig element ut.
 
 
 ---
@@ -343,6 +428,23 @@ In [29]: print( perm[:5] )
 ['Petter' 'Ølvar' 'Åmund' 'Gyda' 'Inger']
 ```
 
+note:
+Ofte ønsker vi å trekke forskjellige elementer fra listen, og der er
+ingenting som hindrer de to første metodene fra å hente samme element
+flere ganger.  Det er selvsagt mulig å sjekke og trekke på nytt hvis
+elementet allerede er trukket, men der finnes et andet triks.
+
+Der finnes funksjoner for å stokke en liste tilfeldig.  Den finnes ikke
+i standardbiblioteket `random`, så vi må importere et andet bibliotek som
+heter `numpy.random`.  Funksjonen heter `permutation` og tar en liste som
+argument.
+
+Resultatet er en liste med de samme elementer i tilfeldig orden, og vi 
+kan hente de elementene vi trenger fra starten av den permuterte listen.
+
 ---
 
 # Slutt
+
+note:
+Det var alt for denne gang.  Ikke glem å teste på egen hånd.
