@@ -13,46 +13,47 @@ kernelspec:
   language: python
   display_name: dataprog
 ---
-
 # Listekomprehension
 
-Standard måte å lage liste på:
+Her skal me ta utgangspunkt i dømet på [[Simulering av kontantstraum]], og sjå litt nærare på korleis me samlar opp data i ei liste.
 
 ```{code-cell} ipython3
 import matplotlib.pyplot as plt
-#Plot saldo på sparekonto
+start = 10000
+rente = 0.04
+tid = list(range(20))
+```
 
-def forrentning(P,r,t):
-    return P*(1+r)**t
-
-n_tid = 10
-tid = list(range(n_tid))
-saldo = []
-start = 1000
-rente = 0.05
-for t in tid:
-    ny_saldo = forrentning(start, rente, t)
-    saldo.append(ny_saldo)
-
-plt.plot(tid, saldo)
+```{code-cell} ipython3
+def saldomedrente(start,years):
+   return start*(1+rente)**years
+```
+```
+    
+```{code-cell} ipython3
+y = [ ]
+for i in tid:
+   saldo = saldomedrente(start,i)
+   y.append( saldo )
+plt.plot(tid,y)
 plt.show()
 ```
 
----
 
 Med listekomprehensjon
+
+```{code-cell} ipython3
+y = [ saldomedrente(start,i) for i in tid ]
+plt.plot(tid,y)
+plt.show()
+```
+
+## Andre døme
 
 ```{code-cell} ipython3
 import matplotlib.pyplot as plt
 import numpy as np
 
-
-def forrentning(P,r,t):
-    return P*(1+r)**t
-
-n_tid = 10
-start = 1000
-rente = 0.05
 
 tid = [ t for t in range(n_tid)]
 saldo = [forrentning(start, rente, t) for t in tid]
@@ -66,7 +67,9 @@ plt.show()
 
 ```
 
----
+## Oppsummering
 
-* Ofte er slike listekomprehensjoner lette og lese, skrive og forstå
-* Man må passe på ikke ta av -- de kan bli kompliserte og vanskelige å forstå
+Ofte er slike listekomprehensjonar lette å lese, skriva og forstå.
+Ein skal likevel ikkje overdriva.
+Somme tider er ei *for*-løkke som byggjer opp lista med `append` enklare.
+Det er viktig å fokusera på å skriva koden slik at han er lett å lesa.  Di vanskelegare koden er å lesa, di fleire feil vil ein gjera.
