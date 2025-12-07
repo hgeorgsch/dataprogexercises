@@ -17,6 +17,15 @@ note:
 - `bool` : `True` eller `False`
 - `str` : t.d. `"Hello World!"`
 
+note:
+De primitive datatypene håper jeg du kjenner.
+De representerer enkeltverdier, som tall, sann/usann, eller
+tegnstrenger.
+
+Det kan diskuteres om tegnstrenger egentlig er en primitiv
+datatype.  I mange sprog er de definitivt ikke det, men python
+behandler dem stort sett som primitive.
+
 ---
 ## Samansette datatypar
 
@@ -24,6 +33,8 @@ note:
 - `list` (liste) : t.d.  `[ 2, 3, 11, 3, 11, 11 ]`
 - `set` (mengd) :  `{ 1, 2, 3, 5, 7, 11, 13 }`
 - `dict` for *dictionary* (oppslag)  `{` nykel : verdi, $\ldots$ `}`
+
+note:
 
 ---
 
@@ -83,28 +94,23 @@ Snarvei til å lage lister, set og dictionaries
 ---
 
 * Liste:
-  ```python
-  [ uttrykk for element in samling if betingelse]
-  ```
-  * Set:
-  ```python
-  { uttrykk for element in samling if betingelse}
-  ```
-  * Dictionary:
-  ```python
-  { utrykk_key: uttrykk_value for element in samling if betingelse ]
-  ```
+```python
+[ uttrykk for element in samling if betingelse]
+```
+* Set:
+```python
+{ uttrykk for element in samling if betingelse}
+```
+* Dictionary:
+```python
+{ utrykk_key: uttrykk_value for element in samling if betingelse ]
+```
 
-+++ {"editable": true, "slideshow": {"slide_type": "subslide"}}
+---
 
 Standard måte å lage liste på:
 
 ```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: fragment
----
 import matplotlib.pyplot as plt
 #Plot saldo på sparekonto
 
@@ -129,11 +135,6 @@ plt.show()
 Med listekomprehensjon
 
 ```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: fragment
----
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -157,21 +158,16 @@ plt.show()
 
 ```
 
-+++ {"editable": true, "slideshow": {"slide_type": "subslide"}}
+---
 
 * Ofte er slike listekomprehensjoner lette og lese, skrive og forstå
 * Man må passe på ikke ta av -- de kan bli kompliserte og vanskelige å forstå
 
-+++ {"editable": true, "slideshow": {"slide_type": "slide"}}
+---
 
 Man lager `set` på akkura samme måte
 
 ```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: fragment
----
 import json
 with open("kundedata1.json", 'r') as file:
     kundedata = json.load(file)
@@ -183,15 +179,10 @@ print(etternavn)
 
 ```
 
-```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: subslide
----
++ Kan bli vanskelig å lese eller for komplisert
++ Dictionary av alle kunder med etternavn som begynner på 'H'
 
-#Kan bli vanskelig å lese eller for komplisert
-#Dictionary av alle kunder med etternavn som begynner på 'H'
+```{code-cell} ipython3
 H_klubben = { navn: [kunde["fornavn"] for kunde in kundedata if kunde["etternavn"] == navn] 
              for navn in etternavn_H }
 
@@ -213,39 +204,28 @@ with open("kundedata_test.json", 'w') as file:
     json.dump(H_klubben, file)
 ```
 
-+++ {"editable": true, "slideshow": {"slide_type": "subslide"}}
+---
 
 ## Oppg:
+
 * Bruk komprehensjon til å lage en dictionary som inneholder allekunder med startsaldo større enn 120,000
 * Dictionary skal bestå av nøkler som tilsvarer etternavnet til kundene, og verdiene skal være en liste med kundene på samme format som originalt
 
++ lag liste med rike kunder
++ lag set med etternavnene
++ lag dictionary med kunder { kundensetternavn: [liste med kunder]}
+
 ```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: fragment
----
 grense = 120e3
-#lag liste med rike kunder
-#lag set med etternavnene
-#lag dictionary med kunder { kundensetternavn: [liste med kunder]}
 rike_kunder = [ kunde for kunde in kundedata if kunde["startsaldo"] > grense]
 etternavn_rik = {kunde["etternavn"] for kunde in rike_kunder}
 data_rike_kunder = {navn: [kunde for kunde in rike_kunder if kunde["etternavn"] == navn] for navn in etternavn_rik}
 ```
 
 ```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: fragment
----
 data_rike_kunder
 ```
 
-```{code-cell} ipython3
-
-```
 
 ---
 
