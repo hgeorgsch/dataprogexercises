@@ -8,6 +8,7 @@ css:
 
 note:
 
+
 Læringsutbyte
 + Konseptuell forståing av samansettet datatypar t.d. *record* eller `dict`
 + Datastrukturar som liste, *map*
