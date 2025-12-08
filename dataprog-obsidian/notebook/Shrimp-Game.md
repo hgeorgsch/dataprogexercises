@@ -42,7 +42,9 @@ $$ \pi_A (Q_A, Q_B, Q_C) = Q_A \left[ P (Q_A, Q_B, Q_C) – 5 \right]$$
 
 ## Objektorientert Modellering
 
-Her er det enklast å tenkja på fleire parallelle program. Kvar fiskar har sitt program som avgjer kor mykje han vil fiska. Tilsvarande har marknaden, eller borgarmeistaren, sitt program som fastsett prisen basert på levert fangst. Når me deler opp problemet på denne måten, vert kvart program ganske enkelt. 
+Her er det enklast å tenkja på fleire parallelle program.
+Kvar fiskar har sitt program som avgjer kor mykje han vil fiska.
+Tilsvarande har marknaden, eller borgarmeistaren, sitt program som fastsett prisen basert på levert fangst. Når me deler opp problemet på denne måten, vert kvart program ganske enkelt. 
 
 ![](agents.svg)
 
@@ -64,7 +66,7 @@ class Fisherman:
 
 Denne klassa inneheld ein funksjon (definert med `def` som andre funksjonar).
 Parameteren `self` er ein referanse til objektet sjølv, og denne må alltid vera
-med, sjølv om du ikkje brukar han.
+med, sjølv om me ikkje bruker han.
 Fiskaren fiskar eit tilfeldig volum som vert returnert.
 Marknaden kan kalla denne funksjonen for å ha data til å rekna ut prisen.
 
@@ -108,7 +110,8 @@ Ein variabel som er definert i ei klasse, vert normalt kalt ein *attributt*.
 :::
 
 :::{admonition} Definisjon
-Ei *klasse* er ein datatype som omfattar (evt. kan  omfatta) både data (`sistefangst`og `sisteprofitt`) *og* metodar (`fangst` og `profitt`) som verkar på typen. Ein variabel av ein klassetype kaller me for eit *objekt*, eller ein *instans* av klassa.
+Ei *klasse* er ein datatype som omfattar både data (`sistefangst`og `sisteprofitt`) *og* metodar (`fangst` og `profitt`) som verkar på typen.
+Ein variabel av ein klassetype kaller me for eit *objekt*, eller ein *instans* av klassa.
 :::
 
 Me kan sjølvsagt instantiera fleire objekt av same klasse.
@@ -129,7 +132,22 @@ print( f"Atari leverte {atari.sistefangst} pund reker." )
 print( f"Commodore leverte {commodore.sistefangst} pund reker." )
 ```
 
-Legg merke til at me har direkte tilgang til attributten i objektet, via punktumnotasjonen `atari.sistefangst`. Lat oss til slutt sjekka profittfunksjonen.
+::: {admonition} Merknad
+Legg merke til at python gjev oss direkte tilgang til attributten i objektet,
+via punktumnotasjonen `atari.sistefangst`.
+Det kan vera ei ulempe.
+For å redusera risikoen for feil, kan det løna seg å definere nøye kva metodar 
+som skal vera tilgjengeleg eksternt, og skjula korleis objektet fungerer internt.
+Det kaller me gjerne for *innkapsling*.
+
+I tilfellet vårt er det berre `fangst()`-metoden som skal kunna endra `sistefangst`.
+Andre språk har betre støtte for innkapsling. 
+I python er det vanleg å bruka understrek i namn som berre skal brukast internt
+i klassa.  Me burde sikkert ha kalt attributten `_sistefangst`.
+:::
+
+
+Lat oss til slutt sjekka profittfunksjonen.
 
 ```{code-cell} ipython3
 price = 15
@@ -138,10 +156,14 @@ print( f"Commodore hadde profitt på ${commodore.profit(price)}." )
 ```
 
 :::{tip}
-Normalt er det slik at metodane er definerte i klassa og aldri vert endra.  Alle instansar av klassa har same metodar. Attributtane høyrer derimot til objektet, og kvar instans har sine verdiar som kan endra seg ettersom programmet køyrer.
+Normalt er det slik at metodane er definerte i klassa og aldri vert endra.
+Alle instansar av klassa har same metodar.
+Attributtane høyrer derimot til objektet, og kvar instans har sine verdiar som kan endra seg ettersom programmet køyrer.
 
 Dette er ikkje heilt sant.  Python tillet både klasseattributtar og redefinisjon av metodar
-Python er eit svært fleksibelt språk, men me vil unngå å bruka denne fleksibiliteten, fordi koden elles lett vert vanskeleg å forstå. Mange andre språk, som Simula og Java, har strengare reglar som tvingar fram ein rigid struktur. 
+Python er eit svært fleksibelt språk, men me vil unngå å bruka denne fleksibiliteten,
+fordi koden elles lett vert vanskeleg å forstå.
+Mange andre språk, som Simula og Java, har strengare reglar som tvingar fram ein rigid struktur. 
 :::
 
 ### Marknadsklassa
@@ -198,11 +220,27 @@ class Market:
    
 ```
 
-Me tok bort `horizon` frå konstruktøren og la det i `sim`-funksjonen i staden.  Dette er ein smakssak.  Prisfunksjonen skulle vera likefram. Det er simulatorfunksjonen som er interessant.
-+ Me bruker [[Listekomprehensjon]] for å rekna ut fangst og profitt for kvar fiskar i lista
+Me tok bort `horizon` frå konstruktøren og la det i `sim`-funksjonen i staden.
+Dette er ein smakssak.
+Prisfunksjonen skulle vera likefram.
+Det er simulatorfunksjonen som er interessant.
++ Me itererer over mange dagar (`horizon`).
++ Kvar dag bruker me [](Listekomprehensjon) for å rekna ut fangst og profitt for kvar fiskar i lista
 + Totalt kvantum er beint fram å rekna ut med `sum`-funksjonen.
 + Prisen reknar me ut med `price` frå objektet `self`.
 + Utskrifta er litt rudimentær, men det skal vera mogleg å sjå kor mykje fiskarane tener.
+
+::: {admonition} Merknad
+I den fyrste objektorienterte modellen hadde me eit borgarmeistarobjekt, men
+dette har me droppa.
+Det einaste borgarmeistaren skulle gjera var å fastsetja prisen, og det skjer med
+`price`-metoden i implementasjonen.
+
+Dersom ulike borgarmeistarar kunne ha ulik prispolitikk, hadde det vore aktuelt å la
+`Market`-objektet ha ein borgarmeistar til å spørja om prisen.
+Då kunne ein instantiera ulike borgarmeistarobjekt å vald eitt når ein instantierer 
+`Market`, på same måte som med `Fisherman`-objekta.
+:::
 
 ### Testing
 
@@ -233,6 +271,7 @@ Eit mantra i objektorientert programmering er *low coupling* og *high cohesion*.
 
 
 Simulering gjev oss ikkje noko direkte svar på kva som er rett rekepris eller kor mykje me lyt fiska. Nytteverdien i simulering er å testa ulike scenario.  Me kan variera både modellar og parameter. 
+
 ### Ulike fiskarstragiar: Arv og polymorfi
 
 
@@ -273,7 +312,16 @@ Du kan godt prøva deg fram med små og større endringar i fangstvolumet frå d
 :::
 
 :::{admonition} Oppgåve
-Implementer ei underklasse av `Fisherman` som implementerer *Cournot-modelle*, dvs. fiskaren ser på kor mykje dei andre fiskarane fanga dagen før, og set sin fangst optimalt under føresetnad av at alle andre fiskar like mykje som dagen før.
+Implementer ei underklasse av `Fisherman` som implementerer *Cournot-modellen*,
+dvs. fiskaren ser på kor mykje dei andre fiskarane fanga dagen før,
+og set sin fangst optimalt under føresetnad av at alle andre fiskar like mykje som dagen før.
+
+Dette føreset at fiskaren kan sjå kva dei andre har fiska.  
+Du må gjerne endra alle klassene slik at `Market` gjev `Fisherman`-objektet ei liste
+over alle fangstvoluma på slutten av kvar iterasjon.
+Ein kan derimot klara seg utan, sidan det einaste som speler noka rolle er den totale
+fangsten, som ein kan rekna ut frå prisen.  Du vel sjølv korleis du vil gjera det.
+Det viktigaste er å halda koden ryddig slik at du veit kva som skjer.
 :::
 
 :::{admonition} Oppgåve
@@ -288,3 +336,11 @@ Kva simuleringar treng du for å finna ein fornuftig likevekt i marknaden?  Kva 
 *Shrimp Game* er eit særtilfelle av *Cobweb-modellen* (sjå t.d. [Dawid and Kopel 1998](https://link.springer.com/article/10.1007/s001910050066)). Korleis fungerer ulike strategiar dersom der er mange leverandørar i marknaden, kanskje 100 eller 1000? Du må heilt sikkert endra pris- og profittfunksjonen for at nokon skal tena pengar med so mange konkurranter, men det kan du gjera.
 :::
 
+## Oppsummering
+
+
+::: {admonition} Merknad
+Me har laga eit døme på korleis ein kan implementera 
+[*Shrimp Game*-simuleringa utan klasser og objekt](notebooks/ShrimpSimulation).
+Det er ikkje like forseggjort, men kan likevel gje nokre idéar.
+:::

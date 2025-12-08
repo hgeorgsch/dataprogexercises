@@ -14,8 +14,10 @@ kernelspec:
 
 # Listekomprehensjon
 
-Her skal me ta utgangspunkt i dømet på [](Simulering av kontantstraum),
-og sjå litt nærare på korleis me samlar opp data i ei liste.
+Her skal me gje nokre døme på listekomprehensjon, med utgangspunkt oi
+dømet frå [](Simulering av kontantstraum).
+Listekomprehensjon gjev oss ein kompakt måte å samla opp resultat i
+ei liste.
 Lat oss kjapt importera PyPlot og setja opp parametre for startsaldo,
 rentesats og tidsperiode.
 
