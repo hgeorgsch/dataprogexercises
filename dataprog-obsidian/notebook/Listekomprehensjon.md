@@ -1,21 +1,23 @@
 ---
-title: Listekomprehension
-tags: exercise
 jupytext:
   formats: md:myst,ipynb
   text_representation:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.17.2
+    jupytext_version: 1.18.1
 kernelspec:
   name: dataprog
   language: python
   display_name: dataprog
 ---
-# Listekomprehension
 
-Her skal me ta utgangspunkt i dømet på [[Simulering av kontantstraum]], og sjå litt nærare på korleis me samlar opp data i ei liste.
+# Listekomprehensjon
+
+Her skal me ta utgangspunkt i dømet på [](Simulering av kontantstraum),
+og sjå litt nærare på korleis me samlar opp data i ei liste.
+Lat oss kjapt importera PyPlot og setja opp parametre for startsaldo,
+rentesats og tidsperiode.
 
 ```{code-cell} ipython3
 import matplotlib.pyplot as plt
@@ -24,12 +26,21 @@ rente = 0.04
 tid = list(range(20))
 ```
 
+Her reknar me kun med forrenting på startbeløpet og ingen periodisk 
+sparing.
+Saldoen etter $y$ år er då $s\cdot (1+r)^y$ der $s$ er startsaldoen
+og $r$ er rentesatsen.
+Dette kan me implementera som ein python-funksjon, slik.
+
 ```{code-cell} ipython3
 def saldomedrente(start,years):
    return start*(1+rente)**years
 ```
-```
-    
+
+Dersom me skal plotta saldoen som ein funksjon av tiden, må me
+på ein eller annan måte laga oss ei liste med alle saldoane.
+Dette kan me gjera med ein `for`-løkke slik:
+
 ```{code-cell} ipython3
 y = [ ]
 for i in tid:
@@ -39,8 +50,8 @@ plt.plot(tid,y)
 plt.show()
 ```
 
-
-Med listekomprehensjon
+Med kan like gjerne gjera det med listekomprehensjon.
+Da kan det sjå slik ut:
 
 ```{code-cell} ipython3
 y = [ saldomedrente(start,i) for i in tid ]
@@ -48,23 +59,23 @@ plt.plot(tid,y)
 plt.show()
 ```
 
+Det som tek fire liner med `for`-løkka, kan me altso skrive som èi line
+med listekomprehensjon.
+
 ## Andre døme
 
 ```{code-cell} ipython3
-import matplotlib.pyplot as plt
 import numpy as np
-
-
-tid = [ t for t in range(n_tid)]
-saldo = [forrentning(start, rente, t) for t in tid]
 
 start_aar = 2023
 tid_aar = [f"01.01.{start_aar+t}" for t in tid if t%2 == 0]
 print(tid_aar)
-plt.bar(tid, saldo)
-plt.xticks(ticks=np.arange(0,10,2), labels=tid_aar, rotation=45) 
-plt.show()
+```
 
+```{code-cell} ipython3
+plt.bar(tid, y)
+plt.xticks(ticks=np.arange(0,len(tid_aar)*2,2), labels=tid_aar, rotation=45) 
+plt.show()
 ```
 
 ## Oppsummering
