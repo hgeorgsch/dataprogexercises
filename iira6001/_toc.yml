@@ -48,6 +48,7 @@ chapters:
       sections:
       - file: notebooks/Shrimp-Game
       - file: notebooks/Iskrem på ei strand.ipynb
+      - file: notebooks/ShrimpSimulation
     - file: WebAPI
       sections:
       - file: notebooks/requests
@@ -80,5 +81,4 @@ chapters:
     - file: notebooks/Lånesøknad.ipynb
     - file: notebooks/Multiindex.ipynb
     - file: notebooks/dicts-json-jsonstat.ipynb
-    - file: notebooks/ShrimpSimulation.ipynb
 

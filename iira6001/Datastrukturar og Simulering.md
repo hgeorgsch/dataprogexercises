@@ -22,13 +22,13 @@ Dette kapittelet byggjer på
 + *Gjennomarbeidde Døme.*
 	+ [Tilfeldigheit](notebooks/Tilfeldigheit)
 	+ [Marknadssimulering](notebooks/Marknadssimulering)
+	+ [Listekomprehensjon](notebooks/Listekomprehensjon)
 + *Opne Øvingar.*
     + [](exercises/Kundedifferensiering)
 + *Drilløving.*
 	+ [[CodeRunner Data Structures]]
 + Utkast til oppgåver
 	+ [[Simulering av ein utvalsstudie]]
-	+ [](Listekomprehensjon)
 
 Kuriosa
 : er arbeidsdokument.  Dei vert publiserte for dei nyssgjerrige, og viser teknikkar som eg har brukt for å laga det andre materialet til leksjonen.
