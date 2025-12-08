@@ -64,17 +64,34 @@ med listekomprehensjon.
 
 ## Andre døme
 
-```{code-cell} ipython3
-import numpy as np
+Teksta på $x$-aksen er ikkje heilt god.  Det er betre om me har dato
+på dei punkta som faktisk er observert, eller evt. kvart andre eller kvart
+femt punkt.
+Me kan bruka listekomprehensjon til å laga ei liste med dei tekstene me
+vil ha, t.d. annakvart år frå 2023, med dato fyrste i fyrste.
+Det kan sjå slik ut.
 
+```{code-cell} ipython3
 start_aar = 2023
-tid_aar = [f"01.01.{start_aar+t}" for t in tid if t%2 == 0]
+tid_aar = [ f"01.01.{start_aar+t}" for t in tid if t%2 == 0 ]
 print(tid_aar)
 ```
 
+Kvart element i `tid_aar` er no ein streng.
+Uttrykket `t%2` er resten ved divisjon med 2, dvs. 1 for oddetal og 0 for
+partal.
+
+For å bruka desse tekstene, må me bruka `xticks`-funksjonen, t.d. som under.
+Her treng me eit argument `ticks` som fortel kva merke som vert brukt;
+her annakvart merke.
+Tekstene vert definerte i `labels`-argumentet, og til sist roterer me
+tekstene 45°.  
+For å gjera det tydeleg at me har bestemte observasjonspunkt, bruker me
+eit søylediagram i staden for ei kurve.
+
 ```{code-cell} ipython3
 plt.bar(tid, y)
-plt.xticks(ticks=np.arange(0,len(tid_aar)*2,2), labels=tid_aar, rotation=45) 
+plt.xticks(ticks=range(0,len(tid_aar)*2,2), labels=tid_aar, rotation=45) 
 plt.show()
 ```
 
