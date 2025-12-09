@@ -271,7 +271,7 @@ Dersom elementene våre har en ID som vi kan bruke som nøgle, er det som regel 
 
 
 ---
-
+<!-- slide template="[[tpl-quote-smalltext]]" -->
 # Listekomprehensjon
 
 
@@ -285,20 +285,74 @@ Dersom elementene våre har en ID som vi kan bruke som nøgle, er det som regel 
 ```
 * `dict`:
 ```python
-{ utrykk_key: uttrykk_value for element in samling if betingelse ]
+{ utrykk_key: uttrykk for element in samling if betingelse ]
+```
++ Døme:
+
+```python
+[ x**2 for x in range(1,10) if x%2 == 0]
 ```
 
+note:
+Vi skal merke oss en meget vanlig snarvei til å lave lister, og mengder og `dict`s, nemlig komprehensjon.
+
+I den enkle
+
+**TODO**
+
+---
+
+## Iterator
+
+```ipython3
+for i in [ 1,2,3,4 ]: print( f"nummer {i}" )
+```
+
+```ipython3
+for i in range(1,5): print( f"nummer {i}" )
+```
 
 note:
-Snarvei til å lage lister, set og dictionaries
+Jeg skal si et par ord om en type som ligner på lister, men som ikke trenger å være en datastruktur, nemlig iteratorer.
 
+Det enkleste eksempelet er hvordan vi skriver `for`-løkker.
+Vi kan itererere over en liste, men svært ofte bruker vi et `range`-uttrykk.  Det er lett å tenke på `range` som en liste, men det er det ikke.
+
+Den eneste egenskapen som for-løkken trenger fra listen er å starta på starten og bla til neste element.
+Disse egenskapene kjennetegner en iterator.  Et `range`-objekt er en iterator, og en liste kan også oppføre seg som en iterator.
+
+Der er to ting som er verd å merke seg med iteratorer. Det ene er at neste element gjerne kan regnes ut efter hvert som det trengs. Vi trenger ikke å ha generert alle elementene på forhånd. Dette gjør det også mulig å ha uendelig lange iteratorer. Det er ikke mulig med uendelig lange lister i python, fordi alle elementene må eksistere og være lagret i minnet.
+
+---
+
+```ipython3
+
+In [3]: print( range(1,5) )
+range(1, 5)
+
+In [4]: print( list( range(1,5) ) )
+[1, 2, 3, 4]
+
+```
+
+note:
+Jeg nevner dette fordi vi ofte kan støte på iteratorer som vi kan tro er lister. 
+Siden vi ikke umiddelbart kan se innholdet i en iterator, er det lett å bli forvirret.
+
+Normalt er det mulig å konvertere en iterator til en liste, ved å bruke funksjonen `list`.
+Det vil dog åbenbart gå dårlig hvis iteratoren kan holde på i det uendelige.
 
 ---
 
 # Slutt
 
 note:
+Vi vil støte på nogen flere datastrukturer efter hvert.
+De viktigste er tabeller som vi bruker i dataanalyse og
+klasser som lar oss integrere data og operasjoner i én struktur.
+
+Takk for nu.
+
 Til neste gang
-+ iterasjon
 + numpy 
 + JSON og `dict`
