@@ -258,21 +258,22 @@ Vi bruker helst tupler der vi har et lite og fast antall elementer.
 
 ## `dict` som samling
 
+*map* : **oppslagsord** $\to$  verdi
+
+note:
+`dict` er også et eksempel på en samling.
+
+Ulempen med en liste er at det er vanskelig finne et bestemt element.
+Vi må bla gjennom hele listen for å finne det som vi leter efter.
+
+`dict` er et eksempel på en datastruktur som gjerne kalles *map*, dvs. den avbilder et oppslagsord eller en nøgle, på en verdi som gjerne kan være et komplekst objekt.
+Dersom elementene våre har en ID som vi kan bruke som nøgle, er det som regel bedre å bruke `dict` enn liste.
 
 
 ---
 
-```python
-liste = [ "Ola", "Kari", "Mons" ]
-```
+# Listekomprehensjon
 
----
-
-# Listekomprehension
-
-Snarvei til å lage lister, set og dictionaries
-
----
 
 * Liste:
 ```python
@@ -288,17 +289,8 @@ Snarvei til å lage lister, set og dictionaries
 ```
 
 
-
----
-
-## Dynamiske datatypar
-
-+ iterator
-+ klasser
-
----
-
-## numpy
+note:
+Snarvei til å lage lister, set og dictionaries
 
 
 ---
