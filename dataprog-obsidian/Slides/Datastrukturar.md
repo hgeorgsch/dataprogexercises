@@ -125,28 +125,97 @@ Elementene i en liste eller i en `dict` kan være både primitive datatyper og a
 
 ## Indeksering
 
----
-## Liste
+```
+In [1]: L = [ 2, 3, 5, 7, 11, 13, 17 ]
 
-+ Raske operasjoner
-	+ `append()`
-	+ 
+In [2]: print( L[2] )
+5
 
----
+In [3]: L[2] = 3
 
+In [4]: print( L )
+[2, 3, 3, 7, 11, 13, 17]
+```
 
-Læringsutbyte
-+ Konseptuell forståing av samansettet datatypar t.d. *record* eller `dict`
-+ Datastrukturar som liste, *map*
-+ Kompleksitet
-+ Operasjonar på datastrukturar
-	+ oppslag
-	+ iterasjon
-+ numpy 
-+ Listekomprehensjon
-+ JSON og `dict`
+note:
+Lister støtter indeksering, akkurat som `dict`, men her har ikke elementene sine egne nøgler.
+Det er posisjonen i listen vi bruker som indeks.
+Klammeparentesene er dog de samme.
 
 ---
+<!-- slide template="[[tpl-quote-twocolumn]]" -->
+
+::: left
+## Raske operasjoner
+
++ `append()`
++ `pop()`
++ indeksering (get/set)
+
+:::
+::: leftcredit
+:::
+::: right
+## Trege operasjoner
+
++ `insert()`
++ `delete()`
+
+:::
+::: rightcredit
+:::
+
+note:
+Datastrukturer og sammensatte datatyper blir alltid lavet for at noen operasjoner skal være raske og effektive, men ingenting er perfekt, og operasjoner som ikke blir prioritert går da gjerne tregere.
+
+Det er mulig å sette inn eller fjerne elementer midt i listen, men dette går tregt.
+For å sette inn et element på en vilkårlig plass, må man flytte deler av listen for å gjør plass til det nye elementet. Det tar lenger tid dess større listen er.  Det samme skjer om man sletter et element.  Man må flytte listen for å fylle hullet.
+
+Det går derimot raskt å operere på slutten av listen.  Derfor er der egne funksjoner, `append` og `pop`, for å legge til eller fjerne et element på enden av listen.  Det går i konstant tid, uavhengig av antall elementer i listen.
+
+Indeksering går også raskt.  Vi kan slå opp en posisjon i konstant tid.
+
+Når vi snakker om trege operasjoner her, er det i forhold til listelengden.
+Vi kaller det gjerne kompleksitet.
+Om listen er kort, så spiller kompleksiteten ingen rolle.  Vi merker ikke forskjell før vi kommer opp i noen millioner eller kanskje milliarder elementer.
+Raske operasjoner går i konstant tid, uansett listelengde.
+
+Kompleksitet er mye av grunnen til at der finnes så mange forskjellige datastrukturer i literaturen og i biblioteker.
+Ulike datastrukturer er utviklet for å fungere optimalt på ulike problemer.
+
+---
+## Mengde
+
+- `kunder = { kunde1, kunde2, ... }`
+- `mengd = { 2, 3, 5, 7, 11, 13 }`
+
+```
+In [5]: M = { 2, 3, 7, 5, 13 }
+
+In [6]: print( M )
+{2, 3, 5, 7, 13}
+
+In [7]: M.add( 17 )
+
+In [8]: print( M )
+{17, 2, 3, 5, 7, 13}
+
+In [9]: M.add( 5 )
+
+In [10]: print( M )
+{17, 2, 3, 5, 7, 13}
+```
+
+note:
+Vi kan illustrere kompleksitet om vi sammenligner lister med mengder, eller *set* på engelsk.
+
+Mengder ligner lister, men vi bruker krøllparenteser i stedet for hakeparenteser, og der elementer i listen kommer i en bestemt rekkefølge og gjerne kan dukke opp flere ganger, er elementene i en mengde alltid unike og rekkefølgen er uvesentlig.
+
+Det er åbenbart nyttig, i mange situasjoner, å være sikker på at ingen elementer blir duplisert, men det gjør det også umulig å ha en rask `append()`-fuinksjon. Vi kan ikke legge til et element uten å sjekke at det ikke finnes fra før.  Dermed må vi bla gjennom hele listen og det tar tid.
+
+---
+## Tuplar
+
 
 ```python
 a = (1,2)
@@ -170,6 +239,27 @@ TypeError: 'tuple' object does not support item assignment
 ```
 <!-- element class="fragment" -->
 
+note:
+En anden datatype som ligner lister er tupler.
+Her bruker vi runde parenteser.
+
+Egentlig er tupler noe helt andet enn lister.  
+Lister er samlinger og mye av poenget er å kunne legge til og ta bort elementer.
+
+Tupler er ikke muterber.  Dvs. det er umulig å legge til eller ta bort elementer.
+Vi ser det raskt om vi prøver å endre et element i en tuppel.
+
+Dette er ikke bare en ulempe.  Det er f.eks. mulig å bruke tupler som nøgler i en `dict`.
+Lister kan derimot ikke brukes, fordi `dict` er avhengig av at nøglene ikke kan forandres.
+
+Vi bruker helst tupler der vi har et lite og fast antall elementer.
+
+---
+
+## `dict` som samling
+
+
+
 ---
 
 ```python
@@ -192,7 +282,7 @@ Snarvei til å lage lister, set og dictionaries
 ```python
 { uttrykk for element in samling if betingelse}
 ```
-* Dictionary:
+* `dict`:
 ```python
 { utrykk_key: uttrykk_value for element in samling if betingelse ]
 ```
@@ -214,3 +304,9 @@ Snarvei til å lage lister, set og dictionaries
 ---
 
 # Slutt
+
+note:
+Til neste gang
++ iterasjon
++ numpy 
++ JSON og `dict`
