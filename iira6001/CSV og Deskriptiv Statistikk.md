@@ -39,8 +39,9 @@ tags:
     + Plot/subplot og eksport av figurar
     + Ulike plot: histogram/scatter/kakediagram
 	+ Eksporting plots
-+ Oppgåver
++ *Gjennomarbeidde døme*
 	+ [Arbeidsledige](notebooks/Arbeidsledige) 
 	+ [Tid og dato](notebooks/Tid%20og%20dato)
-	+ [Eksportdata](exercises/Eksportdata) requires extensive pre-processing to extract comparable data
     + [Genetikk](notebooks/Genetikk) demonstrerer korrelasjon m.m.
++ *Opne øvingar*
+	+ [Eksportdata](exercises/Eksportdata) requires extensive pre-processing to extract comparable data

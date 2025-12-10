@@ -22,7 +22,6 @@ Veke 4
 Veke 5
 : [Agent-basert simulering](Agent-basert%20simulering)
 
+
 Veke 6
-: [Statistikk og Maskinlæring](Statistikk%20og%20Maskinlæring)
-
-
+: [WebAPI](WebAPI) og JSON 

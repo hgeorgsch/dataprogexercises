@@ -29,7 +29,7 @@ Dette kapittelet byggjer på
 	+ [[CodeRunner Data Structures]]
 + Utkast til oppgåver
 	+ [[Simulering av ein utvalsstudie]]
-	+ [](notebooks/JSON og dict)
+	+ [](notebooks/JSON%20og%20dict)
 
 Kuriosa
 : er arbeidsdokument.  Dei vert publiserte for dei nyssgjerrige, og viser teknikkar som eg har brukt for å laga det andre materialet til leksjonen.
