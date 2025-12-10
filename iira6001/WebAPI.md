@@ -12,8 +12,9 @@ title: Web API og JSON
 
 + *Demonstrasjon* [[WebAPI og JSON]]  
 
-+ [[API-eksempel-sport]]
-+ [[API-eksempel-reddit]]
++ *Gjennomarbeidde døme*
+    + [](notebooks/API-eksempel-sport)
+    + [](notebooks/API-eksempel-reddit)
 + [[API-eksempel-chatgpt]]
 + [[WebAPI-Requests-JH]]
 + [[SSB-API]]
