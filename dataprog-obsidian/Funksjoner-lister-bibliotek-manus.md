@@ -14,6 +14,7 @@ tags:
 ---
 
 # Kjapp inføring i littavhvert:
+
  * Moduler
  * Løkker
  * Datastrukturer (lister)
