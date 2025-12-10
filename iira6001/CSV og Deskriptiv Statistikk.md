@@ -19,14 +19,6 @@ tags:
 	+ [Statistikk med pandas](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=74a527da-e025-4d11-8ce8-b36701673d76)
 	  [(Slides)](https://iirevu.org.ntnu.no/Statistikk%20med%20pandas/)
 	
-+ Utsett til seinare
-	+ Lagring og organisering
-		+ app versys filsystem
-		+ versjonskontroll
-		+ git og github
-	+ Moglege øvingar og demoar
-		+ git og github
-
 + *Demovideo*
 	+ [[Filkonvertering og -import]]
 	+ [[Plot i pandas]]
