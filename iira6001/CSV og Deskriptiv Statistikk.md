@@ -18,11 +18,19 @@ tags:
 	  [(Slides)](https://iirevu.org.ntnu.no/Slides/Filhandtering/)
 	+ [Statistikk med pandas](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=74a527da-e025-4d11-8ce8-b36701673d76)
 	  [(Slides)](https://iirevu.org.ntnu.no/Statistikk%20med%20pandas/)
-	
 + *Demovideo*
 	+ [[Filkonvertering og -import]]
 	+ [[Plot i pandas]]
 	+ [[Gjennomsnitt og spreding]] 
++ *Gjennomarbeidde døme*
+	+ [Arbeidsledige](notebooks/Arbeidsledige) 
+	+ [Tid og dato](notebooks/Tid%20og%20dato)
+    + [Genetikk](notebooks/Genetikk) demonstrerer korrelasjon m.m.
++ *Opne øvingar*
+	+ [Eksportdata](exercises/Eksportdata) requires extensive pre-processing to extract comparable data
+
+## Notat
+
 + Step 1.  Pandas
 	+ Step 1a.  Extracting Series and making plots.
 	+ Step 1b.   Gjennomsnitt og standardavvik
@@ -31,9 +39,3 @@ tags:
     + Plot/subplot og eksport av figurar
     + Ulike plot: histogram/scatter/kakediagram
 	+ Eksporting plots
-+ *Gjennomarbeidde døme*
-	+ [Arbeidsledige](notebooks/Arbeidsledige) 
-	+ [Tid og dato](notebooks/Tid%20og%20dato)
-    + [Genetikk](notebooks/Genetikk) demonstrerer korrelasjon m.m.
-+ *Opne øvingar*
-	+ [Eksportdata](exercises/Eksportdata) requires extensive pre-processing to extract comparable data
