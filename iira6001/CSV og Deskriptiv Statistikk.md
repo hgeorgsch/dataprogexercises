@@ -29,13 +29,3 @@ tags:
 + *Opne øvingar*
 	+ [Eksportdata](exercises/Eksportdata) requires extensive pre-processing to extract comparable data
 
-## Notat
-
-+ Step 1.  Pandas
-	+ Step 1a.  Extracting Series and making plots.
-	+ Step 1b.   Gjennomsnitt og standardavvik
-	+ Kombinasjon (fletting) av datasett
-+ Step 2. Plott
-    + Plot/subplot og eksport av figurar
-    + Ulike plot: histogram/scatter/kakediagram
-	+ Eksporting plots
