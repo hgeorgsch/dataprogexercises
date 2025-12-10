@@ -40,10 +40,10 @@ chapters:
       - file: notebooks/Jordskjelv
       - file: notebooks/Tid og dato
       - file: notebooks/Arbeidsledige
-        sections:
-         - file: notebooks/Arbeidsledige og Konkursar
       - file: exercises/Eksportdata
     - file: Samanlikna Datasett
+      sections:
+      - file: notebooks/Arbeidsledige og Konkursar
     - file: Agent-basert simulering
       sections:
       - file: notebooks/Shrimp-Game
@@ -53,6 +53,9 @@ chapters:
       sections:
       - file: notebooks/requests
       - file: notebooks/WEBAPI
+  - file: midway
+  - file: second
+    sections:
     - file: Statistikk og Maskinlæring
       sections:
       - file: notebooks/Linear Regression in SciKitLearn
@@ -60,14 +63,12 @@ chapters:
       - file: notebooks/numpy
       - file: notebooks/hypothesistest
       - file: notebooks/Iris-Statistics.ipynb
+    - file: Automatisering
     - file: Klassifikasjon
       sections:
       - file: notebooks/Fisher Linear Discriminant in sklearn
       - file: notebooks/Evaluering
       - file: notebooks/Support Vector Machines
-  - file: midway
-  - file: second
-    sections:
     - file: Klyngeanalyse-Kapittel
       sections:
       - file: notebooks/Klyngeanalyse
