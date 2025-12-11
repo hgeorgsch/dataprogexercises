@@ -11,7 +11,7 @@ levera mappa til vurdering.
 Ein kan ta utgangspunkt i ein kvan oppgåve frå den fyrste perioden, 
 eller finna på sitt eige problem for å visa liknande teknikkar.
 Vil ein gjera det enkelt, kan ein bruka eit gjennomarbeidd døme.
-Vil ein vera meir original, skal ein bruka ei meir opa oppgåve.
+Vil ein vera meir original, skal ein bruka ei meir open oppgåve.
 
 Presentasjonen på samlinga skal 
 1.  Presentera eit problem, og reflektera over kvifor problemet er

@@ -30,14 +30,13 @@ Gjennomarbeidde døme
 + [Halveringsmetoden](notebooks/Halveringsmetoden)
 + [](notebooks/Smittespreiing)
 
-
 Demonstrasjonsvideoane
-: fokuserer på tekniske detaljar. Dette er videoar som krev meir konsentrasjon, og ein bør absolutt testa ut dei teknikkane som vert demonstrert på eiga hand, før ein gløymer dei. Det er best å sjå dei saman med øvingane.
+: fokuserer på tekniske detaljar. Dette er videoar som krev meir konsentrasjon, og ein bør absolutt testa ut dei teknikkane som vert demonstrert på eiga hand, før ein gløymer dei. Det er best å sjå dei saman med øvingane.  Me har freista å visa dei vesentlege teknikkane i dei gjennomarbeidde, og demonstrasjonsvideoane skal primært gje ei ny vinkling meir enn nytt stoff.
 
 + [[Kontrollflyt]]
 
 Drilloppgåver
-: fokuserer på grunnteknikkar og vert automatisk retta.  Me vil ikkje oppfordra til å leggja for stor vekt på desse, men nokon finne dei nyttige tidleg i kurset.
+: fokuserer på grunnteknikkar og vert automatisk retta.  Me vil ikkje oppfordra til å leggja stor vekt på desse, men nokon finne dei nyttige tidleg i kurset.
 
 + [[CodeRunner Basic]]
 + [[CodeRunner Control]]

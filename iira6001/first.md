@@ -22,6 +22,11 @@ og kan tilpassast nye problem.
 Dei presenterer ikkje detaljar som ein må hugsa, og det skal normalt klara
 seg å sjå dei éin gong og gjerne når ein er avslappa.
 
+Utover minimum er det viktig å prioritera dei retningane som ein sjølv har
+mest glede og nytte av.
+Ein bør ta mål av seg å gjera minst éi open oppgåve i perioden, sjølv om 
+ein ikkje klarer det kvar veke.
+
 I laupet av perioden skal ein førebu det [obligatoriske arbeidskravet](Oblig)
 som skal presenterast på midtvegssamlinga.
 
