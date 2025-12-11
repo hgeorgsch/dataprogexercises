@@ -111,7 +111,7 @@ Me kan freista med `TIME_PERIOD` og `OBS_VALUE` som ser ut som dato og kurs.
 df.plot( x="TIME_PERIOD", y="OBS_VALUE" )
 ```
 
-::: {admonition}
+::: {admonition} Oppgåve
 Lag ein kodeblokk og test kodelina over.
 :::
 

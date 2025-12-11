@@ -27,7 +27,7 @@ Her skal me sjå nokre døme.
 # Eitt objekt i JSON
 
 ::: {admonition} Oppgåve
-Fila [](./kundedta1sample.json) inneheld eitt objekt.
+Fila [](./kundedata1sample.json) inneheld eitt objekt.
 Opna denne fila i ein teksteditor.  
 Kva slags data inneheld ho?  Kva representerer objektet?
 :::
@@ -73,7 +73,7 @@ problem i store program.
 # Ei liste i JSON
 
 ::: {admonition} Oppgåve
-Fila [](./kundedta1.json) inneheld ei liste med kundar.
+Fila [](./kundedata1.json) inneheld ei liste med kundar.
 Opna denne fila i ein teksteditor.  
 Korleis ser datasettet ut?  Forstår du kva det tyder?
 :::

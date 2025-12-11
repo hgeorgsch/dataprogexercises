@@ -55,6 +55,8 @@ chapters:
       sections:
       - file: notebooks/requests
       - file: notebooks/WEBAPI
+      - file: notebooks/API-eksempel-sport.ipynb
+      - file: notebooks/API-eksempel-reddit.ipynb
   - file: midway
   - file: second
     sections:
@@ -80,7 +82,6 @@ chapters:
   - file: closure
   - file: drafts
     sections:
-    - file: notebooks/API-eksempel-sport.ipynb
     - file: notebooks/Lånesøknad.ipynb
     - file: notebooks/Multiindex.ipynb
     - file: notebooks/dicts-json-jsonstat.ipynb
