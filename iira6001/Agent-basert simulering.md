@@ -23,6 +23,8 @@ Dette kapittelet byggjer på
     + [Shrimp-Game](notebooks/Shrimp-Game)
 + *Opne øvingar*
     + [Iskrem på ei strand](notebooks/Iskrem%20på%20ei%20strand)
++ *Utkast til Øvingar*
+    + [](notebooks/LoanClass)
 
 ## Oppsummering
 

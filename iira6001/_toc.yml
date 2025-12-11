@@ -48,6 +48,7 @@ chapters:
       - file: notebooks/Arbeidsledige og Konkursar
     - file: Agent-basert simulering
       sections:
+      - file: notebooks/LoanClass
       - file: notebooks/Shrimp-Game
       - file: notebooks/Iskrem på ei strand.ipynb
       - file: notebooks/ShrimpSimulation
