@@ -17,12 +17,12 @@ Dette kapittelet byggjer på
 	+ Tilfeldigheit
       ([Slides](https://iirevu.org.ntnu.no/Slides/Tilfeldigheit-Slides))
 	+ Datastrukturar og Kompleksitet
-+ *Tekniske demonstrasjonar*
-	+ Datastrukturer
 + *Gjennomarbeidde Døme.*
 	+ [Tilfeldigheit](notebooks/Tilfeldigheit)
 	+ [Marknadssimulering](notebooks/Marknadssimulering)
 	+ [Listekomprehensjon](notebooks/Listekomprehensjon)
++ *Tekniske demonstrasjonar*
+	+ Datastrukturer
 + *Opne Øvingar.*
     + [](exercises/Kundedifferensiering)
 + *Drilløving.*

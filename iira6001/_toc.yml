@@ -5,6 +5,7 @@ root: intro
 chapters:
   - file: Praktisk informasjon
     sections:
+    - file: Oblig
     - file: Mappevurdering
   - file: Opningssamling
     sections:
