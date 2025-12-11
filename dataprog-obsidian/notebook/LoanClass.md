@@ -41,7 +41,7 @@ print( f"Eg skuldar {mydebt.balance} kr." )
 print( f"Eg må betala {mydebt.balance*mydebt.interest} kr. i renter." )
 ```
 
-+ [ ] **TODO** introduser datatime her
++ [ ] **TODO** introduser datetime her
 
 Her har me definert eit objekt `mydebt` av ei klasse (type) `Loan`.
 Objektet `mydebt` er ein konkret instans, *mitt lån*.
@@ -113,12 +113,12 @@ Det er ein føremon for studentane å arbeida med ulike representasjonar av det 
 
 +++
 
-## Oppgåve
+::: {admonition} Oppgåve
 
 Endra dømet over til å skriva ut ein betalingsplan med månadleg forrenting og avdrag.
 Du kan velja innbetalingsbeløp sjølv.
 
-+++
+:::
 
 ## Månadleg sparing
 
@@ -157,14 +157,12 @@ for i in range(48):
     print( "Saldo: ", myaccount.balance, "\t\tRenter hittil i år:", myaccount.interest )
 ```
 
-## Oppgåve
+::: {admonition} Oppgåve
 
 Lise sparer 1000 kvar månad til 2% rente, som i dømet over.
 Den 1. desember kvart år tek ho ut 5000 kr. til julegåver.
 Kor mykje penger har ho på kontoen etter fem år?
 
 Dersom du meiner der manglar opplysingar i oppgåva, kan du gjera dine eigne føresetnader.
+:::
 
-```{code-cell} ipython3
-
-```
