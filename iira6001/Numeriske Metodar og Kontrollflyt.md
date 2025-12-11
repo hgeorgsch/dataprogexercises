@@ -9,7 +9,7 @@ author: Hans Georg Schaathun
 Me freistar å gje eit par forskjellige innfallsvinklar til kvart tema.
 Vekesprogrammet inneheld difor forskjellige ressursar som kan brukast på ulikt vis.
 
-Perspektivføredraga 
+Perspektivføredrag
 : er meint å gje eit konseptuelt overblikk eller kontekst. Me vonar at det fungerer å sjå desse litt avslappa når ein har tid til overs.
 
 + [Imperativ programmering og maskinarkitektur](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=e6150884-d729-4296-a139-b330009a4a30)
@@ -48,7 +48,7 @@ Opne oppgåver
 + [Kontantstraum](exercises/Kontantstraum)
 
 Utkast til oppgåver
-: desse oppgåvene er uferdige.
+: desse oppgåvene er uferdige, men kan gje idéar til dei som er på jakt etter meir.
 
 + [Kundedata](exercises/Kundedata)
 + [](notebooks/Folkevekst)

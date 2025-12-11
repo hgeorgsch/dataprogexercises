@@ -12,11 +12,9 @@ tags:
 	+ Kunna samanlikna data frå ulike datasett i pandas
 + *Perspektivførelesing*
 	+ Fletting av datasett
-	
-+ *Demovideo*
-
-+ Oppgåver
++ *Gjennomarbeidde Døme.*
 	+ [Samanlikning av tidsrekkjer](notebooks/Arbeidsledige%20og%20Konkursar) 
-    + [Jordskjelvdata](notebooks/Jordskjelv) som demonstrerer animasjon og plotting oppå kart.
+    + [Jordskjelvdata](notebooks/Jordskjelv) som demonstrerer animasjon og plotting oppå kart. (valfri)
++ *Demovideo*
 
 + [ ] Oppgåve: Korrelasjonskoeffisient med forskjøvede data (til arbeidsledige)
