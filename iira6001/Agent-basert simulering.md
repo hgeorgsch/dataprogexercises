@@ -7,6 +7,11 @@ title: Agent-basert simulering
 
 # Agent-basert simulering
 
+::: {admonition} Forkunnskapar
+Dette kapittelet byggjer på
+[Datastrukturar og Simulering](Datastrukturar%20og%20Simulering.md).
+:::
+
 + *Oversiktsførelesing*:
 	+ Objektorientert modellering og programmering 
 	+  [[Mentale og matematiske modellar]]  
