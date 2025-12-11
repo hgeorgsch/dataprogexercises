@@ -341,6 +341,6 @@ Kva simuleringar treng du for å finna ein fornuftig likevekt i marknaden?  Kva 
 
 ::: {admonition} Merknad
 Me har laga eit døme på korleis ein kan implementera 
-[*Shrimp Game*-simuleringa utan klasser og objekt](notebooks/ShrimpSimulation).
+[*Shrimp Game*-simuleringa utan klasser og objekt](ShrimpSimulation).
 Det er ikkje like forseggjort, men kan likevel gje nokre idéar.
 :::
