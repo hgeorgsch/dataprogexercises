@@ -22,11 +22,6 @@ Perspektivføredraga
   [(Slides)](https://iirevu.org.ntnu.no/Slides/Kva%20er%20ein%20algoritme%3f/)
 + [Flytdiagram](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=c3aeebb8-4015-41d7-a625-b3670160556e)
 
-Demonstrasjonsvideoane
-: fokuserer på tekniske detaljar. Dette er videoar som krev meir konsentrasjon, og ein bør absolutt testa ut dei teknikkane som vert demonstrert på eiga hand, før ein gløymer dei. Det er best å sjå dei saman med øvingane.
-
-+ [[Kontrollflyt]]
-
 Gjennomarbeidde døme
 : er den viktigaste læringsaktiviteten.  Dei viser nye teknikkar i kontekst med oppgåver og spørsmål som oppmodar til fikla med og variera koden for forstå kva som føregår.
 
@@ -35,6 +30,11 @@ Gjennomarbeidde døme
 + [Halveringsmetoden](notebooks/Halveringsmetoden)
 + [](notebooks/Smittespreiing)
 
+
+Demonstrasjonsvideoane
+: fokuserer på tekniske detaljar. Dette er videoar som krev meir konsentrasjon, og ein bør absolutt testa ut dei teknikkane som vert demonstrert på eiga hand, før ein gløymer dei. Det er best å sjå dei saman med øvingane.
+
++ [[Kontrollflyt]]
 
 Drilloppgåver
 : fokuserer på grunnteknikkar og vert automatisk retta.  Me vil ikkje oppfordra til å leggja for stor vekt på desse, men nokon finne dei nyttige tidleg i kurset.
