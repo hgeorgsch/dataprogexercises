@@ -12,9 +12,13 @@ kernelspec:
   name: python3
 ---
 
-# Objektorientert sparekalkulator
+# Objektorientert lånekalkulator
 
-Lat oss sjå på eit enkelt og kvardagsleg problem: kor raskt betaler ein ned eit bustadlån.
+Her skal me ta løysinga frå [](Simulering%20av%20kontantstraum) og
+visa korleis me kan organisera lånekalkulatoren med klasser og objekt.
+Me skal altso svara på spørsmålet
+*kor raskt betaler ein ned eit bustadlån?*
+
 Som eit døme kan me føresetja
 - **Lånebeløp** 100000 kr
 - **Rente** 4% årleg og etterskotvis
@@ -33,9 +37,11 @@ class Loan:
     balance = 100000
         
 mydebt = Loan()
-print( "Eg skuldar", mydebt.balance )
-print( "Eg må betala", mydebt.balance*mydebt.interest,"kr i renter")
+print( f"Eg skuldar {mydebt.balance} kr." )
+print( f"Eg må betala {mydebt.balance*mydebt.interest} kr. i renter." )
 ```
+
++ [ ] **TODO** introduser datatime her
 
 Her har me definert eit objekt `mydebt` av ei klasse (type) `Loan`.
 Objektet `mydebt` er ein konkret instans, *mitt lån*.
