@@ -6,16 +6,12 @@ tags:
 
 # Automatisering
 
-+ **Læringsmål**
-	+ Lagring og organisering
-		+ app versys filsystem
-		+ versjonskontroll
-		+ git og github
-	+ Moglege øvingar og demoar
-		+ git og github
 + *Perspektivførelesing*
+    + Versjonskontroll
 
 + *Demovideo*
+    + Korleis me har laga læringsmaterialet i jupyter book
+    + Versjonskontroll i github
 + *Gjennomarbeidde døme*
 + *Opne øvingar*
 
