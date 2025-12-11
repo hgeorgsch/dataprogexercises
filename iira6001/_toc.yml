@@ -35,6 +35,7 @@ chapters:
       - file: notebooks/Marknadssimulering
       - file: exercises/Kundedifferensiering
       - file: notebooks/Listekomprehensjon
+      - file: notebooks/Tilfeldigheit-Demo
     - file: CSV og Deskriptiv Statistikk
       sections:
       - file: notebooks/Genetikk

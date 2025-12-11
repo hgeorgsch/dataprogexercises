@@ -1,11 +1,11 @@
 ---
 jupytext:
-  formats: md:myst,ipynb
+  formats: ipynb,md:myst
   text_representation:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.18.1
+    jupytext_version: 1.17.0
 kernelspec:
   name: dataprog
   language: python
