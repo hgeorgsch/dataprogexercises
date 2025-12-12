@@ -21,6 +21,8 @@ Dette kapittelet byggjer på
 	+ [Tilfeldigheit](notebooks/Tilfeldigheit)
 	+ [Marknadssimulering](notebooks/Marknadssimulering)
 	+ [Listekomprehensjon](notebooks/Listekomprehensjon)
+	+ [](notebooks/JSON%20og%20dict) (valfri).
+      Denne øvinga er litt meir teknisk og spissfindig, og mindre praktisk.
 + *Tekniske demonstrasjonar*
 	+ Datastrukturer
 + *Opne Øvingar.*
@@ -29,7 +31,6 @@ Dette kapittelet byggjer på
 	+ [[CodeRunner Data Structures]]
 + Utkast til oppgåver
 	+ [[Simulering av ein utvalsstudie]]
-	+ [](notebooks/JSON%20og%20dict)
 
 Kuriosa
 : er arbeidsdokument.  Dei vert publiserte for dei nyssgjerrige, og viser teknikkar som eg har brukt for å laga det andre materialet til leksjonen.

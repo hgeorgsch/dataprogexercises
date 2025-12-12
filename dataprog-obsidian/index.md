@@ -5,6 +5,7 @@ tags:
 ---
 Andreas: andreas.h.schille@ntnu.no
 
++ [[Statistikkemne]]
 + [[Project Management]] (budsjett og rekneskap)
 + [[Praktiske tips og tekniske løysingar]]
 + [[Emneadministrasjon]]
