@@ -416,50 +416,9 @@ til å finna ekte tilfeldige tal.  Problemet er at det går mykje treigare når
 ein treng meir enn nokre få verdiar.
 :::
 
-## Oppgåver
+## Avslutting
 
-:::{admonition} Oppgåve
-So langt har me sett på annuitetslån, der terminbetalinga er eit fast beløp.
-Tenk i staden på eit serielån, der du betaler rentene pluss eit fast 
-nedbetalingsbeløp.
-Lag eit plott som samanliknar utviklinga på serie- og annuitetslån.
-:::
+Me har sett på eit svært enkelt døme, med annuitetslån og årleg nedbetaling.
+Der er fleire oppgåver om [](/Exercises/Kontantstraum), som ein kan bruka til
+å få programmeringa inn i fingrane.
 
-:::{admonition} Oppgåve
-Me har simulert årlege terminar, noko som ikkje er særleg vanleg i røynda.
-Lag simuleringar med månadleg rentekapitalisering og terminbetaling.
-:::
-
-:::{admonition} Oppgåve
-I røynda kjem ei renteendring sjelden aleine.  
-Kan henda vore burde sannsynlegheita for renteauke auka når den fyrste renteendringa
-skjer, og ikkje gå ned før me ser ein rentenedgang.
-Endra `loan3`-funksjonen for å simulera dette.
-
-Det er litt plunder å få til, men du kan t.d.
-1. Innføra ein variabel `terskel` og seia at me får renteoppgang når 
-    `slump <= terskel`.
-2. Kvar gong renta går opp eller ned, kan du justera `terskel`.
-3. Slumptal frå 1 til 10 er kanskje for grovkorna, men du kan auka spennet til 100
-    eller 1000.
-4. Du kan laga ein tilsvarande terskel for rentenedgang.
-:::
-
-## Notat - materiale som vert utelate 
-
-1. Geometrisk rekkje - lukka form
-    1. plott og samanlikna
-
-+ Problem.
-    + lån med årleg rente
-    + Sjå [[Sparekalkulator]]
-+ Relativt enkelt problem.
-    + kan løysast analytisk, om du kan litt matematikk
-    + kan løysast i rekneark, om du har god orden
-    + me løyser det her for å demonstrera nokre grunnleggjande programeringskonsept og korleis me kan leika med ulike tankeeksperiment
-    + med litt røynsle og litt kreativitet er der inga grense for kva de kan gjera
-        + vert det komplekst nok, får de til meir med programmering enn med rekneark
-
-```{code-cell} ipython3
-
-```
