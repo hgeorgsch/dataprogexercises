@@ -8,8 +8,17 @@ tags:
 
 # Samanlikna Datasett
 
-+ **Læringsmål**
-	+ Kunna samanlikna data frå ulike datasett i pandas
+::: {admonition} Forkunnskapar
+Dette kapittelet byggjer på [](CSV$20og$20Deskriptiv$20Statistikk).
+:::
+
+Denne veka skal me samanlikna data frå ulike datasett.  
+Det inneber at me skal læra å
++ aggregera data for å sameina datasett på ulike tidsskalaer.
++ setja saman ulike datasett i éin *DataFrame* i pandas.
++ rekna ut korrelasjonskoeffisientar o.l.
+
+
 + *Perspektivførelesing*
 	+ Fletting av datasett
 + *Gjennomarbeidde Døme.*
