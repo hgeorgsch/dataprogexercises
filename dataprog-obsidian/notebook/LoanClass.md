@@ -152,7 +152,25 @@ for i in range(10):
     
 ```
 
+Variablane i objektet (`balance` i dette tilfellet) dannar ein tilstand.
+Objektet har til ein kvar tid ein bestemt tilstand, og metodane kan endra
+denne tilstanden.
+
+::: {admonition} Merknad
+Som me har sett kan ein endra tilstanden ved å oppdatera objektvariablane
+utan å bruka metodane i objektet, men dette er rekna som dårleg praksis.
+Metodar som tek seg av tilstandsoppdatering kan òg sjekka for feil og sjå
+til at tilstanden er konsistent.  Ved å la all oppdatering gå gjennom
+utvalde metodar, er det enklare å unngå feil.
+:::
+
+::: {admonition} Oppgåve
+**TODO** Logg
+:::
+
 ## Tid og dato
+
+[](Tid%20og%20dato)
 
 + [ ] **TODO** introduser datetime her
 
