@@ -81,8 +81,8 @@ Den fyrste klassa vår hadde berre variablar.
 Me kunne like gjerne ha brukt ein `dict`.
 Klasser kan òg ha funksjonar, som lèt oss samla typen og operasjonar
 på typen på éin plass, slik at koden vert ryddigare.
-
-+ [ ] **TODO** introduser datetime her
+Lat oss ta eit døme på metodar som oppdaterer og skriv ut saldoen
+på lånet.
 
 ```{code-cell} ipython3
 class AnnualLoan(SimpleLoan):
@@ -102,8 +102,27 @@ class AnnualLoan(SimpleLoan):
         print( "Ny saldo:\t", self.balance )
 ```
 
-Legg merke til parameteren `self`; det er ein referanse til objektet som eig metoden.
-Me innfører òg to nye variablar (`oldbalance` og `interestamount`).  Dei bruker me for å dela data mellom dei to metodane. Tid for å testa.
+Det fyrste me skal leggja merke til her er notasjonen `AnnualLoan(SimpleLoan)`
+i den fyrste lina.  Dette tyder at den nye klassa, `AnnualLoan`, skal
+arva den eksisterende klassa, `SimpleLoan`.  Dvs. at alle eigenskapane
+som vart definerte i `SimpleLoan` òg gjeld for `AnnualLoan` med mindre
+dei vert redefinert der.
+
+::: {admonition} Merknad
+Arv er ein av dei viktigaste eigenskapane ved objektorientert programmering.
+Det lèt oss definera klasser som liknar på kvarandre, utan å måtte gjenta
+den koden som er lik.
+:::
+
+Funksjonar som er definert i ei klasse kaller me som regel **metodar**.
+Me ser at dei er definert med `def` som andre funksjonar, men 
+definisjonen står inni klassa (blokken).
+Der er eit par ting som er spesielt med metodar.
+Alle metodar treng ein parameter `self` som refererer til objektet som eig
+metoden.
+Denne parameteren skal ikkje vera med når me kaller metoden.
+Lat oss sjå korleis me instantierer eit lån, sjekker saldo, oppdaterer
+etter eitt år, og sjekker saldo igjen.
 
 ```{code-cell} ipython3
 mydebt = Loan()
@@ -111,6 +130,17 @@ mydebt.printstatement()
 mydebt.endyear()
 mydebt.printstatement()
 ```
+
+Metodane som er definerte i klassa vert eigenskapar ved instansen, slik at
+me kan kalla metode frå objektet som `mydebt.endyear()`.
+Det ser ut som om me har gløymt parameteren self, men det har me ikke.
+Parameteren `self` får verdien `mydebt`, etter objektet som metoden vert
+kalt frå.
+
+Går me tilbake til definisjonen av `endyear()`, ser me korleis saldoen
+(`balance`) vert oppdatert med gebyr, rente og innbetaling.
+Tilsvarande vil `printstatement()` henta verdiar frå objektet (`self`)
+og skriva dei ut.
 
 Me kan halda fram og laga nedbetalingsplan fleire år fram i tid, t.d.:
 
@@ -121,6 +151,10 @@ for i in range(10):
     mydebt.printstatement()
     
 ```
+
+## Tid og dato
+
++ [ ] **TODO** introduser datetime her
 
 ::: {admonition} Merknad
 Ein kan sjølvsagt gjera dette like enkelt i eit rekneark.
