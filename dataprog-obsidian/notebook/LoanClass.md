@@ -28,7 +28,9 @@ Som eit døme kan me føresetja
 
 ## Objekt og klasser
 
-Objekt er ein teknikk for å samla fleire ulike definisjonar, både variablar og funksjonar (metodar).
+Klasser er ein teknikk for å samla fleire ulike definisjonar,
+både variablar og funksjonar (metodar).
+Me kan definera ei enkel klasse, med berre variablar, slik:
 
 ```{code-cell} ipython3
 class Loan:
@@ -36,38 +38,54 @@ class Loan:
     fee = 100
     payment = 10000
     balance = 100000
+```
+
+Ei **klasse** er ein datatype.  Når me bruker klassa, lagar med ein variabel
+med typen.  Me seier at me instantierer typen.
+Verdien av ei klassetype kaller me for eit **objekt**
+For å instantiera typen bruker me klassenamnet som ein funksjon, med
+parentesar, slik:
         
-mydebt = Loan()
+```{code-cell} ipython3
+mydebt = SimpleLoan()
 print( f"Eg skuldar {mydebt.balance} kr." )
 print( f"Eg må betala {mydebt.balance*mydebt.interest} kr. i renter." )
 ```
 
-+ [ ] **TODO** introduser datetime her
-
-Her har me definert eit objekt `mydebt` av ei klasse (type) `Loan`.
-Objektet `mydebt` er ein konkret instans, *mitt lån*.
-Klassa `Loan` er ei generisk sak. Mange andre kan ha liknande lån.
-Lat oss sjå kva som skjer med to lån, når me betaler litt ned på det eine.
+Me kan endra variablane i objektet.
+Ei rentenedgang kan me t.d. implementera slik.
 
 ```{code-cell} ipython3
-yourdebt = Loan()
-print( "Du skuldar", yourdebt.balance )
-mydebt.balance = mydebt.balance - 20000
-print( "Eg skuldar", mydebt.balance )
-print( "Du skuldar", yourdebt.balance )
+mydebt.interest = 0.035
+print( f"Eg skuldar {mydebt.balance} kr." )
+print( f"Eg må betala {mydebt.balance*mydebt.interest} kr. i renter." )
 ```
 
-## Metodar for låneadministrasjon
+::: {admonition} Refleksjon
+Kva har endra seg i lånet over?
+:::
 
-Objektet som me definerte over inneheld berre variablar.
-Lat oss no leggja til metodar (funksjonar), ein for å skriva ut ein slags kontoutskrift, og ein for å oppdatera saldoen med renter og innbetalingar.
+::: {admonition} Oppgåve
+Instantier eit nytt lån `newloan`.
+Sjekk kva rentenivå det nye lånet får?
+:::
+
+::: {admonition} Merknad
+Klassevariablane som er definert under `class` tener som initialverdiar
+for objektvariablane som me kan definera på kvar instans.
+:::
+
+## Metodar 
+
+Den fyrste klassa vår hadde berre variablar.
+Me kunne like gjerne ha brukt ein `dict`.
+Klasser kan òg ha funksjonar, som lèt oss samla typen og operasjonar
+på typen på éin plass, slik at koden vert ryddigare.
+
++ [ ] **TODO** introduser datetime her
 
 ```{code-cell} ipython3
-class Loan:
-    interest = 0.04
-    fee = 100
-    payment = 10000
-    balance = 100000
+class AnnualLoan(SimpleLoan):
     interestamount = 0
     
     def endyear(self):
@@ -82,8 +100,6 @@ class Loan:
         print( "Renter:\t\t", self.interestamount )
         print( "Nedbetaling:\t", repayment )
         print( "Ny saldo:\t", self.balance )
-
-    
 ```
 
 Legg merke til parameteren `self`; det er ein referanse til objektet som eig metoden.

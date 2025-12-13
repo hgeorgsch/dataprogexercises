@@ -15,12 +15,12 @@ Dette kapittelet byggjer på
 + *Oversiktsførelesing*:
 	+ Objektorientert modellering og programmering 
 	+  [[Mentale og matematiske modellar]]  
++ *Utarbeidd døme*
+    + [Shrimp-Game](notebooks/Shrimp-Game)
 + *Demovideo*
     + [[Klasser-Objekter]] i python
     + Programmering i `.py`-filer
     + git og github?
-+ *Utarbeidd døme*
-    + [Shrimp-Game](notebooks/Shrimp-Game)
 + *Opne øvingar*
     + [Iskrem på ei strand](notebooks/Iskrem%20på%20ei%20strand)
 + *Utkast til Øvingar*
