@@ -122,13 +122,12 @@ for i in range(10):
     
 ```
 
-## Merknad
-
+::: {admonition} Merknad
 Ein kan sjølvsagt gjera dette like enkelt i eit rekneark.
-Det som er nyttig å ha med seg er derimot at tankesettet er det same uansett om ein arbeider i eit rekneark eller i eit generelt programmeringsspråk.  
-Det er ein føremon for studentane å arbeida med ulike representasjonar av det same algoritmiske tankesettet. Det gjev eit rikare dømemateriale som er grunnlaget for overføring av læring.
+Det som er nyttig å ha med seg er derimot at tankesettet er det same 
+uansett om ein arbeider i eit rekneark eller i eit generelt programmeringsspråk.  
+:::
 
-+++
 
 ::: {admonition} Oppgåve
 
