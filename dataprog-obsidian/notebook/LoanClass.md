@@ -306,6 +306,18 @@ Bruk den nye daterte klassa til å plotta saldoen over 25 år med dato på $x$-a
 
 ## Modellering
 
+So langt har me fikla på måfå.  
+Målet har vore å verta kjent med litt av den
+mest grunnleggjenda syntaksen og semantikken i pytjhon.
+Dersom me skal laga ein brukbar låne- eller sparekalkulator,
+løner det seg å ta eit steg tilbake og laga eoin modell for kalkulatoren.
+Kva skal kalkulatoren kunna gjera?
+Korleis skal me som brukar samhandla med han?
+
+Objektorientering er godt egna for å laga fleksibel og gjenbrukbar kode.
+Det skal vera råd å gjenbruka det meste av koden for innskotskonti,
+serielån og annuitetslån.
+
 ## Månadleg sparing
 
 Lat oss sjå på eit litt meir komplisert problem, med månadleg sparing, der sparebeløpa kjem månadleg medan rentene berre kjem årleg.
