@@ -5,11 +5,11 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.17.0
+    jupytext_version: 1.18.1
 kernelspec:
-  display_name: Python 3
-  language: python
   name: python3
+  display_name: Python 3 (ipykernel)
+  language: python
 ---
 
 # Objektorientert lånekalkulator
@@ -33,7 +33,7 @@ både variablar og funksjonar (metodar).
 Me kan definera ei enkel klasse, med berre variablar, slik:
 
 ```{code-cell} ipython3
-class Loan:
+class SimpleLoan:
     interest = 0.04
     fee = 100
     payment = 10000
@@ -45,7 +45,7 @@ med typen.  Me seier at me instantierer typen.
 Verdien av ei klassetype kaller me for eit **objekt**
 For å instantiera typen bruker me klassenamnet som ein funksjon, med
 parentesar, slik:
-        
+
 ```{code-cell} ipython3
 mydebt = SimpleLoan()
 print( f"Eg skuldar {mydebt.balance} kr." )
@@ -125,7 +125,7 @@ Lat oss sjå korleis me instantierer eit lån, sjekker saldo, oppdaterer
 etter eitt år, og sjekker saldo igjen.
 
 ```{code-cell} ipython3
-mydebt = Loan()
+mydebt = AnnualLoan()
 mydebt.printstatement()
 mydebt.endyear()
 mydebt.printstatement()
@@ -164,8 +164,86 @@ til at tilstanden er konsistent.  Ved å la all oppdatering gå gjennom
 utvalde metodar, er det enklare å unngå feil.
 :::
 
+## Konstruktøren
+
+Det vil vera nyttig om låneobjekte kan hugsa transaksjonane og saldoen
+år for år.  Dette krev litt omtanke.
+Me kunne tenkja oss at me lagar ei klassevariabel `history` som me
+instantierer med ei tom liste, der me legg til saldoen kvart år,
+t.d. slik:
+
+```{code-cell} ipython3
+class AnnualLoan2(AnnualLoan):
+    history = []
+
+    def endyear(self):
+        self.history.append( self.balance )
+        self.interestamount = self.interest*self.balance
+        self.oldbalance = self.balance
+        self.balance += self.fee
+        self.balance += self.interestamount
+        self.balance -= self.payment
+```
+
+Denne klassa arvar `AnnualLoan` har dermed same `printstatement()`, men ho
+har si eiga variant av `endyear()`, med éi ekstra line som oppdaterer
+`self.history`.  
+Lat oss testa dette.
+
+```{code-cell} ipython3
+loan1 = AnnualLoan2()
+loan2 = AnnualLoan2()
+
+print( "Lån 1", loan1.history )
+print( "Lån 2", loan2.history )
+
+loan1.endyear()
+print( "Oppdatert lån 1" )
+
+print( "Lån 1", loan1.history )
+print( "Lån 2", loan2.history )
+```
+
+::: {admonition} Refleksjon
+Kva er det som skjer her?  Skal verkeleg `loan1` og `loan2` ha same historikk?
+:::
+
+Me er nøydde til å skilja mellom klasse- og objektvariablar.
+Ei variabel som er definert direkte i klassa, slik som me har gjort,
+høyrer til klassa.
+Når me gjer `self.history.append( ... )` oppdaterer båe objekta den
+same klassevariabele.
+
+Dette har ikkje vore noko problem før no.  Når me bruker tilordning, som i
+`self.balance += self.fee` vert der oppretta ein *ny* variabel i objektet,
+og denne vert brukt i staden for klassevariabelen. 
+
+For å løysa dette problemet må me ha ein metode som opprettar objektvariabelen.
+Der er ein spesiell metode som vert køyrd når objektet vert instantiert.
+Denne kaller me for ein **konstruktør** og i python heiter han `__init__`.
+Altso kan me gjera slik:
+
+```{code-cell} ipython3
+class AnnualLoan3(AnnualLoan):
+
+    def __init__(self):
+        self.history = [ self.balance ]
+    def endyear(self):
+        self.interestamount = self.interest*self.balance
+        self.oldbalance = self.balance
+        self.balance += self.fee
+        self.balance += self.interestamount
+        self.balance -= self.payment
+        self.history.append( self.balance )
+```
+
+No legg me startsaldoen inn i historikken med ein gong, og legg inn
+oppdatert saldo like etter at han er oppdatert.
+
 ::: {admonition} Oppgåve
-**TODO** Logg
+Testa klassa `AnnualLoan3`.  Oppfører historikken seg som han skal,
+sjølv om du har fleire instansar samstundes? 
+
 :::
 
 ## Tid og dato
@@ -233,4 +311,3 @@ Kor mykje penger har ho på kontoen etter fem år?
 
 Dersom du meiner der manglar opplysingar i oppgåva, kan du gjera dine eigne føresetnader.
 :::
-
