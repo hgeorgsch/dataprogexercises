@@ -304,6 +304,8 @@ Legg inn datering i klassa, slik at historikken inneheld dato for kvar saldo.
 Bruk den nye daterte klassa til å plotta saldoen over 25 år med dato på $x$-aksen.
 :::
 
+## Modellering
+
 ## Månadleg sparing
 
 Lat oss sjå på eit litt meir komplisert problem, med månadleg sparing, der sparebeløpa kjem månadleg medan rentene berre kjem årleg.
