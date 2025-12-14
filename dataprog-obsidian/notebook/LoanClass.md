@@ -282,6 +282,11 @@ Dei ekstra parametrane gjev me som argument når me instantierer eit objekt.
 Oppdater låneklassa slik at alle låneparametrane kan setjast gjennom konstruktøren.
 :::
 
+::: {admonition} Merknad
+Resten av denne øvinga vert meir open.  Det kan henda at du vil ta pause her,
+og gjera andre gjennomarbeidde døme fyrst.
+:::
+
 ## Tid og dato
 
 Lånekalkulatoren vår er svært primitiv og grovkorna.
@@ -337,24 +342,83 @@ class Account():
    def __init__(self,amount,time,interest=0.05,fee=0):
       pass
    def payin(self,amount,time):
+      """Registrer ein ny transaksjon med beløpet `amount` på tidspunkt `time`.
+      Oppdater saldoen.
+      """
       pass
    def addinterest(self,time):
+      """Rekn ut rentene og evt. gebyr og registrer dei som ein transaksjon.
+      Oppdater saldoen.
+      """
       pass
    def gettransactios(self,time):
+      """Returner ei liste med transaksjonar, der kvar transaksjon er ein
+      tuppel (tidspunkt,beløp,ny saldo).
+      """
       pass
 ```
 
 Her har me ikkje programmert nokon av metodane;
 `pass` tyder «gjer ingenting», men gjer at definisjonen er gyldig.
+Her har me teke med *docstrings* dvs. ei slags brukarrettleiing som
+ein teiknstreng i starten av kvar metode.  
+Tidlegare har me skrive slike forklaringar utanfor kodeblokken, men
+når kodeblokkane blir lange, som klassedefinisjonar ofte er, kan det
+vera greitt å ha dokumentasjonen i koden.
+
+Metodane som er definerte her dannar *grensesnittet* til klassa.
+Me kaller det gjerne eit API for *Application Programing Interface*.
+Når APIet fyrst er fastsett, kan ein skriva resten av programmet.
+Endringar i implementasjonen av metodane påverkar ikkje resten
+av programmet so lenge APIet ligg fast.
+
+## Ei naïv løysing
+
 
 Me har ei ny utfordring når me skil innskot frå rentekapitalisering.
 Når saldoen varierer i gjennom renteperioden, må ein rekna renter for
 delar av belopet på delar av perioden.
 
-
+Det er derimot ein god idé, når ein programmerer, å laga ei naïv 
+løysing fyrst, og so forbetra ho etter kvart.  Difor skal me sjå
+bort frå rentedagar i den fyrste implementasjon.
 
 ::: {admonition} Oppgåve
+Skriv konstruktøren `__init__` for klassa.  
+Bruk ein egna type frå [](Tid%20og%20dato) til tidspunktet.
+Start ei ny liste med transaksjonar.
+:::
 
+::: {admonition} Oppgåve
+Skriv `gettransactions`-metoden som returnerer lista med transaksjonar.
+:::
+
+::: {admonition} Oppgåve
+Skriv `payin`-metoden som lagar ein transaksjon og oppdaterer
+saldoen.
+:::
+
+::: {admonition} Oppgåve
+Skriv `addinterest`-metoden som lagar ein transaksjon og oppdaterer
+saldoen.
+:::
+
+::: {admonition} Oppgåve
+Lag eit testdøme med månadleg sparing og årleg rente.
+Hent ut transaksjonane og plott saldoen som ein funksjon av tida.
+:::
+
+::: {hint}
+Du kan bruka ei løkke som kaller `payin` og `addinterest` utan at
+denne løkka treng vera ein del av klassa.
+:::
+
+## Korrekt renteutrkening.
+
+
+## Avslutting
+
+::: {admonition} Oppgåve
 Lise sparer 1000 kvar månad til 2% rente.
 Den 1. desember kvart år tek ho ut 5000 kr. til julegåver.
 Kor mykje penger har ho på kontoen etter fem år?
