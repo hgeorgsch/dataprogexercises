@@ -331,6 +331,19 @@ Lat oss starta med nokre av metodane som me treng.
   brukast m.a. til plotting.
 
 
+```python
+class Account():
+   def __init__(self,amount,time,interest=0.05):
+      pass
+   def payment(self,amount,time):
+      pass
+   def addinterest(self,time):
+      pass
+   def getTransactios(self,time):
+      pass
+```
+
+
 ## Månadleg sparing
 
 Lat oss sjå på eit litt meir komplisert problem,
