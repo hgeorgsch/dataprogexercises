@@ -210,6 +210,3 @@ Her bruker me `open()` som før, men med `w` for *write* i staden for `r` for *r
 
 :::
 
-```{code-cell} ipython3
-
-```
