@@ -319,7 +319,17 @@ Det skal vera råd å gjenbruka det meste av koden for innskotskonti,
 serielån og annuitetslån.
 
 Der er ingen fasit når vi modellerer.  
-Modellen avheng heilt av kva me legg vekt på.
+Modellen avheng mykje av kva me legg vekt på, og ein må ofte
+gjennom fleire rundar med prøving og feiling.
+Lat oss starta med nokre av metodane som me treng.
++ me treng ein metode som reknar ut og kapitaliserer renter og evt. gebyr.
+  So langt har det vore `endyear()`, men mange lån vert forrenta månadleg.
++ me må ha ein metode for innskot eller nedbetaling.  Hittil har det vore
+  `endyear()` men det er fornuftig å skilja nedbetaling frå forrenting.
+  Det er ikkje alle konti der det skjer samstundes.
++ me treng ein metode for å henta ut ei transaksjonsoversikt, som kan
+  brukast m.a. til plotting.
+
 
 ## Månadleg sparing
 
