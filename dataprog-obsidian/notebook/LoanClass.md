@@ -330,63 +330,34 @@ Lat oss starta med nokre av metodane som me treng.
 + me treng ein metode for å henta ut ei transaksjonsoversikt, som kan
   brukast m.a. til plotting.
 
+Eit fyrste utkast kan sjå slik ut:
 
 ```python
 class Account():
-   def __init__(self,amount,time,interest=0.05):
+   def __init__(self,amount,time,interest=0.05,fee=0):
       pass
-   def payment(self,amount,time):
+   def payin(self,amount,time):
       pass
    def addinterest(self,time):
       pass
-   def getTransactios(self,time):
+   def gettransactios(self,time):
       pass
 ```
 
+Her har me ikkje programmert nokon av metodane;
+`pass` tyder «gjer ingenting», men gjer at definisjonen er gyldig.
 
-## Månadleg sparing
+Me har ei ny utfordring når me skil innskot frå rentekapitalisering.
+Når saldoen varierer i gjennom renteperioden, må ein rekna renter for
+delar av belopet på delar av perioden.
 
-Lat oss sjå på eit litt meir komplisert problem,
-med månadleg sparing, der sparebeløpa kjem månadleg medan rentene berre kjem årleg.
 
-```{code-cell} ipython3
-class Account():
-    year = 0
-    month = 0
-    balance = 0
-    interest = 0
-    rate = 0.02
-    monthly = 0
-    
-    def __init__(self,x): 
-        self.monthly = x
-        return
-    def monthend(self): 
-        interestamount = self.balance * self.rate / 12
-        self.interest += interestamount
-        self.balance += self.monthly
-        self.month += 1
-        if self.month == 12: 
-            self.yearend()
-        return 
-    def yearend(self):
-        self.balance += self.interest
-        self.interest = 0
-        self.year += 1
-        self.month = 0
-        return
-
-myaccount = Account(1000)
-for i in range(48):
-    myaccount.monthend()
-    print( "Saldo: ", myaccount.balance, "\t\tRenter hittil i år:", myaccount.interest )
-```
 
 ::: {admonition} Oppgåve
 
-Lise sparer 1000 kvar månad til 2% rente, som i dømet over.
+Lise sparer 1000 kvar månad til 2% rente.
 Den 1. desember kvart år tek ho ut 5000 kr. til julegåver.
 Kor mykje penger har ho på kontoen etter fem år?
 
-Dersom du meiner der manglar opplysingar i oppgåva, kan du gjera dine eigne føresetnader.
+Bruk sparekalkulatoren til å rekna ut svaret.
 :::
