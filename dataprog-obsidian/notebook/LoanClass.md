@@ -26,6 +26,14 @@ Som eit døme kan me føresetja
 - **Gebyr** 100kr per år
 - **Terminbeløp** 10000 kr per år (inkl. renter, gebyr og avdrag)
 
+::: {admonition} Merknad
+Ein kan sjølvsagt laga ein lånekalkulator like enkelt i eit rekneark.
+Dersom du er dyktig med rekneark, må du akseptera at det tek tid før du
+kan klara det same i python.
+På den andre sida er det nytt om du kan sjå at utrkeningane som trengst
+er dei same, uansett kva verkty du bruker.
+:::
+
 ## Objekt og klasser
 
 Klasser er ein teknikk for å samla fleire ulike definisjonar,
@@ -243,27 +251,57 @@ oppdatert saldo like etter at han er oppdatert.
 ::: {admonition} Oppgåve
 Testa klassa `AnnualLoan3`.  Oppfører historikken seg som han skal,
 sjølv om du har fleire instansar samstundes? 
+:::
 
+::: {admonition} Oppgåve
+Bruk den siste låneklassa iil å plotta saldoen over 25 år,
+dvs. køyr `endyear()` 25 gongar og plot `history`.
+:::
+
+## Parameter i kosntruktøren
+
+Det er naturleg å gjera alle klassevariablane om til objektvariablar.
+Det er òg naturleg om me kan velja startsaldo og rentesats når me 
+oppretter lånet.
+Dette kan ein fint gjera ved å ha fleire parameter i konstruktøren,
+som her:
+
+```python
+class AnnualLoan3(AnnualLoan):
+
+    def __init__(self,balance=1000000):
+        self.balance = balance
+        self.history = [ self.balance ]
+    ...
+newloan = AnnualLoan3(500000)
+```
+
+Dei ekstra parametrane gjev me som argument når me instantierer eit objekt.
+
+::: {admonition} Oppgåve
+Oppdater låneklassa slik at alle låneparametrane kan setjast gjennom konstruktøren.
 :::
 
 ## Tid og dato
 
-[](Tid%20og%20dato)
-
-+ [ ] **TODO** introduser datetime her
-
-::: {admonition} Merknad
-Ein kan sjølvsagt gjera dette like enkelt i eit rekneark.
-Det som er nyttig å ha med seg er derimot at tankesettet er det same 
-uansett om ein arbeider i eit rekneark eller i eit generelt programmeringsspråk.  
-:::
-
+Lånekalkulatoren vår er svært primitiv og grovkorna.
+T.d. har me ikkje dato saldoane i historikken.
+Her vore det naturleg å bruka `datetime`-typen som me har sett
+før (sjå [](Tid%20og%20dato)).
 
 ::: {admonition} Oppgåve
+Legg inn datering i klassa, slik at historikken inneheld dato for kvar saldo.
 
-Endra dømet over til å skriva ut ein betalingsplan med månadleg forrenting og avdrag.
-Du kan velja innbetalingsbeløp sjølv.
+1.  Konstrukturøren må ta ein parameter for utbetalingsdato.
+2.  Objektet må ha ein «dags dato», dvs. datoen for siste oppdatering av lånet.
+3.  Historikken skal lagra både saldo og dato for saldoen.  Dette kan ein gjera
+    ved at kvart element er ein tuppel (dato,saldo).
+4.  Metoden for `endyear` må sjølvsagt finna rett dato, ved å sjekka dags dato og
+    finna fyrste nyttår.
+:::
 
+::: {admonition} Oppgåve
+Bruk den nye daterte klassa til å plotta saldoen over 25 år med dato på $x$-aksen.
 :::
 
 ## Månadleg sparing
