@@ -318,9 +318,13 @@ Objektorientering er godt egna for å laga fleksibel og gjenbrukbar kode.
 Det skal vera råd å gjenbruka det meste av koden for innskotskonti,
 serielån og annuitetslån.
 
+Der er ingen fasit når vi modellerer.  
+Modellen avheng heilt av kva me legg vekt på.
+
 ## Månadleg sparing
 
-Lat oss sjå på eit litt meir komplisert problem, med månadleg sparing, der sparebeløpa kjem månadleg medan rentene berre kjem årleg.
+Lat oss sjå på eit litt meir komplisert problem,
+med månadleg sparing, der sparebeløpa kjem månadleg medan rentene berre kjem årleg.
 
 ```{code-cell} ipython3
 class Account():
