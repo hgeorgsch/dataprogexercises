@@ -16,7 +16,10 @@ Dette kapittelet byggjer på
 	+ Objektorientert modellering og programmering 
 	+  [[Mentale og matematiske modellar]]  
 + *Utarbeidd døme*
-    + [Shrimp-Game](notebooks/Shrimp-Game)
+    + [](notebooks/LoanClass) viser objektorientert programmering på
+      simulering av kontantstraum, og dermed ikkje agent-basert simulering
+    + [Shrimp-Game](notebooks/Shrimp-Game) er eit døme på 
+      agent-basert simulering.
 + *Demovideo*
     + [[Klasser-Objekter]] i python
     + Programmering i `.py`-filer

@@ -346,7 +346,7 @@ class Account():
       Oppdater saldoen.
       """
       pass
-   def addinterest(self,time):
+   def addinterest(self,time=None):
       """Rekn ut rentene og evt. gebyr og registrer dei som ein transaksjon.
       Oppdater saldoen.
       """
@@ -415,8 +415,41 @@ denne løkka treng vera ein del av klassa.
 
 ## Korrekt renteutrkening.
 
+Korleis kan me no fiksa renteutrekninga, slik at ein betaler rett
+rente på innbetalingar midt i ein renteperiode?
 
-## Avslutting
+Ei mogleg løysing er at `addinterest()` hentar ut alle transaksjonane 
+sidan siste renteutrekning frå historikken, og reknar rente for kvar
+periode mellom transaksjonane.  
+Ein kan lett finna talet på dagar mellom to tidspunkt dersom ein har 
+brukt `datetime`-typane, og so kan ein rekna 1/365-del av rentesatsen
+per dag.
+
+::: {admonition} Oppgåve
+Endra `addinterest()`-metoden slik at han ser på transaksjonane 
+sidan førre renteutrekning for å rekna riktig rente.
+Du bør kunna bruka ein listekomprehensjon for å finna dei 
+transaksjonane du treng.
+Du må nok bestemma deg for kva renteperioden er (månadleg eller
+årleg) for å via kor langt tilbake du skal gå.
+:::
+
+::: {admonition} Oppgåve
+Det vil vera ein fordel om klassa held greie på kor ofte rentene
+vert kapitaliserte.
+Skriv om `addinterest` slik at han legg til renter for kvar periode
+frå siste transaksjon til datoen som er gjeven som parameter til
+metoden.
+:::
+
+::: {admonition} Oppgåve
+Med endringa for forrige oppgåve, kan du gjera renteutrekningane
+automatisk.
+Skriv om `payin()` slik at rentene vert oppdatert før det nye innskotet
+vert innbetalt.
+Det kan du få til ved å kalla `addinterest()` frå `payin()`.
+Test for å sjekk at det vert rett.
+:::
 
 ::: {admonition} Oppgåve
 Lise sparer 1000 kvar månad til 2% rente.
@@ -425,3 +458,15 @@ Kor mykje penger har ho på kontoen etter fem år?
 
 Bruk sparekalkulatoren til å rekna ut svaret.
 :::
+
+## Avslutting
+
+Eg reknar med at oppgåvene over har vore krevjande.
+Der er fleire ting ein må kunna for å få dette til.
+1.  Ein må vita korleis renter faktisk vert rekna ut i røynda.
+2.  Ein må kunna programmera løkker og gjentekne operasjonar, *og*
+    kunna kontrollera dei mot reglane som gjeld i røynda.
+3.  Ein må kunne gjera utrekningane på enkle døme for hand eller i 
+    andre verkty, slik at ein kan kontrollera at programmet reknar
+    rett på nokre enkle testar.
+
