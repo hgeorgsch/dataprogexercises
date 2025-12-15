@@ -160,13 +160,13 @@ for i in range(10):
     
 ```
 
-Variablane i objektet (`balance` i dette tilfellet) dannar ein tilstand.
+Variablane i objektet (`balance` i dette tilfellet) dannar ein **tilstand**.
 Objektet har til ein kvar tid ein bestemt tilstand, og metodane kan endra
 denne tilstanden.
 
 ::: {admonition} Merknad
-Som me har sett kan ein endra tilstanden ved å oppdatera objektvariablane
-utan å bruka metodane i objektet, men dette er rekna som dårleg praksis.
+Som me har sett kan me tilordna objektvariablane utan å bruka metodane i objektet,
+men dette er rekna som dårleg praksis.
 Metodar som tek seg av tilstandsoppdatering kan òg sjekka for feil og sjå
 til at tilstanden er konsistent.  Ved å la all oppdatering gå gjennom
 utvalde metodar, er det enklare å unngå feil.
@@ -195,7 +195,7 @@ class AnnualLoan2(AnnualLoan):
 
 Denne klassa arvar `AnnualLoan` har dermed same `printstatement()`, men ho
 har si eiga variant av `endyear()`, med éi ekstra line som oppdaterer
-`self.history`.  
+`self.history`.
 Lat oss testa dette.
 
 ```{code-cell} ipython3
@@ -226,7 +226,7 @@ Dette har ikkje vore noko problem før no.  Når me bruker tilordning, som i
 `self.balance += self.fee` vert der oppretta ein *ny* variabel i objektet,
 og denne vert brukt i staden for klassevariabelen. 
 
-For å løysa dette problemet må me ha ein metode som opprettar objektvariabelen.
+For å løysa dette problemet må me ha ein metode som opprettar historikkvariabelen i objektet.
 Der er ein spesiell metode som vert køyrd når objektet vert instantiert.
 Denne kaller me for ein **konstruktør** og i python heiter han `__init__`.
 Altso kan me gjera slik:
@@ -246,10 +246,11 @@ class AnnualLoan3(AnnualLoan):
 ```
 
 No legg me startsaldoen inn i historikken med ein gong, og legg inn
-oppdatert saldo like etter at han er oppdatert.
+oppdatert saldo like etter at han er oppdatert.  
+Dermed får me med saldoen både heilt på starten og heilt på slutten.
 
 ::: {admonition} Oppgåve
-Testa klassa `AnnualLoan3`.  Oppfører historikken seg som han skal,
+Test klassa `AnnualLoan3`.  Oppfører historikken seg som han skal,
 sjølv om du har fleire instansar samstundes? 
 :::
 
@@ -258,7 +259,9 @@ Bruk den siste låneklassa iil å plotta saldoen over 25 år,
 dvs. køyr `endyear()` 25 gongar og plot `history`.
 :::
 
-## Parameter i kosntruktøren
++++
+
+## Parameter i konstruktøren
 
 Det er naturleg å gjera alle klassevariablane om til objektvariablar.
 Det er òg naturleg om me kan velja startsaldo og rentesats når me 
@@ -308,6 +311,8 @@ Legg inn datering i klassa, slik at historikken inneheld dato for kvar saldo.
 ::: {admonition} Oppgåve
 Bruk den nye daterte klassa til å plotta saldoen over 25 år med dato på $x$-aksen.
 :::
+
++++
 
 ## Modellering
 
@@ -412,6 +417,8 @@ Hent ut transaksjonane og plott saldoen som ein funksjon av tida.
 Du kan bruka ei løkke som kaller `payin` og `addinterest` utan at
 denne løkka treng vera ein del av klassa.
 :::
+
++++
 
 ## Korrekt renteutrkening.
 
