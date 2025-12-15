@@ -286,8 +286,8 @@ Oppdater låneklassa slik at alle låneparametrane kan setjast gjennom konstrukt
 :::
 
 ::: {admonition} Merknad
-Resten av denne øvinga vert meir open.  Det kan henda at du vil ta pause her,
-og gjera andre gjennomarbeidde døme fyrst.
+Resten av denne øvinga vert meir open og tidkrevjande.
+Det kan henda at du vil ta pause her, og gjera andre gjennomarbeidde døme fyrst.
 :::
 
 ## Tid og dato
@@ -312,15 +312,23 @@ Legg inn datering i klassa, slik at historikken inneheld dato for kvar saldo.
 Bruk den nye daterte klassa til å plotta saldoen over 25 år med dato på $x$-aksen.
 :::
 
+::: {admonition} Merknad
+Om programmet vert stort, kan det løna seg å laga ei eiga klasse for 
+transaksjon.  Tuppelen (dato,saldo) er ei rask og enkel løysing.
+Det fungerer godt so lenge me berre har dato og saldo.
+Ei klasse gjer det enklare å leggja til fleire variablar når me finn ut
+at me treng transaksjonsbeløp, forklarande tekst, avsendar, osv.
+:::
+
 +++
 
 ## Modellering
 
 So langt har me fikla på måfå.  
 Målet har vore å verta kjent med litt av den
-mest grunnleggjenda syntaksen og semantikken i pytjhon.
+mest grunnleggjenda syntaksen og semantikken i python.
 Dersom me skal laga ein brukbar låne- eller sparekalkulator,
-løner det seg å ta eit steg tilbake og laga eoin modell for kalkulatoren.
+løner det seg å ta eit steg tilbake og laga ein modell for kalkulatoren.
 Kva skal kalkulatoren kunna gjera?
 Korleis skal me som brukar samhandla med han?
 
@@ -329,7 +337,7 @@ Det skal vera råd å gjenbruka det meste av koden for innskotskonti,
 serielån og annuitetslån.
 
 Der er ingen fasit når vi modellerer.  
-Modellen avheng mykje av kva me legg vekt på, og ein må ofte
+Modellen avheng mykje av kva ein sjølv legg vekt på, og ein må ofte
 gjennom fleire rundar med prøving og feiling.
 Lat oss starta med nokre av metodane som me treng.
 + me treng ein metode som reknar ut og kapitaliserer renter og evt. gebyr.
@@ -351,7 +359,7 @@ class Account():
       Oppdater saldoen.
       """
       pass
-   def addinterest(self,time=None):
+   def addinterest(self,time):
       """Rekn ut rentene og evt. gebyr og registrer dei som ein transaksjon.
       Oppdater saldoen.
       """
@@ -431,19 +439,24 @@ periode mellom transaksjonane.
 Ein kan lett finna talet på dagar mellom to tidspunkt dersom ein har 
 brukt `datetime`-typane, og so kan ein rekna 1/365-del av rentesatsen
 per dag.
+Sidan rentekapitaliseringa òg er ein transaksjon, 
 
 ::: {admonition} Oppgåve
 Endra `addinterest()`-metoden slik at han ser på transaksjonane 
 sidan førre renteutrekning for å rekna riktig rente.
-Du bør kunna bruka ein listekomprehensjon for å finna dei 
-transaksjonane du treng.
+Du kan bruka ein listekomprehensjon for å finna dei transaksjonane
+du treng.
 Du må nok bestemma deg for kva renteperioden er (månadleg eller
-årleg) for å via kor langt tilbake du skal gå.
+årleg) for å finna datoen for førre rentebetaling.
+
+Når du har dei aktuelle transaksjonane, kan du laga ei løkke,
+og for kvar iterasjon, finna saldoen og talet dagar til neste
+transaksjon, og rekna ut rentene for dette.
 :::
 
 ::: {admonition} Oppgåve
-Det vil vera ein fordel om klassa held greie på kor ofte rentene
-vert kapitaliserte.
+Det vil vera ein føremon om klassa held greie på når rentene
+vert lagde til.
 Skriv om `addinterest` slik at han legg til renter for kvar periode
 frå siste transaksjon til datoen som er gjeven som parameter til
 metoden.
@@ -464,6 +477,13 @@ Den 1. desember kvart år tek ho ut 5000 kr. til julegåver.
 Kor mykje penger har ho på kontoen etter fem år?
 
 Bruk sparekalkulatoren til å rekna ut svaret.
+:::
+
+::: {admonition} Oppgåve
+Kva skjer om der er fleire transaksjonar på same dag?
+Vert rentene rekna rett om saldoen vert endra fleire
+gongar på ein dag?
+Lag eit par testar for å sjekka.
 :::
 
 ## Avslutting
