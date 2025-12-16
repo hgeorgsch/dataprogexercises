@@ -23,7 +23,7 @@ Slump, eller tilfeldighet, er vanskeleg for datamaskiner, som er
 konstruerte for å vera fullt ut deterministiske system.
 Verkeleg slump må difor koma utanfrå, som *input*.
 Dette er mogleg ved å henta data frå skjerm og tastatur, og særleg 
-då frå orsmå variasjonar i tida mellom tastetrykk, men der er grenser
+då frå ørsmå variasjonar i tida mellom tastetrykk, men der er grenser
 for kor mykje slump me kan henta ut på denne måten.
 Store simuleringar krev meir slump enn me klarer å henta ut på 
 denne måten.

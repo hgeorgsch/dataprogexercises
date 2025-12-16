@@ -34,6 +34,18 @@ tags:
 + Øvingar
     + [[Tid og dato]]
 
+## Sjekkliste 
+
++ Step 1.  Pandas
+	+ Step 1a.  Extracting Series and making plots.
+	+ Step 1b.   Gjennomsnitt og standardavvik
+	+ Kombinasjon (fletting) av datasett
++ Step 2. Plott
+    + Plot/subplot og eksport av figurar
+    + Ulike plot: histogram/scatter/kakediagram
+	+ Eksporting plots
++ Step 3. NaN
++ Step 4. melt og pivot
 
 ## Materiale som ikkje fekk plass med valuta 
 

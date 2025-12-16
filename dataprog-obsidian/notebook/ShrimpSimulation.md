@@ -12,12 +12,12 @@ kernelspec:
   name: python3
 ---
 
-# Rekspelet: Løysing utan klasser
+# Rekespelet: Løysing utan klasser
 
 Den økonomiske modellen er definert ved ein prisfunksjon
 og ein profittfunksjon.  Me definerer desse som python-funksjonar
 for å kunna bruka dei i simuleringa.
-    
+
 ```{code-cell} ipython3
 def beregn_markedspris(Q1, Q2, Q3):
     return 45-0.2*(Q1+Q2+Q3)
@@ -26,19 +26,25 @@ def beregn_profitt(P, Q):
     return Q*(P-fiske_data["kost_per_kg"])
 ```
 
+Medefinerer ein `dict` med nokre globale parameter.
+T.d. reknar me at alle skutene har same kapasitet, og lagrer 
+denne her.
+
+```{code-cell} ipython3
+fiske_data = {"kapasitet": 75,
+              "skuter_antall": 3,
+              "kost_per_kg": 5}
+```
+
+## Grådige og tilfeldige strategiar
+
+Me definerer to funksjonar for moglege oppførslar.
+Ei skute kan vera fiska anten grådig eller tilfeldig.
 
 ```{code-cell} ipython3
 import random
 import matplotlib.pyplot as plt
-
-fiske_data = {"kapasitet": 75,
-              "skuter_antall": 3,
-              "kost_per_kg": 5}
-skuteID = 0
 ```
-
-Me definerer to funksjonar for moglege oppførslar.
-Ei skute kan vera fiska anten grådig eller tilfeldig.
 
 ```{code-cell} ipython3
 def fisk_graadig(s=None):
@@ -47,7 +53,18 @@ def fisk_graadig(s=None):
 def fisk_tilfeldig(s=None):
     return fiske_data["kapasitet"]*random.random()
 ```
-    
+
+Når me lager skutene, gjev me dei ein ID, eller serienummer.
+Me bruker ein global variabel `sluteID` for å hugsa neste
+ledige nummer og lèt det starta på null.
+
+```{code-cell} ipython3
+skuteID = 0
+```
+
+Kvar skute er ein `dict`med fleire eigenskapar.
+Dei viktigaste er serienummeret.
+
 ```{code-cell} ipython3
 def lag_gradig_skute():
     global skuteID
@@ -70,12 +87,12 @@ def lag_tilfeldig_skute():
     return skute
 ```
 
-    
 ```{code-cell} ipython3
 def fisk_reker(reke_skuter):
     for skute in reke_skuter:
         fiskefunksjon = skute["fiskefunksjon"]
-        skute["fangst"] = fiskefunksjon(skute)
+        skute["fangst"] = fiskefunksjon(reke_skuter)
+        skute["tidligere_kvantum"].append(skute["fangst"])
   
 def selg_reker(reke_skuter):
     Q1, Q2, Q3 = (skute["fangst"] for skute in reke_skuter)
@@ -90,7 +107,9 @@ def simuler_fiske(reke_flaate):
     for i in range(0,antall_skuter,3):
         fisk_reker(reke_flaate[i:i+3])
         selg_reker(reke_flaate[i:i+3])
+```
 
+```{code-cell} ipython3
 fiske_flaate = [lag_tilfeldig_skute() for i in range(150)] + [lag_gradig_skute() for i in range(150)]
 for i in range(100):
     simuler_fiske(fiske_flaate)
@@ -113,6 +132,7 @@ plt.show()
         
 ```
 
+## Cournot-strategi
 
 ```{code-cell} ipython3
 from scipy.optimize import minimize_scalar
@@ -122,10 +142,11 @@ def beregn_best_kvantum(Q1,Q2):
         return -Q*beregn_markedspris(Q1,Q2,Q)
     Q = minimize_scalar(fun)
     return min(75,Q.x)
+```
 
-
+```{code-cell} ipython3
 def fisk_Cournot(skuter, minSkuteID):
-    konkurrerende_skuter = [skute for skute in skuter if skute["id"] != minSkuteID]
+    konkurrerende_skuter = [ skute for skute in skuter if skute["id"] != minSkuteID]
     Q = []
     for skute in konkurrerende_skuter:
         tidligere = skute["tidligere_kvantum"]
@@ -135,7 +156,9 @@ def fisk_Cournot(skuter, minSkuteID):
             Q.append(sum(tidligere)/len(tidligere))
     Q_max = beregn_best_kvantum(Q[0], Q[1])
     return Q_max
+```
 
+```{code-cell} ipython3
 def lag_Cournot_skute():
     global skuteID
     
@@ -148,47 +171,30 @@ def lag_Cournot_skute():
     return skute
 
     
-
-def fisk_reker(reke_skuter):
-    for skute in reke_skuter:
-        fiskefunksjon = skute["fiskefunksjon"]
-        skute["fangst"] = fiskefunksjon(skute)
-        skute["tidligere_kvantum"].append(skute["fangst"])
-  
-def selg_reker(reke_skuter):
-    Q1, Q2, Q3 = (skute["fangst"] for skute in reke_skuter)
-    Pris = beregn_markedspris(Q1, Q2, Q3)
-    for skute in reke_skuter:
-        skute["saldo"] += beregn_profitt(Pris, skute["fangst"])
-
-
-def simuler_fiske(reke_flaate):
-    antall_skuter = len(reke_flaate)
-    random.shuffle(reke_flaate)
-    for i in range(0,antall_skuter,3):
-        fisk_reker(reke_flaate[i:i+3])
-        selg_reker(reke_flaate[i:i+3])
 ```
-
-
-
-
 
 ```{code-cell} ipython3
 fiske_flaate = [lag_tilfeldig_skute() for i in range(100)] 
 fiske_flaate.extend([lag_gradig_skute() for i in range(100)])
 fiske_flaate.extend([lag_Cournot_skute() for i in range(100)])
+```
 
+```{code-cell} ipython3
 for i in range(100):
     simuler_fiske(fiske_flaate)
     
+```
+
+```{code-cell} ipython3
 saldo = [skute["saldo"] for skute in fiske_flaate]
 saldo_graadig = [skute["saldo"] for skute in fiske_flaate if skute["navn"] == "Grådig"]
 saldo_tilfeldig = [skute["saldo"] for skute in fiske_flaate if skute["navn"] == "Tilfeldig"]
 saldo_cournot = [skute["saldo"] for skute in fiske_flaate if skute["navn"] == "Cournot"]
 plt.hist(saldo)
 plt.show()
+```
 
+```{code-cell} ipython3
 plt.hist(saldo_graadig, label="Grådig", alpha=0.5)
 plt.hist(saldo_tilfeldig, label="Tilfeldig", alpha=0.5)
 plt.hist(saldo_cournot, label="Cournot", alpha=0.5)
@@ -202,3 +208,10 @@ plt.legend()
 plt.show()
 ```
 
+```{code-cell} ipython3
+
+```
+
+```{code-cell} ipython3
+
+```

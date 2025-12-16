@@ -5,6 +5,7 @@ root: intro
 chapters:
   - file: Praktisk informasjon
     sections:
+    - file: Oblig
     - file: Mappevurdering
   - file: Opningssamling
     sections:
@@ -24,32 +25,42 @@ chapters:
     - file: Numeriske Metodar og Kontrollflyt
       sections:
       - file: notebooks/Halveringsmetoden
+      - file: notebooks/Smittespreiing
       - file: exercises/Kontantstraum
-      - file: notebooks/Folkevekst
       - file: exercises/Kundedata
+      - file: notebooks/Folkevekst
     - file: Datastrukturar og Simulering
       sections:
       - file: notebooks/Tilfeldigheit
       - file: notebooks/Marknadssimulering
       - file: exercises/Kundedifferensiering
+      - file: notebooks/Listekomprehensjon
+      - file: notebooks/Tilfeldigheit-Demo
     - file: CSV og Deskriptiv Statistikk
       sections:
       - file: notebooks/Genetikk
       - file: notebooks/Jordskjelv
       - file: notebooks/Tid og dato
       - file: notebooks/Arbeidsledige
-        sections:
-         - file: notebooks/Arbeidsledige og Konkursar
       - file: exercises/Eksportdata
     - file: Samanlikna Datasett
+      sections:
+      - file: notebooks/Arbeidsledige og Konkursar
     - file: Agent-basert simulering
       sections:
+      - file: notebooks/LoanClass
       - file: notebooks/Shrimp-Game
       - file: notebooks/Iskrem på ei strand.ipynb
+      - file: notebooks/ShrimpSimulation
     - file: WebAPI
       sections:
       - file: notebooks/requests
       - file: notebooks/WEBAPI
+      - file: notebooks/API-eksempel-sport.ipynb
+      - file: notebooks/API-eksempel-reddit.ipynb
+  - file: midway
+  - file: second
+    sections:
     - file: Statistikk og Maskinlæring
       sections:
       - file: notebooks/Linear Regression in SciKitLearn
@@ -57,14 +68,12 @@ chapters:
       - file: notebooks/numpy
       - file: notebooks/hypothesistest
       - file: notebooks/Iris-Statistics.ipynb
+    - file: Automatisering
     - file: Klassifikasjon
       sections:
       - file: notebooks/Fisher Linear Discriminant in sklearn
       - file: notebooks/Evaluering
       - file: notebooks/Support Vector Machines
-  - file: midway
-  - file: second
-    sections:
     - file: Klyngeanalyse-Kapittel
       sections:
       - file: notebooks/Klyngeanalyse
@@ -74,9 +83,8 @@ chapters:
   - file: closure
   - file: drafts
     sections:
-    - file: notebooks/API-eksempel-sport.ipynb
     - file: notebooks/Lånesøknad.ipynb
     - file: notebooks/Multiindex.ipynb
     - file: notebooks/dicts-json-jsonstat.ipynb
-    - file: notebooks/ShrimpSimulation.ipynb
+    - file: notebooks/JSON og dict
 
