@@ -18,7 +18,7 @@ Dette kapittelet byggjer på
 + *Utarbeidd døme*
     + [](notebooks/LoanClass) viser objektorientert programmering på
       simulering av kontantstraum, og dermed ikkje agent-basert simulering
-    + [Shrimp-Game](notebooks/Shrimp-Game) er eit døme på 
+    + [](notebooks/Shrimp-Game) er eit døme på 
       agent-basert simulering.
 + *Demovideo*
     + [[Klasser-Objekter]] i python
@@ -26,8 +26,6 @@ Dette kapittelet byggjer på
     + git og github?
 + *Opne øvingar*
     + [Iskrem på ei strand](notebooks/Iskrem%20på%20ei%20strand)
-+ *Utkast til Øvingar*
-    + [](notebooks/LoanClass)
 
 ## Oppsummering
 
