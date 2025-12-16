@@ -157,6 +157,7 @@ Skal vi simulere en lengre periode, trenger vi en løkke som itererer år for å
 ---
 
 | Dato | Tekst | Endring | Saldo |
+| :- | :- | -: | -: |
 | 1. jan. 2025 | Sparing | +1000 | 1000 |
 | 31. des. 2025 | Sparing | +4%$\cdot$1000 | 1040 |
 | 1. jan. 2026 | Sparing | +1000 | 2040 |
