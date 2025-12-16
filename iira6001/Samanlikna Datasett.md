@@ -9,7 +9,7 @@ tags:
 # Samanlikna Datasett
 
 ::: {admonition} Forkunnskapar
-Dette kapittelet byggjer på [](CSV$20og$20Deskriptiv$20Statistikk).
+Dette kapittelet byggjer på [](notebooks/CSV$20og$20Deskriptiv$20Statistikk).
 :::
 
 Denne veka skal me samanlikna data frå ulike datasett.  
