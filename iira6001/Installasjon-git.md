@@ -6,7 +6,7 @@ tags:
 
 
 
-## Git
+# Installasjon av Git
 
 Git er som sagt et versjonskontrollsystem man bruker når mange skal jobbe med samme kodebase. 
 Det er også en grei måte å dele eller distribuere kode med.
