@@ -27,8 +27,14 @@ I statistikken kaller vi gjerne slike tilfeldige prosesser for
 et penere ord for tilfeldig.
 
 ---
+<!-- slide template="[[tpl-quote]]" -->
 
-Monte Carlo-simuleringer
+![[Casino_de_Monte-Carlo_(49582351802).jpg]]
+
+::: credit
+By Matthew Hartley from Helmshore, Lancashire, United Kingdom - Casino de Monte-Carlo, CC BY-SA 2.0,
+via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=87646413)
+:::
 
 note:
 I simuleringsliteraturen, blir tilfeldige simuleringer gjerne
@@ -37,7 +43,7 @@ i Monte Carlo, med spill som roulette.
 
 ---
 
-- Slumptal
+Slumptal
 
 
 note:
@@ -53,11 +59,9 @@ på denne måten på kort tid.
 Store simuleringer krever ofte mer slump.
 
 ---
-<!-- slide template="[[tpl-quote-header]]" -->
+<!-- slide template="[[tpl-diagram]]" -->
 
-# Pseudo-random numbers
-
-![[prng]
+![[prng.svg]]
 
 ::: credit
 :::
@@ -78,8 +82,9 @@ heltall og slumptall i ulike intervaller.
 
 ---
 
-
 $$ s_i = a\cdot s_{i-1} \mod p $$
+
+$$ y_i = \frac{s_i}{p} $$
 
 note:
 Det mest kjente tilfellet er lineær kongruens.
@@ -87,6 +92,77 @@ Her regner vi ut tilstanden ved å gange med et tall $a$ og ta resten
 ved divisjon med et tall $p$.
 Dersom vi velger $a$ og $p$ fornuftig, vil føgen av tall $s_i$
 se tilfeldig ut.
+
+---
+
+$$ s_i = 7\cdot s_{i-1} \mod 97 $$
+
+note:
+For å ta et leketøyseksempel, kan vi prøve å gange med syv
+og dele på syvognitti.
+Både syv og syvognitti er primtall, noe som gjerne er en god
+idé.
+
+---
+<!-- slide template="[[tpl-diagram]]" -->
+
+![[prng1.svg]]
+
+::: credit
+:::
+
+note:
+Hvis vi genererer tall på denne måten, får
+
+---
+<!-- slide template="[[tpl-diagram]]" -->
+
+![[prng2.svg]]
+
+::: credit
+:::
+
+---
+<!-- slide template="[[tpl-diagram]]" -->
+
+![[prng3.svg]]
+
+::: credit
+:::
+
+---
+<!-- slide template="[[tpl-diagram]]" -->
+
+![[prng4.svg]]
+
+::: credit
+:::
+
+---
+<!-- slide template="[[tpl-diagram]]" -->
+
+![[prng5.svg]]
+
+::: credit
+:::
+
+---
+<!-- slide template="[[tpl-diagram]]" -->
+
+![[prng6.svg]]
+
+::: credit
+:::
+
+---
+<!-- slide template="[[tpl-diagram]]" -->
+
+![[prng7.svg]]
+
+::: credit
+:::
+
+note:
 
 Den nøyaktige formelen er ikkje viktig for oss.  Det som er greitt
 å hugsa er at når me har bestemt den første tilstanden $s_0$, som
