@@ -27,8 +27,14 @@ I statistikken kaller vi gjerne slike tilfeldige prosesser for
 et penere ord for tilfeldig.
 
 ---
+<!-- slide template="[[tpl-quote]]" -->
 
-Monte Carlo-simuleringer
+![[Casino_de_Monte-Carlo_(49582351802).jpg]]
+
+::: credit
+By Matthew Hartley from Helmshore, Lancashire, United Kingdom - Casino de Monte-Carlo, CC BY-SA 2.0,
+via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=87646413)
+:::
 
 note:
 I simuleringsliteraturen, blir tilfeldige simuleringer gjerne
@@ -37,7 +43,7 @@ i Monte Carlo, med spill som roulette.
 
 ---
 
-- Slumptal
+Slumptal
 
 
 note:
@@ -81,6 +87,7 @@ heltall og slumptall i ulike intervaller.
 
 $$ s_i = a\cdot s_{i-1} \mod p $$
 
+$$ y_i = \frac{s_i}{p} $$
 note:
 Det mest kjente tilfellet er lineær kongruens.
 Her regner vi ut tilstanden ved å gange med et tall $a$ og ta resten
