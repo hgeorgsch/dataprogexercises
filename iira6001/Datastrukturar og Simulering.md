@@ -22,7 +22,8 @@ Dette kapittelet byggjer på
 	+ [Marknadssimulering](notebooks/Marknadssimulering)
 	+ [Listekomprehensjon](notebooks/Listekomprehensjon)
 	+ [](notebooks/JSON%20og%20dict) (valfri).
-      Denne øvinga er litt meir teknisk og spissfindig, og mindre praktisk.
+      Denne øvinga er litt meir teknisk og spissfindig, og mindre praktisk,
+      men ho kan gje ein nyttig illustrasjon av bruken av `dict`.
 + *Tekniske demonstrasjonar*
 	+ Datastrukturer
 + *Opne Øvingar.*
