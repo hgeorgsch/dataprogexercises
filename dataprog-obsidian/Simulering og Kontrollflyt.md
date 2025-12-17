@@ -12,7 +12,7 @@
 ## Del 2
 
 + [[Kva er simulering?]]
-+ [[Tilfeldigheit-Slides]]
++ [[Slumptalsgenerator]]
 + [[Datastrukturar]]
 	+ Primitive typar int float, str, Boolean
 	+ Samansette typar: list, iterator,  dict
