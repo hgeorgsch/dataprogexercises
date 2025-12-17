@@ -61,8 +61,6 @@ Store simuleringer krever ofte mer slump.
 ---
 <!-- slide template="[[tpl-diagram]]" -->
 
-# Pseudo-random numbers
-
 ![[prng.svg]]
 
 ::: credit
@@ -84,16 +82,32 @@ heltall og slumptall i ulike intervaller.
 
 ---
 
-
 $$ s_i = a\cdot s_{i-1} \mod p $$
 
 $$ y_i = \frac{s_i}{p} $$
+
 note:
 Det mest kjente tilfellet er lineær kongruens.
 Her regner vi ut tilstanden ved å gange med et tall $a$ og ta resten
 ved divisjon med et tall $p$.
 Dersom vi velger $a$ og $p$ fornuftig, vil føgen av tall $s_i$
 se tilfeldig ut.
+
+---
+
+$$ s_i = 7\cdot s_{i-1} \mod 97 $$
+
+note:
+For å ta
+
+---
+<!-- slide template="[[tpl-diagram]]" -->
+
+![[prng.svg]]
+
+::: credit
+:::
+
 
 Den nøyaktige formelen er ikkje viktig for oss.  Det som er greitt
 å hugsa er at når me har bestemt den første tilstanden $s_0$, som
