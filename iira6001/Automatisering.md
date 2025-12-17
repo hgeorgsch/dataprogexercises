@@ -13,5 +13,6 @@ tags:
     + Korleis me har laga læringsmaterialet i jupyter book
     + Versjonskontroll i github
 + *Gjennomarbeidde døme*
+    + [](Installasjon-git)
 + *Opne øvingar*
 
