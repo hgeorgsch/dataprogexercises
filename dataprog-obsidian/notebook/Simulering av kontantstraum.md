@@ -419,6 +419,6 @@ ein treng meir enn nokre få verdiar.
 ## Avslutting
 
 Me har sett på eit svært enkelt døme, med annuitetslån og årleg nedbetaling.
-Der er fleire oppgåver om [](/Exercises/Kontantstraum), som ein kan bruka til
+Der er fleire oppgåver om [](/exercises/Kontantstraum), som ein kan bruka til
 å få programmeringa inn i fingrane.
 
