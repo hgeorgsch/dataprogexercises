@@ -98,16 +98,71 @@ se tilfeldig ut.
 $$ s_i = 7\cdot s_{i-1} \mod 97 $$
 
 note:
-For å ta
+For å ta et leketøyseksempel, kan vi prøve å gange med syv
+og dele på syvognitti.
+Både syv og syvognitti er primtall, noe som gjerne er en god
+idé.
 
 ---
 <!-- slide template="[[tpl-diagram]]" -->
 
-![[prng.svg]]
+![[prng1.svg]]
 
 ::: credit
 :::
 
+note:
+Hvis vi genererer tall på denne måten, får
+
+---
+<!-- slide template="[[tpl-diagram]]" -->
+
+![[prng2.svg]]
+
+::: credit
+:::
+
+---
+<!-- slide template="[[tpl-diagram]]" -->
+
+![[prng3.svg]]
+
+::: credit
+:::
+
+---
+<!-- slide template="[[tpl-diagram]]" -->
+
+![[prng4.svg]]
+
+::: credit
+:::
+
+---
+<!-- slide template="[[tpl-diagram]]" -->
+
+![[prng5.svg]]
+
+::: credit
+:::
+
+---
+<!-- slide template="[[tpl-diagram]]" -->
+
+![[prng6.svg]]
+
+::: credit
+:::
+
+---
+<!-- slide template="[[tpl-diagram]]" -->
+
+![[prng7.svg]]
+
+::: credit
+:::
+
+note:
 
 Den nøyaktige formelen er ikkje viktig for oss.  Det som er greitt
 å hugsa er at når me har bestemt den første tilstanden $s_0$, som
