@@ -53,11 +53,11 @@ på denne måten på kort tid.
 Store simuleringer krever ofte mer slump.
 
 ---
-<!-- slide template="[[tpl-quote-header]]" -->
+<!-- slide template="[[tpl-diagram]]" -->
 
 # Pseudo-random numbers
 
-![[prng]
+![[prng.svg]]
 
 ::: credit
 :::
