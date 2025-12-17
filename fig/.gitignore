@@ -3,3 +3,4 @@
 .*.swp
 *.ipynb
 *.md
+prng[0-9].tex
