@@ -10,13 +10,7 @@ tags:
 
 Denne veka tek me fatt på dataanalyse.  Det er eit tema stort
 sett uavhengig av programmering og simulering, og det er mogleg
-å hoppa over andre veker og ta denne rett etter opningssamlinga.
-Målet denne veka er
-+ Kunna finna, lasta ned og bruka datafiler frå ulike kjelder 
-    + kunna kjenna igjen og byta teiknkoding
-    + kjenna ulike filformat og dialektar av CSV
-+ Kunna bruka pandas til deskriptiv statistikk og plotting
-
+å hoppa over dei fyrste vekene og ta denne rett etter opningssamlinga.
 Læringsmaterialet fylgjer same format som andre veker.
 
 + *Perspektivførelesing*
@@ -38,3 +32,10 @@ Læringsmaterialet fylgjer same format som andre veker.
 	+ [Eksportdata](exercises/Eksportdata).  Desse oppgåve krev omfattande preprosessering
       for å få data på samanliknbar form.
 
+## Oppsummering
+
+Målet denne veka er
++ Kunna finna, lasta ned og bruka datafiler frå ulike kjelder 
+    + kunna kjenna igjen og byta teiknkoding
+    + kjenna ulike filformat og dialektar av CSV
++ Kunna bruka pandas til deskriptiv statistikk og plotting

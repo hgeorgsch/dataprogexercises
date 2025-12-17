@@ -17,8 +17,8 @@ kernelspec:
 Her skal me ta løysinga frå [](Simulering%20av%20kontantstraum) og
 visa korleis me kan organisera lånekalkulatoren med klasser og objekt.
 Me skal òg bruka typar for tid og dato frå [](Tid%20og%20dato).
-Målet er å svara på spørsmålet
-*kor raskt betaler ein ned eit bustadlån?*
+Målet er ein meir fleksibel låne- og sparekalkulator, som lett kan
+tilpassast ulike låne- og spareformar.
 
 Som eit døme kan me føresetja
 - **Lånebeløp** 100000 kr

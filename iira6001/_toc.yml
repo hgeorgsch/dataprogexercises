@@ -69,6 +69,8 @@ chapters:
       - file: notebooks/hypothesistest
       - file: notebooks/Iris-Statistics.ipynb
     - file: Automatisering
+      sections:
+      - file: Installasjon-git
     - file: Klassifikasjon
       sections:
       - file: notebooks/Fisher Linear Discriminant in sklearn
