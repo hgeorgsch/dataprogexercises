@@ -10,4 +10,5 @@ rm -rf _build
 
 jupyter-book build .
 
-rsync -av --delete _build/html/ login.ansatt.ntnu.no:/home/groupswww/iirevu/iira2001/
+#rsync -av --delete _build/html/ hasc@login.ansatt.ntnu.no:/home/groupswww/iirevu/iira2001/
+rsync -av --delete _build/html/ login.ansatt.ntnu.no:/home/groupswww/iirevu/iira2001h25/
