@@ -1,17 +1,9 @@
 # IIRA2001: Programmering og data i økonomiske fag
 
-Velkommen skal dere være :)
+Nytt læringsmaterialet for IIRA2001 vert utvikla til hausten 2026.
 
-Beklager en fryktelig humpete oppstart, som skyldes flere sykmeldinger.
+Tidlegare versjon
++ [Hausten 2025](https://iirevu.org.ntnu.no/iira2001h25)
 
-Nu må vi forsøke på en [Ny start](new/Ny%20start) 22. september,
-og vil prøve å samle og strukturere alt materiell her.
-Materialet som ble brukt før dette vil nok forbli rotete, mens
-vi fokuserer på å samle opp stumpene og gå fremover.
 
-:-- Hans Georg
 
-## Praktisk informasjon
-
-+ Kontakt meg på hasc@ntnu.no
-+ [](new/Mappevurdering)
