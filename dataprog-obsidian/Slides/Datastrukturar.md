@@ -1,61 +1,70 @@
 ---
+title: Datastrukturar
 tags:
   - lecture/video
 css:
   - custom.css
 ---
+
 # Datastrukturar
 
 note:
-Når vi skal håndtere store datamengder, enten det er komplekse simuleringer med mange variabler eller datasett med mange observasjoner av de samme variabler, trenger vi datastrukturer for å systematisere dem.
+Når vi skal håndtere store datamengder, enten det er komplekse simuleringer
+med mange variabler eller datasett med mange observasjoner av de samme variabler,
+trenger vi datastrukturer for å systematisere dem.
 
 ---
 
 `x`
 
 note:
-Én variabel i python kan representere alt fra ett enkelt tall til en tabell med flere milliarder verdier.
+Én variabel i python kan representere alt fra ett enkelt tall til en 
+tabell med flere milliarder verdier.
 Dette er ulike datatyper.
-Noen datatyper er primitive, mens andre er sammensatt av flere verdier.
+Noen datatyper er primitive, mens andre typer kan inneholde verdier
+som har sine egne datatyper.
 De primitive datatypene er dem som ikke kan deles opp.
 
 ---
 
 ## Primitive datatypar
 
-- `int` : $\ldots, -1, 0, +1, +2, \ldots$
-- `float` :  t.d. $-50.1$, $0$, $0.1$, $2.4$,  $10.0$
-- `bool` : `True` eller `False`
-- `str` : t.d. `"Hello World!"`
+- heiltal (`int`) $\ldots, -1, 0, +1, +2, \ldots$
+- flyttal (`float`) t.d. $-50{,}1$, $0$, $0{,}1$, $2{,}4$,  $10{,}0$
+- bolsk (`bool`) : `True` eller `False`
+- teikn : t.d. `'a'`, `'z'`, `'!'`, `'7'`
+- strengar (`str`) : t.d. `"Hello World!"`
 
 note:
 De primitive datatypene håper jeg du kjenner.
 De representerer enkeltverdier, som tall, sann/usann, eller
 tegnstrenger.
 
-Det kan diskuteres om tegnstrenger egentlig er en primitiv
-datatype.
-Mange andre sprog har en datatype for ett enkelt tegn, og da er strenger en sammensatt datatype av flere slike tegn.
-Ett enkelt tegn i python er derimot også en streng, og der er ingen mindre datatype å dele strengene opp i.
+Det kan diskuteres om tegnstrenger egentlig er en primitiv datatype.
+Mange programmeringssprog behandler strenger som en sammensatt type som
+består av en liste med tegn.
+Python skiller derimot ikke mellom tegn og strenger.
+Et tegn er blott en streng med lengde én.
 
 ---
 ## Samansette datatypar
 
-- `tuple` : t.d. `(1,0.5)`
-- `list` (liste) : t.d.  `[ 2, 3, 11, 3, 11, 11 ]`
-- `set` (mengd) :  `{ 1, 2, 3, 5, 7, 11, 13 }`
-- `dict` for *dictionary* (oppslag)  `{` nykel : verdi, $\ldots$ `}`
-- egendefinerte klasser 
-- klasser fra biblioteker 
+- tupler : t.d. `(1,0.5)`, `("Oskar", 83)`
+- liste : t.d.  `[ 2, 3, 11, 3, 11, 11 ]`
+- avbilding (*map*)
+- klasser 
 
 note:
-Der er mange sammensatte datatyper. 
-Noen er bygd inn i python, og andre finnes i biblioteker.
-Vi kan også definere våre egne datatyper som kalles klasser.
-
-De to viktigste, sammensatte datatypene er `dict`  og `list`
+Der er mange sammensatte datatyper, og det kan være vanskelig
+å skille dem fra hverandre.
+Vi skal først snakke litt om hvordan vi modellerer data
+uavhengig av python.
+Datastrukturar er ikke bare en teknisk finesse i python.
+Det er òg nyttig å bruke datastrukturer for å forklare hvordan
+våre data ser ut og hva vi ønsker å gjøre med dem.
 
 ---
+
 ## *Record*
 
 |        kunde |                |
@@ -67,292 +76,150 @@ De to viktigste, sammensatte datatypene er `dict`  og `list`
 |     `nummer` | 666            |
 
 note:
-En typisk utfordring er når vi trenger en variabel for å representere ett fenomen, f.eks. en kunde, og dette fenomenet har mange egenskaper som krever hver sin datatype, f.eks. navn, adresse og fødselsdato.
+En typisk utfordring er når vi trenger en variabel for å representere ett fenomen,
+f.eks. en kunde, og dette fenomenet har mange egenskaper som krever hver sin datatype,
+f.eks. navn, adresse og fødselsdato.
 
-Tradisjonelt har vi gjerne kalt dette for en *record*.  Jeg har ikke et godt norsk ord, men vi kan tenke på et arkivkort.
+Tradisjonelt har vi gjerne kalt dette for en *record*.
+Jeg har ikke et godt norsk ord, men vi kan tenke på et arkivkort.
 En *record* har flere felter, der hvert felt har et navn og en verdi.
 
 ---
 
-## `dict`
+# Tuplar
 
-```pythoh
-kunde = { 
-    "fornamn" : "Ola",
-    "etternamn" : "Normann",
-    "postnummer" : 6016,
-    "gate" : "Borgundvegen",
-    "nummer" : 666,
-  }
++ (0,1, 2,5)
++ `("Oskar", 83)`
++ ( $x$, $y$ )
++ `( "Ola Nordmann", "Borgundvegen 666", "6060 Ålesund", 2012-10-14)
+
+note:
+Dersom vi ikke setter navn på feltene i en *record*, får vi det som
+vi kaller en tuppel
+I python og mange andre sprog skriver vi en tuppel som en kommaseparert 
+liste i runde parenteser.
+Tupler med to eller tre elementer, kaller vi gjerne for par og tripler.
+
+Tupler er den raskeste måten å sette sammen flere primitive typer,
+f.eks. i en funksjon som skal returnere flere verdier, men resultatet 
+er ofte kode som er vanskelig å forstå.  
+Det lønner seg ofte å definere mer omstendelige typer, for at koden
+skal bli lettere å lese.
+
+---
+<!-- slide template="[[tpl-diagram]]" -->
+
+
+## Avbilding (*map*)
+
+
+![[map.svg]]
+
+note:
+Et andet typisk problem er samlinger av objekter, f.eks. et kunderegister,
+som er en samling av kunderregistreringer.
+Der er mange ulike datastrukturer som organiserer samlinger.
+Noen er lavet for at det skal gå raskt å søke, mens andre for at det skal gå raskt å sette inn eller fjerne elementer.
+
+La oss begynne med avbildninger eller *maps*.
+Her har hvert objekt en nøgle som vi kan bruke for å slå det opp.
+I kunderegisteret kan vi f.eks. bruke navn, slik at datastrukturen avbilder navn på kundekort.
+
+Den vanligste formen for avbildninger kalles *hashmap*, og ofte er dette ordet dere finner brukt.
+Poenget med en *hasmap* er at det skal være raskt å slå opp en gitt nøgle, uansett hvor stor samlingen er.  Normalt er det også raskt å sette inn eller slette objekter. For å få det til, bruker  datastrukturen som regel ekstra minne, som er holdt av til ubrukte nøgler.  Det er dog sjelden et problem på dagens maskiner.
+
+*Dictionaries* eller `dict` i python er et eksempel på *hashmaps*.
+
+---
+# Liste
+
+```python
+[ "Ola Nordmann", "Kari Nordmann", "John Smith", "Jane Doe", ... ]
 ```
 
 note:
-*Record* er ikke et begrep i python, men vi kan bruke datatypen `dict`.
-Vi laver et `dict`-objekt med krøllparanteser og lister alle feltene som nøgle-kolon-verdi.
-Rekkefølgen på feltene spiller ingen rolle.
+Lister lagrer objekter i rekkefølge.  
+De er normalt lavet for at det skal være raskt å bla gjennom element for element fra starten av listen.
+Det skal også være raskt å legge til eller fjerne et element fra enden av listen.
+I python vil det si slutten av listen, men i andre sprog kan det være i
+starten av listen at det går raskt å gjøre endringer.
 
 ---
-## Indeksering
+
+# Tabell (*array*)
+
+| # | Verdi |
+| :- | :- |
+| 0  | `"Ola Nordmann"` |
+| 1 | `"Kari Nordmann"` |
+| 2 | `"John Smith"` |
+| 3 | `"Jane Doe"` |
+| 4 | `"Tom"` |
+| 5 | `"Dick"` |
+| 6 | `"Harry"` |
+
+note:
+En *array* ligner en liste, men prioriteringene er anderledes.
+Elwementene har nummererte plasser, og det skal alltid være raskt å slå
+opp eller bytte ut et element hvis vi kjenner plassnummeret, eller indeksen.
+Det er derimot ikke så enkelt å gjøre endringer hverken på starten eller
+slutten av tabellen.
+
+En *array* har avsatt et visst minneområde, der elementene er lagret direkte
+efter hverandre.  For å legge til eller fjerne elementer, må man avsette mer
+eller mindre plass.
+
+
+---
+
+# Lister i python
 
 ```
-In [3]: print( kunde["fornamn"] )
-Ola
 
-In [4]: print( kunde["gate"], kunde["nummer"]  )
-Borgundvegen 666
+In [2]: kunder = [ "Ola Nordmann", "Kari Nordmann", "John Smith", "Jane Doe" ]
 
-In [5]: kunde["postnummer"] = 6060
+In [3]: print( kunder[1] )
+Kari Nordmann
 
-In [6]: kunde["fødselsdato"] = "2001-04-23"
 ```
 
 note:
-Mange sammensatte datatyper har et system for indeksering, eller *subscripting*.
-Her bruker vi hakeparenteser og feltnavn for å se, endre eller legge til spesifikke felter.
+Lister i python er implementert som *arrays*.
+Det gjør at vi kan indeksere elementer.
+
+Problemet med å legge til eller fjerne elementer er løst ved at python holder av
+ekstra plass og vet hvor listen slutter.
+Når listen går tom for plass, vil det plutselig ta lang tid å legge til elementer, 
+fordi python må allokere nytt minne og kopiere hele listen til en ny plass i minnet.
+Det skjer derimot sjelden.
 
 ---
-## Samlinger
 
-- `kundeliste = [ kunde1, kunde2, ... ]`
-- `talliste = [ 2, 3, 5, 7, 11, 13 ]`
+- mengder
+- sortert liste
+- kø
+- prioritetskø
 
 note:
-Et andet typisk problem er samlinger av verdier, som regel av samme type.
-Det enkleste eksempelet på en samling er en liste.
-Elementene i en liste eller i en `dict` kan være både primitive datatyper og andre sammensatte datatyper.
+Der finnes mange andre typer samlinger, men i små prosjekter klarer
+man seg fint med disse to. lister og *map*, eller `list` og `dict` i python.
 
 ---
+<!-- slide template="[[tpl-quote]]" -->
 
-## Indeksering
+![[Pandas_dataframe.png]]
 
-```
-In [1]: L = [ 2, 3, 5, 7, 11, 13, 17 ]
-
-In [2]: print( L[2] )
-5
-
-In [3]: L[2] = 3
-
-In [4]: print( L )
-[2, 3, 3, 7, 11, 13, 17]
-```
-
-note:
-Lister støtter indeksering, akkurat som `dict`, men her har ikke elementene sine egne nøgler.
-Det er posisjonen i listen vi bruker som indeks.
-Klammeparentesene er dog de samme.
-
----
-<!-- slide template="[[tpl-quote-twocolumn]]" -->
-
-::: left
-## Raske operasjoner
-
-+ `append()`
-+ `pop()`
-+ indeksering (get/set)
-
+::: credit
+By Lucasadvent - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=131116177
 :::
-::: leftcredit
-:::
-::: right
-## Trege operasjoner
-
-+ `insert()`
-+ `delete()`
-
-:::
-::: rightcredit
-:::
-
-note:
-Datastrukturer og sammensatte datatyper blir alltid lavet for at noen operasjoner skal være raske og effektive, men ingenting er perfekt, og operasjoner som ikke blir prioritert går da gjerne tregere.
-
-Det er mulig å sette inn eller fjerne elementer midt i listen, men dette går tregt.
-For å sette inn et element på en vilkårlig plass, må man flytte deler av listen for å gjør plass til det nye elementet. Det tar lenger tid dess større listen er.  Det samme skjer om man sletter et element.  Man må flytte listen for å fylle hullet.
-
-Det går derimot raskt å operere på slutten av listen.  Derfor er der egne funksjoner, `append` og `pop`, for å legge til eller fjerne et element på enden av listen.  Det går i konstant tid, uavhengig av antall elementer i listen.
-
-Indeksering går også raskt.  Vi kan slå opp en posisjon i konstant tid.
-
-Når vi snakker om trege operasjoner her, er det i forhold til listelengden.
-Vi kaller det gjerne kompleksitet.
-Om listen er kort, så spiller kompleksiteten ingen rolle.  Vi merker ikke forskjell før vi kommer opp i noen millioner eller kanskje milliarder elementer.
-Raske operasjoner går i konstant tid, uansett listelengde.
-
-Kompleksitet er mye av grunnen til at der finnes så mange forskjellige datastrukturer i literaturen og i biblioteker.
-Ulike datastrukturer er utviklet for å fungere optimalt på ulike problemer.
-
----
-## Mengde
-
-- `kunder = { kunde1, kunde2, ... }`
-- `mengd = { 2, 3, 5, 7, 11, 13 }`
-
-```
-In [5]: M = { 2, 3, 7, 5, 13 }
-
-In [6]: print( M )
-{2, 3, 5, 7, 13}
-
-In [7]: M.add( 17 )
-
-In [8]: print( M )
-{17, 2, 3, 5, 7, 13}
-
-In [9]: M.add( 5 )
-
-In [10]: print( M )
-{17, 2, 3, 5, 7, 13}
-```
-
-note:
-Vi kan illustrere kompleksitet om vi sammenligner lister med mengder, eller *set* på engelsk.
-
-Mengder ligner lister, men vi bruker krøllparenteser i stedet for hakeparenteser, og der elementer i listen kommer i en bestemt rekkefølge og gjerne kan dukke opp flere ganger, er elementene i en mengde alltid unike og rekkefølgen er uvesentlig.
-
-Det er åbenbart nyttig, i mange situasjoner, å være sikker på at ingen elementer blir duplisert, men det gjør det også umulig å ha en rask `append()`-fuinksjon. Vi kan ikke legge til et element uten å sjekke at det ikke finnes fra før.  Dermed må vi bla gjennom hele listen og det tar tid.
-
----
-## Tuplar
-
-
-```python
-a = (1,2)
-b = [1,2]
-```
-
-```
-In [3]: print( a[0], b[0] )
-1 1
-
-In [4]: b[0] = 2
-
-In [5]: a[0] = 2
----------------------------------------------------------------------------
-TypeError                                 Traceback (most recent call last)
-Cell In[5], line 1
-----> 1 a[0] = 2
-
-TypeError: 'tuple' object does not support item assignment
-
-```
-<!-- element class="fragment" -->
-
-note:
-En anden datatype som ligner lister er tupler.
-Her bruker vi runde parenteser.
-
-Egentlig er tupler noe helt andet enn lister.  
-Lister er samlinger og mye av poenget er å kunne legge til og ta bort elementer.
-
-Tupler er ikke muterber.  Dvs. det er umulig å legge til eller ta bort elementer.
-Vi ser det raskt om vi prøver å endre et element i en tuppel.
-
-Dette er ikke bare en ulempe.  Det er f.eks. mulig å bruke tupler som nøgler i en `dict`.
-Lister kan derimot ikke brukes, fordi `dict` er avhengig av at nøglene ikke kan forandres.
-
-Vi bruker helst tupler der vi har et lite og fast antall elementer.
-
----
-
-## `dict` som samling
-
-*map* : **oppslagsord** $\to$  verdi
-
-note:
-`dict` er også et eksempel på en samling.
-
-Ulempen med en liste er at det er vanskelig finne et bestemt element.
-Vi må bla gjennom hele listen for å finne det som vi leter efter.
-
-`dict` er et eksempel på en datastruktur som gjerne kalles *map*, dvs. den avbilder et oppslagsord eller en nøgle, på en verdi som gjerne kan være et komplekst objekt.
-Dersom elementene våre har en ID som vi kan bruke som nøgle, er det som regel bedre å bruke `dict` enn liste.
-
-
----
-<!-- slide template="[[tpl-quote-smalltext]]" -->
-# Listekomprehensjon
-
-
-* Liste:
-```python
-[ uttrykk for element in samling if betingelse]
-```
-* Set:
-```python
-{ uttrykk for element in samling if betingelse}
-```
-* `dict`:
-```python
-{ utrykk_key: uttrykk for element in samling if betingelse ]
-```
-+ Døme:
-
-```python
-[ x**2 for x in range(1,10) if x%2 == 0]
-```
-
-note:
-Vi skal merke oss en meget vanlig snarvei til å lave lister, og mengder og `dict`s, nemlig komprehensjon.
-
-I den enkle
-
-**TODO**
-
----
-
-## Iterator
-
-```ipython3
-for i in [ 1,2,3,4 ]: print( f"nummer {i}" )
-```
-
-```ipython3
-for i in range(1,5): print( f"nummer {i}" )
-```
-
-note:
-Jeg skal si et par ord om en type som ligner på lister, men som ikke trenger å være en datastruktur, nemlig iteratorer.
-
-Det enkleste eksempelet er hvordan vi skriver `for`-løkker.
-Vi kan itererere over en liste, men svært ofte bruker vi et `range`-uttrykk.  Det er lett å tenke på `range` som en liste, men det er det ikke.
-
-Den eneste egenskapen som for-løkken trenger fra listen er å starta på starten og bla til neste element.
-Disse egenskapene kjennetegner en iterator.  Et `range`-objekt er en iterator, og en liste kan også oppføre seg som en iterator.
-
-Der er to ting som er verd å merke seg med iteratorer. Det ene er at neste element gjerne kan regnes ut efter hvert som det trengs. Vi trenger ikke å ha generert alle elementene på forhånd. Dette gjør det også mulig å ha uendelig lange iteratorer. Det er ikke mulig med uendelig lange lister i python, fordi alle elementene må eksistere og være lagret i minnet.
-
----
-
-```ipython3
-
-In [3]: print( range(1,5) )
-range(1, 5)
-
-In [4]: print( list( range(1,5) ) )
-[1, 2, 3, 4]
-
-```
-
-note:
-Jeg nevner dette fordi vi ofte kan støte på iteratorer som vi kan tro er lister. 
-Siden vi ikke umiddelbart kan se innholdet i en iterator, er det lett å bli forvirret.
-
-Normalt er det mulig å konvertere en iterator til en liste, ved å bruke funksjonen `list`.
-Det vil dog åbenbart gå dårlig hvis iteratoren kan holde på i det uendelige.
-
----
-
-# Slutt
 
 note:
 Vi vil støte på nogen flere datastrukturer efter hvert.
-De viktigste er tabeller som vi bruker i dataanalyse og
-klasser som lar oss integrere data og operasjoner i én struktur.
+I dataanalyse trenger vi store tabeller med numeriskedata.
+Her kan vi bruke både `DataFrame` fra pandas-biblioteket
+og numpy *arrays*.
 
-Takk for nu.
+Vi vil òg trenge en type for dato og klokkeslett.
 
-Til neste gang
-+ numpy 
-+ JSON og `dict`
+Men det kommer vi tilbake til.  Takk for nu.
+
