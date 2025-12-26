@@ -17,6 +17,7 @@ Dette kapittelet byggjer på
 	+ Tilfeldigheit
       ([Slides](https://iirevu.org.ntnu.no/Slides/Tilfeldigheit-Slides))
 	+ Datastrukturar og Kompleksitet
+      ([Slides](https://iirevu.org.ntnu.no/Slides/Datastrukturar/))
 + *Gjennomarbeidde Døme.*
 	+ [Tilfeldigheit](notebooks/Tilfeldigheit)
 	+ [Marknadssimulering](notebooks/Marknadssimulering)
