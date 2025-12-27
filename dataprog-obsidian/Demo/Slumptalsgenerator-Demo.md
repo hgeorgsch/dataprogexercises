@@ -1,191 +1,11 @@
 ---
 tags:
-  - lecture/video
+  - lecture/video/demo
 css:
   - custom.css
 ---
 
-# Slumptalsgenerator
-
----
-
-![newton](https://pbs.twimg.com/media/D2EZ4DwVAAApNdd?format=jpg&name=900x900)
-
-note:
-Mange simuleringer handler om tilfeldige prosesser.
-I tillegg er der mange prosesser som i teorien er deterministiske,
-men som er så kaotiske at vi ikke klarer å modellere dem deterministisk.
-Da er det òg naturlig å bruke tilfeldige prosesser som modell.
-
----
-
-Stokastiske prosesser
-
-note:
-I statistikken kaller vi gjerne slike tilfeldige prosesser for
-*stokastiske* prosesser.  Enkelt sagt er «stokastisk» blott
-et penere ord for tilfeldig.
-
----
-<!-- slide template="[[tpl-quote]]" -->
-
-![[Casino_de_Monte-Carlo_(49582351802).jpg]]
-
-::: credit
-By Matthew Hartley from Helmshore, Lancashire, United Kingdom - Casino de Monte-Carlo, CC BY-SA 2.0,
-via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=87646413)
-:::
-
-note:
-I simuleringsliteraturen, blir tilfeldige simuleringer gjerne
-kalt for *Monte Carlo-simuleringer* efter de kjente kasinoene
-i Monte Carlo, med spill som roulette.
-
----
-
-Slumptal
-
-
-note:
-Slump, eller tilfeldighet, er vanskeleg for datamaskiner, som er
-konstruerte for å vera fullt ut deterministiske system.
-Virkeleg slump må derfor komme utanfrå, som *input*.
-
-Det er mulig å få det til, ved å måle ørsmå variasjoner i
-tastefrekvensen fra brukeren, eller i temperaturen i rommet,
-eller spenning på strømnettet.
-Der er derimot en grense for hvor mye slump man kan hente ut
-på denne måten på kort tid.
-Store simuleringer krever ofte mer slump.
-
----
-<!-- slide template="[[tpl-diagram]]" -->
-
-![[prng.svg]]
-
-::: credit
-:::
-
-note:
-I praksis bruker vi som regel såkalte *pseudo-tilfeldige* tall.
-Det er matematiske formler som gjør at vi kan regne ut lange serier
-med tall som *ser tilfeldige ut*.
-
-Slumptallsgeneratoren, som vi ofte skrive PRNG for *pseudo-random
-number generator*, har en tilstand $s_i$.
-Hver gang funksjonen kalles, får vi en ny tilstand $s_{i+1}$.
-
-Det tilfeldige tallet som vi får er så en funksjon av den nye
-tilstanden.  Her bruker vi gjerne forskjellige funksjoner
-med den samme slumptallsgeneratoren, for å kunne generere
-heltall og slumptall i ulike intervaller.
-
----
-
-$$ s_i = a\cdot s_{i-1} \mod p $$
-
-$$ y_i = \frac{s_i}{p} $$
-
-note:
-Det mest kjente tilfellet er lineær kongruens.
-Her regner vi ut tilstanden ved å gange med et tall $a$ og ta resten
-ved divisjon med et tall $p$.
-Dersom vi velger $a$ og $p$ fornuftig, vil føgen av tall $s_i$
-se tilfeldig ut.
-
----
-
-$$ s_i = 7\cdot s_{i-1} \mod 97 $$
-
-note:
-For å ta et leketøyseksempel, kan vi prøve å gange med syv
-og dele på syvognitti.
-Både syv og syvognitti er primtall, noe som gjerne er en god
-idé.
-
----
-<!-- slide template="[[tpl-diagram]]" -->
-
-![[prng1.svg]]
-
-::: credit
-:::
-
-note:
-Hvis vi genererer tall på denne måten, får
-
----
-<!-- slide template="[[tpl-diagram]]" -->
-
-![[prng2.svg]]
-
-::: credit
-:::
-
----
-<!-- slide template="[[tpl-diagram]]" -->
-
-![[prng3.svg]]
-
-::: credit
-:::
-
----
-<!-- slide template="[[tpl-diagram]]" -->
-
-![[prng4.svg]]
-
-::: credit
-:::
-
----
-<!-- slide template="[[tpl-diagram]]" -->
-
-![[prng5.svg]]
-
-::: credit
-:::
-
----
-<!-- slide template="[[tpl-diagram]]" -->
-
-![[prng6.svg]]
-
-::: credit
-:::
-
----
-<!-- slide template="[[tpl-diagram]]" -->
-
-![[prng7.svg]]
-
-::: credit
-:::
-
-note:
-
-Den nøyaktige formelen er ikkje viktig for oss.  Det som er greitt
-å hugsa er at når me har bestemt den første tilstanden $s_0$, som
-vi gjerne kaller frøet eller *seed*, så vil slumptalsgeneratoren
-gi oss en *uendelig* følge med tilfeldigaktige tal.
-
-Der er mange kjente slumptallsgeneratorer, og lineær kongruens er 
-ikke den beste, blott den best kjente.
-Vi pleier derimot ikke være så kresne på slumptallsgeneratorene
-i simulering.  Hvis du skal lave lotterier, som nødvendigvis må
-være rettferdige, er det langt viktigere at slumptallene ikke
-bare ser tilfeldige men også er umulige å forutsi.
-
-De strengeste kravene til slumptall gjelder i kryptografi, som
-f.eks. brukes til å sikre pengeoverføringer og sensitive
-personopplysninger.
-
----
-
-Python uses the Mersenne Twister as the core generator.
-
-It produces 53-bit precision floats and has a period of 
-$2^{19937}-1. 
+# Slumptalsgeneratorar i Python
 
 ---
 <!-- slide template="[[tpl-smalltext]]" -->
@@ -425,6 +245,105 @@ Det er derimot viktig at man ikke setter frøet i utide.
 Om du tilbakestiller frøet midt i en simulering, vil ikke
 fortsettelsen se like tilfeldig ut som starten.
 
+---
+
+```python
+klasse = [ "Arne", "Bente", "Cecilie", "Denis", "Emil", "Freya",
+        "Gyda", "Holger", "Inger", "Jens", "Kim", "Line", "Merete",
+        "Nina", "Olga", "Petter", "Quentin", "Ruth", "Stine", 
+        "Tore", "Unni", "Vidar", "Webjørn", "Xavier", "Yngve",
+        "Zacharias", "Ægir", "Ølvar", "Åmund" ]
+```
+
+note:
+Så langt har vi sett på tilfeldige tall.  Det kan også skje
+at vi ønsker å plukke tilfeldige elementer fra en liste.
+
+---
+
+```python
+klasse = [ "Arne", "Bente", "Cecilie", "Denis", "Emil", "Freya",
+        "Gyda", "Holger", "Inger", "Jens", "Kim", "Line", "Merete",
+        "Nina", "Olga", "Petter", "Quentin", "Ruth", "Stine", 
+        "Tore", "Unni", "Vidar", "Webjørn", "Xavier", "Yngve",
+        "Zacharias", "Ægir", "Ølvar", "Åmund" ]
+```
+
+```
+In [32]: n = len(klasse)
+
+In [33]: indekser = [ random.randint(0,n-1) for _ in range(3) ]
+
+In [34]: referansegruppe = [ klasse[x] for x in indekser ]
+
+In [35]: print( referansegruppe )
+['Line', 'Ølvar', 'Line']
+```
+
+note:
+Det er mulig å gjøre det ved å trekke tilfeldige tal, med `randint`
+og bruke dem som indekser, for å hente elementer fra listen.
+
+---
+
+```python
+klasse = [ "Arne", "Bente", "Cecilie", "Denis", "Emil", "Freya",
+        "Gyda", "Holger", "Inger", "Jens", "Kim", "Line", "Merete",
+        "Nina", "Olga", "Petter", "Quentin", "Ruth", "Stine", 
+        "Tore", "Unni", "Vidar", "Webjørn", "Xavier", "Yngve",
+        "Zacharias", "Ægir", "Ølvar", "Åmund" ]
+```
+
+```
+In [30]: referansegruppe = [ random.choice(klasse) for _ in range(3) ]
+
+In [31]: print( referansegruppe )
+```
+
+note:
+Der finnes også en function `random.choice` som trekker et tilfeldig
+element fra en liste, uten å gå via en indeks.  Vi ser hvordan vi
+bare gir listen til `choice`-funksjonen og får et tilfeldig element ut.
+
+
+---
+
+```python
+klasse = [ "Arne", "Bente", "Cecilie", "Denis", "Emil", "Freya",
+        "Gyda", "Holger", "Inger", "Jens", "Kim", "Line", "Merete",
+        "Nina", "Olga", "Petter", "Quentin", "Ruth", "Stine", 
+        "Tore", "Unni", "Vidar", "Webjørn", "Xavier", "Yngve",
+        "Zacharias", "Ægir", "Ølvar", "Åmund" ]
+```
+
+```
+In [26]: import numpy.random as rnd
+
+In [27]: perm = rnd.permutation( klasse )
+
+In [28]: print( perm )
+['Petter' 'Ølvar' 'Åmund' 'Gyda' 'Inger' 'Vidar' 'Webjørn' 'Freya' 'Stine'
+ 'Denis' 'Yngve' 'Holger' 'Emil' 'Kim' 'Line' 'Xavier' 'Arne' 'Ægir'
+ 'Tore' 'Nina' 'Ruth' 'Merete' 'Quentin' 'Olga' 'Unni' 'Jens' 'Zacharias'
+ 'Cecilie' 'Bente']
+
+In [29]: print( perm[:5] )
+['Petter' 'Ølvar' 'Åmund' 'Gyda' 'Inger']
+```
+
+note:
+Ofte ønsker vi å trekke forskjellige elementer fra listen, og der er
+ingenting som hindrer de to første metodene fra å hente samme element
+flere ganger.  Det er selvsagt mulig å sjekke og trekke på nytt hvis
+elementet allerede er trukket, men der finnes et andet triks.
+
+Der finnes funksjoner for å stokke en liste tilfeldig.  Den finnes ikke
+i standardbiblioteket `random`, så vi må importere et andet bibliotek som
+heter `numpy.random`.  Funksjonen heter `permutation` og tar en liste som
+argument.
+
+Resultatet er en liste med de samme elementer i tilfeldig orden, og vi 
+kan hente de elementene vi trenger fra starten av den permuterte listen.
 
 ---
 

@@ -13,6 +13,7 @@
 
 + [[Kva er simulering?]]
 + [[Slumptalsgenerator]]
+	+ [[Slumptalsgenerator-Demo]]
 + [[Datastrukturar]]
 	+ Primitive typar int float, str, Boolean
 	+ Samansette typar: list, iterator,  dict
