@@ -16,4 +16,7 @@ done
 pdflatex prng.tex
 pdf2svg prng.pdf prng.svg
 
-cp prng*.svg ../dataprog-obsidian/Slides/slidefig/
+pdflatex cycle.tex
+pdf2svg cycle.pdf cycle.svg
+
+cp cycle.svg prng*.svg ../dataprog-obsidian/Slides/slidefig/
