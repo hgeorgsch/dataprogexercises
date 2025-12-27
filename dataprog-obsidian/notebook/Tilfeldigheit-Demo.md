@@ -68,6 +68,80 @@ plt.title( "Normalfordeling" )
 plt.savefig( "gauss.svg" )
 ```
 
-```{code-cell} ipython3
+# Leketydøme
 
+Den enkle lineære kongruensgeneratoren frå føredraget kan me
+implementera slik
+
+```{code-cell} ipython3
+def f(x,a=7,m=97): 
+    return x*a % m
 ```
+
+For å testa perioden, kan me definera funksjonar som køyrer
+generatoren rekursivt.
+
+```{code-cell} ipython3
+def g(s,**kw):
+    s.append( f( s[-1], **kw ) )
+    return s
+
+def r(s,m=97,**kw):
+    if len(s) > 2*m: return s
+    else: return r(g(s,**kw))
+
+print( r( [1] ) )
+```
+
+Legg merke til korleis heile fylgjen gjentek seg sjølv.
+
+Under feilsøk brukte eg ein litt meir brutal metode for å testa
+alle moglege koeffisiantar $a$.
+
+```{code-cell} ipython3
+def test(a,m=97):
+    s = set(r([1],a=a,m=m))
+    return (a,len(s))
+
+r = [ test(a) for a in range(2,97) ]
+```
+
+Her bruker me mengetypen `set` for å verta kvitt gjentekne element.
+I returverdien skal `len(s)` vera talet på unike element.
+
+Til figurane brukte eg denne funksjonen for å 
+
+```{code-cell} ipython3
+def fx(s,a=7,m=97):
+    s1 = f(s)
+    v = s1/m
+    return ( s, s1, v )
+
+def rx(s,**kw):
+    rs = []
+    for _ in range(9):
+        r = fx(s,**kw)
+        s = r[1]
+        rs.append(r)
+    return rs
+
+print( rx(13) )
+```
+
+For å formattera dette til bruk i $\LaTeX$, brukte eg denne koden
+
+```{code-cell} ipython3
+rs = rx(13)
+
+def fmt1( v ):
+   s = ""
+   for t in v:
+       s += "{" + f"{t}" + "}"
+
+def fmt2( v ):
+   return " ".join( fmt1( v ) )
+
+print( fmt2(rs) )
+```
+
+
