@@ -211,10 +211,25 @@ personopplysninger.
 :::
 
 note:
-Python uses the Mersenne Twister as the core generator.
+Slumptallsgeneratoren er det som vi kaller en endelig tilstandsmazkin.
+Den har et endelig antall tilstander.
+Leketøyseksempelet vårt har 90 tilstander.
+Det fælger av den matematiske formelen at for en gitt tilstand er det alltid
+en bestemt tilstand som følger efter, og når vi genererer tilstrekkelig mange
+tall, går vi i ring.  Slumptallsfølgen gjentar seg.
 
-It produces 53-bit precision floats and has a period of 
-$2^{19937}-1. 
+
+---
+
++ Mersenne Twister 
++ 53 bits flyttal 
++ Periode: $2^{19937}-1$
+
+note:
+Standardbiblioteket i python bruker en slumptallsgenerator som heter
+Mersenne Twister.
+Den har en periode på $2^{19937}-1$ tilstander før den gjentar seg selv.
+Hvis du skriver denne lengden ut i titallssystemet, får vi om lg 6000 sifre.
 
 ---
 <!-- slide template="[[tpl-smalltext]]" -->
@@ -223,13 +238,7 @@ $2^{19937}-1.
 
 ```python
 import random
-def terning():
-    return random.randint(1,6)
-```
-
-```
-In [5]: [ terning() for _ in range(10) ]
-Out[5]: [5, 1, 2, 6, 6, 4, 3, 3, 4, 3]
+random.randint(1,6)
 ```
 
 ::: credit
@@ -240,18 +249,20 @@ via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=99768017
 note:
 Når vi skal bruke slumptall i python, trenger vi ikke bekymre oss
 om alt som foregår inni slumptallsgeneratoren.
-Der finnes flere biblioteker som implementerer slumptall, men vi
-skal bruke et som heter `random`.
+Der finnes mange biblioteker som tilbyr ulike slumptallsgeneratorer.
+Standardbiblioteket som bruker Mersenne Twister, heter `random`.
 
 Hvis vi skal simulere en terning, f.eks. kan vi bruke funksjonen
 `randint` og be om et tall mellom 1 og 6.
-Når vi laver en liste ved å kalle slumptallsfunksjonen flere ganger,
-får vi en serie som ser tilfeldig ut.
 
 ---
 <!-- slide template="[[tpl-smalltext]]" -->
 
 ```python
+import random
+random.randint(1,6)
+```
+
 In [5]: [ random.randint(1,6) for _ in range(10) ]
 Out[5]: [5, 1, 2, 6, 6, 4, 3, 3, 4, 3]
 ```
@@ -298,30 +309,6 @@ Dette er også en uniform fordeling, der alle verdier er like
 sannsynlige, men den er kontinuerlig og ikke diskret.
 
 ---
-```
-In [1]: import random
-
-In [2]: [ random.random()*100-50 for _ in range(10) ]
-Out[2]:
-[-39.035627812290464,
- -8.432549451508578,
- 5.600303172592014,
- -30.240236134220456,
- -18.705629447346116,
- 29.174098952378884,
- -14.896927031712046,
- -9.60240063073671,
- 28.873011654664353,
- 7.719162441908011]
-
-```
-
-note:
-Hvis vi trenger tall fra et andet intervall en null til én, er det 
-vanlig å ordne det ved å skalere resultatet.  For å få et tall mellom 
-pluss/minus femti, kan vi gange med hundrede og trekke fra femit.
-
----
 
 <!-- slide template="[[tpl-smalltext]]" -->
 
@@ -353,66 +340,15 @@ eller gaussfordelingen, som er så mye brukt.
 Funksjonen `random.gauss()` gir et tall som er normalfordelt
 med standardavvik 1 rundt en middelverdi på 0.
 
-
 ---
 
 ## Frøet
 
 note:
-Som me nemnde over, må slumptala starta med eit frø.
-Om me ikkje oppgjev eit frø, vil maskina freista å finna noko
-tilfeldig, t.d. dei minst signifikante sifra i systemklokka.
-
-Lat oss køyra nokre eksperiment.
-Me kan laga ein serie med tilfeldige tal ved å bruka
-listekomprehensjon.
-
----
-<!-- slide template="[[tpl-smalltext]]" -->
-
-```
-In [3]: [ random.randint(1,10) for i in range(12) ]
-Out[3]: [3, 9, 6, 6, 9, 4, 6, 2, 9, 9, 7, 4]
-
-In [4]: [ random.randint(1,10) for i in range(12) ]
-Out[4]: [3, 9, 4, 9, 4, 5, 9, 5, 1, 8, 1, 7]
-
-In [5]: [ random.randint(1,10) for i in range(12) ]
-Out[5]: [8, 7, 6, 5, 3, 1, 2, 8, 1, 9, 6, 6]
-```
-<!-- element class="largercode" -->
-
-::: credit
-:::
-
-note:
+Som vi nevnte, må slumptallene alltid med et frø.
 Vi kan bruke slumptallsgeneratoren uten å tenke på frøet.
-Da får vi nye tall hver gang.
-
----
-<!-- slide template="[[tpl-smalltext]]" -->
-
-```
-In [12]: random.seed(42)
-
-In [13]: [ random.randint(1,10) for i in range(12) ]
-Out[13]: [2, 1, 5, 4, 4, 3, 2, 9, 2, 10, 7, 1]
-
-In [14]: [ random.randint(1,10) for i in range(12) ]
-Out[14]: [1, 2, 4, 4, 9, 10, 1, 9, 4, 9, 7, 4]
-
-In [15]: [ random.randint(1,10) for i in range(12) ]
-Out[15]: [8, 10, 5, 1, 3, 7, 6, 5, 3, 4, 6, 2]
-```
-<!-- element class="largercode" -->
-
-::: credit
-:::
-
-note:
-Hvis vi ønsker å sette frøet selv, bruker vi `random.seed()`.
-Her starter vi frøet på 42, og genererer tre forskjellige lister
-med tilfeldige tall.
+Da vil maskinen prøve å finne noe tilfeldig som kan brukes
+som frø, f.eks. de siste sifrene fra klokkeslettet.
 
 ---
 <!-- slide template="[[tpl-smalltext]]" -->
@@ -439,14 +375,13 @@ Out[11]: [2, 1, 5, 4, 4, 3, 2, 9, 2, 10, 7, 1]
 :::
 
 note:
-Hvis vi setter frøet til 42 før hver liste vi genererer,
-ser vi at alle listene blir like.  Hver gang vi laver en
-tilfeldig liste, har vi startet slumptallsgeneratoren på
-det samme punktet.
+Vi har dog muligheten til å sette frøet, eller *seed*.
+Hvis vi f.eks. sette frøet til 42 før vi kjører programmet
+vårt, får vi alltid de samme tilfeldige tallene.
 
 Dette kan være særs nyttig ved simulering, fordi det lar
 oss kjøre den eksakt samme simuleringen flere ganger.
-Særlig når vi skal kvalitetssikre koden vår eller leter
+Særlig vi skal kvalitetssikre koden vår eller leter
 efter feil, kan det være greitt å kunne sammenligne kjøringer
 uten tilfeldige faktorer.
 
@@ -454,10 +389,11 @@ Det er derimot viktig at man ikke setter frøet i utide.
 Om du tilbakestiller frøet midt i en simulering, vil ikke
 fortsettelsen se like tilfeldig ut som starten.
 
-
 ---
 
 # Slutt
 
 note:
-Det var alt for denne gang.  Ikke glem å teste på egen hånd.
+Det var alt for denne gang.  
+Jeg har lavet en video til med mer inngående demonstrasjon av 
+funksjonene i python.
