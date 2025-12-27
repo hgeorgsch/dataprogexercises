@@ -43,12 +43,12 @@ i Monte Carlo, med spill som roulette.
 
 ---
 
-Slumptal
+![[6sided_dice_(cropped).jpg]]
 
 
 note:
-Slump, eller tilfeldighet, er vanskeleg for datamaskiner, som er
-konstruerte for å vera fullt ut deterministiske system.
+Terningkast og andre tilfeldige prosesser er vanskeleg for datamaskiner.
+Maskinene er konstruerte for å vera fullt ut deterministiske system.
 Virkeleg slump må derfor komme utanfrå, som *input*.
 
 Det er mulig å få det til, ved å måle ørsmå variasjoner i
@@ -69,20 +69,24 @@ Store simuleringer krever ofte mer slump.
 note:
 I praksis bruker vi som regel såkalte *pseudo-tilfeldige* tall.
 Det er matematiske formler som gjør at vi kan regne ut lange serier
-med tall som *ser tilfeldige ut*.
+med tall som *ser tilfeldige ut* uten faktisk å være det.
 
-Slumptallsgeneratoren, som vi ofte skrive PRNG for *pseudo-random
-number generator*, har en tilstand $s_i$.
-Hver gang funksjonen kalles, får vi en ny tilstand $s_{i+1}$.
+På norsk kaller vi det gjerne for en slumptallsgenerator.
+På engelsk kalles det en
+*pseudo-random number generator* eller forkortet PRNG.
 
-Det tilfeldige tallet som vi får er så en funksjon av den nye
-tilstanden.  Her bruker vi gjerne forskjellige funksjoner
-med den samme slumptallsgeneratoren, for å kunne generere
-heltall og slumptall i ulike intervaller.
+Slumptallsgeneratoren er det som vi kaller en endelig tilstandsmaskin.
+Den har en tilstand $s_i$, og en funksjon som genererer en ny
+tilstand $s_{i+1}$ hver gang vi ber om et slumptall.
+
+I teorien kan vi bruke tilstanden $s$ som et slumptall, men ofte
+vil vi ha slumptall fra en anden definisjonsmengde.
+Da trenger vi en ekstra funksjon som oversetter tilstanden til
+riktig utfallsrom.
 
 ---
 
-$$ s_i = a\cdot s_{i-1} \mod p $$
+$$ s_i = a\cdot s_{i-1} + c \mod p $$
 
 $$ y_i = \frac{s_i}{p} $$
 
