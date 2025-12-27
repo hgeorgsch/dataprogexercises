@@ -1,7 +1,8 @@
+#! /bib/sh
+# (C) 2025: Hans Georg Schaathun <georg@schaathun.net>
+# Create figures for the PRNG talk «Slumptalsgenerator»
 
 args="{13}{91}{0.94} {91}{55}{0.57} {55}{94}{0.97} {94}{76}{0.78} {76}{47}{0.48} {47}{38}{0.39} {38}{72}{0.74} {72}{19}{0.20} "
-
-
 
 c=0
 
