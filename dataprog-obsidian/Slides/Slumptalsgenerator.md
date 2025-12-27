@@ -104,8 +104,7 @@ $$ s_i = 7\cdot s_{i-1} \mod 97 $$
 note:
 For å ta et leketøyseksempel, kan vi prøve å gange med syv
 og dele på syvognitti.
-Både syv og syvognitti er primtall, noe som gjerne er en god
-idé.
+Syvognitti er primtall, noe som gjerne er en god idé.
 
 ---
 <!-- slide template="[[tpl-diagram]]" -->
@@ -116,7 +115,10 @@ idé.
 :::
 
 note:
-Hvis vi genererer tall på denne måten, får
+Vi kan starte med en vilkårlig tilstand, si tretten, og se hvilke
+tall vi får.
+
+Først enognitti.
 
 ---
 <!-- slide template="[[tpl-diagram]]" -->
@@ -126,6 +128,9 @@ Hvis vi genererer tall på denne måten, får
 ::: credit
 :::
 
+note:
+Så femogfemti.
+
 ---
 <!-- slide template="[[tpl-diagram]]" -->
 
@@ -133,6 +138,9 @@ Hvis vi genererer tall på denne måten, får
 
 ::: credit
 :::
+
+note:
+Firognitti.
 
 ---
 <!-- slide template="[[tpl-diagram]]" -->
@@ -142,6 +150,9 @@ Hvis vi genererer tall på denne måten, får
 ::: credit
 :::
 
+note: 
+Seksogsytti
+
 ---
 <!-- slide template="[[tpl-diagram]]" -->
 
@@ -150,6 +161,9 @@ Hvis vi genererer tall på denne måten, får
 ::: credit
 :::
 
+note:
+Syvogførr.
+
 ---
 <!-- slide template="[[tpl-diagram]]" -->
 
@@ -157,6 +171,9 @@ Hvis vi genererer tall på denne måten, får
 
 ::: credit
 :::
+
+note:
+Åttogtredve
 
 ---
 <!-- slide template="[[tpl-diagram]]" -->
@@ -167,6 +184,7 @@ Hvis vi genererer tall på denne måten, får
 :::
 
 note:
+... og toogsytti.
 
 Den nøyaktige formelen er ikkje viktig for oss.  Det som er greitt
 å hugsa er at når me har bestemt den første tilstanden $s_0$, som
@@ -185,7 +203,14 @@ f.eks. brukes til å sikre pengeoverføringer og sensitive
 personopplysninger.
 
 ---
+<!-- slide template="[[tpl-diagram]]" -->
 
+![[cycle.svg]]
+
+::: credit
+:::
+
+note:
 Python uses the Mersenne Twister as the core generator.
 
 It produces 53-bit precision floats and has a period of 
