@@ -3,8 +3,6 @@ tags:
   - lecture/perspective
 ---
 
-
-
 # Kva er simulering?
 
 note:

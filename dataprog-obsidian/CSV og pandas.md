@@ -6,6 +6,7 @@ tags:
    - statistics
 ---
 
+
 # CSV og pandas
 
 + Grunnleggjande pandas
