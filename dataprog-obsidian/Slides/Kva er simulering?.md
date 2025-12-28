@@ -13,7 +13,7 @@ men hva mener jeg egentlig når jeg sier simulering?
 
 ---
 
-*Kva skjer dersom?*
+*Kva skjer dersom ... ?*
 
 note:
 Simulering er en øvelse i spørsmålet *hva skjer hvis ...*?
