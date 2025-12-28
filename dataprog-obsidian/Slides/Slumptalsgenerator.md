@@ -42,9 +42,14 @@ kalt for *Monte Carlo-simuleringer* efter de kjente kasinoene
 i Monte Carlo, med spill som roulette.
 
 ---
+<!-- slide template="[[tpl-quote]]" -->
 
 ![[6sided_dice_(cropped).jpg]]
 
+::: credit
+Illustrasjon ved Diacritica - Own work, CC BY-SA 3.0,
+via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=99768017)
+:::
 
 note:
 Terningkast og andre tilfeldige prosesser er vanskeleg for datamaskiner.
@@ -205,7 +210,7 @@ personopplysninger.
 ---
 <!-- slide template="[[tpl-diagram]]" -->
 
-![[cycle.svg]]
+![[cycle.svg|660]]
 
 ::: credit
 :::
@@ -221,9 +226,9 @@ tall, går vi i ring.  Slumptallsfølgen gjentar seg.
 
 ---
 
-+ Mersenne Twister 
-+ 53 bits flyttal 
-+ Periode: $2^{19937}-1$
+- Mersenne Twister 
+- 53 bits flyttal 
+- Periode: $2^{19937}-1$
 
 note:
 Standardbiblioteket i python bruker en slumptallsgenerator som heter
@@ -263,6 +268,7 @@ import random
 random.randint(1,6)
 ```
 
+```
 In [5]: [ random.randint(1,6) for _ in range(10) ]
 Out[5]: [5, 1, 2, 6, 6, 4, 3, 3, 4, 3]
 ```
@@ -283,7 +289,7 @@ desimaltallene imellom.
 <!-- slide template="[[tpl-smalltext]]" -->
 
 ```
-In [6]: [ random.random() for _ in range(10) ]
+In [6]: [ random.random() for _ in range(8) ]
 Out[6]:
 [0.27342233990237175,
  0.6593076643597294,
@@ -292,9 +298,7 @@ Out[6]:
  0.19204871254768463,
  0.3400966630690264,
  0.6469617118607379,
- 0.2050789573379762,
- 0.3011348077423164,
- 0.6835356020355947]
+ 0.2050789573379762]
 ```
 
 ![[kontuniform.svg]]
@@ -313,7 +317,7 @@ sannsynlige, men den er kontinuerlig og ikke diskret.
 <!-- slide template="[[tpl-smalltext]]" -->
 
 ```
-In [9]: [ random.gauss() for _ in range(10) ]
+In [9]: [ random.gauss() for _ in range(8) ]
 Out[9]:
 [0.3532421321764088,
  -0.9522801582478694,
@@ -322,9 +326,7 @@ Out[9]:
  -1.0509678395676072,
  0.274450618106159,
  0.6089163638569696,
- -0.38565740512221974,
- 1.3538055582579855,
- -0.34163923642131283]
+ -0.38565740512221974]
 ```
 
 ![[gauss.svg]]
