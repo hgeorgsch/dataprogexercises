@@ -114,45 +114,22 @@ Ludo er og blir et barnespill, fordi vi ikke klarer å leve oss inn i historien 
 
 ---
 
-4,5% rente *p.a.*
-
-note:
-Sparekalkulatoren som vi har jobbet med i dette kurset er på sett og vis en simulator.
-Ved å se for oss saldoen på kontoen, og transaksjonene år for år, eller dag for dag, blir modellen konkret og enkel å eftergår, selv uten å skjønne den matemtiske teorien for geometriske rekker.
-
----
 
 ```python
 rentesats = 0.045
 saldo = 1000000
-```
 
-note:
-Vi kan simulere kontoen ved hjelp av en enkelt variabel som representerer saldoen.
-
-Rentesatsen er konstant, i alle fall i det enkleste scenaroet, og kan holdes utenom kontoen.
-
----
-
-```python
-saldo = saldo + saldo*rentesats
-print(saldo)
-```
-
-note:
-Skal vi simulere ett år er det en enkelt operasjon, der vi opppdaterer saldoen ved å legge til rentene.
-
----
-
-```python
 for i in range(2025,2051):
   saldo = saldo + saldo*rentesats
 print(saldo)
 ```
 
 note:
-Skal vi simulere en lengre periode, trenger vi en løkke som itererer år for år og legger til rentene hvert år.
-
+Spare- og lånekalkulatoren som vi har jobbet med i dette kurset er et enkelt eksempel
+på en simulator.
+Ved å se for oss saldoen på kontoen, og simulere transaksjonene år for år,
+eller dag for dag, blir modellen konkret og enkel å eftergår,
+selv uten å skjønne den matemtiske teorien for geometriske rekker.
 
 ---
 
@@ -165,8 +142,13 @@ Skal vi simulere en lengre periode, trenger vi en løkke som itererer år for å
 | 1. jan. 2027 | Sparing | +1000 | 3136 |
 
 note:
+Avhengig av hvilke data vi lagrer underveis i simuleringen, kan vi
+skrive resultatet enten som sluttsaldoen eller som en simulert
+kontoutskrift, som om det var en ekte konto.
+
 De aller fleste simuleringer handler om prosesser som går over tid.
-Uten snarveier for å spå fremtiden, beregner vi hver eneste lille hendelse som skjer, tidspunkt for tidspunkt.
+Uten snarveier for å spå fremtiden, beregner vi hver eneste lille hendelse som skjer, 
+tidspunkt for tidspunkt.
 
 Selvsagt vil ikke alle simuleringer være like enkle og presise som sparekalkulatoren.
 Vi må ofte forenkle og definere *omtrentlig* hva vi forventer i hver periode, men ved å brekke problemet opp i mindre, tidfestede hendelser, blir det likevel enklere å forstå og å argumentere for. 
@@ -198,6 +180,16 @@ via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=99768017
 note:
 Og hvis vi vil gjøre det mer realistisk kan du gjøre rentenivået til en variabel og legge til mer eller mindre tilfeldige renteendringer hvert år.
 
-Så lenge du har en forestilling om situasjonen som skal simuleres, er der ingen grense for hva du kan gjør med den.
+Vi kan også simulere hvordan kunder handler, for å teste effekten av pris- og
+produktendringer. 
+Vi kan simulere aksje- og verdipapirmarkeder og teste investeringsstragier.
+Under pandemien hørte vi meget om hvordan folkehelseinstituttet brukte simuleringer
+for å analysere smittespredningen under ulike smitteverntiltak.
 
-Dersom du mangler den forestillingen, og ikke har en hensikt med simuleringen, blir resultatet alltid dårlig og uinteressant. Du må ha en historie å fortelle.
+Så lenge du har en forestilling om situasjonen som skal simuleres, 
+er der ingen grense for hva du kan modellere og teste.
+
+Dersom du mangler den forestillingen, og ikke har en hensikt med simuleringen,
+blir resultatet alltid dårlig og uinteressant. 
+
+Du må ha en historie å fortelle med simuleringen.
