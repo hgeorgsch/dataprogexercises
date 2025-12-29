@@ -11,6 +11,10 @@ tags:
     + [[Kontrollflyt i Python]]
         + [[Kontrollflyt i Python (script)]]
     + [[Kva er ein algoritme?]]
++ Veke 2.
+	+ [[Kva er simulering?]]
+	+ [[Slumptalsgenerator]]
+	+ [[Datastrukturar]]
 + Veke 3. [[CSV og Deskriptiv Statistikk]]
     + [[Filhandtering]]
     + [[Statistikk med pandas]]

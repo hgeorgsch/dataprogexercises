@@ -88,10 +88,10 @@ En *record* har flere felter, der hvert felt har et navn og en verdi.
 
 # Tuplar
 
-+ (0,1, 2,5)
-+ `("Oskar", 83)`
-+ ( $x$, $y$ )
-+ `( "Ola Nordmann", "Borgundvegen 666", "6060 Ålesund", 2012-10-14)
+- (0,1, 2,5)
+- `("Oskar", 83)`
+- ( $x$, $y$ )
+- `( "Ola Nordmann", "Borgundvegen 666", "6060 Ålesund", 2012-10-14)
 
 note:
 Dersom vi ikke setter navn på feltene i en *record*, får vi det som
@@ -109,11 +109,10 @@ skal bli lettere å lese.
 ---
 <!-- slide template="[[tpl-diagram]]" -->
 
-
 ## Avbilding (*map*)
 
 
-![[map.svg]]
+![[map.svg|480]]
 
 note:
 Et andet typisk problem er samlinger av objekter, f.eks. et kunderegister,
@@ -131,11 +130,15 @@ Poenget med en *hasmap* er at det skal være raskt å slå opp en gitt nøgle, u
 *Dictionaries* eller `dict` i python er et eksempel på *hashmaps*.
 
 ---
+<!-- slide template="[[tpl-smalltext]]" -->
 # Liste
 
 ```python
 [ "Ola Nordmann", "Kari Nordmann", "John Smith", "Jane Doe", ... ]
 ```
+
+::: credit
+:::
 
 note:
 Lister lagrer objekter i rekkefølge.  
@@ -145,7 +148,7 @@ I python vil det si slutten av listen, men i andre sprog kan det være i
 starten av listen at det går raskt å gjøre endringer.
 
 ---
-
+<!-- slide template="[[tpl-smalltext]]" -->
 # Tabell (*array*)
 
 | # | Verdi |
@@ -157,6 +160,9 @@ starten av listen at det går raskt å gjøre endringer.
 | 4 | `"Tom"` |
 | 5 | `"Dick"` |
 | 6 | `"Harry"` |
+
+::: credit
+:::
 
 note:
 En *array* ligner en liste, men prioriteringene er anderledes.
@@ -171,6 +177,7 @@ eller mindre plass.
 
 
 ---
+<!-- slide template="[[tpl-smalltext]]" -->
 
 # Lister i python
 
@@ -182,6 +189,9 @@ In [3]: print( kunder[1] )
 Kari Nordmann
 
 ```
+
+::: credit
+:::
 
 note:
 Lister i python er implementert som *arrays*.
@@ -202,7 +212,7 @@ Det skjer derimot sjelden.
 
 note:
 Der finnes mange andre typer samlinger, men i små prosjekter klarer
-man seg fint med disse to. lister og *map*, eller `list` og `dict` i python.
+man seg fint med disse to: lister og *map*, eller `list` og `dict` i python.
 
 ---
 <!-- slide template="[[tpl-quote]]" -->
