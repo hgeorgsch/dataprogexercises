@@ -3,12 +3,29 @@
 /* CSS styles adapted to the templates for Obsidian Slides Extended. */
 
 /* Universal styles */
-.reveal  h1 {
+.reveal  h1 { /* Should be used on title page only */
      font: roman ;
      font-size: 60pt ;
      text-transform: none ;
 }
-.reveal h2 {
+
+.author { /* used by titleslide */
+     font: roman ;
+     font-size: 28pt ;
+}
+.footer { /* used by titleslide */
+     vertical-align: middle;
+}
+.footer img { /* used by titleslide */
+     vertical-align: middle;
+     width: 50%;
+     height: 100%;
+     display:inline-block;
+     text-align: center;
+     vertical-align:middle;
+}
+
+.reveal h2 { /* Slide header */
      font-size: 40pt ;
      text-transform: none;
      color: #bcd025 ;
@@ -43,7 +60,7 @@
      text-align: center ;
 }
   
-.reveal .credit {
+.reveal .credit { /* credit block used by many different templates */
      font-size: 18pt ;
 }
 
@@ -112,3 +129,11 @@
      height: 500px ;
      margin: 0px ;
 } 
+
+.reveal .diagramslide img {
+     width: 1000px ;
+     height: 1000px ;
+} 
+.reveal .diagramslide h1 {
+   color: #00509e ;
+}

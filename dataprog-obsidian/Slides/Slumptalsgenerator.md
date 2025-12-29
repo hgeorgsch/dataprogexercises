@@ -1,8 +1,11 @@
 ---
+title: Slumptalsgenerator
+author: Hans Georg Schaathun
+date: December 2025
 tags:
   - lecture/video
 css:
-  - custom.css
+  - css/templates.css
 ---
 
 # Slumptalsgenerator
