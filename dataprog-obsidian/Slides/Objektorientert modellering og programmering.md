@@ -3,7 +3,7 @@ title: Objektorientert modellering og programmering
 tags:
   - lecture/video
 css:
-  - custom.css
+  - css/templates.css
 ---
 
 # Objektorientert modellering og programmering
