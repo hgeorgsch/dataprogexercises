@@ -6,7 +6,7 @@
   -- All styles are defined in css/templates.css
   -->
 
-<div class="quoteslideheader">
+<div class="quoteslideheader smallertext">
 <% content %>
 <% credit %> <!-- element class="credit" -->
 </div>

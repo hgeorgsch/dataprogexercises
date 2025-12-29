@@ -88,9 +88,7 @@ Vi må altså vite en del om filen for å bruke den riktig i *pandas*.
 Det er kanskje ikke like brukervennlig som vi er vant til, men til gjengjeld kan vi være trygge på at vi vet hva vi gjør.  Det hadde vært mulig å skrive *pandas* slik at den hadde klart å gjette på tegnsett og skilletegn *mesteparten* av tiden, men da ville den også stundom ha gjort feil. Den risikoen vil vi helst unngå.
 
 ---
-
 <!-- slide template="[[tpl-smalltext]]" -->
-
 
 ```
 In [2]: df = pd.read_csv("laksedata.csv",sep=";")
