@@ -17,9 +17,10 @@
      padding: 0.5em 1em 0.2em ; /* top - sides - bottom */
 }
 .reveal img {
+     object-fit: contain   ;
      border: none ;
      height: 600px ;
-     margin: 10px ;
+     margin: 0px ;
 } 
 .reveal table {
      padding: 0.2em 1em 0.2em ; /* top - sides - bottom */
@@ -96,10 +97,13 @@
      // background: #6096d0 ;
      padding: 2px 8px ;
 }
-     // border: 2px ;
 .reveal .quoteslideheader code {
      font-size: 10pt ;
      width: 800px ;
      height: 600px ;
      line-height: 1.1 ;
 }
+
+.reveal .twocolumnslide {
+     font-size: 21pt ;
+} 
