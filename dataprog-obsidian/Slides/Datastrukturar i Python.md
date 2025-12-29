@@ -2,7 +2,7 @@
 tags:
   - lecture/video
 css:
-  - custom.css
+  - css/templates.css
 ---
 # Datastrukturar
 
