@@ -953,7 +953,7 @@ Det går greit side ASCII bare bruker syv *bits* slik at den åttende
 
 ---
 
-<!-- slide template="[[tpl-twocolumn-large]]" -->
+<!-- slide template="[[tpl-twocolumn]]" -->
 
 ::: leftimage
 ![[latin1.png]]
@@ -982,7 +982,7 @@ vanlige tegn i Latin-1 blir udefinert i UTF-8.
 
 ---
 
-<!-- slide template="[[tpl-twocolumn-large]]" -->
+<!-- slide template="[[tpl-twocolumn]]" -->
 
 ::: leftimage
 ![[latin1.png]]

@@ -26,5 +26,4 @@ This is styled with a medium text size and ugly colour.
 | tpl-smalltext.md | Reduced text size and wide code boxes| Much used |
 | tpl-three.md | Three images side by side with byline | Used once |
 | tpl-titleslide.md | Titleslide with author | Used in other projects |
-| tpl-twocolumn-large.md | ??? | Used once |
 | tpl-twocolumn.md | Two image side by side with byline | Much used |
