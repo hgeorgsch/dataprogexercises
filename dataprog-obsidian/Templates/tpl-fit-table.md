@@ -1,5 +1,5 @@
 <style>
-.tableslide {
+.reveal .tableslide {
   height: 100vh;
   width: 100vw;
   box-sizing: border-box;
@@ -10,12 +10,12 @@
   flex-direction: column;
 }
 
-.tableslide .header {
+.reveal .tableslide .header {
   flex: 0 0 auto;
   padding: 0.5em 1em 0.2em 1em;
 }
 
-.tableslide .tablescaler {
+.reveal .tableslide .tablescaler {
   flex: 1 1 auto;
   display: flex;
   align-items: center;
@@ -24,11 +24,7 @@
   padding: 0 1em;
 }
 
-.tableslide .tablescaler-inner {
-  font-size: <% fontsize %>;
-}
-
-.tableslide .credit {
+.reveal .tableslide .credit {
   flex: 0 0 auto;
   text-align: center;
   padding: 0.3em 1em;
@@ -38,12 +34,9 @@
 </style>
 
 <div class="tableslide">
-  <div class="header"><% header %></div>
+  <% header %>
   <div class="tablescaler">
-    <div class="tablescaler-inner">
       <% content %>
-    </div>
   </div>
   <div class="credit"><% credit %></div>
 </div>
-

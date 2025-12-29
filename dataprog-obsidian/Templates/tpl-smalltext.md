@@ -9,7 +9,8 @@
      font-size: 28pt ;
      text-transform: none;
   }
-  .reveal .smalltext table td, th {
+  .reveal .smalltext table td, 
+  .reveal .smalltext table th {
      font-size: 14pt ;
      text-align: center ;
   }
