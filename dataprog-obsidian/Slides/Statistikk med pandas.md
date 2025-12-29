@@ -3,7 +3,10 @@ tags:
   - lecture/video/perspective
   - statistics
   - pandas
+css:
+  - css/templates.css
 ---
+<!-- slide template="[[tpl-quote-header]]" -->
 # Deskriptiv statistikk med pandas
 
 ![[Panda_closeup.jpg|480]]
@@ -27,7 +30,7 @@ modellert i pandas, og noen eksempler på hva vi kan gjøre med datasettene.
 
 <!-- slide template="[[tpl-quote-header]]" -->
 
-# *pan*el *da*ta (pandas)
+## *pan*el *da*ta (pandas)
 
 
 | Varegruppe         |   År | Uke | Vekt (tonn) | Kilopris (kr) |
@@ -125,7 +128,7 @@ Med pandas kan vi manipulere våre *data frames* på mange ulike måter.  Vi kan
 ---
 <!-- slide template="[[tpl-header]]" -->
 
-# Datatypar
+## Datatypar
 
 ```
 In [57]: df.dtypes
@@ -148,7 +151,7 @@ Det er de numeriske søylene som er interessante i statistikk.  I eksportdataset
 ---
 <!-- slide template="[[tpl-header]]" -->
 
-# Deskriptiv statistikk
+## Deskriptiv statistikk
 
 ```
 In [55]: df.describe()
@@ -177,7 +180,7 @@ gjennomsnitt eller *mean*, standardavvik eller std for *standard deviation*, min
 
 <!-- slide template="[[tpl-smalltext]]" -->
 
-# Indeksering
+## Indeksering
 
 ```python
 In [7]: col = df["kr/kg"]
@@ -222,7 +225,7 @@ Merk at elementene beholder sine indekser om vi tar et utdrag av serien.  De er 
 ---
 <!-- slide template="[[tpl-header]]" -->
 
-# Statistikk på *Series*-objektet
+## Statistikk på *Series*-objektet
 
 ```
 In [38]: df1["kr/kg"].min()
@@ -248,7 +251,7 @@ Det er bare å slå opp i dokumentasjonen for å finne flere.
 ---
 <!-- slide template="[[tpl-smalltext]]" -->
 
-# Indeksering av fleire søyler
+## Indeksering av fleire søyler
 
 ```python
 In [10]: df1 = df[ ["Tonn","kr/kg"] ]
@@ -285,7 +288,7 @@ Vi kan også be om flere søyler samtidig, ved å oppgi en liste med *labels*.  
 ---
 <!-- slide template="[[tpl-smalltext]]" -->
 
-# .loc og .iloc
+## .loc og .iloc
 
 ```python
 In [38]: df.loc[2]
@@ -327,7 +330,7 @@ Vi kan merke oss at en slik enkeltrad også har type `Series`, akkurat som en s�
 ---
 <!-- slide template="[[tpl-smalltext]]" -->
 
-# Slices
+## Slices
 
 ```
 In [40]: df.iloc[2:4]
@@ -378,7 +381,7 @@ men fordi pandas ønsker å gjøre det enkelt å bruke både tallindeks og *labe
 
 ---
 <!-- slide template="[[tpl-smalltext]]" -->
-# Filtrering
+## Filtrering
 
 ```
 In [52]: df2 = df[ df["varegruppe"] == "Fersk oppalen laks" ]
@@ -518,7 +521,7 @@ Radene fra B har fremdeles sine opprinnelige indeksverdier som begynner på 1295
 ---
 <!-- slide template="[[tpl-header]]" -->
 
-# Plotting
+## Plotting
 
 ![[df1plot.svg]]
 
@@ -615,7 +618,7 @@ tidspunkter, men det får vi ta en anden gang.
 
 <!-- slide template="[[tpl-twocolumn]]" -->
 
-# Fletting av *data frames*
+## Fletting av *data frames*
 
 ::: leftimage
 ![[table1.svg|400]]
@@ -754,7 +757,7 @@ I dette tilfellet visste vi at vi hadde alle observasjonene på hvert tidspunkt,
 
 <!-- slide template="[[tpl-quote-header]]" -->
 
-# Manglande data
+## Manglande data
 
 ![[join.svg]]
 
@@ -800,7 +803,7 @@ den andre tabellen.
 
 <!-- slide template="[[tpl-smalltext]]" -->
 
-# *View* eller *Copy*
+## *View* eller *Copy*
 
 ```python
 df2 = df[ df["varegruppe"] == "Fersk oppalen laks" ]

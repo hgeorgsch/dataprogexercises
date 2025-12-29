@@ -16,9 +16,30 @@
      margin: 0 0 0 0;
      padding: 0.5em 1em 0.2em ; /* top - sides - bottom */
 }
+.reveal img {
+     border: none ;
+     height: 600px ;
+     margin: 10px ;
+} 
 .reveal table {
-     margin: 0 0 0 0;
      padding: 0.2em 1em 0.2em ; /* top - sides - bottom */
+     margin: 0pt auto ;
+     border-bottom-style: solid ;
+}
+.reveal  table th {
+     font-size: 18pt ;
+     padding: 12px ;
+     border: 2px ;
+     border-bottom-style: solid ;
+     border-right-style: solid ;
+     text-align: center ;
+}
+.reveal  table td {
+     font-size: 18pt ;
+     padding: 12px ;
+     border: 2px ;
+     border-right-style: solid ;
+     text-align: center ;
 }
   
 .reveal .credit {
@@ -57,21 +78,25 @@
 /* Styles for specific templates */
 .reveal .quoteslideheader img {
      border: none ;
+     max-height: 400px ;
      margin: 10px ;
 } 
 .reveal .quoteslideheader h1 {
-     font-size: 32pt ;
+     font-size: 40pt ;
      text-transform: none;
 }
 .reveal .quoteslideheader table th {
-     font-size: 12pt ;
+     font-size: 14pt ;
      // color: #6096d0 ;
      background: #404040 ;
+     padding: 2px 8px ;
 }
 .reveal .quoteslideheader table td {
-     font-size: 12pt ;
+     font-size: 14pt ;
      // background: #6096d0 ;
+     padding: 2px 8px ;
 }
+     // border: 2px ;
 .reveal .quoteslideheader code {
      font-size: 10pt ;
      width: 800px ;
