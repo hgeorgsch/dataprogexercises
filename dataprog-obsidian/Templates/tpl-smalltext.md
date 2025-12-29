@@ -1,38 +1,24 @@
 
 <style>
 /* These styles are quite unique to the smalltext template, and therefore
- * they are kept here. */
+ * they are kept here. 
+ * It also shares .smallertext with tpl-quote-header
+ */
   .reveal .smalltext img {
      height: 300px ;
      border: none ;
      margin: 10px ;
   } 
-  .reveal .smalltext h1,
   .reveal .smalltext h2 {
      font-size: 28pt ;
      text-transform: none;
-  }
-  .reveal .smalltext table td, 
-  .reveal .smalltext table th {
-     font-size: 14pt ;
-     text-align: center ;
-  }
-  .reveal .smalltext code {
-     font-size: 14pt ;
-     width: 1000px ;
-     line-height: 1.1 ;
-  }
-  .reveal .smalltext .largercode code {
-     font-size: 18pt ;
-     width: 800px ;
-     line-height: 1.1 ;
   }
   .reveal .smalltext .credit {
      font-size: 16pt ;
   }
 </style>
 
-<div class="smalltext">
+<div class="smalltext smallertext">
 <% content %>
 <% credit %> <!-- element class="credit" -->
 </div>

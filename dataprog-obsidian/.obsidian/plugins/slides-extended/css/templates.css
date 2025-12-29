@@ -43,21 +43,32 @@
      padding: 0.2em 1em 0.2em ; /* top - sides - bottom */
      margin: 0pt auto ;
      border-bottom-style: solid ;
+     font-size: 18pt ;
 }
 .reveal  table th {
-     font-size: 18pt ;
      padding: 12px ;
      border: 2px ;
      border-bottom-style: solid ;
      border-right-style: solid ;
      text-align: center ;
+     background: #404040 ;
 }
 .reveal  table td {
-     font-size: 18pt ;
      padding: 12px ;
      border: 2px ;
      border-right-style: solid ;
      text-align: center ;
+}
+
+.reveal section pre code {  /* Override defaults */
+   max-height: 100% ;
+   overflow: hidden;       
+   text-overflow: ellipsis; 
+}
+.reveal code {
+     font-size: 18pt ;
+     width: 1000px ;
+     line-height: 1.2 ;
 }
   
 .reveal .credit { /* credit block used by many different templates */
@@ -94,33 +105,32 @@
 }
 
 /* Styles for specific templates */
-.reveal .quoteslideheader img {
-     border: none ;
-     max-height: 400px ;
-     margin: 10px ;
-} 
-.reveal .quoteslideheader h1 {
-     font-size: 40pt ;
-     text-transform: none;
-}
-.reveal .quoteslideheader table th {
+
+/* .smallertext applies to tpl-smalltext and tpl-quote-header */
+.reveal .smallertext table th,
+.reveal .smallertext table td {
      font-size: 14pt ;
-     // color: #6096d0 ;
-     background: #404040 ;
      padding: 2px 8px ;
 }
-.reveal .quoteslideheader table td {
+.reveal .smallertext p {
      font-size: 14pt ;
-     // background: #6096d0 ;
-     padding: 2px 8px ;
 }
-.reveal .quoteslideheader code {
-     font-size: 10pt ;
-     width: 800px ;
-     height: 600px ;
+.reveal .smallertext code {
+     font-size: 14pt ;
      line-height: 1.1 ;
 }
 
+/* Quote slide */
+.reveal .quoteslideheader img {
+     max-height: 400px ;
+     margin: 10px ;
+} 
+.reveal .quoteslideheader h1 { 
+     font-size: 40pt ;
+     text-transform: none;
+}
+
+/* Twocolumn slide */
 .reveal .twocolumnslide {
      font-size: 21pt ;
 } 
@@ -130,10 +140,13 @@
      margin: 0px ;
 } 
 
+/* Diagram slide */
 .reveal .diagramslide img {
+     object-fit: contain   !important ;
      width: 1000px ;
      height: 1000px ;
 } 
-.reveal .diagramslide h1 {
+.reveal .diagramslide h1,
+.reveal .diagramslide h2 { // Use NTNU blue
    color: #00509e ;
 }

@@ -16,14 +16,26 @@ This is styled with a medium text size and ugly colour.
 
 ## Existing templates
 
-| Template | Purpose | Status |
-| :- | :- | :- |
-| tpl-diagram.md | White background for TiKz figures | Much used |
-| tpl-fitdiagram2.md | ??? | Used only by Jonas. |
-| tpl-fit-table.md | Scale table.  Does not work for long and narrow tables.  | Debug! |
-| tpl-quote-header.md | Image or quote with header and byline | In use |
-| tpl-quote.md | Image or quote with byline | Much used |
-| tpl-smalltext.md | Reduced text size and wide code boxes| Much used |
-| tpl-three.md | Three images side by side with byline | Used once |
-| tpl-titleslide.md | Titleslide with author | Used in other projects |
-| tpl-twocolumn.md | Two image side by side with byline | Much used |
++ `tpl-titleslide.md` : Titleslide with author 
+    + Used in other projects - for the modules we prefer titlepage from Akrinn
++ `tpl-diagram.md` : White background for TiKz figures 
+    + This mainly works.
+    + One might prefer automatic scaling of image size to fit the page.
++ `tpl-fitdiagram2.md` ???
+    + Used only by Jonas. 
++ `tpl-fit-table.md` : Supposed to scale a table to fit the page
+    + **Debug** This does not work
+    + Not used
++ `tpl-quote-header.md` : Image or quote with header and byline 
+    + Can also be used as titlepage with image (Using `h1`)
+    + Used.  
+    + Can we merge this with `tpl-smalltext.md`
++ `tpl-quote.md` : Image or quote with byline 
+    + This mainly works
+    + One might prefer automatic scaling of image size to fit the page.
++ `tpl-smalltext.md` : Reduced text size and wide code boxes
+    + **Debug** `code` boxes do not scale well
++ `tpl-three.md` : Three images side by side with byline 
+    + Used once, OK
++ `tpl-twocolumn.md` : Two image side by side with byline 
+    + Mainly works

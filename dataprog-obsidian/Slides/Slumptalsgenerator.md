@@ -358,7 +358,6 @@ Da vil maskinen prøve å finne noe tilfeldig som kan brukes
 som frø, f.eks. de siste sifrene fra klokkeslettet.
 
 ---
-<!-- slide template="[[tpl-smalltext]]" -->
 
 ```
 In [6]: random.seed(42)
@@ -376,10 +375,6 @@ In [10]: random.seed(42)
 In [11]: [ random.randint(1,10) for i in range(12) ]
 Out[11]: [2, 1, 5, 4, 4, 3, 2, 9, 2, 10, 7, 1]
 ```
-<!-- element class="largercode" -->
-
-::: credit
-:::
 
 note:
 Vi har dog muligheten til å sette frøet, eller *seed*.
