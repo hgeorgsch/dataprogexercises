@@ -405,8 +405,8 @@ For å gå videre med et rent og pent eksempel på paneldata, kan vi hente ut et
 
 (fragment)
 Det gir en tabell som dette, med kun én varegruppe representert.
----
 
+---
 <!-- slide template="[[tpl-smalltext]]" -->
 
 
