@@ -91,7 +91,7 @@ riktig utfallsrom.
 
 ---
 
-$$ s_i = a\cdot s_{i-1} + c \mod p $$
+$$ s_i = a\cdot s_{i-1} \mod p $$
 
 $$ y_i = \frac{s_i}{p} $$
 
@@ -99,8 +99,10 @@ note:
 Det mest kjente tilfellet er lineær kongruens.
 Her regner vi ut tilstanden ved å gange med et tall $a$ og ta resten
 ved divisjon med et tall $p$.
-Dersom vi velger $a$ og $p$ fornuftig, vil føgen av tall $s_i$
+Dersom vi velger $a$ og $p$ fornuftig, vil følgen av tall $s_i$
 se tilfeldig ut.
+
+For å generere tilfeldige tall mellom 0 og 1, kan vi simpelthen dele tilstanden modulusen $p$
 
 ---
 

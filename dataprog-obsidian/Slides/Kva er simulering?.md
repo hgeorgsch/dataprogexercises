@@ -69,7 +69,7 @@ Datasimuleringer kan håndtere langt mer komplekse regler og spille langt flere 
 
 <!-- slide template="[[tpl-quote]]" -->
 
-![[Economics_circular_flow_cartoon.jpg]]
+![[Economics_circular_flow_cartoon.jpg|800]]
 
 ::: credit
 By [United States Government](http://en.citizendium.org/wiki/File:Economics_circular_flow_cartoon.jpg), Public Domain,
@@ -78,9 +78,9 @@ via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=16387337
 
 note:
 Simulering blir også brukt i mange slags økonomiske fagfelt og planarbeid.
-Markedssimuleringer kan brukes for å teste mulige produktendringer eller mulige lovendringer.
+Markedssimuleringer kan brukes for å teste mulige produktendringer, prisendringer eller lovendringer.
 Demografiske simuleringer gjør det mulig å kartlegge behov for skoler og sykehjem i fremtiden.
-I finansnæringer kan vi studere mulige rentebaner o.l.
+Ved å simulere ulike bedrifter i aksjemarkedet, kan man teste ulike simuleringsstragier.
 
 ---
 
@@ -178,14 +178,8 @@ via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=99768017
 note:
 Og hvis vi vil gjøre det mer realistisk kan du gjøre rentenivået til en variabel og legge til mer eller mindre tilfeldige renteendringer hvert år.
 
-Vi kan også simulere hvordan kunder handler, for å teste effekten av pris- og
-produktendringer. 
-Vi kan simulere aksje- og verdipapirmarkeder og teste investeringsstragier.
-Under pandemien hørte vi meget om hvordan folkehelseinstituttet brukte simuleringer
-for å analysere smittespredningen under ulike smitteverntiltak.
-
 Så lenge du har en forestilling om situasjonen som skal simuleres, 
-er der ingen grense for hva du kan modellere og teste.
+er der ingen grense for hvor detaljert modellen  kan bli.
 
 Dersom du mangler den forestillingen, og ikke har en hensikt med simuleringen,
 blir resultatet alltid dårlig og uinteressant. 

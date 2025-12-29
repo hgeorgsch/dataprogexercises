@@ -15,7 +15,7 @@
   }
   .reveal .smalltext code {
      font-size: 14pt ;
-     width: 800px ;
+     width: 1000px ;
      line-height: 1.1 ;
   }
   .reveal .smalltext .largercode code {
