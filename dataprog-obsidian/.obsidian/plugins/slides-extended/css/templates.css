@@ -107,3 +107,8 @@
 .reveal .twocolumnslide {
      font-size: 21pt ;
 } 
+.reveal .twocolumnslide img {
+     object-fit: contain   !important ;
+     height: 500px ;
+     margin: 0px ;
+} 
