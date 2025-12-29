@@ -138,7 +138,6 @@ uke            object
 Tonn            int64
 kr/kg         float64
 dtype: object
-
 ```
 
 note: 
@@ -519,17 +518,19 @@ Radene fra B har fremdeles sine opprinnelige indeksverdier som begynner på 1295
 *pandas* vil ikke uten videre slå sammen to rader med forskjellige indekser.
 
 ---
-<!-- slide template="[[tpl-header]]" -->
+<!-- slide template="[[tpl-smalltext]]" -->
 
 ## Plotting
 
 ![[df1plot.svg]]
 
-
 ```python
 import matplotlib.pyplot as plt
 plt.plot( A["kr/kg"] )
 ```
+
+::: credit
+:::
 
 note:
 For å illustrere dette problemet, kan vi se på hvordan vi plotter data
