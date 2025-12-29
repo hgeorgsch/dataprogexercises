@@ -2,6 +2,8 @@
 title: Om å læra frå data
 tags:
   - lecture/video/perspective
+css:
+  - css/templates.css
 ---
 
 # Om å læra frå data
@@ -171,6 +173,7 @@ arbeide i genetikk og arvelære.
 <!-- slide template="[[tpl-twocolumn]]" -->
 
 ## Ronald Fisher (1890-1962)
+
 ::: leftimage
 ![[Youngronaldfisher2.jpeg]]
 :::

@@ -9,9 +9,8 @@
   }
   .reveal .twocolumnslide img {
      object-fit: contain   !important ;
-     height: 600px ;
-     border: none ;
-     margin: 10px ;
+     height: 500px ;
+     margin: 0px ;
   } 
 </style>
 
@@ -19,7 +18,6 @@
 <% content %>
 
 <split even>
-
 
 ::: block
 
