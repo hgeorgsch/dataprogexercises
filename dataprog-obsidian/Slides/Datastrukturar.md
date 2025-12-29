@@ -3,7 +3,7 @@ title: Datastrukturar
 tags:
   - lecture/video
 css:
-  - custom.css
+  - css/templates.css
 ---
 
 # Datastrukturar
@@ -131,7 +131,8 @@ Poenget med en *hasmap* er at det skal være raskt å slå opp en gitt nøgle, u
 
 ---
 <!-- slide template="[[tpl-smalltext]]" -->
-# Liste
+
+## Liste
 
 ```python
 [ "Ola Nordmann", "Kari Nordmann", "John Smith", "Jane Doe", ... ]
@@ -148,8 +149,8 @@ I python vil det si slutten av listen, men i andre sprog kan det være i
 starten av listen at det går raskt å gjøre endringer.
 
 ---
-<!-- slide template="[[tpl-smalltext]]" -->
-# Tabell (*array*)
+
+## Tabell (*array*)
 
 | # | Verdi |
 | :- | :- |
@@ -160,9 +161,6 @@ starten av listen at det går raskt å gjøre endringer.
 | 4 | `"Tom"` |
 | 5 | `"Dick"` |
 | 6 | `"Harry"` |
-
-::: credit
-:::
 
 note:
 En *array* ligner en liste, men prioriteringene er anderledes.
@@ -179,15 +177,13 @@ eller mindre plass.
 ---
 <!-- slide template="[[tpl-smalltext]]" -->
 
-# Lister i python
+## Lister i python
 
 ```
-
 In [2]: kunder = [ "Ola Nordmann", "Kari Nordmann", "John Smith", "Jane Doe" ]
 
 In [3]: print( kunder[1] )
 Kari Nordmann
-
 ```
 
 ::: credit

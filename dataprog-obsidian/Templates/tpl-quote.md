@@ -20,6 +20,7 @@
      border-right-style: solid ;
      text-align: center ;
   }
+  /* .credit is redundant - identical to global style *;
   .reveal .quoteslide .credit {
      font-size: 18pt ;
   }

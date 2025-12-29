@@ -5,6 +5,7 @@
      border: none ;
      margin: 10px ;
   } 
+  .reveal .smalltext h1,
   .reveal .smalltext h1 {
      font-size: 28pt ;
      text-transform: none;
