@@ -242,9 +242,9 @@ Den har en periode på $2^{19937}-1$ tilstander før den gjentar seg selv.
 Hvis du skriver denne lengden ut i titallssystemet, får vi om lg 6000 sifre.
 
 ---
-<!-- slide template="[[tpl-smalltext]]" -->
+<!-- slide template="[[tpl-quote-header]]" -->
 
-![[6sided_dice_(cropped).jpg|300]]
+![[6sided_dice_(cropped).jpg]]
 
 ```python
 import random

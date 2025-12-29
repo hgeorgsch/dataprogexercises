@@ -67,7 +67,6 @@
 }
 .reveal code {
      font-size: 18pt ;
-     width: 1000px ;
      line-height: 1.2 ;
 }
   
@@ -112,13 +111,6 @@
      font-size: 14pt ;
      padding: 2px 8px ;
 }
-.reveal .smallertext p {
-     font-size: 14pt ;
-}
-.reveal .smallertext code {
-     font-size: 14pt ;
-     line-height: 1.1 ;
-}
 
 /* smalltext template */
 .reveal .smalltext img {
@@ -129,6 +121,13 @@
 .reveal .smalltext h2 {
      font-size: 28pt ;
      text-transform: none;
+}
+.reveal .smalltext code {
+     font-size: 14pt ;
+     line-height: 1.1 ;
+}
+.reveal .smalltext p {
+     font-size: 14pt ;
 }
 .reveal .smalltext .credit {
      font-size: 16pt ;
