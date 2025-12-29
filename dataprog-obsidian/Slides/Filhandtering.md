@@ -1,6 +1,8 @@
 ---
 tags:
   - lecture/video/perspective
+css:
+  - css/templates.css
 ---
 <!-- slide template="[[tpl-quote-header]]" -->
 # Filbehandling

@@ -1,9 +1,11 @@
 ---
 tags:
   - lecture
+css:
+  - css/templates.css
 ---
 <!-- slide template="[[tpl-quote-header]]" -->
-# Tidsrekkjer
+## Tidsrekkjer
 
 ![[arbeidsledige.svg]]
 
@@ -13,29 +15,29 @@ Hans Georg Schaathun
 
 ---
 
-+ Tidsrekkja inneber *to* ting
+- Tidsrekkja inneber *to* ting
 	1. Tid som indeks
 	2. Numerisk søyle
-+ *DataFrame* i pandas kan innehalda fleire tidsrekkjer
+- *DataFrame* i pandas kan innehalda fleire tidsrekkjer
 
 ---
 
-# Læringsmål
+## Læringsmål
 
-+ Repetisjon
-	+ Utdrag frå datasett: filtrering på fleire søyler.
-    + Numeriske søyler
-+ Nytt stoff
-	+ Tidssøyler
-	+ Byte av indeks.
-	+ Frekvens og gruppering av radar.
-	+ Fletting av datasett på tid.
-+ Om me rekk det
-	+ Manglande data og NaN (not a number).
+- Repetisjon
+	- Utdrag frå datasett: filtrering på fleire søyler.
+    - Numeriske søyler
+- Nytt stoff
+	- Tidssøyler
+	- Byte av indeks.
+	- Frekvens og gruppering av radar.
+	- Fletting av datasett på tid.
+- Om me rekk det
+	- Manglande data og NaN (not a number).
 
 ---
 
-# Problem 1.
+## Problem 1.
 
 > Korleis handterer me ... 
 
