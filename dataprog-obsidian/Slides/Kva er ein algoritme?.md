@@ -1,6 +1,11 @@
 ---
+title: Kva er ein algoritme?
+author: Hans Georg Schaathun
+date: December 2025
 tags:
   - lecture/video/perspective
+css:
+  - css/templates.css
 ---
 
 # Kva er ein algoritme?

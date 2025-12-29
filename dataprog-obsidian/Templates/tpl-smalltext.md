@@ -1,12 +1,14 @@
 
 <style>
+/* These styles are quite unique to the smalltext template, and therefore
+ * they are kept here. */
   .reveal .smalltext img {
      height: 300px ;
      border: none ;
      margin: 10px ;
   } 
   .reveal .smalltext h1,
-  .reveal .smalltext h1 {
+  .reveal .smalltext h2 {
      font-size: 28pt ;
      text-transform: none;
   }
