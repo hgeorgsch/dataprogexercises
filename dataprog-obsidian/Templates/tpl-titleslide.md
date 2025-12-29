@@ -1,9 +1,4 @@
 <style>
-  .reveal .slides h1 {
-     font: roman ;
-     font-size: 60pt ;
-     text-transform: none ;
-  }
   .author {
      font: roman ;
      font-size: 28pt ;
