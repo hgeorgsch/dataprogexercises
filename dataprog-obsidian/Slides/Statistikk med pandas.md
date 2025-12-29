@@ -126,8 +126,6 @@ Vi vil stort sett bruke numerisk indeks på radene og *label*-indeks på søylen
 Med pandas kan vi manipulere våre *data frames* på mange ulike måter.  Vi kan ta utsnitt av datasettet, definere nye søyler, sette sammen datasett, finne gjennomsnitt og standardavvik og tegne plott.
 
 ---
-<!-- slide template="[[tpl-header]]" -->
-
 ## Datatypar
 
 ```
@@ -148,8 +146,6 @@ Vi kan bruke `dtypes`-attributten til å se hvilke datatyper søylene har.
 Det er de numeriske søylene som er interessante i statistikk.  I eksportdatasettet vårt er det volumet i tonn og kiloprisen i kroner. Ukenummeret er en streng som samler år og uke, og den er vanskelig å regne på.  Vi kan bruke indeksen, som forsåvidt nummererer ukene kronologisk i vårt tilfelle.  Det er mulig å skille år og uke i ukestrengen, men det får vi ta en anden gang.
 
 ---
-<!-- slide template="[[tpl-header]]" -->
-
 ## Deskriptiv statistikk
 
 ```
@@ -165,9 +161,6 @@ min       60.000000    17.460000
 75%    13357.750000    58.517500
 max    29238.000000   123.280000
 ```
-
-::: credit
-:::
 
 note:
 Den enkleste måten å få ut en statistisk oppsummering av datasettet er `describe()`-metoden.
@@ -222,8 +215,6 @@ Til forskjell fra vanlige lister inneholder derimot *Series* metadata, og vi ser
 Merk at elementene beholder sine indekser om vi tar et utdrag av serien.  De er dermed ikke posisjonsnummer som vi ville ha måttet bruke med vanlige lister.
 
 ---
-<!-- slide template="[[tpl-header]]" -->
-
 ## Statistikk på *Series*-objektet
 
 ```
@@ -756,14 +747,9 @@ I dette tilfellet visste vi at vi hadde alle observasjonene på hvert tidspunkt,
 
 ---
 
-<!-- slide template="[[tpl-quote-header]]" -->
-
 ## Manglande data
 
-![[join.svg]]
-
-::: credit
-:::
+![[join.svg|600]]
 
 note:
 Vi trenger selvsagt å tenke på hva man gjør når man mangler data.
@@ -774,12 +760,7 @@ felles og noen unike rader.
 
 ---
 
-<!-- slide template="[[tpl-quote]]" -->
-
 ![[joins.svg]]
-
-::: credit
-:::
 
 note:
 Der er fire vanlige valg.  Terminologien er den samme som brukes i 
