@@ -44,6 +44,10 @@ to scale well.  We should explore the use of CSS flexbox, below.
 These templates are early attempts using
 [CSS flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).
 
++ `tpl-flex.md` scales images to use available space
+    + Tested in Test.md - seems to work
+    + Should be tested with tables, code and other contents
+    + Not yet put to use
 + `tpl-fitdiagram2.md` ???
     + Used only by Jonas. 
 + `tpl-fit-table.md` : Supposed to scale a table to fit the page

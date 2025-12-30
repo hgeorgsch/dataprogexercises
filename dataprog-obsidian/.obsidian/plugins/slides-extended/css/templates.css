@@ -163,3 +163,40 @@
 .reveal .diagramslide h2 { // Use NTNU blue
    color: #00509e ;
 }
+
+/* flex templates */
+.reveal section .flexcolumn {
+   display: flex ;
+   flex-direction: column ;
+   justify-content: center ;
+   align-items: center ;
+   margin: 100px ;
+   width: 100% ;
+   height: 700px ;
+   font-size: 18pt ;
+}
+.reveal section .flexcolumn h2 {
+   flex: 0 0 auto ;
+   width: 100% ;
+   padding: 0 ;
+}
+.reveal section .flexcolumn p {
+   flex: 0 0 auto ;
+   width: 100% ;
+}
+.reveal section .flexcolumn .flexcontent {
+}
+.reveal section .flexcolumn img {
+   flex: 5 5 auto ;
+   max-width: 100% ;
+   max-height: 95% ;
+   object-fit: contain  !important ;
+   height: auto ;
+   width: auto ;
+   min-height: 100px ;
+   border: none ;
+}
+.reveal section .flexcolumn .flexcredit {
+   font-size: 16pt ;
+   flex: 0 0 content ;
+}
