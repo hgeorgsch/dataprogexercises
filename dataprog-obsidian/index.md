@@ -53,6 +53,9 @@ Andreas: andreas.h.schille@ntnu.no
 ![[kjapp-telnet.mkv]]
 
 
+## Fragment
+
++ [[Rekursjon]]
 
 ## Nedprioritert stoff
 
