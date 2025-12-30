@@ -32,3 +32,7 @@
 	+ [[Kva er simulering?]]
 	+ [[Slumptalsgenerator]]
 	+ [[Datastrukturar]]
++ Demo
+	+ [[Datastrukturar i Python]]
++ Kuriosa
+    + [[Tilfeldigheit-Demo]]

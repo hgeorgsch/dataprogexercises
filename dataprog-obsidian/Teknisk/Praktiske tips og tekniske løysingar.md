@@ -35,3 +35,9 @@ python -m ipykernel install --user --name=dataprog
 ```
 
 + Ein treng ikkje ha det virtuelle køyremiljøet i arbeidskatalogen.  Det kan liggja kvar som helst.
+
+
+## Obsidian Slides Extended
+
++ [[Test]]
++ [[Templates]]

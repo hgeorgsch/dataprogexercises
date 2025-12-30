@@ -31,3 +31,6 @@ tags:
 + [[Klyngeanalyse]]
 + [[Support Vector Machines]]
 
+
++ Kuriosa
+	+ [[Iris-Statistics]]
