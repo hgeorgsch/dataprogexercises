@@ -14,7 +14,7 @@ tags:
     + [[Statistikk med pandas]]
         + [[Notar til Statistikk med pandas]]
 + Perspektivføredrag.  Del 2.
-	+ [[Tid og tidsrekkjer]]
+	+ [[Tidsrekkjer]]
 	+ [[Fletting av datasett]]
 	+ [[Melt og Pivot]]
 
