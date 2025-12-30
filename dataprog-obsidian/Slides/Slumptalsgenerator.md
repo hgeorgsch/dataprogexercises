@@ -12,7 +12,7 @@ css:
 
 ---
 
-![newton](https://pbs.twimg.com/media/D2EZ4DwVAAApNdd?format=jpg&name=900x900)
+![[newton.jpeg]]
 
 note:
 Mange simuleringer handler om tilfeldige prosesser.
