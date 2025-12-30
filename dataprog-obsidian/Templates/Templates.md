@@ -24,26 +24,25 @@ to scale well.  We should explore the use of CSS flexbox, below.
 
 + `tpl-titleslide.md` : Titleslide with author 
     + Used in other projects - for the modules we prefer titlepage from Akrinn
++ `tpl-flex.md` : scale images to use available space
+    + This can probably replace quote and quote-header
+    + Used much in Slumptalsgenerator
+    + Uses [CSS flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).
+    + Can also be used as titlepage with image (Using `h1`)
 + `tpl-diagram.md` : White background for TiKz figures 
-    + This mainly works.
-    + One might prefer automatic scaling of image size to fit the page.
+    + Except for the white background, this works like tpl-flex
 + `tpl-quote-header.md` : Image or quote with header and byline 
     + Can also be used as titlepage with image (Using `h1`)
     + Used.  
-    + Can we merge this with `tpl-smalltext.md`
+    + **Deprecated** in favour of tpl-flex.
 + `tpl-quote.md` : Image or quote with byline 
-    + This mainly works
-    + One might prefer automatic scaling of image size to fit the page.
+    + **Deprecated** in favour of tpl-flex.
 + `tpl-smalltext.md` : Reduced text size and wide code boxes
     + **Debug** `code` boxes do not scale well
 + `tpl-three.md` : Three images side by side with byline 
     + Used once, OK
 + `tpl-twocolumn.md` : Two image side by side with byline 
     + Mainly works
-+ `tpl-flex.md` scales images to use available space
-    + This can probably replace quote and quote-header
-    + Used much in Slumptalsgenerator
-    + Uses [CSS flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).
 + `tpl-fitdiagram2.md` ???
     + Used only by Jonas. 
     + Early attempt using flexbox.  Does it work?
