@@ -12,6 +12,8 @@ tags:
     + [[Notar til Om å læra frå data]]
 	
 2. [[Evaluering av modellar]]
+	1. Øving [[Evaluering]]
+	2. Kuriosa [[hypothesistest]]
 
 3. [[Unsupervised Learning]]
 
