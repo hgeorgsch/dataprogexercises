@@ -1,7 +1,10 @@
 
 1. [[Notar til Agent-basert simulering]]
 
-+ [[Objektorientert modellering og programmering]]
++ Perspektiv
+	+ [[Objektorientert modellering og programmering]]
+	+ [[Mentale og matematiske modellar]]
+	+ 
 
 + Øvingar
 	+ [[LoanClass]]
