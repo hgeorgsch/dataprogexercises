@@ -7,9 +7,10 @@ tags:
 # Maskinlæring
 
 ## Førelesing
+
++ [[Om å læra frå data]]
+    + [[Notar til Om å læra frå data]]
 	
-1. Notar til [[Om å læra frå data]]
-	1. [[Notar til Om å læra frå data]]
 2. [[Evaluering av modellar]]
 
 3. [[Unsupervised Learning]]

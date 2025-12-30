@@ -9,6 +9,15 @@ tags:
 
 # CSV og pandas
 
++ Perspektivføredrag.  Del 1.
+    + [[Filhandtering]]
+    + [[Statistikk med pandas]]
+        + [[Notar til Statistikk med pandas]]
++ Perspektivføredrag.  Del 2.
+	+ [[Tid og tidsrekkjer]]
+	+ [[Fletting av datasett]]
+	+ [[Melt og Pivot]]
+
 + Grunnleggjande pandas
 	+ index
 	+ søyler og radar
