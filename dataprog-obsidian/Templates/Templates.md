@@ -16,16 +16,15 @@ This is styled with a medium text size and ugly colour.
 
 ## Existing templates
 
+This templates work, but are fairly crude.  Each box has more
+or less fixed width, and I have not managed to get the contents
+to scale well.  We should explore the use of CSS flexbox, below.
+
 + `tpl-titleslide.md` : Titleslide with author 
     + Used in other projects - for the modules we prefer titlepage from Akrinn
 + `tpl-diagram.md` : White background for TiKz figures 
     + This mainly works.
     + One might prefer automatic scaling of image size to fit the page.
-+ `tpl-fitdiagram2.md` ???
-    + Used only by Jonas. 
-+ `tpl-fit-table.md` : Supposed to scale a table to fit the page
-    + **Debug** This does not work
-    + Not used
 + `tpl-quote-header.md` : Image or quote with header and byline 
     + Can also be used as titlepage with image (Using `h1`)
     + Used.  
@@ -39,3 +38,14 @@ This is styled with a medium text size and ugly colour.
     + Used once, OK
 + `tpl-twocolumn.md` : Two image side by side with byline 
     + Mainly works
+
+## flexbox templates
+
+These templates are early attempts using
+[CSS flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).
+
++ `tpl-fitdiagram2.md` ???
+    + Used only by Jonas. 
++ `tpl-fit-table.md` : Supposed to scale a table to fit the page
+    + **Debug** This does not work
+    + Not used
