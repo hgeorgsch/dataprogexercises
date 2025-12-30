@@ -16,6 +16,8 @@ Andreas: andreas.h.schille@ntnu.no
 	+ [[Slides]]
 	+ [Panopto recordings](https://ntnu.cloud.panopto.eu/Panopto/Pages/Sessions/List.aspx?folderID=1ed05bcf-ae8f-429a-8c25-b330009a4114)
 	+ [Panopto Tool Login](https://ntnu.cloud.panopto.eu/)
++ [[IIRA2001 hausten 2025]]
++ Program [[IIRA2011]]
 + Program IIRA6001: 
 	+ Sjå [[IIRA6001]] som oversyn over læringsmateriell i Jupyter Books
 	+ [[Skisse til opplegg]]
@@ -51,6 +53,9 @@ Andreas: andreas.h.schille@ntnu.no
 ![[kjapp-telnet.mkv]]
 
 
+## Fragment
+
++ [[Rekursjon]]
 
 ## Nedprioritert stoff
 
