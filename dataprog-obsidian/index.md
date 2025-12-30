@@ -9,6 +9,7 @@ Andreas: andreas.h.schille@ntnu.no
 + [[Project Management]] (budsjett og rekneskap)
 + [[Praktiske tips og tekniske løysingar]]
 + [[Emneadministrasjon]]
++ [[Unused images]]
 + Relaterte emne
 	+ [[Metodeemnet]]
 + Føredrag

@@ -7,7 +7,9 @@
     "Slides/Scripts/",
     "Templates/"
   ],
-  "filesToIgnore": [],
+  "filesToIgnore": [
+    "index.md"
+  ],
   "fileTypesToIgnore": [
     "ipynb"
   ],

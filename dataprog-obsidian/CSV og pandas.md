@@ -40,6 +40,7 @@ tags:
 		+ Bruker blackboard-data
 		+ I stor grad dekt i opningsseminaret
 	+ [[Multiindex]]
+		+ see also [[Multiindex 2024]]
 
 + Øvingar
     + [[Tid og dato]]
