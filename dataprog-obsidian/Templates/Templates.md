@@ -50,6 +50,3 @@ These templates are early attempts using
     + Not yet put to use
 + `tpl-fitdiagram2.md` ???
     + Used only by Jonas. 
-+ `tpl-fit-table.md` : Supposed to scale a table to fit the page
-    + **Debug** This does not work
-    + Not used
