@@ -46,24 +46,6 @@ and CSS styles..
 
 
 ---
-<!-- slide template="[[tpl-fit-table]]" -->
-
-::: header
-## *Record*
-:::
-
-|        kunde | data           |
-| -----------: | :------------- |
-|    `fornamn` | "Ola"          |
-|  `etternamn` | "Normann"      |
-| `postnummer` | 6016           |
-|       `gate` | "Borgundvegen" |
-|     `nummer` | 666            |
-
-::: credit
-:::
-
----
 
 ## Tabell (*array*)
 
@@ -79,11 +61,9 @@ and CSS styles..
 
 
 ---
-<!-- slide template="[[tpl-fit-table]]" -->
+<!-- slide template="[[tpl-flex]]" -->
 
-::: header
 ## Tabell (*array*)
-:::
 
 | # | Verdi |
 | :- | :- |

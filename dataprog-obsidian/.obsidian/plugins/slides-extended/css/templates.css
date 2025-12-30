@@ -184,6 +184,10 @@
    flex: 0 0 auto ;
    width: 100% ;
 }
+.reveal section .flexcolumn table {
+   flex: 0 0 auto ;
+   width: 100% ;
+}
 .reveal section .flexcolumn .flexcontent {
 }
 .reveal section .flexcolumn img {
