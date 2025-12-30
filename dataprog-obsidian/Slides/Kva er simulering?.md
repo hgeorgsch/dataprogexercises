@@ -1,6 +1,8 @@
 ---
 tags:
   - lecture/perspective
+css:
+   - css/templates.css
 ---
 
 # Kva er simulering?
@@ -17,7 +19,7 @@ note:
 Simulering er en øvelse i spørsmålet *hva skjer hvis ...*?
 
 ---
-<!-- slide template="[[tpl-quote]]" -->
+<!-- slide template="[[tpl-flex]]" -->
 
 ![[Maler_der_Grabkammer_der_Nefertari_003.jpg]]
 
@@ -36,7 +38,7 @@ Ved å simulere hendelsene og utfordringene som ventet dem skulle de kunne gjør
 Jeg skal ikke påstå at egypterne hadde en presis modell av det hinsidige, men spillet er likevel et simuleringsspill, og vi kan forestille oss at det har vært brukt, ikke bare som en lek, men som et verktøy for å forstå en komplisert situasjon gjennom en forenklet modell.
 
 ---
-<!-- slide template="[[tpl-quote]]" -->
+<!-- slide template="[[tpl-flex]]" -->
 
 ![[KnightsTemplarPlayingChess1283.jpg]]
 
@@ -49,7 +51,7 @@ note:
 Sjakk er et mer kjent eksempel. Sjakkbrikkene er selvsagt en meget primitiv modell av virkelige soldater, men spillet er likefullt en simulering av et slag.
 
 ---
-<!-- slide template="[[tpl-quote]]" -->
+<!-- slide template="[[tpl-flex]]" -->
 
 ![[SARS-CoV-2_without_background.png]]
 
@@ -67,7 +69,7 @@ Datasimuleringer kan håndtere langt mer komplekse regler og spille langt flere 
 
 ---
 
-<!-- slide template="[[tpl-quote]]" -->
+<!-- slide template="[[tpl-flex]]" -->
 
 ![[Economics_circular_flow_cartoon.jpg|800]]
 
@@ -84,7 +86,7 @@ Ved å simulere ulike bedrifter i aksjemarkedet, kan man teste ulike simulerings
 
 ---
 
-<!-- slide template="[[tpl-quote]]" -->
+<!-- slide template="[[tpl-flex]]" -->
 
 ![[2487_cline_vr_studio_20190318.jpg]]]
 
@@ -98,7 +100,7 @@ Forutsetningen for at simuleringen skal være nyttig er at vi kan leve oss inn i
 
 ---
 
-<!-- slide template="[[tpl-quote]]" -->
+<!-- slide template="[[tpl-flex]]" -->
 
 ![[Ludo-3.jpg]]]
 

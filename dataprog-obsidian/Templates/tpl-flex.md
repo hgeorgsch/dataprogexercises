@@ -6,5 +6,5 @@
 
 <div class="flexcolumn">
   <% content %>
-  <div class="flexcredit"><% credit %></div>
+  <div class="credit"><% credit %></div>
 </div>

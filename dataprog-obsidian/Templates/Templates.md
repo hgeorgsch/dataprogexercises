@@ -14,6 +14,8 @@ only when adding author and other information.
 Use `h2` for slide headers throughout.
 This is styled with a medium text size and ugly colour.
 
+Element styiling with class `smallertext` reduces the font size.
+
 ## Existing templates
 
 This templates work, but are fairly crude.  Each box has more
@@ -38,15 +40,10 @@ to scale well.  We should explore the use of CSS flexbox, below.
     + Used once, OK
 + `tpl-twocolumn.md` : Two image side by side with byline 
     + Mainly works
-
-## flexbox templates
-
-These templates are early attempts using
-[CSS flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).
-
 + `tpl-flex.md` scales images to use available space
-    + Tested in Test.md - seems to work
-    + Should be tested with tables, code and other contents
-    + Not yet put to use
+    + This can probably replace quote and quote-header
+    + Used much in Slumptalsgenerator
+    + Uses [CSS flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).
 + `tpl-fitdiagram2.md` ???
     + Used only by Jonas. 
+    + Early attempt using flexbox.  Does it work?

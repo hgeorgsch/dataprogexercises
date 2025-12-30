@@ -113,7 +113,6 @@ skal bli lettere å lese.
 
 ## Avbilding (*map*)
 
-
 ![[map.svg|480]]
 
 note:
@@ -213,7 +212,7 @@ Der finnes mange andre typer samlinger, men i små prosjekter klarer
 man seg fint med disse to: lister og *map*, eller `list` og `dict` i python.
 
 ---
-<!-- slide template="[[tpl-quote]]" -->
+<!-- slide template="[[tpl-flex]]" -->
 
 ![[Pandas_dataframe.png]]
 

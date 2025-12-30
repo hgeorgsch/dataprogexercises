@@ -17,7 +17,7 @@ Algoritmene får gjerne skylden for alle dårlige beslutninger i sosiale medier 
 Algoritmene fremstår lett, med rette eller urette, som en mystisk kraft som tar stadig større makt over livene våre.
 
 ---
-<!-- slide template="[[tpl-quote]]" -->
+<!-- slide template="[[tpl-flex]]" -->
 
 ![[addition.png]]
 
@@ -62,7 +62,7 @@ Det er denne karen som har skylden får at vi sluttet å regne med romertall i E
 Muḥammad ibn Mūsā al-Khwārizmī.  Han var perser, men skrev på arabisk.
 
 ---
-<!-- slide template="[[tpl-quote]]" -->
+<!-- slide template="[[tpl-flex]]" -->
 
 ![[CaspianSeaDrainage_v1.png]]
 
@@ -76,7 +76,7 @@ al-Khwārizmī betyr «fra Khwarizmi» som er området rundt Aralsjøen på gren
 
 ---
 
-<!-- slide template="[[tpl-quote]]" -->
+<!-- slide template="[[tpl-flex]]" -->
 
 ![[Image-Al-Kitāb_al-muḫtaṣar_fī_ḥisāb_al-ğabr_wa-l-muqābala.jpg]]
 
@@ -93,7 +93,7 @@ Mohammad fra Khawarismi skrev flere bøker.  En av de viktigste, som ble spredd 
 Disse tallene kaller vi  gjerne for arabertall i motsetning til romertall, selv om Muhammad antagelig hentet dem fra Indien.
 
 ---
-<!-- slide template="[[tpl-quote]]" -->
+<!-- slide template="[[tpl-flex]]" -->
 
 ![[roman.png]]
 
@@ -106,7 +106,7 @@ Hvis vi prøver å forestille oss norditalienske renesansekjøbmenn som skulle f
 De som regnet med arabertall ble efter hvert kjent som algoritmikere, altså de som følger al-Khwarizmi, i motsetning til f.eks. abakister som brukte kuleramme.
 
 ---
-<!-- slide template="[[tpl-quote]]" -->
+<!-- slide template="[[tpl-flex]]" -->
 
 ![[Babbages_Analytical_Engine,_1834-1871._(9660574685).jpg]]
 ::: credit
@@ -120,7 +120,7 @@ Det som kjennetegner algoritmer er at de er så presist og abstrakt formulert at
 Charles Babbage tok denne idéen helt ut på første halvdel av 1800-tallet, da han designet en mekanisk regnemaskin, under navnet *Analytical Engine*.  
 
 ---
-<!-- slide template="[[tpl-quote]]" -->
+<!-- slide template="[[tpl-flex]]" -->
 
 ![[Ada_Lovelace_portrait.jpg]]
 
@@ -136,7 +136,7 @@ Den moderne algoritmen tilskrives gjerne Ada Lovelace, som utviklet algoritmer t
 Selv om the *Analytical Engine* aldri ble bygd, i alle fall ikke slik at den ble brukbar i praksis, består Ada Lovelace sitt arbeide som en del av fundamentet for informatikk og programmering, selv ett hundrede år før vi fikk elektroniske datamaskiner.
 
 ---
-<!-- slide template="[[tpl-quote]]" -->
+<!-- slide template="[[tpl-flex]]" -->
 
 ![[ComputerProgrammer.jpg]]
 

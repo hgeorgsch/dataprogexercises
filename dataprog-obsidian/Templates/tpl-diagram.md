@@ -1,6 +1,6 @@
 <!-- slide bg="white" -->
 
-<div class="diagramslide">
+<div class="flexcolumn whitebg">
 <% content %>
 <% credit %> <!-- element class="credit" -->
 </div>
