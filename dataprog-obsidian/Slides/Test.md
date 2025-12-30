@@ -130,21 +130,60 @@ and CSS styles..
 
 
 ---
-<!-- slide template="[[tpl-smalltext]]" -->
+<!-- slide template="[[tpl-flex]]" -->
 
-## Lister i python
+## Test flex
 
-```
-
-In [2]: kunder = [ "Ola Nordmann", "Kari Nordmann", "John Smith", "Jane Doe" ]
-
-In [3]: print( kunder[1] )
-Kari Nordmann
-
-```
+![[Pandas_dataframe.png]]
 
 ::: credit
+By Lucasadvent - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=131116177
 :::
+
+
+---
+<!-- slide template="[[tpl-flex]]" -->
+
+![[Alan_Turing.jpg]]
+
+::: credit
+Short credit **TODO** 
+:::
+---
+<!-- slide template="[[tpl-flex]]" -->
+
+## Test flex
+
+
+![[Alan_Turing.jpg]]
+
+::: credit
+Short credit **TODO** 
+:::
+
+---
+<!-- slide template="[[tpl-flex]]" -->
+
+## Test flex
+
+What if we put in extra text here.
+
+![[Alan_Turing.jpg]]
+
+::: credit
+Long Credit **TODO** 
+What if the cred is very very long ... even longer than reasonable.
+Does it take two lines now?
+Nope, I have to time a bit more.  Maybe this suffices.
+Let's keep writing ... 
+keep writing ... 
+keep writing ... 
+keep writing ... 
+keep writing ... 
+keep writing ... 
+keep writing ... 
+:::
+
 
 ---
 <!-- slide template="[[tpl-quote]]" -->
