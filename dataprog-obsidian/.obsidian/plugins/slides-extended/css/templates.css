@@ -154,16 +154,7 @@
 } 
 
 /* Diagram slide */
-.reveal .diagramslide img {
-     object-fit: contain   !important ;
-     width: 1000px ;
-     height: 1000px ;
-} 
-.reveal .diagramslide h1,
-.reveal .diagramslide h2 { // Use NTNU blue
-   color: #00509e ;
-}
-.reveal .whitebg { // Use NTNU blue
+.reveal section.has-light-background h2 { /* Use NTNU blue */
    color: #00509e ;
 }
 
@@ -182,6 +173,12 @@
    flex: 0 0 auto ;
    width: 100% ;
    padding: 0 ;
+}
+.reveal section .flexcolumn h1 {
+   flex: 0 0 auto ;
+   width: 100% ;
+   padding: 0 ;
+   font-size: 40pt ;
 }
 .reveal section .flexcolumn p {
    flex: 0 0 auto ;
