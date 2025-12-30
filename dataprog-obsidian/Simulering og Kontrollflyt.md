@@ -15,6 +15,8 @@
     + [[Kontrollflyt i Python]]
         + [[Kontrollflyt i Python (script)]]
     + [[Kva er ein algoritme?]]
++ Øvingar
+    + [[Halveringsmetoden]]
 
 + [ ] Revurder utval.  Flytta føredrag til seinare?
 

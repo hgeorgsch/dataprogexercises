@@ -1,6 +1,7 @@
 
 These are illustrations used for slides.  They may or may not be relevant, but are not currently used.
 
+![[ntnu.svg]]
 
 ![[Jean_Piaget_in_Ann_Arbor.png]]
 

@@ -11,7 +11,8 @@
     "index.md"
   ],
   "fileTypesToIgnore": [
-    "ipynb"
+    "ipynb",
+    "webp"
   ],
   "linksToIgnore": [],
   "tagsToIgnore": [],
