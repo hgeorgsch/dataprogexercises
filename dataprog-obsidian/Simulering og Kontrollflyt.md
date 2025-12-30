@@ -17,6 +17,7 @@
     + [[Kva er ein algoritme?]]
 + Øvingar
     + [[Halveringsmetoden]]
+    + [[Smittespreiing]]
 
 + [ ] Revurder utval.  Flytta føredrag til seinare?
 
