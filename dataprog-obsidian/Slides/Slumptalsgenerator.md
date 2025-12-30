@@ -30,7 +30,7 @@ I statistikken kaller vi gjerne slike tilfeldige prosesser for
 et penere ord for tilfeldig.
 
 ---
-<!-- slide template="[[tpl-quote]]" -->
+<!-- slide template="[[tpl-flex]]" -->
 
 ![[Casino_de_Monte-Carlo_(49582351802).jpg]]
 
@@ -45,7 +45,7 @@ kalt for *Monte Carlo-simuleringer* efter de kjente kasinoene
 i Monte Carlo, med spill som roulette.
 
 ---
-<!-- slide template="[[tpl-quote]]" -->
+<!-- slide template="[[tpl-flex]]" -->
 
 ![[6sided_dice_(cropped).jpg]]
 
@@ -242,7 +242,7 @@ Den har en periode på $2^{19937}-1$ tilstander før den gjentar seg selv.
 Hvis du skriver denne lengden ut i titallssystemet, får vi om lg 6000 sifre.
 
 ---
-<!-- slide template="[[tpl-quote-header]]" -->
+<!-- slide template="[[tpl-flex]]" -->
 
 ![[6sided_dice_(cropped).jpg]]
 
@@ -266,7 +266,7 @@ Hvis vi skal simulere en terning, f.eks. kan vi bruke funksjonen
 `randint` og be om et tall mellom 1 og 6.
 
 ---
-<!-- slide template="[[tpl-smalltext]]" -->
+<!-- slide template="[[tpl-flex]]" -->
 
 ```python
 import random
@@ -291,7 +291,7 @@ punkter som forekommer; vi får bare heltall og ikke
 desimaltallene imellom.
 
 ---
-<!-- slide template="[[tpl-smalltext]]" -->
+<!-- slide template="[[tpl-flex]]" -->
 
 ```
 In [6]: [ random.random() for _ in range(8) ]
@@ -305,6 +305,7 @@ Out[6]:
  0.6469617118607379,
  0.2050789573379762]
 ```
+<!-- element class="smallertext" -->
 
 ![[kontuniform.svg]]
 
@@ -319,7 +320,7 @@ sannsynlige, men den er kontinuerlig og ikke diskret.
 
 ---
 
-<!-- slide template="[[tpl-smalltext]]" -->
+<!-- slide template="[[tpl-flex]]" -->
 
 ```
 In [9]: [ random.gauss() for _ in range(8) ]
@@ -333,6 +334,7 @@ Out[9]:
  0.6089163638569696,
  -0.38565740512221974]
 ```
+<!-- element class="smallertext" -->
 
 ![[gauss.svg]]
 
