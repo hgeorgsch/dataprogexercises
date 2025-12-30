@@ -33,3 +33,7 @@ These are illustrations used for slides.  They may or may not be relevant, but a
 ![[Lev_Vygotsky.jpg]]
 
 ![[Artificial_Intelligence_&_AI_&_Machine_Learning_-_30212411048.jpg]]
+
+There are two images of Alan Turing, this one is not used:
+
+![[Alan_Turing.jpg]]

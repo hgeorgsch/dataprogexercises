@@ -13,6 +13,9 @@ tags:
     + [[Filhandtering]]
     + [[Statistikk med pandas]]
         + [[Notar til Statistikk med pandas]]
++ Øvingar Del 1
+    + [[Eksportdata]]
+    + [[Tid og dato]]
 + Perspektivføredrag.  Del 2.
 	+ [[Tidsrekkjer]]
 	+ [[Fletting av datasett]]
@@ -42,8 +45,6 @@ tags:
 	+ [[Multiindex]]
 		+ see also [[Multiindex 2024]]
 
-+ Øvingar
-    + [[Tid og dato]]
 
 ## Sjekkliste 
 
