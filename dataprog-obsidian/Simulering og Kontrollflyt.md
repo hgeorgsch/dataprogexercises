@@ -36,5 +36,7 @@
 	+ [[Datastrukturar]]
 + Demo
 	+ [[Datastrukturar i Python]]
++ Øvingar
+    + [[Kundedifferensiering]]
 + Kuriosa
     + [[Tilfeldigheit-Demo]]
