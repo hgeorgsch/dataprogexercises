@@ -51,24 +51,67 @@ Simula som sprog ble aldri noen stor suksess, og det tok kanskje tyve år før o
 
 ## Objektet
 
-
-
 ![[object.svg]]
 
 ::: credit
 :::
 
+note:
+Det sentrale konseptet i objekt-orientert programmering er sjølvsagt objektet.
+Dette er litt tvetydig, siden vi ofte kaller verdien av en variabel for et obkekt,
+enten det er et tall, en streng, en liste eller en *dictionary*. 
+
+I objekt-orientert programmering er objektet ikke bare en verdi eller en tilstand.
+Objektet har også metoder, eller funksjoner, som modellerer oppførsel.
+Vi ser gjerne for oss at objektet kan sanse, gjerne gjennom funksjoner som tar
+parametere, og at det kan handle, gjerne gjennom funksjoner med en returverdi som
+forteller hva det gjør.
+
+Objektet blir på mange måter et eget mini-program med *input* og *output* som
+samhandler med andre mini-programmer som inngår i det store programmet.
+Dette gir en modulær struktur som vi kan bruke for å holde orden i programmet.
+
+---
+
+## Agent-baserte modellar
+
+---
+
+## Klassa
+
+```python
+class Counter:
+   def increase(self):
+      self.state += 1
+   def get(self):
+      return self.state
+```
+
+note:
+Siden objektet er en verdi som kan tilordnes en variabel, må det ha en type.
+Objekttyper kaller vi for klasser, og vi kan definere våre egne klasser som 
+definerer typen for de objekter som vi trenger.
+
 ---
 <!-- slide template="[[tpl-diagram]]" -->
 
-## Arv
-
-
+## Arv 
 
 ![[inheritance.svg]]
 
 ::: credit
 :::
+
+note:
+
+---
+
+## Polymorfi 
+
+
+---
+
+## Python
 
 
 ---
@@ -77,8 +120,15 @@ Simula som sprog ble aldri noen stor suksess, og det tok kanskje tyve år før o
 ## Innkapsling
 
 
-
 ![[object.svg]]
 
 ::: credit
 :::
+
+---
+
+# Slutt
+
+note:
+Objekt-orientert programmering er et stort felt med mange muligheter, og
+vi har bare skrapt i overflaten.
