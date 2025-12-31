@@ -65,7 +65,7 @@ Simula som sprog ble aldri noen stor suksess, og det tok kanskje tyve år før o
 
 
 
-![[object.svg]]
+![[inheritance.svg]]
 
 ::: credit
 :::
