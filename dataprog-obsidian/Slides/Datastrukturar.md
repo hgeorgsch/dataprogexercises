@@ -23,7 +23,7 @@ note:
 Én variabel i python kan representere alt fra ett enkelt tall til en 
 tabell med flere milliarder verdier.
 Dette er ulike datatyper.
-Noen datatyper er primitive, mens andre typer kan inneholde verdier
+Noen datatyper er primitive, mens andre typer kan inneholde flere verdier
 som har sine egne datatyper.
 De primitive datatypene er dem som ikke kan deles opp.
 
@@ -53,7 +53,7 @@ Et tegn er blott en streng med lengde én.
 
 - tupler : t.d. `(1,0.5)`, `("Oskar", 83)`
 - liste : t.d.  `[ 2, 3, 11, 3, 11, 11 ]`
-- avbilding (*map*)
+- avbilding (*map*) eller `dict`
 - klasser 
 
 note:
@@ -117,7 +117,7 @@ skal bli lettere å lese.
 
 note:
 Et andet typisk problem er samlinger av objekter, f.eks. et kunderegister,
-som er en samling av kunderregistreringer.
+som er en samling av kunderkort.
 Der er mange ulike datastrukturer som organiserer samlinger.
 Noen er lavet for at det skal gå raskt å søke, mens andre for at det skal gå raskt å sette inn eller fjerne elementer.
 
@@ -126,7 +126,7 @@ Her har hvert objekt en nøgle som vi kan bruke for å slå det opp.
 I kunderegisteret kan vi f.eks. bruke navn, slik at datastrukturen avbilder navn på kundekort.
 
 Den vanligste formen for avbildninger kalles *hashmap*, og ofte er dette ordet dere finner brukt.
-Poenget med en *hasmap* er at det skal være raskt å slå opp en gitt nøgle, uansett hvor stor samlingen er.  Normalt er det også raskt å sette inn eller slette objekter. For å få det til, bruker  datastrukturen som regel ekstra minne, som er holdt av til ubrukte nøgler.  Det er dog sjelden et problem på dagens maskiner.
+Poenget med en *hashmap* er at det skal være raskt å slå opp en gitt nøgle, uansett hvor stor samlingen er.  Normalt er det også raskt å sette inn eller slette objekter. For å få det til, bruker  datastrukturen som regel ekstra minne, som er holdt av til ubrukte nøgler.  Det er dog sjelden et problem på dagens maskiner.
 
 *Dictionaries* eller `dict` i python er et eksempel på *hashmaps*.
 
@@ -165,14 +165,15 @@ starten av listen at det går raskt å gjøre endringer.
 
 note:
 En *array* ligner en liste, men prioriteringene er anderledes.
-Elwementene har nummererte plasser, og det skal alltid være raskt å slå
+Elementene har nummererte plasser, og det skal alltid være raskt å slå
 opp eller bytte ut et element hvis vi kjenner plassnummeret, eller indeksen.
 Det er derimot ikke så enkelt å gjøre endringer hverken på starten eller
 slutten av tabellen.
 
 En *array* har avsatt et visst minneområde, der elementene er lagret direkte
-efter hverandre.  For å legge til eller fjerne elementer, må man avsette mer
-eller mindre plass.
+efter hverandre.  
+For å legge til eller fjerne elementer, må man avsette mer
+eller mindre plass, og flytte eksisterende elementer for å fylle plassen.
 
 
 ---
@@ -192,13 +193,17 @@ Kari Nordmann
 
 note:
 Lister i python er implementert som *arrays*.
-Det gjør at vi kan indeksere elementer.
+Det gjør at vi kan indeksere elementer, og raskt hente elementer fra en kjent plass i listen.
 
 Problemet med å legge til eller fjerne elementer er løst ved at python holder av
 ekstra plass og vet hvor listen slutter.
 Når listen går tom for plass, vil det plutselig ta lang tid å legge til elementer, 
 fordi python må allokere nytt minne og kopiere hele listen til en ny plass i minnet.
 Det skjer derimot sjelden.
+
+Det som går treigt med python sine lister er å sette inn eller fjerne
+elementer midt i listen.  Da må alle efterfølgende elementer flyttes, enten for å fylle plasssen når et element blir fjernet, eller for å gi plass til nye elementer.
+Hvis listen er langt kan dette gå fryktelig treigt.
 
 ---
 
@@ -208,7 +213,7 @@ Det skjer derimot sjelden.
 - prioritetskø
 
 note:
-Der finnes mange andre typer samlinger, men i små prosjekter klarer
+Der finnes mange andre typer samlinger, men i de fleste små prosjekter klarer
 man seg fint med disse to: lister og *map*, eller `list` og `dict` i python.
 
 ---
@@ -222,7 +227,7 @@ By Lucasadvent - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.p
 
 note:
 Vi vil støte på nogen flere datastrukturer efter hvert.
-I dataanalyse trenger vi store tabeller med numeriskedata.
+I dataanalyse trenger vi store tabeller med numeriske data.
 Her kan vi bruke både `DataFrame` fra pandas-biblioteket
 og numpy *arrays*.
 
