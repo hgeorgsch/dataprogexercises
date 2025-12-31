@@ -17,22 +17,68 @@ blir mer komplekse og varierte, og når programmene blir lengre.
 ---
 <!-- slide template="[[tpl-twocolumn]]" -->
 
-::: left
+## Simula (1962)
+
+::: leftimage
 ![[Ole-Johan_Dahl.jpg]]
 :::
 
 ::: leftcredit
-By [ACM](https://amturing.acm.org/photo/dahl_6917600.cfm),
-Fair use, from
+*Ole-Johan Dahl*,
+bilete ved [ACM](https://amturing.acm.org/photo/dahl_6917600.cfm),
+Fair use from
 [Wikimedia Commons](https://en.wikipedia.org/w/index.php?curid=63417106)
 :::
 
-::: right
+::: rightimage
 ![[Kristen-Nygaard-SBLP-1997-head.png]]
 :::
 
 ::: rightcredit
-By Jorge Stolfi - Own work, Public Domain,
+*Kristen Nygaard*,
+bilete av Jorge Stolfi - Public Domain,
 via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=8886807)
 :::
 
+note:
+En av de mest lovende løsningene for å strukturere komplekse programmer er objekt-orientert programmering.
+Denne idéen skriver vi gjerne tilbake til programmeringssproget Simula som ble utviklet ved Norsk Regnesentral i 1962.
+
+Simula som sprog ble aldri noen stor suksess, og det tok kanskje tyve år før objekt-orientert programmering slo an.  De siste femti årene kan vi derimot se hvordan de fleste imperative sprog blir objekt-orienterte.
+
+---
+<!-- slide template="[[tpl-diagram]]" -->
+
+## Objektet
+
+
+
+![[object.svg]]
+
+::: credit
+:::
+
+---
+<!-- slide template="[[tpl-diagram]]" -->
+
+## Arv
+
+
+
+![[object.svg]]
+
+::: credit
+:::
+
+
+---
+<!-- slide template="[[tpl-diagram]]" -->
+
+## Innkapsling
+
+
+
+![[object.svg]]
+
+::: credit
+:::

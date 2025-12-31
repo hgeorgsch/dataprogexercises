@@ -172,7 +172,7 @@
 .reveal section .flexcolumn h2 {
    flex: 0 0 auto ;
    width: 100% ;
-   padding: 0 ;
+   padding: 0 0 1ex ;
 }
 .reveal section .flexcolumn h1 {
    flex: 0 0 auto ;
@@ -212,4 +212,32 @@
 }
 .reveal .slides section .smallertext code {
    font-size: 14pt ;
+}
+
+/* Experimental tpl-flex2 */
+.reveal section .twocolumnflex {
+   display: flex ;
+   flex-direction: column ;
+   justify-content: center ;
+   align-items: center ;
+   margin: 100px ;
+   width: 100% ;
+   height: 700px ;
+   font-size: 18pt ;
+}
+.reveal section .twocolumnflex h2 {
+   flex: 0 0 auto ;
+   width: 100% ;
+   padding: 0 ;
+}
+.reveal section .twocolumnflex split {
+   flex: 10 0 auto ;
+}
+.reveal section .twocolumnflex p {
+   flex: 0 0 auto ;
+   width: 100% ;
+}
+.reveal section .twocolumnflex split .flexcolumn {
+   width: 100% ;
+   height: inherit ;
 }
