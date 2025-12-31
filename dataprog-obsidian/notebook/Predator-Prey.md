@@ -37,3 +37,22 @@ Dyr har nokre felles eigenskapar.
 + Dei kan formera seg saman med eit individ av same art og motsett kjønn 
 
 I tillegg kan ein rev eta ein kanin, dersom dei kjem i same rute.
+
+I tillegg til artane treng me ei klasse for verda, som held greie både på
+landskapet (rutenettet) og tida.
+Me skal simulera i diskret tid.
+Dvs. at me har faste tidssteg, t.d. éin dag, og kvar agent får ei sjanse til å 
+handla for kvart tidssteg.
+
+
+```{code-cell} ipython3
+class Agent:
+   def act(self,moves):
+      pass
+```
+
+```{code-cell} ipython3
+class World:
+   def act(self,moves):
+      pass
+```

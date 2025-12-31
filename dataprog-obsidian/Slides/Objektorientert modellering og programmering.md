@@ -73,10 +73,6 @@ Dette gir en modulær struktur som vi kan bruke for å holde orden i programmet.
 
 ---
 
-## Agent-baserte modellar
-
----
-
 ## Klassa
 
 ```python
@@ -91,6 +87,31 @@ note:
 Siden objektet er en verdi som kan tilordnes en variabel, må det ha en type.
 Objekttyper kaller vi for klasser, og vi kan definere våre egne klasser som 
 definerer typen for de objekter som vi trenger.
+
+I python er det først og fremst metodene vi definerer i klassen.
+En metode er ikke noe andet enn en funksjon som er definert i en klasse.
+Metodene tar alltid et argument `self` som viser til objektet selv.
+Variablene i objektet blir definert når de blir tilordnet, hvilket helst skjer i metodene.
+
+Ved å samle all kode som opererer på objektet i klassens egne metoder, blir koden ryddigere og det blir lettere å forsikre seg om at den er konsistent.
+
+---
+
+## Agent-baserte modeller
+
+
+<!-- slide template="[[tpl-diagram]]" -->
+
+## Bytte-/Rovdy
+
+![[lynxhare.jpeg]]
+
+::: credit
+frå Brady RM and Butler JS (2021):
+[The Circle of Life: The Mathematics of Predator-Prey Relationships](https://kids.frontiersin.org/articles/10.3389/frym.2021.651131). *Frontiers. Young Minds.* 9:651131. doi: 10.3389/frym.2021.651131
+CC-BY 4.0
+:::
+
 
 ---
 <!-- slide template="[[tpl-diagram]]" -->
