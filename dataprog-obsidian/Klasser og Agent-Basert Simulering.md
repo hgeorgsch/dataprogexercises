@@ -11,3 +11,4 @@
 	+ [[Shrimp-Game]]
 	+ [[ShrimpSimulation]] (solution example)
 	+ [[Iskrem på ei strand]]
+	+ [[Predator-Prey]]
