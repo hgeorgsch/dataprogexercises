@@ -102,7 +102,7 @@ Ved å samle all kode som opererer på objektet i klassens egne metoder, blir ko
 
 <!-- slide template="[[tpl-diagram]]" -->
 
-## Bytte-/Rovdy
+## Bytte-/Rovdyr
 
 ![[lynxhare.jpeg]]
 
