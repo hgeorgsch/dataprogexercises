@@ -4,7 +4,7 @@ pdf: table1.pdf table2.pdf join.pdf joins.pdf sampling.pdf object.pdf
 
 I=../dataprog-obsidian/Slides/slidefig/
 
-oo: object.svg inheritance.svg
+oo: object.svg inheritance.svg oo.svg
 	cp $^ $I
 
 %.svg: %.pdf

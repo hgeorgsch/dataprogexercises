@@ -1,0 +1,46 @@
+\documentclass[border=1mm]{standalone}
+
+\usepackage{tikz}
+\usepackage{pgf-umlcd}
+\usetikzlibrary{positioning,fit,calc}
+\usetikzlibrary{shapes.multipart}
+
+\newsavebox\mybox
+
+\begin{document}
+
+\begin{tikzpicture}
+          \tikzstyle{every node}=[font=\LARGE]
+
+      \begin{class}{Rev}{0 , 0}
+	 \attribute{\hspace{18mm}\includegraphics[width=12mm]{fox}}
+      \end{class}
+
+      \begin{class}{Kanin}{8 , 0}
+	 \attribute{\hspace{18mm}\includegraphics[width=12mm]{rabbit}}
+      \end{class}
+
+      \begin{class}{Posisjon}{0, -4}
+	 \attribute{\hspace{18mm}$(x,y)$}
+      \end{class}
+
+      \begin{class}{Grass}{8 , -4}
+	 \attribute{\hspace{18mm}\includegraphics[width=12mm]{grass}}
+      \end{class}
+
+      \begin{class}{Landskap}{8 , -7}
+	 \attribute{\hspace{18mm}\includegraphics[width=12mm]{river}}
+      \end{class}
+      \association{Rev}{et}{}{Kanin}{}{}
+      \association{Rev}{har}{}{Posisjon}{}{}
+      \association{Kanin}{har}{}{Posisjon}{}{}
+      \association{Kanin}{et}{}{Grass}{}{}
+      \association{Posisjon}{er i}{}{Landskap}{}{}
+      \association{Posisjon}{}{}{Grass}{kan ha}{}
+
+
+\end{tikzpicture}
+
+\end{document}
+
+       \tikzstyle{every node}=[font=\footnotesize]
