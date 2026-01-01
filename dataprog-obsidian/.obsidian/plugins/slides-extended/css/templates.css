@@ -152,6 +152,14 @@
      height: 500px ;
      margin: 0px ;
 } 
+.reveal .twocolumnlow {
+     font-size: 21pt ;
+} 
+.reveal .twocolumnlow img {
+     object-fit: contain   !important ;
+     height: 360px ;
+     margin: 0px ;
+} 
 
 /* Diagram slide */
 .reveal section.has-light-background h2 { /* Use NTNU blue */

@@ -96,10 +96,28 @@ Variablene i objektet blir definert når de blir tilordnet, hvilket helst skjer 
 Ved å samle all kode som opererer på objektet i klassens egne metoder, blir koden ryddigere og det blir lettere å forsikre seg om at den er konsistent.
 
 ---
+<!-- slide bg="white" template="[[tpl-twocolumn]]" -->
 
-## Agent-baserte modeller
+::: leftimage
+## Røynda
+![[Earth_-_Illustration_(5679642883).jpg|360]]
+:::
 
+::: leftcredit
+By Ilya Grigorik, CC BY-SA 3.0,
+via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=74181523)
+:::
 
+::: rightimage
+## Modellen
+![[oo.svg]]
+:::
+
+::: rightcredit
+<a href="https://www.flaticon.com/">Ikon frå tulpahn - Flaticon</a>
+:::
+
+---
 <!-- slide template="[[tpl-diagram]]" -->
 
 ## Bytte-/Rovdyr
@@ -121,6 +139,7 @@ CC-BY 4.0
 ![[inheritance.svg]]
 
 ::: credit
+<a href="https://www.flaticon.com/">Ikon frå tulpahn - Flaticon</a>
 :::
 
 note:
