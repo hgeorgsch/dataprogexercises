@@ -15,6 +15,11 @@ kernelspec:
 
 # Rovdyr og byttedyr
 
+::: {admonition} Kjelder
+Løysinga er delvis inspirert av
+[mhawryluk på githun](https://github.com/mhawryluk/abm-predator-prey).
+:::
+
 Rovdyr og byttedyr er eit klassisk simuleringsproblem i biologi og økologi.
 Det er interessant fordi det er so dynamisk.
 Dersom der er mykje byttedyr, har rovdyra mykje mat, og dei vert fleire.
@@ -46,13 +51,30 @@ handla for kvart tidssteg.
 
 
 ```{code-cell} ipython3
+import random
+```
+
+```{code-cell} ipython3
 class Agent:
+   def __init__(self,world):
+      self.world = world
    def act(self,moves):
       pass
 ```
 
 ```{code-cell} ipython3
+class Fox(Agent):
+      pass
+class Rabbit(Agent):
+      pass
+```
+
+```{code-cell} ipython3
 class World:
+   def __init__(self,size=(600,400)):
+      self.size = size
    def act(self,moves):
       pass
+   def getpoints(self):
+      return [[]]
 ```
