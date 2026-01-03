@@ -56,8 +56,10 @@ import random
 
 ```{code-cell} ipython3
 class Agent:
+   maxenergy = 4
    def __init__(self,world):
       self.world = world
+      self.energy = random.randint(self.maxenergy)
    def act(self,moves):
       pass
 ```
@@ -72,9 +74,14 @@ class Rabbit(Agent):
 ```{code-cell} ipython3
 class World:
    def __init__(self,size=(600,400)):
-      self.size = size
+      self.xlen, self.ylen = size
+      self.worldgrid = {}
    def act(self,moves):
-      pass
+      agents = list(self.worldgrid.items())
+      random.shuffle( agents )
+      for pos, agent in agents:
+          agent.act()
+
    def getpoints(self):
       return [[]]
 ```
