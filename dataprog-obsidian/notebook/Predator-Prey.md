@@ -60,8 +60,12 @@ class Agent:
    def __init__(self,world):
       self.world = world
       self.energy = random.randint(self.maxenergy)
+      self.position = self.world.addAgent( self )
+   def getPosition(self): return self.position
    def act(self,moves):
-      pass
+      if self.energy <= 0: self.die()
+   def die(self):
+      self.world.removeAgent( self )
 ```
 
 ```{code-cell} ipython3
@@ -76,6 +80,17 @@ class World:
    def __init__(self,size=(600,400)):
       self.xlen, self.ylen = size
       self.worldgrid = {}
+   def addAgent(self,agent):
+      ag = None
+      while ag is not None:
+          x = random.randint( self.xlen )
+          y = random.randint( self.ylen )
+          ag = self.worldgrid( (x,y) )
+      self.worldgrid[(x,y)] = agent
+      agent.setPosition( (x,y) )
+      return (x,y)
+   def removeAgent(self,agent):
+      del self.worldgrid[agent.getPosition]
    def act(self,moves):
       agents = list(self.worldgrid.items())
       random.shuffle( agents )
