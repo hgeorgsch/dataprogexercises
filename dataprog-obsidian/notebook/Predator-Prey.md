@@ -179,6 +179,12 @@ Dette skulle sjå greitt ut.
 No er det på tide å laga agentane slik at dei kan gå, eta og verta etne.
 
 ```{code-cell} ipython3
+class World1(World):
+   def neighbourhood(self,pos):
+      pass
+```
+
+```{code-cell} ipython3
 class Agent:
    maxenergy = 4
    agenttype = None
