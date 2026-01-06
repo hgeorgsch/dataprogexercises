@@ -69,6 +69,10 @@
      font-size: 18pt ;
      line-height: 1.2 ;
 }
+.reveal .r-fit-text code {
+     font-size: inherit ;
+     line-height: 1.2 ;
+}
   
 .reveal .credit { /* credit block used by many different templates */
      font-size: 18pt ;

@@ -14,7 +14,7 @@ Dette kapittelet byggjer på
 + *Perspektivføredrag* 
 	+ Kva er simulering?
       ([Slides](https://iirevu.org.ntnu.no/Slides/Kva%20er%20simulering%3f/#/))
-	+ Tilfeldigheit
+	+ Slumptalsgeneratorar
       ([Slides](https://iirevu.org.ntnu.no/Slides/Slumptalsgenerator))
 	+ Datastrukturar og Kompleksitet
       ([Slides](https://iirevu.org.ntnu.no/Slides/Datastrukturar/))

@@ -18,6 +18,7 @@ trenger vi datastrukturer for å systematisere dem.
 ---
 
 `x`
+<!-- element class="r-fit-text" -->
 
 note:
 Én variabel i python kan representere alt fra ett enkelt tall til en 
@@ -69,7 +70,7 @@ våre data ser ut og hva vi ønsker å gjøre med dem.
 
 ## *Record*
 
-|        kunde |                |
+|        kunde | verdi          |
 | -----------: | :------------- |
 |    `fornamn` | "Ola"          |
 |  `etternamn` | "Normann"      |

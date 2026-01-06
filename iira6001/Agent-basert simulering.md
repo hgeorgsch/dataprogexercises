@@ -14,6 +14,7 @@ Dette kapittelet byggjer på
 
 + *Oversiktsførelesing*:
 	+ Objektorientert modellering og programmering 
+      [(foilar)](https://iirevu.org.ntnu.no/Slides/Objektorientert%20modellering%20og%20programmering)
 	+  [[Mentale og matematiske modellar]]  
 + *Utarbeidd døme*
     + [](notebooks/LoanClass) viser objektorientert programmering på
