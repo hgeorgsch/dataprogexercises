@@ -201,12 +201,14 @@ kan være spesielt slik at de oppfører seg forskjellig.
 
 ## Polymorfi 
 
-```python
-agent.act()
-```
+<hr>
 
-+ `rev.act()` $\to$ jakt
-+ `kanin.act()` $\to$ flykt
+- `agent.act()` $\to$ ???
+
+<hr>
+
+- `rev.act()` $\to$ jakt
+- `kanin.act()` $\to$ flykt
 
 note:
 Et objekt i objekt-orientert programmering har flere typer samtidig.

@@ -116,6 +116,9 @@ skal bli lettere å lese.
 
 ![[map.svg|480]]
 
+::: credit
+:::
+
 note:
 Et andet typisk problem er samlinger av objekter, f.eks. et kunderegister,
 som er en samling av kunderkort.
@@ -139,6 +142,7 @@ Poenget med en *hashmap* er at det skal være raskt å slå opp en gitt nøgle, 
 ```python
 [ "Ola Nordmann", "Kari Nordmann", "John Smith", "Jane Doe", ... ]
 ```
+<!-- element class="widecode" -->
 
 ::: credit
 :::

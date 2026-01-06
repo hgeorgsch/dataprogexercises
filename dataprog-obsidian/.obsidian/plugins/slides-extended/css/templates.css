@@ -65,6 +65,9 @@
    overflow: hidden;       
    text-overflow: ellipsis; 
 }
+.reveal section .widecode code {  /* Override defaults */
+   width: 900px ;
+}
 .reveal code {
      font-size: 18pt ;
      line-height: 1.2 ;
@@ -129,6 +132,7 @@
 .reveal .smalltext code {
      font-size: 14pt ;
      line-height: 1.1 ;
+     max-width: 100% ;
 }
 .reveal .smalltext p {
      font-size: 14pt ;
@@ -148,8 +152,14 @@
 }
 
 /* Twocolumn slide */
+.reveal .twocolumnslide pre code,
 .reveal .twocolumnslide {
      font-size: 21pt ;
+} 
+.reveal .twocolumnslide ol,
+.reveal .twocolumnslide ul {
+     width: 400px ;
+     margin: 0px ;
 } 
 .reveal .twocolumnslide img {
      object-fit: contain   !important ;
