@@ -1,14 +1,14 @@
 ---
 title: Objektorientert modellering og programmering
+author: Hans Georg Schaathun
+date: 14. januar 2025
 tags:
-  - lecture/video
-css:
-  - css/templates.css
+  - lecture/video/script
+fontsize: 12pt
 ---
 
-# Objektorientert modellering og programmering
+(tittel eller ingen foil)
 
-note:
 En av de største utfordringene i programmering er at programmene
 raskt blir uoversiktlige, og det er vanskelig å holde orden.
 Utfordringene vokser både når datasettene blir større, når de
@@ -18,33 +18,8 @@ Utviklingen av nye programmeringssprog har i all hovedsak vært
 drevet av denne ene utfordringen.
 Hvordan kan vi gjøre progammene mest mulig oversiktlige og forståelige?
 
----
-<!-- slide template="[[tpl-twocolumn]]" -->
+(portretter)
 
-## Simula (1962)
-
-::: leftimage
-![[Ole-Johan_Dahl.jpg]]
-:::
-
-::: leftcredit
-*Ole-Johan Dahl*,
-bilete ved [ACM](https://amturing.acm.org/photo/dahl_6917600.cfm),
-Fair use from
-[Wikimedia Commons](https://en.wikipedia.org/w/index.php?curid=63417106)
-:::
-
-::: rightimage
-![[Kristen-Nygaard-SBLP-1997-head.png]]
-:::
-
-::: rightcredit
-*Kristen Nygaard*,
-bilete av Jorge Stolfi - Public Domain,
-via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=8886807)
-:::
-
-note:
 De aller fleste programmeringssprog i dag er det vi kaller objekt-orienterte.
 Idéen om objekt-orientering skriver vi gjerne tilbake til programmeringssproget 
 Simula som ble utviklet ved Norsk Regnesentral i 1962.
@@ -56,17 +31,8 @@ Lenge var der flere paradigmer som konkurrerte, men de siste tredve årene har
 objekt-orientert programmering vært nesten enerådende, med unntak av enkelte
 nisjesprog.
 
----
-<!-- slide template="[[tpl-diagram]]" -->
+(Objektet)
 
-## Objektet
-
-![[object.svg]]
-
-::: credit
-:::
-
-note:
 Det sentrale konseptet i objekt-orientert programmering er sjølvsagt objektet.
 Dette er litt tvetydig, siden vi ofte kaller verdien av en hvilken som helst
 variabel for et obkekt,
@@ -83,19 +49,8 @@ Objektet blir på mange måter et eget mini-program med *input* og *output* som
 samhandler med andre mini-programmer som inngår i det store programmet.
 Dette gir en modulær struktur som vi kan bruke for å holde orden i programmet.
 
----
+(Klassa)
 
-## Klassa
-
-```python
-class Counter:
-   def increase(self):
-      self.state += 1
-   def get(self):
-      return self.state
-```
-
-note:
 Siden objektet er en verdi som kan tilordnes en variabel, må det ha en type.
 Objekttyper kaller vi for klasser, og vi kan definere våre egne klasser som 
 definerer typen for de objekter som vi trenger.
@@ -112,29 +67,8 @@ Variablene i objektet blir definert når de blir tilordnet, hvilket helst skjer 
 Ved å samle all kode som opererer på objektet i klassens egne metoder,
 blir koden ryddigere og det blir lettere å forsikre seg om at den er konsistent.
 
----
-<!-- slide bg="white" template="[[tpl-twocolumn]]" -->
+(jordkloden)
 
-::: leftimage
-## Røynda
-![[Earth_-_Illustration_(5679642883).jpg|360]]
-:::
-
-::: leftcredit
-By Ilya Grigorik, CC BY-SA 3.0,
-via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=74181523)
-:::
-
-::: rightimage
-## Modellen
-![[oo.svg]]
-:::
-
-::: rightcredit
-<a href="https://www.flaticon.com/">Ikon frå tulpahn - Flaticon</a>
-:::
-
-note:
 Objekt-orientering er et tankesett som gjennomsyrer både modellering og
 programmering.
 Et dataprogram er en modell av en eller anden virkelighet,
@@ -151,20 +85,8 @@ det landskapet de bor i.
 Hver klasse definerer egenskapene til ett konkret objekt, eller fenomen,
 i virkeligheten.
 
----
-<!-- slide template="[[tpl-diagram]]" -->
+(gaupe og hare)
 
-## Bytte-/Rovdyr
-
-![[lynxhare.jpeg]]
-
-::: credit
-frå Brady RM and Butler JS (2021):
-[The Circle of Life: The Mathematics of Predator-Prey Relationships](https://kids.frontiersin.org/articles/10.3389/frym.2021.651131). *Frontiers. Young Minds.* 9:651131. doi: 10.3389/frym.2021.651131
-CC-BY 4.0
-:::
-
-note:
 La oss ta et eksempel på en simulator.
 Et klassisk eksempel fra biologi og økologi er dynamikken mellom rovdyr og byttedyr,
 der populasjonene gjerne svinger i motfase.
@@ -181,18 +103,8 @@ Hvert dyr er en agent, som kan bevege seg, spise og formere seg.
 Hver agent modellerer vi som et objekt, i tillegg til objekter for
 å holde rede på verden som helhet.
 
----
-<!-- slide template="[[tpl-diagram]]" -->
+(Arv)
 
-## Arv 
-
-![[inheritance.svg]]
-
-::: credit
-<a href="https://www.flaticon.com/">Ikon frå tulpahn - Flaticon</a>
-:::
-
-note:
 Objekt-orientert programmering innebærer et par viktige grunnprinsipper
 som hjelper oss til å holde koden ryddig og enkel.
 
@@ -214,20 +126,8 @@ er spesielt for rovdyrene, f.eks. jakt.
 Ulv og rev arver antagelig de fleste egenskapene fra Rovdyr, men noe
 kan være spesielt slik at de oppfører seg forskjellig.
 
----
+(Polymorfi )
 
-## Polymorfi 
-
-<hr>
-
-- `agent.act()` $\to$ ???
-
-<hr>
-
-- `rev.act()` $\to$ jakt
-- `kanin.act()` $\to$ flykt
-
-note:
 Et objekt i objekt-orientert programmering har flere typer samtidig.
 Et individ av typen Rev er også et invidid av typen Rovdyr, og dermed
 også et individ av typen Agent.
@@ -247,18 +147,8 @@ Det er objektet som vet hvordan det skal handle når metoden blir kalt.
 Dette gjør det mulig å skrive store deler av koden generisk, og minimere
 den koden som må skrives spesifikt for hvert særtilfelle eller for hver type.
 
----
-<!-- slide template="[[tpl-flex]]" -->
+(and)
 
-## Python
-
-![[rubber-duck.png]]
-
-::: credit
-<a href="https://www.flaticon.com/free-icons/rubber-duck" title="rubber duck icons">Rubber duck icons created by Talha Dogar - Flaticon</a>
-:::
-
-note:
 Det skal sies at python er ennu mer fleksibelt enn polymorfi i tradisjonelle sprog.
 I python trenger vi strengt tatt ikke ha en superklasse som definere `act()` for
 å få den polynorfe oppførselen.
@@ -278,11 +168,8 @@ Det er rett og slett en god idé å være ryddig og formell når man modellerer
 programvaren sin.
 Det er lett å bli forvirret når man utnytter alle finnesser som programmeringssproget har.
 
----
+(Slutt/ingen foil)
 
-# Slutt
-
-note:
 Objekt-orientert programmering er et stort felt med mange muligheter, og
 vi har bare skrapt i overflaten.  
 
