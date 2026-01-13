@@ -4,6 +4,7 @@ author: Hans Georg Schaathun
 date: 14. januar 2025
 tags:
   - lecture/video/script
+fontsize: 12pt
 ---
 
 (newton)
