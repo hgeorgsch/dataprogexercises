@@ -283,7 +283,7 @@ Det er god skikk å leggja inn ekstra stoppreglar for å unngå dette.
 T.d. kan me stoppa simuleringa etter 100 år.
 
 ```{code-cell} ipython3
-def loan2(saldo=10000,rente=0.05,nedbetaling=0,year=2024,gebyr=0):
+def loan2(saldo=10000,rente=0.05,terminbetaling=0,year=2024,gebyr=0):
    y = [ saldo ]
    x = [ year ]
    while saldo > 0 and len(x) < 100:
@@ -299,7 +299,7 @@ def loan2(saldo=10000,rente=0.05,nedbetaling=0,year=2024,gebyr=0):
 Her bruker me `len`-funksjonen som tel kor mange element som finst i lista.
 
 :::{admonition} Oppgåve
-Samanlikna lån med ulike terminbeløp (`nedbetaling`), ved å laga eit plott.
+Samanlikna lån med ulike terminbeløp (`terminbetaling`), ved å laga eit plott.
 :::
 
 :::{admonition} Oppgåve
@@ -351,7 +351,7 @@ T.d. kan me seia at 1 gjev renteoppgang og 10 gjev rentenedgang.
 Då får me kanskje fylgjande som erstatning for `loan` og `loan2`.
 
 ```{code-cell} ipython3
-def loan3(saldo=10000,rente=0.05,nedbetaling=0,year=2024,gebyr=0):
+def loan3(saldo=10000,rente=0.05,terminbetaling=0,year=2024,gebyr=0):
    y = [ saldo ]
    x = [ year ]
    while saldo > 0 and len(x) < 100:
