@@ -95,6 +95,17 @@ print( r( [1] ) )
 
 Legg merke til korleis heile fylgjen gjentek seg sjølv.
 
+::: {admonition} Merknad
+Her har eg brukt notasjonen `**kw` som me elles ikkje har støytt på.
+Her tyder det *alle andre namngjevne argument*.
+Me bruker denne notasjonen når me vil senda argumenta til `g` vidare
+til `f` utan å vita kva argument `f` tek.
+Dei argumenta som vert brukte direkte i `g` har f[tt namn (`s`), medan
+resten vert samla opp i `**kw` og sende vidare til `f`.
+Slik treng me ikkje oppdatera definisjonen av `g`, sjølv om `f` skulle
+få fleire argument.
+:::
+
 Under feilsøk brukte eg ein litt meir brutal metode for å testa
 alle moglege koeffisiantar $a$.
 
