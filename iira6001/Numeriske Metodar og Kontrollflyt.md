@@ -49,7 +49,7 @@ Opne oppgåver
 Utkast til oppgåver
 : desse oppgåvene er uferdige, men kan gje idéar til dei som er på jakt etter meir.
 
-+ [Kundedata](exercises/Kundedata)
++ [](exercises/Kundedata)
 + [](notebooks/Folkevekst)
 
 Der er rikeleg med oppgåver, og me reknar ikkje med at nokon rekk å gjera alt.

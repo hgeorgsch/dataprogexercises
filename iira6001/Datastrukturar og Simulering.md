@@ -31,8 +31,6 @@ Dette kapittelet byggjer på
     + [](exercises/Kundedifferensiering)
 + *Drilløving.*
 	+ [[CodeRunner Data Structures]]
-+ Utkast til oppgåver
-	+ [[Simulering av ein utvalsstudie]]
 
 Kuriosa
 : er arbeidsdokument.  Dei vert publiserte for dei nyssgjerrige, og viser teknikkar som eg har brukt for å laga det andre materialet til leksjonen.
