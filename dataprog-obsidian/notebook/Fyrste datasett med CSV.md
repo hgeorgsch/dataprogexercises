@@ -1,4 +1,5 @@
 ---
+title: CSV og store datasett
 jupytext:
   formats: md:myst,ipynb
   text_representation:
@@ -12,7 +13,7 @@ kernelspec:
   name: dataprog
 ---
 
-# Arbeida med store datasett
+# CSV og store datasett
 
 Eitt hovudmål i dette kurset er å kunna handtera store datasett frå røynda vha. programmering, i praksis i python. Me skal starta med datasettet, og so tek me programmeringsteknikkane etter kvart. Mange har gjort liknande ting i Excel eller andre rekneark, og då vil det ta ein del tid før føremonane ved programmering kjem til syne. Enkle oppgåver er som regel enklare å gjera, og i alle fall raskare å læra, i rekneark. Det er berre samansette oppgåver og store datasett som vert enklare ved programmering. Eitt problem med Excel spesifikt er maksgrensa på ein million radar. Me skal etter kvar sjå på datasett som er større enn det.
 
