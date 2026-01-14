@@ -1,0 +1,3 @@
+
++ [ ] Samtykkeskjema
++ [ ] Eigarskap og verdiar
