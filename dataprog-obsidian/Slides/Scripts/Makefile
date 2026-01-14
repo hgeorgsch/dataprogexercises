@@ -1,4 +1,6 @@
-%.tex: %.md
+%-main.tex: %.md
 	pandoc -o $@ $< 
-%.pdf: %.tex
+%-print.tex: %-main.tex
+	cat template-head.tex $< template-head.tex > $@
+%-print.pdf: %-print.tex
 	pdflatex $<
