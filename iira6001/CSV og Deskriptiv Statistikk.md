@@ -25,6 +25,7 @@ Læringsmaterialet fylgjer same format som andre veker.
 	+ [Tid og dato](notebooks/Tid%20og%20dato)
     + [Genetikk](notebooks/Genetikk) demonstrerer korrelasjon m.m. (valfri)
 + *Demovideo*
+    + [[Data frå SSB]]
 	+ [[Filkonvertering og -import]]
 	+ [[Plot i pandas]]
 	+ [[Gjennomsnitt og spreding]] 
