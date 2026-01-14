@@ -98,7 +98,7 @@ Lat oss sjå på tredjegradsfunksjonen $f(x) = 3x^3 + 10x^2 - 50x - 3$
 def f(x): return 3*x**3 + 10*x**2 - 50*x - 3
 ```
 
-Me kan testa funksjonen ved å plott:
+Me kan testa funksjonen ved å plotta:
 
 ```{code-cell} ipython3
 from matplotlib import pyplot as plt
@@ -109,6 +109,14 @@ x = [ i/20 for i in range(-140,90) ]
 y = [f(i) for i in x]
 plt.plot(x,y,"-")
 ```
+
+::: {admonition} Merknad
+Notasjonen `[ i/20 for i in range(-140,90) ]` kaller me for 
+listekomprehensjon.
+Det er ein kjapp metode for å laga lange lister med kort kode.
+Me genererer mange element på formen `i/20`, for kvar verdi
+av `i` i `range(-140,90)`.
+:::
 
 Me ser at funksjonen byter forteikn mellom 0 og 1, og sidan han er kontinuerleg, må der vera eit nullpunkt der. Me kan bruka halveringsmetoden for å finna nullpunktet.
 

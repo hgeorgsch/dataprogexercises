@@ -93,6 +93,13 @@ for i in range(t1):
 Lag eit plott over veksten i talet på smitta so langt.
 :::
 
+::: {hint}
+Me har sjølvsagt `liste_smittet` som $y$-verdiar til plottet,
+men me har ikkje definert ei liste som kan brukast som $x$-verdiar.
+Det er alltid mogleg å bruka `range(len( liste_smittet ) )` for
+å laga seg $x$-verdiar som kan brukast.
+    :::
+
 ## Periode 2
 
 Dette $r$-talet er ikkje konstant.  Når me tek omsyn til smitta

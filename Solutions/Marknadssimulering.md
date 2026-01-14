@@ -245,7 +245,7 @@ berre definera han som ein funksjon, slik:
 ```{code-cell} ipython3
 import numpy as np
 
-def kjopssannsyn(vare,P0=0.2):
+def kjopssannsyn(vare,P0=0.2,r=5):
     """
     Logistisk modell for salgssannsynlighet gitt %vis avlsag.
     Parameteren `P0` er en basissannsynlighet uten avslag.
