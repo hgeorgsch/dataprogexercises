@@ -20,7 +20,8 @@ Det inneber at me skal læra å
 
 
 + *Perspektivførelesing*
-	+ Fletting av datasett
+    + Tid og aggregering
+    + Vasking av datasett
 + *Gjennomarbeidde Døme.*
 	+ [Samanlikning av tidsrekkjer](notebooks/Arbeidsledige%20og%20Konkursar) 
     + [Jordskjelvdata](notebooks/Jordskjelv) som demonstrerer animasjon og plotting oppå kart. (valfri)
