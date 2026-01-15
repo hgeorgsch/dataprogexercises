@@ -20,17 +20,16 @@ Sentralbyrå, repeterer innlasting av CSV-filer og plotting av data,
 og lærer å bruka tidsperiodar som indeks.
 :::
 
-I denne øvinga skal me sjå på datasett frå 
-[statistisk sentralbyrå](http://www.ssb.no).
-Der er mykje å velja i, både forenkla datasett som er brukt til
-konkrete rapportar og grafiske framstillingar, og meir komplekse
-grunnlagsdata.
-Seinare i kurset skal me sjå på [API-et](https://data.ssb.no/api/?lang=no)
-som lèt oss velja ut data direkte frå databasen.
-I denne øvingas skal me heller ta utgangspunkt i
-[lista over ferdiglagde datasett](https://data.ssb.no/api/?lang=no).
-Det òg verd å bla gjennom artiklane for å sjå kva slags analysar ein 
-kan gjera.
+[Statistisk Sentralbyrå](http://www.ssb.no) samlar statistikk som vert
+tilgjengeleg for alle.
+Dei dekkjer alle slags sider ved norsk samfunnsliv, men fordi der er
+so mykje å finna, tek det litt tid å læra seg å bruka det.
+Grensesnittet vart lagt om 2025/26.
+Me skal koma tilbake til korleis ein kan finna datasett i det
+[nye grensesnittet](https://www.ssb.no/statbank2/) og korleis
+me bruker [API-ar](https://www.ssb.no/api/pxwebapiv2).
+I denne øvinga skal me fokusera på korleis me bruker *pandas*,
+og difor bruka ei CSV-fil som me lasta ned hausten 2025.
 
 Eg har freista å gjera denne øvinga mest mogleg realistisk.  
 Andre øvingar tek gjerne utgangspunkt i programmeringsteknikkar som me vil
@@ -49,17 +48,10 @@ Forskingsspørsmålet vårt er:
 
 > Kva samanhengar er der mellom arbeidsledigheit og talet på bedriftskonkursar?
 
-## Datasett frå SSB
+## Datasett om arbeidsledige 
 
 ::: {admonition} Oppgåve
-Sjå på lista over [ferdiglagde datasett](https://data.ssb.no/api/?lang=no)
-frå SSB.  Finn du datasett som kan brukast til å svara på forskingsspørsmålet? 
-:::
-
-For å ta ein ting åt gongen, startar me med data over arbeidsledige.
-
-::: {admonition} Oppgåve
-Last ned datasettet med ID 1054 i CSV-format.
+Last ned CSV-fila  [1054.csv](./1054.csv)
 Opna fila i ein teksteditor eller eit rekneark.
 Korleis er ho formattert?
 Kva data inneheld ho?
