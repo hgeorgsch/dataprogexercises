@@ -314,13 +314,31 @@ Er det forskellig frå det forrige?
 ## Konkursar
 
 ::: {admonition} Oppgåve
-Gå tilbake til [lista frå SSB](https://data.ssb.no/api/?lang=no)
+Gå til [statistikkbanken](https://www.ssb.no/statbank2/) og sjå om du 
+kan finna eit oppdatert datasett over arbeidsledige.
+
+Du har mange val med tanke på variablar, formattering og tidsspenn.
+Prøv deg fram i brukargrensesnittet og samanlikna datasetta du finn
+med det som me brukte over.
+Er variablane dei same?  Er formatteringa den same?
+:::
+
+::: {admonition} Oppgåve
+Last ned eitt datasett over arbeidsledige frå 
+[statistikkbanken](https://www.ssb.no/statbank2/) 
+og tilpass koden over slik at han bruker det nye datasettet.
+Du kan godt freista å få ein lenger periode enn me brukte fyrst.
+:::
+
+::: {admonition} Oppgåve
+Gå tilbake til [statistikkbanken](https://www.ssb.no/statbank2/) 
 og sjå etter eit datasett om konkursar i same tidsperiode som arbeidsledigheita.
 Kva finn du?
 :::
 
-I det fylgjande vil me bruka filen med ID 62495, men du kan godt bruka ein annan.
-Eg har gjeve ho namnet `62495.csv`.
+I det fylgjande vil me bruka fila som eg lasta ned hausten 2025,
+men du kan godt bruka ein annan.
+Eg har gjeve ho namnet [62495.csv](./62495.csv).
 
 ::: {admonition} Oppgåve
 Last ned og last inn eit konkursdatasett i python.

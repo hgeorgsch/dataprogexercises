@@ -30,7 +30,9 @@ om der er samanheng mellom arbeidsledigheit og konkursar.
 ## Datasett
 
 Koden under lastar dei to datasetta som me kom fram til i
-øvinga om [Arbeidsledige](Arbeidsledige.ipynb).  
+øvinga om [Arbeidsledige](Arbeidsledige.ipynb):
++ [1054.csv](./1054.csv)
++ [62495.csv](./62495.csv)
 Koden er skrive meir kompakt, men bruker ingen nye teknikkar.
 Du kan godt bruka din eigen kode i staden.
 Merk at eg her kaller dei to *Data Frames* som me skal arbeida
