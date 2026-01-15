@@ -150,11 +150,37 @@ Du kan klikka deg gjennom steg for steg.
 <iframe src=https://jonajh.folk.ntnu.no/forkurs/halveringsmetoden.html width=700 height=500>
 </iframe>
 
-Der er mange måtar å implementera dette i python.  Her er ein.
+Der er mange måtar å implementera dette i python.
+Her er ein som finn ei løysing på $f(x)=0$ i intervallet $(-2,+2)$..
 
 
 ```{code-cell} ipython3
-def bisect(f,lower,upper):
+lower = -2
+upper = +2
+while abs(lower-upper) > 0.01: 
+    midpoint = (lower+upper)/2
+    if f(lower)*f(midpoint) < 0:
+            upper = midpoint
+    elif f(midpoint)*f(upper) < 0:
+            lower = midpoint
+sol = (lower+upper)/2
+print( bisect(f,-2,2) )
+```
+
+::: {admonition} Refleksjon
+Forklar kva koden gjer steg for steg.
+Er dette det same som i den grafiske demoen?
+:::
+
+Det er greit å ha ein funksjon som gjer halveringsmetoden på
+ein vilkårleg funksjon `f`.
+I python er dette uproblematisk.
+Funksjonar kan ta andre funksjonar som argument, so me kan setja
+heile løkka over inn i ein funksjon med `f`, `upper` og `lower`
+som parametrar.
+
+```{code-cell} ipython3
+def bisect( f, lower, upper):
     while abs(lower-upper) > 0.01: 
         midpoint = (lower+upper)/2
         if f(lower)*f(midpoint) < 0:
@@ -166,16 +192,10 @@ print( bisect(f,-2,2) )
 ```
 
 ::: {admonition} Refleksjon
-Kva gjer `bisect()`-funksjonen? 
+Samanlikna `bisect()`-funksjonen med den frittstande løkka.
+Er der nokon skilnad?
 :::
 
-::: {admonition} Merknad
-Legg merke til at `bisect()` tek funksjonen `f` som eit argument.
-Det er kanskje overraskande, og der er mange språk der det ikkje er
-mogleg. 
-I python er derimot funksjonar òg variablar, og variablar kan
-tilordast funksjonar som verdi, på fleire ulike måtar.
-:::
 
 ::: {admonition} Refleksjon
 Kva er den største moglege feilen i løysinga som `bisect()` returnerer?
@@ -188,7 +208,7 @@ Kva er den største moglege verdien på feilen $|\hat x-\bar x|$?
 
 ::: {admonition} Oppgåve
 Tredjegradsfunksjonen vår kryssar $x$-aksen fleire gongar.
-Finn dei to andre nullpunkta vha. halveringsmetoden.
+Finn dei to andre nullpunkta på same måte.
 :::
 
 +++
