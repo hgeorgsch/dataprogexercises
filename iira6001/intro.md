@@ -3,9 +3,10 @@ tags:
    - book/overview
 ---
 
-# Data og programmering for ulike fag
+# Programmering til dataanalyse
 
-*Data og programmering* er eit kursopplegg for folk som allereie arbeider 
+*Programmering til dataanalyse*
+er eit kursopplegg for folk som allereie arbeider 
 med som, som rekneskap, forretningsmodellar, økonomiske eller demografiske
 data.  Opplegget tilsvarer 7½ studiepoeng eller cirak 200 arbeidstimar.
 Kurset går over 15 veker med tre samlingar og to periodar à seks veker
