@@ -47,3 +47,15 @@ er ei [Mappevurdering](Mappevurdering), der kvar og ein vel ut
 eit par oppgåver som dokumenterer kva dei har lært og tek med
 seg vidare.  Éi av desse oppgåvene må ein presentera og drøfta
 med resten av deltakarane på midtvegssamlinga.
+
+I tillegg til læringsmaterialet på desse sidene, bruker me
+[Moodle](https://capquiz.math.ntnu.no).
+Her finn du tre ting,
++ Ei oppslagstavle der eg kunngjer vesentlege endringar og annan praktisk informasjon.
++ Opne forum for spørsmål og diskusjon.  Der er eitt forum for fagspørsmål og eitt
+  for praktiske spørsmål og forslag.
+  Sidan dei fleste spørsmål har interesse for fleire, liker eg å kunna drøfta spørsmål
+  her, heller enn på epost.
++ Automatisk retta programmeringsøvingar i *CodeRunner*.
+  Dei relevante øvingane er nemnde i programmet for kvar veke.
+
