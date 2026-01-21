@@ -6,50 +6,141 @@ tags:
 
 # Mappevurdering
 
++ **Frist** Sjå eksamensplan
++ **Innlevering** i Inspera
+
 Vurdering (studiepoeng og karakter) vert basert på ei innlevert mappe,
 der kandidaten viser fram utvalde arbeid frå semesteret og reflekterer
 over korleis dei er nyttige i praktisk virke.
-I tillegg er det eit obligatorisk arbeidskrav at den fyrste delen av
-mappa vert presentert munnleg på midtvegssamlingsa.
-Mappa består av to delar.
+I tillegg er det eit obligatorisk arbeidskrav å presentera og drøfta
+éi oppgåve mappa vert presentert munnleg på midtvegssamlingsa.
 
-+ Del 1 skal demonstrera grunnteknikkar, og skal innehalda,
-    + Løysing på to utvalde oppgåver frå fyrste periode.
-    + Eit kort refleksjonsnotat (maks éi side) der kandidaten fortel kvifor desse
-      to oppgåvene er vald, og drøfter kva innsikt frå kurset som
-      er mest verdifull for vidare karriere.
-+ Del 2, frå andre periode, skal visa praktisk bruk på profesjonelle problem.
-    + Løysing på éi større prosjektoppgåve etter eige val, der ein bruker 
-      programmeringsteknikkar for å få ny innsikt i eit problem frå røynda.
-      Problemstillinga må gjerne koma frå eige dagleg virke,
-    + Eit refleksjonsnotat (1-2 sider) der kandidaten oppsummerer kurset
+## Mappeinnleveringa
+
+Mappa må leverast som ein ZIP-fil
+
++ Del 1: *essay* med utgangspunkt i ei simulering
+      (Jupyter Notebook-format).
+      Dette skal visa at kandidaten meistrar grunnleggjande programmering,
+    + **Minstekrav** viser bruk av løkker, vilkårssatsar (*if*) og variablar.
+    + Meir avanserte studentar vil gjerne bruka funksjonar til å forenkla koden og
+      klasser og objekt til agent-basert simulering.
++ Del 2: *essay* med utgangspunkt i analyse av eitt eller fleire datasett
+      (Jupyter Notebook-format).  Dette skal visa at kandidaten kan bruka python
+      til dataanalyse.
+    + **Minstekrav** viser innlasting, formattering og visualisering av datasett.
+    + Der er mange tema som kan visa høgare måloppnåing, inkl. samanstilling av datasett frå
+      ulike kjelder, aggregering av data i større tidsintervall og klassifikasjon og regresjon med
+      maskinlæring.
++ Del 3: refleksjonsnotat (1-2 sider) der kandidaten oppsummerer kurset
       og den verdien det har for vidare virke.
-+ Munnleg presentasjon.  
-    + Kvar del skal presenterast på høvesvis midtvegs- og avslutningssamlinga,
-      som ein del av erfaringsutvekslinga.
-    + Presentasjonen av Del 1 er eit **obligatorisk arbeidskrav** og må vera
-      tilfredsstillande for å få lov til å levera inn mappa.
+      (Jupyter Notebook eller PDF)
++ Deklarasjonsskjema for KI; sjå
+  [Kunstig intelligens i studentoppgaver](https://i.ntnu.no/wiki/-/wiki/Norsk/Kunstig+intelligens+i+studentoppgaver)
++ Vedlegg: alle datafiler (t.d. CSV) som trengst for å køyra koden.
 
-**Bruk av Kunstig Intelligens (store språkmodellar).**
-Vurderinga legg vekt på at særleg refleksjonsnotatet er personleg og drøftar
-resultata kritisk i konteksta åt kandidaten.  Kunstig intelligens gjev ingen
-enkle løysingar på dét.  Derimot er det mykje kunstig intelligens kan gjera,
-og det er ikkje berre tillate men òg eit ynskje at de tek i bruk KI der det
-er nyttig.  Der er berre eit par vilkår,
-+ de må fylla ut NTNU sin standarddaklarasjon for bruk av KI.
-+ de må grunngje korleis de kan stola på dei resultata som de evt. får frå KI.
-  Dette gjeld òg idéar og materiale som de får gjennom samarbeid eller hentar
-  frå andre kjelder.
-+ de må reflektera over bruken av KI i refleksjonsnotatet, og ta stilling
-  kvifor de bruker det som de bruker det.
+Det er ikkje venta at Del 1 og Del 2 har same omfang.
+Éin av delane bør visa djupna i eige interesseområde.
+Den andre delen skal visa breidd, slik at båe hovudområda i pensum er
+dekte.
+Kandidaten har ansvar for å visa både breidde- og djupnakunnskap i
+faget.
+
+## *essay*-formatet
+
+Når me bruker ordet *essay* om dokumenta som inngår i mappa, so er det
+med ei viss tilsikta tvityding.  Opprinneleg er ordet fransk og tyder
+forsøk, men på engelsk tyder det gjerne skulestil.  
+
+Hovudpoenget som me understreker ved å bruka ordet er
+1.  *Essayet* er ein frittstående tekst som kan lesast utan å sjå
+    oppgåveteksta.
+2.  *Essayet* er fagleg og velbegrunna, men ikkje tunglest.
+3.  *Essayet* er ein samanhengande tekst som tek lesaren med i resonnementet.
+    Kvar idé skal vera ei naturleg og logisk vidareføring av det som kjem forut.
+4.  *Essayet* tek for seg eit problem som er verd å drøfta.
+
+Programmeringskoden skal vera ein del av resonnementet som ligg til grunn for *essayet*.
+Resonnementet kan ta for seg ein modell, ein teori eller eit datasett, og koden
+bidreg med utrekningar, t.d. med simulering av modellar, testing av teoriar eller
+visualisering av datasett.  Koden er verdilaus utan eit resonnement som gjev
+ein modell å koda, og like verdilaus utan eit resonnement som tolkar resultata
+som kjem ut.  
+
+Det tyder sjølvsagt ikkje at ein skal ta lett på koden.
+*Essayet* skal argumentera for at programmeringskoden er gjer som han skal.
+Kvar einaste kodeblokk vil normalt ha 
+1.  ein forklaring på korleis koden stemmer med problemet som vert drøfta,
+2.  ein test eller ei utskrift som viser at koden gjer noko, samt
+3.  ei tolking av testen eller utskrifta, med refleksjon som tek stilling
+    til om dette er som venta eller om noko er feil.
+
+Dette er eit kurs i programmering, men det skal helst vera eit kurs
+i bruka programmeringa til noko nyttig, interessant og påliteleg.
+Det er dette *essay*-formatet skal visa.
+
+##  Munnleg presentasjon.  
+
+Både på midtvegs- og avsluttingssamlinga vil me ha eit seminar der 
+deltakarane munnleg presenterer éin del som dei planlegg å bruka i
+mappa.  
+Det er ein føresetnad for å levera mappa til vurdering, at ein har
+gjennomført presentasjonen på minst éin av samlingane.
+Presentasjonen er ikkje ein del av vurderingsgrunnlaget.
+
+Sjølv om hensikta er å kunna drøfta arbeide som ein planlegg å bruka
+i mappa, står ein fritt til å bruka anna materiale i innleveringa,
+dersom ein ynskjer det.
+
+## Kunstig Intelligens (og juks)
+
+Kunstig Intelligens (store språkmodellar) kan gjera store delar
+av programmeringsarbeidet, men der er òg ting KI ikkje kan gjera.
+Difor er KI generelt eit lovleg verkty, og vurderinga legg størst
+vekt på det som KI ikkje kan gjera.
+Me skal vera særleg nøye med å
+1.  forklara kva du ynskjer å oppnå med programmeringskoden,
+2.  testa og validera all programmeringskode.  Korleis veit *du*
+    at koden gjer det du ynskjer?
+3.  vurdera og reflektera over kva som er vesentleg og kva meining
+    det har for oss.
+4.  visa til kjelder der du har henta materiale frå andre.
 
 Røynsler frå liknande emne viser at KI ikkje får toppkarakterer på denne
 typen oppgåver, men ståkarakter er mogleg.  Ein av funksjonane til det
 obligatoriske arbeidskravet er å sikra at alle som leverer mappa, har 
 den minimumsforståinga som krevst for å få emnet godkjend.
 
-+ [ ] Deklarasjonsskjema for KI  jf. [[IIRA2001]]
-+ [ ] Reinskriving av mappevurdering - til boa  📅 2025-12-15
+Dersom du bruker KI i stor grad er det naturleg å reflektera over
+det i refleksjonsnotatet.  Kva kan KI gjera godt, og kva treng
+du å tenkja på sjølv.
+
+Merk at det er **juks** å bruka arbeide (tekst, modellar, kode) frå andre
+utan å oppgje kjelde.  Dette prinsippet er det same uansett om arbeidet kjem
+frå kunstig intelligens, medstudentar, bøker eller tilfeldige diskusjonar på
+nettet.  
+So lenge kjeldene er oppgjevne, er alt *lov*, men det kan stadig vera **slett arbeide**.  
+Godt arbeide er kjenneteikna ved eigen validering og grunngjeving, 
+kontekstualisering og bruk av fleire kjelder saman med eigne idéar.
+
+## Refleksjonsnotatet
+
+Refleksjon i denne samanhengen er sjølvrefleksjon, dvs. eit kritisk blikk
+korleis du løyser oppgåva, kvifor du ynskjer å løysa ho, og kva du lærer av det.
+
+Det er viktig å bruka refleksjonen til å framheva læringsutbytet du har hatt
+gjennom arbeidet med oppgåva.  Målet med kurset er ikkje at de skal læra akkurat
+det som me har planlagt, men at de skal læra noko som vil vera nyttig for dykk.
+Av og til kjem det av ei utfordring litt på sida av planen, men det gjer det ikkje
+mindre verdifullt.  For å få uttelling for det som de har strevd med, so må de
+reflektera over utbytet dykkar.
+
+Likeeins er det viktig å framheva det som er verdifullt for dykk.  Sensuren skal
+leggja vekt på det som har verdi for dykk, og ikkje det som sensor finn verdifullt
+i si eiga kontekst.  Det tyder sjølvsagt ikkje at me kan gå utanom læringsutbyta
+i emneskildringa, men dei er vage nok til at de kan framheva på ulike ting i
+refleksjonen.
+
 
 ## Vurderingskriterium
 
@@ -59,83 +150,23 @@ Mappa vert vurdert som ein heilskap, og det er opp til kandidaten å velja ut op
 
 | Aspekt       | Ikkje greidd (F/0)                                                                       | Greidd under tvil (E/1)                                                                           | Dugleg (C/3)                                                                                                                | Imponerande (A/5)                                                                              |
 | :----------- | :--------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------- |
-| Originalitet | Oppgåvene i mappa er kopi av kjende døme utan variasjon.                                 | Mappa inneheld enkle variasjonar over utleverte øvingar og døme                                   | Mappa bruker gjennomgåtte teknikkar i nye kombinasjonar og på nye datasett, særleg i Del 2.                                 | Mappa viser stor variasjon og originalitet både i løysingsteknikkar og spørsmål.               |
-| Analyse      | Der er lite eller ingen kommentar til koden.                                             | Resultat er kommentert på ein fornuftig om ikkje innsiktsfull måte.                               | Mappa bruker resultat til å seia noko konstruktivt og nyttig om problemet, særleg i Del 2.                                  | Mappa viser kreativ og innsiktsfull analyse av resultata.                                      |
-| Teknisk nivå | Mappa viser ikkje tilstrekkelege teknikkar til å løyse meiningsfulle, praktiske problem. | Mappa viser kompetent bruk av python innanfor eitt av områda simulering og dataanalyse            | Mappa viser kompetent bruk av python innanfor båe områda simulering og dataanalyse                                          | Mappa viser stor breidd og djup forståing av teknikkar og konsept.                             |
-| Kodekvalitet | Der er mykje feil i koden, og koden gjer ofte ikkje det teksta seier.                    | Koden er korrekt, men vond for lesaren å forstå.                                                  | Koden er lesbar, med stort sett god bruk av variabelnamn og komentarar, sjølv om nokon løysingar kan vera unødig tungvinte. | Koden er plettfri og lesarvenleg, med god bruk av effektive og enkle løysingar der det er råd. |
-| Refleksjon   | Refleksjon manglar.                                                                      | Kandidaten freister å sjå kurset i sin yrkeskontekst, men refleksjonen vert knapp og overflatisk. | Kandidaten har gjort kursinnhaldet til sitt eige, og har konstruktive døme på praktisk verdi av kurset.                     | Kandidaten er kreativ og visjonær i sin refleksjon over framtidig nytte av kurset.             |
+| Teknisk nivå (per del) | Mappa viser ikkje tilstrekkelege teknikkar til å løyse meiningsfulle, praktiske problem. | Mappa viser dei programmeringskonstruksjonane som er nemnde som minstekrav. | Mappa viser kompetent bruk av python med variasjon i teknikkane som vert brukte. | Mappa viser stor breidd og djup forståing av teknikkar og konsept.                             |
+| Testing og validering (per del) | Der er lite eller ingen forklaring til koden.  | Koden er stort sett forklart, men overflatisk og utan overtyding. | Koden er stort sett forklart og testa.  Der er ingen tvil om at kandidaten veit kva som føregår.  | Koden er grundig testa og det er sjelden tvil om at alt er korrekt. |
+| Kodekvalitet (per del) | Der er mykje feil i koden, og koden gjer ikkje det teksta seier.                    | Koden er korrekt[^kor], men vond for lesaren å forstå.                                                  | Koden er lesbar[^les], med stort sett god bruk av variabelnamn og kommentarar, sjølv om nokon løysingar kan vera unødig tungvinte. | Koden er plettfri og lesarvenleg, med god bruk av effektive og enkle løysingar der det er råd. |
+| Analyse (per del) | Der er lite eller ingen tolking av resultat.                                             | Resultat er kommentert på ein fornuftig om ikkje innsiktsfull måte.                               | Mappa bruker resultat til å seia noko konstruktivt og nyttig om problemet, særleg i Del 2.                                  | Mappa viser kreativ og innsiktsfull analyse av resultata.                                      |
+| Originalitet (samla)| Oppgåvene i mappa er kopi av kjende døme mest utan variasjon.                                 | Mappa inneheld enkle men tydelege variasjonar over utleverte øvingar og døme                                   | Mappa bruker gjennomgåtte teknikkar i nye kombinasjonar og på nye datasett, i minst ein av dellane.                                | Mappa viser stor variasjon og originalitet både i løysingsteknikkar og spørsmål.               |
+| Refleksjon (Del 3)   | Refleksjon manglar.                                                                      | Kandidaten freister å sjå kurset i sin yrkes- eller studiekontekst, men refleksjonen vert knapp og overflatisk. | Kandidaten har gjort kursinnhaldet til sitt eige, og har konstruktive døme på praktisk verdi av kurset.                     | Kandidaten er kreativ og visjonær i sin refleksjon over framtidig nytte av kurset.             |
 
 
-# Gamle skisser til mappevurdering
-## Generelle karakterskildringar
+## Kommentarar
 
-Til sensuren har vi tatt utgangspunkt i Karakterbeskrivelsen til NTNU for teknologiske fag.
+&nbsp;
 
-A (Fremragende)
-: Kandidaten viser særdeles god kunnskap i og oversikt over emnets faglige grunnlag og innhold. Kandidaten viser meget stor grad av selvstendighet og solid analytisk forståelse. Kandidaten viser svært gode ferdigheter i anvendelsen av denne kunnskapen
-
-B (Meget god)
-: Kandidaten viser meget god kunnskap i og oversikt over emnets faglige grunnlag og innhold. Kandidaten viser betydelig grad av selvstendighet og god analytisk forståelse. Kandidatens ferdigheter i anvendelsen av denne kunnskapen ligger over gjennomsnittet.
-
-C (God) 
-: Kandidaten viser god oversikt over de viktigste kunnskapselementene og sammenhengene i emnets faglig grunnlag og innhold. Kandidaten viser selvstendighet. Kandidaten viser analytisk evne og forståelse. Kandidaten viser gjennomsnittlig evne til å anvende sin kunnskap. Gjennomsnittet kan dels tolkes som typisk prestasjon av mange studenter i emnet og dels som krav til tilfredsstillende god prestasjon i emnet.
-
-D (Nokså God)
-: Kandidaten viser i noen grad analytisk evne og forståelse. Kandidaten viser selvstendighet i noen grad. Kandidaten viser oversikt over de viktigste kunnskapselementene og sammenhengene i emnets faglige innhold, men denne oversikten er preget av noen vesentlige mangler. Kandidaten viser i noen grad evne til å bruke kunnskapen aktivt, men prestasjonen er noe dårligere enn gjennomsnittet.\\
-
-E (Tilstrekkelig) 
-: Kandidaten viser mangelfull analytisk evne og forståelse. Kandidaten viser gjennomgående noe, men sporadisk preget oversikt over de viktigste kunnskapselementene og sammenhengene i emnets faglige innhold. Kandidatens prestasjon oppfyller minimumskravet som stilles i emnet når det gjelder kunnskap, analytisk evne og ferdighet i å anvende emnets kunnskapsinnhold.
-
-F (Ikke bestått) 
-: Kandidatens prestasjon faller under minimumskravet som stilles i emnet når det gjelder kunnskap, analytisk evne og ferdighet i å anvende emnets kunnskapsinnhold. 
-
-### Sensurveiledning
-
-+ **F** Kandidaten har ikke tilegnet seg nok programmeringsferdigheter til å lage programmer i python som gjør enkle beregninger.
-
-+ **E** Kandidaten tilfredsstiller minimumskravet. Kandidaten har klart å skrive kode som gjør enkle beregninger i programmene som omhandlet populasjonvekst og sparing.  Kandidaten viser ikke vesentlige ferdigheter innen dataanalyse med pandas eller bruk av web-apier.
-
-+ **D**
-  Kandidaten viser at hen kan skrive kode som gjør enkle beregninger i programmene som omhandlet populasjonvekst og sparing, men sliter gjør det ikke helt rett når det kommer til simulering eller dataanalyse. 
-  Kanditaten viser en del kompetanse rundt mange av de generelle konseptene som er gjennomgått, men har vesentlige mangler når det kommer
-  til dataanalyse med pandas eller bruk av web-apier.
-
-+ **C**
-  Kandidaten viser gode programmeringsferdigheter og har flittig brukt mange av de generelle programmeringskonseptene vi har jobbet med. 
-  Kandidaten behersker også plotting med pyplot og enkel bruk av de mer avanserte dataanalyseverktøyene (pandas) og/eller web-apier. Kandidaten er i stand
-  til å bruke programmering noe selvstendig til et eget faglig problem, og kan tildels drøfte og analysere resultatene de får fra programmene sine.
-
-+ **B**
-  Kandidaten har meget gode programmeringsferdigheter og viser god kontroll over både de generelle konseptene og de mer avanserte dataanalyseverktøyene.
-  Kandidaten viser å kunne bruke python selvstendig som et verktøy i en meningsfull faglig sammenheng, og kan drøfte og analysere resultatene fra programmene sine.
-  Kandidaten fremstiller informasjon og data godt både grafisk og tekstlig.
-
-+ **A**
-  Kanidaten viser fremragende programmeringsferdigheter og meget god bruk av dataanalyseverktøy og/eller web-apier. 
-  Kandidaten har også vist meget høy grad av selvstendighet og har nyttiggjort programmering i en noe utfordrene faglig sammenheng.
-  Kandidaten drøfter og analyerer resultatene fra programmene meget godt.
-
-### Merknader
-
-Oppgaven til siste del av mappen var åpen for tolkning og valg av fremgangsmåte. Vi vil derfor prøve å være noe fleksible i sensurkravene over. 
-Vi har lagt en del vekt på at kandidaten viser bruk av programmering som verktøy i en faglig sammenheng og drøfter og analyserer resultatene, spesielt
-for å oppnå en 'A' eller 'B'. Avhengig av hvilken vinkling man har hatt på oppgavene sine faller dette mer eller mindre naturlig. Om besvarelsen for eksempel er
-av en mer teknisk karakter med fokus på programmeringen - eller er med praktisk rettet uten et spesifikt problem å anvendes på - passer kanskje ikke vurderingskriteriene over godt nok.
-Vi skal prøve å ta hensyn til dette.
-
-Det er også mulig å vise høy grad av selvstendighet i en faglig relevant sammenheng og drøfte og analysere programmet sitt godt, men falle litt kort når det kommer til programmeringsferdihetene.
-Vi vil i slike tilfeller ta en helhetlig vurdering og bruke refleksjonotatet, til å komme frem til endelig sensurvurdering.
-
-### Programmeringsferdigheter
-
-Når vi vurderer programmeringsferdigheter ser vi spesielt etter hvordan kandidaten bruker variabler, funksjoner, datastrukturer og iterasjon.
-Følgende rubrikk anvendes ikke direkte under sensuren, men kan være en god veiledning for hvordan vurdering foregår.
-
-| Kriterier | Lav oppnåelse (1)| Under utvikling (2)| God (3)| Avansert (4) | 
-| :- | :-  | :-  | :-  | :-   | 
-| Bruk av variabler | Bruker variabler feil eller ikke i det hele tatt; variabelnavn er ikke beskrivende eller forvirrende. | Bruker variabler, men kan ha inkonsekvente eller uklare navn; kan misbruke variabler. | Bruker konsekvent variabler riktig; variabelnavn er beskrivende og følger konvensjoner. | Demonstrerer avansert bruk av variabler; anvender beste praksis for variabelscope, konstanter og navnekonvensjoner; koden er klar og vedlikeholdbar. |
-| Bruk av funksjoner | Bruker ikke funksjoner eller misbruker innebygde funksjoner; koden er repetitiv. | Bruker innebygde funksjoner, men definerer sjelden egne funksjoner; kan ha problemer med parametere eller returverdier. | Definerer og bruker egne funksjoner; forstår parametere, argumenter og returverdier| Skaper effektive og gjenbrukbare funksjoner; Bruker funksjoner til å lage en god programstruktur | 
-| Håndtering av datastrukturer | Viser begrenset forståelse av datastrukturer; kan misbruke eller unngå dem. | Bruker grunnleggende datastrukturer (lister og dictionaries) | Velger og bruker passende datastrukturer effektivt; demonstrerer forståelse for deres egenskaper og metoder. | Viser avansert bruk av datastrukturer som dictionaries med komplisert struktur; Kan tilpasse bruken etter behov; Bruker listekomprehensjon fornuftig | 
-| Håndtering av iterasjon | Sliter med iterasjon; kan ikke bruke løkker riktig eller i det hele tatt. | Bruker løkker, men kan ha ineffektiviteter eller feil;| Bruker løkker og iterasjon effektivt; unngår vanlige feil. | Demonstrerer avanserte iterasjonsteknikker; bruker list comprehension, og anvender iterasjon for å behandle data effektivt. | 
-
-Typisk rubrikk for vurdering av generelle programmeringsferdigheter (merk overlapp i datastrukturer og iterasjon)
+[^kor]: Korrekt kode innber at koden gjer det som *essayet* seier at han skal gjera.
+[^les]: Koden skal fremst vera lesbar for dei som kan litt mindre enn kandidaten sjølv.
+      Om ein skriv eit omfattande *essay* og viser fleire avanserte teknikkar,
+      treng ein ikkje utdjupa dei mest trivielle teknikkane.
+      Det som har vore utfordrande å få til, krev kommentar og gjerne refleksjon 
+      over læringsopplevinga.  
+      Skriv ein kortare og enklare, må ein kanskje kommentera kode som går ukommentert
+      i lengre og meir avanserte *essays*.
