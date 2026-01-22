@@ -14,11 +14,11 @@ kernelspec:
 # Oppgåver til Demo Kontrollflyt
 
 Desse oppgåvene er utgangspunktet for ein demonstrasjonsvideo med to 
-formåll.  Eg skal demonstrera suntaksen for grunnleggjande kontrollflyt i 
+formål.  Eg skal demonstrera suntaksen for grunnleggjande kontrollflyt i 
 python, og eg skal vise litt korleis eg tenkjer når eg tek fatt på å skriva
 kode.
 
-# Vilkår
+## Vilkår
 
 ```{code-cell} ipython3
 tal1 = 17
@@ -36,7 +36,7 @@ Kjelde: [pynative](https://pynative.com/python-basic-exercise-for-beginners/)
 ###
 ```
 
-# Funksjonar
+## Funksjonar
 
 ::: {admonition} Oppgåve
 Skriv om programmet over som ein funksjon som tek dei to tala som argument.
@@ -46,7 +46,7 @@ Skriv om programmet over som ein funksjon som tek dei to tala som argument.
 ###
 ```
 
-# Løkker
+## Løkker
 
 ```{code-cell} ipython3
 liste1 = list( range( 10 ) )
