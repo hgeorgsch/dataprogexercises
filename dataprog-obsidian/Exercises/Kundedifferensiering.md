@@ -20,14 +20,12 @@ i marknadsføring.
 
 Det er naturleg å utvida marknadssimuleringa med kundar i ulike segment og
 med varar i ulike kategoriar med ulik priselastisitet.
-Det kan vera fornuftig å bruka objektorientert programmering slik som me
-gjorde i [Shrimp Game](/notebooks/Shrimp-Game), men det er råd å klara 
-seg utan, so lat oss sjå på det fyrst.
+Her skal me sjå på ei primitiv løysing.
+[](Agent-basert%20Marknadssimulering) tek for seg ei objektorientert
+løysing.
 
-## Primitiv løysing
-
-Definér to varekategoriar, livsnaudvendigheit og luksusvare, og to kundesegment,
-snobb og navar.
+Lat oss gå ut frå to varekategoriar, livsnaudvendigheit og luksusvare,
+og to kundesegment, snobb og navar.
 
 ::: {admonition} Oppgåve
 Med utgangspunkt i [Marknadssimulering](/notebooks/Marknadssimulering), skriv
@@ -52,33 +50,3 @@ Samanlikna optimal prissettingsstrategi for ein butikk på Snobbetoppen
 og ein på Navarseter.
 :::
 
-## Agent-basert løysing
-
-Før du går i gong med ein agent-basert løysing
-[Shrimp Game](/notebooks/Shrimp-Game).
-
-::: {admonition} Oppgåve
-Definer ei klasse for vare. 
-I tillegg til pris, må denne klassen ha eit felt for varekategori.
-I utgangspunktet er varekategoriane luksus eller naudvendigheit, men
-det kan henda at du vil innføra fleire seinare.  
-Vil du representera kategorien som tal eller som strengar?
-:::
-
-::: {admonition} Oppgåve
-Definer ulike klasser for Snobb og Navar.  
-Dei må ha ein metode for kjøpshandling, som tek omsyn til varekategorien.
-Pass på at metodenamnane er dei same i båe klassene, slik at simulatoren
-kan bruka dei same rutinane uansett kundeklasse.
-:::
-
-::: {admonition} Oppgåve
-Skriv om simulatoren for å instantiera hhv. $m$ og $n$ kundar av kvar klasse
-og simulera ein dag der alle desse kundane handlar.
-:::
-
-::: {admonition} Oppgåve
-Utvid simulatoren med ein tredje varekategori og/eller eit tredje kundesegment.
-:::
-
-Studer den same refleksjonsoppgåva som over.
