@@ -29,6 +29,8 @@ chapters:
       - file: exercises/Kontantstraum
       - file: exercises/Kundedata
       - file: notebooks/Folkevekst
+      - file: notebooks/control-empty
+      - file: notebooks/control
     - file: Datastrukturar og Simulering
       sections:
       - file: notebooks/Tilfeldigheit
@@ -36,6 +38,10 @@ chapters:
       - file: exercises/Kundedifferensiering
       - file: notebooks/Listekomprehensjon
       - file: notebooks/Tilfeldigheit-Demo
+      - file: notebooks/dict-empty
+      - file: notebooks/dict
+      - file: notebooks/list-empty
+      - file: notebooks/list
     - file: CSV og Deskriptiv Statistikk
       sections:
       - file: notebooks/Genetikk
