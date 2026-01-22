@@ -26,11 +26,12 @@ Dette kapittelet byggjer på
       Denne øvinga er litt meir teknisk og spissfindig, og mindre praktisk,
       men ho kan gje ein nyttig illustrasjon av bruken av `dict`.
 + *Tekniske demonstrasjonar*
-	+ Datastrukturer
+    + `dict`
+	+ Listekomprehensjon
 + *Opne Øvingar.*
     + [](exercises/Kundedifferensiering)
-+ *Drilløving.*
-	+ [[CodeRunner Data Structures]]
++ *Drilløving* på [Moodle](https://capquiz.math.ntnu.no).  
+	+ CodeRunner Data Structures
 
 Kuriosa
 : er arbeidsdokument.  Dei vert publiserte for dei nyssgjerrige, og viser teknikkar som eg har brukt for å laga det andre materialet til leksjonen.

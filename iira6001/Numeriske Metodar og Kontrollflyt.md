@@ -33,13 +33,17 @@ Gjennomarbeidde døme
 Demonstrasjonsvideoane
 : fokuserer på tekniske detaljar. Dette er videoar som krev meir konsentrasjon, og ein bør absolutt testa ut dei teknikkane som vert demonstrert på eiga hand, før ein gløymer dei. Det er best å sjå dei saman med øvingane.  Me har freista å visa dei vesentlege teknikkane i dei gjennomarbeidde, og demonstrasjonsvideoane skal primært gje ei ny vinkling meir enn nytt stoff.
 
-+ [[Kontrollflyt]]
++ Demo Kontrollflyt
+    + [](notebooks/control-empty)
+    + [](notebooks/control)
 
 Drilloppgåver
 : fokuserer på grunnteknikkar og vert automatisk retta.  Me vil ikkje oppfordra til å leggja stor vekt på desse, men nokon finne dei nyttige tidleg i kurset.
 
-+ [[CodeRunner Basic]]
-+ [[CodeRunner Control]]
++ Drilloppgåvene finn du på [Moodle](https://capquiz.math.ntnu.no).  
+  Der er to sett denne veka:
+    + CodeRunner Basic
+    + CodeRunner Control
 
 Opne oppgåver
 : er meir krevjande oppgåver, der ein må kombinera teknikkane og skriva meir kode frå botnen av.
