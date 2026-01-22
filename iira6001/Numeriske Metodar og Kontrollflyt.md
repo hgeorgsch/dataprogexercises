@@ -71,3 +71,8 @@ i imperativ programmering.
 + Utskrift med `print`
 + Plotting med `matplotlib`
 
+Det er mykje stoff, og ein kan lett missa motet om ein er
+oppteken av å hugsa detaljane.
+Det er derimot med programmeringssspråk som med andre språk,
+at me lærer dei ved å sjå korleis dei vert brukte.  
+Detaljane kjem av seg sjølv når ein bruker språket.
