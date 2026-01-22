@@ -45,13 +45,15 @@ chapters:
     - file: CSV og Deskriptiv Statistikk
       sections:
       - file: notebooks/Genetikk
-      - file: notebooks/Jordskjelv
       - file: notebooks/Tid og dato
       - file: notebooks/Arbeidsledige
       - file: exercises/Eksportdata
+      - file: notebooks/ssbfile-empty
+      - file: notebooks/ssbfile
     - file: Samanlikna Datasett
       sections:
       - file: notebooks/Arbeidsledige og Konkursar
+      - file: notebooks/Jordskjelv
     - file: Agent-basert simulering
       sections:
       - file: notebooks/LoanClass

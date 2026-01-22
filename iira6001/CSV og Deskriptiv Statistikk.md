@@ -27,6 +27,7 @@ Læringsmaterialet fylgjer same format som andre veker.
 + *Demovideo*
     + [[Data frå SSB]]
 	+ [[Filkonvertering og -import]]
+        + [](notebooks/ssbfile-empty)
 	+ [[Plot i pandas]]
 	+ [[Gjennomsnitt og spreding]] 
 + *Opne øvingar*
