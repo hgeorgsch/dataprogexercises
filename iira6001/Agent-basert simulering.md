@@ -27,6 +27,7 @@ Dette kapittelet byggjer på
     + git og github?
 + *Opne øvingar*
     + [Iskrem på ei strand](notebooks/Iskrem%20på%20ei%20strand)
+    + [](Agent-basert%20Marknadssimulering)
 
 ## Oppsummering
 
