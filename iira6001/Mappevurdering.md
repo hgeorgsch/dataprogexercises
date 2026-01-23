@@ -46,6 +46,17 @@ dekte.
 Kandidaten har ansvar for å visa både breidde- og djupnakunnskap i
 faget.
 
+Bå midtvegs- og avslutningssamlinga vil me ha eit seminar der
+deltakarane presenterer og drøftar arbeidet til Del 1 og Del 2
+i mappa.
+Det er ein føresetnad for å levera mappe til vurdering at ein
+gjer dette minst ein av gongane.
+Sjølv om tanken er at ein drøfter og for innspel til arbeid
+som ein planlegg å bruka i mappa, står ein fritt til å bruka
+anna materiale i innleveringa, dersom ein ynskjer det.
+Sjå [obligatorisk arbeidskrav](Oblig) for meir informasjon.
+
+
 ## *essay*-formatet
 
 Når me bruker ordet *essay* om dokumenta som inngår i mappa, so er det
@@ -90,18 +101,6 @@ i bruka programmeringa til noko nyttig og interessant, og kunna
 forsikar seg om at resultatet korrekt.
 Det er dette *essay*-formatet skal visa.
 
-##  Munnleg presentasjon.  
-
-Både på midtvegs- og avsluttingssamlinga vil me ha eit seminar der 
-deltakarane munnleg presenterer éin del som dei planlegg å bruka i
-mappa.  
-Det er ein føresetnad for å levera mappa til vurdering, at ein har
-gjennomført presentasjonen på minst éin av samlingane.
-Presentasjonen er ikkje ein del av vurderingsgrunnlaget.
-
-Sjølv om hensikta er å kunna drøfta arbeide som ein planlegg å bruka
-i mappa, står ein fritt til å bruka anna materiale i innleveringa,
-dersom ein ynskjer det.
 
 ## Kunstig Intelligens (og juks)
 
@@ -155,14 +154,20 @@ refleksjonen.
 
 ## Vurderingskriterium
 
-Mappa vert vurdert etter fem aspekt som oppsummert i tabellen.  Ståkarakter (E) krev at alle aspekta vert vurderte tilfredstillande (E eller betre).  Dersom alle aspekta er tilfredsstillande, vert karakteren fastsett som gjennomsnitt av aspekta og avrunda etter vanlege avrundingsreglar.
+Mappa vert vurdert etter seks aspekt som oppsummert i tabellen, der fire av dei vert vurdert
+to gongar, ein gong på Del 1 og ein Del 2.
+Ståkarakter (E) krev at kvart aspekt vert vurdert tilfredstillande (E eller betre).
+Dvs. anten Del 1 eller Del 2 må vera tilfredsstillande etter alle fire aspekt, og
+i tillegg må originalitet og refleksjon vera tilfredsstillande.
+Dersom dette er tilfredsstilt, vert karakteren fastsett som gjennomsnitt av aspekta 
+og avrunda etter vanlege avrundingsreglar.
 
 Mappa vert vurdert som ein heilskap, og det er opp til kandidaten å velja ut oppgåver som demonstrerer breidd og djupna. Som kriteria under viser er det ein del av læringsmålet å sjå den praktiske verdien i *eigen* karriere.
 
 | Aspekt       | Ikkje greidd (F/0)                                                                       | Greidd under tvil (E/1)                                                                           | Dugleg (C/3)                                                                                                                | Imponerande (A/5)                                                                              |
 | :----------- | :--------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------- |
 | Teknisk nivå (per del) | Mappa viser ikkje tilstrekkelege teknikkar til å løyse meiningsfulle, praktiske problem. | Mappa viser dei programmeringskonstruksjonane som er nemnde som minstekrav. | Mappa viser kompetent bruk av python med variasjon i teknikkane som vert brukte. | Mappa viser stor breidd og djup forståing av teknikkar og konsept.                             |
-| Testing og validering (per del) | Der er lite eller ingen forklaring til koden.  | Koden er stort sett forklart, men overflatisk og utan overtyding. | Koden er stort sett forklart og testa.  Der er ingen tvil om at kandidaten veit kva som føregår.  | Koden er grundig testa og det er sjelden tvil om at alt er korrekt. |
+| Testing og validering (per del) | Der er lite eller ingen forklaring til koden.[^tv]  | Koden er stort sett forklart, men overflatisk og utan overtyding. | Koden er stort sett forklart og testa.  Der er ingen tvil om at kandidaten veit kva som føregår.  | Koden er grundig testa og det er sjelden tvil om at alt er korrekt. |
 | Kodekvalitet (per del) | Der er mykje feil i koden, og koden gjer ikkje det teksta seier.                    | Koden er korrekt[^kor], men vond for lesaren å forstå.                                                  | Koden er lesbar[^les], med stort sett god bruk av variabelnamn og kommentarar, sjølv om nokon løysingar kan vera unødig tungvinte. | Koden er plettfri og lesarvenleg, med god bruk av effektive og enkle løysingar der det er råd. |
 | Analyse (per del) | Der er lite eller ingen tolking av resultat.                                             | Resultat er kommentert på ein fornuftig om ikkje innsiktsfull måte.                               | Mappa bruker resultat til å seia noko konstruktivt og nyttig om problemet, særleg i Del 2.                                  | Mappa viser kreativ og innsiktsfull analyse av resultata.                                      |
 | Originalitet (samla)| Oppgåvene i mappa er kopi av kjende døme mest utan variasjon.                                 | Mappa inneheld enkle men tydelege variasjonar over utleverte øvingar og døme                                   | Mappa bruker gjennomgåtte teknikkar i nye kombinasjonar og på nye datasett, i minst ein av dellane.                                | Mappa viser stor variasjon og originalitet både i løysingsteknikkar og spørsmål.               |
@@ -173,6 +178,9 @@ Mappa vert vurdert som ein heilskap, og det er opp til kandidaten å velja ut op
 
 &nbsp;
 
+[^tv]: Testing og validering vert vurdert ekstra strengt for å hindra ukritisk bruk av kunstig intelligens.  
+      For å få ståkarakter, må kandidaten forklara og validera koden slik at det er tydeleg
+      at dei sjølv har teke stilling til han og kan gå god for at han er korrekt.
 [^kor]: Korrekt kode innber at koden gjer det som *essayet* seier at han skal gjera.
 [^les]: Koden skal fremst vera lesbar for dei som kan litt mindre enn kandidaten sjølv.
       Om ein skriv eit omfattande *essay* og viser fleire avanserte teknikkar,

@@ -21,14 +21,15 @@ Læringsmaterialet fylgjer same format som andre veker.
 + *Gjennomarbeidde døme*
     + [](notebooks/Fyrste%20datasett%20med%20CSV) frå opningssamlinga.
             Du bør gjera ferdig denne før du startar på noko nytt.
-	+ [Arbeidsledige](notebooks/Arbeidsledige) 
-	+ [Tid og dato](notebooks/Tid%20og%20dato)
+	+ [](notebooks/Arbeidsledige) 
+	+ [](notebooks/Tid%20og%20dato)
     + [Genetikk](notebooks/Genetikk) demonstrerer korrelasjon m.m. (valfri)
 + *Demovideo*
-    + [[Data frå SSB]]
-	+ [[Filkonvertering og -import]]
-	+ [[Plot i pandas]]
-	+ [[Gjennomsnitt og spreding]] 
+    + Data frå SSB
+	+ Filkonvertering og -import
+        + [](notebooks/ssbfile-empty)
+	+ Plot i pandas
+        + [](notebooks/plot-empty)
 + *Opne øvingar*
 	+ [Eksportdata](exercises/Eksportdata).  Desse oppgåve krev omfattande preprosessering
       for å få data på samanliknbar form.

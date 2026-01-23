@@ -16,7 +16,7 @@ Dette kapittelet byggjer på
       ([Slides](https://iirevu.org.ntnu.no/Slides/Kva%20er%20simulering%3f/#/))
 	+ Slumptalsgeneratorar
       ([Slides](https://iirevu.org.ntnu.no/Slides/Slumptalsgenerator))
-	+ Datastrukturar og Kompleksitet
+	+ Datastrukturar
       ([Slides](https://iirevu.org.ntnu.no/Slides/Datastrukturar/))
 + *Gjennomarbeidde Døme.*
 	+ [Tilfeldigheit](notebooks/Tilfeldigheit)
@@ -55,6 +55,3 @@ Dette inneber
 + Datastrukturar
     + `dict`
     + lister
-    + iteratorar
-+ Konvertering mellom datatypar
-+ Formattert utskrift med `print( f"... {var:format}" )`
