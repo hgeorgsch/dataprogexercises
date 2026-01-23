@@ -17,6 +17,7 @@ Desse oppgåvene er utgangspunktet for ein demonstrasjonsvideo
 for plotting med pandas.
 
 ::: {admonition} Oppgåve
+Sjå på
 :::
 
 ```{code-cell} ipython3
