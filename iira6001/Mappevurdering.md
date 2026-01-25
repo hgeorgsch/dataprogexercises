@@ -99,10 +99,11 @@ Difor er KI generelt eit lovleg verkty, og vurderinga legg størst
 vekt på det som KI ikkje kan gjera.
 Me skal vera særleg nøye med å
 1.  forklara kva du ynskjer å oppnå med programmeringskoden,
-2.  testa og validera all programmeringskode.  Korleis veit *du*
+    Koden skal ha ei tydleg hensikt.
+2.  testa og validera all programmeringskode.  Korleis *veit* du
     at koden gjer det du ynskjer?
-3.  vurdera og reflektera over kva som er vesentleg og kva meining
-    det har for oss.
+3.  vurdera og reflektera over resultata.
+    Kva kan me læra av resultate?
 4.  visa til kjelder der du har henta materiale frå andre.
 
 Røynsler frå liknande emne viser at KI ikkje får toppkarakterer på denne
