@@ -79,15 +79,26 @@ ein modell å koda, og like verdilaus utan eit resonnement som tolkar resultata
 som kjem ut.  
 
 Det tyder sjølvsagt ikkje at ein skal ta lett på koden.
-*Essayet* skal argumentera for at programmeringskoden er gjer som han skal.
-Kvar einaste kodeblokk vil normalt ha 
-1.  ein forklaring på korleis koden stemmer med problemet som vert drøfta,
-2.  ein test eller ei utskrift som viser at koden gjer noko, samt
-3.  ei tolking av testen eller utskrifta, med refleksjon som tek stilling
+*Essayet* skal argumentera for at programmeringskoden gjer som han skal.
+For kvar einaste kodeblokk vil normalt ha 
+1.  ein innleiande *essay*-blokk som forklarer kva ein ynskjer å oppnå med koden,
+    gjerne med ei skildring av modellen og konsepta som ein nyttar
+2.  koden som løyser problemet,
+3.  ein test eller ei utskrift som viser at koden gjer noko, 
+5.  ei forklaring på korleis koden stemmer med problemet eller modellen
+    som vert drøfta, samt
+4.  ei tolking av testen eller utskrifta, med refleksjon som tek stilling
     til om dette er som venta eller om noko er feil.
 
+Når ein har mykje å seia, er det alltid best å seia éin ting åt gongen.
+Difor bør kodeblokkane ikkje vera for lange dersom ein kan unngå det.
+Det er sjølvsagt ikkje råd å dela opp funksjons- og klassedefinisjonar,
+og då treng ein kanskje kommentar<r i sjølve koden.  Likevel er
+det slik at ein bør testa kvar funksjon og metode for seg.
+
 Dette er eit kurs i programmering, men det skal helst vera eit kurs
-i bruka programmeringa til noko nyttig, interessant og påliteleg.
+i bruka programmeringa til noko nyttig og interessant, og kunna
+forsikar seg om at resultatet korrekt.
 Det er dette *essay*-formatet skal visa.
 
 
