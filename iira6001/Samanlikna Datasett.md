@@ -26,5 +26,6 @@ Det inneber at me skal læra å
 	+ [Samanlikning av tidsrekkjer](notebooks/Arbeidsledige%20og%20Konkursar) 
     + [Jordskjelvdata](notebooks/Jordskjelv) som demonstrerer animasjon og plotting oppå kart. (valfri)
 + *Demovideo*
+    + Melt og pivot
 
 + [ ] Oppgåve: Korrelasjonskoeffisient med forskjøvede data (til arbeidsledige)
