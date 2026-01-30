@@ -12,8 +12,10 @@ Vekesprogrammet inneheld difor forskjellige ressursar som kan brukast på ulikt 
 Perspektivføredrag
 : er meint å gje eit konseptuelt overblikk eller kontekst. Me vonar at det fungerer å sjå desse litt avslappa når ein har tid til overs.
 
-+ [Imperativ programmering og maskinarkitektur](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=e6150884-d729-4296-a139-b330009a4a30)
++ [Imperativ programmering og maskinarkitektur](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=040b7fe4-b252-4774-a7ab-b3da00cc18d6)
   [(Slides)](https://iirevu.org.ntnu.no/Slides/Imperativ%20programmering%20og%20maskinarkitektur)
++ [Struktur og syntaks](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=796e58e9-0162-427b-89d9-b3da00eb093e)
+    + Føredraget bruker [Python Tutor](https://pythontutor.com/) som du òg kan prøva ut sjølv.
 + [Kontrollflyt i Python](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=243a22cb-08aa-47c6-b4ea-b34f00849d91)
   [(Slides)](https://iirevu.org.ntnu.no/Slides/Kontrollflyt%20i%20Python)
     + Føredraget bruker [Python Tutor](https://pythontutor.com/) som du òg kan prøva ut sjølv.
