@@ -12,7 +12,7 @@ Dette kapittelet byggjer på
 :::
 
 + *Perspektivføredrag* 
-	+ Kva er simulering?
+	+ [Kva er simulering?](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=dbf1833f-b217-47ca-8dad-b3db00eb2507)
       ([Slides](https://iirevu.org.ntnu.no/Slides/Kva%20er%20simulering%3f/#/))
 	+ Slumptalsgeneratorar
       ([Slides](https://iirevu.org.ntnu.no/Slides/Slumptalsgenerator))

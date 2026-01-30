@@ -62,9 +62,10 @@ Skriv ei løkke som skriv ut summen av alle tala i `liste2`.
 ```
 
 ::: {admonition} Oppgåve
-Skriv ei løkke som reknar ut dei kummulative summane frå `liste1`,
-dvs. fyrst det fyrste talet, so summen av dei to fyrste, so dei
-tre fyrste, osv.
+Skriv ei løkke som reknar ut ei liste med alle dei kummulative summane
+frå `liste1`,
+dvs. fyrst det fyrste talet, so summen av dei to fyrste, so summen
+av dei tre fyrste, osv.
 :::
 
 ```{code-cell} ipython3
