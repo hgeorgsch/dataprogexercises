@@ -11,7 +11,7 @@ kernelspec:
   name: python3
 ---
 
-# Oppgåver til Demo Kontrollflyt
+# Løysinga frå Demo Kontrollflyt
 
 Desse oppgåvene er utgangspunktet for ein demonstrasjonsvideo med to 
 formål.  Eg skal demonstrera suntaksen for grunnleggjande kontrollflyt i 

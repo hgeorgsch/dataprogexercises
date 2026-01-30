@@ -26,7 +26,8 @@ tal2 = 4
 ```
 
 ::: {admonition} Oppgåve
-Skrive eit program som tek to tal og skriv ut produktet dersom dette er
+Skrive eit program som tek dei to tala (`tal1` og `tal2`)
+og skriv ut produktet dersom dette er
 mindre enn 500, og elles skriv ut summen.
 
 Kjelde: [pynative](https://pynative.com/python-basic-exercise-for-beginners/)

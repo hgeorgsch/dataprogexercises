@@ -33,7 +33,8 @@ Gjennomarbeidde døme
 Demonstrasjonsvideoane
 : fokuserer på tekniske detaljar. Dette er videoar som krev meir konsentrasjon, og ein bør absolutt testa ut dei teknikkane som vert demonstrert på eiga hand, før ein gløymer dei. Det er best å sjå dei saman med øvingane.  Me har freista å visa dei vesentlege teknikkane i dei gjennomarbeidde, og demonstrasjonsvideoane skal primært gje ei ny vinkling meir enn nytt stoff.
 
-+ Demo Kontrollflyt
++ Demo Kontrollflyt viser korleis ein lastar ned øvinga og korleis ein bruker variablar,
+  vilkår (*if*) og løkker (*for*) i python.
     + [](notebooks/control-empty)
     + [](notebooks/control)
 
@@ -66,7 +67,7 @@ Hovudmålet denne veka er å læra å bruka dei mest grunnleggjande konsepta
 i imperativ programmering.
 + Variablar og tilordningar
 + Bolske uttrykk med `==`, `<`, `>`
-+ Vilårssatsar med `if` og `else`
++ Vilkårssatsar med `if` og `else`
 + Løkker med `for` og gjerne `while`
 + Utskrift med `print`
 + Plotting med `matplotlib`
