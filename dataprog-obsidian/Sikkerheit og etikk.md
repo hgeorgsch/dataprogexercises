@@ -1,3 +1,4 @@
 
-+ [ ] Samtykkeskjema
-+ [ ] Eigarskap og verdiar
++ [ ] Veke: Sikkerheit og etikk
+	+ [ ] Samtykkeskjema
+	+ [ ] Eigarskap og verdiar
