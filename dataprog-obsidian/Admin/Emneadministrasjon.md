@@ -14,4 +14,4 @@ tags:
 - Marknadsføring
 	- [[Programmering til dataanalyse (1).pdf]]
 	- [[Brosjyre Programmering til dataanalyse 2025-11-26.pdf]]
-	- 
+- [[Info frå NTNU videre]]
