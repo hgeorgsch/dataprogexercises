@@ -26,12 +26,12 @@ Dette kapittelet byggjer på
       Denne øvinga er litt meir teknisk og spissfindig, og mindre praktisk,
       men ho kan gje ein nyttig illustrasjon av bruken av `dict`.
 + *Tekniske demonstrasjonar*
-    + `dict`
-        + [](notebooks/dict-empty)
-        + [](notebooks/dict)
 	+ Listekomprehensjon
         + [](notebooks/list-empty)
         + [](notebooks/list)
+    + `dict`
+        + [](notebooks/dict-empty)
+        + [](notebooks/dict)
 + *Opne Øvingar.*
     + [](exercises/Kundedifferensiering)
 + *Drilløving* på [Moodle](https://capquiz.math.ntnu.no).  
