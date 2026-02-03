@@ -1,17 +1,18 @@
 ---
 jupytext:
+  formats: md:myst,ipynb
   text_representation:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.17.0
+    jupytext_version: 1.18.1
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
   name: python3
 ---
 
-# Oppgåver til Demo Listekomprehensjon
+# Løysingar til Demo Listekomprehensjon
 
 Desse oppgåvene er utgangspunktet for ein demonstrasjonsvideo med to
 formål.  Eg skal demonstrera suntaksen for listekomprehensjon i
@@ -24,8 +25,15 @@ kan skrivast som $x^2$ for eit naturleg tal $x$.
 :::
 
 ```{code-cell} ipython3
-## TODO
+for x in range(1,11):
+    print( x, x**2 )
 ```
+
+```{code-cell} ipython3
+[ x**2 for x in range(1,11) ]
+```
+
+Vi ser at listekomprehensjon ligner *for*-løkken, men alt blir skrevet inn i ett listeuttrykk.
 
 ```{code-cell} ipython3
 def f(x):
@@ -38,15 +46,19 @@ der $f(x)$ er definert som `f` over.
 :::
 
 ```{code-cell} ipython3
-## TODO
+[ f(x) for x in range(10) ]
 ```
+
+Det er lurt å kontrollrekna for å sjekka at me ikkje har gjort feil.
+
++++
 
 ::: {admonition} Oppgåve
 Lag ei liste med par $(x, f(x))$ for $x=0,1,2,\ldots,9$.
 :::
 
 ```{code-cell} ipython3
-## TODO
+[ ( x, f(x) ) for x in range(10) ]
 ```
 
 ::: {admonition} Oppgåve
@@ -55,7 +67,12 @@ lagar ei ny liste der tomme strengar (`""`) er fjerna.
 :::
 
 ```{code-cell} ipython3
-## TODO
+sliste = [ "Hello", "Hallo", "", "Hei", "", "!", "" ]
+print( len(sliste) )
+```
+
+```{code-cell} ipython3
+[ x for x in sliste if x != "" ]
 ```
 
 ::: {admonition} Oppgåve
@@ -66,6 +83,13 @@ og tabellen er ei liste med radar for $x=0,1,\ldots,10$.
 :::
 
 ```{code-cell} ipython3
-## TODO
+[ x*y for y in range(11) ]
 ```
 
+```{code-cell} ipython3
+[ [ x*y for y in range(11) ] for x in range(11) ]
+```
+
+```{code-cell} ipython3
+
+```
