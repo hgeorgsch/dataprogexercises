@@ -19,9 +19,9 @@ mellom samlingane.
 + [Avslutningssamling](closure)
 
 Mange av sidene i denne boka er *tutorials* som du kan lasta ned
-og køyra i *Jupyter notebook*.  Bruk nedlastingsknappen oppe til
-høgre og sjå om du får `ipynb` som eit val.  Du må sjølvsagt
-òg installera *Python* og *Jupyter Lab*
+og køyra i *Jupyter notebook* eller *Jupyter lab*.
+Bruk nedlastingsknappen oppe til høgre og sjå om du får `ipynb` som eit val.  
+Du må sjølvsagt òg installera *Python* og *Jupyter Lab*
 (sjå [installasjon](Installasjon)).
 
 Opplegget byggjer på erfaringa at programmering sjelden handlar

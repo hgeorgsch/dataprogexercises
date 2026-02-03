@@ -18,10 +18,10 @@ har ein ny versjon av python, alle biblioteka me treng, samt
 ## Anaconda
 
 1. Last ned [Anaconda](https://www.anaconda.com/download/success)
-   - Velg riktig versjon, mac, Linux eller windows,
+   - Vel riktig versjon, mac, Linux eller windows,
      og evt. intel eller m-prossessor for mac.
-   - Du kan sjekke om du har intel eller apple-silicon prosessor 
-     slik som på [bildet under](fig-sjekk)
+   - Du kan sjekka om du har intel eller apple-silicon-prosessor 
+     slik som på [biletet under](fig-sjekk)
 
 :::{figure} sjekk-prosessor.png
 :name: fig-sjekk
