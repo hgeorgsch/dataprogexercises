@@ -262,7 +262,13 @@ eller som del av eit uttrykk
 print( f"Eit uttrykk f(10)*2-1 = {f(10)*2-1}." )
 ```
 
-Funksjonar i *python* kan gjera begge delar, både returnera verdi og gjera noko.
+::: {admonition} Oppgåve
+Kva er verdien av $f(8)$.
+Lag ein kodeblokk og bruk funksjonen.
+:::
+
+Det er mogleg
+for funksjonar i *python* både å returnera verdi og å gjera noko.
 
 ```{code-cell} ipython3
 def f(x):
@@ -276,11 +282,10 @@ så gjer han ingenting her, når `f` vert definert.
 Han gjer noko når `f` seinare vert *brukt*.
 :::
 
-Lat oss sjå kva `f` gjer.
-
-```{code-cell} ipython3
-print( f(3) )
-```
+::: {admonition} Oppgåve
+Kva skjer når du reknar ut $f(8)$ med den nye funksjonen `f`?
+Lag ein kodeblokk og prøv.
+:::
 
 ## Folketalsmodell
 
