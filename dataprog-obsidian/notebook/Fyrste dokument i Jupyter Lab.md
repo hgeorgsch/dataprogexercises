@@ -410,6 +410,26 @@ Kva synest du trengst for å gjera grafen presentabel?
 Bruk døma over og lag eit plott over estimert folketal på Island over dei neste åtte åra.
 :::
 
+## Opprydding
+
+::: {admonition} Oppgåve
+Når me arbeider med fleire program, er det lett å rota bort filene sine. 
+Ta deg difor litt tid etter øvinga til å laga eit system for arbeidsfilene
+dine frå kurset, og samla alle filene som du har brukt på ein plass.
+:::
+
+Eit par råd frå korleis eg gjer det,
+
+1.  Når du lagar nye filer, heiter dei *Untitled*, og ein har raskt mange slike
+    filer.  Gjer det til ei vane å byta namn på filene so snart som råd.-
+    Du kan m.a. gjera det med høgreklikk på fanehodet i *Jupyter Lab*
+2.  Lag deg ein prosjektkatalog (mappe) for kurset, med ein underkatalog for
+    opningssamlinga.  Samla materialet der.
+3.  Filnavigatøren i *Jupyter lab* fungerer høveleg godt både til å laga katalogar,
+    flytta filer og namna om filer.  Bruk høgreklikk.
+4.  Dersom du allereie har gode vaner for å halda orden på filene dine, so er der
+    ingen grunn for å endra dei for dette kurset.
+
 ## Nyttig?
 
 Døma over er sjølvsagt enkle, men me må kunna krabba før me lærer å gå.
