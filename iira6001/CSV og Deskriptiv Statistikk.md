@@ -26,8 +26,13 @@ Læringsmaterialet fylgjer same format som andre veker.
     + [Genetikk](notebooks/Genetikk) demonstrerer korrelasjon m.m. (valfri)
 + *Demovideo*
     + Data frå SSB
-	+ Filkonvertering og -import
+        + [Datasett 13760](./dataprog-obsidian/notebook/13760_20260203-130712.csv)
+        + [Arbeidsdokument](notebooks/ssb)
+	+ Filkonvertering og -import.
+      Denne demoen viser rydding i nokre datasett som eg har sett studentar finna for å
+      studera utvikling i bustadprisar.
         + [](notebooks/ssbfile-empty)
+        + [](notebooks/ssbfile)
 	+ Plot i pandas
         + [](notebooks/plot-empty)
 + *Opne øvingar*

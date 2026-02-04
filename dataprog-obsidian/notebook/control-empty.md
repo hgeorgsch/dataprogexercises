@@ -1,10 +1,11 @@
 ---
 jupytext:
+  formats: md:myst,ipynb
   text_representation:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.17.0
+    jupytext_version: 1.18.1
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -14,7 +15,7 @@ kernelspec:
 # Oppgåver til Demo Kontrollflyt
 
 Desse oppgåvene er utgangspunktet for ein demonstrasjonsvideo med to 
-formål.  Eg skal demonstrera suntaksen for grunnleggjande kontrollflyt i 
+formål.  Eg skal demonstrera syntaksen for grunnleggjande kontrollflyt i 
 python, og eg skal vise litt korleis eg tenkjer når eg tek fatt på å skriva
 kode.
 
@@ -26,7 +27,7 @@ tal2 = 4
 ```
 
 ::: {admonition} Oppgåve
-Skrive eit program som tek dei to tala (`tal1` og `tal2`)
+Skriv eit program som tek dei to tala (`tal1` og `tal2`)
 og skriv ut produktet dersom dette er
 mindre enn 500, og elles skriv ut summen.
 
@@ -59,17 +60,25 @@ Skriv ei løkke som skriv ut summen av alle tala i `liste2`.
 :::
 
 ```{code-cell} ipython3
-### TOOD
+### TODO
 ```
 
 ::: {admonition} Oppgåve
-Skriv ei løkke som reknar ut dei kummulative summane frå `liste1`,
-dvs. fyrst det fyrste talet, so summen av dei to fyrste, so dei
+Skriv ei løkke skriv ut alle dei alle dei kummulative summane frå `liste1`,
+dvs. fyrst (summen av) det fyrste talet, so summen av dei to fyrste, so dei
 tre fyrste, osv.
 :::
 
 ```{code-cell} ipython3
-### TOOD
+### TODO
+```
+
+::: {admonition} Oppgåve
+Skriv ei løkke som lagar ei liste med dei kummulative summane.
+:::
+
+```{code-cell} ipython3
+### TODO
 ```
 
 ::: {admonition} Oppgåve
@@ -81,7 +90,7 @@ Ei Fibonacci-fylgje er ei talfylgje der kvart tal er summen av dei to føregåan
 :::
 
 ```{code-cell} ipython3
-### TOOD
+### TODO
 ```
 
 ## Listemanipulasjon
@@ -92,5 +101,5 @@ vha. berre éin variabel.
 :::
 
 ```{code-cell} ipython3
-### TOOD
+### TODO
 ```
