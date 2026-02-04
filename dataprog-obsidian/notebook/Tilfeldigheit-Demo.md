@@ -148,14 +148,11 @@ def fmt1( v ):
    s = ""
    for t in v:
        s += "{" + f"{t}" + "}"
-
+   return s
+    
 def fmt2( w ):
    return " ".join( [ fmt1( v ) for v in w ] )
-print( rs )
-print( fmt1(rs) )
+
 print( fmt2(rs) )
 ```
 
-```{code-cell} ipython3
-
-```
