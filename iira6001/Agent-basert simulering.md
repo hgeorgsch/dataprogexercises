@@ -22,9 +22,9 @@ Dette kapittelet byggjer på
     + [](notebooks/Shrimp-Game) er eit døme på 
       agent-basert simulering.
 + *Demovideo*
-    + [[Klasser-Objekter]] i python
-    + Programmering i `.py`-filer
-    + git og github?
+    + Klasser og Objekt i Python
+        + [](notebooks/class-empty)
+        + [](notebooks/class)
 + *Opne øvingar*
     + [Iskrem på ei strand](notebooks/Iskrem%20på%20ei%20strand)
     + [](exercises/Agent-basert%20Marknadssimulering)
