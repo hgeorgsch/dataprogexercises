@@ -60,6 +60,7 @@ chapters:
       - file: notebooks/Shrimp-Game
       - file: notebooks/Iskrem på ei strand.ipynb
       - file: notebooks/ShrimpSimulation
+      - file: exercises/Agent-basert Marknadssimulering
     - file: WebAPI
       sections:
       - file: notebooks/requests
@@ -97,4 +98,5 @@ chapters:
     - file: notebooks/Multiindex.ipynb
     - file: notebooks/dicts-json-jsonstat.ipynb
     - file: notebooks/JSON og dict
+    - file: notebooks/Predator-Prey
 
