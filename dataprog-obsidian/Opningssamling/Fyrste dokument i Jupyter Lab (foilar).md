@@ -21,7 +21,11 @@ tags:
 	+ Kode
 + Hensikta med Jupyter
 	+ skriva tekstdokument (rapport, *essay*)
-	+ ... der kode inngår som en del av argumentasjonen
+	+ ... der kode inngår som en del av 
++ Kva er programmering
+	+ kodespråk - både markdown og python
+	+ serier med instruksar, gjerne utrekningar
+	+ datahandtering og -manipulering - uavhengig av spesifikke program og appar
 
 ## Filhandtering
 
