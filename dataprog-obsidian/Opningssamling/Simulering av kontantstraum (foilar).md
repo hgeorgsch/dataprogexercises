@@ -12,3 +12,9 @@ tags:
 + *Læringsmål*
 	+ kjenna grunnprinsippet i imperativ programmering som ein simulering av ein prosess
 	+ kunna modellera enkle prosessar frå røynda som dataprogram
+
+
++ Simuleringsproblemet
+	+ spare- eller lånelaup
+	+ kontantstraum
++ Programmet simulerer tida, med sparing og rentepåslag kvar månad eller kvart år.
