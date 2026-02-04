@@ -37,13 +37,15 @@ Demonstrasjonsvideoane
 
 + Demo Kontrollflyt viser korleis ein lastar ned øvinga og korleis ein bruker variablar,
   vilkår (*if*) og løkker (*for*) i python.
+  Denne vart lang (ca. 40 min.) og kanskje litt for omstendeleg, men hopp over det som
+  vert for trivielt.
     + [](notebooks/control-empty)
     + [](notebooks/control)
 
 Drilloppgåver
 : fokuserer på grunnteknikkar og vert automatisk retta.  Me vil ikkje oppfordra til å leggja stor vekt på desse, men nokon finne dei nyttige tidleg i kurset.
 
-+ Drilloppgåvene finn du på [Moodle](https://capquiz.math.ntnu.no).  
++ Drilloppgåvene finn du på [Moodle](https://capquiz.math.ntnu.no).
   Der er to sett denne veka:
     + CodeRunner Basic
     + CodeRunner Control
@@ -77,5 +79,5 @@ i imperativ programmering.
 Det er mykje stoff, og ein kan lett missa motet om ein er
 oppteken av å hugsa detaljane.
 Det er derimot med programmeringssspråk som med andre språk,
-at me lærer dei ved å sjå korleis dei vert brukte.  
+at me lærer dei ved å sjå korleis dei vert brukte.
 Detaljane kjem av seg sjølv når ein bruker språket.
