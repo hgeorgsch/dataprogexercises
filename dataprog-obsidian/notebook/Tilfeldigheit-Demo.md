@@ -120,7 +120,7 @@ r = [ test(a) for a in range(2,97) ]
 Her bruker me mengetypen `set` for å verta kvitt gjentekne element.
 I returverdien skal `len(s)` vera talet på unike element.
 
-Til figurane brukte eg denne funksjonen for å 
+Til figurane brukte eg denne funksjonen for å
 
 ```{code-cell} ipython3
 def fx(s,a=7,m=97):
@@ -149,10 +149,13 @@ def fmt1( v ):
    for t in v:
        s += "{" + f"{t}" + "}"
 
-def fmt2( v ):
-   return " ".join( fmt1( v ) )
-
+def fmt2( w ):
+   return " ".join( [ fmt1( v ) for v in w ] )
+print( rs )
+print( fmt1(rs) )
 print( fmt2(rs) )
 ```
 
+```{code-cell} ipython3
 
+```

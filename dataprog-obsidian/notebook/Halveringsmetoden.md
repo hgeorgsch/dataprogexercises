@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.17.0
+    jupytext_version: 1.18.1
 kernelspec:
   name: dataprog
   display_name: dataprog
@@ -153,7 +153,6 @@ Du kan klikka deg gjennom steg for steg.
 Der er mange måtar å implementera dette i python.
 Her er ein som finn ei løysing på $f(x)=0$ i intervallet $(-2,+2)$..
 
-
 ```{code-cell} ipython3
 lower = -2
 upper = +2
@@ -164,7 +163,7 @@ while abs(lower-upper) > 0.01:
     elif f(midpoint)*f(upper) < 0:
             lower = midpoint
 sol = (lower+upper)/2
-print( bisect(f,-2,2) )
+print( sol )
 ```
 
 ::: {admonition} Refleksjon
