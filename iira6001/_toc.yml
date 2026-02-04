@@ -61,6 +61,8 @@ chapters:
       - file: notebooks/Iskrem på ei strand.ipynb
       - file: notebooks/ShrimpSimulation
       - file: exercises/Agent-basert Marknadssimulering
+      - file: notebooks/class-empty
+      - file: notebooks/class
     - file: WebAPI
       sections:
       - file: notebooks/requests
