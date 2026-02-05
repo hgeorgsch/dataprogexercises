@@ -10,7 +10,8 @@ kernelspec:
   language: python
   name: python3
 tags:
-   - legacy/iif
+  - legacy/iif
+  - topic/basicpython
 ---
 
 +++ {"editable": true, "slideshow": {"slide_type": "slide"}}

@@ -25,6 +25,7 @@ Vi ønsker å undersøke hvordan det å sette varer på tilbud påvirker salg og
 
 
 # Oppgave 5.2: Simulere markedsdynamikk
+
 1. Set opp en markedsmodell for et gode:
  
 * Tilbud: $Q_s = a - bP+\epsilon_s$

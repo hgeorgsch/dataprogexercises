@@ -1,5 +1,11 @@
+---
+tags:
+  - lecture/slides
+---
+
 # Web-APIer: Autentisering
 ## Fra åpne dører til digitale nøkkelkort
+
 ---
 
 ## Hvorfor autentisering?

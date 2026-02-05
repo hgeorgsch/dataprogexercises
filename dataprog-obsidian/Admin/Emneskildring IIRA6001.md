@@ -1,6 +1,7 @@
 ---
 tags:
   - emneskildring
+  - module/iira6001
 ---
 
 # Utkast til emneskildring 2025

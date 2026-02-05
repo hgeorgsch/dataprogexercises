@@ -3,7 +3,7 @@ title: Datastrukturar
 author: Hans Georg Schaathun
 date: December 2025
 tags:
-  - lecture/video
+  - lecture/video/perspective
 css:
   - css/templates.css
 ---

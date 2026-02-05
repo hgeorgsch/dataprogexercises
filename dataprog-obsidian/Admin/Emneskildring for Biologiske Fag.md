@@ -1,7 +1,7 @@
 ---
 tags:
   - emneskildring
-  - admin/emne
+  - module/iira2011
 ---
 **Tittel** Maskinlæring i Biologiske Fag
 **Forslag til Kode** IIRA2011

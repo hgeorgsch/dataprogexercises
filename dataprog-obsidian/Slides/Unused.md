@@ -1,4 +1,8 @@
 ---
+tags:
+   - lecture/stub
+---
+
 <!-- slide bg="white" template="[[tpl-twocolumn-low]]" -->
 
 ::: leftimage

@@ -1,9 +1,9 @@
 ---
 title: CSV og pandas
 tags:
-   - csv
-   - pandas
-   - statistics
+  - csv
+  - topic/pandas
+  - topic/statistics
 ---
 
 
