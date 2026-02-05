@@ -5,6 +5,9 @@ tags:
 
 # Installasjon
 
++ [[IIRA6001]] bruker berre ein kort instruksjon om anaconda
+	+ Dette ser ut til å vera enkelt nok til ikkje å laga video
+
 + Installasjon vert handtert spesielt	
 	+ Demovideoar for ulike OS
 	+ Dei som bruker jobbmaskin bør samrå seg med IT-støtte på jobb
