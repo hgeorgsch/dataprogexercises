@@ -1,8 +1,8 @@
 ---
 tags:
   - lecture/video/perspective
-  - machine-learning
   - stub
+  - topic/machinelearning
 ---
 # Maskinlæring
 

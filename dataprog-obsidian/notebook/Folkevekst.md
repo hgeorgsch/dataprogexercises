@@ -1,7 +1,6 @@
 ---
 tags:
-  - exercise
-  - stub
+  - exercise/stub
 ---
 
 + [ ] Logistisk vekst, repetisjon av [[Simulering av kontantstraum]]
