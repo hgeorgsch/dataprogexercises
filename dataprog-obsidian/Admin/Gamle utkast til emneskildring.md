@@ -1,3 +1,8 @@
+---
+tags:
+  - emneskildring
+---
+
 
 # Gamal emneskildring frå IIRA2001
 

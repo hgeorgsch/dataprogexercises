@@ -1,3 +1,7 @@
+---
+tags:
+   - topic/security
+---
 
 + [ ] Veke: Sikkerheit og etikk
 	+ [ ] Samtykkeskjema

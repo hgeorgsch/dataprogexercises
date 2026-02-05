@@ -1,3 +1,8 @@
+---
+tags:
+  - topic/ide
+---
+
 
 
 + IDE (Spyder)

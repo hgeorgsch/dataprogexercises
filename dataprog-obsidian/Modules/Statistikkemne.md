@@ -1,3 +1,11 @@
+---
+tags: 
+   - module/statistics
+aliases: 
+   - #module/statistics
+---
+
+# Statistikkemne
 
 Emnene ISTx100y Statistikk (9 emnekoder) ble avholdt for første gang
 høsten 2020. Fellesdelen av emnene, som varer i ni uker, har en modulær

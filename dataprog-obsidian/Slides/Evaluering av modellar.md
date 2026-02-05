@@ -1,7 +1,8 @@
 ---
 tags:
   - lecture/video/perspective
-  - stub
+  - topic/machinelearning
+  - lecture/stub
 ---
 
 # Evaluering av modellar

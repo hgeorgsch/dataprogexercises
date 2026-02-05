@@ -1,6 +1,7 @@
 ---
 tags:
    - legacy/iif
+   - topic/basicpython
 ---
 
 ## Første steg: `print()` og `help()`

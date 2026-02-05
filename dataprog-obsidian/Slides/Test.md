@@ -1,7 +1,7 @@
 ---
 title: Datastrukturar
 tags:
-  - lecture/video
+  - test
 css:
   - css/templates.css
 ---

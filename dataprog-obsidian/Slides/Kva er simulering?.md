@@ -1,6 +1,6 @@
 ---
 tags:
-  - lecture/perspective
+  - lecture/video/perspective
 css:
    - css/templates.css
 ---

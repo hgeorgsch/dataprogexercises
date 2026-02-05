@@ -3,7 +3,8 @@ title: Slumptalsgenerator
 author: Hans Georg Schaathun
 date: December 2025
 tags:
-  - lecture/video
+  - lecture/video/perspective
+  - topic/prng
 css:
   - css/templates.css
 ---

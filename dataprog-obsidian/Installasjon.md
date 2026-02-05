@@ -1,3 +1,8 @@
+---
+tags:
+   - topic/installation
+---
+
 # Installasjon
 
 + Installasjon vert handtert spesielt	

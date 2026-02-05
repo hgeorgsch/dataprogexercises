@@ -1,9 +1,10 @@
 ---
 tags:
-  - lecture
+  - lecture/video
 css:
   - css/templates.css
 ---
+
 <!-- slide template="[[tpl-quote-header]]" -->
 ## Tidsrekkjer
 

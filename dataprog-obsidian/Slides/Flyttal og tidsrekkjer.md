@@ -1,6 +1,7 @@
 ---
 tags:
   - lecture/video/perspective
+  - topic/data
 ---
 
 # Flyttal og tidsrekkjer
