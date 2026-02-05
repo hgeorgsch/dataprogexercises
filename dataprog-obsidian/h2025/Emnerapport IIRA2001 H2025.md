@@ -1,7 +1,7 @@
 ---
 tags:
-  - iira2001
   - admin/emnerapport
+  - module/iira2001
 ---
 
 # IIRA2001 hausten 2025

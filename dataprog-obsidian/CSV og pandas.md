@@ -5,9 +5,14 @@ tags:
   - topic/pandas
   - topic/statistics
 ---
-
-
 # CSV og pandas
+
+Dette inngår som veke 3-4 i [[IIRA6001]]
+
++ Veke 3. Tidsrekkjer
++ Veke 4.  
+	+ [[Flyttal og tidsrekkjer]]
+	+ Fletting av datasett
 
 + Perspektivføredrag.  Del 1.
     + [[Filhandtering]]
@@ -20,6 +25,8 @@ tags:
 	+ [[Tidsrekkjer]]
 	+ [[Fletting av datasett]]
 	+ [[Melt og Pivot]]
+
+## Skisser og idéar
 
 + Grunnleggjande pandas
 	+ index

@@ -1,7 +1,10 @@
 ---
 title: Smittespreiing
 author: Hans Georg Schaathun
-tags: [exercise, simulering, loop]
+tags:
+  - exercise
+  - simulering
+  - topic/loop
 jupytext:
   cell_metadata_filter: -all
   formats: md:myst,ipynb

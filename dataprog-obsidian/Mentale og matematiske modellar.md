@@ -1,8 +1,7 @@
 ---
 tags:
-   - lecture
-   - modelling
-   - stub
+  - lecture/stub
+  - topic/modelling
 ---
 
 + Utfordringar
