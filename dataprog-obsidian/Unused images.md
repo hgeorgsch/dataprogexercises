@@ -5,9 +5,6 @@ These are illustrations used for slides.  They may or may not be relevant, but a
 
 ![[Jean_Piaget_in_Ann_Arbor.png]]
 
-![[Helmeted_boy_on_training_wheels.jpg]]
-
-
 ![[Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg]]
 
 ![[Child_creativity_0001.jpg]]
