@@ -12,7 +12,7 @@ kernelspec:
   name: python3
 ---
 
-# Oppgåve til Demo Klasser og Objekt
+# Løysingar frå Demo Klasser og Objekt
 
 Desse oppgåvene er utgangspunktet for ein demonstrasjonsvideo som skal
 illustrera bruken av klasser og objekt i python.

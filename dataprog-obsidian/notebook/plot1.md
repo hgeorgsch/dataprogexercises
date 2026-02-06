@@ -12,7 +12,7 @@ kernelspec:
   display_name: dataprog
 ---
 
-# Oppgåver til Demo Plott
+# Løysingar frå Demo Plott Del 1
 
 Desse oppgåvene er utgangspunktet for ein demonstrasjonsvideo 
 for plotting med pandas.  Me skal visa kurver og stolpediagram.
@@ -28,53 +28,86 @@ og last det i python.
 :::
 
 ```{code-cell} ipython3
-##
+import pandas as pd
+df = pd.read_csv( "09535fastlege.csv", sep=";", encoding="latin1", header=1 )
+display(df)
+```
+
+```{code-cell} ipython3
+df = df.set_index("år")
+display(df)
 ```
 
 ## Kurveplot med *Series*
 
 ```{code-cell} ipython3
-##
+df.columns
 ```
 
 ```{code-cell} ipython3
-#
+s = df["0 Hele landet Alle aldre"]
+s.plot()
+```
+
+```{code-cell} ipython3
+s2 = df["15 Møre og Romsdal Alle aldre"]
+s.plot(style=".--")
+s2.plot(style=".:")
 ```
 
 ## Kurveplot med *DataFrame*
 
 ```{code-cell} ipython3
-#
+df.plot( None, "0 Hele landet Alle aldre" )
 ```
 
 ```{code-cell} ipython3
-#
+df.plot( )
 ```
 
 ## Datavask
 
 ```{code-cell} ipython3
-#
+df.dtypes
 ```
 
 ```{code-cell} ipython3
-#
+df = df.drop( "statistikkvariabel", axis=1 )
+display( df )
 ```
 
 ```{code-cell} ipython3
-#
+df = df.drop( "kjønn", axis=1 )
+display( df )
 ```
 
 ```{code-cell} ipython3
-#
+col = list(df.columns)
+print( col )
+```
+
+```{code-cell} ipython3
+for c in col:
+    df[c] = pd.to_numeric( df[c], errors="coerce" )
+
+display(df)
 ```
 
 ## Stolpediagram
 
 ```{code-cell} ipython3
-#
+ser = df.loc[2024]
+display(ser)
 ```
 
 ```{code-cell} ipython3
-#
+ser.plot()
+```
+
+```{code-cell} ipython3
+ser.plot.bar()
+```
+
+```{code-cell} ipython3
+
 ```

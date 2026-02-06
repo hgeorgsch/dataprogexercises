@@ -12,7 +12,7 @@ kernelspec:
   display_name: dataprog
 ---
 
-# Oppgåver til Demo Plott
+# Oppgåver til Demo Plot Del 2 (Kakediagram)
 
 Desse oppgåvene er utgangspunktet for den andre
 demonstrasjonsvideoen om plotting med pandas.
