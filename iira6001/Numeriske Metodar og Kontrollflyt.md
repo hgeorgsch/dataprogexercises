@@ -9,20 +9,26 @@ author: Hans Georg Schaathun
 Me freistar å gje eit par forskjellige innfallsvinklar til kvart tema.
 Vekesprogrammet inneheld difor forskjellige ressursar som kan brukast på ulikt vis.
 
-Perspektivføredrag
-: er meint å gje eit konseptuelt overblikk eller kontekst. Me vonar at det fungerer å sjå desse litt avslappa når ein har tid til overs.
+Perspektivføredraga føreset at du har arbeidd litt med oppgåvene frå
+[opningssamlinga](Opningssamling.md), slik at du kjenner nokre av dei
+grunnleggjande strukturane i python.
 
-+ [Imperativ programmering og maskinarkitektur](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=040b7fe4-b252-4774-a7ab-b3da00cc18d6)
-  [(Slides)](https://iirevu.org.ntnu.no/Slides/Imperativ%20programmering%20og%20maskinarkitektur)
-+ [Struktur og syntaks](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=796e58e9-0162-427b-89d9-b3da00eb093e)
-    + Føredraget bruker [Python Tutor](https://pythontutor.com/) som du òg kan prøva ut sjølv.
-+ [Kontrollflyt i Python](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=243a22cb-08aa-47c6-b4ea-b34f00849d91)
-  [(Slides)](https://iirevu.org.ntnu.no/Slides/Kontrollflyt%20i%20Python)
-    + Føredraget bruker [Python Tutor](https://pythontutor.com/) som du òg kan prøva ut sjølv.
-+ [Exact Instructions Challenge](https://www.youtube.com/watch?v=cDA3_5982h8) ved Josh Darnit
-+ [Kva er ein algoritme?](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=c4f223ea-4958-4c1c-b2ac-b3670162feef)
-  [(Slides)](https://iirevu.org.ntnu.no/Slides/Kva%20er%20ein%20algoritme%3f/)
-+ [Flytdiagram](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=c3aeebb8-4015-41d7-a625-b3670160556e)
+Perspektivføredrag
+: er meint å gje eit konseptuelt overblikk eller kontekst.  Her tek me eit steg tilbake og freistar å sjå forbi detaljane. Me vonar at det fungerer å sjå desse litt avslappa når ein har tid til overs.  
+
+1. Programmering og korleis me tenkjer
+    + [Imperativ programmering og maskinarkitektur](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=040b7fe4-b252-4774-a7ab-b3da00cc18d6)
+      [(Slides)](https://iirevu.org.ntnu.no/Slides/Imperativ%20programmering%20og%20maskinarkitektur)
+    + [Kva er ein algoritme?](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=c4f223ea-4958-4c1c-b2ac-b3670162feef)
+      [(Slides)](https://iirevu.org.ntnu.no/Slides/Kva%20er%20ein%20algoritme%3f/)
+    + [Flytdiagram](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=c3aeebb8-4015-41d7-a625-b3670160556e)
+    + [Exact Instructions Challenge](https://www.youtube.com/watch?v=cDA3_5982h8) ved Josh Darnit
+1. Program i Python
+    + [Struktur og syntaks i Python](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=796e58e9-0162-427b-89d9-b3da00eb093e)
+        + Føredraget bruker [Python Tutor](https://pythontutor.com/) som du òg kan prøva ut sjølv.
+    + [Kontrollflyt i Python](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=243a22cb-08aa-47c6-b4ea-b34f00849d91)
+      [(Slides)](https://iirevu.org.ntnu.no/Slides/Kontrollflyt%20i%20Python)
+        + Føredraget bruker [Python Tutor](https://pythontutor.com/) som du òg kan prøva ut sjølv.
 
 Gjennomarbeidde døme
 : er den viktigaste læringsaktiviteten.  Dei viser nye teknikkar i kontekst med oppgåver og spørsmål som oppmodar til fikla med og variera koden for forstå kva som føregår.
