@@ -33,9 +33,12 @@ Læringsmaterialet fylgjer same format som andre veker.
       studera utvikling i bustadprisar.
         + [](notebooks/ssbfile-empty)
         + [](notebooks/ssbfile)
-	+ Plot i pandas
+	+ Plot i pandas Del 1
         + [](notebooks/plot1empty)
+        + [](notebooks/plot1)
+	+ Plot i pandas Del 2 (Kakediagram)
         + [](notebooks/plot2empty)
+        + [](notebooks/plot2)
 + *Opne øvingar*
 	+ [Eksportdata](exercises/Eksportdata).  Desse oppgåve krev omfattande preprosessering
       for å få data på samanliknbar form.
