@@ -15,16 +15,12 @@ kernelspec:
 # Oppgåver til Demo Plott
 
 Desse oppgåvene er utgangspunktet for ein demonstrasjonsvideo 
-for plotting med pandas.
-Eg har lasta ned to enkle datasett frå SSB.
+for plotting med pandas.  Me skal visa kurver og stolpediagram.
+
+Eg har lasta ned eit enkle datasett frå SSB.
 + [09535fastlege.csv](09535fastlege.csv)
-+ [09535fastlege2.csv](09535fastlege2.csv)
-Båe datasetta er utsnitt av den same tabellen over
-fastlækjarkonsultasjonar 2010-2024, både for landet og 
-per fylke.
-Det fyrste datasettet viser fastlækjarkonsultasjonar per person.
-Det andre viser andelen personar med 0, 1-2, 3-4 eller 5+ konsultasjonar
-i 2024.
+Datasettet viser fastlækjarkonsultasjonar per person i perioden
+2010-2024, både for landet og per fylke.
 
 ::: {admonition} Oppgåve
 Hent datasettet [09535fastlege.csv](09535fastlege.csv)
@@ -86,21 +82,3 @@ display(df)
 
 ## Stolpediagram
 
-## Kakediagram
-
-Kakediagram er mest egna for å visa andelar, og det er ikkje særleg relevant
-for datasettet som me har.  Det andre datasettet, derimot, egnar seg godt til
-kakediagram.
-
-::: {admonition} Oppgåve
-Hent datasettet [09535fastlege.csv](09535fastlege.csv)
-og last det i python.
-:::
-
-```{code-cell} ipython3
-
-```
-
-```{code-cell} ipython3
-
-```
