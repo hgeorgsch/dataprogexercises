@@ -16,7 +16,6 @@ chapters:
     - file: Seminar om Motivasjon og Ynskjer
     - file: Førelesingsnotat frå Opningssamlinga
       sections:
-      - file: Velkomen (foilar)
       - file: Fyrste dokument i Jupyter Lab (foilar)
       - file: Fyrste datasett i CSV (foilar)
       - file: Simulering av kontantstraum (foilar)
