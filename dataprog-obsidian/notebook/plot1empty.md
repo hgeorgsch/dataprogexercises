@@ -12,13 +12,14 @@ kernelspec:
   display_name: dataprog
 ---
 
-# Oppgåver til Demo Plott
+# Oppgåver til Demo Plott Del 1
 
 Desse oppgåvene er utgangspunktet for ein demonstrasjonsvideo 
 for plotting med pandas.  Me skal visa kurver og stolpediagram.
 
 Eg har lasta ned eit enkle datasett frå SSB.
 + [09535fastlege.csv](09535fastlege.csv)
+
 Datasettet viser fastlækjarkonsultasjonar per person i perioden
 2010-2024, både for landet og per fylke.
 
