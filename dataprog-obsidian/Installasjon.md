@@ -14,10 +14,11 @@ tags:
 	+ Vegleiing etter behov
 + Jupyter Notebook eller Jupyter Lab
 
-+ [ ] Installasjonstutorials 📅 2025-11-20
++ [x] Installasjonstutorials 📅 2025-11-20 ✅ 2026-02-06
 	+ [ ] Tutorial for MS-Windows
 	+ [ ] Tutorial for MacOS
 	+ [ ] Tutorial for Linux/Unix
+	+ me trur dette er overflødig
 
 
 ## Steg 2.  Virtuelt køyremiljø
