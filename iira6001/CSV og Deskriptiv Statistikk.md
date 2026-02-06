@@ -40,7 +40,7 @@ Læringsmaterialet fylgjer same format som andre veker.
         + [](notebooks/plot2empty)
         + [](notebooks/plot2)
 + *Opne øvingar*
-	+ [Eksportdata](exercises/Eksportdata).  Desse oppgåve krev omfattande preprosessering
+	+ [Eksportdata](exercises/Eksportdata).  Desse oppgåvene krev omfattande preprosessering
       for å få data på samanliknbar form.
 
 ## Oppsummering
