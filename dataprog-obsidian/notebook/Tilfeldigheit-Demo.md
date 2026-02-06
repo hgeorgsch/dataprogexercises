@@ -155,4 +155,3 @@ def fmt2( w ):
 
 print( fmt2(rs) )
 ```
-
