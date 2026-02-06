@@ -37,6 +37,10 @@ NTNU---Noregs Teknisk-Naturvitskaplege Universitet
 + KI-filosofi
 
 ---
+
+## Jonas Julius Harang
+
+---
 ## Programmering til Dataanalyse
 
 note:
