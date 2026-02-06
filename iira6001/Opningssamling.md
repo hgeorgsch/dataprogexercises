@@ -27,10 +27,10 @@ Start- og sluttidene står faste, men me må sjå an tida til kvar
 | Dag 1 | Tema | Materiell |
 | :- | :- | :- |
 | 10.00-11.30 | Vegleiing til installasjon for dei som ikkje er ferdig med det på førehand. |  [Installasjonsvegleiing](Installasjon) |
-| 11.30-12.15 | Lønsj | |
-| 12.15-12.55 | Velkomst og Presentasjon | Foilar.  Sjå og praktisk informasjon på [forsida](../intro). |
-| 12.55-13.05 | Beinstrekk | |
-| 13.05-13.45 | Presentasjon av Økt 1. | [Foilar](Fyrste%20dokument%20i%20Jupyter%20Lab%20(foilar).md) |
+| 11.30-12.00 | Lønsj | |
+| 12.00-12.45 | Velkomst og Presentasjon | Foilar.  Sjå og praktisk informasjon på [forsida](../intro). |
+| 12.45-13.00 | Beinstrekk | |
+| 13.00-13.45 | Presentasjon av Økt 1. | [Foilar](Fyrste%20dokument%20i%20Jupyter%20Lab%20(foilar).md) |
 | 13.45-15 | Økt 1. Fyrste dokument i Jupyter Lab | [Oppgåvesett](notebooks/Fyrste%20dokument%20i%20Jupyter%20Lab) |
 | 15.00-15.45 | Presentasjon av Økt 2 til i morgon. | [Foilar](Fyrste%20datasett%20i%20CSV%20(foilar).md) |
 | 15.45-16.30 | Avrunding                      | |
