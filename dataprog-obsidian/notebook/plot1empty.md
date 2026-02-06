@@ -38,11 +38,24 @@ df = df.set_index("år")
 display(df)
 ```
 
-## Kurveplot
+## Kurveplot med *Series*
 
 ```{code-cell} ipython3
 df.columns
 ```
+
+```{code-cell} ipython3
+s = df["0 Hele landet Alle aldre"]
+s.plot()
+```
+
+```{code-cell} ipython3
+s2 = df["15 Møre og Romsdal Alle aldre"]
+s.plot(style=".--")
+s2.plot(style=".:")
+```
+
+## Kurveplot med *DataFrame*
 
 ```{code-cell} ipython3
 df.plot( None, "0 Hele landet Alle aldre" )
@@ -74,7 +87,7 @@ print( col )
 ```
 
 ```{code-cell} ipython3
-for c in col[2:]:
+for c in col:
     df[c] = pd.to_numeric( df[c], errors="coerce" )
 
 display(df)
@@ -82,3 +95,19 @@ display(df)
 
 ## Stolpediagram
 
+```{code-cell} ipython3
+ser = df.loc[2024]
+display(ser)
+```
+
+```{code-cell} ipython3
+ser.plot()
+```
+
+```{code-cell} ipython3
+ser.plot.bar()
+```
+
+```{code-cell} ipython3
+
+```

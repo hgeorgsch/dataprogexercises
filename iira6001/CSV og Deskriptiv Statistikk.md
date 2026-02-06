@@ -34,7 +34,8 @@ Læringsmaterialet fylgjer same format som andre veker.
         + [](notebooks/ssbfile-empty)
         + [](notebooks/ssbfile)
 	+ Plot i pandas
-        + [](notebooks/plot-empty)
+        + [](notebooks/plot1empty)
+        + [](notebooks/plot2empty)
 + *Opne øvingar*
 	+ [Eksportdata](exercises/Eksportdata).  Desse oppgåve krev omfattande preprosessering
       for å få data på samanliknbar form.
