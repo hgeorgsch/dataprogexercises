@@ -13,6 +13,13 @@ sett uavhengig av programmering og simulering, og det er mogleg
 å hoppa over dei fyrste vekene og ta denne rett etter opningssamlinga.
 Læringsmaterialet fylgjer same format som andre veker.
 
+Innhaldet denne veka kan verka overveldande, men me held fram med det same
+stoffet neste veke.  Særleg demovideoane vert lange.
+Hugs at det er dei gjennomarbeidde døma som definerer
+dei viktigste ferdigheits- og kunnskapsmåla.  
+Demovideoane er skal vera ein ekstra støtte for å klare oppgåvene, og dei
+er ikkje eit mål i seg sjølve.
+
 + *Perspektivførelesing*
 	+ [Filhandtering](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=00b91ed5-08f2-498f-8877-b367013600cc)
 	  [(Slides)](https://iirevu.org.ntnu.no/Slides/Filhandtering/)
@@ -23,7 +30,7 @@ Læringsmaterialet fylgjer same format som andre veker.
             Du bør gjera ferdig denne før du startar på noko nytt.
 	+ [](notebooks/Arbeidsledige) 
 	+ [](notebooks/Tid%20og%20dato)
-    + [Genetikk](notebooks/Genetikk) demonstrerer korrelasjon m.m. (valfri)
+    + [](notebooks/Genetikk) demonstrerer korrelasjon m.m. (valfri)
 + *Demovideo*
     + Data frå SSB
         + [Datasett 13760](./notebooks/13760_20260203-130712.csv)
@@ -50,3 +57,4 @@ Målet denne veka er
     + kunna kjenna igjen og byta teiknkoding
     + kjenna ulike filformat og dialektar av CSV
 + Kunna bruka pandas til deskriptiv statistikk og plotting
+

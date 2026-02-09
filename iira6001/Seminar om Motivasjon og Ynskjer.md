@@ -4,4 +4,4 @@ tags:
 ---
 
 
-# Motivasjon og Ynskjer
+# Seminar: Kvar vil me?

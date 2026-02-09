@@ -20,7 +20,7 @@ tags:
 	+ Det er alltid røynda me modellerer.
 		+ Me kan og må alltid validera programma våre mot røynda og mot sunn fornuft
 	+ Me skal gå vidare me båe retningane; tre vekesleksjonar på kvart tema før midtvegssamlinga
-+ Steg 2.  Evaluering.  Fyrst e
++ Steg 2.  Evaluering.  Fyrst individuelt
 	+ Kva har eg lært?
 	+ Kva vil eg læra meir om?
 	+ Korleis vil eg bruka det?
