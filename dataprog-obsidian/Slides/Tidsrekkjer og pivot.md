@@ -40,7 +40,7 @@ Bildet viser en tabell over kommuneøkonomi fra SSB.
 Vi ser at vi har en indeksering på år bortover, men år er ikke den eneste indekseringen.
 Vi har hele tre rader som er brukt til søyleindeksering.  For hvert år har vi tre forskjellige søyler som representerer tre ulike variabler, «brutto driftsresultat», «brutto investeringsutgifter» og «disposisjonsfond».  I tillegg har vi en overskrift  som vi ikke ser fordi tabellen er større enn skjermen, men på toppnivå skilles mellom to varibler, én i kronebeløp og én i andel av driftsinntekter.
 
-Dette systemet med flere overskrifter per søyle kalles for *multiindeks*, og det er et resultat av at vi tabellen konseptuelt sett har fire dimensjoner som skal presses inn i to dimensjoner på skjermen.  Den første dimensjonen er tiden, de andre tre er en for kommunen, en for regnskapsbegrepet og en for måleenheten som er enten kroner eller prosentandel.
+Dette systemet med flere overskrifter per søyle kalles for *multiindeks*, og det er et resultat av at tabellen konseptuelt sett har fire dimensjoner som skal presses inn i to dimensjoner på skjermen.  Den første dimensjonen er tiden, de andre tre er en for kommunen, en for regnskapsbegrepet og en for måleenheten som er enten kroner eller prosentandel.
 
 ---
 <!-- slide template="[[tpl-flex]]" -->
@@ -94,3 +94,9 @@ Hvis vi skulle ha et datasett med årstallene bortover, kan vi transponere en *D
 på samme måte som vi transponerer matriser.  Dvs. tabellen blir rotert nitti grader.
 Bare søk efter *transpose* for å finne eksempler.
 
+---
+
+# Slutt
+
+note:
+Jeg håper dette gir mening, men vi laver også en demonstrasjonsvideo som viser detaljene når vi koder operasjonene i python.
