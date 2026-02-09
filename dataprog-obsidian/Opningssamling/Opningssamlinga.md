@@ -35,4 +35,4 @@ author: Hans Georg Schaathun
 	    + [ ] Fleire oppgåver?
 	+ [ ] Førebu seminar
 		+ primært samtale i plenum eller grupper
-+ [ ] Manglande data og NaN
++ [x] Manglande data og NaN ✅ 2026-02-09
