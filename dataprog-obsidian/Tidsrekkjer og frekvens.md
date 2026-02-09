@@ -134,6 +134,11 @@ note:
 Det er ikke bare ved sammenligning at vi kan ønske oss *lavere* oppløsning på tidsserien.
 Hvis vi gjør spottmålinger eller svært hyppige målinger får vi ofte svært mye tilfeldig variasjon.  Det kan være vanskelig å se trenden, fordi tilfeldige variasjoner fra dag til dag overskygger helhetsbildet.
 
+Har vi periodedata kan det av og til være nyttig å oversette til lengre perioder for å glatte ut tilfeldige variasjoner. Har man punktdata, er det ikke uvanlig å regne et glidende gjennomsnitt, der hvert punkt erstattes med gjennomsnitt over en periode.
 
-+ støy og rolling average
-+ oppløysing
+---
+
+# Slutt
+
+note:
+Tid kan være vanskeiig, og jeg har bare pekt på noen få men forhåpentligvis nyttige teknikker.
