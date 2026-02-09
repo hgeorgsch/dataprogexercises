@@ -27,10 +27,16 @@ Programmering er mykje rart. Folk som bruker programvareutvikling bruker gjerne 
 I denne samanhengen er *Jupyter Lab*, som dette dokumentet er skrive i, eit nyttig verkty. Her kan me kombinera tekst, programkode og utdata frå programmet i eitt og same dokument, slik at det er lett å sjå kva som foregår.
 
 ::: {admonition} Oppgåve
-Når du les dette, bør du lasta ned heile dokumentet i Jupyter-format og opna det
-Jupyter Lab.
-I nedlastingsmenyen øvst på sida, vel du `.ipynb`, som er filendinga Jupyter bruker.
-Lasta ned denne sida og opna dokumentet i Jupyter Lab.
+Når du les dette, bør du lasta ned heile dokumentet i Jupyter-format og 
+opna det Jupyter Lab.
+
+1. I nedlastingsmenyen øvst på sida, vel du `.ipynb`, som er
+   filendinga Jupyter bruker.
+2. Opna jupyter lab, anten frå Anaconda Navigator, eller ved å skriva
+   `jupyter lab` i eit terminalvindauga.
+3. Opna filnavigatøren med mappesymbolet til venstre i Jupyter Lab.
+4. Finn dokumentet som du nett lasta ned.  Sannsynlegvis ligg det
+   i *Downloads*-katalogen.
 :::
 
 ::: {hint}
