@@ -11,7 +11,7 @@ Dette inngår som veke 3-4 i [[IIRA6001]]
 
 + Veke 3. Tidsrekkjer
 + Veke 4.  
-	+ [[Flyttal og tidsrekkjer]]
+	+ [[Flyttal og NaN]]
 	+ Fletting av datasett
 
 + Perspektivføredrag.  Del 1.

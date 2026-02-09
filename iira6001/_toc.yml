@@ -37,6 +37,7 @@ chapters:
       - file: exercises/Kundedifferensiering
       - file: notebooks/Listekomprehensjon
       - file: notebooks/JSON og dict
+      - file: exercises/Varar på sal
       - file: notebooks/Tilfeldigheit-Demo
       - file: notebooks/dict-empty
       - file: notebooks/dict

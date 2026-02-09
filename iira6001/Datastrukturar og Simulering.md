@@ -34,6 +34,7 @@ Dette kapittelet byggjer på
         + [](notebooks/dict)
 + *Opne Øvingar.*
     + [](exercises/Kundedifferensiering)
+    + [](exercises/Varar på sal) (variasjonar over tidlegare oppgåver i marknadssimulering)
 + *Drilløving* på [Moodle](https://capquiz.math.ntnu.no).  
 	+ CodeRunner Data Structures
 
