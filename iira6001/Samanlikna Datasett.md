@@ -17,8 +17,12 @@ og skal no samanlikna data frå ulike datasett.
 
 
 + *Perspektivførelesing*
-    + Tid og aggregering
-    + Vasking av datasett
+    + Flyttal og NaN
+	  [(foilar)](https://iirevu.org.ntnu.no/Slides/Flyttal%20og%20NaN/)
+    + Tidsrekkjer og *pivot*
+	  [(foilar)](https://iirevu.org.ntnu.no/Slides/Tidsrekkjer%20og%20pivot/)
+    + Tidsrekkjer og frekvens
+	  [(foilar)](https://iirevu.org.ntnu.no/Slides/Tidsrekkjer%20og%20frekvens/)
 + *Gjennomarbeidde Døme.*
 	+ [Samanlikning av tidsrekkjer](notebooks/Arbeidsledige%20og%20Konkursar) 
     + [Jordskjelvdata](notebooks/Jordskjelv) som demonstrerer animasjon og plotting oppå kart. (valfri)
