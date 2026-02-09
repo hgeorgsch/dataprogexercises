@@ -141,6 +141,7 @@
      font-size: 16pt ;
 }
 
+
 /* Quote slide */
 .reveal .quoteslideheader img {
      max-height: 400px ;
@@ -226,7 +227,7 @@
    border: none ;
 }
 .reveal section .flexcolumn .credit {
-   font-size: 16pt ;  /* Reduced font size */
+   font-size: 16px ;  /* Reduced font size */
    flex: 0 0 content ;
 }
 .reveal .slides section .smallertext {
