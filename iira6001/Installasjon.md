@@ -15,6 +15,21 @@ Ved å installera siste utgåve av Anacond, er me trygge på at du
 har ein ny versjon av python, alle biblioteka me treng, samt
 *Jupyter Lab* som er det fyrste verktyet me treng.
 
+Der er eitt aber med anaconda.  Det er ikkje fri programvare.
+Der er lisensvilkår å lesa, og om ein skal bruka det i ein stor
+bedrift, treng ein betalt lisens.
+Miniconda er ein lettvektsutgåve av anaconda, og sjølve miniconda
+er gratis.  Problemet er at ein bruker miniconda for å lasta ned
+andre pakkar frå anaconda-platformen, og det er ikkje lett å sjå
+kva som krev betalt lisens.
+
+Det er mogleg berre å bruka Python og pip.  Sjå under Anaconda.
+
+::: {warning}
+Eg er i ferd med å sjekka ut lisensstatusen åt NTNU for bruk av
+anaconda.
+:::
+
 ## Anaconda
 
 1. Last ned [Anaconda](https://www.anaconda.com/download/success)
@@ -47,4 +62,21 @@ sjå om det verka, men dette skal me prata meir om på
 [Opningssamlinga](Opningssamling).
 :::
 
+
+## Python og pip
+
+Unix-system, inkl. MacOS, plar ha python førehandsinstallert.
+På Windows må ein ofte installera det sjølv.
+Det greiaste er sikkert å bruka 
+[instruksjonane frå MicroSoft](https://learn.microsoft.com/en-us/windows/python/beginners).
+
+Når ein bruker Python utan anaconda, vil ein måtte bruka kommandolina
+ogso kjend som terminalvindauga.
+
+1.  Start eit terminalvindauga.  Korleis du gjer det avheng av operativsystemet ditt.
+2.  Skriv `pip install jupyterlab` og trykk enter.
+3.  Skriv `jupyter lab` og trykk enter.
+4.  Dette bør start Jupyter Lab i ein vevlesar (Chrome, firefox, e.l.).
+    Om vevlesaren ikkje startar automatisk, vil meldingane i terminalvindauga
+    gje deg ein URL som du kan kopiera og lima inn i vevlesaren din.
 
