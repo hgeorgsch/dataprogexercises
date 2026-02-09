@@ -26,8 +26,8 @@ kva som krev betalt lisens.
 Det er mogleg berre å bruka Python og pip.  Sjå under Anaconda.
 
 ::: {warning}
-Eg er i ferd med å sjekka ut lisensstatusen åt NTNU for bruk av
-anaconda.
+Der er sådd tvil om kva lisens som gjeld for Anaconda ved NTNU
+og dette er eg i ferd med å sjekka ut.
 :::
 
 ## Anaconda
@@ -69,7 +69,12 @@ På Windows må ein ofte installera det sjølv.
 Det greiaste er sikkert å bruka 
 [instruksjonane frå MicroSoft](https://learn.microsoft.com/en-us/windows/python/beginners).
 
-Når ein bruker Python utan anaconda, vil ein måtte bruka kommandolina
+Pakkehandteringsverktyet `pip` bør vera automatisk installert saman 
+med python.
+Når me ikkje har Anaconda eller miniconda, er det `pip` me bruker
+for å installera alt anna tilbehør til python.
+
+Når ein bruker Python utan anaconda, vil ein måtte bruka kommandolina,
 ogso kjend som terminalvindauga.
 Det programmet som me skal bruka heile den fyrste halvdelen av kurset
 heiter *Jupyter Lab*.
