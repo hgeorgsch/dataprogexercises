@@ -44,7 +44,7 @@ Start- og sluttidene står faste, men me må sjå an tida til kvar
 | 11.00-11.30 | Presentasjon av Økt 3. | [Foilar](Simulering%20av%20kontantstraum%20(foilar).md) |
 | 11.30-12.30 | Lønsj | |
 | 12.30-14.00 | Økt 3.  Simulering av kontantstraum | [Oppgåvesett](notebooks/Simulering%20av%20kontantstraum)  |
-| 14.00-14.30 | Økt 4.  [Seminar om motivasjon og ynskjer](Seminar%20om%20Motivasjon%20og%20Ynskjer) | |
+| 14.00-14.30 | Økt 4.  [](Seminar%20om%20Motivasjon%20og%20Ynskjer) | |
 | 14.30-15.00 | Debrief og opplegg vidare. | [Mappevurdering](Mappevurdering) |
 
 ## Læringsmaterialet
