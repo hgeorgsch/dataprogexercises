@@ -6,7 +6,7 @@ css:
 ---
 
 <!-- slide template="[[tpl-quote-header]]" -->
-## Tidsrekkjer
+# Tidsrekkjer og *pivot*
 
 ![[arbeidsledige.svg]]
 
@@ -55,59 +55,42 @@ SSB lar oss rotere tabellen, og da får vi årstallet nedover, som er det vi van
 
 Hvis vi skal arbeide med en tidsserie, er vi nødt til å filtrere ut én variabel per år.
 
----
-
-+ filtrering
-+ pivot 
-+ melt
-
----
-
-
-## Læringsmål
-
-- Repetisjon
-	- Utdrag frå datasett: filtrering på fleire søyler.
-    - Numeriske søyler
-- Nytt stoff
-	- Tidssøyler
-	- Byte av indeks.
-	- Frekvens og gruppering av radar.
-	- Fletting av datasett på tid.
-- Om me rekk det
-	- Manglande data og NaN (not a number).
-
----
-
-## Problem 1.
-
-> Korleis handterer me ... 
-
-1. ulik presisjon (år, kvartal, månad, dag, tidspunkt)?
-2. ulik representasjon som `2025-10-20` eller `20. okt 2025`?
-3. ulike tidssonar?
-
----
-
-+ støy og rolling average
-+ oppløysing
+Den enkleste måten å gjøre det på, er gjerne å filtrere datasettet slik at vi bare tar med én variabel, men hvis vi ønsker å ha med alle mulige tidssrekker i tabellen, kan vi prøve med *pivot*.
 
 ---
 <!-- slide template="[[tpl-flex]]" -->
 
-![[Units_of_Time_in_tabular_form.png]]
+![[prepivot.png]]
 
-::: credit
-By Vikramsurya - Own work, CC BY-SA 4.0,
-via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=83566382)
-:::
+note:
+Hvis vi laster ned datasettet direkte fra SSB får vi tre søyler som egentlig hører til indeksen.
 
 ---
 <!-- slide template="[[tpl-flex]]" -->
 
-![[Time_zones_of_the_world-UTC.svg]]
+![[pivot.png]]
 
 ::: credit
-By Goran tek-en, CC BY-SA 4.0, 
-via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=98591995))
-:::
+Resultat av `pivot`
+::: 
+
+note:
+Metoden `pivot` lar oss brette ut tabellen i bredt format.
+
+Vi kan fortelle `pivot` at «år» skal være radindeks, mens de to dimensjonene «statistikkvariabel» og  «regnskapsbegrep» flyttes til å bli søyleindekser.
+Dermed blir de ekstra søyler under kommunene, i stedet for ekstra rader under årene.
+
+Resultatet er at vi står igjen med bare én radindeks, for år.  Vi har uhorvelig mange søyler, for ulike variabler og ulike kommuner, og hver eneste søyle er en tidsrekke.
+
+---
+
+- *pivot* og *melt*
+- transponering
+
+note:
+Vi kan også gjøre den motsatte operasjonen, som heter *melt*.
+
+Hvis vi skulle ha et datasett med årstallene bortover, kan vi transponere en *DataFrame*
+på samme måte som vi transponerer matriser.  Dvs. tabellen blir rotert nitti grader.
+Bare søk efter *transpose* for å finne eksempler.
+

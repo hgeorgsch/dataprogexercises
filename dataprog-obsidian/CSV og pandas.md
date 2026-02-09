@@ -12,7 +12,8 @@ Dette inngår som veke 3-4 i [[IIRA6001]]
 + Veke 3. Tidsrekkjer
 + Veke 4.  
 	+ [[Flyttal og NaN]]
-	+ Fletting av datasett
+	+ [[Tidsrekkjer og pivot]]
+	+ [[Tidsrekkjer og frekvens]]
 
 + Perspektivføredrag.  Del 1.
     + [[Filhandtering]]
@@ -22,7 +23,7 @@ Dette inngår som veke 3-4 i [[IIRA6001]]
     + [[Eksportdata]]
     + [[Tid og dato]]
 + Perspektivføredrag.  Del 2.
-	+ [[Tidsrekkjer]]
+	+ [[Tidsrekkjer og pivot]]
 	+ [[Fletting av datasett]]
 	+ [[Melt og Pivot]]
 
