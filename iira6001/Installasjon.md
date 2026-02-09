@@ -62,7 +62,6 @@ sjå om det verka, men dette skal me prata meir om på
 [Opningssamlinga](Opningssamling).
 :::
 
-
 ## Python og pip
 
 Unix-system, inkl. MacOS, plar ha python førehandsinstallert.
@@ -72,6 +71,10 @@ Det greiaste er sikkert å bruka
 
 Når ein bruker Python utan anaconda, vil ein måtte bruka kommandolina
 ogso kjend som terminalvindauga.
+Det programmet som me skal bruka heile den fyrste halvdelen av kurset
+heiter *Jupyter Lab*.
+Dersom python er installert kan du gjera fylgjande for å installera
+og testa *Jupyter Lab*.
 
 1.  Start eit terminalvindauga.  Korleis du gjer det avheng av operativsystemet ditt.
 2.  Skriv `pip install jupyterlab` og trykk enter.
@@ -79,4 +82,16 @@ ogso kjend som terminalvindauga.
 4.  Dette bør start Jupyter Lab i ein vevlesar (Chrome, firefox, e.l.).
     Om vevlesaren ikkje startar automatisk, vil meldingane i terminalvindauga
     gje deg ein URL som du kan kopiera og lima inn i vevlesaren din.
+5.  For å testa at alt verkar kan du ta fatt på
+    [](https://iirevu.org.ntnu.no/iira6001/notebooks/Fyrste%20dokument%20i%20Jupyter%20Lab) 
+    og gjera oppgåvene der.
 
+Eitt problem som du vil støyta på når du ikkje har Anaconda, er at
+mange bibliotek som me bruker, må lastast ned eitt og eitt.
+Det er like greitt å installera dei viktigaste med ein gong.
+
+6.  Opna terminalvindauga igjen og køyr kommandoen
+
+```sh
+pip install matplotlib pandas scikit-learn numpy torch
+```
