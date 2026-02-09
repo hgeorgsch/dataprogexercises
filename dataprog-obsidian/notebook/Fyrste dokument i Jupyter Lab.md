@@ -37,6 +37,10 @@ opna det Jupyter Lab.
 3. Opna filnavigatøren med mappesymbolet til venstre i Jupyter Lab.
 4. Finn dokumentet som du nett lasta ned.  Sannsynlegvis ligg det
    i *Downloads*-katalogen.
+   Dokumentet skal ha filnavn som ender på `.ipynb`.  Om det ikkje
+   har det vel du *Rename* i kontekstmenyen (høgreklikk) og legg
+   til `.ipynb` i filnamnet.
+5. Opna dokumentet ved å dobbelklikka.
 :::
 
 ::: {hint}
