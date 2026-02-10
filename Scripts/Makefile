@@ -1,3 +1,4 @@
+new: 0401flyttal-print.pdf 0402pivot-print.pdf 0403frekvens-print.pdf
 all: 0501oo-print.pdf 0201sim-print.pdf 0202slump-print.pdf 0203struct-print.pdf
 %-main.tex: %.md
 	pandoc -o $@ $< 
