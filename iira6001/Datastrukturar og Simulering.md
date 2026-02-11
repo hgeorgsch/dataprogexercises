@@ -26,10 +26,10 @@ Dette kapittelet byggjer på
       Denne øvinga er litt meir teknisk og spissfindig, og mindre praktisk,
       men ho kan gje ein nyttig illustrasjon av bruken av `dict`.
 + *Tekniske demonstrasjonar*
-	+ [Demo Listekomprehensjon](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=ca95348f-dd3d-484f-b4d5-b3ee00dc3b75)
+	+ [Demo Listekomprehensjon](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=64c29094-a428-42a5-9f3b-b3ee00dc0018)
         + [](notebooks/list-empty)
         + [](notebooks/list)
-    + [Demo `dict`](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=64c29094-a428-42a5-9f3b-b3ee00dc0018)
+    + [Demo `dict`](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=ca95348f-dd3d-484f-b4d5-b3ee00dc3b75)
         + [](notebooks/dict-empty)
         + [](notebooks/dict)
 + *Opne Øvingar.*

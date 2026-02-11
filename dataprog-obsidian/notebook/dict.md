@@ -12,7 +12,7 @@ kernelspec:
   name: python3
 ---
 
-# Løysingar til Demo `dict`
+# Løysingar frå Demo `dict`
 
 Desse oppgåvene er utgangspunktet for ein demonstrasjonsvideo med to 
 formål.
