@@ -12,7 +12,7 @@ kernelspec:
   name: python3
 ---
 
-# Løysingar til Demo Listekomprehensjon
+# Løysingar frå Demo Listekomprehensjon
 
 Desse oppgåvene er utgangspunktet for ein demonstrasjonsvideo med to
 formål.  Eg skal demonstrera suntaksen for listekomprehensjon i
