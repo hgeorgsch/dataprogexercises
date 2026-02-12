@@ -11,24 +11,37 @@ I kurset bruker vi python som programmeringsspråk og fleire ulike
 verkty til å arbeida med pythonkode.
 Me tilrår å installara *Anaconda* som er eit distribusjonsmiljø
 for det meste som finst av pythonverkty.
-Ved å installera siste utgåve av Anacond, er me trygge på at du
+Ved å installera siste utgåve av Anaconda, er me trygge på at du
 har ein ny versjon av python, alle biblioteka me treng, samt
 *Jupyter Lab* som er det fyrste verktyet me treng.
 
 Der er eitt aber med anaconda.  Det er ikkje fri programvare.
 Der er lisensvilkår å lesa, og om ein skal bruka det i ein stor
 bedrift, treng ein betalt lisens.
-Miniconda er ein lettvektsutgåve av anaconda, og sjølve miniconda
-er gratis.  Problemet er at ein bruker miniconda for å lasta ned
-andre pakkar frå anaconda-platformen, og det er ikkje lett å sjå
-kva som krev betalt lisens.
+Dei som ikkje kan eller vil installera Anaconda, kan installera
+Python og pip, og bruka pip til å installera andre pakkar som
+trengst.  Sjå under Anaconda.
 
-Det er mogleg berre å bruka Python og pip.  Sjå under Anaconda.
 
 ::: {warning}
 Der er sådd tvil om kva lisens som gjeld for Anaconda ved NTNU
 og dette er eg i ferd med å sjekka ut.
 :::
+
+::: {admonition} Merknad
+Miniconda er ein lettvektsutgåve av anaconda, og sjølve miniconda
+er gratis.  Problemet er at ein bruker miniconda for å lasta ned
+andre pakkar frå anaconda-platformen, og det er ikkje lett å sjå
+kva som krev betalt lisens.
+:::
+
+::: {admonition} Merknad
+Dersom du installerer python på andre måtar, so skal du sjå til
+at du ogso har Jupyter Lab og at du kan installera
+popolære bibliotek som torch, pandas, scikit-learn, m.fl. ved behov.
+Det er alt me treng.
+:::
+
 
 ## Anaconda
 
