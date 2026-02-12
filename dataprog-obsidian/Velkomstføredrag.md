@@ -27,14 +27,15 @@ NTNU---Noregs Teknisk-Naturvitskaplege Universitet
 ---
 
 + Maskinlæring i steganalyse rundt 2010
-+ Velferdsteknologi
-+ Optimering for datastøttet design
-+ Feltstudiar i industridesign
-+ Modellering av knær til kirurgisimulatorar
-+ Matematikkdidaktikk
-+ Designmetode og vitskapsteori
-+ Utdanningsfilosofi
-+ KI-filosofi
++ Velferdsteknologi  rundt 2012-2015
++ Optimering for datastøttet design rundt 2015
++ Feltstudiar i industridesign  rundt 2015-2017
++ Modellering av knær til kirurgisimulatorar  2020-2025
++ Matematikkdidaktikk  sidan 2013
++ Designmetode og vitskapsteori 2020-2025
++ Maskinlæring i kosmologi sidan 2021
++ Utdanningsfilosofi  sidan rundt 2018
++ KI-filosofi sidan rundt 2020
 
 ---
 
@@ -70,6 +71,33 @@ note:
 koma i gang med programvaren og sjå at han kan brukast til noko nyttig
 
 ---
+<!-- slide template="[[tpl-twocolumn]]" -->
+
+
+::: leftimage
+## onsdag
+
++ Installasjon
++ 11.30-12 Lunsj
++ Velkomen
++ Økt 1.  Jupyter Notebook
++ Briefing til Økt 2.  Dataanalyse
+:::
+::: leftcredit
+:::
+
+::: rightimage
+## torsdag
+
++ Briefing til Økt 2.  Dataanalyse
++ 11.30-12.30 Lunsj
++ Velkomen
++ Økt 3.  Simulering
++ Seminar.  Kva vil me med kurset?
+:::
+::: rightcredit
+:::
+
 
 Tre gjennomarbeidde døme med oppgåver, samt eit seminar om vegen vidare til slutt.
 + Skriva i Jupyter Notebook
