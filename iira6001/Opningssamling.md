@@ -20,7 +20,8 @@ samråd med IT-tenesta i verksemda.
 Vegleiingstida før lønsj fyrste dagen er for dei som av ein eller
 annan grunn ikkje får gjort dette ferdig på førehand.
 
-**Stad:** NTNU i Ålesund, Larsgårdsvegen 2, Brua.
+**Stad:** NTNU i Ålesund, 
+[Brua](https://link.mazemap.com/vdbzfWlm) i Kompasset (K-bygget), 3. etasje.
 
 Programmet under er eit **utkast**.
 Start- og sluttidene står faste, men me må sjå an tida til kvar
@@ -35,7 +36,7 @@ Start- og sluttidene står faste, men me må sjå an tida til kvar
 | 13.00-13.45 | Presentasjon av Økt 1. | [Foilar](Fyrste%20dokument%20i%20Jupyter%20Lab%20(foilar).md) |
 | 13.45-15 | Økt 1. Fyrste dokument i Jupyter Lab | [Oppgåvesett](notebooks/Fyrste%20dokument%20i%20Jupyter%20Lab) |
 | 15.00-15.45 | Presentasjon av Økt 2 til i morgon. | [Foilar](Fyrste%20datasett%20i%20CSV%20(foilar).md) |
-| 15.45-16.30 | Avrunding                      | |
+| 15.45-16.30 | Oppsummering og avrunding                      | |
 
 
 | Dag 2 | Tema | Materiell |
