@@ -20,6 +20,8 @@ samråd med IT-tenesta i verksemda.
 Vegleiingstida før lønsj fyrste dagen er for dei som av ein eller
 annan grunn ikkje får gjort dette ferdig på førehand.
 
+**Stad:** NTNU i Ålesund, Larsgårdsvegen 2, Brua.
+
 Programmet under er eit **utkast**.
 Start- og sluttidene står faste, men me må sjå an tida til kvar
 økt og kvart føredrag.
