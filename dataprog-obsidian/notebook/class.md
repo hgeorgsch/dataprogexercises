@@ -25,8 +25,6 @@ med for- og etternamn,
 kundenummer, fødselsdato, gateadresse og postnummer.
 :::
 
-+++
-
 ## Ein kunde
 
 ::: {admonition} Oppgåve
@@ -36,19 +34,26 @@ Klassa skal ha ein metode for pen utskrift av kunden.
 
 ```{code-cell} ipython3
 class Kunde:
-    def __init__(self, fornavn, etternavn, fdato, gateadresse, postnummer, kundenummer=None):
+    def __init__( self, fornavn, etternavn, fdato, gateadresse, postnummer, kundenummer=None ):
         self.fornavn = fornavn
         self.etternavn = etternavn
         self.fdato = fdato
         self.gateadresse = gateadresse
         self.postnummer = postnummer
         self.kundenummer = kundenummer
-    def __str__(self):
-        return f"{self.fornavn} {self.etternavn}\nKundenummer: {self.kundenummer}\n{self.gateadresse}\n{self.postnummer}\n"
-    def getEtternavn( self ):
-        return self.etternavn
-kunde1 = Kunde( "Ola", "Normann", "2002-12-10", "Borgundvegen 202", 6016 )
+    def show( self ):
+        print( str(self) )
+        
+    def __str__( self ):
+        return ( f"{self.fornavn} {self.etternavn}\n" +
+            f"Fødselsdato: {self.fdato}\n" +
+            f"Kundenummer: {self.kundenummer}\n" +
+            f"{self.gateadresse}\n" +
+            f"{self.postnummer}\n" )
+
+kunde1 = Kunde( "Ola", "Normann", "2001-03-02", "Borgundvegen 212", 6016 )
 print( kunde1 )
+kunde1.show()
 ```
 
 ## Eit register
@@ -61,26 +66,30 @@ kundane i registeret.
 :::
 
 ```{code-cell} ipython3
-class KundeRegister:
-    def add(self, kunde):
+class Register:
+    def __init__( self ):
+        self.reg = []
+        self.siste = 0
+    def add( self, kunde ):
         self.siste += 1
         kunde.kundenummer = self.siste
         self.reg.append( kunde )
-    def __str__(self):
-        return "\n".join(  [ str(x) for x in self.reg ] )
-    def __init__(self):
-        self.reg = []
-        self.siste = 0
-reg = KundeRegister()
+    def __str__( self ):
+        return "\n".join( [ str(k) for k in self.reg ] )
+reg = Register()
 reg.add( kunde1 )
 print( reg )
 ```
 
 ```{code-cell} ipython3
-kunde2 = Kunde( "Kari", "Normann", "2003-03-10", "Borgundvegen 202", 6016 )
+kunde2 = Kunde( "Kari", "Normann", "2002-01-12", "Borgundvegen 212", 6016 )
 reg.add( kunde2 )
 print( reg )
 ```
+
+## 
+
++++
 
 ## Søk 
 
@@ -89,28 +98,23 @@ Utvid registeret med ein metode for å finna ein kunde etter namn.
 :::
 
 ```{code-cell} ipython3
-class KundeRegister:
-    def add(self, kunde):
-        self.siste += 1
-        kunde.kundenummer = self.siste
-        self.reg.append( kunde )
-    def __str__(self):
-        return "\n".join(  [ str(x) for x in self.reg ] )
-    def __init__(self):
-        self.reg = []
-        self.siste = 0
-    def search(self,navn):
-        return [ x for x in self.reg if x.etternavn == navn ] 
-reg = KundeRegister()
-reg.add( kunde1 )
-reg.add( kunde2 )
-print( reg.search( "Jensen" ) )
+class RegisterS(Register):
+    def search( self, etternavn ):
+        return [ k for k in self.reg if k.etternavn == etternavn ] 
+regs = RegisterS()
+regs.add( kunde1 )
+regs.add( kunde2 )
+print( regs )
+print( regs.search( "Normann" ) )
 ```
 
 ```{code-cell} ipython3
-res =  reg.search( "Normann" ) 
-for x in res:
-    print(x)
+k = regs.search( "Normann" )
+print( len( k ) )
+```
+
+```{code-cell} ipython3
+print( k[1] )
 ```
 
 ```{code-cell} ipython3
