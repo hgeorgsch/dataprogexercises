@@ -5,6 +5,12 @@ tags:
 
 # Andre periode
 
+**Under arbeid.**
+Det meste er stadig ope når det gjeld andre periode.
+Me skal in på maskinlæring (som ein gren av dataanalyse)
+og frittståande program men tidsbruken er uavklart.
+Der skal òg vera ei veke om sikkerheit, etikk og liknande.
+
 Mellom midtvegs- og avslutningssamlinga skal ein bruka ein
 god del av tida på ei prosjektoppgåve som kan inngå i mappa.
 Rådet vårt er å velja ei interessant problemstilling frå eige
