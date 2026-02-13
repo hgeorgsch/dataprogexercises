@@ -2,6 +2,8 @@
 tags:
   - opening
   - lecture/slides
+css:
+  - css/templates.css
 ---
 <!-- slide template="[[tpl-titleslide]]" -->
 
@@ -19,10 +21,12 @@ NTNU---Noregs Teknisk-Naturvitskaplege Universitet
 
 ## Hans Georg Schaathun
 
-- professor i datafag
-- mellomfag i sosialøkonomi
-- cand.scient. i industriell og anvendt matematikk og informatikk
-- dr.scient. i informatikk (kodeteori)
+- professor i datafag, Høgskolen i Ålesund/NTNU frå 2011
+- *lecturer*/*senior lecturer*, Universitetet i Surrey 2006-2010
+- Post.doc. m.m., Universitetet i Bergen 2002-2006
+- dr.scient. i informatikk (kodeteori) 2002
+- cand.scient. i industriell og anvendt matematikk og informatikk 1999
+- mellomfag i sosialøkonomi  1996
 
 ---
 
@@ -67,36 +71,24 @@ note:
 
 ---
 
-**Mål for samlinga**
+## Mål for samlinga
+
 koma i gang med programvaren og danna seg eit bilete av kva me skal arbeida med dei neste seks vekene
 
 ---
-<!-- slide template="[[tpl-twocolumn]]" -->
 
-::: leftimage
-## onsdag
-
-- Installasjon
-- 11.30-12 Lunsj
-- Velkomen
-- Økt 1.  Jupyter Notebook
-- Briefing til Økt 2.  Dataanalyse
-:::
-::: leftcredit
-:::
-
-::: rightimage
-## torsdag
-
-- Økt 2.  Dataanalyse
-- 11.30-12.30 Lunsj
-- Velkomen
-- Økt 3.  Simulering
-- Seminar.  Kva vil me med kurset?
-- Slutt 15.00
-:::
-::: rightcredit
-:::
+| | |                                  |
+|:- | :------- | -------------------------------- |
+|Onsdag | 11.30- | Lønsj $\to$ Velkomen                            |
+| | Økt 1.   | Jupyter Notebook                 |
+| | -16.30   | Briefing til Økt 2.  |
+||||
+|Torsdag | 9.00- | Kaffi og God morgon |
+| | Økt 2 |  Dataanalyse |
+| | 11.30-12.30 | Lunsj |
+| | Økt 3. |  Simulering |
+| | - 15.00 | Seminar.  Kva vil me? |
+||||
 
 
 note:
@@ -145,17 +137,17 @@ Jeg skal bli mer konkret efter pausen.
 ---
 
 
-+ https://iirevu.org.ntnu.no/iira6001/
+- https://iirevu.org.ntnu.no/iira6001/
 
 note:
-+ Forsiden 
-+ Vurdering
-+ Installasjon
-+ Oversikt over semesteret:  Senere uker tar vi siden
-+ Opningssamling
-	+ foiler 
-	+ øvelser
-+ Økt 1. Første dokument
+- Forsiden 
+- Vurdering
+- Installasjon
+- Oversikt over semesteret:  Senere uker tar vi siden
+- Opningssamling
+	- foiler 
+	- øvelser
+- Økt 1. Første dokument
 
 ---
 

@@ -2,6 +2,8 @@
 tags:
   - opening
   - lecture/slides
+css:
+  - css/templates.css
 ---
 <!-- slide template="[[tpl-titleslide]]" -->
 
@@ -17,9 +19,9 @@ NTNU---Noregs Teknisk-Naturvitskaplege Universitet
 
 ---
 
-+ **Jupyter Lab**  - verktyet
-+ **Python** - språket
-+ Anaconda er eit verkty for å installera andre verkty
+- **Jupyter Lab**  - verktyet
+- **Python** - språket
+- Anaconda er eit verkty for å installera andre verkty
 
 note:
 Opna Jupyter Lab.
@@ -31,13 +33,15 @@ Vise kodeblokk.
 1. Kode-blokk
 
 ---
+<!-- slide template="[[tpl-ntnu]]" -->
 
 Eit **Dataprogram**
 er ein *serie med instruksjonar*
 
 ---
+<!-- slide template="[[tpl-ntnu]]" -->
 
-Ein **variabel** er en verdi med namn.
+Ein **variabel** er en *verdi med namn*.
 
 note:
 Verdien er data i minnet på maskinen, og navnet gjør at
@@ -47,10 +51,10 @@ vi kan finne dataene igjen.
 
 ## Programinstruksjonar
 
-+ Tilording: `variabel = 17`
-+ I/O:  `print( variabel )`
-+ Kontrol: `if variabel < 20: print( variabel )`
-+ Aritmetikk: `variabel2 = 3*variabel`
+- **Tilording:** `variabel = 17`
+- **I/O:**  `print( variabel )`
+- **Kontroll:** `if variabel < 20: print( variabel )`
+- **Aritmetikk:** `variabel2 = 3*variabel`
 
 ---
 
@@ -100,8 +104,7 @@ Vanlig tekst i Markdown skal være lett å naturlig å lese.
 \subsection{Underoverskrift}
 
 Markering i teksten er diskret,
-med stjerner for \emph{kursiv} og \textbf{halvfet}
-    skrift
+med stjerner for \emph{kursiv} og \textbf{halvfet} skrift
 
 Blank linje begynner nytt avsnitt.
 ```
@@ -122,8 +125,8 @@ Vanlig tekst i Markdown skal være lett å naturlig å lese.
 <h2>Underoverskrift</h2>
 <p>
 Markering i teksten er diskret,
-med stjerner for <em>kursiv</em> og <strong>halvfet</strong>
-skrift
+med stjerner for <em>kursiv</em> og 
+<strong>halvfet</strong> skrift
 </p>
 <p>
 Avsnitt har en egen kode p.
@@ -152,7 +155,6 @@ skrift
 Blank linje begynner nytt avsnitt.
 ```
 
-
 note:
 Men vi skal holde oss til Markdown.
 
@@ -163,7 +165,7 @@ Det gjør at ulike programmer kan vise teksten litt forskjellig, slik at det pas
 
 Dette er uvant for dem som er vokst opp med tekstbehandlere, og det har både fordeler og ulemper.
 
---- 
+---
 
 ## Fyrste Dokument
 
