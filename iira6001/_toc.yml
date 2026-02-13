@@ -48,8 +48,14 @@ chapters:
       - file: notebooks/Tid og dato
       - file: notebooks/Arbeidsledige
       - file: exercises/Eksportdata
-      - file: notebooks/ssbfile-empty
-      - file: notebooks/ssbfile
+      - file: DemoProblems
+        sections:
+        - file: notebooks/ssbfile-empty
+        - file: notebooks/ssbfile
+        - file: notebooks/plot1empty
+        - file: notebooks/plot1
+        - file: notebooks/plot2empty
+        - file: notebooks/plot2
     - file: Samanlikna Datasett
       sections:
       - file: notebooks/Arbeidsledige og Konkursar

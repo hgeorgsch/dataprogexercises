@@ -4,9 +4,11 @@ tags:
    - legacy/iif
 ---
 
+# Varar på sal
+
 + `Oppgave5-JH-LF.ipynb`
 
-#### Oppgave 5.1: Varer på salg
+## Oppgave 5.1: Varer på salg
 
 Vi ønsker å undersøke hvordan det å sette varer på tilbud påvirker salg og omsetning
 
@@ -24,7 +26,7 @@ Vi ønsker å undersøke hvordan det å sette varer på tilbud påvirker salg og
 * Fremstill resultatet av simulering grafisk med `matplotlib`
 
 
-# Oppgave 5.2: Simulere markedsdynamikk
+## Oppgave 5.2: Simulere markedsdynamikk
 
 1. Set opp en markedsmodell for et gode:
  
