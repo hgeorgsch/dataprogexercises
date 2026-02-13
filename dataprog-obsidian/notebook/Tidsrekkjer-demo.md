@@ -16,6 +16,11 @@ kernelspec:
 
 Datafile: [12143_20260209-154116.csv](12143_20260209-154116.csv)
 
+```{code-cell} ipython3
+import pandas as pd
+df = pd.read_csv( "12143_20260209-154116.csv", encoding="latin1", sep=";", header=1 )
+display(df)
+```
 
 ```{code-cell} ipython3
 df1 = df.pivot( index="år", columns=["statistikkvariabel","regnskapsbegrep"] )

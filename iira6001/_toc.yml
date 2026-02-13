@@ -50,6 +50,7 @@ chapters:
       - file: exercises/Eksportdata
       - file: DemoProblems
         sections:
+        - file: notebooks/ssb
         - file: notebooks/ssbfile-empty
         - file: notebooks/ssbfile
         - file: notebooks/plot1empty
@@ -60,6 +61,7 @@ chapters:
       sections:
       - file: notebooks/Arbeidsledige og Konkursar
       - file: notebooks/Jordskjelv
+      - file: notebooks/Tidsrekkjer-demo
     - file: Agent-basert simulering
       sections:
       - file: notebooks/LoanClass
