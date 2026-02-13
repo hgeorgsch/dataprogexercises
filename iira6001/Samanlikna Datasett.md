@@ -28,6 +28,9 @@ og skal no samanlikna data frå ulike datasett.
     + [Jordskjelvdata](notebooks/Jordskjelv) som demonstrerer animasjon og plotting oppå kart. (valfri)
 + *Demovideo*
     + Melt og pivot
++ Kuriosa
+    + [](notebooks/Tidsrekkjer-demo) viser datasettet og tabellane
+      frå tidsrekkjer og *pivot*.
 
 ## Oppsummeringa
 

@@ -12,6 +12,8 @@ kernelspec:
   name: dataprog
 ---
 
+# Demo Statistikkbanken
+
 ```{code-cell} ipython3
 import pandas as pd
 df = pd.read_csv( "13760_20260203-130712.csv", encoding="latin1", sep=";" )
