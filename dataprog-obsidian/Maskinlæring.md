@@ -6,33 +6,18 @@ tags:
 ---
 # Maskinlæring
 
-## Førelesing
 
-+ [[Om å læra frå data]]
-    + [[Notar til Om å læra frå data]]
-	
-2. [[Evaluering av modellar]]
-	1. Øving [[Evaluering]]
-	2. Kuriosa [[hypothesistest]]
-
-3. [[Unsupervised Learning]]
-
-## Tema å dekkja
-
-1. Klassifikasjon av numeriske data
+1. Innføring og regresjon
+	+ [[Om å læra frå data]]
+	    + [[Notar til Om å læra frå data]]
+		+ Kuriosa  [[Iris-Statistics]]
+	+ [[Evaluering av modellar]]
+		1. Øving [[Evaluering]]
+		2. Kuriosa [[hypothesistest]]
+2. Klassifikasjon av numeriske data
     + https://www.kaggle.com/datasets/anishdevedward/loan-approval-dataset
-2. Clustering
-    + https://www.kaggle.com/datasets/vjchoudhary7/customer-segmentation-tutorial-in-python
-3. Regresjon
-4. Tidsrekkjer
-    + ikkje prioritert - krev meir tid
-5. Klassifikasjon av bilete
+	+ [[Support Vector Machines]]
+3. [[Unsupervised Learning]]
+	1. Clustering: https://www.kaggle.com/datasets/vjchoudhary7/customer-segmentation-tutorial-in-python
+	+ [[Klyngeanalyse]]
 
-## Øvingar
-
-+ [[Klyngeanalyse]]
-+ [[Support Vector Machines]]
-
-
-+ Kuriosa
-	+ [[Iris-Statistics]]
