@@ -22,7 +22,7 @@ author: Hans Georg Schaathun
 	+ 11.30-12.30  lønsj i kantina
 	+ 12.30-14.00 Økt 3. Simulering
 	+ 14.00-14.15 Beinstrekk
-	+ 14.15-15.00   [[Seminar om motivasjon og ynskjer]]    #hg
+	+ 14.15-15.00   [[Seminar Kva vil me?]]    #hg
 
 
 ## TODO
