@@ -17,13 +17,14 @@ NTNU---Noregs Teknisk-Naturvitskaplege Universitet
 
 ---
 
-Jupyter Lab
-<!-- element class="[[r-fit-text]]" -->
++ **Jupyter Lab**  - verktyet
++ **Python** - språket
++ Anaconda er eit verkty for å installera andre verkty
 
 note:
 Opna Jupyter Lab.
 
-Dette er én av svært mange måter å bruke programmering på.
+Dette er én av svært mange måter å bruke python på.
 
 Vise kodeblokk.
 
@@ -168,6 +169,8 @@ Dette er uvant for dem som er vokst opp med tekstbehandlere, og det har både fo
 
 note:
 Lasta ned og opna
+
+Bruk filnavigatøren
 
 ---
 
