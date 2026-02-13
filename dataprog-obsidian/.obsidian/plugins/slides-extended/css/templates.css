@@ -81,6 +81,15 @@
      font-size: 18pt ;
 }
 
+.reveal section .ntnuslide strong {
+   color: #b01b81 ;
+}
+.reveal section .ntnuslide p {
+   color: #00509e ;
+}
+.reveal section .ntnuslide em {
+   color: #E0E0E0 ;
+}
 /* NTNU colours */
 .reveal .ntnublue {
    color: #00509e ;

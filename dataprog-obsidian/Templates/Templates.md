@@ -46,3 +46,6 @@ to scale well.  We should explore the use of CSS flexbox, below.
 + `tpl-fitdiagram2.md` ???
     + Used only by Jonas. 
     + Early attempt using flexbox.  Does it work?
++ `tpl-ntnu.md` 
+    + Colours on emphasis
+    + Rather crude - colours are not thought out
