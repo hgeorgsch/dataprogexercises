@@ -13,7 +13,6 @@ chapters:
     - file: notebooks/Fyrste dokument i Jupyter Lab
     - file: notebooks/Fyrste datasett med CSV
     - file: notebooks/Simulering av kontantstraum
-    - file: Seminar om Motivasjon og Ynskjer
     - file: Førelesingsnotat frå Opningssamlinga
       sections:
       - file: Fyrste dokument i Jupyter Lab (foilar)
