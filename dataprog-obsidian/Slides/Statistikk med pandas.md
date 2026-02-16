@@ -1,8 +1,8 @@
 ---
 tags:
   - lecture/video/perspective
-  - statistics
-  - pandas
+  - topic/statistics
+  - topic/pandas
 css:
   - css/templates.css
 ---

@@ -22,6 +22,7 @@ tags:
 	+ ekstra demo-video
 	 
 ## Typisk veke
+
  + *videoføredrag* 15min
 	 + historiefortelling
 	 + drøfta konsekvensar av tekniske detaljar

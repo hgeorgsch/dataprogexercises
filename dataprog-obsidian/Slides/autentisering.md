@@ -3,9 +3,6 @@
 
 ![](Slides/slidefig/doors-keycards.jpg)
 
-
-
-
 ---
 
 ## Hvorfor autentisering?

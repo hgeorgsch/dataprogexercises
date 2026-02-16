@@ -1,3 +1,9 @@
+---
+tags:
+  - topic/automatisering
+  - topic/ide
+---
+
 
 + (innspel frå Lars Ole)
 + Kva er utfordringa i Excel?

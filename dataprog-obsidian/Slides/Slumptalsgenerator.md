@@ -3,7 +3,8 @@ title: Slumptalsgenerator
 author: Hans Georg Schaathun
 date: December 2025
 tags:
-  - lecture/video
+  - lecture/video/perspective
+  - topic/prng
 css:
   - css/templates.css
 ---
@@ -221,6 +222,10 @@ personopplysninger.
 :::
 
 note:
+En anden ting som vi skal merke oss er at slumptallsgeneratoren har
+et endelig antall tilstander.  
+Før eller siden kommer den til å gjenta seg selv.
+
 Slumptallsgeneratoren er det som vi kaller en endelig tilstandsmazkin.
 Den har et endelig antall tilstander.
 Leketøyseksempelet vårt har 90 tilstander.
@@ -228,6 +233,11 @@ Det fælger av den matematiske formelen at for en gitt tilstand er det alltid
 en bestemt tilstand som følger efter, og når vi genererer tilstrekkelig mange
 tall, går vi i ring.  Slumptallsfølgen gjentar seg.
 
+Fordi vi valgte koeffisientene $a$ og modulusen $p$ fornuftig i vårt eksempel,
+blir alle tilstandene brukt, og vi kan generere 90 tilfeldige tall før rekkefølgen
+blir gjentatt.  Det er ikke alltid tilfellet.
+Antallet tilstander før de gjentar seg selv, kaller vi gjerne for perioden til
+generatoren.
 
 ---
 
@@ -239,7 +249,7 @@ note:
 Standardbiblioteket i python bruker en slumptallsgenerator som heter
 Mersenne Twister.
 Den har en periode på $2^{19937}-1$ tilstander før den gjentar seg selv.
-Hvis du skriver denne lengden ut i titallssystemet, får vi om lg 6000 sifre.
+Hvis du skriver denne lengden ut i titallssystemet, får vi om lag 6000 sifre.
 
 ---
 <!-- slide template="[[tpl-flex]]" -->
@@ -286,7 +296,7 @@ Out[5]: [5, 1, 2, 6, 6, 4, 3, 3, 4, 3]
 note:
 Terningen er et eksempel på en uniform fordeling, der
 alle verdier er like sannsynlige.
-Fordelingen er diskret, dvs. at der bare en enkelte
+Fordelingen er diskret, dvs. at der bare enkelte
 punkter som forekommer; vi får bare heltall og ikke
 desimaltallene imellom.
 
@@ -380,12 +390,12 @@ Out[11]: [2, 1, 5, 4, 4, 3, 2, 9, 2, 10, 7, 1]
 
 note:
 Vi har dog muligheten til å sette frøet, eller *seed*.
-Hvis vi f.eks. sette frøet til 42 før vi kjører programmet
-vårt, får vi alltid de samme tilfeldige tallene.
+Hvis vi f.eks. sette frøet til 42 før vi henter slumptall,
+får vi alltid de samme tallene.
 
 Dette kan være særs nyttig ved simulering, fordi det lar
 oss kjøre den eksakt samme simuleringen flere ganger.
-Særlig vi skal kvalitetssikre koden vår eller leter
+Særlig n[r vi skal kvalitetssikre koden vår eller leter
 efter feil, kan det være greitt å kunne sammenligne kjøringer
 uten tilfeldige faktorer.
 

@@ -13,23 +13,44 @@ sett uavhengig av programmering og simulering, og det er mogleg
 å hoppa over dei fyrste vekene og ta denne rett etter opningssamlinga.
 Læringsmaterialet fylgjer same format som andre veker.
 
+Innhaldet denne veka kan verka overveldande, men me held fram med det same
+stoffet neste veke.  Særleg demovideoane vert lange.
+Hugs at det er dei gjennomarbeidde døma som definerer
+dei viktigste ferdigheits- og kunnskapsmåla.
+Demovideoane er skal vera ein ekstra støtte for å klare oppgåvene, og dei
+er ikkje eit mål i seg sjølve.
+
 + *Perspektivførelesing*
-	+ [Filhandtering](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=00b91ed5-08f2-498f-8877-b367013600cc)
+	+ [Filhandtering](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=0cc6d034-e545-482e-b172-b3ed00d06e9c)
 	  [(Slides)](https://iirevu.org.ntnu.no/Slides/Filhandtering/)
-	+ [Statistikk med pandas](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=74a527da-e025-4d11-8ce8-b36701673d76)
+	+ [Statistikk med pandas](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=8fff3714-2c20-4d25-917b-b3ed00d06ebf)
 	  [(Slides)](https://iirevu.org.ntnu.no/Statistikk%20med%20pandas/)
 + *Gjennomarbeidde døme*
     + [](notebooks/Fyrste%20datasett%20med%20CSV) frå opningssamlinga.
             Du bør gjera ferdig denne før du startar på noko nytt.
-	+ [Arbeidsledige](notebooks/Arbeidsledige) 
-	+ [Tid og dato](notebooks/Tid%20og%20dato)
-    + [Genetikk](notebooks/Genetikk) demonstrerer korrelasjon m.m. (valfri)
+	+ [](notebooks/Arbeidsledige) 
+	+ [](notebooks/Tid%20og%20dato)
+    + [](notebooks/Genetikk) demonstrerer korrelasjon m.m. (valfri)
 + *Demovideo*
-	+ [[Filkonvertering og -import]]
-	+ [[Plot i pandas]]
-	+ [[Gjennomsnitt og spreding]] 
+    + [Statistikkbanken](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=c3199984-d5ef-44dc-a9da-b3ee00cd4421)
+        + [Datasett 13760](./notebooks/13760_20260203-130712.csv)
+        + [Arbeidsdokument](notebooks/ssb)
+	+ [Plot i pandas](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=9b30ced4-33c3-4811-a3d1-b3ee0147cfe4)
+        + [](notebooks/plot1empty)
+        + [](notebooks/plot1)
+	+ [Kakediagram i pandas](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=0c83d979-3a67-4c41-a6e2-b3ee00a30d87)
+        + [](notebooks/plot2empty)
+        + [](notebooks/plot2)
+    + [Dataformattering](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=67762136-dda7-47b3-af9b-b3ee00e3fcbb)
+      Denne demoen viser rydding i nokre datasett som eg har sett
+      studentar finna for å studera utvikling i bustadprisar.
+      Til sjuande og sist viser han at ikkje alle problem lèt seg 
+      løysa, men nokre løysingar finn me og nokre uløyselege
+      problem identifiserer me.
+        + [](notebooks/ssbfile-empty)
+        + [](notebooks/ssbfile)
 + *Opne øvingar*
-	+ [Eksportdata](exercises/Eksportdata).  Desse oppgåve krev omfattande preprosessering
+	+ [Eksportdata](exercises/Eksportdata).  Desse oppgåvene krev omfattande preprosessering
       for å få data på samanliknbar form.
 
 ## Oppsummering
@@ -39,3 +60,4 @@ Målet denne veka er
     + kunna kjenna igjen og byta teiknkoding
     + kjenna ulike filformat og dialektar av CSV
 + Kunna bruka pandas til deskriptiv statistikk og plotting
+

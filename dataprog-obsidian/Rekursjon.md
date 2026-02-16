@@ -2,7 +2,7 @@
 title: Halveringsmetoden ved Rekursjon
 tags:
    - stub
-   - recursion
+   - topic/recursion
 ---
 
 # Halveringsmetoden ved Rekursjon

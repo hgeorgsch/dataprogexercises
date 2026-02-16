@@ -1,7 +1,10 @@
 ---
 title: Smittespreiing
 author: Hans Georg Schaathun
-tags: [exercise, simulering, loop]
+tags:
+  - exercise
+  - simulering
+  - topic/loop
 jupytext:
   cell_metadata_filter: -all
   formats: md:myst,ipynb
@@ -91,6 +94,13 @@ for i in range(t1):
 
 ::: {admonition} Oppgåve
 Lag eit plott over veksten i talet på smitta so langt.
+:::
+
+::: {hint}
+Me har sjølvsagt `liste_smittet` som $y$-verdiar til plottet,
+men me har ikkje definert ei liste som kan brukast som $x$-verdiar.
+Det er alltid mogleg å bruka `range(len( liste_smittet ) )` for
+å laga seg $x$-verdiar som kan brukast.
 :::
 
 ## Periode 2
