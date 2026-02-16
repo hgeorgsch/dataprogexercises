@@ -65,8 +65,15 @@
    overflow: hidden;       
    text-overflow: ellipsis; 
 }
+.reveal section .widecode code {  /* Override defaults */
+   width: 900px ;
+}
 .reveal code {
      font-size: 18pt ;
+     line-height: 1.2 ;
+}
+.reveal .r-fit-text code {
+     font-size: inherit ;
      line-height: 1.2 ;
 }
   
@@ -74,6 +81,15 @@
      font-size: 18pt ;
 }
 
+.reveal section .ntnuslide strong {
+   color: #b01b81 ;
+}
+.reveal section .ntnuslide p {
+   color: #00509e ;
+}
+.reveal section .ntnuslide em {
+   color: #E0E0E0 ;
+}
 /* NTNU colours */
 .reveal .ntnublue {
    color: #00509e ;
@@ -125,6 +141,7 @@
 .reveal .smalltext code {
      font-size: 14pt ;
      line-height: 1.1 ;
+     max-width: 100% ;
 }
 .reveal .smalltext p {
      font-size: 14pt ;
@@ -132,6 +149,7 @@
 .reveal .smalltext .credit {
      font-size: 16pt ;
 }
+
 
 /* Quote slide */
 .reveal .quoteslideheader img {
@@ -144,8 +162,14 @@
 }
 
 /* Twocolumn slide */
+.reveal .twocolumnslide pre code,
 .reveal .twocolumnslide {
      font-size: 21pt ;
+} 
+.reveal .twocolumnslide ol,
+.reveal .twocolumnslide ul {
+     width: 400px ;
+     margin: 0px ;
 } 
 .reveal .twocolumnslide img {
      object-fit: contain   !important ;
@@ -212,7 +236,7 @@
    border: none ;
 }
 .reveal section .flexcolumn .credit {
-   font-size: 16pt ;  /* Reduced font size */
+   font-size: 16px ;  /* Reduced font size */
    flex: 0 0 content ;
 }
 .reveal .slides section .smallertext {

@@ -95,6 +95,17 @@ print( r( [1] ) )
 
 Legg merke til korleis heile fylgjen gjentek seg sjølv.
 
+::: {admonition} Merknad
+Her har eg brukt notasjonen `**kw` som me elles ikkje har støytt på.
+Her tyder det *alle andre namngjevne argument*.
+Me bruker denne notasjonen når me vil senda argumenta til `g` vidare
+til `f` utan å vita kva argument `f` tek.
+Dei argumenta som vert brukte direkte i `g` har f[tt namn (`s`), medan
+resten vert samla opp i `**kw` og sende vidare til `f`.
+Slik treng me ikkje oppdatera definisjonen av `g`, sjølv om `f` skulle
+få fleire argument.
+:::
+
 Under feilsøk brukte eg ein litt meir brutal metode for å testa
 alle moglege koeffisiantar $a$.
 
@@ -109,7 +120,7 @@ r = [ test(a) for a in range(2,97) ]
 Her bruker me mengetypen `set` for å verta kvitt gjentekne element.
 I returverdien skal `len(s)` vera talet på unike element.
 
-Til figurane brukte eg denne funksjonen for å 
+Til figurane brukte eg denne funksjonen for å
 
 ```{code-cell} ipython3
 def fx(s,a=7,m=97):
@@ -137,11 +148,10 @@ def fmt1( v ):
    s = ""
    for t in v:
        s += "{" + f"{t}" + "}"
-
-def fmt2( v ):
-   return " ".join( fmt1( v ) )
+   return s
+    
+def fmt2( w ):
+   return " ".join( [ fmt1( v ) for v in w ] )
 
 print( fmt2(rs) )
 ```
-
-

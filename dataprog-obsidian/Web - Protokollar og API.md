@@ -1,7 +1,7 @@
 ---
 tags:
   - lecture/video
-  - api
+  - topic/api
 ---
 
 

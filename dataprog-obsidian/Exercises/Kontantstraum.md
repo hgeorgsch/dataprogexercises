@@ -1,7 +1,10 @@
 ---
 title: Kontantstraum
 author: Hans Georg Schaathun
-tags: [exercise, simulering, loop]
+tags:
+  - exercise
+  - simulering
+  - topic/loop
 ---
 
 

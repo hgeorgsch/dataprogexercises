@@ -1,3 +1,8 @@
+---
+tags:
+   - topic/machinelearning
+   - lecture/stub
+---
 
 
 ## Typer læring

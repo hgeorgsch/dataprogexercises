@@ -1,6 +1,7 @@
 ---
 tags:
-  - lecture/perspective
+  - lecture/video/perspective
+  - video/script
 ---
 
 # Kontrollflyt i python

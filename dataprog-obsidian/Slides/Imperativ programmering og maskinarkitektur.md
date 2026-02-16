@@ -1,6 +1,6 @@
 ---
 tags:
-  - lecture/video
+  - lecture/video/perspective
 ---
 
 # Imperativ programmering

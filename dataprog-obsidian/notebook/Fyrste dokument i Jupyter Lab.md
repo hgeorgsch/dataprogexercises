@@ -27,10 +27,20 @@ Programmering er mykje rart. Folk som bruker programvareutvikling bruker gjerne 
 I denne samanhengen er *Jupyter Lab*, som dette dokumentet er skrive i, eit nyttig verkty. Her kan me kombinera tekst, programkode og utdata frå programmet i eitt og same dokument, slik at det er lett å sjå kva som foregår.
 
 ::: {admonition} Oppgåve
-Når du les dette, bør du lasta ned heile dokumentet i Jupyter-format og opna det
-Jupyter Lab.
-I nedlastingsmenyen øvst på sida, vel du `.ipynb`, som er filendinga Jupyter bruker.
-Lasta ned denne sida og opna dokumentet i Jupyter Lab.
+Når du les dette, bør du lasta ned heile dokumentet i Jupyter-format og 
+opna det Jupyter Lab.
+
+1. I nedlastingsmenyen øvst på sida, vel du `.ipynb`, som er
+   filendinga Jupyter bruker.
+2. Opna jupyter lab, anten frå Anaconda Navigator, eller ved å skriva
+   `jupyter lab` i eit terminalvindauga.
+3. Opna filnavigatøren med mappesymbolet til venstre i Jupyter Lab.
+4. Finn dokumentet som du nett lasta ned.  Sannsynlegvis ligg det
+   i *Downloads*-katalogen.
+   Dokumentet skal ha filnavn som ender på `.ipynb`.  Om det ikkje
+   har det vel du *Rename* i kontekstmenyen (høgreklikk) og legg
+   til `.ipynb` i filnamnet.
+5. Opna dokumentet ved å dobbelklikka.
 :::
 
 ::: {hint}
@@ -262,7 +272,13 @@ eller som del av eit uttrykk
 print( f"Eit uttrykk f(10)*2-1 = {f(10)*2-1}." )
 ```
 
-Funksjonar i *python* kan gjera begge delar, både returnera verdi og gjera noko.
+::: {admonition} Oppgåve
+Kva er verdien av $f(8)$.
+Lag ein kodeblokk og bruk funksjonen.
+:::
+
+Det er mogleg
+for funksjonar i *python* både å returnera verdi og å gjera noko.
 
 ```{code-cell} ipython3
 def f(x):
@@ -276,11 +292,10 @@ så gjer han ingenting her, når `f` vert definert.
 Han gjer noko når `f` seinare vert *brukt*.
 :::
 
-Lat oss sjå kva `f` gjer.
-
-```{code-cell} ipython3
-print( f(3) )
-```
+::: {admonition} Oppgåve
+Kva skjer når du reknar ut $f(8)$ med den nye funksjonen `f`?
+Lag ein kodeblokk og prøv.
+:::
 
 ## Folketalsmodell
 
@@ -404,6 +419,26 @@ Kva synest du trengst for å gjera grafen presentabel?
 :::{admonition} Oppgåve
 Bruk døma over og lag eit plott over estimert folketal på Island over dei neste åtte åra.
 :::
+
+## Opprydding
+
+::: {admonition} Oppgåve
+Når me arbeider med fleire program, er det lett å rota bort filene sine. 
+Ta deg difor litt tid etter øvinga til å laga eit system for arbeidsfilene
+dine frå kurset, og samla alle filene som du har brukt på ein plass.
+:::
+
+Eit par råd frå korleis eg gjer det,
+
+1.  Når du lagar nye filer, heiter dei *Untitled*, og ein har raskt mange slike
+    filer.  Gjer det til ei vane å byta namn på filene so snart som råd.-
+    Du kan m.a. gjera det med høgreklikk på fanehodet i *Jupyter Lab*
+2.  Lag deg ein prosjektkatalog (mappe) for kurset, med ein underkatalog for
+    opningssamlinga.  Samla materialet der.
+3.  Filnavigatøren i *Jupyter lab* fungerer høveleg godt både til å laga katalogar,
+    flytta filer og namna om filer.  Bruk høgreklikk.
+4.  Dersom du allereie har gode vaner for å halda orden på filene dine, so er der
+    ingen grunn for å endra dei for dette kurset.
 
 ## Nyttig?
 

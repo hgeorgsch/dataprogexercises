@@ -28,6 +28,3 @@ tags:
 
 + Avhengig av hva Lars Ole synes, kan det være aktuelt å vise bilder av andre som arbeider i banken.  Eller vi kan kun film Lars Ole på hans kontor.
 
-## Gjereliste
-
-+ [ ] Samtykkeskjema

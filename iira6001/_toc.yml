@@ -13,10 +13,8 @@ chapters:
     - file: notebooks/Fyrste dokument i Jupyter Lab
     - file: notebooks/Fyrste datasett med CSV
     - file: notebooks/Simulering av kontantstraum
-    - file: Seminar om Motivasjon og Ynskjer
     - file: Førelesingsnotat frå Opningssamlinga
       sections:
-      - file: Velkomen (foilar)
       - file: Fyrste dokument i Jupyter Lab (foilar)
       - file: Fyrste datasett i CSV (foilar)
       - file: Simulering av kontantstraum (foilar)
@@ -29,29 +27,50 @@ chapters:
       - file: exercises/Kontantstraum
       - file: exercises/Kundedata
       - file: notebooks/Folkevekst
+      - file: notebooks/control-empty
+      - file: notebooks/control
     - file: Datastrukturar og Simulering
       sections:
       - file: notebooks/Tilfeldigheit
       - file: notebooks/Marknadssimulering
       - file: exercises/Kundedifferensiering
       - file: notebooks/Listekomprehensjon
+      - file: notebooks/JSON og dict
+      - file: exercises/Varar på sal
       - file: notebooks/Tilfeldigheit-Demo
+      - file: notebooks/dict-empty
+      - file: notebooks/dict
+      - file: notebooks/list-empty
+      - file: notebooks/list
     - file: CSV og Deskriptiv Statistikk
       sections:
       - file: notebooks/Genetikk
-      - file: notebooks/Jordskjelv
       - file: notebooks/Tid og dato
       - file: notebooks/Arbeidsledige
       - file: exercises/Eksportdata
+      - file: DemoProblems
+        sections:
+        - file: notebooks/ssb
+        - file: notebooks/ssbfile-empty
+        - file: notebooks/ssbfile
+        - file: notebooks/plot1empty
+        - file: notebooks/plot1
+        - file: notebooks/plot2empty
+        - file: notebooks/plot2
     - file: Samanlikna Datasett
       sections:
       - file: notebooks/Arbeidsledige og Konkursar
+      - file: notebooks/Jordskjelv
+      - file: notebooks/Tidsrekkjer-demo
     - file: Agent-basert simulering
       sections:
       - file: notebooks/LoanClass
       - file: notebooks/Shrimp-Game
       - file: notebooks/Iskrem på ei strand.ipynb
       - file: notebooks/ShrimpSimulation
+      - file: exercises/Agent-basert Marknadssimulering
+      - file: notebooks/class-empty
+      - file: notebooks/class
     - file: WebAPI
       sections:
       - file: notebooks/requests
@@ -88,5 +107,4 @@ chapters:
     - file: notebooks/Lånesøknad.ipynb
     - file: notebooks/Multiindex.ipynb
     - file: notebooks/dicts-json-jsonstat.ipynb
-    - file: notebooks/JSON og dict
-
+    - file: notebooks/Predator-Prey

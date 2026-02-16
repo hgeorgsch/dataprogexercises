@@ -1,4 +1,12 @@
+---
+tags:
+   - topic/installation
+---
+
 # Installasjon
+
++ [[IIRA6001]] bruker berre ein kort instruksjon om anaconda
+	+ Dette ser ut til å vera enkelt nok til ikkje å laga video
 
 + Installasjon vert handtert spesielt	
 	+ Demovideoar for ulike OS
@@ -6,10 +14,11 @@
 	+ Vegleiing etter behov
 + Jupyter Notebook eller Jupyter Lab
 
-+ [ ] Installasjonstutorials 📅 2025-11-20
++ [x] Installasjonstutorials 📅 2025-11-20 ✅ 2026-02-06
 	+ [ ] Tutorial for MS-Windows
 	+ [ ] Tutorial for MacOS
 	+ [ ] Tutorial for Linux/Unix
+	+ me trur dette er overflødig
 
 
 ## Steg 2.  Virtuelt køyremiljø

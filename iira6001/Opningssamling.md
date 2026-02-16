@@ -20,26 +20,35 @@ samråd med IT-tenesta i verksemda.
 Vegleiingstida før lønsj fyrste dagen er for dei som av ein eller
 annan grunn ikkje får gjort dette ferdig på førehand.
 
+**Stad:** NTNU i Ålesund, 
+[Brua](https://link.mazemap.com/vdbzfWlm) i Kompasset (K-bygget), 3. etasje.
+
+Programmet under er eit **utkast**.
+Start- og sluttidene står faste, men me må sjå an tida til kvar
+økt og kvart føredrag.
+
 | Dag 1 | Tema | Materiell |
 | :- | :- | :- |
 | 10.00-11.30 | Vegleiing til installasjon for dei som ikkje er ferdig med det på førehand. |  [Installasjonsvegleiing](Installasjon) |
-| 11.30-12.15 | Lønsjpause | |
-| 12.15-12.30 | Velkommen | |Foilar](Velkomen%20(foilar)).  Sjå og praktisk informasjon på [forsida](../intro). |
-| 12.30-13.00 | Presentasjon av Økt 1. | [Foilar](Fyrste%20dokument%20i%20Jupyter%20Lab%20(foilar).md) |
-| 13.00-13.20 | Presentasjon av deltakarane | |
-| 13.30-15.30 | Økt 1. Fyrste dokument i Jupyter Lab | [Oppgåvesett](notebooks/Fyrste%20dokument%20i%20Jupyter%20Lab) |
-| 15.30-16.30 | Debrief                      | |
+| 11.30-12.00 | Lønsj | |
+| 12.00-12.45 | Velkomst og Presentasjon | [Foilar](https://iirevu.org.ntnu.no/Slides/Velkomstføredrag/).  Sjå og praktisk informasjon på [forsida](../intro). |
+| 12.45-13.00 | Beinstrekk | |
+| 13.00-13.45 | Presentasjon av Økt 1. | [Foilar](https://iirevu.org.ntnu.no/Slides/Briefing%20til%20Fyrste%20dokument) |
+| 13.45-15 | Økt 1. Fyrste dokument i Jupyter Lab | [Oppgåvesett](notebooks/Fyrste%20dokument%20i%20Jupyter%20Lab) |
+| 15.00-15.45 | Presentasjon av Økt 2 til i morgon. | Foilar |
+| 15.45-16.30 | Oppsummering og avrunding                      | |
 
 
 | Dag 2 | Tema | Materiell |
 | :- | :- | :- |
-| 9.00-9.30 | Presentasjon av Økt 2. | [Foilar](Fyrste%20datasett%20i%20CSV%20(foilar).md) |
-| 9.30-11.30 | Økt 2. Fyrste datasett med CSV | [Oppgåvesett](notebooks/Fyrste%20datasett%20med%20CSV) |
+| 9.00 | Kaffi | |
+| 9.15-9.30 | Velkomen til dagen | |
+| 9.30-11.00 | Økt 2. Fyrste datasett med CSV | [Oppgåvesett](notebooks/Fyrste%20datasett%20med%20CSV) |
+| 11.00-11.30 | Presentasjon av Økt 3. | Foilar |
 | 11.30-12.30 | Lønsj | |
-| 12.30-13.00 | Presentasjon av Økt 3. | [Foilar](Simulering%20av%20kontantstraum%20(foilar).md) |
-| 13.00-14.30 | Økt 3.  Simulering av kontantstraum | [Oppgåvesett](notebooks/Simulering%20av%20kontantstraum)  |
-| 14.30-15.30 | Økt 4.  [Seminar om motivasjon og ynskjer](Seminar%20om%20Motivasjon%20og%20Ynskjer) | |
-| 14.00-15.00 | Debrief og opplegg vidare. | [Mappevurdering](Mappevurdering) |
+| 12.30-14.00 | Økt 3.  Simulering av kontantstraum | [Oppgåvesett](notebooks/Simulering%20av%20kontantstraum)  |
+| 14.00-14.30 | Seminar: Kvar vil me? | [Foilar](https://iirevu.org.ntnu.no/Slides/Seminar%20Kvar%20vil%20me%3F/) |
+| 14.30-15.00 | Debrief og opplegg vidare. | [Mappevurdering](Mappevurdering) |
 
 ## Læringsmaterialet
 

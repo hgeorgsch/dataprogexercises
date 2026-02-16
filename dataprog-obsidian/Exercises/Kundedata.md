@@ -5,8 +5,6 @@ tags:
 
 # Kundedata
 
-(fleire variasjonar)
-
 Dette er oppgåver frå tidlegare år.
 Dei er ikkje redigerte for i år, men kan gje gode idéar.
 

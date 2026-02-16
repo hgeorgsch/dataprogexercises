@@ -19,8 +19,6 @@
     + [[Halveringsmetoden]]
     + [[Smittespreiing]]
 
-+ [ ] Revurder utval.  Flytta føredrag til seinare?
-
 ## Del 2
 
 + [[Kva er simulering?]]

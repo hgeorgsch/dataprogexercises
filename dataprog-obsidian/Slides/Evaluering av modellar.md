@@ -1,7 +1,8 @@
 ---
 tags:
   - lecture/video/perspective
-  - stub
+  - topic/machinelearning
+  - lecture/stub
 ---
 
 # Evaluering av modellar
@@ -22,7 +23,7 @@ I de fleste tilfeller arbeider vi med datasett som beskriver et begrenset utvalg
 Skal du gjøre en markedsundersøkelse, kan du kanskje spørre tusen potentielle kunder, men det er umulig å spørre alle potentielle kunder.
 Skal du forsøke å forutsi hvor sannsynlig det er at en potentiell lånekunde vil misligholde lånet, må du bruke data om historiske lån. Det er umulig å få data om fremtidige og potentielle lånekunder.
 
-I utvalgsstatistikken må vi skille mellom deskriptiv statistikk, som beskrivere utvalget vårt, og statistisk inferens, som bruker utvalget til å beskrive populasjonen.
+I utvalgsstatistikken må vi skille mellom deskriptiv statistikk, som beskriver utvalget vårt, og statistisk inferens, som bruker utvalget til å beskrive populasjonen.
 
 Deskriptiv statistikk er relativt enkelt og beskrivelsene av utvalget er eksakte. I noen tilfeller har vi også tilgang til populasjonsdata, som gjøre det mulig med deskriptiv statistikk på populasjonen. Det gjelder gjerne arbeidsledighetsdata, eksportdata og skattetall, som myndighetene registrerer for hele befolkningen.
 

@@ -1,7 +1,6 @@
 ---
 tags:
-  - exercise
-  - stub
+  - exercise/stub
 ---
 
 + [ ] Logistisk vekst, repetisjon av [[Simulering av kontantstraum]]
@@ -10,7 +9,7 @@ tags:
 + [ ] Valfri: [[Vekst på Netflix]]  sjå [[Sparekalkulator og Logistisk Vekst]]
 
 
-# Oppgave 1: Populasjonsvekst
+# Populasjonsvekst
 
 
 Ta utgangspunkt i eksempelet fra plenumsøkten om populasjonsveksten på Island og skriv følgende program:
@@ -45,7 +44,7 @@ $$
 Hvor $P_0$ er populasjonen ved $t=0$
 
 
-+  Tillegg veke 2
++ Tillegg veke 2
 	+ makspopulasjon
 + Tillegg veke 3  `Oppgave3(kladd)-JH.ipynb` 
 	+ likningsløysing/krossingspunkt

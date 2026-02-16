@@ -11,8 +11,8 @@ kernelspec:
   language: python
   name: dataprog
 tags:
-  - stub
   - machine-learning
+  - kuriosa
 ---
 
 # Iris-datasettet
