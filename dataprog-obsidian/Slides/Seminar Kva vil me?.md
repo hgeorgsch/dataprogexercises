@@ -121,4 +121,21 @@ Steg 4.  Deling.
 ## Vurdering
 
 1.  Presenter eitt arbeid munnleg på midtvegsamlinga
+	1. Ta for deg eit interessant problem
+	2. Bruk programmering til å seia noko fornuftig om det
 2.  Lever to arbeid skriftleg etter avsluttingssamlinga
+	1. Eitt med simulering
+	2. Eitt med dataanalyse
+
+note:
+Sjå boka.
+
+---
+
+Spørsmål?
+<!-- element class="[[r-fit-text]]" -->
+
+---
+
+Vel heim!
+<!-- element class="[[r-fit-text]]" -->
