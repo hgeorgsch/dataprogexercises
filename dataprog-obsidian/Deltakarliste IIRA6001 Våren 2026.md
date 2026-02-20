@@ -14,3 +14,4 @@
 | Morten                 | Svendsen   | 1476 RASTA      | msvend1967@gmail.com         | morten.svendsen@bos.no              |
 | Arnstein               | Ørjavik    | 6013 ÅLESUND    | arnstein@pvv.ntnu.no         | arnstein.orjavik@sbm.no             |
 | Mariann Beate Bøe      | Østrem     | 6060 HAREID     | mariann.b.boe@gmail.com      | mariann.ostrem@sbm.no               |
+| Nina                   | Lysfjord   | Oslo            | <br> <br>                    | nina.lysfjord@vegvesen.no<br>       |
