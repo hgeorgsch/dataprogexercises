@@ -95,8 +95,13 @@ Dersom python er installert kan du gjera fylgjande for å installera
 og testa *Jupyter Lab*.
 
 1.  Start eit terminalvindauga.  Korleis du gjer det avheng av operativsystemet ditt.
-2.  Skriv `pip install jupyterlab` og trykk enter.
-3.  Skriv `jupyter lab` og trykk enter.
+    (Det kan heita *Command*, *Terminal*, *Cmd*, eller anna.)
+2.  Skriv `pip install jupyterlab` og trykk enter.  Dersom dette ikkje verkar, kan du i staden prøva anten
+    + `py -m pip install jupterlab` (Windows), eller
+    + `python -m pip install jupterlab` (generelt)
+3.  Skriv `jupyter lab` og trykk enter.  Dersom dette ikkje verkar, prøv
+    + `py -m jupterlab` (Windows), eller
+    + `python -m jupterlab` (generelt)
 4.  Dette bør start Jupyter Lab i ein vevlesar (Chrome, firefox, e.l.).
     Om vevlesaren ikkje startar automatisk, vil meldingane i terminalvindauga
     gje deg ein URL som du kan kopiera og lima inn i vevlesaren din.
@@ -112,4 +117,8 @@ Det er like greitt å installera dei viktigaste med ein gong.
 
 ```sh
 pip install matplotlib pandas scikit-learn numpy torch
+```
+eller (på Windows)
+```cmd
+py -m pip install matplotlib pandas scikit-learn numpy torch
 ```
