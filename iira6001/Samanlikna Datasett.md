@@ -27,7 +27,7 @@ og skal no samanlikna data frå ulike datasett.
 	+ [Samanlikning av tidsrekkjer](notebooks/Arbeidsledige%20og%20Konkursar) 
     + [Jordskjelvdata](notebooks/Jordskjelv) som demonstrerer animasjon og plotting oppå kart. (valfri)
 + *Demovideo*
-    + Melt og pivot
+    + [Melt og pivot](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=bbd31244-1c04-4d7a-a7cf-b3f400bc9a25)
 + Kuriosa
     + [](notebooks/Tidsrekkjer-demo) viser datasettet og tabellane
       frå tidsrekkjer og *pivot*.
