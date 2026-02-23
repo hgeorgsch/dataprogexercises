@@ -8,8 +8,8 @@ jupytext:
     jupytext_version: 1.18.1
 kernelspec:
   name: dataprog
+  display_name: Python (dataprog)
   language: python
-  display_name: dataprog
 ---
 
 # JSON og `dict`
@@ -209,4 +209,3 @@ Her bruker me `open()` som før, men med `w` for *write* i staden for `r` for *r
 + lag dictionary med kunder { kundensetternavn: [liste med kunder]}
 
 :::
-
