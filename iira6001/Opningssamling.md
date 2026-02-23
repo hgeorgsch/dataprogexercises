@@ -23,6 +23,9 @@ annan grunn ikkje får gjort dette ferdig på førehand.
 **Stad:** NTNU i Ålesund, 
 [Brua](https://link.mazemap.com/vdbzfWlm) i Kompasset (K-bygget), 3. etasje.
 
+**Dato:**
+Onsdag 25. og Torsdag 26. februar 2026.
+
 Programmet under er eit **utkast**.
 Start- og sluttidene står faste, men me må sjå an tida til kvar
 økt og kvart føredrag.
