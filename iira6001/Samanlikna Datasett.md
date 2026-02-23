@@ -17,11 +17,11 @@ og skal no samanlikna data frå ulike datasett.
 
 
 + *Perspektivførelesing*
-    + Flyttal og NaN
+    + [Flyttal og NaN](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=06906544-38f4-4769-a348-b3f600b5ed9b)
 	  [(foilar)](https://iirevu.org.ntnu.no/Slides/Flyttal%20og%20NaN/)
-    + Tidsrekkjer og *pivot*
+    + [Tidsrekkjer og *pivot*](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=9741ddc5-02e7-44e7-9ca3-b3f600b1d829)
 	  [(foilar)](https://iirevu.org.ntnu.no/Slides/Tidsrekkjer%20og%20pivot/)
-    + Tidsrekkjer og frekvens
+    + [Tidsrekkjer og frekvens](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=32f550cb-711d-4cf2-98bc-b3f600b26173)
 	  [(foilar)](https://iirevu.org.ntnu.no/Slides/Tidsrekkjer%20og%20frekvens/)
 + *Gjennomarbeidde Døme.*
 	+ [Samanlikning av tidsrekkjer](notebooks/Arbeidsledige%20og%20Konkursar) 
