@@ -183,3 +183,4 @@ websocket-client==1.8.0
 wheel==0.45.1
 widgetsnbextension==4.0.14
 zipp==3.23.0
+jupyterbook_patches
