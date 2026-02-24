@@ -1,7 +1,9 @@
-<% content %> 
+<div class="flexcolumn">
+   <% content %> 
 
-<% author %> <!-- element class="author" -->
+   <% author %> <!-- element class="author" -->
 
-<div class="footer">
-<% footer %> 
+   <div class="footer">
+   <% footer %> 
+   </div>
 </div>
