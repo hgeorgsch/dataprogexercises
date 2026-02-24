@@ -28,6 +28,9 @@ NTNU---Noregs Teknisk-Naturvitskaplege Universitet
 - cand.scient. i industriell og anvendt matematikk og informatikk 1999
 - mellomfag i sosialøkonomi  1996
 
+note:
+Presentasjon 
+
 ---
 
 - Maskinlæring i steganalyse rundt 2010
@@ -41,9 +44,18 @@ NTNU---Noregs Teknisk-Naturvitskaplege Universitet
 - Utdanningsfilosofi  sidan rundt 2018
 - KI-filosofi sidan rundt 2020
 
+note:
+Eg har arbeidd med ganske mange forskjellige fagfelt og tema, særleg dei femten åra
+som eg har vore ved NTNU og Høgskolen i Ålesund.
+I staden for å reindyrka ein akademisk disiplin, er eg genuint interessert i å forstå anvendingsområda på sine eigne premissar.
+Akkurat det fargar òg korleis eg ser dette kurset og oppgåvene me skal arbeida med.
+
 ---
 
 ## Jonas Julius Harang
+
+note:
+Med meg har eg Jonas.
 
 ---
 ## Programmering til Dataanalyse
