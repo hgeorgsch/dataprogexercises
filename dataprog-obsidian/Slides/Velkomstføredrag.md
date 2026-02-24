@@ -45,6 +45,11 @@ NTNU---Noregs Teknisk-Naturvitskaplege Universitet
 
 ## Jonas Julius Harang
 
+- Siv.Ing Teknisk fysikk, NTNU 2017
+- Bachelor Datavitenskap, UiB 2019
+- Har jobbet som Universitetslektor på NTNU siden vår 2020
+- Mor (Elin Harang) har jobbet i sparebanken møre siden 19-pil-og-bue
+
 ---
 ## Programmering til Dataanalyse
 
