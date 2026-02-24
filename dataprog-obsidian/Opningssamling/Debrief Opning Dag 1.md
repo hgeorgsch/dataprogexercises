@@ -1,10 +1,25 @@
+---
+tags:
+  - opening
+  - lecture/slides
+css:
+  - css/templates.css
+---
 
-+ Kva er programmering?
+
+# Debrief Dag 1
+
+---
+
+## Kva er programmering?
 
 + Kodespråk
 + Instruksar 
 + Sekvensar med instruksar
 
-+ To pensumområde
-	+ Simulering
-	+ Dataanalyse
+---
+
+- Korleis fungerte dette?
+
+Menti
+
