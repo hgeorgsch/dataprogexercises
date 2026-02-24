@@ -51,10 +51,10 @@ Demonstrasjonsvideoane
 Drilloppgåver
 : fokuserer på grunnteknikkar og vert automatisk retta.  Me vil ikkje oppfordra til å leggja stor vekt på desse, men nokon finne dei nyttige tidleg i kurset.
 
-+ Drilloppgåvene finn du på [Moodle](https://capquiz.math.ntnu.no).
++ Drilloppgåvene finn du på [Moodle](https://capquiz.math.ntnu.no) (CodeRunner).
   Der er to sett denne veka:
-    + CodeRunner Basic
-    + CodeRunner Control
+    + Øving 1: Variabler og datatyperQuiz
+    + Øving 2: Funksjoner, løkker og listerQuiz
 
 Opne oppgåver
 : er meir krevjande oppgåver, der ein må kombinera teknikkane og skriva meir kode frå botnen av.
