@@ -23,6 +23,7 @@ author: Hans Georg Schaathun
 	+ 12.30-14.00 Økt 3. Simulering
 	+ 14.00-14.15 Beinstrekk
 	+ 14.15-15.00   [[Seminar Kva vil me?]]    #hg
+	+ [[Debrief og opplegg vidare]]
 
 
 ## TODO
