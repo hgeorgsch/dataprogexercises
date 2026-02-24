@@ -20,6 +20,11 @@ css:
 ---
 
 - Korleis fungerte dette?
+- Kva skal me gjera annleis i morgon?
 
 Menti
 
+
+---
+
+## God middag!
