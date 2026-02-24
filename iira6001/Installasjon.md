@@ -119,6 +119,6 @@ Det er like greitt å installera dei viktigaste med ein gong.
 pip install matplotlib pandas scikit-learn numpy torch
 ```
 eller (på Windows)
-```cmd
+```
 py -m pip install matplotlib pandas scikit-learn numpy torch
 ```

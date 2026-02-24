@@ -36,7 +36,7 @@ Start- og sluttidene står faste, men me må sjå an tida til kvar
 | 11.30-12.00 | Lønsj | |
 | 12.00-12.45 | Velkomst og Presentasjon | [Foilar](https://iirevu.org.ntnu.no/Slides/Velkomstføredrag/).  Sjå og praktisk informasjon på [forsida](../intro). |
 | 12.45-13.00 | Beinstrekk | |
-| 13.00-13.45 | Presentasjon av Økt 1. | [Foilar](https://iirevu.org.ntnu.no/Slides/Briefing%20til%20Fyrste%20dokument) |
+| 13.00-13.45 | Presentasjon av Økt 1. | [Foilar](https://iirevu.org.ntnu.no/Slides/Briefing%20til%20Fyrste%20Dokument) |
 | 13.45-15 | Økt 1. Fyrste dokument i Jupyter Lab | [Oppgåvesett](notebooks/Fyrste%20dokument%20i%20Jupyter%20Lab) |
 | 15.00-15.45 | Presentasjon av Økt 2 til i morgon. | Foilar |
 | 15.45-16.30 | Oppsummering og avrunding                      | |
@@ -50,7 +50,7 @@ Start- og sluttidene står faste, men me må sjå an tida til kvar
 | 11.00-11.30 | Presentasjon av Økt 3. | Foilar |
 | 11.30-12.30 | Lønsj | |
 | 12.30-14.00 | Økt 3.  Simulering av kontantstraum | [Oppgåvesett](notebooks/Simulering%20av%20kontantstraum)  |
-| 14.00-14.30 | Seminar: Kvar vil me? | [Foilar](https://iirevu.org.ntnu.no/Slides/Seminar%20Kvar%20vil%20me%3F/) |
+| 14.00-14.30 | Seminar: Kvar vil me? | [Foilar](https://iirevu.org.ntnu.no/Slides/Seminar%20Kva%20vil%20me%3f/#/) |
 | 14.30-15.00 | Debrief og opplegg vidare. | [Mappevurdering](Mappevurdering) |
 
 ## Læringsmaterialet
