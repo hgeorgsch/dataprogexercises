@@ -7,9 +7,9 @@ jupytext:
     format_version: 0.13
     jupytext_version: 1.18.1
 kernelspec:
-  display_name: Python [conda env:base] *
+  display_name: dataprog
   language: python
-  name: conda-base-py
+  name: dataprog
 ---
 
 +++ {"editable": true, "slideshow": {"slide_type": ""}}
