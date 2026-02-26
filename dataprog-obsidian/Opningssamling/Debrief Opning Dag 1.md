@@ -13,16 +13,15 @@ css:
 
 ## Kva er programmering?
 
-+ Kodespråk
-+ Instruksar 
-+ Sekvensar med instruksar
+- Kodespråk
+- Instruksar 
+- Sekvensar med instruksar
 
 ---
 
 - Korleis fungerte dette?
 - Kva skal me gjera annleis i morgon?
-
-Menti
+- [Menti](https://www.mentimeter.com/app/presentation/alc9fwkewesfoi27usd6p3fb4pjibpf5/edit)
 
 
 ---
