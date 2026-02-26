@@ -22,6 +22,7 @@ Andreas: andreas.h.schille@ntnu.no
 + Program IIRA6001: 
 	+ Sjå [[IIRA6001]] som oversyn over læringsmateriell i Jupyter Books
 	+ [[Skisse til opplegg]]
+	+ [[IIRA6001 våren 2026]]
 + IIRA2001 - to delar
 	+ Del 1.  Grunnleggjande introduksjon
 		+ Sjå `Beregninger og funksjoner-JHmanus.ipynb` (oppsummering)
