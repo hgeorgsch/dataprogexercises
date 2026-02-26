@@ -64,6 +64,7 @@ chapters:
       - file: notebooks/Arbeidsledige og Konkursar
       - file: notebooks/Jordskjelv
       - file: notebooks/Tidsrekkjer-demo
+      - file: notebooks/Melt-pivot
     - file: Agent-basert simulering
       sections:
       - file: notebooks/LoanClass
