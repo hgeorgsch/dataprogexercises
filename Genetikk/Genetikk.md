@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.17.2
+    jupytext_version: 1.19.1
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -120,7 +120,8 @@ og tar vekk søyler "testies", "ovary", "sigmoid", og "adipose".
 Det kan vi gjøre med funksjonen `drop`, slik:
 
 ```{code-cell} ipython3
-data_H = data_H.drop(columns=["testis", "ovary", "sigmoid", "adipose"], axis=1)
+data_H = data_H.drop(columns=["testis", "ovary", "sigmoid", "adipose"] )
+display( data_H )
 ```
 
 Hver søyle svarer til en vevstype, bortsett fra søylen `genes`.
@@ -367,8 +368,14 @@ I så fall er det fornuftig å regne dette som ugyldige data, f.eks. ved å sett
 Det kan vi gjøre slik, og for sikkerhets skyld sjekker vi minimum for å se at der ikke finnes negative verdier igjen.
 
 ```{code-cell} ipython3
-data_H[ data_H["varkoef"] < 0 ]  = 0
+data_H.loc[ data_H["varkoef"] < 0, "varkoef" ] = 0
 print( data_H["varkoef"].min() )
+```
+
+Me kans sjølvsagt sjå på dei to radane som vart endra òg.
+
+```{code-cell} ipython3
+display( data_H[ data_H["varkoef"] <= 0 ] ) 
 ```
 
 Tilslutt plotter vi et histogram over variasjonskoeffisient til genuttrykket
@@ -455,7 +462,7 @@ Vi starter med å hente inn filen med data fra mus. Mye av denne koden er lik de
 
 ```{code-cell} ipython3
 data_M = pd.read_csv("genuttrykk_mus_data.txt", sep=' ') 
-data_M = data_M.drop(columns=["testis", "ovary", "sigmoid", "adipose"], axis=1)
+data_M = data_M.drop(columns=["testis", "ovary", "sigmoid", "adipose"] )
 ```
 
 Før vi regner på korrelasjon, lager vi alternative tabeller uten den ikke-numeriske `genes`-søylen. Vi dropper også ekstrasøylene som vi la til for mennesker.
@@ -486,11 +493,3 @@ plt.tight_layout()
 1. Studer likheten mellom vevene i mus og menneske. Hva er grunnen til likheten? Hvorfor er noe vev likere enn annet vev?
 2. Hvordan kan dere forklare dette ut ifra evolusjonsprinsipper?
 :::
-
-```{code-cell} ipython3
-
-```
-
-```{code-cell} ipython3
-
-```
