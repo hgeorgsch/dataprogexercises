@@ -89,9 +89,6 @@ def printenkunde( reg, navn ):
 printenkunde( kundereg, "Ola Normann" )
 ```
 
-```{code-cell} ipython3
-printenkunde( kundereg, "Kari Normann" )
-```
 
 ## Legge til kunder
 
