@@ -6,16 +6,15 @@
 # cd .. ; sh mkpynb.sh
 
 
-rm -rf _build
-
-rm -f notebooks/forelesing*
-rm -f notebooks/forelesning*
-
-jupyter-book build .
-
-
-#rsync -av --delete _build/html/ hasc@login.ansatt.ntnu.no:/home/groupswww/iirevu/iira6001/
-if test x$1 = x-i
+if test x$1 = x
 then
+    rm -rf _build
+
+    rm -f notebooks/forelesing*
+    rm -f notebooks/forelesning*
+
+    jupyter-book build .
+
+else
    rsync -rv --delete _build/html/ login.ansatt.ntnu.no:/home/groupswww/iirevu/iira6001/
 fi
