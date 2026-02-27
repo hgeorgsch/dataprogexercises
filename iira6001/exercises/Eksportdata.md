@@ -1,0 +1,1 @@
+../../dataprog-obsidian/Exercises/Eksportdata.md

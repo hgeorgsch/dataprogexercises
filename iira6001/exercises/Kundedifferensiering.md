@@ -1,0 +1,1 @@
+../../dataprog-obsidian/Exercises/Kundedifferensiering.md
