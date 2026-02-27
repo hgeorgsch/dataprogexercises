@@ -20,12 +20,6 @@ via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=2875147)
 
 ---
 
-- Korleis fungerte dette?
-
-Menti
-
----
-
 - Midtvegsamling  22.-23. april
 - Sluttsamling  10.-11. juni
 - Mappeinnlevering  28. august
@@ -112,6 +106,11 @@ Det er ikke klart per i dag.
  
 Spørsmål?
 <!-- element class="[[r-fit-text]]" -->
+
+---
+
++ Korleis fungerte samlinga?
++ [Menti](https://www.mentimeter.com/app/presentation/alrn3vjot9kqkjd2ikrc6xyfygsh3y28/edit)
 
 ---
 <!-- slide template="[[tpl-flex]]" -->
