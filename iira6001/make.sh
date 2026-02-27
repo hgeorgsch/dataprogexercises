@@ -13,7 +13,7 @@ then
     rm -f notebooks/forelesing*
     rm -f notebooks/forelesning*
 
-    jupyter-book build .
+    jupyter-book build --html .
 
 else
    rsync -rv --delete _build/html/ login.ansatt.ntnu.no:/home/groupswww/iirevu/iira6001/
