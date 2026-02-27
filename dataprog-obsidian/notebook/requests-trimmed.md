@@ -20,7 +20,7 @@ jupyter:
 
 
 
-### Sende http-spørring med `requests`
+## Sende http-spørring med `requests`
 
 For å kunne sende en httpspørring må vi:
 * Vite hvilken tjener vi skal sende det til (eks www.ssb.no)
@@ -34,7 +34,7 @@ Når vi vet dette, kan `requests` sette sammen spørringen og sende den på rikt
 
 
 <!-- #region -->
-### Bruk av `requests`
+## Bruk av `requests`
 
 Under er typisk gang i bruk av requests -- ikke kjørbar kode, men en cheat-sheet
 
@@ -86,7 +86,7 @@ som vi ofte kaller `res` eller `response`. Tabellen under gir en oversikt over a
 
 <!-- #endregion -->
 
-### Httpbin.org
+## Httpbin.org
 
 - httpbin er en webressurs vi kan bruke til å teste spørringene våres
 - Den tar imot GET/POST spørringer, og sender tilbake data om hva den mottok
