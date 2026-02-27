@@ -8,12 +8,10 @@
 
 if test x$1 = x
 then
-    rm -rf _build
 
-    rm -f notebooks/forelesing*
-    rm -f notebooks/forelesning*
-
-    jupyter-book build --html .
+   jupyter-book clean .
+   jupyter-book build .
+   rsync -rv --delete _build/html/ login.ansatt.ntnu.no:/home/groupswww/iirevu/iira6001staging/
 
 else
    rsync -rv --delete _build/html/ login.ansatt.ntnu.no:/home/groupswww/iirevu/iira6001/
