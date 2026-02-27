@@ -1,6 +1,6 @@
 jupyter>=1.1.1
 pandas>=2.2.3
-jupyter-book>=1.0.4
+jupyter-book>=1.0.4,<2.0
 jupyterlab>=4.4.1
 jupytext>=1.17.0
 torch>=2.7.0
