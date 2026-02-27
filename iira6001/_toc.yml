@@ -7,6 +7,7 @@ chapters:
     sections:
     - file: Oblig
     - file: Mappevurdering
+    - file: Dropin
   - file: Opningssamling
     sections:
     - file: Installasjon
@@ -81,6 +82,8 @@ chapters:
       - file: notebooks/JSON json_stat og eksempler.ipynb
       - file: notebooks/API-eksempel-sport.ipynb
       - file: notebooks/API-eksempel-reddit.ipynb
+      - file: notebooks/WebAPI-REST.ipynb
+      - file: notebooks/requests
   - file: midway
   - file: second
     sections:

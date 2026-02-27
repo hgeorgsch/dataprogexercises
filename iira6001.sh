@@ -29,6 +29,7 @@ do
     cp $T/*.ipynb $D
     cp $T/*.jpg $D
     cp $T/*.svg $D
+    cp $T/*.png $D
   done     
 done
 

@@ -5,7 +5,7 @@ author: Hans Georg Schaathun og Jonas Julius Harang
 copyright: "2025"
 logo: ntnu.svg
 execute:
-  execute_notebooks: force
+  execute_notebooks: auto
   timeout: 420 
 
 # Add a bibtex file so that we can create citations
@@ -16,6 +16,7 @@ bibtex_bibfiles:
 sphinx: 
     extra_extensions:
         - sphinx_iframes
+        - jupyterbook_patches
 
 parse:
     myst_enable_extensions:
