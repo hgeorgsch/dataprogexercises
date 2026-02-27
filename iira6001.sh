@@ -18,7 +18,7 @@ do
   cd $T
   ls 
 
-  for i in *.md ; do jupytext --to notebook "$i" ; done
+  for i in *.md ; do jupytext --to notebook --execute "$i" ; done
   cd $R
 
   for D in $DS

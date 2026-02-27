@@ -77,13 +77,9 @@ chapters:
       - file: notebooks/class
     - file: WebAPI
       sections:
-      - file: notebooks/WEBAPI.ipynb
-      - file: notebooks/requests-trimmed.ipynb
-      - file: notebooks/JSON json_stat og eksempler.ipynb
-      - file: notebooks/API-eksempel-sport.ipynb
-      - file: notebooks/API-eksempel-reddit.ipynb
-      - file: notebooks/WebAPI-REST.ipynb
-      - file: notebooks/requests
+      - file: notebooks/WEBAPI
+      - file: notebooks/requests-trimmed
+      - file: notebooks/JSON json_stat og eksempler
   - file: midway
   - file: second
     sections:
