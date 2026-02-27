@@ -18,6 +18,8 @@ chapters:
       - file: Fyrste dokument i Jupyter Lab (foilar)
       - file: Fyrste datasett i CSV (foilar)
       - file: Simulering av kontantstraum (foilar)
+      - file: notebooks/intro-csv-slides
+      - file: notebooks/intro-simulering
   - file: first
     sections:
     - file: Numeriske Metodar og Kontrollflyt
@@ -62,6 +64,7 @@ chapters:
       - file: notebooks/Arbeidsledige og Konkursar
       - file: notebooks/Jordskjelv
       - file: notebooks/Tidsrekkjer-demo
+      - file: notebooks/Melt-pivot
     - file: Agent-basert simulering
       sections:
       - file: notebooks/LoanClass

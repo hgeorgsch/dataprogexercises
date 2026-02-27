@@ -59,3 +59,5 @@ Her finn du tre ting,
 + Automatisk retta programmeringsøvingar i *CodeRunner*.
   Dei relevante øvingane er nemnde i programmet for kvar veke.
 
+Til sist har me ei [*dropin*-økt](Dropin) på MS-Teams kvar tysdag 
+15.00-16.00.
