@@ -108,6 +108,5 @@ chapters:
   - file: drafts
     sections:
     - file: notebooks/Lånesøknad.ipynb
-    - file: notebooks/Multiindex.ipynb
     - file: notebooks/dicts-json-jsonstat.ipynb
     - file: notebooks/Predator-Prey
