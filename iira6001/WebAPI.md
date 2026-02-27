@@ -15,13 +15,7 @@ title: Web API og JSON
     + [](notebooks/WEBAPI)
     + [](notebooks/requests-trimmed)
     + [](notebooks/JSON%20json_stat%20og%20eksempler)
-
 + *Gjennomarbeidde døme*
-    + [](notebooks/API-eksempel-sport)
-    + [](notebooks/API-eksempel-reddit)
-+ [[API-eksempel-chatgpt]]
-+ [[WebAPI-Requests-JH]]
-+ [[SSB-API]]
 + Vurder:
 	+ døme på problem
 	+ døme på kjelder
