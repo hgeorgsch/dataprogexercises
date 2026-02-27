@@ -10,6 +10,7 @@ _minted-*/
 res/
 .obsidian
 *.log
+*.err
 pythonenv
 export
 .*.swp
