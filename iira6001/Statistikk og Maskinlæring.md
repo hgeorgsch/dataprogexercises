@@ -18,7 +18,7 @@ title: Statistikk og Maskinlæring
 + *Demo* 
 	+ [[Maskinlæringsbibliotek]]
     + regresjon og korrelasjon i pandas:
-+ *Kuriosa.* Desse dokumentaviser korleis plotta til førelesinga vert laga 
++ *Kuriosa.* Plotta i foilane vart laga med desse dokumenta.
     + [Hypotesetesting](notebooks/hypothesistest)
       utdjuper òg resonnementet bak hypotesetesting
     + [Iris-Statistics](notebooks/Iris-Statistics)
