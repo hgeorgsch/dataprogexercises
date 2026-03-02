@@ -24,14 +24,18 @@ with other subprojects added.
 
 ## Build
 
-+ `mkpynb.sh` makes Jupyter files from markdown (`jupytext`) and installs 
-  them under under iira2001
 + `install.sh` installs slides from obsidian on the web page, but these
   have first to be built using obsidian
-+ `iira2001/make.sh` builds the jupyter book, depending on the Jupyter
-  files already being built by `mkpynb.sh` above
-+ `iira6001/make.sh` builds the jupyter book, but this has not been updated
-  and may not work
++ IIRA6001 revised Spring 2026
+    + `nbinstall.sh dir1 [dir2 ...]` translates all markdown files in the given
+      directoties to Jupyter (`jupytext`) and installs them under iira6001 
+    + `iira6001/make.sh` builds the jupyter book, but this has not been updated
+      and may not work
++ IIRA2001 - may be outdated
+    + `mkpynb.sh` makes Jupyter files from markdown (`jupytext`) and installs 
+      them under under iira2001
+    + `iira2001/make.sh` builds the jupyter book, depending on the Jupyter
+      files already being built by `mkpynb.sh` above
 
 ## git subtrees
 
