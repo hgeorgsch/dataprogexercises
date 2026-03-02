@@ -11,7 +11,8 @@ title: Statistikk og Maskinlæring
       [(foilar)](https://iirevu.org.ntnu.no/Slides/Om%20%c3%a5%20l%c3%a6ra%20fr%c3%a5%20data/)
     + Kva er ein modell?  
       [(foilar)](https://iirevu.org.ntnu.no/Slides/Modellen/#/)
-    + [[Evaluering av modellar]]
+    + Evaluering av modellar
+      [(foilar)](https://iirevu.org.ntnu.no/Slides/Evaluering%20av%20modellar/)
 + *Tutorials* og øvingar
     + [numpy](notebooks/numpy)
 	+ [Lineær regresjon](notebooks/Linear%20Regression%20in%20SciKitLearn)

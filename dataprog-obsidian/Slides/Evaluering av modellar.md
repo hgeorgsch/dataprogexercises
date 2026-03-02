@@ -282,14 +282,38 @@ Det er ikke like lett å se hvor stort utvalget må være for å være stort nok
 
 # Hypotesetest
 
-$H_1$ Systemet svarer rett med sannsyn $> 1-p$
+$H_1$ Systemet svarer rett med sannsyn $> 0{,}9$
 
-$H_0$ Systemet svarer rett med sannsyn $\le 1-p$
+$H_0$ Systemet svarer feil med sannsyn $\le 0{,}1$
 
 note:
-Verste fall gjev forventa feilrate $p$
+Akkurat det spørsmålet svarer statistikken på.
+For å forklare prinsippet skal me ta utgangspunkt i hypotesetesting.
 
-Gjer me $n$ testart forventar me då $n\cdot p$ feil.
+La oss si at vi godtar 10% feil.  
+I praksis konstruerer vi en hypotesetest for å underbygge at 
+feilsannsynligheten er bedre enn 10%.
+
+Vi formulerer nullhypotesen $H_0$ at feilsannlygheten er 10%
+eller dårligere.  Håpet er at vi kan vise at $H_0$ er så urimelig
+at vi i stedet må akseptere alternativhypptesen $H_1$, at 
+feillsannsynligheten er bedre enn 10%.
+
+---
+
+$H'_0$ Systemet svarer feil med sannsyn lik $0{,}1$
+
+note:
+Når vi gjør analysen, går vi ut fra at nullhypotesen er sann,
+og dessuten at feilsannsynligheten er akkurat på grensen, eksakt
+10%.
+
+Fordi vi postulerer en eksakt sannsynlighet, har vi en kjent,
+om enn hypotetisk, sannsynlighetsfordeling å regne på.
+
+Dersom vi gjør $n$ tester forventer vi å se $0{,}1n$ feil.
+For vi veldig mye færre enn det er det naturlig å forkaste
+$H_0$ til fordel for $H_1$.
 
 ---
 <!-- slide template="[[tpl-diagram]]" -->
@@ -297,16 +321,19 @@ Gjer me $n$ testart forventar me då $n\cdot p$ feil.
 ![[hyp0.svg]]
 
 ::: credit
-$p_e=0.1$; $n=100$ testar
+$p_e=0.1$; $n=50$ testar
 :::
 
 note:
-Sett at me godtek 10% feil, og at me har 50 datapunkt å testa på.
-Hypotetisk kan me gå ut frå at systemet har feilsannsyn 0,1, og plotta sannsynsfordelinga for feiltalet når me testar på 50 datapunkt.
+La oss anta at vi planlegger å teste på 50 datapunkter.
+Da kan vi plotte sannsynlighetsfordeling av antall feil.
 
 Det ser slik ut.
 
-Ikkje uventa ligg tyngdepunktet på 5 feil, som svarer til 10% av 50 testar.  Det er om lag like sannsynleg å få fleire eller færre feil.  Om me observerer 4% feil, altso to feil, tyder ikkje det at feilsannsynet er 4%.  Det er faktisk 11% sannsyn for å sjå to eller færre feil når feilsannsynet er 10%.
+Ikke uventet ligger tyngdepunktet på 5 feil, som svarer til 10% av 50 tester.
+Det er om lag like sannsynlig å få flere som færre feil.
+Om vi observerer 4% feil, altså to feil, betyr ikke det at feilsannsynligheten er 4%.
+Det er faktisk 11% sannsynlighet for å se to eller færre feil når feilsannsynligheten er 10%.
 
 ---
 <!-- slide template="[[tpl-diagram]]" -->
@@ -334,15 +361,21 @@ Problemet med hypotesetester er at vi trenger gode marginer for å konkludere me
 note:
 Vi kan få mer presise tester hvis vi gjør flere forsøk.  Vi ser i figuren at dess større $n$ er, dess mer konsentrasjon for vi rundt forventet feiltall.  Da trenger ikke feilsannsynligheten være så mye mindre enn de postulerte 10% før det er mest sannsynlig at testen lar oss forkaste nullhypotesen.
 
-Den samme vurderingen gjelder om vi estimerer feilsannsynligheten.  Dess større $n$, dess mindre usikkerhet i estimatet.
+Den samme vurderingen gjelder om vi estimerer feilsannsynligheten.
+Dess større $n$, dess mindre usikkerhet i estimatet.
 
+Dessverre betyr stor $n$ mer data å samle inn, og det er kostbart.
+For å regne på nytteverdien av å samle inn mer data, lønner det seg
+å ta et statistikkurs.
 
 ---
 
 # Overlæring og underlæring
 
 note:
-Vi skal ta ett -- eller to -- begreper til: overlæring og underlæring.
+Før vi slutter av, skal vi ta ett -- eller to -- begreper til: overlæring og underlæring.
+
+Disse begrepene beskriver to ulike måter en statistiks mpdell kan være dårlig på.
 
 ---
 <!-- slide template="[[tpl-diagram]]" -->
@@ -355,9 +388,17 @@ via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=10353370
 :::
 
 note:
-Vi må da typisk unngå:
-* «Overfitting»: Modellen memoriserer kun testdataen vår
-* «Underfitting»: Modellen har ikke lært nok
+Underlæring vil si at modellen er dårlig tilpasset utvalget.
+Det kan typisk skje hvis modellen har for få frihetsgrader.
+F.eks. hvis vi bruker en lineær modell for å beskrive data som
+er naturlig buet.
+Det kan også skje hvis 
+
+Overlæring vil si at modellen er så godt tilpasset utvalget, at
+den ikke stemmer med resten av verden.  Det skjer typisk hvis 
+modellen har for mange frihetsgrader.  Det gjør at den fanger opp
+tilfeldige og unike variasjoner i utvalget, i stedet for å fange opp
+de store trendene.
 
 ---
 <!-- slide template="[[tpl-diagram]]" -->
@@ -369,8 +410,22 @@ Montesinos López, O.A., Montesinos López, A., Crossa, J. (2022). Overfitting, 
 [doi:10.1007/978-3-030-89010-0_4](https://doi.org/10.1007/978-3-030-89010-0_4) (Open Access)
 :::
 
+note:
+De samme fenomenene finnes både i regresjon og klassifisering.
+Hvis modellen er for enkel, får vi underlæring, og hvis den er for avansert for
+vi overlæring.
+
+Det som kanskje er viktigst å merke seg er at en mer avansert modell ikke alltid
+er en fordel.  Dess mer ikke-lineær modellen er, dess større treningssett trenger man
+for å bestemme alle frihetsgradene, eller vektene, i modellen.
+
 ---
 
 # Slutt
 
 note:
+Jeg har bare skrapt i overflaten av det enorme temaet statistisk evaluering, men jeg
+håper at jeg har fått frem et par konsepter som gjør det enklere å tenke kritisk før
+man tar i bruk en maskinlæringsmodell.
+
+Takk for nu.
