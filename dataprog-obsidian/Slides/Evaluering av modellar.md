@@ -3,12 +3,32 @@ tags:
   - lecture/video/perspective
   - topic/machinelearning
   - lecture/stub
+css:
+  - css/templates.css
 ---
 
+<!-- slide template="[[tpl-titleslide]]" -->
 # Evaluering av modellar
 
+![[mlloan.svg]]
+
 note:
-Dataanalyse handler ofte om å konstruere modeller, enten det er konvensjonelle, statistiske modeller eller mer komplekse maskinlæringsmodeller.
+Dataanalyse handler ofte om å konstruere modeller,
+enten det er konvensjonelle, statistiske modeller eller
+mer komplekse maskinlæringsmodeller.
+
+Modeller er aldri perfekte, men de kan gjøre større eller
+mindre feil.
+
+Når vi evaluerer modeller må vi egentlig stille vi to spørsmål.
+Det ene er deskriptivt.
+Hvor store og hvor sannsynlige er feilene?
+
+Det andre er normativt.
+Hvor stor og hvor hyppige feil kan vi akseptere?
+
+Vi skal nøye oss med å diskutere det deskriptive spørsmålet.
+Det normative spørsmålet må man ta i hvert enkelt tilfelle for seg.
 
 ---
 <!-- slide template="[[tpl-diagram]]" -->
@@ -19,30 +39,21 @@ Dataanalyse handler ofte om å konstruere modeller, enten det er konvensjonelle,
 :::
 
 note:
-I de fleste tilfeller arbeider vi med datasett som beskriver et begrenset utvalg av en større populasjon.
-Skal du gjøre en markedsundersøkelse, kan du kanskje spørre tusen potentielle kunder, men det er umulig å spørre alle potentielle kunder.
-Skal du forsøke å forutsi hvor sannsynlig det er at en potentiell lånekunde vil misligholde lånet, må du bruke data om historiske lån. Det er umulig å få data om fremtidige og potentielle lånekunder.
+Konteksten vår er statistisk inferens eller maskinlæring, der vi
+konstruerer modellen ut fra et utvalg, men ønsker å bruke den til
+å beskrive populasjonen.
 
-I utvalgsstatistikken må vi skille mellom deskriptiv statistikk, som beskriver utvalget vårt, og statistisk inferens, som bruker utvalget til å beskrive populasjonen.
-
-Deskriptiv statistikk er relativt enkelt og beskrivelsene av utvalget er eksakte. I noen tilfeller har vi også tilgang til populasjonsdata, som gjøre det mulig med deskriptiv statistikk på populasjonen. Det gjelder gjerne arbeidsledighetsdata, eksportdata og skattetall, som myndighetene registrerer for hele befolkningen.
-
-Statistisk inferens er mer utfordrende, fordi kunnskap om utvalget aldri gir eksakt kunnskap om populasjonen.
-
----
-<!-- slide template="[[tpl-diagram]]" -->
-
-![[mlloan.svg]]
-::: credit
-:::
-
-note:
-Hva mener vi med en modell.
+Dvs. at når vi evaluerer modellen, er det feilene den gjør på populasjonen
+som er interessant.  Det er ikke godt nok at beskrivelsen er feilfri på
+utvalget, for det er ikke det den skal brukes til.
 
 ---
 <!-- slide template="[[tpl-diagram]]" -->
 
 ![[eval01.svg]]
+
+::: credit
+:::
 
 note:
 Utval
@@ -51,6 +62,9 @@ Utval
 <!-- slide template="[[tpl-diagram]]" -->
 
 ![[eval02.svg]]
+
+::: credit
+:::
 
 note:
 Positiv test
@@ -190,6 +204,9 @@ Ikkje uventa ligg tyngdepunktet på 5 feil, som svarer til 10% av 50 testar.  De
 
 ![[hyp1.svg]]
 
+::: credit
+:::
+
 note:
 Når vi gjør en hypotesetest bestemmer vi et signifikansnivå, f.eks. 5%, og vi forkaster nullhypotesen når det observerte resultatet er mer usannsynlig enn signifikansnivået.
 
@@ -201,6 +218,9 @@ Problemet med hypotesetester er at vi trenger gode marginer for å konkludere me
 <!-- slide template="[[tpl-diagram]]" -->
 
 ![[hyp2.svg]]
+
+::: credit
+:::
 
 note:
 Vi kan få mer presise tester hvis vi gjør flere forsøk.  Vi ser i figuren at dess større $n$ er, dess mer konsentrasjon for vi rundt forventet feiltall.  Da trenger ikke feilsannsynligheten være så mye mindre enn de postulerte 10% før det er mest sannsynlig at testen lar oss forkaste nullhypotesen.
