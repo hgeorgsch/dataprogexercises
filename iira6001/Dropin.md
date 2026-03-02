@@ -2,6 +2,8 @@
 
 # Microsoft Teams meeting
 
++ Tysdagar 15-16 i vekene mellom samlingane; men ikkje i påskeveka.
+
 Join:
 https://teams.microsoft.com/meet/33930177128488?p=kcp9xyPfUONqklkzAL
 
