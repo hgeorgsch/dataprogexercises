@@ -7,10 +7,17 @@ css:
   - css/templates.css
 ---
 
-<!-- slide template="[[tpl-titleslide]]" -->
+<!-- slide template="[[tpl-titleslide]]" bg="white"-->
 # Evaluering av modellar
 
 ![[mlloan.svg]]
+
+::: author
+Hans Georg Schaathun
+:::
+::: footer
+NTNU - Noregs Teknisk-Naturvitskaplege Universitet
+:::
 
 note:
 Dataanalyse handler ofte om å konstruere modeller,
@@ -216,9 +223,9 @@ note:
 
 Sett at vi har en modell.  La oss si en modell for lånetilsagn.
 
-+ Så sier jeg at denne har jeg testet.
-+ Testane viser at vi tjener penger på 100% av de lån som er tildelt vha modellen.
-+ Så sier jeg at jeg har testet på *to* lånesøknader.
+- Så sier jeg at denne har jeg testet.
+- Testane viser at vi tjener penger på 100% av de lån som er tildelt vha modellen.
+- Så sier jeg at jeg har testet på *to* lånesøknader.
 
 Hva tror du om testen?
 
@@ -388,17 +395,17 @@ via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=10353370
 :::
 
 note:
-Underlæring vil si at modellen er dårlig tilpasset utvalget.
+Underlæring vil si at modellen er dårlig tilpasset treningssettet.
 Det kan typisk skje hvis modellen har for få frihetsgrader.
 F.eks. hvis vi bruker en lineær modell for å beskrive data som
 er naturlig buet.
-Det kan også skje hvis 
+Det kan også skje hvis treningsalgoritmen ikke kjører lenge nok til å justere vektene skikkelig.
 
 Overlæring vil si at modellen er så godt tilpasset utvalget, at
 den ikke stemmer med resten av verden.  Det skjer typisk hvis 
 modellen har for mange frihetsgrader.  Det gjør at den fanger opp
 tilfeldige og unike variasjoner i utvalget, i stedet for å fange opp
-de store trendene.
+de generelle trendene.
 
 ---
 <!-- slide template="[[tpl-diagram]]" -->
