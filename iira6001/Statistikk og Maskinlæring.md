@@ -14,13 +14,16 @@ title: Statistikk og Maskinlæring
     + Evaluering av modellar
       [(foilar)](https://iirevu.org.ntnu.no/Slides/Evaluering%20av%20modellar/)
 + *Tutorials* og øvingar
-    + [numpy](notebooks/numpy)
+    + [](notebooks/numpy)
 	+ [Lineær regresjon](notebooks/Linear%20Regression%20in%20SciKitLearn)
 	+ [Evaluering av regresjonsmodellen](notebooks/Evaluering%20for%20regresjon)
 	+ Konvertering mellom SciKitLearn og pandas
 + *Demo* 
 	+ [[Maskinlæringsbibliotek]]
     + regresjon og korrelasjon i pandas:
++ *Meir avanserte øvingar*
+    + [](notebooks/matrix) gjev litt meir innføring i `numpy` for dei som
+      har eit positivt forhold til matriserekning i matematikken
 + *Kuriosa.* Plotta i foilane vart laga med desse dokumenta.
     + [Hypotesetesting](notebooks/hypothesistest)
       utdjuper òg resonnementet bak hypotesetesting
