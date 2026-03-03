@@ -90,6 +90,7 @@ chapters:
       - file: notebooks/numpy
       - file: notebooks/hypothesistest
       - file: notebooks/Iris-Statistics.ipynb
+      - file: notebooks/matrix
     - file: Automatisering
       sections:
       - file: Installasjon-git
