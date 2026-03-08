@@ -11,6 +11,8 @@ Andreas: andreas.h.schille@ntnu.no
 + [[Emneadministrasjon]]
 + [[Praktiske tips og tekniske løysingar]]
 + [[Unused images]]
++ [[Budsjett IIRA6001 Steady State]]
+
 
 + Føredrag
 	+ [[Slides]]
