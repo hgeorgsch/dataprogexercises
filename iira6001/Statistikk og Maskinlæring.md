@@ -17,7 +17,7 @@ title: Statistikk og Maskinlæring
     + [](notebooks/numpy)
 	+ [Lineær regresjon](notebooks/Linear%20Regression%20in%20SciKitLearn)
 	+ [Evaluering av regresjonsmodellen](notebooks/Evaluering%20for%20regresjon)
-	+ Konvertering mellom SciKitLearn og pandas
+    + [](notebooks/scikitlearn)  (valfri)
 + *Demo* 
 	+ [[Maskinlæringsbibliotek]]
     + regresjon og korrelasjon i pandas:
