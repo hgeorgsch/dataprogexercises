@@ -22,7 +22,8 @@ Detaljane står i
 [dokumentasjonen på datasettet](https://scikit-learn.org/stable/datasets/toy_dataset.html#diabetes-dataset).
 
 
-::: {hint}
+## Om datasett i maskinlæring
+
 Når me finn datasett skal me vera merksame på kvar dei kjem frå og
 med kva hensikt dei er gjort tilgjengeleg.  Data i dette kurset kan
 me grovt dela i vitskaplege og teknologiske data.
@@ -37,13 +38,13 @@ Teknologiske data er røkta for å testa maskinlæringsmodellar,
 statistiske metodar og programvare. Slike data kan vera empiriske,
 men dei kan òg vera syntetisk generert for å likna empiriske datasett.
 Det kan vera viktig når empiriske data er sensitive.
-Empiriske datasett kan òg vera forenkla for å vera enklare å bruka og
-for å testa spesifikke teknikkar.
+Empiriske datasett kan òg vera forenkla og skalerte for å vera enklare å 
+bruka og for å testa spesifikke teknikkar, og informasjon om måleeiningar
+kan lett forsvinna.
 
 I denne øvinga bruker me eit slikt teknologisk datasett.
 Andre populære kjelder til slike datasett er
 [Kaggle](https://www.kaggle.com/) og [UC Irvine](https://archive.ics.uci.edu/).
-:::
 
 +++
 

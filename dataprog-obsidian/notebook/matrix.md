@@ -26,9 +26,10 @@ Lat oss definera to matriser, fyrst ein ganske enkel `A`:
 
 ```{code-cell} ipython3
 import matplotlib.pyplot as plt
+import numpy as np
 A = np.array( [
    [ 1.0, 1.0 ],
-   [ 0, 1.0 ],
+   [ 0, 1.0 ]
    ] )
 print(A)
 ```
@@ -46,6 +47,11 @@ R = np.array( [
    ] )
 print(R)
 ```
+
+::: {admonition} Refleksjonsspørsmål
+
+Kva representerer verdien åt `theta`?
+:::
 
 Me har grunnleggjande aritmetikk på matriser, t.d. pluss og minus.
 
