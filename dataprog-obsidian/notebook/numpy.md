@@ -81,7 +81,7 @@ display(df)
 
 Me ser raskt at datainnhaldet er det same.
 Det som kanskje er uvant er at søylene ikkje har overskrifter, 
-slik som me er vane med.  
+slik som me er vane med.
 Ein *array* har ingen overskrifter eller *labels*.
 
 Det går an å definera søyleoverskrifter når me definerer ein *DataFrame*.
@@ -128,7 +128,7 @@ Kva datatype vert resultatet?
 
 ::: {admonition} Oppgåve
 Sannsynlegvis fekk du ikkje ein numerisk *array* i forrige oppgåve.
-Formatter datasettet slik at alle søylene er talverdiar og lag
+Formater datasettet slik at alle søylene er talverdiar og lag
 ein *array* av dette resultatet.
 Kva datatypar får du no?
 :::
@@ -145,7 +145,7 @@ strengar.
 
 ## Avslutting
 
-Det kan verka underleg å bruka tid på `numpy` *arrays*, når `pandas`
+Det kan verka underleg å bruka tid på `numpy` *arrays*, når `pandas`.
 `DataFrame` allereie gjev oss ei ryddig representasjon av datasetta.
 Matrisene er ei meir primitiv framstilling.
 
