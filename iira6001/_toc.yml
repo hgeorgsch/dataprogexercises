@@ -85,12 +85,13 @@ chapters:
     sections:
     - file: Statistikk og Maskinlæring
       sections:
+      - file: notebooks/numpy
       - file: notebooks/Linear Regression in SciKitLearn
       - file: notebooks/Evaluering for regresjon
-      - file: notebooks/numpy
+      - file: notebooks/scikitlearn
+      - file: notebooks/matrix
       - file: notebooks/hypothesistest
       - file: notebooks/Iris-Statistics.ipynb
-      - file: notebooks/matrix
     - file: Automatisering
       sections:
       - file: Installasjon-git

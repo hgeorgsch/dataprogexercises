@@ -119,7 +119,7 @@ print(diabetes.target.shape)
 ```
 
 Det er alltid nyttig å sjå på dimensjonane på datasett.
-Her har med 442 rader, same for `data` og `target`.
+Her har me 442 rader, same for `data` og `target`.
 Der er ti inn-variablar i `data` og éin ut-variabel i `target`.
 Om me ser på eit par liner i toppen av kvar matrise, ser me at alt
 er tal.
