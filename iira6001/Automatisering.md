@@ -7,6 +7,8 @@ tags:
 # Automatisering
 
 + *Perspektivførelesing*
+    + Automatisering
+      [(foilar)](https://iirevu.org.ntnu.no/Slides/Automatisering/#/)
     + Versjonskontroll
 
 + *Demovideo*
