@@ -5,3 +5,5 @@ EXR-formattert.csv
 kundedata_test.json
 *.svg
 weather_data.json
+pivot.csv
+*.html

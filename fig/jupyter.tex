@@ -1,0 +1,29 @@
+\documentclass[border=1mm]{standalone}
+
+\usepackage{listings}
+\usepackage{tikz}
+\usetikzlibrary{positioning,fit,calc}
+
+\usepackage{tikz,verbatimbox}
+
+\begin{document}
+
+\begin{tikzpicture}[
+  node distance=5mm
+  ]
+
+   \node (j) { \includegraphics[width=12mm]{jupyterlogo} } ;
+   \node (md) [draw,fill=red!15,below=of j,xshift=12mm] { Markdown } ;
+   \node (py) [draw,fill=red!15,below=of md] { Code } ;
+   \node (out) [draw,fill=red!15,below=of py] { Output } ;
+   \draw [thick,->] (j) |- (md) ;
+   \draw [thick,->] (j) |- (py) ;
+   \draw [thick,->] (j) |- (out) ;
+   \node (tmp) at ($(py)!0.5!(out)$) {} ;
+   \node (k) [draw,fill=blue!15,right of=tmp,node distance=16mm,rounded corners] { kernel } ;
+   \draw [thick,->] (py) -| (k) ;
+   \draw [thick,->] (k) |- (out) ;
+\end{tikzpicture}
+
+\end{document}
+
