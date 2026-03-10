@@ -1,3 +1,5 @@
+# Oversikt over foilane
+
 + Opningssamling
     + [[Velkomstføredrag]]
     + [[God morgon-Refleksjon]]
@@ -25,19 +27,20 @@
 + Week 6. Web API
     + [[Datakilder og nettverksprotokoller]]
     + [[HTTP og spørringer]]
-+ [[Datastrukturar i Python]]
-+ [[Evaluering av modellar]]
-+ [[Modellen]]
-+ [[autentisering]]
-+ [[dataform]]
 + Week 7
     + [[Om å læra frå data]]
+    + [[Modellen]]
+    + [[Evaluering av modellar]]
 + Week 8
     + [[Automatisering]]
     + [[Versjonskontroll]]
     + [[jupytext-overview]]
 + Week 9+
     + [[Unsupervised Learning]]
++ ???
+    + [[Datastrukturar i Python]]
+    + [[autentisering]]
+    + [[dataform]]
 + Notes
     + [[Unused]]
     + [[Test]]
