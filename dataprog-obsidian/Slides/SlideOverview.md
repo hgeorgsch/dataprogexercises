@@ -41,7 +41,7 @@
     + [[autentisering]]
     + [[dataform]]
 + Ubrukt
-    + [[Datastrukturar i Python]]
+    + [[Datastrukturar i Python]].  Denne overlapper med [[Datastrukturar]] men har mer tekniske detaljer.
 + Notes
     + [[Unused]]
     + [[Test]]
