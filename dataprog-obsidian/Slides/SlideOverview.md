@@ -38,9 +38,10 @@
 + Week 9+
     + [[Unsupervised Learning]]
 + ???
-    + [[Datastrukturar i Python]]
     + [[autentisering]]
     + [[dataform]]
++ Ubrukt
+    + [[Datastrukturar i Python]]
 + Notes
     + [[Unused]]
     + [[Test]]
