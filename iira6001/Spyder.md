@@ -7,9 +7,7 @@ title: Frittståande program og Spyder
 # Frittståande program og Spyder
 
 + *Perspektivføredrag*
-    + Frittståande program
-    + git og github
+    + GUI
+    + *Event*-handtering
 + *Demo* 
-    + Spyder
-    + git og github
 + *Tutorials* og øvingar
