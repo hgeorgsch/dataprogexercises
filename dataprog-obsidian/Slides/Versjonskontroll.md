@@ -51,7 +51,7 @@ Github er en av mange tjenester som lar deg lagre prosjektene dine, med versjons
 Github ble forøvrig kjøpt opp av MicroSoft for en del år siden.
 
 ---
-<!-- slide template="[[tpl-flex]]"  bg="cox"-->
+<!-- slide template="[[tpl-flex]]"  -->
 
 ![[Revision_controlled_project_visualization-2010-24-02.svg]]
 
