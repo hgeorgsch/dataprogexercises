@@ -70,6 +70,24 @@ Så lenge filene er rene tekstfiler, som Markdown eller python-kode, fungerer de
 Det er vanlig å holde seg med en hovedgren som alltid skal virke. Når man gjør rettelser og oppgraderinger, gjør man dem først på en sidegren, som flettes inn på hovedgrenen når man vet at alt virker.
 
 ---
+<!-- slide template="[[tpl-flex]]" bg="lightgrey" -->
+
+![[Traditional_client-server_diagram.svg]]
+
+::: credit
+By Avelludo, CC BY-SA 4.0,
+via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=108657059)
+:::
+
+note:
+En sentral tjener, som github, gir oss en anden gevinst.
+Siste versjon er til en hver tid tilgjengelig på én plass for hele laget.
+Det er også mulig å publisere prosjektet åpent på tjeneren.
+Svært mange *open source*-prosjekter blir publisert nettopp på github.
+
+
+
+---
 
 - Versjonskontroll
     - alt. til samskriving
