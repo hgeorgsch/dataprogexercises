@@ -20,3 +20,26 @@ Fair use (Old-50) via
 :::
 
 note:
+Hensikten med datamaskiner er å automatisere av arbeidsoppgaver.
+
+Ferdigkjøpt programvare lar oss automatisere de mest grunnleggende og
+standardiserte oppgavene, som å regne ut gjennomsnitt eller tegne et
+søylediagram.  
+
+Når vi skal levere en månedlig markedsanalyse for vår egen virksomhet 
+må vi derimot legge en god del manuelt arbeide på toppen.  
+Standardprogrammene vet ikke hvordan våre data ser ut eller hva som
+er relevant for vår virksomhet.
+Hva om vi kunne skrive progravaren som lar oss levere samme analyse
+med oppdaterte datasett hver måned, uten å gjøre alle de manuelle 
+stegene på nytt?
+
+I denne videoen skal vi prate litt om hva vi må tenke på for å få det
+til.
+
+---
+
+
+
+
+
