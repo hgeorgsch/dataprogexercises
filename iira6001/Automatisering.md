@@ -13,12 +13,12 @@ tags:
       (foilar)
     + Versjonskontroll
       (foilar)
-    + Spyder
 
 + *Gjennomarbeidde døme*
     + [](Installasjon-git)
 
 + *Demovideo*
+    + Spyder
     + Korleis me har laga læringsmaterialet i jupyter book
     + Versjonskontroll i github
 + *Opne øvingar*
