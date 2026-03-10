@@ -186,7 +186,25 @@ Plott blir ikke vist automatisk.  I et filter bruker vi gjerne `savefig` for å 
 Dessuten har Jupyter en del funksjoner som blir lastet automatisk fra `IPython`-pakken.
 I et frittstående program må vi eksplisitt importere dem.  Det gjelder f.eks. `display`-funksjonern som vi ofte bruker på *DataFrames*.
 
-Koden i py-filen kan du skrive i en hvilken som helst tekst-*editor*, men den må lagres i ren tekst.  En vanlig feil er å bruke et tekstbehandlingsprogram som lagrer teksten med formatering.  Det vanligste er å bruke en IDE - *Integrated Development Enviroment* - som VSCode eller Spyder, men det skal vi komme tilbake til i en anden video.
+---
+<!-- slide template="[[tpl-flex]]" -->
+
+![[slidefig/Spyder-windows-screenshot.png]]
+
+::: credit
+Joshdoe at English Wikipedia, MIT-lisens,
+via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=18469698)
+:::
+
+note:
+Koden i py-filen kan du skrive i en hvilken som helst tekst-*editor*, men den må lagres i ren tekst.  En vanlig feil er å bruke et tekstbehandlingsprogram som lagrer teksten med formatering.  Det vanligste er å bruke en IDE - *Integrated Development Enviroment* - som VSCode eller Spyder.
+
+En IDE kombinerer en lang rekke programmeringsverktøy, ikke bare 
+redigeringsprogrammet og tolken for å kjøre koden, men også andre ting.
+Der er gjerne en *debugger*, som lar deg overvåke variabeltilstanden i 
+programmet mens det kjører og en *profiler*, som forteller hvor lang tid
+ulike deler av programmet bruker når det kjører.  
+Jeg skal lave en demovideo som viser det viktigste i Spyder.
 
 ---
 <!-- slide template="[[tpl-flex]]" -->
