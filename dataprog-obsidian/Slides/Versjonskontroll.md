@@ -69,6 +69,12 @@ Så lenge filene er rene tekstfiler, som Markdown eller python-kode, fungerer de
 
 Det er vanlig å holde seg med en hovedgren som alltid skal virke. Når man gjør rettelser og oppgraderinger, gjør man dem først på en sidegren, som flettes inn på hovedgrenen når man vet at alt virker.
 
+*Office*-programmer gir en del av den samme funksjonaliteten i skybaserte 
+samskrivingsløsninger og *sporing av endringer*.
+Versjonskontroll er løsningen for alt som lagres som ren tekst.
+For binærfiler fungerer det derimot dårlig, siden man da ikke kan sammenligne
+linje for linje.
+
 ---
 <!-- slide template="[[tpl-flex]]" bg="lightgrey" -->
 
@@ -85,10 +91,43 @@ Siste versjon er til en hver tid tilgjengelig på én plass for hele laget.
 Det er også mulig å publisere prosjektet åpent på tjeneren.
 Svært mange *open source*-prosjekter blir publisert nettopp på github.
 
+Jeg bruker denne
 
 
 ---
+<!-- slide template="[[tpl-word]]" -->
 
-- Versjonskontroll
-    - alt. til samskriving
-- jupytext
+https://github.com/
+
+note:
+github er et godt valg for prosjekter som skal publiseres åpent.
+Det er gratis og det er utbredd, og de er store nok til at tilbudet
+neppe forsvinner uten varsel.
+
+Til virksomhetskritiske operasjoner og alt som ligner på konfidentielt
+ville jeg derimot ha gått for en betalt løsning og finlest vilkårene.
+For min egen del kjører jeg mine egne tjenere med et system som heter
+*gitolite* til mine git-prosjekter.  Ved NTNU har vi også en intern
+tjener.  Den kjører github sin programvare, men i et lukket system der
+NTNU har eierskap.
+
+---
+<!-- slide template="[[tpl-word]]" -->
+
+jupytext
+
+note:
+Der er ingenting i veien for å sjekke inn *Jupyter Notebooks* i git,
+men det er ikke ideelt.  Man ender opp med en masse falske versjoner,
+som bare avviker fordi koden er kjørt på nytt, kanskje med et andet
+versjonsnummeret fra Jupyter.
+
+Hvis man derimot konverterer *Notebooks* til et tekstformat, som *Markdown*
+eller py:percent, fungerer git helt udmerket.  Det kan lønne seg å sette
+seg inn i `jupytext`.
+
+---
+
+## Slutt
+
+note:
