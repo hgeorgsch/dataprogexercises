@@ -47,3 +47,13 @@ $$  \varepsilon = 10^{-16} $$
 
 note:
 Maskin-eps
+
+---
+
+::: rightimage
+![[WrightGlidersSideBySide.jpg]]
+:::
+::: rightcredit
+By Wright Brothers - Library of Congress, Public Domain,
+via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=2079536)
+:::
