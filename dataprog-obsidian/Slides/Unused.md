@@ -58,15 +58,3 @@ By Wright Brothers - Library of Congress, Public Domain,
 via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=2079536)
 :::
 
----
-<!-- slide template="[[tpl-flex]]" bg="lightgrey" -->
-
-![[Traditional_client-server_diagram.svg]]
-
-::: credit
-By Avelludo, CC BY-SA 4.0,
-via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=108657059)
-:::
-
-note:
-Jeg skal nevne ett scenario til.
