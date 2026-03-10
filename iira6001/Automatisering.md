@@ -10,9 +10,9 @@ tags:
     + Automatisering
       [(foilar)](https://iirevu.org.ntnu.no/Slides/Automatisering/#/)
     + jupytext
-      (foilar)
+      [(foilar)](https://iirevu.org.ntnu.no/Slides/jupytext-overview/#/)
     + Versjonskontroll
-      (foilar)
+      [(foilar)](https://iirevu.org.ntnu.no/Slides/Versjonskontroll/#/)
 
 + *Gjennomarbeidde døme*
     + [](Installasjon-git)
