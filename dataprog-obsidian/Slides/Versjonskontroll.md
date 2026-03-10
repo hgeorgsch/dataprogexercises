@@ -131,3 +131,11 @@ seg inn i `jupytext`.
 ## Slutt
 
 note:
+Der kan være mange grunner for å ta i bruk versjonskontrollsystemer.
+Det fungerer bare skikkelig når man innpasser det i den daglige 
+arbeidsflyten.
+
+Den største gevinsten har man når programmeringsprosjektene får en
+viss størrelsen, og man røkter koden over tid.
+
+Hver og én må vurdere om det gir verdi for en selv.
