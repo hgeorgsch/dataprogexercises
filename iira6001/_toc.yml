@@ -105,6 +105,8 @@ chapters:
       - file: notebooks/Klyngeanalyse
       - file: notebooks/Kundesegmentering
     - file: Spyder
+      sections:
+      - file: notebooks/tkinter-demo
     - file: Sikkerheit
   - file: closure
   - file: drafts

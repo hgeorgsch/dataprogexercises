@@ -9,5 +9,6 @@ title: Frittståande program og Spyder
 + *Perspektivføredrag*
     + GUI
     + *Event*-handtering
-+ *Demo* 
 + *Tutorials* og øvingar
+    + [](tkinter-demo)
++ *Demo* 
