@@ -15,7 +15,7 @@ bibtex_bibfiles:
 
 sphinx: 
     extra_extensions:
-        # - sphinx_iframes
+        - sphinx_iframes
         - jupyterbook_patches
 
 parse:
