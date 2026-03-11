@@ -26,7 +26,7 @@ Pivot og melt er supert å bruke til å transformere eller endre formen på data
 
 ---
 
-### 1. Pivot (Bredere format)
+## 1. Pivot (Bredere format)
 
 Brukes når du vil transformere unike verdier i én kolonne til å bli **overskrifter** i nye kolonner.
 ```python
@@ -46,7 +46,7 @@ df.pivot(columns, index=<no_default>, values=<no_default>)
 
 ---
 
-### 2. Melt (Lengre format)
+## 2. Melt (Lengre format)
 
 Brukes for å "av-pivotere". Det samler flere kolonner inn i to nye: én for "navnet på kolonnen" og én for "verdien".
 

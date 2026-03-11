@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.17.0
+    jupytext_version: 1.19.1
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -28,6 +28,8 @@ Kva gjer `mainloop` og kva gjer `print`?
 :::
 
 ```{code-cell} ipython3
+:tags: [skip-execution]
+
 import tkinter as tk
 w = tk.Tk()
 w.mainloop()
@@ -81,6 +83,8 @@ Lat oss laga eit nytt vindauga med ein knapp, der me bruker
 `callback`-funksjonen.
 
 ```{code-cell} ipython3
+:tags: [skip-execution]
+
 w = tk.Tk()
 w.title( "Testvindauga" )
 
@@ -101,7 +105,3 @@ Skjer der noko anna om du trykker fleire gongar?
 
 Legg merke til at knappen ikkje dukkar opp utan ein geometrihandsamar.  Her har me brukt `grid` som er greitt
 for å leggja til fleire element i eit rutenett.
-
-```{code-cell} ipython3
-
-```
