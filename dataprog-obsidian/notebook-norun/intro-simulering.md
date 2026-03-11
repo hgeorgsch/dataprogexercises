@@ -58,6 +58,7 @@ slideshow:
 
 ```{code-cell} ipython3
 ---
+tags: [skip-execution]
 editable: true
 slideshow:
   slide_type: fragment

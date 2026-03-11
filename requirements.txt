@@ -31,3 +31,4 @@ kagglehub>=0.3
 jupyterbook_patches
 seaborn
 jupyterlab-myst
+pyjstat
