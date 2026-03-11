@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.18.1
+    jupytext_version: 1.19.1
 kernelspec:
   display_name: dataprog
   language: python
@@ -240,7 +240,6 @@ while <betingelse>:
     # ....
 ```
 - Her er betingelsen et uttrykk som evalueres til `True` eller `False` og løkken kjører omigjen og omigjen så lenge den er `True`
-
 
 ```{code-cell} ipython3
 ---

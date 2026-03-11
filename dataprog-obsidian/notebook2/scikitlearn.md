@@ -7,8 +7,8 @@ jupytext:
     format_version: 0.13
     jupytext_version: 1.19.1
 kernelspec:
-  name: dataprog
   language: python
+  name: dataprog
   display_name: dataprog
 ---
 
@@ -124,6 +124,11 @@ Sjå [](./numpy) om du ikkje hugsar korleis.
 
 ## Søyleindeks
 
+```{code-cell} ipython3
+df = pd.DataFrame( data )
+display( df )
+```
+
 No har du sannsynlegvis ein `DataFrame` utan søyleoverskrifter.
 Det kan me fiksa ved å setja `columns`, slik
 ```
@@ -134,10 +139,6 @@ Du hugsar kanskje at når me skreiv ut innhaldet i `diabetes`-objektet,
 so såg me ein `feature_names`-attributtet.  Det er namna på ut-variablane
 i  `data`.
 I tillegg må me ha eit namn på den fyrste søyla, med `target`.
-
-```
-df.columns = [ "target" ] + diabetes.feature_names
-```
 
 ::: {admonition} Oppgåve
 Bruk koden over til å endra søylenamn og skriv ut `df` igjen.
