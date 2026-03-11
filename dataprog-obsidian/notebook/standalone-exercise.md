@@ -74,6 +74,89 @@ Ser ho ut som ho skal?
 
 ## Kommandolineargument
 
+Det seier seg sjølv at me ynskjer å kunna bruka programmet på
+ulike filer, og brukaren skal ikkje måtta redigera koden for å
+få det til.
+
+::: {admonition} Oppgåve
+Endra blokken som definerer filnamna i `konvertering.py` til 
+fylgjande.
+```python
+innfil = input( "Fil som skal konverterast" )
+utfil = input( "Filnamn til resultatet" )
+```
+Køyr programmet igjen.  Kva skjer?
+:::
+
+Eit alternativ til interaktiv *input* er argument på kommandolina.
+
+::: {admonition} Oppgåve
+Endra blokken som definerer filnamna i `konvertering.py` til 
+fylgjande.
+```python
+import argparse
+parser = argparse.ArgumentParser(description="Konverter valutakursdata.")
+
+parser.add_argument("infile", type=str, help="Input file.")
+parser.add_argument("outfile", type=str, help="Output file.")
+args = parser.parse_args()
+
+innfil = args.infile
+utfil = args.outfile
+```
+Køyr programmet igjen.  Kva skjer?
+:::
+
+::: {admonition} Oppgåve
+Om du køyrde programmet som før, fekk du sikkert ei feilmelding som
+seier at programmet treng argument.
+Køyr det på nytt som
+```sh
+python konvertering.py EXR20250401.csv konvertert.csv
+```
+Kva skjer no?
+:::
+
+::: {admonition} Refleksjonsspørsmål
+Ser du kva dei ulike kodelinene i det nye dømet gjer?
+Kva slags objekt er `parser`?  Eller `args`?
+:::
+
+::: {hint} 
+Biblioteket `argparse` gjer ganske mykje sjølv om me berre treng 
+nokre få liner for å få det til å verka.
+
+Me instantierer to objekt.
+Det fyrste er `parser` som har ansvar for å tolka alt som står på 
+kommandolina og for å gje feilmeldingar når argumenta er ugyldige.
+Me kan definera alle dei argumenta som me forventar med `add_argument()`.
+
+Det andre objektet `args` er resultatet når `parser` tolkar kommandolina.
+Alle argumenta som me har definert er tilgjengelege som attributtar i 
+`args`.
+
+Der er mykje meir ein kan gjera.  Det går an å søkja opp dokumentasjonen,
+men eg plar søkja etter døme og prøva meg fram.
+:::
+
+::: {admonition} Oppgåve
+Kva skjer når du køyrer programmet med `--help`, slik:
+```sh
+python konvertering.py --help
+```
+:::
+
+::: {admonition} Oppgåve
+Last ned oppdaterte data frå Noregs Bank og test programmet på dei.
+:::
+
+::: {admonition} Refleksjonsspørsmål
+Samanlikna løysinga med den interaktive `input()`-funksjonen
+og løysinga med kommandolineargument.
+Når vil du føretrekkja interaktive program og når er det best
+å bruka kommandolineargument?  Kva har du bruk for i framtida?
+:::
+
 ## Forbetring av programmet
 
 ## Gjenbrukbare funksjonar
