@@ -1,25 +1,5 @@
----
-title: Automatisering
-author: Hans Georg Schaathun
-date: March 2025
-tags:
-  - lecture/video/perspective
-css:
-  - css/templates.css
----
+(Automatisering)
 
-<!-- slide template="[[tpl-quote-header]]" -->
-# Automatisering
-
-![[Escher_Waterfall.jpg]]
-
-::: credit
-By M. C. Escher - Official M. C. Escher website,
-Fair use (Old-50) via 
-[Wikimedia Commons](https://en.wikipedia.org/w/index.php?curid=3473571)
-:::
-
-note:
 Hensikten med datamaskiner er å automatisere av arbeidsoppgaver.
 
 Ferdigkjøpt programvare lar oss automatisere de mest grunnleggende og
@@ -37,29 +17,13 @@ stegene på nytt?
 I denne videoen skal vi prate litt om hva vi må tenke på for å få det
 til.
 
----
-<!-- slide template="[[tpl-flex]]" bg="lightgreen" -->
+(recycle)
 
-![[Refund_icon.svg]]
-
-::: credit
-By [k4r573n](https://openclipart.org/detail/212888/refund-icon), CC0
-via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=54502596)
-:::
-
-note:
 Utfordringen er å skrive koden slik at den er gjenbrukbar.
 Det er lettere sagt enn gjort, fordi vi gjerne programmerer vår første prototype ved å teste på ett datasett, og så løser vi alle de problemer som er spesielle for dét datasettet uten å skille mellom det som er spesielt og det som er generelt.
 
----
-<!-- slide template="[[tpl-flex]]" -->
+(reusable)
 
-![[gjenbrukbar.png]]
-
-::: credit
-:::
-
-note:
 Det første man skal lære seg er antagelig å strukturere *notebooks* i Jupyter slik at det er lett å bytte ut parametre og datasett og kjøre rapporten på nytt på andre data.
 I en typisk dataanalyse er det gjerne navnet på datafilen, og perioden. Hvis vi samler alle disse parametrne i en boks i starten av dokumntet, der vi definerer variabler, er det lett å endre dem for å lave nye rapporter.
 
@@ -67,18 +31,8 @@ Det som er viktig å tenke på er *hva* vi vil trenge å endre, og sørge for at
 
 Hvis vi må gå gjennom hele dokumentet for å endre verdier her og der, blir det vanskelig å gjenbruke.
 
----
-<!-- slide template="[[tpl-flex]]" -->
+(error)
 
-![[Generic_error_message.svg]]
-
-::: credit
-ved OmegaFallon (vektorisering av eit bilete av Andreia Gaita)
-CC BY-SA 4.0, 
-via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=141743812)
-:::
-
-note:
 Den neste utfordringen er å skrive koden slik at den er robust for feil og variasjoner. 
 Hvor mye vet vi om de inndata som programmet får neste gang?
 
@@ -86,26 +40,8 @@ Hva skjer hvis brukeren skriver feil?
 Hva skjer om der er variasjoner i datasettene som blir brukt?
 Hva hvis dataleverandøren legger til nye søyler i datasettet?
 
----
-<!-- slide template="[[tpl-twocolumn]]" -->
+(thinker)
 
-::: leftimage
-![[The_Thinker,_Rodin.jpg]]
-:::
-::: leftcredit
-By AndrewHorne (talk) - Self-photographed 
-Public Domain,
-via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=15582363)
-:::
-::: rightimage
-![[1902_Wright_Brothers'_Glider_Tests_(13066000785).jpg]]
-:::
-::: rightcredit
-By NASA on The Commons - 1902 Wright Brothers' Glider Tests, No restrictions,
-via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=43723040)
-:::
-
-note:
 Der er to forskjellige tilnærminger for å skrive robust kode:
 den analytiske og den eksperimentelle.
 
@@ -119,64 +55,23 @@ Så er der selvsagt en kost-nytte-avveining å gjøre.  Skal du dele koden med a
 
 Det er viktig å være bevisst på robustheten, men prioriteringene må være opp til den enkelte i hvert enkelte konkrete tilfelle.
 
----
-<!-- slide template="[[tpl-twocolumn]]" -->
+(GUI)
 
-::: leftimage
-![[GRASS_6.1_GUI.png]]
-:::
-
-::: leftcredit
-By M. Neteler - GRASS 6.1 Screenshots, CC BY-SA 2.5,
-via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=1380762)
-:::
-
-::: rightimage
-![[cli.png]]
-:::
-::: rightcredit
-:::
-
-note:
 Det er ikke alltid *Jupyter Lab* er rett løsning.  Prinsippene for gjenbrukbar og robust kode er de samme, men det er ikke alltid ønskelig å måtte starte Jupyter og tukle med et stort dokument hver gang man ønsker å gjenbruke kode. Av og til ønsker vi å lave frittstående programmer.
 
 Vi skal ikke snakke så mye om grafiske brukergrensesnitt ennu; ikke før vi har en bedre forståelse for selve innmaten. Det er mye vi kan få til med kommandolinjegrensesnitt.
 
----
-<!-- slide template="[[tpl-flex]]" bg="white" -->
+(filter)
 
-![[filter.svg]]
-
-::: credit
-:::
-
-note:
 Svært mange nyttige program fungerer som filter eller transformasjoner.
 De tar én fil inn, kanskje i CSV, og spytter en anden fil ut, kanskje et plott i SVG-format.
 
 Dette er en god plass å begynne når man skal lære seg å bruke python utenfor Jupyter.
 Slike programmer blir ofte korte og oversiktlige fordi de bare gjør én ting, men den ene tingen kan ofte være meget nyttig.
 
----
+(code)
 
-- `filter.py`
 
-```python
-import pandas as pd
-import matplotlib.pyplot as plt
-df = pd.read_csv( "09535fastlege.csv",
-                  sep=";", encoding="latin1",
-                  header=1 )
-
-df = df.set_index("år")
-print(df)
-
-df["0 Hele landet Alle aldre"].plot()
-plt.savefig( "plott.svg" )
-
-```
-
-note:
 Et frittstående program i python er en fil med navn som slutter på `.py`.
 Vi kan bruke nesten all kode som vi bruker i Jupyter.
 Bare noen få ting blir anderledes.
@@ -186,17 +81,8 @@ Plott blir ikke vist automatisk.  I et filter bruker vi gjerne `savefig` for å 
 Dessuten har Jupyter en del funksjoner som blir lastet automatisk fra `IPython`-pakken.
 I et frittstående program må vi eksplisitt importere dem.  Det gjelder f.eks. `display`-funksjonern som vi ofte bruker på *DataFrames*.
 
----
-<!-- slide template="[[tpl-flex]]" -->
+(spyder)
 
-![[slidefig/Spyder-windows-screenshot.png]]
-
-::: credit
-Joshdoe at English Wikipedia, MIT-lisens,
-via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=18469698)
-:::
-
-note:
 Koden i py-filen kan du skrive i en hvilken som helst tekst-*editor*, men den må lagres i ren tekst.  En vanlig nybegynnerfeil er å bruke et tekstbehandlingsprogram som lagrer teksten med formatering.  Det vanligste er å bruke en IDE - *Integrated Development Enviroment* - som VSCode eller Spyder.
 
 En IDE kombinerer en lang rekke programmeringsverktøy, ikke bare 
@@ -206,24 +92,15 @@ programmet mens det kjører og en *profiler*, som forteller hvor lang tid
 ulike deler av programmet bruker når det kjører.  
 Jeg skal lave en demovideo som viser det viktigste i Spyder.
 
----
-<!-- slide template="[[tpl-flex]]" -->
+(CLI)
 
-![[filter.png]]
-::: credit
-:::
-
-note:
 Når vi kjører et frittstående program, må vi kjøre det gjennom en tolk eller *interpreter*.
 Den vanlige tolken for python heter rett og slett python, og vi kan kjøre den fra kommandolinjen eller terminalvinduet.
 
 Det er tolken som oversetter den relativt brukervennlige python-koden til maskininstruksjoner som kan kjøre på CPU-en i maskinen.
 
----
+(Slutt)
 
-# Slutt
-
-note:
 Det er ganske stor forskjell på å skrive programkode som bare skal kjøre én gang i ett Jupyter-dokument, og kode som skal kjøres om og om igjen med forskjellige inndata.
 Det krever omtanke å skrive koden slik at den er gjenbrukbar, og ennu mer omtanke om koden skal tåle skjødesløs omgang fra brukere som ikke vet hvordan koden er skrevet.
 
