@@ -20,9 +20,6 @@ eit egna mål som ein faktisk har lyst til å skyta.
 Difor er dette eit kapittel der ein kanskje berre skal pirka i overflata,
 og heller koma tilbake til verktya når ein treng det.
 
-Til skilnad frå andre veker, har eg sortert oppgåver og demovideoar verkty
-for verkty.  Eg håper perspektivførelesingane eit nyttig startpunkt for alle.
-Deretter trur eg det er best å ta eitt verkty åt gongen etter interesse og behov.
 
 + *Perspektivførelesing*
     + Automatisering
@@ -31,16 +28,21 @@ Deretter trur eg det er best å ta eitt verkty åt gongen etter interesse og beh
       [(foilar)](https://iirevu.org.ntnu.no/Slides/jupytext-overview/#/)
     + Versjonskontroll
       [(foilar)](https://iirevu.org.ntnu.no/Slides/Versjonskontroll/#/)
-+ `jupytext`
-    + Demo `jupytext`
-    + Oppgåve `jupytext`
-+ `git` og github
-    + [](Installasjon-git)
-    + Oppgåve `git`
-+ `Spyder` eller andre IDE-ar.
-  Eg viser `Spyder` fordi det er open kjeldekode og enkelt installert via `pip`.
-  Dersom du har ein annan IDE med python-støtte, som t.d. VSCode, kan det vera
-  like greitt å bruka denne.  Eg trur likevel du vil ha nytte av demovideoen med
-  `Spyder`.  Prinsippa er dei same.
-    + Demo Spyder
-    + Oppgåve Spyder
++ *Gjennomarbeidd døme*
+    + [](./standalone-exercise)
++ *Demo-video*
+    + Redigering og køyring 
++ *Valfrie oppgåver* - nye verkty
+    + `jupytext`
+        + Demo `jupytext`
+        + Oppgåve `jupytext`
+    + `git` og github
+        + [](Installasjon-git)
+        + Oppgåve `git`
+    + `Spyder` eller andre IDE-ar.
+      Eg viser `Spyder` fordi det er open kjeldekode og enkelt installert via `pip`.
+      Dersom du har ein annan IDE med python-støtte, som t.d. VSCode, kan det vera
+      like greitt å bruka denne.  Eg trur likevel du vil ha nytte av demovideoen med
+      `Spyder`.  Prinsippa er dei same.
+        + Demo Spyder
+        + Oppgåve Spyder
