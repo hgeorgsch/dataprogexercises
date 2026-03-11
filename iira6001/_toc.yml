@@ -95,6 +95,8 @@ chapters:
     - file: Automatisering
       sections:
       - file: Installasjon-git
+      - file: notebooks/standalone-exercise
+      - file: notebooks/jupytext1demo
     - file: Klassifikasjon
       sections:
       - file: notebooks/Fisher Linear Discriminant in sklearn

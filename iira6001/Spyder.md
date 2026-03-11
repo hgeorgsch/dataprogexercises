@@ -10,5 +10,5 @@ title: Frittståande program og Spyder
     + GUI
     + *Event*-handtering
 + *Tutorials* og øvingar
-    + [](tkinter-demo)
+    + [](notebooks/tkinter-demo)
 + *Demo* 
