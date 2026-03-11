@@ -11,5 +11,6 @@
 2. *Notebooks* som vert køyrde manuelt
 	1. Desse er sjekka inn i ipynb-format under
 		1. iira6001/norun
-	2. Kjeldekode finst ofte under 
-		1. dataprog-obsidian
+	2. Kjeldekode finst ofte under  ein av
+		1. dataprog-obsidian/Opningssamling
+		2. dataprog-obsidian/notebook-norun
