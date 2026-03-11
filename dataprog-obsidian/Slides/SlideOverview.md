@@ -35,7 +35,7 @@
     + [[Automatisering]]
     + [[Versjonskontroll]]
     + [[jupytext-overview]]
-+ Week 9+
++ Week 10
     + [[Unsupervised Learning]]
 + ???
     + [[autentisering]]
