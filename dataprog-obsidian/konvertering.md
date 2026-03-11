@@ -67,7 +67,7 @@ Desse to tabellane kan me fletta.
 
 ```{code-cell} ipython3
 mrg = pd.merge( dkk, gbp, on="dato" )
-display(mrg)
+print(mrg)
 ```
 
 ```{code-cell} ipython3
