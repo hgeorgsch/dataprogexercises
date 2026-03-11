@@ -15,7 +15,7 @@ kernelspec:
 # Eit fyrste frittståande program
 
 Denne øvinga tek utgangspunkt i 
-[](notebooks/Fyrste%20datasett%20med%20CSV) som me
+[](./Fyrste%20datasett%20med%20CSV) som me
 skal skriva om som eit frittståande program.
 Den opprinnelege øvinga startar med å lesa inn ein CSV-fil og
 sluttar med å skriva ut ei reformater fil.
