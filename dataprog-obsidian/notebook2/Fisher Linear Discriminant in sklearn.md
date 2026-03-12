@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.18.1
+    jupytext_version: 1.19.1
 kernelspec:
   display_name: dataprog
   language: python
@@ -227,36 +227,35 @@ alpha = -x/y
 def f(xx): return alpha*xx+beta
 ```
 
-Denne lina kan me bruka til å plotta diskriminanten.  Me må gjenta koden for å plotta spreidingsplottet, og kan då skriva,
+Denne lina kan me bruka til å plotta diskriminanten.  Slik
 
 ```{code-cell} ipython3
-import matplotlib.pyplot as plt
-
-ax = plt.subplot()
-scatter = ax.scatter(iris.data[:, 0], iris.data[:, 1], c=iris.target)
-ax.set(xlabel=iris.feature_names[0], ylabel=iris.feature_names[1])
-ax.legend(
-    scatter.legend_elements()[0], ["setosa", "ikkje setosa"], loc="lower right"
-)
-
 xv = [4, 8]
 yv = [ f(xx) for xx in xv ]
+ax = plt.subplot()
+
 ax.plot( xv, yv, "--" )
 
-ax.quiver( 5.6, f(5.6), x, y, scale=10, width=2**(-8) )
+ax.quiver( 5.6, f(5.6), x, y, scale=100, width=2**(-8) )
 ```
 
-Som me ser klarer diskriminanten stort sett å skilja iris setosa frå
-dei to andre artane.  Der er berre nokre få atypiske eksemplar som
-vert feilklassifiserte.
+Pilen som me laga med `quiver()`-funksjonen, markerer normalen på skillelinjen.  Dette er den vektoren som koeffisientane `x` og `y` definerer. Me berre omformulerte dei til ein lineær funksjon for å kunna plotta slik me er vande med.
 
-Den svarte pilen er plotta med `quiver`-funksjonen. Han viser normalvektoren på diskriminantlina, dvs. ei vektor som står vinkelrett på skiljelina.
-Denne vektoren har koordinatar `(x,y)`, dvs. `lda.coef_`.
 
 ::: {admonition} Merknad
 Om du har eit punkt $(x',y')$ og normalvektoren er $(x,y)$, vil dot-produktet $(x,y)\cdot(x',y')=xx'+yy'$ vera negativ på den eine sida av determinantlina og positiv på den andre. På lina er produktet null. Dess lenger frå lina punktet $(x',y')$ er, dess større er absoluttverdien. Det er altso dette produktet modellen bruker for å predikera klassa for eit nytt objekt $(x',y')$.
 :::
 
+
+::: {admonition} Oppgåve
+Lag eit plott som viser både diskriminanten og datasettet, dvs. som kombinerer dei to plotta som er viste.
+:::
+
+::: {admonition} Refleksjon
+Kva synest du om diskriminanten.  Fungerer han godt på datasettet?
+:::
+
++++
 
 ::: {admonition} Oppgåve
 Lag diskriminantar som skil ut hhv. *iris versicolor* og 
