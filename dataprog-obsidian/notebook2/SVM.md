@@ -61,44 +61,114 @@ df["Target"].unique()
 
 Me har altso tre kategoriar av studentar.
 
-## Support vector machine
+## Maskinlæringsproblemet
 
+Fyrst lyt me setja opp sjølve problemet og definera kva variablar
+me skal predikera.
+Denne delen er uavhengig av om me vil bruka SVM eller andre algoritmar.
+
+Den avhengige variabelen, som skal predikerast, er `Target`.
+Som uavhengige variablar kan me henta ut alle søylene unnateke
+`Target`.
+Desse variablane kaller me gjerne *features*.
+På norsk seier eg stundom *drag* eller *trekk*.
 
 ```{code-cell} ipython3
-from sklearn import svm
-from sklearn.model_selection import train_test_split
-
-
 features = df.columns[~df.columns.str.contains("Target")]
 
 X = df[features]
 y = df["Target"]
-
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2)
-
-#clf: for classifier
-clf = svm.SVC(probability=True,kernel='rbf')
-result = clf.fit(X_train,y_train)
-
-probabilities = clf.predict_proba(X_test)
-
-df_test = X_test
-df_test = df_test.join(y_test)
-df_test["modell"] = clf.predict(X_test)
-
-res = df_test[["Target", "modell"]]
 ```
 
+Etter gamal vane kaller med den avhengige variabelen for `y` og
+dei uavhengige for `X`.
+
+SciKitLearn gjev oss ein funksjon for å dela heile datasettet i
+trenings- og testsett, slik.
+
 ```{code-cell} ipython3
-korrekt = res["Target"]==res["modell"]
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2)
+```
+
+::: {admonition} Oppgåve
+Sjekk at dei fire variablane (`X_train` osv.) er som dei skal vera.
+Har dei rett tal på søyler og radar?
+:::
+
+## Support vector machine
+
+Treninga av ein SVM-modell liknar svært på FLD.
+Det er sjølvsagt fordi SciKitLearn er laga for at det skal
+vera so likt som råd.
+
+```{code-cell} ipython3
+from sklearn import svm
+
+clf = svm.SVC(probability=True,kernel='rbf')
+result = clf.fit(X_train,y_train)
+```
+
+Dette gjev ein ferdig trent SVM-modell, `clf`.
+
+::: {admonition} Merknad
+SVM tek to argument som me ikkje har sett før.
+Det fyrste, `probability`, skal me forklara under.
+Det andre, `kernel`, viser til ein sentral komponent i SVM-modellen.
+Ein kan velja ulike kjernar som gjev fleire eller færre fridomsgradar.
+Dét blir for mykje å gå inn på, men RBF er eit vanleg val.
+:::
+
+Legg merke til at modellane i SciKitLearn vil ha $x$- og $y$-variablane
+for seg.  Når me skal analysera, er det gjerne enklast å ha alt i éin
+*DataFrame*, slik
+
+```{code-cell} ipython3
+df_test = X_test.join(y_test)
+display( df_test )
+```
+
+Prediksjonen fungerer òg akkurat som me hugsar frå FLD.
+Me kan leggja prediksjonan til som ein ny søyle i testsettet.
+
+```{code-cell} ipython3
+df_test["modell"] = clf.predict(X_test)
+```
+
+::: {admonition} Oppgåve
+Sjå på innhaldet i `df_test`.
+Er prediksjonane gode?
+
+:::
+
+Suksessraten kan me rekna ut slik.
+
+```{code-cell} ipython3
+korrekt = df_test[ "Target"]==df_test["modell" ]
 sukksessrate = korrekt.sum()/korrekt.size
 print(f"Modellen vår fungerer {sukksessrate:.2%} av gangene")
 ```
 
-```{code-cell} ipython3
+::: {admonition} Refleksjon
+Suksessraten er ein god estimator for sannsynet for rett svar.
+Dersom du hugsar nok statistikk, er det ein god idé å rekna
+ut standardfeilen åt denne estimatoren.
+:::
 
+## Sannsynsestimat
+
+Då me laga modellen, sa me `probability=True`.
+Det tyder at modellen ikkje berre klassifiserer, men òg estimerer kor
+rimeleg kvar mogleg klasse er.
+For å få fatt i denne informasjonen, skal me bruka ein annan variant
+til prediksjonen, slik:
+
+```{code-cell} ipython3
+probabilities = clf.predict_proba(X_test)
+display(probabilities)
 ```
 
-```{code-cell} ipython3
+Dersom ei klasse har 90% sannsynsestimat kan me stola ganske godt på
+at klassifikasjonen er rett.  Om sannsynsestimatet ligg rundt 50%, kan
+det like gjerne vera feil.
 
-```
