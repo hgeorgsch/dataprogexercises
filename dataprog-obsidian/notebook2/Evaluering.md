@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.18.1
+    jupytext_version: 1.19.1
 kernelspec:
   display_name: dataprog
   language: python
@@ -82,7 +82,7 @@ test = np.vstack( [ test1, test2, test3 ] )
 
 Her bruker me seks variablar for å dela kvar klasse i 40+10 
 rader, før me stablar saman tre delsett til test- og tremingssettet.
-Me bruker numpy-funksjonen `vstack` som står for *vertical stack` 
+Me bruker numpy-funksjonen `vstack` som står for *vertical stack*
 til å setja saman matrisene.
 Me kan sjekka:
 
@@ -248,3 +248,7 @@ dårleg på testsettet.
 
 Difor skal de ta med dykk desse teknikkane og prøva dei ut på større
 og meir interessante datasett.
+
+```{code-cell} ipython3
+
+```

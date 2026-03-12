@@ -23,7 +23,7 @@ Dette ser me tydleg i meiningsmålingar.
 Ofte er der fleire byrå ute og gjer meiningsmålingar på same tid,
 og dei bruker dei same statistiske metodane.
 Likevel får dei forskjellige resultat, og
-dei treff sjelden valresultatet presist.
+dei treff sjeldan valresultatet presist.
 
 Regresjonsmodellen som me fann i 
 [forrige øving](Linear%20Regression%20in%20SciKitLearn)
@@ -53,7 +53,7 @@ print(x)
 print(y)
 ```
 
-Me har ikkje fleire data enn det eine settet.  For å kunne evaluera
+Me har ikkje fleire data enn det eine settet.  For å kunna evaluera
 modellen må me difor halda tilbake ein del av datasettet til å testa
 på.  Dette testsettet kan me ikkje bruka i treninga.
 Ein vanleg tommelfingerregel er å bruka 20% av datasettet til testing
@@ -172,15 +172,26 @@ Gjer denne modellen det like godt på det nye testsettet som det
 gjorde på treningssettet?
 :::
 
+::: {admonition} Refleksjon
+Er der andre testar me kunne ha gjort for å vurdera kor
+godt modellen gjer det?
+:::
+
 ## Oppsummering
 
 Læringsmålet i denne øvinga var å sjå korleis syntaksen
 i python kan sjå ut når me skal testa ein regresjonsmodell 
 i python.
 
-Denne testinga er uhyre viktig.
+Me har rett nok berre gjort ein rudimentær test, der ein må samanlikna
+histogramma visuelt.
+Det er likevel ein svært nyttig fyrste test.
+Skal ein gjera ein grundig feilanalyse lyt ein lesa litt meir statistikk
+enn me har tid til her.
+
 Det skjer ofte at ein modell fungerer godt på treningssettet og
 dårleg på testsettet.
-
 Difor skal de ta med dykk desse teknikkane og prøva dei ut på større
 og meir interessante datasett.
+
+

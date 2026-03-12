@@ -92,17 +92,18 @@ chapters:
       - file: notebooks/matrix
       - file: notebooks/hypothesistest
       - file: notebooks/Iris-Statistics.ipynb
-    - file: Automatisering
-      sections:
-      - file: Installasjon-git
-      - file: Git
-      - file: notebooks/standalone-exercise
-      - file: notebooks/jupytext1demo
     - file: Klassifikasjon
       sections:
       - file: notebooks/Fisher Linear Discriminant in sklearn
       - file: notebooks/Evaluering
-      - file: notebooks/Support Vector Machines
+      - file: notebooks/SVM
+    - file: Automatisering
+      sections:
+      - file: notebooks/ML-WebAPI
+      - file: notebooks/standalone-exercise
+      - file: notebooks/jupytext1demo
+      - file: Installasjon-git
+      - file: Git
     - file: Klyngeanalyse-Kapittel
       sections:
       - file: notebooks/Klyngeanalyse

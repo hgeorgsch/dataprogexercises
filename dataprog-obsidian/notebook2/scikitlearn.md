@@ -69,7 +69,7 @@ Kva tyder feilmeldinga?
 
 I `numpy` må me skilja mellom ein vektor eller ein-dimensjonal *array*,
 ein to-dimensjonal *array* med éi søyle, og ein to-dimensjonal *array* med
-ein rad, sjølv om gjerne tenkjer på alle tre som vektorar.
+éin rad, sjølv om gjerne tenkjer på alle tre som vektorar.
 Difor må me transformera `diabetes.target` til éi søyle.
 
 ```{code-cell} ipython3
