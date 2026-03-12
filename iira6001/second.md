@@ -25,13 +25,13 @@ Veke 7
 : [Statistikk og Maskinlæring](Statistikk%20og%20Maskinlæring)
 
 Veke 8
-: [Automatisering](Automatisering)
+: [Klassifikasjon](Klassifikasjon)
 
 Veke 9
-: [Frittståande Program](Spyder)
+: [Automatisering](Automatisering)
 
 Veke 10
-: [Klassifikasjon](Klassifikasjon)
+: [Frittståande Program](Spyder)
 
 Veke 11
 : [Klyngeanalyse](Klyngeanalyse-Kapittel)
