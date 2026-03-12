@@ -4,7 +4,7 @@ tags:
     - installation
 ---
 
-# Git
+# Installera git
 
 Git er eit versjonskontrollsystem.
 Det er ein open standard, og der er mange ulike verkty som kan handtera `git`. 
