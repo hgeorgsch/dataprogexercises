@@ -12,7 +12,7 @@ kernelspec:
   name: dataprog
 ---
 
-# Support Vector Machine 
+# Support Vector Machines
 
 *Support Vector Machines* (SVM) var kanskje den mest populære 
 maskinlæringsalgoritmen før djuplæring vart realistisk etter 2010.

@@ -6,6 +6,11 @@ title: Klassifikasjon med Maskinlæring
 
 # Klassifikasjon med Maskinlæring
 
+Denne veka held me fram med prediktive modellar,
+denne gongen med klassifikasjonsproblem.
+Det er ikkje so mykje nytt.  Øvingane denne veka handlar
+vel so mykje om djupare forståing for konsepta frå forrige veke.
+
 + *Føredrag*
     + Kva maskiner ikkje kan gjera
     + *Bias*
@@ -14,6 +19,4 @@ title: Klassifikasjon med Maskinlæring
 	+ [](notebooks/Evaluering)
 + *Vidaregåande døme*
     + [](notebooks/SVM)
-+ *Demo* regresjon og korrelasjon i pandas:
-	+ Øving med nevrale nett
-+ *Tutorial* regresjon og korrelasjon i eit datasett
+        + **Sakna!** Øving med nevrale nett
