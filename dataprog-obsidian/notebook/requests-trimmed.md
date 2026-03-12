@@ -39,6 +39,7 @@ Når vi vet dette, kan `requests` sette sammen spørringen og sende den på rikt
 Under er typisk gang i bruk av requests -- ikke kjørbar kode, men en cheat-sheet
 
 ```python
+:tags: [ skip-execution ]
 import requests
 
 url = #tjener OG sti på tjeneren

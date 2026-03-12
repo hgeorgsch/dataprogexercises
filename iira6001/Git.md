@@ -1,4 +1,5 @@
 
+# Koma i gang med Git
 
 1. Installer git
 

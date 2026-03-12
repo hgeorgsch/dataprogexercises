@@ -19,8 +19,8 @@ chapters:
       - file: Fyrste dokument i Jupyter Lab (foilar)
       - file: Fyrste datasett i CSV (foilar)
       - file: Simulering av kontantstraum (foilar)
-      - file: notebooks/intro-csv-slides
-      - file: notebooks/intro-simulering
+      - file: norun/intro-csv-slides
+      - file: norun/intro-simulering
   - file: first
     sections:
     - file: Numeriske Metodar og Kontrollflyt
@@ -95,6 +95,9 @@ chapters:
     - file: Automatisering
       sections:
       - file: Installasjon-git
+      - file: Git
+      - file: notebooks/standalone-exercise
+      - file: notebooks/jupytext1demo
     - file: Klassifikasjon
       sections:
       - file: notebooks/Fisher Linear Discriminant in sklearn

@@ -29,7 +29,7 @@ og heller koma tilbake til verktya når ein treng det.
     + Versjonskontroll
       [(foilar)](https://iirevu.org.ntnu.no/Slides/Versjonskontroll/#/)
 + *Gjennomarbeidd døme*
-    + [](./standalone-exercise)
+    + [](notebooks/standalone-exercise)
 + *Demo-video*
     + Redigering og køyring 
 + *Valfrie oppgåver* - nye verkty
