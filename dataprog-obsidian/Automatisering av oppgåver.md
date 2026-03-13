@@ -14,7 +14,9 @@ tags:
 + Del 2.
 	+ GUI
 		+ [taipy](https://taipy.io/)
-    + *Low coupling*/*High cohesion*
+	+ OO
+	    + *Low coupling*/*High cohesion*
+	    + Event handling
 	+ Bruk av WebAPI i sanntid
 
 
