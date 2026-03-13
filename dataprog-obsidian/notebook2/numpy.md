@@ -51,10 +51,11 @@ print("Type:", type(A))
 ```
 
 Her vert *array*en definert ved ei liste av lister, der dei indre listene
-vert radar i *array*en.
+vert radar i *array*en.  Denne lista av lister vert mata inn til 
+konstruktøren når me instantierer *array*-objektet.
 
 Dersom du har litt matematikkbakgrunn og er interessert i korleis  `numpy`
-fungerer heilt generelt, kan du ta ein titt på øvinga [](./matrix) her.
+fungerer heilt generelt, kan du ta ein titt på øvinga [](./matrix).
 
 ## Matriser og *DataFrame*
 
@@ -122,7 +123,7 @@ print("Type:", C.dtype)
 
 ::: {admonition} Oppgåve
 Last inn eitt av datasetta som du har arbeidd med tidlegare i pandas,
-og konverter innhladet til ein `numpy` *array*.
+og konverter innhaldet til ein `numpy` *array*.
 Kva datatype vert resultatet?
 :::
 

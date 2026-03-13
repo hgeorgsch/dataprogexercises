@@ -25,11 +25,11 @@ Detaljane står i
 ## Om datasett i maskinlæring
 
 Når me finn datasett skal me vera merksame på kvar dei kjem frå og
-med kva hensikt dei er gjort tilgjengeleg.  Data i dette kurset kan
-me grovt dela i vitskaplege og teknologiske data.
+med kva hensikt dei er gjort tilgjengeleg.
+I dette kurset støyter me på både ekte, empiriske data og 
+teknologiske treningsdata.
 
-Vitskaplege data er empiriske data som er samla og røkta for å la
-oss seia noko om røynda.
+Empiriske data er samla og røkta for å la oss seia noko om røynda.
 [Statistisk Sentralbyrå](https://www.ssb.no/) og
 [EuroStat](https://ec.europa.eu/eurostat) publiserer slike data.
 Ein kan òg få børsdata, men dei er ikkje alltid gratis.
@@ -37,14 +37,16 @@ Ein kan òg få børsdata, men dei er ikkje alltid gratis.
 Teknologiske data er røkta for å testa maskinlæringsmodellar,
 statistiske metodar og programvare. Slike data kan vera empiriske,
 men dei kan òg vera syntetisk generert for å likna empiriske datasett.
-Det kan vera viktig når empiriske data er sensitive.
+Det kan vera nyttig når empiriske data er sensitive.
 Empiriske datasett kan òg vera forenkla og skalerte for å vera enklare å 
-bruka og for å testa spesifikke teknikkar, og informasjon om måleeiningar
-kan lett forsvinna.
+bruka og for å testa spesifikke teknikkar,
+Ofte misser ein informasjonen om kva som er målt, slik at sjølv
+empiriske datasett kan misse empirisk verdi.
 
 I denne øvinga bruker me eit slikt teknologisk datasett.
 Andre populære kjelder til slike datasett er
-[Kaggle](https://www.kaggle.com/) og [UC Irvine](https://archive.ics.uci.edu/).
+[Kaggle](https://www.kaggle.com/) og
+[UC Irvine](https://archive.ics.uci.edu/).
 
 +++
 
@@ -137,10 +139,14 @@ Sjå [numpy](./numpy.ipynb)-øvinga for meir informasjon.
 ::: {admonition} Merknad
 Datasettet er skalert og normalisert.  Det har ein del føremonar for
 algoritmane, men for å kunne tolka data må me då finna ut korleis
-dei er skalert for å konvertera dei til kjende einingar.  
-Det kan vera at ein kan finna denne informasjonen i dokumentasjonen
-og andre kjelder som har utvikla datasettet, men det tek me oss ikkje
-tid til.
+dei er skalerte, slik at me kan konvertera dei tilbake til kjende
+einingar.
+Dette understreker at me har å gjera med teknologiske treningsdata
+og ikkje eit empirisk datasett meint for å forstå dieabetes.
+
+Det kan vera at ein kan finna nok informasjon i dokumentasjonen
+til å gjenskapa eit sannferdig, empirisk datasett,
+men det tek me oss ikkje tid til.
 :::
 
 ## Visualisering med spreidingsplott
@@ -232,12 +238,14 @@ Samanlikna denne prediksjonen med spreidingsplottet over.
 Verker prediksjonen sannsynleg?
 :::
 
-::: {admonition} Merknad
-Innparametern til `predict` er ein 2D-struktur, anten ein numpy-*array* eller her 
-ei liste av lister.  Grunnen er at `predict` kan predikare for mange $x$-verdiar
-(rader) samstundes, i tillegg til at der vanligvis er fleire inn-variablar
-(søyler).
+::: {hint} 
+Merk at argumentet til `reg.predict()` er ei matrise med to
+dimensjonar.  Det er fordi han kan predikera fleire individ
+(radar) i eitt kall, og kvart individ kan ha fleire variablar
+(søyler), sjølv om me valde ut berre éin $x$-variabel i dette
+dømet.
 :::
+
 
 Me kan plotta prediksjonsmodellen ved å predikera nokre verdier.
 Me kan predikera for fleire $x$-verdiar vha. listekomprehensjon, slik vi har gjort før.
@@ -285,7 +293,7 @@ Er prediksjonsmodellen ein rimeleg modell av datasettet?
 For dei som kjenner matematikken i lineær regresjon er det nyttig å ta
 ein titt under panseret.
 Den lineære regresjonsmodellen er likninga
-$$\hat y = ax + b.$$
+$\hat y = ax + b.$
 Det er altso dei to koeffisientane $a$ og $b$ som vert bestemte
 av `fit()`-metoden.
 Me kan lesa desse koeffisientane ut av modellen.
