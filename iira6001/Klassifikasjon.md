@@ -19,4 +19,4 @@ vel so mykje om djupare forståing for konsepta frå forrige veke.
 	+ [](notebooks/Evaluering)
 + *Vidaregåande døme*
     + [](notebooks/SVM)
-        + **Sakna!** Øving med nevrale nett
+    + **Sakna!** Øving med nevrale nett
