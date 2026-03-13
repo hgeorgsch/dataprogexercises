@@ -21,3 +21,4 @@ tags:
 	1. Clustering: https://www.kaggle.com/datasets/vjchoudhary7/customer-segmentation-tutorial-in-python
 	+ [[Klyngeanalyse]]
 
++ Kva er prediksjon?  Maskinæring, SciKitLearn
