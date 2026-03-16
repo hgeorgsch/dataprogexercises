@@ -30,11 +30,24 @@ til ein JSON-fil, som me lastar inn fyrst.
 configfil = "innenlandslanegjeld.json"
 ```
 
+::: {admonition} Oppgåve
+Last ned fila [innenlandslanegjeld.json](innenlandslanegjeld.json),
+og legg ho saman med *Notebook*-fila slik at ho er tilgjengeleg for
+programmet under.
+:::
+
+::: {admonition} Refleksjonsspørsmål
+Opna fila [innenlandslanegjeld.json](innenlandslanegjeld.json)
+i ein tekst-*editor*.  Skjøner du strukturen?
+:::
+
 ## Konfigurasjonen
 
 +++
 
-Lat oss fyrst sjå korleis konfigurasjonen ser ut.
+
+Me kan bruka python til å visa innhaldet if JSON-fila.
+Fylgjande kodesnutt verkar fordi JSON-fila vert lasta som ein `dict`.
 
 ```{code-cell} ipython3
 with open(configfil, 'r') as file:
