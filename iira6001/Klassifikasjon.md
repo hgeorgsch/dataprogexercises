@@ -17,6 +17,8 @@ vel so mykje om djupare forståing for konsepta frå forrige veke.
 + *Gjennomarbeidde døme*
 	+ [](notebooks/Fisher%20Linear%20Discriminant%20in%20sklearn)
 	+ [](notebooks/Evaluering)
-+ *Vidaregåande døme*
++ *Vidaregåande døme* som viser nokre maskinlæringsteknikkar.
+  Eg reknar med at dei fleste har nok med dei gjennomarbeidde døma.
+  Det er ikkje eit nederlag å droppa desse vidaregåande døma.
     + [](notebooks/SVM)
     + **Sakna!** Øving med nevrale nett
