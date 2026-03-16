@@ -80,6 +80,8 @@ chapters:
       - file: notebooks/WEBAPI
       - file: notebooks/requests-trimmed
       - file: notebooks/JSON json_stat og eksempler
+      - file: notebooks/chatgpt_api
+      - file: notebooks/ssb-api
   - file: midway
   - file: second
     sections:
@@ -108,7 +110,7 @@ chapters:
       sections:
       - file: notebooks/Klyngeanalyse
       - file: notebooks/Kundesegmentering
-    - file: Spyder
+    - file: GUI
       sections:
       - file: notebooks/tkinter-demo
     - file: Sikkerheit
