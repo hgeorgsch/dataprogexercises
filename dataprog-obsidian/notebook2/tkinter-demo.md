@@ -236,9 +236,49 @@ og ikkje skriving.
 
 ## Visa *pandas*-data
 
+Tekstboksen i vindauga over er primitiv og utan formattering.
+Sidan me har arbeidd mykje med data i pandas i dette kurset
+skal me sjå om me kan visa ein *DataFrame* pent.
+Då treng me 
+[pandastable](https://pandastable.readthedocs.io/en/latest/description.html).
+
+Det er ikkje sikkert `pandastable` er installert, so her køyrer
+me `pip` fyrst for å vera sikre.  Utropsteiknet `!` er ein sokalla
+*shell escape* som sender resten av lina til eit *shell*, dvs. same
+kommandotolk som me elles bruker i terminalvindauga.
+
 ```{code-cell} ipython3
 !pip install pandastable
+import pandas as pd
 import pandastable as pdtab
+```
+
+```{code-cell} ipython3
+:tags: [skip-execution]
+
+class PandaVindauga(tk.Tk):
+    def __init__(self):
+        super().__init__()
+        self.title( "Fildialogdøme" )
+        self.geometry("500x500")
+        btn = tk.Button(self, text = "Opna fil" ,
+             fg = "red", command=self.openFile)
+        btn.grid(column=2, row=3)
+        self.model = pdtab.TableModel()
+        self.table = Table(self, dataframe=self.mode )
+        self.table.grid(column=3, row=3)
+        self.table.show()
+        self.txt.grid(column=2, row=4)
+    def openFile(self):
+        filePath = askopenfilename( filetypes=[
+              ("Comma separated values", ".csv"),
+              ("All Files", "*.*")])
+
+        df = pd.read_csv( filePath )
+        self.model.setup(df)
+
+root = PandaVindauga()
+root.mainloop()
 ```
 
 ## Avrunding
