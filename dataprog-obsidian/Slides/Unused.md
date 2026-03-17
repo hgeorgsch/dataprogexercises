@@ -58,3 +58,12 @@ By Wright Brothers - Library of Congress, Public Domain,
 via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=2079536)
 :::
 
+---
+<!-- slide template="[[tpl-flex]]" bg="lightblue" -->
+
+![[MVC-Process.svg]]
+::: credit
+iBy RegisFrey - Own work, Public Domain,
+via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=10298177)
+:::
+
