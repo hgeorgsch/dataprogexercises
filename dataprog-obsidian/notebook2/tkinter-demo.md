@@ -264,14 +264,8 @@ class PandaVindauga(tk.Tk):
         btn.grid(column=2, row=3)
         self.frame = tk.Frame(self)
         self.frame.grid(column=2,row=4)
-        self.model = pdtab.TableModel.getSampleData()
-#        self.model.getSampleData()
-        print( self.model )
-        print( "self", type(self) )
-        self.table = pdtab.Table(self.frame, dataframe=self.model )
-        self.table.pack()
-        print( "table", self.table )
-        self.table.grid(column=3, row=3)
+        df = pdtab.TableModel.getSampleData()
+        self.table = pdtab.Table(self.frame, dataframe=df )
         self.table.show()
     def openFile(self):
         filePath = askopenfilename( filetypes=[
@@ -279,10 +273,31 @@ class PandaVindauga(tk.Tk):
               ("All Files", "*.*")])
 
         df = pd.read_csv( filePath )
-        self.model.setup(df)
+        self.table.model.df = df
+        self.table.redraw()
 
 root = PandaVindauga()
 root.mainloop()
 ```
 
+::: {admonition} Merknad
+Me kan skilja mellom model og *view* i dømet over, men 
+skiljet er ikkje særleg godt gjort.
+Datasettet vårt, *DataFrame*-objektet er ein modell.
+GUI-komponenten `Table` er eit *view* til modellen.
+
+I dette dømet har me sterk kopling mellom modellen og *view*et.
+Modellen eksisterer berre som ein attributt i modellen, slik at
+andre GUI-komponentar ikkje har tilgang til han.
+:::
+
 ## Avrunding
+
+Denne øvinga er berre meint å visa korleis ein kan setja saman nokre
+GUI-komponentar til eit grafisk vindauga.
+Når ein skal skriva eit skikkeleg program, bør ein absolutt flytta
+ut av Jupyter, og i dei fleste tilfelle dela prosjektet i fleire
+filer (modular).
+Ein treng ganske mange klasser for å holda orden når ein både skal
+handtera eit datasett og fleire GUI-komponentar som skal arbeida på
+det same datasettet.
