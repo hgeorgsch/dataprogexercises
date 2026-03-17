@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.19.1
+    jupytext_version: 1.17.0
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -158,11 +158,10 @@ class TekstVindauga(tk.Tk):
     def __init__(self):
         super().__init__()
         self.title( "Tekstdøme" )
-        self.geometry("500x500")
         btn = tk.Button(self, text = "Trykk her" ,
              fg = "red", command=self.callback)
         btn.grid(column=2, row=3)
-        self.txt = tk.Text(self, bg="white",width=200, height=150)
+        self.txt = tk.Text(self, bg="white",width=100, height=100)
         self.txt.grid(column=2, row=4)
     def callback(self):
         self.txt.insert(tk.INSERT, "No skjedde der noko!\n" )
@@ -190,7 +189,6 @@ class FilVindauga(tk.Tk):
     def __init__(self):
         super().__init__()
         self.title( "Fildialogdøme" )
-        self.geometry("500x500")
         btn = tk.Button(self, text = "Opna fil" ,
              fg = "red", command=self.openFile)
         btn.grid(column=2, row=3)
@@ -260,15 +258,21 @@ class PandaVindauga(tk.Tk):
     def __init__(self):
         super().__init__()
         self.title( "Fildialogdøme" )
-        self.geometry("500x500")
+
         btn = tk.Button(self, text = "Opna fil" ,
              fg = "red", command=self.openFile)
         btn.grid(column=2, row=3)
-        self.model = pdtab.TableModel()
-        self.table = Table(self, dataframe=self.mode )
+        self.frame = tk.Frame(self)
+        self.frame.grid(column=2,row=4)
+        self.model = pdtab.TableModel.getSampleData()
+#        self.model.getSampleData()
+        print( self.model )
+        print( "self", type(self) )
+        self.table = pdtab.Table(self.frame, dataframe=self.model )
+        self.table.pack()
+        print( "table", self.table )
         self.table.grid(column=3, row=3)
         self.table.show()
-        self.txt.grid(column=2, row=4)
     def openFile(self):
         filePath = askopenfilename( filetypes=[
               ("Comma separated values", ".csv"),
