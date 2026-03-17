@@ -26,4 +26,3 @@ ein kanskje klara å læra resten på eiga hand.
     + *Event*-handtering
 + *Tutorials* og øvingar
     + [](notebooks/tkinter-demo)
-+ *Demo* 
