@@ -85,14 +85,14 @@ Lat oss laga eit nytt vindauga med ein knapp, der me bruker
 ```{code-cell} ipython3
 :tags: [skip-execution]
 
-w = tk.Tk()
-w.title( "Testvindauga" )
+root = tk.Tk()
+root.title( "Testvindauga" )
 
-btn = tk.Button(w, text = "Trykk her" ,
+btn = tk.Button(root, text = "Trykk her" ,
              fg = "red", command=callback)
 btn.grid(column=1, row=0)
 
-w.mainloop()
+root.mainloop()
 ```
 
 Her definerer me ein knapp som er ein instans av klassa `Button`.
@@ -105,3 +105,140 @@ Skjer der noko anna om du trykker fleire gongar?
 
 Legg merke til at knappen ikkje dukkar opp utan ein geometrihandsamar.  Her har me brukt `grid` som er greitt
 for å leggja til fleire element i eit rutenett.
+
++++
+
+## Eigne klasser
+
+Det første dømet hadde berre to grafiske element, rotvindauga og knappen.
+Nyttige program har langt fleire, og det vert lett rot.
+Det er god skikk å laga eigne klasser for kvart vindauga.
+Det kan sjå slik ut
+
+```{code-cell} ipython3
+:tags: [skip-execution]
+
+class Vindauga(tk.Tk):
+    def __init__(self):
+        super().__init__()
+        self.title( "Testvindauga" )
+        btn = tk.Button(self, text = "Trykk her" ,
+             fg = "red", command=self.callback)
+        btn.grid(column=1, row=0)
+    def callback(self):
+        print( "No skjedde der noko!" )
+root = Vindauga()
+root.mainloop()
+```
+
+Her lager me heilt enkelt ei eiga klasse som arvar `Tk` som me brukte i det fyrste dømet.
+Fordi `Vindauga` sjølv set opp alle elementa i vindauga og har `callback`-funksjonen som ein metode, får me samla all koden som høyrer til same vindauga på ein plass.
+
+Der er eitt nytt elemenet her som me (truleg) ikkje har sett før: 
+`super().__init__()`. 
+Ho kaller konstruktøren frå superklassa `Tk`, og dette er heilt
+kritisk for at `Vindauga` skal oppføra seg som eit `Tk`-vindauga.
+Det må gjerast før me kan bruka metodar som `title`.
+
+::: {admonition} Oppgåve
+Køyr kodeboksen over.  Skjer det same sist?
+:::
+
++++
+
+## Tekstboks i vindauga
+
+Det er litt teit at GUI-programmet vårt skriv i terminalen eller i *Notebook*.
+Me kan laga ein tekst-*widget* som viser teksta, og samstundes visa korleis me legg fleire *widgets* inn i vindauga vårt.
+
+```{code-cell} ipython3
+:tags: [skip-execution]
+
+class TekstVindauga(tk.Tk):
+    def __init__(self):
+        super().__init__()
+        self.title( "Tekstdøme" )
+        self.geometry("500x500")
+        btn = tk.Button(self, text = "Trykk her" ,
+             fg = "red", command=self.callback)
+        btn.grid(column=2, row=3)
+        self.txt = tk.Text(self, bg="white",width=200, height=150)
+        self.txt.grid(column=2, row=4)
+    def callback(self):
+        self.txt.insert(tk.INSERT, "No skjedde der noko!\n" )
+root = TekstVindauga()
+root.mainloop()
+```
+
+## Opna ei fil
+
+Biblioteket `tkinter` har *widgets* for det meste.
+For å få vindauga vårt til å gjera noko, kan me starta med
+å opna ei fil med `askopenfilename()`. Dette krev ein annan modul fro `tkinter`.
+
+```{code-cell} ipython3
+from tkinter.filedialog import askopenfilename
+```
+
+For å testa kan me skriva om klassa vår med ein ny *callback* som bruker
+`askopenfilename()`.
+
+```{code-cell} ipython3
+:tags: [skip-execution]
+
+class FilVindauga(tk.Tk):
+    def __init__(self):
+        super().__init__()
+        self.title( "Fildialogdøme" )
+        self.geometry("500x500")
+        btn = tk.Button(self, text = "Opna fil" ,
+             fg = "red", command=self.openFile)
+        btn.grid(column=2, row=3)
+        self.txt = tk.Text(self, bg="white",width=200, height=150)
+        self.txt.grid(column=2, row=4)
+    def openFile(self):
+        self.txt.delete('1.0', tk.END)
+        filePath = askopenfilename( filetypes=[
+              ("Comma separated values", ".csv"),
+              ("All Files", "*.*")])
+        with open(filePath, 'r') as askedFile:
+            fileContents = askedFile.read()
+
+        self.txt.insert(tk.INSERT, fileContents)
+
+root = FilVindauga()
+root.mainloop()
+```
+
+::: {admonition} Oppgåve
+Køyr vindauga og sjå om du finn ei fil du kan opna.
+Kva skjer?
+:::
+
+::: {admonition} Refleksjonsspørsmål
+Sjå over koden over.  Skjøner du kva alle linene gjer?
+:::
+
+::: {hint}
+Me har ikkje brukt konstruksjonen med `if open(...) ...` tidlegare.
+Me har stort sett brukt ferdige rutinar frå SciKitLearn og pandas.
+Her laster me råfila som ein streng utan å tolka han i det heile.
+Dette krev to steg. Fyrst må fila opnast, og so kan ho lesast.
+
+Konstruksjonen med `with` handterer ein del feil dersom `open()` ikkje
+lukkast med å opna fila.  Me kunne ha skrive `askedFile = open(filePath, 'r')`
+i staden, men det er god kotyme å bruka `with` på denne måten.
+Legg merke til modusen `'r'` som tyder at fila vert opna for lesing (r for *read*)
+og ikkje skriving.
+:::
+
++++
+
+## Visa *pandas*-data
+
+```{code-cell} ipython3
+!pip install pandastable
+import pandastable as pdtab
+```
+
+## Avrunding
