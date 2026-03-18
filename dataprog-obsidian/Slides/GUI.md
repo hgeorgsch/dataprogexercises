@@ -151,6 +151,10 @@ de blir endret.
 
 ---
 
+::: credit
+By Bild von bere von awstburg auf Pixabayhttps://pixabay.com/de/photos/die-dschungel-von-chiapas-1865639/ - https://pixabay.com/de/photos/die-dschungel-von-chiapas-1865639/Derivative work fromFile:Chiapas_Rainforest.jpg, CC0, https://commons.wikimedia.org/w/index.php?curid=105447521
+:::
+
 + *low coupling*
 + *high cohesion*
 
