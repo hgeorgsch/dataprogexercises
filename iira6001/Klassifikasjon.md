@@ -21,3 +21,11 @@ vel so mykje om djupare forståing for konsepta frå forrige veke.
   Eg reknar med at dei fleste har nok med dei gjennomarbeidde døma.
   Det er ikkje eit nederlag å droppa desse vidaregåande døma.
     + [](notebooks/SVM)
+
+## Læringsutbyte
+
+Målet for denne og forrige veke samla er
+1. Kjenna prinsippa for å læra frå data.
+2. Kunna bruka SciKitLearn til å tilpassa enkle prediksjonsmodellar.
+2. Ha eit kritisk forhold til prediksjonsmodellar, og vita korleis ein
+   kan testa og evaluera dei.
