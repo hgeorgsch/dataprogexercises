@@ -421,6 +421,7 @@ print(SEPARATOR)
     heiltal.
     Bruk listekomprehensjon til å definera ein variabel <code>listeut</code>
     som inneheld alle partala frå `listeinn`.
+    ]]></text>
     </questiontext>
     <generalfeedback format="markdown">
       <text>Me bruker listekomprehensjon, som er formen 
@@ -449,7 +450,7 @@ print(SEPARATOR)
     <useace></useace>
     <resultcolumns></resultcolumns>
     <template><![CDATA[import re
-    from random import randint
+from random import randint
 __student_answer__ = """{{ STUDENT_ANSWER | e('py') }}"""
 
 SEPARATOR = "#<ab@17943918#@>#"
