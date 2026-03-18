@@ -11,10 +11,13 @@
     </questiontext>
     <generalfeedback format="markdown">
     <text>
+    <![CDATA[
     Notasjonen for ein `dict` er med krøllparentesar.
     ```
     d = { "nykel1" : verdi1, "nykel2" : verdi2 }
     ```
+    ]]>
+    </text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.0000000</penalty>
@@ -49,7 +52,9 @@ print(SEPARATOR)
     <iscombinatortemplate></iscombinatortemplate>
     <allowmultiplestdins></allowmultiplestdins>
     <answer>
+      <text><![CDATA[
        d = { "kasserar" : "Ola Normann", "leiar" : "Kari Normann" }
+		]]></text>
     </answer>
     <validateonsave>1</validateonsave>
     <testsplitterre></testsplitterre>

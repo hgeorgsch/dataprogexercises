@@ -12,6 +12,7 @@
     <generalfeedback format="markdown">
     <text>
     Notasjonen for å referera eit element i ein `dict` er `d[nykel]`
+    </text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.0000000</penalty>
@@ -91,6 +92,7 @@ print(SEPARATOR)
                 <text>SHOW</text>
       </display>
     </testcase>
+    </testcases>
   </question>
 
   <question type="coderunner">
@@ -109,6 +111,7 @@ print(SEPARATOR)
     ```
     d[nykel] = ...
     ```
+    </text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.0000000</penalty>
@@ -145,7 +148,9 @@ print(SEPARATOR)
     <iscombinatortemplate></iscombinatortemplate>
     <allowmultiplestdins></allowmultiplestdins>
     <answer>
+    <text><![CDATA[
        styre["nestleiar"] = "John Øygard"
+    ]]></text>
     </answer>
     <validateonsave>1</validateonsave>
     <testsplitterre></testsplitterre>
@@ -194,7 +199,9 @@ print(SEPARATOR)
     </testcase>
       <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
       <testcode>
-                <text>print( styre["nestleiar"] )</text>
+      <text><![CDATA[
+      print( styre["nestleiar"] )
+		]]></text>
       </testcode>
       <stdin>
                 <text></text>
@@ -209,10 +216,11 @@ print(SEPARATOR)
                 <text>SHOW</text>
       </display>
     </testcase>
-    </testcase>
       <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
       <testcode>
-                <text>print( styre["leiar"] )</text>
+      <text><![CDATA[
+      print( styre["leiar"] )
+		]]></text>
       </testcode>
       <stdin>
                 <text></text>
