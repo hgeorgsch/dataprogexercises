@@ -350,6 +350,104 @@ print(SEPARATOR)
     </testcases>
   </question>
 
+<!-- question: 691977  -->
+  <question type="coderunner">
+    <name>
+      <text>dict-loop</text>
+    </name>
+    <questiontext format="markdown">
+      <text><![CDATA[Der er ein førehandsdefinert variabel `styre` der nyklane er roller og verdiane er namn.
+Skriv ut kvart element på ei eiga line på formen "rolle: namn".]]></text>
+    </questiontext>
+    <generalfeedback format="markdown">
+      <text></text>
+    </generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber></idnumber>
+    <coderunnertype>python3</coderunnertype>
+    <prototypetype>0</prototypetype>
+    <allornothing>1</allornothing>
+    <penaltyregime>0</penaltyregime>
+    <precheck>0</precheck>
+    <hidecheck>0</hidecheck>
+    <showsource>0</showsource>
+    <answerboxlines>18</answerboxlines>
+    <answerboxcolumns>100</answerboxcolumns>
+    <answerpreload></answerpreload>
+    <globalextra></globalextra>
+    <useace></useace>
+    <resultcolumns></resultcolumns>
+    <template><![CDATA[import re
+
+__student_answer__ = """{{ STUDENT_ANSWER | e('py') }}"""
+
+SEPARATOR = "#<ab@17943918#@>#"
+styre = { "kasserar" : "Ola Normann", "leiar" : "Kari Normann" }
+facit = styre.copy()
+facit["nestleiar"] = "John Øygard"
+{{ STUDENT_ANSWER }}
+
+{% for TEST in TESTCASES %}
+{{ TEST.testcode }}
+{% if not loop.last %}
+print(SEPARATOR)
+{% endif %}
+{% endfor %}]]></template>
+    <iscombinatortemplate></iscombinatortemplate>
+    <allowmultiplestdins></allowmultiplestdins>
+    <answer><![CDATA[for rolle, namn in styre.items():
+    print( f"{rolle}: {namn}" )]]></answer>
+    <validateonsave>1</validateonsave>
+    <testsplitterre></testsplitterre>
+    <language></language>
+    <acelang></acelang>
+    <sandbox></sandbox>
+    <grader></grader>
+    <cputimelimitsecs></cputimelimitsecs>
+    <memlimitmb></memlimitmb>
+    <sandboxparams></sandboxparams>
+    <templateparams></templateparams>
+    <hoisttemplateparams>1</hoisttemplateparams>
+    <extractcodefromjson>1</extractcodefromjson>
+    <templateparamslang>None</templateparamslang>
+    <templateparamsevalpertry>0</templateparamsevalpertry>
+    <templateparamsevald>{}</templateparamsevald>
+    <twigall>0</twigall>
+    <uiplugin></uiplugin>
+    <uiparameters></uiparameters>
+    <attachments>0</attachments>
+    <attachmentsrequired>0</attachmentsrequired>
+    <maxfilesize>10240</maxfilesize>
+    <filenamesregex></filenamesregex>
+    <filenamesexplain></filenamesexplain>
+    <displayfeedback>1</displayfeedback>
+    <giveupallowed>0</giveupallowed>
+    <prototypeextra></prototypeextra>
+    <testcases>
+      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
+      <testcode>
+                <text>    </text>
+      </testcode>
+      <stdin>
+                <text></text>
+      </stdin>
+      <expected>
+                <text>kasserar: Ola Normann
+leiar: Kari Normann
+</text>
+      </expected>
+      <extra>
+                <text></text>
+      </extra>
+      <display>
+                <text>SHOW</text>
+      </display>
+    </testcase>
+    </testcases>
+  </question>
+
 <!-- question: 691973  -->
   <question type="coderunner">
     <name>
