@@ -1,100 +1,3 @@
-<!-- question: 691880  -->
-  <question type="coderunner">
-    <name>
-      <text>dict-index-01</text>
-    </name>
-    <questiontext format="html">
-    <text><![CDATA[
-    Der er ein førehandsdefinert variabel `styre`.
-    Skriv ut verdien åt `"leiar"` frå denne variabelen.
-    ]]></text>
-    </questiontext>
-    <generalfeedback format="markdown">
-    <text>
-    Notasjonen for å referera eit element i ein `dict` er `d[nykel]`
-    </text>
-    </generalfeedback>
-    <defaultgrade>1.0000000</defaultgrade>
-    <penalty>0.0000000</penalty>
-    <hidden>0</hidden>
-    <idnumber></idnumber>
-    <coderunnertype>python3</coderunnertype>
-    <prototypetype>0</prototypetype>
-    <allornothing>1</allornothing>
-    <penaltyregime>0</penaltyregime>
-    <precheck>0</precheck>
-    <hidecheck>0</hidecheck>
-    <showsource>0</showsource>
-    <answerboxlines>18</answerboxlines>
-    <answerboxcolumns>100</answerboxcolumns>
-    <answerpreload></answerpreload>
-    <globalextra></globalextra>
-    <useace></useace>
-    <resultcolumns></resultcolumns>
-    <template><![CDATA[import re
-{{ STUDENT_ANSWER }}
-
-__student_answer__ = """{{ STUDENT_ANSWER | e('py') }}"""
-
-SEPARATOR = "#<ab@17943918#@>#"
-styre = { "kasserar" : "Ola Normann", "leiar" : "Kari Normann" }
-{% for TEST in TESTCASES %}
-{{ TEST.testcode }}
-{% if not loop.last %}
-print(SEPARATOR)
-{% endif %}
-{% endfor %}]]></template>
-    <iscombinatortemplate></iscombinatortemplate>
-    <allowmultiplestdins></allowmultiplestdins>
-    <answer>
-    print( styre["leiar"] )
-    </answer>
-    <validateonsave>1</validateonsave>
-    <testsplitterre></testsplitterre>
-    <language></language>
-    <acelang></acelang>
-    <sandbox></sandbox>
-    <grader></grader>
-    <cputimelimitsecs></cputimelimitsecs>
-    <memlimitmb></memlimitmb>
-    <sandboxparams></sandboxparams>
-    <templateparams></templateparams>
-    <hoisttemplateparams>1</hoisttemplateparams>
-    <extractcodefromjson>1</extractcodefromjson>
-    <templateparamslang>None</templateparamslang>
-    <templateparamsevalpertry>0</templateparamsevalpertry>
-    <templateparamsevald>{}</templateparamsevald>
-    <twigall>0</twigall>
-    <uiplugin></uiplugin>
-    <uiparameters></uiparameters>
-    <attachments>0</attachments>
-    <attachmentsrequired>0</attachmentsrequired>
-    <maxfilesize>10240</maxfilesize>
-    <filenamesregex></filenamesregex>
-    <filenamesexplain></filenamesexplain>
-    <displayfeedback>1</displayfeedback>
-    <giveupallowed>0</giveupallowed>
-    <prototypeextra></prototypeextra>
-    <testcases>
-      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
-      <testcode>
-      </testcode>
-      <stdin>
-                <text></text>
-      </stdin>
-      <expected>
-                <text>Ola Normann</text>
-      </expected>
-      <extra>
-                <text></text>
-      </extra>
-      <display>
-                <text>SHOW</text>
-      </display>
-    </testcase>
-    </testcases>
-  </question>
-
   <question type="coderunner">
     <name>
       <text>dict-index-02</text>
@@ -106,12 +9,12 @@ print(SEPARATOR)
     ]]></text>
     </questiontext>
     <generalfeedback format="markdown">
-    <text>
+    <text><![CDATA[
     Notasjonen for å tilordna eit element i ein `dict` er
     ```
     d[nykel] = ...
     ```
-    </text>
+    ]]></text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.0000000</penalty>
@@ -148,9 +51,7 @@ print(SEPARATOR)
     <iscombinatortemplate></iscombinatortemplate>
     <allowmultiplestdins></allowmultiplestdins>
     <answer>
-    <text><![CDATA[
-       styre["nestleiar"] = "John Øygard"
-    ]]></text>
+    <![CDATA[styre["nestleiar"] = "John Øygard"]]>
     </answer>
     <validateonsave>1</validateonsave>
     <testsplitterre></testsplitterre>
@@ -187,8 +88,7 @@ print(SEPARATOR)
                 <text></text>
       </stdin>
       <expected>
-                <text><![CDATA[<class 'dict'>
-]]></text>
+                <text><![CDATA[<class 'dict'>]]></text>
       </expected>
       <extra>
                 <text></text>

@@ -1,23 +1,18 @@
 <!-- question: 691880  -->
   <question type="coderunner">
     <name>
-      <text>dict-define</text>
+      <text>dict-index-01</text>
     </name>
     <questiontext format="html">
     <text><![CDATA[
-    Definer ein variabel `d` som skal vera ein `dict` med to felt:
-    `kasserar` skal vera lik `"Ola Normann"` og `leiar` skal vera lik `"Kari Normann"`.
+    Der er ein førehandsdefinert variabel `styre`.
+    Skriv ut verdien åt `"leiar"` frå denne variabelen.
     ]]></text>
     </questiontext>
     <generalfeedback format="markdown">
-    <text>
-    <![CDATA[
-    Notasjonen for ein `dict` er med krøllparentesar.
-    ```
-    d = { "nykel1" : verdi1, "nykel2" : verdi2 }
-    ```
-    ]]>
-    </text>
+    <text><![CDATA[
+    Notasjonen for å referera eit element i ein `dict` er `d[nykel]`
+    ]]></text>
     </generalfeedback>
     <defaultgrade>1.0000000</defaultgrade>
     <penalty>0.0000000</penalty>
@@ -42,7 +37,7 @@
 __student_answer__ = """{{ STUDENT_ANSWER | e('py') }}"""
 
 SEPARATOR = "#<ab@17943918#@>#"
-facit = { "kasserar" : "Ola Normann", "leiar" : "Kari Normann" }
+styre = { "kasserar" : "Ola Normann", "leiar" : "Kari Normann" }
 {% for TEST in TESTCASES %}
 {{ TEST.testcode }}
 {% if not loop.last %}
@@ -52,7 +47,7 @@ print(SEPARATOR)
     <iscombinatortemplate></iscombinatortemplate>
     <allowmultiplestdins></allowmultiplestdins>
     <answer>
-      <![CDATA[d = { "kasserar" : "Ola Normann", "leiar" : "Kari Normann" }]]>
+    <![CDATA[print( styre["leiar"] )]]>
     </answer>
     <validateonsave>1</validateonsave>
     <testsplitterre></testsplitterre>
@@ -83,14 +78,13 @@ print(SEPARATOR)
     <testcases>
       <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
       <testcode>
-                <text>print(type(d))</text>
+                <text></text>
       </testcode>
       <stdin>
                 <text></text>
       </stdin>
       <expected>
-                <text><![CDATA[<class 'dict'>
-]]></text>
+                <text>Ola Normann</text>
       </expected>
       <extra>
                 <text></text>
@@ -99,22 +93,7 @@ print(SEPARATOR)
                 <text>SHOW</text>
       </display>
     </testcase>
-      <testcase testtype="0" useasexample="0" hiderestiffail="0" mark="1.0000000" >
-      <testcode>
-                <text>print( d == facit )</text>
-      </testcode>
-      <stdin>
-                <text></text>
-      </stdin>
-      <expected>
-                <text>True</text>
-      </expected>
-      <extra>
-                <text></text>
-      </extra>
-      <display>
-                <text>HIDE_IF_FAIL</text>
-      </display>
-    </testcase>
     </testcases>
   </question>
+
+
