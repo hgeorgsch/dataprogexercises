@@ -7,17 +7,17 @@ tags:
 Andreas: andreas.h.schille@ntnu.no
 
 + [[Module Portfolio]]
-+ [[Project Management]] (budsjett og rekneskap)
++ [[Project Management 2025-26]] (budsjett og rekneskap)
 + [[Emneadministrasjon]]
 + [[Praktiske tips og tekniske løysingar]]
 + [[Unused images]]
 + [[Budsjett IIRA6001 Steady State]]
-+ [[Noteboks i boka]]
++ [[Notebooks i boka]]
 
 
 
 + Føredrag
-	+ [[Slides]]
+	+ [[SlideOverview]]
 	+ [Panopto recordings](https://ntnu.cloud.panopto.eu/Panopto/Pages/Sessions/List.aspx?folderID=1ed05bcf-ae8f-429a-8c25-b330009a4114)
 	+ [Panopto Tool Login](https://ntnu.cloud.panopto.eu/)
 	+ [Videoes published in Panopto](https://ntnu.cloud.panopto.eu/Panopto/Pages/Sessions/List.aspx#folderID=%224b14e494-1e6f-432b-88ac-b3ed00d06ccd%22)
