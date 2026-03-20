@@ -18,7 +18,7 @@ Elles tek eg imot innspel, ynskjer og behov.
     + introdusera programmering utanfor Jupyter
 + **Stad:** NTNU i Ålesund, 
   [Brua](https://link.mazemap.com/vdbzfWlm) i Kompasset (K-bygget), 3. etasje.
-+ **Dato:** Onsdag 25. og Torsdag 26. februar 2026.
++ **Dato:** Onsdag 23. og Torsdag 23. april 2026.
 + **Førebuing** 
     + Alle skal presentera eitt arbeid som kan inngå i mappa.
       Presentasjonen er munnleg i plenum.
