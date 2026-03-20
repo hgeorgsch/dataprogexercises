@@ -1,20 +1,32 @@
 Hans-Georg: Desse filene er duplikat av filer som ligg andre plassar i ipynb-format.
 
-Jonas: Disse filene er ikke lenger duplikat av filer som ligger andre plasser i ipynb-format.
-For å få kopiert ipynb i fornuftig versjonskontroll OG at de ikke kjøres etter at de er «ferdigstilte» (for sletting/vasking av API-nøkler client_secret nøkler osv) gjøres følgdende:
+Jonas: Disse filene er ikke lenger bare duplikater av filer som ligger andre steder i `.ipynb`-format.
+
+Mappen `notebook-norun/` inneholder MyST-markdownfiler (`.md`) som er versjonskontrollert i Git. 
+Til disse finnes det også lokale `.ipynb`-filer som **ikke** skal versjonskontrolleres, men som kan inneholde ferdig kjørte outputs (grafer, tabeller, DataFrame-visninger osv.).
+
+Poenget med denne løsningen er:
+
+- å ha ryddig versjonskontroll i Git ved å lagre notebook-innhold som Markdown
+- å kunne publisere notebooks med ferdige outputs
+- å unngå at enkelte notebooks kjøres på nytt under bygging av Jupyter Book
+- å kunne ferdigstille undervisningseksempler som inneholder API-nøkler, `client_secret` osv., og deretter rotere/slette disse etter publisering
+
+## Viktig om Jupytext
+
+MyST-markdown **lagrer ikke outputs i selve `.md`-fila**. Outputs ligger i den tilhørende `.ipynb`-fila.
+
+Når vi synkroniserer med Jupytext, er det derfor viktig å **beholde den kjørte `.ipynb`-fila**, siden det er den som inneholder outputs.
+
+Typisk kommando er:
+
 ```bash
-jupytext --set-formats md:myst,ipynb --opt sync_outputs=true min_notebook.ipynb
+jupytext --sync min_notebook.ipynb
 ```
 
-myst:markdown er laget for jupyter-notebook med outputs og metadata om kernel, tags som skip-execution osv.
-Med --opt sync_outputs=true lagres også genererte grafer/figurer/dataframes i output som b64-tekst.
-Det gjør versjonskontroll mer grisete, men betraktelig bedre enn ren ipynb, og lar oss konvertere til ipynb uten kjøring.
+Ved første ipynb->md
+```bash
+jupytext --set-formats ipynb,md:myst example.ipynb
+```
 
-Filene kopieres til "norun/" i jupyterbooks i "nbinstall-norun.sh" og i _config.yml er norun gitt som mappe hvor ipynb ikke skal kjøres
-
-
-
-
-
-
-
+(README delvis generert av KI)
