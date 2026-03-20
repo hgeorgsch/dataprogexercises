@@ -1,19 +1,18 @@
 ---
-jupyter:
-  jupytext:
-    formats: ipynb,md
-    text_representation:
-      extension: .md
-      format_name: markdown
-      format_version: '1.3'
-      jupytext_version: 1.18.1
-  kernelspec:
-    display_name: Python 3 (ipykernel)
-    language: python
-    name: python3
+jupytext:
+  formats: md:myst,ipynb
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.18.1
+kernelspec:
+  display_name: Python 3 (ipykernel)
+  language: python
+  name: python3
 ---
 
-```python
+```{code-cell} ipython3
 from pyjstat import pyjstat
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -26,11 +25,10 @@ Eurostat har flere typer web-api:
 - **sdmx 2.1, sdmx 3:**  Proffe og krafitge standarder for utveksling av statistisk data 
 - **catalogue api:** API til å søke gjennom og finne dataset
 
-```python
+```{code-cell} ipython3
 
 ```
 
-<!-- #region -->
 ## Statistics
 - Vi velger å se på *statistics* apiet
 
@@ -50,10 +48,12 @@ Eurostat har også en «statistikkbank» vi kan bla i for å se på dataene og v
 
 Dersom man vil bla gjennom datasettene, hente ut metadata og bygge spørringen helt fra scratch i python må man ta i bruk det mer avanserte sdmx 3 APIet.
 Det er en kraftig standard 
-<!-- #endregion -->
+
++++
 
 
 
++++
 
 *Oversiktstabeller generert av chat-gpt*
 
@@ -72,10 +72,11 @@ Det er en kraftig standard
 [1]: https://ec.europa.eu/eurostat/web/user-guides/data-browser/api-data-access/api-detailed-guidelines/api-statistics?utm_source=chatgpt.com "Detailed guidelines - API Statistics - User guides - Eurostat"
 [2]: https://ec.europa.eu/eurostat/web/user-guides/data-browser/api-data-access/api-getting-started?utm_source=chatgpt.com "API - Getting started - User guides - Eurostat"
 
-
++++
 
 ## Spesialfilter
 
++++
 
 Eurostat har egne spesialfilter på tid og sted (geo) som fungerer litt annerledes enn bare `dimensjon=verdi`
 ### Tid
@@ -107,8 +108,8 @@ Eurostat har egne spesialfilter på tid og sted (geo) som fungerer litt annerled
 
 [1]: https://ec.europa.eu/eurostat/web/user-guides/data-browser/api-data-access/api-detailed-guidelines/api-statistics?utm_source=chatgpt.com "Detailed guidelines - API Statistics - User guides - Eurostat"
 
++++
 
-<!-- #region -->
 Vi begynner med å laste ned lenke rett fra eurostats «statistikkbank»
 
 
@@ -116,9 +117,8 @@ Vi begynner med å laste ned lenke rett fra eurostats «statistikkbank»
 :align: center
 :::
 Trykk og velg ut statistikkvariabler i utforskeren, og når du er fornøyd kan du trykke «download» velge format «json_stat» og kopiere «API-lenken»
-<!-- #endregion -->
 
-```python
+```{code-cell} ipython3
 # Hent fra downloads
 url = "https://ec.europa.eu/eurostat/api/dissemination/sdmx/3.0/data/dataflow/ESTAT/lfsq_urgan$defaultview/1.0?compress=false&format=json&lang=en"
 
@@ -127,7 +127,6 @@ df = dataset.write("dataframe")
 df
 ```
 
-<!-- #region -->
 
 
 ::: {image} eurostat_kode.png
@@ -136,31 +135,33 @@ df
 
 
 Skal vi bygge API-lenken fra bunnen av, setter vi bare inn datasetkoden inn i url-strukturen slik den er vist helt øverst. Bildet over viser datasetkoden under hovedtittelen på datasettet på redigeringssiden, men det dukker opp de fleste steder. Standardparametere er format (vi anbefaler json) og lang=EN. 
-<!-- #endregion -->
 
-```python
+```{code-cell} ipython3
 #Bygg selv fra bunn av
 # Standard url
 url = "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/lfsq_urgan?format=JSON&lang=EN"
 
 
-response = requests.get(url, params=params)
+response = requests.get(url)
 response.raise_for_status()
 dataset = pyjstat.Dataset.read(response.text)
 df = dataset.write("dataframe")
-
+df
 ```
 
-<!-- #region -->
+Her ser vi at datasettet inneholder drøye 2.5 millioner rader, og vi kan òg merke at det tar en del tid å laste det ned fra Eurostat.
+Dersom vi ikke har behov for alle datene, vil det kunne lønne seg å gjøre filtreringer i spørringen vår, heller enn å laste inn alt og fjerne det vi ikke trenger.
+
++++
+
 ::: {tip} Hvilke data har vi?
 En god funksjon å bruke når vi prøver å få oversikt over hvilke data vi har tilgjengelig er:
 ```python
 df["Statistisk variabel"].unique()
 ```
 som gir deg de ulike (unike) verdiene i kolonnen
-<!-- #endregion -->
 
-```python
+```{code-cell} ipython3
 #df["Age class"].unique()
 #df["Country of citizenship"].unique()
 #df["Geopolitical entity (reporting)"].unique() 
@@ -183,22 +184,19 @@ For alder og statsborgerskap skal vi bare velge 1 verdi *MEN*: Dataframet vårt 
 df_id = dataset.write("dataframe", naming="id")
 ```
 
-
-```python
+```{code-cell} ipython3
 df = dataset.write("dataframe", naming="id")
 df
 ```
 
-<!-- #region -->
 I dette tilfellet klarer vi faktisk å lese ut at vi skal filtrere for `age=Y15-74` og `citizen=TOTAL`, men det er ikke sikkert dette alltid er like lett, eller lar seg gjøre. Vi kan i datavisningen til eurostat også trykke «customize your dataset», og lese ut id-kodene vi trenger
 
 
 ::: {image} eurostat_customize.png
 :align: center
 :::
-<!-- #endregion -->
 
-```python
+```{code-cell} ipython3
 #Bygg filter, på alder, statsborgerskap og siste 3 år. Be om kun land.
 
 url = "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/lfsq_urgan?format=JSON&lang=EN"
@@ -209,15 +207,13 @@ response = requests.get(url, params=params)
 response.raise_for_status()
 dataset = pyjstat.Dataset.read(response.text)
 df = dataset.write("dataframe")
-
 ```
 
-```python
+```{code-cell} ipython3
 #Vis
 df
 ```
 
-<!-- #region -->
 ## Anbefalt: Query builder
 
 Eurostat har som sagt et supert verktøy som lar deg bygge spørringen: [](https://ec.europa.eu/eurostat/web/query-builder/tool)
@@ -228,9 +224,8 @@ Eurostat har som sagt et supert verktøy som lar deg bygge spørringen: [](https
 :::
 
 Her velger vi ut filtreringene vi vil ha, og trykker «generate query» for å få en lenke. Merk at denne er annerledes enn url vi fikk fra «Download»-metoden; Den bruker nemlig statistics-apiet, hvilket betyr at vi kan redigere med python som lenger oppe.
-<!-- #endregion -->
 
-```python
+```{code-cell} ipython3
 # Url bygget med "query builder"
 url = "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/lfsq_urgan?format=JSON&lastTimePeriod=12&geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&geo=IS&geo=NO&geo=CH&geo=UK&geo=BA&geo=ME&geo=MK&geo=RS&geo=TR&unit=PC&sex=F&sex=M&sex=T&age=Y15-74&citizen=TOTAL&lang=EN"
 
@@ -246,10 +241,11 @@ df_tool
 4. Send spørringen med `requests.get` og les det inn med pyjstat til pandas
 :::
 
++++
 
 ### Noen raske eksempler
 
-```python
+```{code-cell} ipython3
 #Plot arbeidsledighet i norden
 df1 = df[["Time", "Sex", "Geopolitical entity (reporting)", "value"]].copy()
 df1["Time"] = pd.PeriodIndex(df1["Time"], freq="Q")
@@ -268,7 +264,7 @@ for navn , gruppe in gruppering:
 plt.title("Arbeidsledighet i norden")
 ```
 
-```python
+```{code-cell} ipython3
 # Arbeidsledighet, stolpe m kjønn for Finland
 
 df_fin = df1 [  ~(df1["Sex"] == "Total")
@@ -286,4 +282,3 @@ df_fin.pivot(index="Time", columns="Sex", values="value").plot.bar(stacked=True)
 3. Gjør noe egnet statistikk eller visualiseringer av dataene (etter eget ønske)
 
 :::
-
