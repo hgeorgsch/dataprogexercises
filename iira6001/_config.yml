@@ -5,7 +5,7 @@ author: Hans Georg Schaathun og Jonas Julius Harang
 copyright: "2025"
 logo: ntnu.svg
 execute:
-  execute_notebooks: auto
+  execute_notebooks: cache
   timeout: 420 
   exclude_patterns:
     - "norun/*"            # This skips execution for everything in that folder
