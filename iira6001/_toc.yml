@@ -81,6 +81,7 @@ chapters:
       - file: notebooks/requests-trimmed
       - file: notebooks/JSON json_stat og eksempler
       - file: notebooks/ssb-api
+      - file: notebooks/Eurostat-API
       - file: norun/spotify-auth
       - file: notebooks/chatgpt_api
   - file: midway
