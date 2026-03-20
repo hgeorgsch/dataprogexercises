@@ -42,8 +42,6 @@ svar = requests.post(url, headers=header_felt, json=payload)
 svar.raise_for_status()
 ```
 
-
-
 ```{code-cell} ipython3
 #Vis output
 data = svar.json()
@@ -56,8 +54,8 @@ Det kan være vanskelig å sette seg inn i et web-api, og ofte finnes det python
 
 +++
 
-::: {tip} API-nøkkel som systemvariabel
-:class: dropdown
+::: {admonition} API-nøkkel som systemvariabel
+:class: dropdown tip
 
 Å lagre API-nøkler som systemvariabler er en "best practice" for å unngå å hardkode sensitive nøkler direkte i kildekoden din.
 
@@ -172,7 +170,6 @@ data = json.loads(response.output_text)
 ```
 
 ```{code-cell} ipython3
-
 data.keys()
 ```
 
