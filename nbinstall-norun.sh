@@ -7,7 +7,7 @@ do
 
   for i in $T/*.md 
   do
-    jupytext --from md_myst --to notebook "$i" 
+    jupytext --update --to notebook "$i" 
   done
 
   cp $T/*.csv $D
