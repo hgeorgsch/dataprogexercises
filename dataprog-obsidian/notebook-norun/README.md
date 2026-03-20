@@ -30,3 +30,15 @@ jupytext --set-formats ipynb,md:myst example.ipynb
 ```
 
 (README delvis generert av KI)
+
+
+## NB
+
+For noen ipynb er markdown ikke nok til å rekonstruere ipynb (feks API-nøkler fjernet/rotert). Disse må i så tilfelle deles utenom.
+(kopier inn fra iira6001 katalog, feks)
+
+Dette gjelder:
+   - spotify-auth
+   - chatgpt-api
+
+I andre tilfeller ønsker vi å ikke kjøre notebook fordi det er tidkrevende (store/mange api-spørringer)
