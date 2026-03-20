@@ -32,4 +32,6 @@ title: Web API og JSON
        + [Video](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=fa9c8525-dc16-493e-a75d-b41300b984fc)
    + [Spotify: Autentisering med OAuth](norun/spotify-auth)
        + [Video, Autentisering](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=e2270f34-9c35-4cc0-9da3-b41300b984bb)
-       + [Video, Bruk av tokens](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=e2270f34-9c35-4cc0-9da3-b41300b984bb)
+       + [Video, Bruk av tokens](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=a243849e-920a-4f64-a831-b41300b983e5)
+   + [Spotify: Audio-Analyse, API og pandas](norun/spotify-audio-analyse)
+       + [Video, **NB** lang](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=2f573713-a315-47b7-b74d-b41300b983c1)
