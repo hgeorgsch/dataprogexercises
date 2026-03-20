@@ -324,7 +324,7 @@ response = requests.put(url_play, json=body, headers=headers)
 response.text
 ```
 
-::: {admonition} Oppgaver
+:::: {admonition} Oppgaver
 :class: note
 
 1. Viktigste oppgave her er å lese gjennom *OAuth* sin *Authorization Code*-flyt på spotify: [getting started](https://developer.spotify.com/documentation/web-api)
@@ -334,4 +334,12 @@ response.text
 5. Få oversikt over strukturen og print ut info om dine top 5 
 
 Det skulle ikke være nødvendig med spotiy-premium til disse oppgavene
+::: {admonition} Trenger du et hint?
+:class: tip dropdown
+Koden for selve API-kallet vil se omtrent slik ut:
+`sok_data = spotify_get("/search", params={"q": "Ditt Artistnavn", "type": "track", "limit": 10})`
+Når du skal normalisere det, prøv: `pd.json_normalize(sok_data, record_path=["tracks", "items"])`
 :::
+
+
+::::
