@@ -7,7 +7,10 @@ logo: ntnu.svg
 execute:
   execute_notebooks: auto
   timeout: 420 
+  exclude_patterns:
+    - "norun/*"            # This skips execution for everything in that folder
 
+    
 # Add a bibtex file so that we can create citations
 bibtex_bibfiles:
   - hgs.bib
