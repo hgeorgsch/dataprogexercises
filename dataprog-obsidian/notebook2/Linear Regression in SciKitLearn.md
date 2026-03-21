@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.18.1
+    jupytext_version: 1.19.1
 kernelspec:
   name: dataprog
   language: python
@@ -131,10 +131,23 @@ print(diabetes.target[:3])
 print(diabetes.data[:3,:])
 ```
 
+::: {admonition} Merknad
+Tabellformatet her er det same som me kjenner frå pandas.
+Kvar rad i `data` er eitt objekt/individ, og kvar søyle er ein observert variabel.
+Måltabellen `target` er eindimensjonal og svarer dermed til ein `Series` i pandas.
+Me kunne laga ein *DataFrame* med heile datasettet slik 
+```python
+import pandas as pd
+df = pd.DataFrame(diabetes.data)
+df["target"] = pd.Series(diabetes.target)
+```
+:::
+
 ::: {hint}
 Datatypen åt `diabetes.data` og `diabetes.target` er `numpy` *array*.
 Sjå [numpy](./numpy.ipynb)-øvinga for meir informasjon.
 :::
+
 
 ::: {admonition} Merknad
 Datasettet er skalert og normalisert.  Det har ein del føremonar for
@@ -162,6 +175,7 @@ Kva tyder dei ulike søylene?
 Normalt bruker ein fleire *input*-variablar i modellen, men for å
 kunna visualisera han pent i 2D, skal me berre bruke éin.
 T.d. kan me ta ut den tredje søyla.
+
 
 ```{code-cell} ipython3
 import numpy as np
