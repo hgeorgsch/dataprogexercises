@@ -84,6 +84,7 @@ chapters:
       - file: notebooks/ssb-api
       - file: norun/Eurostat-API.ipynb
       - file: norun/spotify-auth
+      - file: norun/spotify-audio-analyse
       - file: norun/chatgpt_api
   - file: midway
   - file: second
