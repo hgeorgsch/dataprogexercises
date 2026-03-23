@@ -99,7 +99,7 @@ chapters:
       - file: notebooks/hypothesistest
       - file: notebooks/Iris-Statistics.ipynb
       - file: notebooks/sklearn-demo-empty
-      - file: notebooks/sklearn-demo
+      - file: norun/sklearn-demo
     - file: Klassifikasjon
       sections:
       - file: notebooks/Fisher Linear Discriminant in sklearn
