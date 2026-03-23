@@ -32,8 +32,9 @@ Målet denne veka er
 	+ [Evaluering av regresjonsmodellen](notebooks/Evaluering%20for%20regresjon)
     + [](notebooks/scikitlearn)  (valfri)
 + *Demo* 
-	+ [[Maskinlæringsbibliotek]]
-    + regresjon og korrelasjon i pandas:
+	+ SciKitLearn
+        + [Oppgåver til demonstrasjonen](notebooks/sklearn-demo-empty)
+        + [Løysingar frå demonstrasjonen](norun/sklearn-demo)
 + *Meir avanserte øvingar*
     + [](notebooks/matrix) gjev litt meir innføring i `numpy` for dei som
       har eit positivt forhold til matriserekning i matematikken

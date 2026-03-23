@@ -3,6 +3,7 @@
 # from markdown.
 
 TS="dataprog-obsidian/notebook/ exercises/Genetikk/ exercises/Jordskjelv/"
+TSN="dataprog-obsidian/notebook-norun/"
 DS="iira6001/notebooks/"
 R=`pwd`
 
@@ -11,6 +12,10 @@ do
    sh nbinstall.sh $T
 done
 
+for T in $TSN
+do
+   sh nbinstall-norun.sh $T
+done
 
 ( cd iira6001 ; sh make.sh )
 
