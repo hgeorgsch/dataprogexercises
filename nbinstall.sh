@@ -4,12 +4,12 @@ D="iira6001/notebooks/"
 
 for T 
 do
-
-  for i in $T/*.md 
+   
+  for i in "$T"/*.md
   do
-    jupytext --to notebook --execute "$i" 
+    [ -e "$i" ] || continue
+    jupytext --to notebook "$i"
   done
-
   cp $T/*.csv $D
   cp $T/*.txt $D
   cp $T/*.json $D

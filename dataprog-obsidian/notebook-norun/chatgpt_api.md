@@ -1,28 +1,27 @@
 ---
-jupyter:
-  jupytext:
-    formats: ipynb,md
-    text_representation:
-      extension: .md
-      format_name: markdown
-      format_version: '1.3'
-      jupytext_version: 1.19.1
-  kernelspec:
-    display_name: Python 3 (ipykernel)
-    language: python
-    name: python3
+jupytext:
+  formats: ipynb,md:myst
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.18.1
+kernelspec:
+  display_name: Python 3 (ipykernel)
+  language: python
+  name: python3
 ---
 
 # WebAPI: OpenAI
 
++++
 
 For å bruke chatgpt sitt webapi må vi
 1. Opprette konto
 2. Generere en *API-nøkkel* på et prosjekt
 3. Legge inn betalingsmiddel og "kreditt" til nøkkelen
 
-
-```python
+```{code-cell} ipython3
 import requests, json
 # Lag apinøkkel, finn url og send spørring med requests
 
@@ -41,12 +40,9 @@ payload = {
 
 svar = requests.post(url, headers=header_felt, json=payload)
 svar.raise_for_status()
-
 ```
 
-
-
-```python
+```{code-cell} ipython3
 #Vis output
 data = svar.json()
 print(data["output"][1]["content"][0]["text"])
@@ -56,10 +52,10 @@ print(data["output"][1]["content"][0]["text"])
 
 Det kan være vanskelig å sette seg inn i et web-api, og ofte finnes det python-pakker som er lettere å lære å bruke. Dokumentasjonen på openai, antar også at du bruker det offisielle biblioteket når du buker python og web-api-et deres. Dersom du ikke vil eller kan bruke dette, kan du se på eksempler med `curl` (man kan velge). Her er felter med `-H` header felt, og data er fortsatt json og ligger på felter med `-d`
 
++++
 
-<!-- #region -->
-::: {tip} API-nøkkel som systemvariabel
-:class: dropdown
+::: {admonition} API-nøkkel som systemvariabel
+:class: dropdown tip
 
 Å lagre API-nøkler som systemvariabler er en "best practice" for å unngå å hardkode sensitive nøkler direkte i kildekoden din.
 
@@ -129,9 +125,8 @@ client = OpenAI()
 ```
 så leses api-nøkkelen inn
 :::
-<!-- #endregion -->
 
-```python
+```{code-cell} ipython3
 from openai import OpenAI
 client = OpenAI(api_key=api_key)
 
@@ -144,11 +139,11 @@ print(response.output_text)
 #Send samme spørring med  biblioteksmetode
 ```
 
-```python
+```{code-cell} ipython3
 
 ```
 
-```python
+```{code-cell} ipython3
 #Vis med instrukser ("prompt"-engineering)
 
 response = client.responses.create(
@@ -160,7 +155,7 @@ response = client.responses.create(
 print(response.output_text)
 ```
 
-```python
+```{code-cell} ipython3
 # Vis med json
 response = client.responses.create(
     model="gpt-5-mini",
@@ -172,14 +167,12 @@ response = client.responses.create(
 )
 
 data = json.loads(response.output_text)
-
 ```
 
-```python
-
+```{code-cell} ipython3
 data.keys()
 ```
 
-```python
+```{code-cell} ipython3
 
 ```

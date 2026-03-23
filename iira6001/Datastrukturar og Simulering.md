@@ -36,7 +36,7 @@ Dette kapittelet byggjer på
     + [](exercises/Kundedifferensiering)
     + [](exercises/Varar%20på%20sal) (variasjonar over tidlegare oppgåver i marknadssimulering)
 + *Drilløving* på [Moodle](https://capquiz.math.ntnu.no).  
-	+ CodeRunner Data Structures
+	+ CodeRunner `list` og `dict`
 
 Kuriosa
 : er arbeidsdokument.  Dei vert publiserte for dei nyssgjerrige, og viser teknikkar som eg har brukt for å laga det andre materialet til leksjonen.

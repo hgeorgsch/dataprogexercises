@@ -26,7 +26,7 @@ Ytterligere informasjon om bruk av web-apiet er å finne på ssb sin [brukerveil
 
 
 
-### Spotpris metaller
+## Spotpris metaller
 Vi tar utgangspunkt i tabell 07199, spotpris metaller [](https://www.ssb.no/statbank/table/07199). Letteste måte å hente data programmatisk er å gjøre et utvalg i [statistikkbanken](https://www.ssb.no/statbank/table/07199) og trykke kopiere `GET`-urlen du finner under «Lagre» og «API-spørring» på venstre side. 
 
 Dersom vi velger alle metaller unntatt aluminium, og krysser av for alle måneder, får vi denne `GET`-urlen:
@@ -60,8 +60,8 @@ df
 
 ```
 
-::: {tip} `pyjstat`-tips
-:class: dropdown
+::: {admonition} `pyjstat`-tips
+:class: tip dropdown
 
 Pyjstat kan hente inn og lese inn json-stat-data direkte fra url.
 Du trenger altså ikke alltid å gå veien om å bygge en `GET` spørring med `requests` biblioteket.
@@ -132,7 +132,8 @@ df = dataset.write("dataframe")
 df
 ```
 
-::: {note} Oppgave
+::: {admonition} Oppgave
+:class: note
 Se over filtertypene i tabellen over og se om du kan:
 - Hente alle metall som slutter på «l» (for Lars)
 - Hente spotpris de første 10 månedene i datasettet
@@ -199,7 +200,8 @@ df = dataset.write("dataframe")
 df
 ```
 
-::: {note} Oppgave
+::: {admonition} Oppgave
+:class: note
 Si du har følgende url:
 ```
 url = "https://data.ssb.no/api/pxwebapi/v2/tables/07199/data?lang=no&outputFormat=json-stat2&valueCodes%5BContentsCode%5D=Nikkel&valueCodes%5BContentsCode%5D=Sink&valueCodes%5BContentsCode%5D=Bly&valueCodes%5BContentsCode%5D=Gull&valueCodes%5BContentsCode%5D=Silver&valueCodes%5BTid%5D=%2A"
@@ -296,8 +298,8 @@ print("Status", response.status_code)
 ```
 
 <!-- #region -->
-::: {tip} `JSON` og requests
-:class: dropdown
+::: {admonition} `JSON` og requests
+:class: dropdown tip
 
 `requests`-biblioteket har egne metoder når du sender og mottar JSON-data.
 
@@ -326,7 +328,8 @@ df
 ```
 
 <!-- #region -->
-::: {note} Oppgave
+::: {admonition} Oppgave
+:class: note
 SSBs webapi er spesielt kjekt å bruke for statistikk du ønsker de ferskeste dataene fra.
 > Hvilke data fra ssb er mest aktuelle for deg å hente inn jevnlig?
 
@@ -395,7 +398,8 @@ data = response.json()
 
 ```
 
-::: {tip} Søke i tabeller
+::: {admonition} Søke i tabeller
+:class: tip
 Se punkt 1. i ssb sin [veiledning](https://www.ssb.no/api/pxwebapiv2) til pxweb, hvor eksempler på søk etter tabell gis.
 Vi kan filtrere søket vårt, feks ved å begrense det til kun tittelen: `{"query": "title:spotpris"}`,  og der er eksempler på å begrense dato og tidsintervall bruke trunkering med `*` med flere. 
 :::
@@ -491,7 +495,8 @@ df
 - Enkleste bruk er å gjøre filtreringer i statistikkbanken, og hente ut get-url derifra
 
 
-::: {note} Oppgave
+::: {admonition} Oppgave
+:class: note
 
 1. I eksempelet over hentet vi programmatisk fram datasettet om spotpris på metaller med alle tilgjengelige statistikkvariabler. Hvor mye av koden må endres for at vi skal hente et annet dataset? Prøv deg fram.
 2. Lag en funksjon som tar et tabellnummer fra ssb, og henter og leser inn all data fra tabellen til et pandas dataframe.

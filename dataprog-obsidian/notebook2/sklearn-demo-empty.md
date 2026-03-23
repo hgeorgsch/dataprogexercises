@@ -25,6 +25,10 @@ Me kan altso freista å predikera lønen som ein funksjon av erfaringa i år.
 
 ## Datasettet i pandas
 
+```{code-cell} ipython3
+```
 
 ## Datasetttet i sklearn
 
+```{code-cell} ipython3
+```
