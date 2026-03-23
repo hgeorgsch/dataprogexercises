@@ -298,8 +298,8 @@ print("Status", response.status_code)
 ```
 
 <!-- #region -->
-::: {tip} `JSON` og requests
-:class: dropdown
+::: {admonition} `JSON` og requests
+:class: dropdown tip
 
 `requests`-biblioteket har egne metoder når du sender og mottar JSON-data.
 
