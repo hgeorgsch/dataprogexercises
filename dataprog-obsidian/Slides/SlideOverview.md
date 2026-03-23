@@ -31,10 +31,11 @@
     + [[Om å læra frå data]]
     + [[Modellen]]
     + [[Evaluering av modellar]]
-+ Week 8
++ Week 9/11 
     + [[Automatisering]]
     + [[Versjonskontroll]]
     + [[jupytext-overview]]
+    + [[GUI]]
 + Week 10
     + [[Unsupervised Learning]]
 + ???
