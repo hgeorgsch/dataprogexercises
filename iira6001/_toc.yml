@@ -82,7 +82,7 @@ chapters:
       - file: notebooks/requests-trimmed
       - file: notebooks/JSON json_stat og eksempler
       - file: notebooks/ssb-api
-      - file: norun/Eurostat-API.ipynb
+      - file: notebooks/Eurostat-API.ipynb
       - file: norun/spotify-auth
       - file: norun/spotify-audio-analyse
       - file: norun/chatgpt_api

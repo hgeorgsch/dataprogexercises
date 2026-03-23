@@ -7,26 +7,32 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.18.1
+    jupytext_version: 1.17.0
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
   name: python3
 language_info:
+  name: python
+  version: 3.11.2
+  mimetype: text/x-python
   codemirror_mode:
     name: ipython
     version: 3
-  file_extension: .py
-  mimetype: text/x-python
-  name: python
-  nbconvert_exporter: python
   pygments_lexer: ipython3
-  version: 3.12.2
+  nbconvert_exporter: python
+  file_extension: .py
 ---
 
 ```{code-cell} ipython3
-:trusted: true
-
+---
+trusted: true
+execution:
+  iopub.status.busy: '2026-03-23T06:37:01.378405Z'
+  iopub.execute_input: '2026-03-23T06:37:01.379050Z'
+  shell.execute_reply: '2026-03-23T06:37:02.001376Z'
+  iopub.status.idle: '2026-03-23T06:37:02.001888Z'
+---
 from pyjstat import pyjstat
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -132,8 +138,14 @@ Vi begynner med å laste ned lenke rett fra eurostats «statistikkbank»
 Trykk og velg ut statistikkvariabler i utforskeren, og når du er fornøyd kan du trykke «download» velge format «json_stat» og kopiere «API-lenken»
 
 ```{code-cell} ipython3
-:trusted: true
-
+---
+trusted: true
+execution:
+  iopub.status.busy: '2026-03-23T06:37:02.003604Z'
+  iopub.execute_input: '2026-03-23T06:37:02.003812Z'
+  shell.execute_reply: '2026-03-23T06:37:02.367965Z'
+  iopub.status.idle: '2026-03-23T06:37:02.368420Z'
+---
 # Hent fra downloads
 url = "https://ec.europa.eu/eurostat/api/dissemination/sdmx/3.0/data/dataflow/ESTAT/lfsq_urgan$defaultview/1.0?compress=false&format=json&lang=en"
 
@@ -150,8 +162,14 @@ df
 Skal vi bygge API-lenken fra bunnen av, setter vi bare inn datasetkoden inn i url-strukturen slik den er vist helt øverst. Bildet over viser datasetkoden under hovedtittelen på datasettet på redigeringssiden, men det dukker opp de fleste steder. Standardparametere er format (vi anbefaler json) og lang=EN.
 
 ```{code-cell} ipython3
-:trusted: true
-
+---
+trusted: true
+execution:
+  iopub.status.busy: '2026-03-23T06:37:02.369622Z'
+  iopub.execute_input: '2026-03-23T06:37:02.369764Z'
+  shell.execute_reply: '2026-03-23T06:37:17.483537Z'
+  iopub.status.idle: '2026-03-23T06:37:17.484126Z'
+---
 #Bygg selv fra bunn av
 # Standard url
 url = "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/lfsq_urgan?format=JSON&lang=EN"
@@ -178,8 +196,14 @@ df["Statistisk variabel"].unique()
 som gir deg de ulike (unike) verdiene i kolonnen
 
 ```{code-cell} ipython3
-:trusted: true
-
+---
+trusted: true
+execution:
+  iopub.status.busy: '2026-03-23T06:37:17.485448Z'
+  iopub.execute_input: '2026-03-23T06:37:17.485630Z'
+  shell.execute_reply: '2026-03-23T06:37:17.493043Z'
+  iopub.status.idle: '2026-03-23T06:37:17.493462Z'
+---
 #df["Age class"].unique()
 #df["Country of citizenship"].unique()
 #df["Geopolitical entity (reporting)"].unique() 
@@ -203,8 +227,14 @@ df_id = dataset.write("dataframe", naming="id")
 ```
 
 ```{code-cell} ipython3
-:trusted: true
-
+---
+trusted: true
+execution:
+  iopub.status.busy: '2026-03-23T06:37:17.494774Z'
+  iopub.execute_input: '2026-03-23T06:37:17.494918Z'
+  iopub.status.idle: '2026-03-23T06:37:22.481916Z'
+  shell.execute_reply: '2026-03-23T06:37:22.481464Z'
+---
 df = dataset.write("dataframe", naming="id")
 df
 ```
@@ -217,8 +247,14 @@ I dette tilfellet klarer vi faktisk å lese ut at vi skal filtrere for `age=Y15-
 :::
 
 ```{code-cell} ipython3
-:trusted: true
-
+---
+trusted: true
+execution:
+  iopub.status.busy: '2026-03-23T06:37:22.483110Z'
+  iopub.execute_input: '2026-03-23T06:37:22.483263Z'
+  iopub.status.idle: '2026-03-23T06:37:22.877035Z'
+  shell.execute_reply: '2026-03-23T06:37:22.876552Z'
+---
 #Bygg filter, på alder, statsborgerskap og siste 3 år. Be om kun land.
 
 url = "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/lfsq_urgan?format=JSON&lang=EN"
@@ -232,8 +268,14 @@ df = dataset.write("dataframe")
 ```
 
 ```{code-cell} ipython3
-:trusted: true
-
+---
+trusted: true
+execution:
+  iopub.status.busy: '2026-03-23T06:37:22.878403Z'
+  iopub.execute_input: '2026-03-23T06:37:22.878572Z'
+  shell.execute_reply: '2026-03-23T06:37:22.886496Z'
+  iopub.status.idle: '2026-03-23T06:37:22.886977Z'
+---
 #Vis
 df
 ```
@@ -250,8 +292,14 @@ Eurostat har som sagt et supert verktøy som lar deg bygge spørringen: [](https
 Her velger vi ut filtreringene vi vil ha, og trykker «generate query» for å få en lenke. Merk at denne er annerledes enn url vi fikk fra «Download»-metoden; Den bruker nemlig statistics-apiet, hvilket betyr at vi kan redigere med python som lenger oppe.
 
 ```{code-cell} ipython3
-:trusted: true
-
+---
+trusted: true
+execution:
+  iopub.status.busy: '2026-03-23T06:37:22.888386Z'
+  iopub.execute_input: '2026-03-23T06:37:22.888571Z'
+  iopub.status.idle: '2026-03-23T06:37:23.196065Z'
+  shell.execute_reply: '2026-03-23T06:37:23.195645Z'
+---
 # Url bygget med "query builder"
 url = "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/lfsq_urgan?format=JSON&lastTimePeriod=12&geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&geo=IS&geo=NO&geo=CH&geo=UK&geo=BA&geo=ME&geo=MK&geo=RS&geo=TR&unit=PC&sex=F&sex=M&sex=T&age=Y15-74&citizen=TOTAL&lang=EN"
 
@@ -273,8 +321,14 @@ df_tool
 ### Noen raske eksempler
 
 ```{code-cell} ipython3
-:trusted: true
-
+---
+trusted: true
+execution:
+  iopub.status.busy: '2026-03-23T06:37:23.197317Z'
+  iopub.execute_input: '2026-03-23T06:37:23.197452Z'
+  shell.execute_reply: '2026-03-23T06:37:23.472461Z'
+  iopub.status.idle: '2026-03-23T06:37:23.473004Z'
+---
 #Plot arbeidsledighet i norden
 df1 = df[["Time", "Sex", "Geopolitical entity (reporting)", "value"]].copy()
 df1["Time"] = pd.PeriodIndex(df1["Time"], freq="Q")
@@ -297,8 +351,14 @@ plt.title("Arbeidsledighet i norden")
 ```
 
 ```{code-cell} ipython3
-:trusted: true
-
+---
+trusted: true
+execution:
+  iopub.status.busy: '2026-03-23T06:37:23.474789Z'
+  iopub.execute_input: '2026-03-23T06:37:23.475286Z'
+  shell.execute_reply: '2026-03-23T06:37:23.669622Z'
+  iopub.status.idle: '2026-03-23T06:37:23.670132Z'
+---
 # Arbeidsledighet, stolpe m kjønn for Finland
 
 df_fin = df1 [  ~(df1["Sex"] == "Total")
