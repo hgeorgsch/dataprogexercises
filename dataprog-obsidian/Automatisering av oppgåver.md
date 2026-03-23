@@ -12,11 +12,16 @@ tags:
 	+ IDE (Spyder) som demo
 	+ Døme på script
 + Del 2.
-	+ GUI
+	+ [[GUI]]
 		+ [taipy](https://taipy.io/)
 	+ OO
 	    + *Low coupling*/*High cohesion*
 	    + Event handling
+		    + i tkinter klarer ein seg lenge med *callbacks*
+	    + Barnes og Kölling starter med tre grunnkonsept
+		    + Components
+		    + Layout
+		    + Event handling
 	+ Bruk av WebAPI i sanntid
 
 
