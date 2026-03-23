@@ -26,7 +26,7 @@ Ytterligere informasjon om bruk av web-apiet er å finne på ssb sin [brukerveil
 
 
 
-### Spotpris metaller
+## Spotpris metaller
 Vi tar utgangspunkt i tabell 07199, spotpris metaller [](https://www.ssb.no/statbank/table/07199). Letteste måte å hente data programmatisk er å gjøre et utvalg i [statistikkbanken](https://www.ssb.no/statbank/table/07199) og trykke kopiere `GET`-urlen du finner under «Lagre» og «API-spørring» på venstre side. 
 
 Dersom vi velger alle metaller unntatt aluminium, og krysser av for alle måneder, får vi denne `GET`-urlen:
