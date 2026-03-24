@@ -7,22 +7,11 @@ css:
   - css/templates.css
 ---
 
-# Grafiske brukargrensesnitt
 
-note:
-Når me tek til å tenkja på frittståande program, er der sikkert mange
-som tenkjer hovudsakleg på grafiske brukargrensesnitt eller GUI.
 
-Interaktivitet er krevjande, fordi programmereren gir over so mykje
-kontroll til brukaren.  I staden for å fylgja ein fast serie med
-instruksjonar for å gjera ein beregning, treng ein rutinar som hoppar
-rundt i koden for å gjera det som brukaren ber om.
-
-Moderne GUI-bibliotek har god støtte for å handtera interaksjon, og
-eg skal gå gjennom nokre av dei grunnleggjande konsepta.
-
----
 <!-- slide template="[[tpl-flex]]" bg="lightblue" -->
+
+# Grafiske brukargrensesnitt
 
 ![[Example_of_a_GUI.png]]
 
@@ -32,6 +21,15 @@ via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=14104137
 :::
 
 note:
+Når vi tenker frittståande program, er der sikkert mange
+som tenker på grafiske brukergrensesnitt eller GUI.
+
+Interaktivitet er krevande, fordi programmereren gir over so mye
+kontroll til brukeren.  I stedet for å følge en fast serie med
+instruksjoner for å gjøre en beregning, må programmet hoppe rundt til ulike rutiner alt efter hva brukeren ber om.
+
+Moderne GUI-biblioteker har god støtte for å håndtere denne interaksjonen, og jeg skal gå gjennom noen av de grunnleggende konseptene.
+
 Et grafisk brukergrensesnitt består av et utall komponenter.
 Der er et eller flere vindu, men der er også knapper, radioknapper,
 tekstfelter, *input*-felter og rammer som grupperer andre komponenter.
@@ -39,6 +37,7 @@ tekstfelter, *input*-felter og rammer som grupperer andre komponenter.
 Komponentene er ikke uavhengige av hverandre.  Bortsett fra vinduet, er
 alle komponentene en del av en større komponent, og de henger sammen.
 Når vinduet lukkes, forsvinner også alle de andre komponentene.
+Når brukeren trykker send, må beskjeden gå til vinduet som også må ha orden på innholdet i alle inputtboksene og tilstanden på radioknappene.
 
 
 ---
@@ -55,17 +54,22 @@ Når vinduet lukkes, forsvinner også alle de andre komponentene.
 note:
 For å få dette systemet av komponenter til å fungere, er
 GUI-programmering i python er objektorientert.
-Kvar einaste GUI-komponent er eit objekt som har sine eigne metodar
-for å interagera med andre komponentar.
+Hver eineste GUI-komponent er et objekt som har sine egne metoder
+for å interagere med andre komponente.
 
-Komponentene blir ordnet i et hierarki, med ett vindu på toppnivå.
-I `tkinter` for python, har dette toppvinduet klassen `Tk`.
-Alle andre komponenter har en foreldrekomponent.
+Komponentene blir ordnet i et hierarki der noen komponenter inneholder andre komponenter.  På toppen ligger selve vinduet, som inneholder andre komponenter.  Rammer brukes gjerne til å gruppere andre komponenter, særlig radioknapper må grupperes.
+Nederst i hierarkiet finner vi typisk inputtkomponenter, tekstfelter og lignende.
+Bortsett fra hovedvinduet har alle komponentene en foreldrekomponent.
+
+Merk at dette hierarkiet beskriver objekter som eier hverandre, og ikke klasser som arver hverandre.
+Arvehierarkiet er også viktig.  Alle GUI-komponentene tilhører den samme overordnede klassen, slik at et objekt kan inneholde et andet objekt uten å vite eksakt hvilken klasse det har. 
 
 ---
 
-- Instansiering: `btn = Button(root, text = "Trykk her")`
-- *Layout*: `btn.pack()`
+- Instansiering:
+	- `btn = Button(root, text = "Trykk her")`
+- *Layout*:
+	- `btn.pack()`
 
 note:
 For å få en ny komponent på skjermen trengs *to* steg.
@@ -77,7 +81,7 @@ Det andre er *layout management*.  Vi må fortelle komponenten
 hvordan den skal plasseres i foreldrekomponenten.
 Der er mange forskjellige *layout managers* å velge mellom;
 `pack()` er den aller enkleste.  Den bare pakker alle komponentene sammen
-der det er plasse.
+der det er plass.
 Andre *layout managers* gir mer kontroll over plasseringen.
 
 ---
@@ -92,7 +96,10 @@ Rotvinduet er spesielt, siden det er forfader til alle de andre komponentente.
 Vi instansierer som regel uten argumenter, og for å få vinduet opp på
 skjermen, kaller vi `mainloop()`-metoden.
 
+Det vanligste GUI-biblioteket i python heter `tkinter` og her heter klassen for rotvinuder `Tk`.  
+
 `mainloop` vil kjøre i uendelig løkke helt til vinduet blir lukket.
+Programmet vil ikke fortsette så lenge vinduet eksisterer.
 Dvs. at vi må sette opp alle komponentene og funksjoner som bestemmer hva
 de skal gjøre, før vi starter `mainloop`.
 Vi kan ikke prøve oss frem linje for linje som vi er vant med i Jupyter Lab.
@@ -108,6 +115,8 @@ btn = Button(root, text = "Trykk her", command=callback )
 ```
 
 note:
+Vi trenger altså bare to linjer for å få et vindu på skjermen, og to linjer til for å få en knapp, men det er ikke særlig interessant uten at noe skjer når vi *trykker* på knappen.
+
 Den enkleste måten å få ting til å skje er å bruke såkalte
 *callback*-funksjoner.  
 
