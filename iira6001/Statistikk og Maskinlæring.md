@@ -32,7 +32,7 @@ Målet denne veka er
 	+ [Evaluering av regresjonsmodellen](notebooks/Evaluering%20for%20regresjon)
     + [](notebooks/scikitlearn)  (valfri)
 + *Demo* 
-	+ SciKitLearn
+	+ [Demo SciKitLearn](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=2f8a090a-9c81-4888-957b-b41700952df1)
         + [Oppgåver til demonstrasjonen](notebooks/sklearn-demo-empty)
         + [Løysingar frå demonstrasjonen](norun/sklearn-demo)
 + *Meir avanserte øvingar*

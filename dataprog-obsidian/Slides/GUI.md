@@ -6,9 +6,6 @@ tags:
 css:
   - css/templates.css
 ---
-
-
-
 <!-- slide template="[[tpl-flex]]" bg="lightblue" -->
 
 # Grafiske brukargrensesnitt
@@ -128,19 +125,25 @@ den blir trykket, ved hjelp av *callback* funksjonen.
 En slik *callback*-funksjon kan gjøre hva som helst.  Endre
 datamodellen, åpne et nytt vindu, skrive ut ny informasjon på
 skjermen.
+Det er også mulig å lave variabler som kaller en *callback*-funksjon når de blir endret. 
 
 ---
+<!-- slide template="[[tpl-flex]]" bg="white" -->
 
-Event handling
+![[Listener_Pattern.png]]
+
+::: credit
+By Asinsinwal - Own work, CC BY-SA 4.0,
+via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=51409981)
+:::
 
 note:
-Så langt har vi bare snakket om det visuelle.
-Vi har nok til å få GUI-komponentene til å dukke opp på skjermen,
-men så langt *gjør* de ingenting.
+*callback*-funksjoner rekker til de aller fleste tilfellene vi står overfor,
+men der er noen tilfeller hvor vi trenger noe mer fleksibelt. 
+Det gjelder særlig når flere komponenter skal reagere samtidig.
 
-Den mekanismen som får ting til å skje i et GUI-program kalles
-gjerne for *Events* og *Event* handling.
-De åbenbare *Events* er at brukeren trykker på en tast på tastaturet,
+All funksjonaliteten i et GUI-programmer er drevet av *Events*.
+De mest åbenbare *Events* er at brukeren trykker på en tast på tastaturet,
 flytter på musen eller trykker en museknapp.
 Slike *Events* blir fanget opp av GUI-komponentene, som gjerne genererer
 nye *Events*.
@@ -152,24 +155,28 @@ trykket.
 generere en *Event* når den blir endret, for å fortelle andre komponenter
 at visningen må oppdateres.
 
-Der er tilfeller hvor vi trenger å definere våre egne *Events*,
-men ofte kan vi la *Events* bli under panseret, og klare oss med
-*callback*-funksjoner.
-Vi kan også definere variabler som kaller en *callback*-funksjon når
-de blir endret.
+Det som gjør *Event handling* så kraftfullt er at knappen som generer en *Event*, ikke trenger å vite hvilke objekter som lytter til hendelsen. Siden alle *Events* går via den samme sentrale rutinen, kan vi enkelt legge til flere objekter som også skal reagere på den samme hendelsen. Det kalles *Listener*-objekter.
 
 ---
+<!-- slide template="[[tpl-flex]]" -->
+
+![[Chiapas_Rainforest_crop.jpg]]
 
 ::: credit
-By Bild von bere von awstburg auf Pixabayhttps://pixabay.com/de/photos/die-dschungel-von-chiapas-1865639/ - https://pixabay.com/de/photos/die-dschungel-von-chiapas-1865639/Derivative work fromFile:Chiapas_Rainforest.jpg, CC0, https://commons.wikimedia.org/w/index.php?curid=105447521
+Foto:
+Bild von bere von awstburg auf 
+[Pixabay](https://pixabay.com/de/photos/die-dschungel-von-chiapas-1865639/).
+CC0, via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=105447521)
 :::
 
-+ *low coupling*
-+ *high cohesion*
 
 note:
+GUI er kompliserte greier og det er lett å gå seg vill.
 Store program har en tendens til å bli en jungel av klasser og funksjoner
 med uklar hensikt.  Man snakker ofte om spaghettikode.
+
+For å holde orden er det helt kritisk å dele programmet opp og fokusere på en del ad gangen.
+Det vil gjerne si at vi laver våre egne klasser for mange av GUI-komponentene, og lar disse klassene sette opp all de underordnede komponentene.
 
 ---
 <!-- slide template="[[tpl-flex]]" bg="lightblue" -->
@@ -180,7 +187,42 @@ ved RegisFrey - Own work, Public Domain,
 via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=10298177)
 :::
 
+note:
+Det er også fornuftig å skille datamodellen fra GUI.
+Det er lettere å holde orden i datamodellen om vi kan fokusere helt og fullt på inneholdet når vi programmerer den, uten å tenke på hvordan den skal presenteres. Omvendt, når vi skal programmere grensesnittet på skjermen, er det greit om vi kan stole hundrede prosent på datamodellen uten å bekymre oss for om den er konsistent.
+
+I objekt-orientert programmering har der dukket opp en rekke mønster som definerer god praksis for å strukturere samhandling mellom objekter.
+Ett av disse er *model-view-controller*.  Ett objekt samler sammen datamodellen. Ett håndterer visningen, og ett håndterer input og endring av modellen.
+Ved å holde seg til slike mønster er det lettere for andre å skjønne hvordan programmet er bygget opp.
+
 
 ---
 
+- *low coupling*
+- *high cohesion*
+
 note:
+Men mye av dette gir ikke mening før programmen blir tilstrekkelig store,
+men grunnprinsippene er det verd å ha med seg i det små.
+Vi deler opp programmet både i funksjoner og i klasser, og der er to viktige designkriterier når vi gjør det.
+
+*High cohesion* vil si at hver komponent, enten det er en klasse eller funksjon, skal ha en tydelig hensikt og tjene denne hensikten alene.
+
+*Low coupling* betyr at ulike komponenter skal være minst mulig avhengige av andre.  Hvis vi endrer en komponent, skal vi ikke trenge å endre andre. Det vil mellom andet si at parametre og returverdier må være veldefinerte og ikke unødig kompliserte.
+
+---
+
++ GUI
+	+ (GUI-)komponent
+	+ *layout*
+	+ *callback*
++ Modularisering av kode
+	- *low coupling*
+	- *high cohesion*
+
+note:
+Jeg håper at dette overblikket er nyttig når dere graver dere ned i detaljer.
+GUI-programmering er som å spise en elefant.  Man skal ta en bit ad gangen.
+Først et lite vindu med få komponenter.  Siden kan det bli en del av et større vindu.
+
+Lykke til!
