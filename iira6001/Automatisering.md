@@ -22,11 +22,11 @@ og heller koma tilbake til verktya når ein treng det.
 
 
 + *Perspektivførelesing*
-    + Automatisering
+    + [Automatisering](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=ef1332aa-3ebe-4210-aea6-b41800ab628c)
       [(foilar)](https://iirevu.org.ntnu.no/Slides/Automatisering/#/)
-    + jupytext
+    + [Jupyter i ulike filformat](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=daf09607-7afa-4231-94b0-b41800ab953a)
       [(foilar)](https://iirevu.org.ntnu.no/Slides/jupytext-overview/#/)
-    + Versjonskontroll
+    + [Versjonskontroll](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=50e192c9-e3a8-46fd-a436-b41800ab896f)
       [(foilar)](https://iirevu.org.ntnu.no/Slides/Versjonskontroll/#/)
 + *Gjennomarbeidd døme*
     + [](notebooks/ML-WebAPI)
