@@ -12,7 +12,7 @@ kernelspec:
   name: dataprog
 ---
 
-# Tidsrekkjer og pivot
+# Reformatering med pivot
 
 Datafile: [12143_20260209-154116.csv](12143_20260209-154116.csv)
 

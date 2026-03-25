@@ -36,7 +36,7 @@ og heller koma tilbake til verktya når ein treng det.
 + *Valfrie oppgåver* - nye verkty
     + `jupytext`
         + Demo `jupytext`
-        + Oppgåve `jupytext`
+        + [](notebooks/jupytext1demo)
     + `git` og github
         + [](Installasjon-git)
         + Oppgåve `git`
