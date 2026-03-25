@@ -22,9 +22,9 @@ Målet denne veka er
 + *Perspektivføredrag*
     + [Om å læra frå data](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=577242b1-0990-481f-a61e-b34d014a07d5)
       [(foilar)](https://iirevu.org.ntnu.no/Slides/Om%20%c3%a5%20l%c3%a6ra%20fr%c3%a5%20data/)
-    + Kva er ein modell?  
+    + [Kva er ein modell?](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=b6893b00-7d46-4a5f-9825-b41800ab72fc)
       [(foilar)](https://iirevu.org.ntnu.no/Slides/Modellen/#/)
-    + Evaluering av modellar
+    + [Evaluering av modellar](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=9daec41e-6ddf-4bfc-b291-b41800ab7e2e)
       [(foilar)](https://iirevu.org.ntnu.no/Slides/Evaluering%20av%20modellar/)
 + *Tutorials* og øvingar
     + [](notebooks/numpy)

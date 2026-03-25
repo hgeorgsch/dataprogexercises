@@ -48,9 +48,41 @@ By Henrietta Rae -  Public Domain
 
 note:
 Like siden starten har der vært to paradigmer innenfor kunstig intelligens.
-Ett som bygger på Platons forståelse av fornuften og ett som bygger på læring fra data.
+Regelbasert KI som bygger på Platons forståelse av fornuften og maskinlæring som gjør som Florence Nightingale gjorde.
 
-Platon hevdet at all kunnskap kan formuleres som universelle regler. Håndtverkere som lærer av erfaring og poeter som arbeider på inspirasjon, har ifølge Platon ingen kunnskap og arbeidet deres er umulig å forstå.
+Platon hevdet at all kunnskap kan formuleres som universelle regler. Håndtverk basert på erfaring eller poesi basert på inspirasjon er blott vilkårlig fumling. 
+Dette synet på  kunnskap har dominert vestlig tenkning i over 2000 år.
+
+Det fine med universelle regler er at de er lette å programmere.
+Hvis vi først *kan* formulere en universell regel, er det en smal sak å oversette regelen til python-kode. 
+
+---
+<!-- slide template="[[tpl-twocolumn]]" -->
+
+::: rightimage
+![[Herbert-A-Simon-1978.jpg]]
+:::
+
+::: rightcredit
+By Rochester Institute of Technology - News & Events 1981 at the RIT Digital Archive, 
+Public Domain,
+via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=115626765)
+:::
+
+::: leftimage
+![[Allen_Newell.jpg]]
+:::
+
+::: leftcredit
+By [Stanford Magazine](https://stanfordmag.org/contents/if-you-love-what-computers-can-do-thank-these-folks),
+Fair use,
+via [Wikimedia Commons](https://en.wikipedia.org/w/index.php?curid=63421113)
+:::
+
+note:
+Herbert Simon og Allen Newell deltok bare to uker på Dartmouth-seminaret, men de stjal på mange måter showet med sin *General Problem Solver* eller GPS.
+Problemløsning var for dem bare beregninger på logiske utsagn, og programmet deres kunne søke gjennom regelsamlinger for å finne alle mulige logiske konsekvenser.
+Slik implementerte de en algoritme som først ble formulert av Aristoteles.
 
 ---
 <!-- slide template="[[tpl-twocolumn]]" -->
@@ -77,40 +109,69 @@ CC BY-SA 4.0, via
 :::
 
 note:
-Like siden starten har der vært to paradigmer innenfor kunstig intelligens.
-Ett som bygger på Platons forståelse av fornuften og ett som bygger
+Den som store fanebæreren for maskinlæring var Frank Rosenblatt, med sitt arbeide på perseptroner på slutten av 1950-tallet.  Forskningsmidlene på 1960-tallet gikk derimot i all hovedsak til dem som fulgte i Simon og Newell sine fotspor.  Han ble kraftig kritisert av Marvin Minsky.
 
----
+Rosenblatt endte opp med depresjon og i 1971 ble båten hans ble funnet drivende og forlatt på sjøen.  Offisielt omkom han i en båtulykke.
 
-Maskinlæring
-<!-- element class="[[r-fit-text]]" -->
-
-note:
-Rosenblatt ble deprimert og båten hans ble funnet drivende og forlatt på
-sjøen.
-
-Minsky kan ha hatt rett i at maskinlæring ikke hadde synderlig fremgang,
-men det 
-
-
-
-Efter det gikk forskningen inn i en lang KI-
-
+Minskys kritikk var at Rosenblatts maskinlæring bare virket på leketøyseksempler.
+At det samme også var tilfellet for regelbasert kunstig intelligens, unnlot Minsky å snakke om.
+Det gikk derimot ikke mange årene før man måtte erkjenne at KI ikke var en stor suksess, og feltet gikk inn i en lang AI-vinter.
 
 ---
 <!-- slide template="[[tpl-flex]]" -->
 
-![[marsrover.jpg]]
-
 ::: credit
-Bilete frå [https://www.flickr.com/photos/44494372@N05/8981696202/](NASA) 
-via  [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=34778151)
+By D Wells - File:Iris_Pairs_Plot.png with some minor modifications, CC BY-SA 4.0,
+via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=112294469)
 :::
 
 note:
-Intelligente agentar
+Da vinteren tok slutt var det maskinlæring som fikk sin renaissanse, med en ny forståelse bygd på statistikk.
+
+Statistikken gav et teoretisk fundament for å se på maskinlæring som pålitelig kunnskap, selv der det ikke er mulig å formulere generelle regler.  Platon ville neppe vært enig, men det virker for oss.
+
+---
+<!-- slide template="[[tpl-flex]]" -->
+
+![[Ontology.jpg]]
+
+:::  credit
+By Lia Veja ([Semantic Cora]()https://semantic-cora.org/index.php/File:Ontology.jpg),
+CC BY-SA 4.0, via
+[Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=79753999)
+:::
+
+note:
+Det er derimot ikke slik at regelbasert KI er helt borte.
+Den regelbaserte intelligensen har en viktig egenskap som maskinlæringen mangler, nemlig sematikk. 
+Når vi formulerer logiske utsagn i problemløseren til Simon og Newell, bruker vi meningsbærende symboler. Utsagnene kan faktisk beskrive egenskaper ved verden rundt oss. I maskinlæring er dataene ribbet for kontekst og mening.
+
+Problemet med semantisk KI er kjøretiden, som gjerne vokser eksponentielt i antall regler som blir brukt. Hvis problemområdet er tilstrekkelig avgrenset, kan man likevel oppnå resultater. 
+
 
 ---
 
-Store språkmodellar
-<!-- element class="[[r-fit-text]]" -->
++ Prediksjonsmodeller
++ Ontologier
++ Generativ KI
+
+note:
+Så hvilke former for kunstig intelligens er det da vi står igjen med i dag?
+
+Det vi snakker om i dataanalyse er i all hovedsak prediksjonsmodeller, dvs. maskinlæring anvendt på et avgrenset og veldefinert problem.
+Når vi vet nøyaktig hva vi ønsker å løse, og har mulighet for å samle nok data på ett og samme problem, er det mulig ikke bare å trene men også teste presise modeller.
+
+Regelbasert KI bygger gjerne på ontologier, dvs. systemer av begreper og relasjoner mellom dem.  Forutsetningen for å kunne regne på semantisk er at vi først har definert meningsfulle begreper å regne på. 
+
+Generativ KI er det som er mest kjent, både med store sprogmodeller og generativ KI for bilder og musikk.  I prinsippet er det også prediksjonsmodeller. En stor sprogmodell predikerer neste ord i en tekst, basert på forutgående kontekst.  Slik er svaret fra sprogmodellen blott et gjennomsnitt av tekst som den er trent på. Der er ingen semantikk bak ordene som brukes.
+
+---
+
+# Slutt
+
+note:
+Faren med KI er at vi tar det i bruk på nye problemer uten å forstå dem godt nok til å vurdere om KI-modellene gir fornuftige svar.  Det er derfor jeg mener at det er så viktig å se maskinlæring som en gren av statistikk og dataanalyse, der vi har verktøyene for kvantitativ testing.
+
+Uansett hvordan vi snur og vender på det, så er KI et verktøy og det er brukeren som har ansvaret for resultatet.  Aldri verktøyet.
+
+Takk for oppmerksomheten.
