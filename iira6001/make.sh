@@ -11,7 +11,7 @@ then
 
    jupyter-book clean .
    jupyter-book build .
-   rsync -rv --delete _build/html/ login.ansatt.ntnu.no:/home/groupswww/iirevu/iira6001staging/
+   rsync -rv --exclude=reports --delete _build/html/ login.ansatt.ntnu.no:/home/groupswww/iirevu/iira6001staging/
 else
-   rsync -rv --delete _build/html/ login.ansatt.ntnu.no:/home/groupswww/iirevu/iira6001/
+   rsync -rv --exclude=reports --delete _build/html/ login.ansatt.ntnu.no:/home/groupswww/iirevu/iira6001/
 fi
