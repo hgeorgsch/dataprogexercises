@@ -729,6 +729,11 @@ Det er utrolig mange detaljer å ha kontroll på og dille med når man visualise
 :::
 
 ```{code-cell} ipython3
+---
+editable: true
+slideshow:
+  slide_type: ''
+---
 import plotly.express as px
 
 # Smelter tabellen fra bred til lang for Plotly
@@ -762,6 +767,6 @@ fig.update_layout(
     height=700,  # Gjør figuren 700 piksler høy
     legend=dict(font=dict(size=14)) # Gjør tegnforklaringen lettere å lese
 )
-
-fig.show()
+#fig.show() # For deg
+fig.show(renderer="iframe") # For å vise på nettsiden
 ```
