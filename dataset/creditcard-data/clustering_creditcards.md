@@ -67,7 +67,15 @@ Når vi sier at algoritmen finner det midtpunktet som er "nærmest", mener vi ma
 
 +++
 
+
+
++++
+
 Vi begynner med å laste inn data og biblioteker:
+
++++
+
+
 
 ```{code-cell} ipython3
 # Importerer standardverktøyene våre
@@ -83,6 +91,10 @@ df = pd.read_csv("CC GENERAL.csv")
 # Tar en rask titt på de første 5 radene for å forstå strukturen
 df.head()
 ```
+
+
+
++++
 
 ### Variabler
 
@@ -176,6 +188,7 @@ plt.show()
 # g.figure.savefig("pairplot.svg", bbox_inches="tight")
 ```
 
+
 Hvis du ser på fordelingene (grafene som går på skrått nedover), vil du legge merke til at nesten alle sammen har en lang "hale" mot høyre. Dette er typisk i feks. finansdata; de aller fleste kundene har lave saldoer og få kjøp, men det finnes en liten gruppe kunder som drar kortet for ekstreme summer.
 
 For å se nærmere på disse ekstreme kundene, kan vi dykke ned i to spesifikke variabler med en `JointGrid`.
@@ -197,6 +210,8 @@ g.plot_marginals(sns.boxplot)
 plt.show()
 ```
 
+
+
 Når vi ser på spredningsplottet i midten, ser vi at nesten alle prikkene (kundene) ligger moset sammen i en massiv klump nede i venstre hjørne. Samtidig strekker aksene seg helt opp til over 40 000. Dette skjer fordi et relativt lite antall kunder har ekstrem adferd sammenlignet med «hvermansen». 
 
 For å virkelig forstå hvor skjevt dette er, kan vi se på **boksplottene** som ligger på topp- og høyremargen. 
@@ -213,7 +228,8 @@ Siden den store massen av kunder er så sammentrykt, er det vanskelig å se noen
 
 ### Se tydeligere med logaritmisk skala
 
-For å faktisk kunne se mønsteret inni den store klumpen med "vanlige" kunder, kan vi endre aksene til en **logaritmisk skala**. Dette fungerer som et forstørrelsesglass som strekker ut de lave verdiene, og komprimerer de ekstremt høye verdiene.
+For å faktisk kunne se mønsteret inni den store klumpen med "vanlige" kunder, kan vi endre aksene til en **logaritmisk skala**. Dette fungerer som et forstørrelsesglass som strekker ut de lave verdiene, og komprimerer de ekstremt høye verdiene. 
+
 
 ```{code-cell} ipython3
 # Setter opp et tomt rutenett for to variabler
@@ -259,11 +275,13 @@ Derfor må vi **skalere** dataene våre og vurdere om vi skal **fjerne** "outlie
 
 +++
 
+
 ### Risiko og Kredittutnyttelse
 
 For en bank er det ett forhold som er kanskje enda viktigere enn hvor mye kunden handler for: Hvor stor **risiko** utgjør kunden? 
 
-For å analysere dette, skal vi se på forholdet mellom hvor mye kunden skylder akkurat nå (`BALANCE`), og hva kredittgrensen deres er (`CREDIT_LIMIT`). Nærmer de seg taket for hva de har lov til å låne? Vi lager et nytt scatterplot for å se om vi finner et mønster.
+For å analysere dette, skal vi se på forholdet mellom hvor mye kunden skylder akkurat nå (`BALANCE`), og hva kredittgrensen deres er (`CREDIT_LIMIT`). Nærmer de seg taket for hva de har lov til å låne? Vi lager et nytt scatterplot for å se om vi finner et mønster. 
+
 
 ```{code-cell} ipython3
 # Nytt JointGrid for Balance vs Credit Limit
@@ -280,6 +298,8 @@ g2.plot_marginals(sns.boxplot, color="darkred")
 plt.show()
 ```
 
+
+
 Dette plottet ser ganske annerledes ut! Legg merke til at prikkene danner en slags usynlig, skrå vegg. Denne "veggen" representerer grensen der saldoen er nøyaktig lik kredittgrensen. 
 
 Kunder som ligger presset helt opp mot denne skrå streken, har "maket ut" kredittkortet sitt. For en bank er dette et klassisk faresignal, fordi det betyr at kunden ikke har mer å gå på og potensielt sliter med å betale ned gjelden sin. 
@@ -287,6 +307,18 @@ Kunder som ligger presset helt opp mot denne skrå streken, har "maket ut" kredi
 Ved å fôre K-Means-algoritmen med disse variablene etterpå, håper vi at den klarer å skille de "trygge" kundene fra de som utgjør en høy risiko, helt av seg selv!
 
 +++
+
+## Steg 3: Henger variablene sammen? (Korrelasjon)
+
+Før vi mater dataene våre inn i en maskinlæringsalgortime, er det viktig å vite om noen av variablene våre måler "det samme". Hvis to variabler er ekstremt sterkt korrelert (de beveger seg helt i takt), vil K-Means-algoritmen i praksis gi denne egenskapen dobbel vekt når den regner ut avstander. 
+
+For å undersøke dette, skal vi lage en korrelasjonsmatrise. Vi regner ut *Pearsons korrelasjonskoeffisient*, som går fra -1 (perfekt negativ sammenheng) til 1 (perfekt positiv sammenheng). 0 betyr at det ikke er noen sammenheng overhodet.
+
+For å gjøre tallene enklere å lese, bruker vi Seaborn til å lage et "varmekart" (heatmap) av tabellen!
+
+```{code-cell} ipython3
+
+```
 
 ## Steg 3: Korrelasjon — Henger variablene sammen?
 
@@ -313,6 +345,8 @@ plt.show()
 #Viser tabelenn for de 5 utvalgte
 display(korrelasjon_alle.loc[sel_features, sel_features])
 ```
+
+
 
 Vi undersøker varmekartet med korrelasjonsverdier: Den røde streken på skrå er bare variablene som krysser med seg selv (som alltid er 1). Vi ser etter andre mørkerøde eller blå bokser.
 
@@ -378,6 +412,7 @@ Vi kan teste flere forskjellige verdier for $K$ (for eksempel fra 2 til 10) og l
 2. **Silhouette-score:** Måler både hvor tette klyngene er internt, og hvor tydelig de er skilt fra andre klynger. Verdien går fra −1 til 1, og høyere verdi betyr vanligvis bedre klyngedannelse
 
 +++
+
 
 Nå skal vi la datamaskinen trene en hel haug med K-Means-modeller (fra $K=2$ til $K=20$), og lagre poengsummene (`inertia`og `silhouette`) for hver runde slik at vi kan plotte dem. 
 
@@ -604,11 +639,12 @@ plt.show()
 
 +++ {"jp-MarkdownHeadingCollapsed": true}
 
+
 Siden tallene er Z-scores (antall standardavvik fra snittet), kan vi se nøyaktig hva som definerer hver gruppe:
 
 1. **Lavfrekvens-brukere:** Denne raden er farget i kalde, blåtoner (negative tall) over hele linja. De ligger konsekvent *under* bankens gjennomsnitt på både saldo, kjøp og kontantuttak. De er de rolige A4-kundene.
 2. **Likviditets-fokuserte:** Her ser du en knallrød boks (høyt positivt tall) på `CASH_ADVANCE` og `BALANCE`, mens `PURCHASES` er blå. Dette viser «ekstrem-adferden» deres: De bruker ikke kortet i butikken, men makser det ut i minibanken
-3. **Høyvolumsbrukere:** Denne gruppen lyser rødt på `PURCHASES`, `PAYMENTS` og `CREDIT_LIMIT`. De drar kortet ofte, og betaler store regninger.
+3. **Høyvolumsbrukere:** Denne gruppen lyser rødt på `PURCHASES`, `PAYMENTS` og `CREDIT_LIMIT`. De drar kortet ofte, og betaler store regninger. 
 
 +++
 
@@ -655,6 +691,7 @@ plt.show()
 print(f"Varians forklart av 2D-plottet: {pca.explained_variance_ratio_.sum() * 100:.1f} %")
 ```
 
+
 PCA-plottet over er fantastisk for å se at vi faktisk *har* tre adskilte grupper, men X- og Y-aksen ("Hovedkomponent 1 og 2") er ren matematikk.
 
 La oss plotte de to kritiske variablene mot hverandre: **(`PURCHASES`)** mot **(`CASH_ADVANCE`)**. Her bruker vi igjen `symlog`-trikset fra starten for å takle at veldig mange kunder har nøyaktig 0 i en av kategoriene.
@@ -664,6 +701,7 @@ La oss plotte de to kritiske variablene mot hverandre: **(`PURCHASES`)** mot **(
 ## Visualisering og avslutning
 
 ```{code-cell} ipython3
+
 plt.figure(figsize=(10, 8))
 sns.scatterplot(
     data=df_clusters, 
@@ -698,7 +736,7 @@ Her bytter vi tilbake til de **standardiserte verdiene (Z-scores)**. Den svarte 
 ```{code-cell} ipython3
 # Et klassisk gruppert stolpediagram for å sammenligne segmentene
 # Vi transponerer (.T) for å få variablene på X-aksen og segmentene som stolper
-ax = cluster_centroids[sel_features].T.plot(
+ax = cluster_centroids[radar_cols].T.plot(
     kind="bar", 
     figsize=(12, 6), 
     colormap="viridis", # Beholder det samme fargetemaet som før!
@@ -720,7 +758,7 @@ plt.show()
 
 Stolpediagram er ryddig, men i presentasjoner for ledelsen er **radar-kart (spiderplots)** hyppeste måte å vise kundepersonas på.
 
-Standardbibliotekene vi har brukt til nå (`matplotlib`, `seaborn`, `pandas`) har faktisk utrolig dårlig støtte for å lage pene radar-kart. Derfor bytter vi her verktøy til **Plotly**, som er et moderne bibliotek for interaktive grafer. Siden Plotly-kode ser litt annerledes ut, er kodesnutten under faktisk generert med hjelp av KI (Kunstig Intelligens)
+Standardbibliotekene vi har brukt til nå (`matplotlib`, `seaborn`, `pandas`) har faktisk utrolig dårlig støtte for å lage pene radar-kart. Derfor bytter vi her verktøy til **Plotly**, som er et moderne bibliotek for interaktive grafer. Siden Plotly-kode ser litt annerledes ut og kom inn fra sidelinjen på slutten her, er kodesnutten under faktisk generert med hjelp av KI (Kunstig Intelligens)
 ::: {admonition} La KI hjelpe deg å plotte!
 :class: tip
 
@@ -729,21 +767,19 @@ Det er utrolig mange detaljer å ha kontroll på og dille med når man visualise
 :::
 
 ```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: ''
----
 import plotly.express as px
 
-# Smelter tabellen fra bred til lang for Plotly
-df_radar = cluster_centroids[sel_features].reset_index().melt(
+# 1. Vi velger ut de 5 viktigste variablene
+radar_cols = ["BALANCE", "PURCHASES", "CASH_ADVANCE", "CREDIT_LIMIT", "PAYMENTS"]
+
+# 2. Smelter tabellen fra bred til lang for Plotly
+df_radar = cluster_centroids[radar_cols].reset_index().melt(
     id_vars="Segment", 
     var_name="Variabel", 
     value_name="Z-score"
 )
 
-# Vi tegner det interaktive radar-kartet
+# 3. Vi tegner det interaktive radar-kartet
 fig = px.line_polar(
     df_radar, 
     r="Z-score",           
@@ -756,7 +792,7 @@ fig = px.line_polar(
 # Fyller inn farge inni formene
 fig.update_traces(fill='toself', opacity=0.5)
 
-#  Her setter vi width og height, og fikser skriftstørrelsen!
+# 4. MAGIEN FOR STØRRELSE: Her setter vi width og height, og fikser skriftstørrelsen!
 fig.update_layout(
     title=dict(text="Kundepersonas i spindelvev (Interaktivt)", font=dict(size=20)),
     polar=dict(
@@ -767,6 +803,6 @@ fig.update_layout(
     height=700,  # Gjør figuren 700 piksler høy
     legend=dict(font=dict(size=14)) # Gjør tegnforklaringen lettere å lese
 )
-#fig.show() # For deg
-fig.show() # For å vise på nettsiden
+
+fig.show()
 ```

@@ -1,12 +1,14 @@
 ---
 tags:
   - session/week
-title: Klassifikasjon med Maskinlæring
+title: Klyngeanalyse med Maskinlæring
 ---
 
-# Klassifikasjon med Maskinlæring
+# Klyngeanalyse med Maskinlæring
 
-+ *Føredrag*
++ *Foredrag*
     + Unsupervised Learning
++ *Gjennomarbeidede eksempler* 
+    + [Kredittbruk](notebooks/clustering_creditcards)
 + *Demo* regresjon og korrelasjon i pandas:
     + [Klyngeanalyse](notebooks/Klyngeanalyse)
