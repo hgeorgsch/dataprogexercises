@@ -12,8 +12,9 @@ Det er ikkje so mykje nytt.  Øvingane denne veka handlar
 vel so mykje om djupare forståing for konsepta frå forrige veke.
 
 + *Føredrag*
-    + Kva maskiner ikkje kan gjera
-    + *Bias*
+    + Kunstig intelligens
+      ([foilar](https://iirevu.org.ntnu.no/Slides/Kunstig%20Intelligens/)
+
 + *Gjennomarbeidde døme*
 	+ [](notebooks/Fisher%20Linear%20Discriminant%20in%20sklearn)
 	+ [](notebooks/Evaluering)

@@ -6,7 +6,7 @@ tags:
 css:
   - css/templates.css
 ---
-<!-- slide template="[[tpl-flex]]" bg="lightblue" -->
+<!-- slide template="[[tpl-flex]]" bg="black" -->
 
 # Grafiske brukargrensesnitt
 
