@@ -288,18 +288,6 @@ Ved å fôre K-Means-algoritmen med disse variablene etterpå, håper vi at den 
 
 +++
 
-## Steg 3: Henger variablene sammen? (Korrelasjon)
-
-Før vi mater dataene våre inn i en maskinlæringsalgortime, er det viktig å vite om noen av variablene våre måler "det samme". Hvis to variabler er ekstremt sterkt korrelert (de beveger seg helt i takt), vil K-Means-algoritmen i praksis gi denne egenskapen dobbel vekt når den regner ut avstander. 
-
-For å undersøke dette, skal vi lage en korrelasjonsmatrise. Vi regner ut *Pearsons korrelasjonskoeffisient*, som går fra -1 (perfekt negativ sammenheng) til 1 (perfekt positiv sammenheng). 0 betyr at det ikke er noen sammenheng overhodet.
-
-For å gjøre tallene enklere å lese, bruker vi Seaborn til å lage et "varmekart" (heatmap) av tabellen!
-
-```{code-cell} ipython3
-
-```
-
 ## Steg 3: Korrelasjon — Henger variablene sammen?
 
 Før vi mater dataene våre inn i en maskinlæringsalgortime, er det viktig å vite om noen av variablene våre dypest sett måler "det samme". K-Means-algoritmen teller nemlig avstand. Hvis vi fôrer den med to variabler som er ekstremt sterkt korrelert (de beveger seg helt i takt), vil algoritmen i praksis gi denne egenskapen dobbel vekt!
@@ -710,7 +698,7 @@ Her bytter vi tilbake til de **standardiserte verdiene (Z-scores)**. Den svarte 
 ```{code-cell} ipython3
 # Et klassisk gruppert stolpediagram for å sammenligne segmentene
 # Vi transponerer (.T) for å få variablene på X-aksen og segmentene som stolper
-ax = cluster_centroids[radar_cols].T.plot(
+ax = cluster_centroids[sel_features].T.plot(
     kind="bar", 
     figsize=(12, 6), 
     colormap="viridis", # Beholder det samme fargetemaet som før!
@@ -743,17 +731,14 @@ Det er utrolig mange detaljer å ha kontroll på og dille med når man visualise
 ```{code-cell} ipython3
 import plotly.express as px
 
-# 1. Vi velger ut de 5 viktigste variablene
-radar_cols = ["BALANCE", "PURCHASES", "CASH_ADVANCE", "CREDIT_LIMIT", "PAYMENTS"]
-
-# 2. Smelter tabellen fra bred til lang for Plotly
-df_radar = cluster_centroids[radar_cols].reset_index().melt(
+# Smelter tabellen fra bred til lang for Plotly
+df_radar = cluster_centroids[sel_features].reset_index().melt(
     id_vars="Segment", 
     var_name="Variabel", 
     value_name="Z-score"
 )
 
-# 3. Vi tegner det interaktive radar-kartet
+# Vi tegner det interaktive radar-kartet
 fig = px.line_polar(
     df_radar, 
     r="Z-score",           
@@ -766,7 +751,7 @@ fig = px.line_polar(
 # Fyller inn farge inni formene
 fig.update_traces(fill='toself', opacity=0.5)
 
-# 4. MAGIEN FOR STØRRELSE: Her setter vi width og height, og fikser skriftstørrelsen!
+#  Her setter vi width og height, og fikser skriftstørrelsen!
 fig.update_layout(
     title=dict(text="Kundepersonas i spindelvev (Interaktivt)", font=dict(size=20)),
     polar=dict(
