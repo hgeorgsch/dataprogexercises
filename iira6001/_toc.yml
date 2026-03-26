@@ -116,6 +116,7 @@ chapters:
       sections:
       - file: notebooks/Klyngeanalyse
       - file: notebooks/Kundesegmentering
+      - file: notebooks/clustering_creditcards
     - file: GUI
       sections:
       - file: notebooks/tkinter-demo
