@@ -27,5 +27,6 @@ ein kanskje klara å læra resten på eiga hand.
 
 + *Perspektivføredrag*
     + GUI
+      [(foilar)](https://iirevu.org.ntnu.no/Slides/GUI/)
 + *Tutorials* og øvingar
     + [](notebooks/tkinter-demo)
