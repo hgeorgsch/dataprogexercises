@@ -40,10 +40,4 @@ og heller koma tilbake til verktya når ein treng det.
     + `git` og github
         + [](Installasjon-git)
         + Oppgåve `git`
-    + `Spyder` eller andre IDE-ar.
-      Eg viser `Spyder` fordi det er open kjeldekode og enkelt installert via `pip`.
-      Dersom du har ein annan IDE med python-støtte, som t.d. VSCode, kan det vera
-      like greitt å bruka denne.  Eg trur likevel du vil ha nytte av demovideoen med
-      `Spyder`.  Prinsippa er dei same.
-        + Demo Spyder
-        + Oppgåve Spyder
+    + [](Spyder)
