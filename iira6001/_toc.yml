@@ -111,6 +111,8 @@ chapters:
       - file: notebooks/standalone-exercise
       - file: notebooks/jupytext1demo
       - file: Installasjon-git
+      - file: jupytext
+      - file: Spyder
       - file: Git
     - file: Klyngeanalyse-Kapittel
       sections:
