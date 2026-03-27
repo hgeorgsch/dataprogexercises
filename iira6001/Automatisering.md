@@ -35,5 +35,5 @@ og heller koma tilbake til verktya når ein treng det.
     + Redigering og køyring 
 + *Valfrie oppgåver* - nye verkty.  Kvart verkty er
     + [](jupytext)
-    + [](git)
+    + [](Git)
     + [](Spyder)
