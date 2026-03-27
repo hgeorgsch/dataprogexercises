@@ -1,5 +1,13 @@
+---
+title: git og github
+---
 
-# Koma i gang med Git
+# git og github
+
++ [](Installasjon-git)
++ Oppgåve `git`
+
+## Koma i gang med Git
 
 1. Installer git
 

@@ -20,7 +20,9 @@ set seg inn i lisensvilkåra, sjølv om lisensen ofte er gratis.
 Eg trur at du vil ha nytte av demovideoen med `Spyder` sjølv om du bruker ein
 annan IDE.
 
-+ Demo Spyder
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
+	<iframe src="https://ntnu.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=abaac952-b065-49af-832a-b41a00da3c06&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="Demo Spyder"></iframe>
+</div>
 
 ## Oppgåve i Spyder
 
