@@ -17,9 +17,6 @@ chapters:
     - file: notebooks/Simulering av kontantstraum
     - file: Førelesingsnotat frå Opningssamlinga
       sections:
-      - file: Fyrste dokument i Jupyter Lab (foilar)
-      - file: Fyrste datasett i CSV (foilar)
-      - file: Simulering av kontantstraum (foilar)
       - file: norun/intro-csv-slides
       - file: norun/intro-simulering
   - file: first
