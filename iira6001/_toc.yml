@@ -49,7 +49,6 @@ chapters:
       - file: notebooks/Tid og dato
       - file: notebooks/Arbeidsledige
       - file: exercises/Eksportdata
-      - file: DemoProblems
         sections:
         - file: notebooks/ssb
         - file: notebooks/ssbfile-empty
