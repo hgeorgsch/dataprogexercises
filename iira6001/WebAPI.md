@@ -10,7 +10,7 @@ title: Web API og JSON
 + *Perspektivføredrag*
     + [Datakilder og nettverksprotokoller](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=1232faa7-a692-4102-847b-b3ed00d06d40)
     + [Hente data programmatisk](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=180787ec-ec88-42af-98d4-b34e0096cff1)
-    + [Autentisering](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=180787ec-ec88-42af-98d4-b34e0096cff1)
+    + [Autentisering](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=28ce2d10-ebed-4071-a973-b41300b98575)
 
 + *Introduksjonsstoff* 
     + [](notebooks/WEBAPI)
