@@ -20,7 +20,7 @@ Målet denne veka er
 3. starta på å verta kjend med bibliotek og datatypar for maskinlæring.
 
 + *Perspektivføredrag*
-    + [Om å læra frå data](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=577242b1-0990-481f-a61e-b34d014a07d5)
+    + [Om å læra frå data](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=58fbcd0c-e71a-4fa2-8998-b3ed00d06dcb)
       [(foilar)](https://iirevu.org.ntnu.no/Slides/Om%20%c3%a5%20l%c3%a6ra%20fr%c3%a5%20data/)
     + [Kva er ein modell?](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=b6893b00-7d46-4a5f-9825-b41800ab72fc)
       [(foilar)](https://iirevu.org.ntnu.no/Slides/Modellen/#/)
