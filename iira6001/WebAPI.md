@@ -21,7 +21,7 @@ title: Web API og JSON
         + [Grunnlegende bruk, video](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=b8492fd7-a8fb-4078-9718-b41300b985f7)
         + [Avansert bruk (pxweb), video](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=7ac72552-0701-4467-abdd-b41300b985a8)
     + [Eurostat, WebAPI](notebooks/Eurostat-API)
-        + [Grunnlegende bruk, video](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=b8492fd7-a8fb-4078-9718-b41300b985f7)
+        + [Grunnlegende bruk, video](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=5be4fafa-9310-4333-8d57-b41300b9851b)
 
             ----
 
