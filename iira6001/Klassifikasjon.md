@@ -13,7 +13,7 @@ vel so mykje om djupare forståing for konsepta frå forrige veke.
 
 + *Føredrag*
     + [Kunstig intelligens](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=006f0baa-1eab-467e-9fbc-b42f008070f7)
-      ([foilar](https://iirevu.org.ntnu.no/Slides/Kunstig%20Intelligens/)
+      ([foilar](https://iirevu.org.ntnu.no/Slides/Kunstig%20Intelligens/))
 
 + *Gjennomarbeidde døme*
 	+ [](notebooks/Fisher%20Linear%20Discriminant%20in%20sklearn)

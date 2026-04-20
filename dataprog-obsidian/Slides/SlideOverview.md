@@ -37,7 +37,7 @@
     + [[jupytext-overview]]
     + [[GUI]]
 + Week 10
-    + [[Unsupervised Learning]]
+    + [[Slides/Klyngeanalyse]]
 + ???
     + [[autentisering]]
     + [[dataform]]

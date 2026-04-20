@@ -20,6 +20,6 @@ tags:
 	+ [[SVM]]
 	+ Føredrag
 		+ [[Kunstig Intelligens]]
-3. [[Unsupervised Learning]]
+3. [[Slides/Klyngeanalyse]]
 	1. Clustering: https://www.kaggle.com/datasets/vjchoudhary7/customer-segmentation-tutorial-in-python
-	+ [[Klyngeanalyse]]
+	+ [[notebook/Klyngeanalyse]]
