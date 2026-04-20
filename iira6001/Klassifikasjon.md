@@ -12,7 +12,7 @@ Det er ikkje so mykje nytt.  Øvingane denne veka handlar
 vel so mykje om djupare forståing for konsepta frå forrige veke.
 
 + *Føredrag*
-    + Kunstig intelligens
+    + [Kunstig intelligens](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=006f0baa-1eab-467e-9fbc-b42f008070f7)
       ([foilar](https://iirevu.org.ntnu.no/Slides/Kunstig%20Intelligens/)
 
 + *Gjennomarbeidde døme*
