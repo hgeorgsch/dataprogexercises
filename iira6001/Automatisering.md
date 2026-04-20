@@ -33,7 +33,7 @@ og heller koma tilbake til verktya når ein treng det.
     + [](notebooks/standalone-exercise)
 + *Demo-video*
     + Redigering og køyring 
-+ *Valfrie oppgåver* - nye verkty.  Kvart verkty er
++ *Valfrie oppgåver* - nye verkty.
     + [](jupytext)
     + [](Git)
     + [](Spyder)

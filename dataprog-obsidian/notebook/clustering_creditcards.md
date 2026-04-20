@@ -5,77 +5,73 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.18.1
+    jupytext_version: 1.19.1
 kernelspec:
   name: python3
   display_name: Python 3 (ipykernel)
   language: python
 ---
 
+# Kundesegmentering med Klyngeanalyse
+
+I denne leksjonen skal vi bruke et kjent datasett fra Kaggle som inneholder bruksmønsteret til ca. 9000 kredittkortkunder.
+
 ```{code-cell} ipython3
----
-editable: true
-slideshow:
-  slide_type: ''
----
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
 ```
 
-# Kundesegmentering med Klyngeanalyse
-
-I denne leksjonen skal vi bruke et kjent datasett fra Kaggle som inneholder bruksmønsteret til ca. 9000 kredittkortkunder. 
-
 ## Målet vårt: Finne kundesegmenter
 
-Tenk deg at du jobber som dataanalytiker i en bank. Markedsavdelingen ønsker å kjøre målrettede kampanjer, men de vet ikke hvilke "typer" kunder de har. Vår jobb er å bruke **maskinlæring** for å automatisk dele inn kundene i ulike grupper (segmenter) basert på hvordan de bruker kredittkortet sitt. Kjøper de mye på avbetaling? Tar de ut mye kontanter? Betaler de hele regningen hver måned?
+Tenk deg at du jobber som dataanalytiker i en bank. Markedsavdelingen ønsker å kjøre målrettede kampanjer, men de vet ikke *a priori* hvilke «typer» kunder de har. 
+De maskinlæringsmetodene som vi har sett på hittil forutsetter at vi allerede har bestemt hvilke kategorier vi vil dele datasettet i, f.eks. overklasse, middelklasse og arbeiderklasse, og at vi har en metode, om enn kostbar, for å identifisere kategoriene i et datasett som vi kan bruke til trening.  Dette kalles veiledet trening eller *supervised learning*.
 
-Dette kalles som kjent **klyngeanalyse** (Clustering).
+Dersom vi ikke har bestemt en kategorisering som vi mener er relevant, kan vi bruke *unsupervised learning* eller trening uten veiledning. Det vanligste eksempelet på trening uten veiledning er klyngeanalyse (*clustering*).
 
-## Hva er klyngeanalyse?
+Vi kan bruke klyngeanalyse for å dele kundemassen inn i klynger (segmenter) som har meget til felles uten å ha nogen formening om *hva* de har til felles.
 
-Klyngeanalyse er en form for **veiledningsløs maskinlæring** (*unsupervised learning*). Det betyr at vi gir algoritmen et datasett helt uten forhåndsdefinerte merkelapper (ingen fasit). Algoritmens jobb er å gruppere dataene slik at objektene (i vårt tilfelle kundene) innad i samme gruppe er så like hverandre som mulig, mens gruppene er så forskjellige fra hverandre som mulig.
+I dette eksempelet skal vi ta for oss kredittkortkunder, og se hvordan vi kan segmentere kundemassen ved hjelp av klyngeanalyse, for derefter å analysere hva som kjennetegner de ulike segmentene.
+Kjøper de mye på avbetaling? Tar de ut mye kontanter? Betaler de hele regningen hver måned?
 
 For en bank eller en markedsavdeling kan dette være verdifullt. Hvis vi vet hvilke klynger kundene våre tilhører, kan vi feks:
 * Sende målrettede reklamekampanjer.
 * Utvikle skreddersydde finansprodukter (f.eks. et kredittkort for de som reiser mye).
 * Identifisere risiko (kunder som tar opp mye gjeld og betaler lite).
 
-Du kan laste ned datasettet fra kaggle her: [https://www.kaggle.com/datasets/arjunbhasin2013/ccdata](https://www.kaggle.com/datasets/arjunbhasin2013/ccdata), eller fra kurssiden
-::::{admonition} Hvordan fungerer K-Means-algoritmen?
+::: {admonition} Hvordan fungerer K-Means-algoritmen?
 :class: note dropdown
 
 
 En av de mest populære algoritmen for klyngeanalyse heter **K-Means**. Navnet avslører egentlig hvordan den fungerer: "K" står for antall klynger vi ønsker å finne, og "Means" (gjennomsnitt) refererer til hvordan algoritmen finner midtpunktet i disse klyngene.
 
-Slik jobber K-Means, steg for steg:
+Slik jobber $K$-Means, steg for steg:
 1. **Velg K:** Vi bestemmer oss for hvor mange klynger vi vil dele kundene inn i (f.eks. $K = 4$).
-2. **Plasser ut midtpunkter:** Algoritmen slipper ned 4 tilfeldige midtpunkter (kalt *centroider*) i datasettet vårt.
+2. **Plasser ut midtpunkter:** Algoritmen slipper ned $K$ tilfeldige midtpunkter (kalt *centroider*) i datasettet vårt.
 3. **Fordel kundene:** Hver eneste kunde blir tildelt det midtpunktet de ligger nærmest. Nå har vi 4 midlertidige klynger.
 4. **Flytt midtpunktet:** Algoritmen regner ut gjennomsnittet av alle kundene i en klynge, og flytter selve midtpunktet til dette nye gjennomsnittet.
 5. **Gjenta:** Siden midtpunktene nå har flyttet på seg, må vi fordele kundene på nytt (Steg 3). Dette gjentar seg helt til midtpunktene slutter å flytte på seg. Da er algoritmen i mål!
+:::
 
 ::: {admonition} Hva betyr "nærmest" i data science?
 :class: tip dropdown
 
 Når vi sier at algoritmen finner det midtpunktet som er "nærmest", mener vi matematisk avstand. For å kunne måle denne avstanden riktig, er det helt kritisk at alle variablene våre har samme skala. Hvis vi har én variabel som måles i titusener (f.eks. kredittgrense) og en annen som måles fra 1 til 12 (f.eks. måneder som kunde), vil algoritmen ignorere den lille variabelen helt. Derfor må vi alltid **skalere (standardisere)** dataene våre før vi kjører K-Means!
+
 :::
 
-::::
-
 +++
+
+## Steg 1. Datasett
+
+Du kan laste ned datasettet fra kaggle her: 
+[https://www.kaggle.com/datasets/arjunbhasin2013/ccdata](https://www.kaggle.com/datasets/arjunbhasin2013/ccdata),
+eller fra kurssiden
 
 Vi begynner med å laste inn data og biblioteker:
 
 ```{code-cell} ipython3
-# Importerer standardverktøyene våre
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-
 # Laster inn datasettet (sørg for at du har lastet ned CC GENERAL.csv fra Kaggle)
 
 df = pd.read_csv("CC GENERAL.csv")
@@ -101,7 +97,9 @@ Selv om vi skal la K-Means-algoritmen se på alle variablene for å finne skjult
 Du kan lese mer om de andre variablene på kaggle, [ https://www.kaggle.com/datasets/arjunbhasin2013/ccdata,]( https://www.kaggle.com/datasets/arjunbhasin2013/ccdata)
 :::
 
-## Steg 1: Datavask og manglende verdier
++++
+
+## Steg 2: Datavask og manglende verdier
 
 Før vi kan begynne å lete etter spennende kundesegmenter, må vi sikre at dataene våre er av god kvalitet. Maskinlæringsalgoritmer (som K-Means i Python) takler nemlig ikke tomme celler, også kalt manglende verdier eller `NaN` (Not a Number). Hvis vi mater algoritmen med et datasett som har hull i seg, vil koden vår rett og slett krasje.
 
@@ -111,6 +109,14 @@ Vi starter derfor med å bruke `.isna().sum()` for å telle nøyaktig hvor mange
 # Undersøker om vi mangler data
 df.isna().sum()
 ```
+
+::: {admonition} Refleksjonsspørsmål
+Er manglende data et problem i dette tilfellet?
+Kan vi tillate oss å droppe alle radene med manglende data?
+Du må gjerne legge til kode for å sjekke hvor stort datasettet
+:::
+
++++
 
 ### Vurdering: Hva gjør vi med hullene?
 
@@ -122,12 +128,14 @@ Når vi som dataanalytikere møter manglende data, har vi grovt sett to valg:
 
 I vårt tilfelle velger vi **sletting** (gjennom Pandas-funksjonen `.dropna()`). Vi har fortsatt over 8600 komplette kunder igjen å bygge segmenter på, sannynsligvis nok data for K-Means. Hvis vi i stedet fyller inn fiktive gjennomsnittstall for hva folk betaler i minimumsavdrag, risikerer vi å vanne ut dataene og i verste fall skape kunstige mønstre som ødelegger for klyngene våre.
 
-Samtidig benytter vi anledningen til å fjerne kolonnen `CUST_ID`. Dette er bare et unikt kundenummer (f.eks. "C10001"). K-Means regner ut *matematisk avstand*, og denne ID-variabelen med bokstaver skal ikke være med i selve analysen.
-
 ```{code-cell} ipython3
 # 1. Vi fjerner alle rader som mangler data
 df = df.dropna()
+```
 
+Samtidig benytter vi anledningen til å fjerne kolonnen `CUST_ID`. Dette er bare et unikt kundenummer (f.eks. "C10001"). K-Means regner ut *matematisk avstand*, og denne ID-variabelen med bokstaver skal ikke være med i selve analysen.
+
+```{code-cell} ipython3
 # 2. Vi kaster kunde-ID-kolonnen
 df = df.drop("CUST_ID", axis=1)
 
@@ -135,16 +143,18 @@ df = df.drop("CUST_ID", axis=1)
 print(f"Antall kunder igjen i datasett: {len(df)}")
 ```
 
-## Steg 2: Utforskende dataanalyse (EDA)
+## Steg 3: Utforskende dataanalyse (EDA)
 
 Før vi slipper løs maskinlæringen, er det god praksis å bli visuelt kjent med dataene våre. Vi kaller dette Utforskende Dataanalyse (EDA - Exploratory Data Analysis). Målet er å se etter sammenhenger (korrelasjoner) og se hvordan dataene er fordelt. Er de fleste kundene ganske like, eller har vi noen ekstreme avvikere?
 
 ::: {admonition} Et nytt verktøy: Seaborn
 :class: tip dropdown
 
-Til nå har vi kanskje brukt standardverktøyet `matplotlib` for å lage grafer. Nå skal vi bruke et bibliotek som heter **Seaborn** (`import seaborn as sns`). 
+Til nå har vi kanskje brukt standardverktøyet `matplotlib` for å lage grafer.
+Nå skal vi bruke et bibliotek som heter **Seaborn** (`import seaborn as sns`). 
 
-Seaborn er bygget "på toppen av" matplotlib, men er spesialdesignet for statistisk analyse og har **innebygd støtte for Pandas DataFrames**. Dette gjør det ganske behagelig å jobbe med som dataanalytiker.
+Seaborn er bygget "på toppen av" matplotlib, men er spesialdesignet for statistisk analyse og har **innebygd støtte for Pandas DataFrames**.
+Dette gjør det ganske behagelig å jobbe med som dataanalytiker.
 
 På overflaten har nesten alle Seaborn-funksjoner den samme logiske og enkle strukturen. Du gir funksjonen selve tabellen din, og forteller deretter hvilke kolonner som skal tegnes opp:
 `sns.plottetype(data=df, x="kolonnenavn", y="kolonnenavn", hue="grupperingskolonne", ...)`
@@ -171,14 +181,13 @@ g.figure.set_size_inches(12, 12)
 
 # Viser grafen
 plt.show()
-
-# (Valgfritt: Hvis du vil lagre denne som en bildefil til en presentasjon)
-# g.figure.savefig("pairplot.svg", bbox_inches="tight")
 ```
 
 Hvis du ser på fordelingene (grafene som går på skrått nedover), vil du legge merke til at nesten alle sammen har en lang "hale" mot høyre. Dette er typisk i feks. finansdata; de aller fleste kundene har lave saldoer og få kjøp, men det finnes en liten gruppe kunder som drar kortet for ekstreme summer.
 
 For å se nærmere på disse ekstreme kundene, kan vi dykke ned i to spesifikke variabler med en `JointGrid`.
+
++++
 
 ### Saldo vs. Kjøp
 
@@ -288,7 +297,7 @@ Ved å fôre K-Means-algoritmen med disse variablene etterpå, håper vi at den 
 
 +++
 
-## Steg 3: Korrelasjon — Henger variablene sammen?
+## Steg 4: Korrelasjon — Henger variablene sammen?
 
 Før vi mater dataene våre inn i en maskinlæringsalgortime, er det viktig å vite om noen av variablene våre dypest sett måler "det samme". K-Means-algoritmen teller nemlig avstand. Hvis vi fôrer den med to variabler som er ekstremt sterkt korrelert (de beveger seg helt i takt), vil algoritmen i praksis gi denne egenskapen dobbel vekt!
 
@@ -329,7 +338,7 @@ I koden over brukte vi `cmap="coolwarm"`. Dette fargekartet er bra for korrelasj
 
 +++
 
-## Steg 4: Standardisering og optimalt antall klynger
+## Steg 5: Standardisering og optimalt antall klynger
 
 Nå har vi rene data, og vi kjenner til svakhetene i dem (som at vi har noen "hvaler" av noen kunder). Nå skal vi gjøre dataene spiselige for K-Means-algoritmen.
 
@@ -425,7 +434,7 @@ plt.grid(True, linestyle="--", alpha=0.5)
 plt.show()
 ```
 
-## Steg 5: Trene den endelige modellen
+## Steg 6: Trene den endelige modellen
 
 Å tolke disse grafene er like mye kunst som vitenskap:
 
@@ -473,7 +482,7 @@ df_clusters = df.copy()
 df_clusters["cluster"] = clusters
 ```
 
-## Steg 6: Bli kjent med klyngene (Profilering)
+## Steg 7: Bli kjent med klyngene (Profilering)
 
 Datamaskinen har nå delt kundene våre inn i tre grupper (0, 1 og 2). Men K-Means gir ikke gruppene navn – det er vår jobb som analytikere! 
 
@@ -612,7 +621,7 @@ Siden tallene er Z-scores (antall standardavvik fra snittet), kan vi se nøyakti
 
 +++
 
-## Steg 7: Visualisering med PCA (Prinsipalkomponentanalyse)
+## Steg 8: Visualisering med PCA (Prinsipalkomponentanalyse)
 
 Nå har vi tre velfungerende kundeprofiler. Men det gjenstår ett problem: Vi har 17 variabler. Det betyr at klyngene våre eksisterer i et 17-dimensjonalt rom. Hvordan i all verden skal vi kunne plotte det på en flat 2D-skjerm for å "se" kundene våre?
 
@@ -769,4 +778,8 @@ fig.update_layout(
 )
 #fig.show() # For deg
 fig.show() # For å vise på nettsiden
+```
+
+```{code-cell} ipython3
+
 ```
