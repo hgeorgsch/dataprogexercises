@@ -26,7 +26,7 @@ og oversikt.
     + [](notebooks/Shrimp-Game) er eit døme på 
       agent-basert simulering.
 + *Demovideo*
-    + [Klasser og Objekt](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=d951c890-877c-4c59-97a3-b3ed00d25c05)
+    + [Klasser og Objekt](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=0bb72247-110b-4a7f-adab-b3ef00efeafa)
         + [](notebooks/class-empty)
         + [](notebooks/class)
 + *Opne øvingar*
