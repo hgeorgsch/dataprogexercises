@@ -1,3 +1,6 @@
 # Praktisk Informasjon
 
-+ [Mappevurdering](Mappevurdering)
++ [](Mappevurdering)
++ [](Oblig)
++ [](Dropin)
++ [](Installasjon-git)

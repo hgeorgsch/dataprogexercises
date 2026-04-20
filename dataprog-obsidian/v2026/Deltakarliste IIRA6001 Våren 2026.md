@@ -17,3 +17,20 @@
 | Arnstein               | Ørjavik    | 6013 ÅLESUND    | arnstein@pvv.ntnu.no         | arnstein.orjavik@sbm.no   |
 | Mariann Beate Bøe      | Østrem     | 6060 HAREID     | mariann.b.boe@gmail.com      | mariann.ostrem@sbm.no     |
 | Nina                   | Lysfjord   | Oslo            |                              | nina.lysfjord@vegvesen.no |
+
+```
+steinarasb@gmail.com,
+ideboberg@hotmail.no, ide.boberg@norid.no,
+trdybvik@hotmail.no,
+nawidfazli@gmail.com, nawid.fazli@sbm.no,
+thomas.l.johansen@gmail.com, tlj@sbm.no,
+bendik.luthentun@hotmail.com, bendik.luthentun@sbm.no,
+prebenfm@hotmail.com,
+annlisbethn@gmail.com, annlisbeth.nilsen@sbm.no,
+louishelge@gmail.com, louis@sbm.no,
+alice.rindal@gmail.com, alice.rindal@sbm.no,
+msvend1967@gmail.com, morten.svendsen@bos.no,
+arnstein@pvv.ntnu.no, arnstein.orjavik@sbm.no,
+mariann.b.boe@gmail.com, mariann.ostrem@sbm.no,
+nina.lysfjord@vegvesen.no
+```
