@@ -21,6 +21,11 @@ NTNU-tenester.
 
 ## Klona eit git-repo frå andre
 
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
+	<iframe src="https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=46fd704b-e2fd-4c44-b378-b43300b865e9"style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 60%;  height: 60%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="Demo Spyder"></iframe>
+</div>
+
+
 
 ::: {admonition} Oppgåve
 Opprett *Personal Access Token* (PAT).
@@ -58,4 +63,9 @@ Du har sikkert ingen *repositories* enno, men du kan trykka på den grøne *New*
 
 Gje det nye *repository* eit namn og ein beskriving.  Du må òg setja *owner* til brukarnamnet dit.
 Du kan velja å laga nokre standardfiler (README, LICENSE), men det treng me ikkje tenkja på no.
+:::
+
+::: {admonition} Oppgåve
+Bruk kommandolina til å klona det *repository* som du nett oppretta.
+Bruk det til neste programmeringsprosjekt.
 :::
