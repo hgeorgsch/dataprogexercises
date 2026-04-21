@@ -18,7 +18,7 @@ title: Klyngeanalyse med Maskinlæring
 + Introduksjon til unsupervised learning 
     + sklearn: kmeans, silhouette-score, inertia, skalering, pca
     + tiltenkt bruk av datasettt generert i 
-      [testfil](notebooks/data-Atil-kmeans-knn)
+      [testfil](notebooks/data-til-kmeans-knn)
 + Gjennomarbeidet eksempel
     + [Kredittbruk](notebooks/clustering_creditcards)
     + Spotify, audio analyse fra uke om webapi, skisse 
