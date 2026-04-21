@@ -32,8 +32,9 @@ og heller koma tilbake til verktya når ein treng det.
     + [](notebooks/ML-WebAPI)
     + [](notebooks/standalone-exercise)
 + *Demo-video*
-    + Redigering og køyring 
-+ *Valfrie oppgåver* - nye verkty.
+    + [Python på kommandolina](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=0c3334ba-5264-4e71-b9a7-b433007f211c)
+      viser korleis eg vanlegvis arbeider ned python, utan *Jupyter Notebook*.
++ *Valfrie oppgåver* - nye verkty - med demovideoar.
     + [](jupytext)
     + [](Git)
     + [](Spyder)

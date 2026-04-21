@@ -16,3 +16,4 @@ export
 .*.swp
 log
 .git-broke*
+.virtual_documents
