@@ -40,7 +40,7 @@ Korleis står det til?
 - 10.00 Velkomen
     - Korleis har det gått sidan sist?
     - https://mentimeter.com/
-- 10.30-12  Deltakarpresentasjonar
+- 10.30-12  Deltakarpresentasjonar 
 	- 15 min/person
 - 12-12.30 Lønsj
 - 12.30 - 15  Deltakarpresentasjonar (held fram)
@@ -61,6 +61,35 @@ Korleis står det til?
 
 ---
 
+## Gruppediskusjon Del 1
+
+(om arbeidet)
+
+1. Kva er interessant og lærerikt?
+2. Kva skulle me ha funne ut meir om?
+3. Kva meirverdi gjev programmering?
+
+---
+
++ Teknisk nivå (per del) 
++ Testing og validering (per del) 
++ Kodekvalitet (per del) 
++ Analyse/tolking av resultat (per del) 
++ Originalitet (samla)
++ Refleksjon (Del 3)
+
+Sjå https://iirevu.org.ntnu.no/iira6001/Mappevurdering.html
+
+---
+
+## Gruppediskusjon Del 2
+
+(kompetansevurdering)
+
++ Er du sjølv nøgd med kompetansen du viser i ditt eige arbeide?
++ Kva vil du fokusera på når du leverer mappe?
+
+---
 
 Spørsmål?
 <!-- element class="[[r-fit-text]]" -->
