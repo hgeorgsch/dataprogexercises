@@ -113,6 +113,7 @@ chapters:
       - file: notebooks/Klyngeanalyse
       - file: notebooks/Kundesegmentering
       - file: notebooks/clustering_creditcards
+      - file: notebooks/data-til-kmeans-knn
     - file: GUI
       sections:
       - file: notebooks/tkinter-demo
