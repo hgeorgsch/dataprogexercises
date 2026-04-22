@@ -45,19 +45,19 @@ Korleis står det til?
 - 12-12.30 Lønsj
 - 12.30 - 15  Deltakarpresentasjonar (held fram)
 - 15-16.30 Drøfting og tilbakemelding
-    + Gruppe
-    + Plenum
+    - Gruppe
+    - Plenum
 
 ---
 
 ## Gruppeinndeling
 
-+ Grupper på to, maks tre
-    + to som presenterer
-+ Særleg ansvar for spørsmål og innspel til gruppekameratane
-    + Kva er interessant og lærerikt?
-    + Kva skulle me ha visst meir om?
-    + Kva meirverdi gjev programmering?
+- Grupper på to, maks tre
+    - to som presenterer
+- Særleg ansvar for spørsmål og innspel til gruppekameratane
+    - Kva er interessant og lærerikt?
+    - Kva skulle me ha visst meir om?
+    - Kva meirverdi gjev programmering?
 
 ---
 
@@ -71,12 +71,12 @@ Korleis står det til?
 
 ---
 
-+ Teknisk nivå (per del) 
-+ Testing og validering (per del) 
-+ Kodekvalitet (per del) 
-+ Analyse/tolking av resultat (per del) 
-+ Originalitet (samla)
-+ Refleksjon (Del 3)
+- Teknisk nivå (per del) 
+- Testing og validering (per del) 
+- Kodekvalitet (per del) 
+- Analyse/tolking av resultat (per del) 
+- Originalitet (samla)
+- Refleksjon (Del 3)
 
 Sjå https://iirevu.org.ntnu.no/iira6001/Mappevurdering.html
 
@@ -86,19 +86,19 @@ Sjå https://iirevu.org.ntnu.no/iira6001/Mappevurdering.html
 
 (kompetansevurdering)
 
-+ Er du sjølv nøgd med kompetansen du viser i ditt eige arbeide?
-+ Kva vil du fokusera på når du leverer mappe?
+- Er du sjølv nøgd med kompetansen du viser i ditt eige arbeide?
+- Kva vil du fokusera på når du leverer mappe?
 
 ---
 
 ## Planen vidare
 
-+ Maskinlæring (veke 7-8 + 10)
-    + nye teknikkar i dataanalyse
-+ Automatisering (veke 9 + 11)
-    + integrasjon i arbeidsflyt
-+ Sikkerheit og etikk (veke 12)
-    + avgrensingar og atterhald
+1. Maskinlæring (veke 7-8 + 10)
+    - nye teknikkar i dataanalyse
+1. Automatisering (veke 9 + 11)
+    - integrasjon i arbeidsflyt
+1. Sikkerheit og etikk (veke 12)
+    - avgrensingar og atterhald
 
 ---
 
