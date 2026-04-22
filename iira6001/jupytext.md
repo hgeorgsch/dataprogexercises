@@ -23,8 +23,9 @@ Køyr det gjerne for å testa.
 :::
 
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
-	<iframe src="https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=75815bc3-9b85-4f73-9f95-b43300901f4b" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 60%;  height: 60%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="Demo Spyder"></iframe>
+	<iframe src="https://ntnu.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=75815bc3-9b85-4f73-9f95-b43300901f4b&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="Demo jupytext"></iframe>
 </div>
+
 
 
 ::: {admonition} Oppgåve
