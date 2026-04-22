@@ -91,5 +91,16 @@ Sjå https://iirevu.org.ntnu.no/iira6001/Mappevurdering.html
 
 ---
 
+## Planen vidare
+
++ Maskinlæring (veke 7-8 + 10)
+    + nye teknikkar i dataanalyse
++ Automatisering (veke 9 + 11)
+    + integrasjon i arbeidsflyt
++ Sikkerheit og etikk (veke 12)
+    + avgrensingar og atterhald
+
+---
+
 Spørsmål?
 <!-- element class="[[r-fit-text]]" -->
