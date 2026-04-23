@@ -30,6 +30,28 @@ til ein JSON-fil, som me lastar inn fyrst.
 configfil = "innenlandslanegjeld.json"
 ```
 
+Innhaldet i denne fila er: 
+```json
+{"queryObj":{
+  "query": [
+    {
+      "code": "Lantaker2",
+      "selection": {
+        "filter": "item",
+        "values": [
+          "Kred04"
+        ]
+      }
+    }
+  ],
+  "response": {
+    "format": "json-stat2"
+  }
+},"tableIdForQuery":"06718","postUrl":"https://data.ssb.no/api/v0/no/table/06718"}
+```
+Om du ikkje klarer å lasta ned fila `innenlandsgjeld.json`, kan du laga
+fila med dette innhaldet.
+
 ## Konfigurasjonen
 
 +++
