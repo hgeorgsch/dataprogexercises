@@ -46,3 +46,7 @@ author: Hans Georg Schaathun
 | 12.15-14.45 | Seminar: Kvar vil me? (med pause) | |
 | 14.45-15.00 | Avrunding | |
 
+## Døme frå øktene
+
++ [](demo/demo20260423)
+    + Datafil: [EXR20250401.csv](./notebooks/EXR20250401.csv)

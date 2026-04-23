@@ -30,6 +30,7 @@ og heller koma tilbake til verktya når ein treng det.
       [(foilar)](https://iirevu.org.ntnu.no/Slides/Versjonskontroll/#/)
 + *Gjennomarbeidd døme*
     + [](notebooks/ML-WebAPI)
+        + Last òg ned [innenlandslanegjeld.json](./notebooks/innenlandslanegjeld.json) 
     + [](notebooks/standalone-exercise)
 + *Demo-video*
     + [Python på kommandolina](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=0c3334ba-5264-4e71-b9a7-b433007f211c)
