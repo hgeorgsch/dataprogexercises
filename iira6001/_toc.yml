@@ -81,6 +81,8 @@ chapters:
       - file: norun/spotify-audio-analyse
       - file: norun/chatgpt_api
   - file: midway
+    sections:
+      - file: demo/demo20260423.ipynb
   - file: second
     sections:
     - file: Statistikk og Maskinlæring
