@@ -26,23 +26,18 @@ author: Hans Georg Schaathun
       ([Slides](https://iirevu.org.ntnu.no/Slides/Datastrukturar/))
 
 + Gjennomarbeidde døme
-    + [](notebooks/Simulering%20av%20kontantstraum) frå opningssamlinga.
-          Du bør gjera ferdig denne før du startar på noko nytt.
-    + [Halveringsmetoden](notebooks/Halveringsmetoden)
     + [](notebooks/Smittespreiing)
 	+ [Listekomprehensjon](notebooks/Listekomprehensjon)
 	+ [](notebooks/JSON%20og%20dict) (valfri).
       Denne øvinga er litt meir teknisk og spissfindig, og mindre praktisk,
       men ho kan gje ein nyttig illustrasjon av bruken av `dict`.
++ *Valfrie oppgåver*
+    + [](notebooks/Halveringsmetoden) viser eit døme på numerisk
+      likningsløysing i python.  Denne oppgåva er nyttig dersom
+      du har litt bakgrunn i matematikk.
+      
 
 + *Demonstrasjonsvideoane*
-    + [Demo Kontrollflyt](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=af53d7b8-1435-4957-9ae6-b3ee00cb13fc)
-      viser korleis ein lastar ned øvinga og korleis ein bruker variablar,
-      vilkår (*if*) og løkker (*for*) i python.
-      Denne vart lang (nesten 30 min.) og kanskje litt for omstendeleg,
-      men hopp over det som vert for trivielt.
-        + [](notebooks/control-empty)
-        + [](notebooks/control)
 	+ [Demo Listekomprehensjon](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=64c29094-a428-42a5-9f3b-b3ee00dc0018)
         + [](notebooks/list-empty)
         + [](notebooks/list)
@@ -52,12 +47,9 @@ author: Hans Georg Schaathun
 
 + *Drilloppgåver* finn du på [Moodle](https://capquiz.math.ntnu.no) (CodeRunner).
   Der er to sett denne veka:
-    + Øving 1: Variabler og datatyperQuiz
-    + Øving 2: Funksjoner, løkker og listerQuiz
+    + Øving 2: Funksjoner, løkker og lister
 	+ Øving 3. CodeRunner `list` og `dict`
 
-+ *Opne oppgåver*
-    + [Kontantstraum](exercises/Kontantstraum)
 
 
 ## Oppsummering
