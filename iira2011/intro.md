@@ -87,7 +87,7 @@ Her finn du tre ting,
     + [](veke02)
     + **TODO** treng me tre veker til grunnleggjande programmering og python?
 + Del 2. Statistiske data og maskinlæring
-    + [](CSV%20og%20Deskriptiv%20Statistikk)
+    + [](veke-CSV)
     + [](Samanlikna%20Datasett)
     + [](Statistikk%20og%20Maskinlæring)
     + [](Klassifikasjon)
