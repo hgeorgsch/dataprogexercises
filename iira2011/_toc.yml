@@ -32,7 +32,7 @@ chapters:
       - file: notebooks/dict
       - file: notebooks/list-empty
       - file: notebooks/list
-  - file: CSV og Deskriptiv Statistikk
+  - file: veke-CSV
       sections:
       - file: notebooks/Genetikk
       - file: notebooks/Tid og dato
