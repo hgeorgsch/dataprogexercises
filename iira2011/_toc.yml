@@ -18,7 +18,7 @@ chapters:
     - file: notebooks/Simulering av kontantstraum
     - file: norun/intro-csv-slides
     - file: norun/intro-simulering
-  - file: Numeriske Metodar og Kontrollflyt
+  - file: veke02
       sections:
       - file: notebooks/Halveringsmetoden
       - file: notebooks/Smittespreiing
@@ -27,15 +27,8 @@ chapters:
       - file: notebooks/Folkevekst
       - file: notebooks/control-empty
       - file: notebooks/control
-  - file: Datastrukturar og Simulering
-      sections:
-      - file: notebooks/Tilfeldigheit
-      - file: notebooks/Marknadssimulering
-      - file: exercises/Kundedifferensiering
       - file: notebooks/Listekomprehensjon
       - file: notebooks/JSON og dict
-      - file: exercises/Varar på sal
-      - file: notebooks/Tilfeldigheit-Demo
       - file: notebooks/dict-empty
       - file: notebooks/dict
       - file: notebooks/list-empty
@@ -112,3 +105,12 @@ chapters:
       - file: notebooks/data-til-kmeans-knn
   - file: Sikkerheit
   - file: closure
+  - title: Bilag.
+    sections:
+      - file: Slumptal
+        sections:
+        - file: notebooks/Tilfeldigheit
+        - file: notebooks/Marknadssimulering
+        - file: exercises/Kundedifferensiering
+        - file: exercises/Varar på sal
+        - file: notebooks/Tilfeldigheit-Demo
