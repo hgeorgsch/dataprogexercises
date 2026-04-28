@@ -2,4 +2,3 @@
 
 + [](Mappevurdering)
 + [](Oblig)
-+ [](Installasjon-git)
