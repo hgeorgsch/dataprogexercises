@@ -6,74 +6,14 @@ tags:
 
 # Installasjon python
 
-
 I kurset bruker vi python som programmeringsspråk og fleire ulike
 verkty til å arbeida med pythonkode.
-Me tilrår å installara *Anaconda* som er eit distribusjonsmiljø
-for det meste som finst av pythonverkty.
-Ved å installera siste utgåve av Anaconda, er me trygge på at du
-har ein ny versjon av python, alle biblioteka me treng, samt
-*Jupyter Lab* som er det fyrste verktyet me treng.
+Der er mange ulike programvarepakkar som kan brukast til å koma i gang.
 
-Der er eitt aber med anaconda.  Det er ikkje fri programvare.
-Der er lisensvilkår å lesa, og om ein skal bruka det i ein stor
-bedrift, treng ein betalt lisens.
-Dei som ikkje kan eller vil installera Anaconda, kan installera
-Python og pip, og bruka pip til å installera andre pakkar som
-trengst.  Sjå under Anaconda.
+Den tryggaste løysinga er å installera Python og Pip lokalt.
 
+Der er to 
 
-::: {warning}
-Der er sådd tvil om kva lisens som gjeld for Anaconda ved NTNU
-og dette er eg i ferd med å sjekka ut.
-:::
-
-::: {admonition} Merknad
-Miniconda er ein lettvektsutgåve av anaconda, og sjølve miniconda
-er gratis.  Problemet er at ein bruker miniconda for å lasta ned
-andre pakkar frå anaconda-platformen, og det er ikkje lett å sjå
-kva som krev betalt lisens.
-:::
-
-::: {admonition} Merknad
-Dersom du installerer python på andre måtar, so skal du sjå til
-at du ogso har Jupyter Lab og at du kan installera
-popolære bibliotek som torch, pandas, scikit-learn, m.fl. ved behov.
-Det er alt me treng.
-:::
-
-
-## Anaconda
-
-1. Last ned [Anaconda](https://www.anaconda.com/download/success)
-   - Vel riktig versjon, mac, Linux eller windows,
-     og evt. intel eller m-prossessor for mac.
-   - Du kan sjekka om du har intel eller apple-silicon-prosessor 
-     slik som på [biletet under](fig-sjekk)
-
-:::{figure} sjekk-prosessor.png
-:name: fig-sjekk
-Trykk på eplet oppe til venstre og «about this mac» eller «Om denne maskinen»
-:::
-
-2. Fylg installasjonsinstruksen og godtak standardinstillingane
-3. Start Anaconda Navigator - fyrste gongen spør han om
-   å oppdatera; gjer det
-   - Kan henda spør han òg om å laga eller logga inn på ein konto;
-     det treng du ikkje
-
-:::{figure} oppdater.png
-:name: fig-oppdater
-Trykk ja for å oppdatera - vindauga om innlogging kan dere kryssa ut.
-:::
-
-:::{note}
-Anaconda er alt me treng den fyrste halvdelen av kurset.
-Når du har installert, kan du gå
-[](notebooks/Fyrste%20dokument%20i%20Jupyter%20Lab) for å
-sjå om det verka, men dette skal me prata meir om på
-[Opningssamlinga](Opningssamling).
-:::
 
 ## Python og pip
 
@@ -81,14 +21,28 @@ Unix-system, inkl. MacOS, plar ha python førehandsinstallert.
 På Windows må ein ofte installera det sjølv.
 Det greiaste er sikkert å bruka 
 [instruksjonane frå MicroSoft](https://learn.microsoft.com/en-us/windows/python/beginners).
-
 Pakkehandteringsverktyet `pip` bør vera automatisk installert saman 
 med python.
-Når me ikkje har Anaconda eller miniconda, er det `pip` me bruker
-for å installera alt anna tilbehør til python.
 
-Når ein bruker Python utan anaconda, vil ein måtte bruka kommandolina,
-ogso kjend som terminalvindauga.
+Når ein programmerer, vil ein måtte bruka kommandolina, ogso kjend som
+terminalvindauga.
+Du kan starta terminalvindauga frå startmenyane i Gnome, Windows eller
+MacOS, men det kan ha ulike namn, som «terminal», «command» eller «powershell».
+
+Du kan testa at python er installert ved å opna terminalvindauga og skriva
+```bash
+python --version
+```
+Det bør sjå omtrent slik ut
+```
+georg@shannon:~/git/evu/dataprogdev$ python --version
+Python 3.13.5
+```
+Det er ikkje viktig å ha nyaste versjon, men om du har noko eldre enn 3.11,
+har du eit gamalt system og sjå om du kan oppgradera.
+([Versjonsstatus](https://devguide.python.org/versions/) fortel kva versjonar
+som stadig er støtta.)
+
 Det programmet som me skal bruka heile den fyrste halvdelen av kurset
 heiter *Jupyter Lab*.
 Dersom python er installert kan du gjera fylgjande for å installera
@@ -109,9 +63,10 @@ og testa *Jupyter Lab*.
     [](https://iirevu.org.ntnu.no/iira6001/notebooks/Fyrste%20dokument%20i%20Jupyter%20Lab) 
     og gjera oppgåvene der.
 
-Eitt problem som du vil støyta på når du ikkje har Anaconda, er at
-mange bibliotek som me bruker, må lastast ned eitt og eitt.
-Det er like greitt å installera dei viktigaste med ein gong.
+Der er mange pakkar som kan installerast med `pip`, og du vil stadig sjå
+ting som ikkje verkar fordi du ikkje har alle pakkene du treng.
+Det er heilt greitt å installera dei etter kvar som du treng dei, men 
+nokre av dei viktigaste kan du godt instlallera med ein gong:
 
 6.  Opna terminalvindauga igjen og køyr kommandoen
 
@@ -122,3 +77,21 @@ eller (på Windows)
 ```
 py -m pip install matplotlib pandas scikit-learn numpy torch
 ```
+
+## Andre løysingar
+
+[](Anaconda) er ein proprietær distribusjonsplatform som erstattar `pip` og gjev
+tilgang til python og ei rekkje andre verkty.
+Grunnen til at eg ikkje bruker det sjølv er at eg ikkje orkar å lesa lisensvilkåra,
+og anaconda overskriv ein del system- og konfigurasjonsfiler utan å seia nøyaktig kva
+han gjer.
+
+Jupyter Hub er ei teneste
+der du kan bruka jupyter på ein tenar utan å installera noko på eiga maskin.
+NTNU har ein [intern installasjon](https://www.ntnu.no/wiki/spaces/jupyterhub/overview) 
+som vert brukt i mange kurs.
+Problemet med denne er at han ikkje gjev tilgang til GPU, og det vert eit problem
+når me skal driva maskinlæring på billetdata.
+
+Der finst òg andre som tilbyd Jupyter Hub utanfor NTNU, men desse kjenner eg ikkje
+til.
