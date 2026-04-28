@@ -13,12 +13,15 @@ tags:
 		+ CIA
 		+ risiko
 		+ verdivurdering
+		+ Cobit ?
+	+ Personvern
 	+ Lover
-		+ personvern
+		+ personvern og GDPR
 		+ andsverk og lisensar
 		+ personvern
 		+ universell tilrettelegging
 	+ Etikk
+		+ Det gode livet
 		+ er det godt for oss
 		+ dilemmaet?
 	+ Personopplysingslova
