@@ -8,9 +8,11 @@ chapters:
     - file: Oblig
     - file: Mappevurdering
     - file: Ny programvare
-  - file: Opningssamling
+  - file: veke01
     sections:
     - file: Installasjon
+      sections:
+        - file: Anaconda
     - file: notebooks/Fyrste dokument i Jupyter Lab
     - file: notebooks/Fyrste datasett med CSV
     - file: notebooks/Simulering av kontantstraum
