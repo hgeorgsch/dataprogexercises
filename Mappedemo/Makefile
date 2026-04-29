@@ -1,4 +1,6 @@
-all: kontantstraum.pdf
+ipynb: kontantstraum.ipynb
+all: pdf ipynb
+pdf: kontantstraum.pdf
 
 %.pdf: %.ipynb
 	python -m nbconvert --to pdf $<
