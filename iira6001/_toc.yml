@@ -7,6 +7,11 @@ chapters:
     sections:
     - file: Oblig
     - file: Mappevurdering
+    - file: Mappedemo/Mappedemo
+      sections:
+        - file: Mappedemo/kontantstraum-eval
+        - file: kontantstraum.ipynb
+        - file: kontantstraum-eval
     - file: Ny programvare
     - file: Dropin
   - file: Opningssamling

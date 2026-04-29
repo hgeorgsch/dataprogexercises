@@ -1,4 +1,7 @@
 ---
+title: Simulering av kontantstrøm oppgave
+author: Hans Georg Schaathun (red.)
+date: mai 2026
 jupytext:
   formats: ipynb,md:myst
   text_representation:
@@ -23,12 +26,14 @@ I denne oppgaven så skal jeg bruke Python for å simulere ulike scenarioer, og 
 ## Del 1. Simulering av rente *uten* nedbetaling
 
 Jeg starter med et lån på 15.000 kr og en årlig rente på 8%. 
-Jeg har laget to variabler som heter **"rente"** og **"saldo"** for å kunne holde litt styr på verdiene. 
+Jeg har laget to variabler som heter `rente` og `saldo` for å kunne
+holde litt styr på verdiene. 
 
 Jeg ønsker å se hvordan saldoen utvikler seg gjennom 10 år med startsåret 2025 til 2035. 
 Jeg har skrevet inn en antagelse at koden skal starte fra og med 1. januar 2025. 
 
-For å kunne simulere dette så bruker jeg en **"for-løkke"** som skal hjelpe oss å kunne gjenta koden flere ganger år for år. Jeg har dermed også satt inn en **"range"** funksjon. Range kommer til å avgrense tallene som vi skal se på i dette tilfellet så er det årene 2025-2036. Det vil si at koden kommer til å kjøre gjentatte ganger fra og med 2025 og stoppe etter 31.desember 2034. Det er viktig å få med seg at **"range"** funksjonen kommer ikke til å printe ut og inkludere 2035. Likevel så er dette i tråd med det faglige i studiet mitt. Verdien 31.desember 2034 skal være lik verdien 1.januar 2035.
+For å kunne simulere dette så bruker jeg en `for`-løkke som skal hjelpe oss å kunne gjenta koden flere ganger år for år. Jeg har dermed også satt inn en `range`-funksjon.
+Range kommer til å avgrense tallene som vi skal se på i dette tilfellet så er det årene 2025-2036. Det vil si at koden kommer til å kjøre gjentatte ganger fra og med 2025 og stoppe etter 31.desember 2034. Det er viktig å få med seg at `range`-funksjonen kommer ikke til å printe ut og inkludere 2035. Likevel så er dette i tråd med det faglige i studiet mitt. Verdien 31.desember 2034 skal være lik verdien 1.januar 2035.
 
 ```{code-cell} ipython3
 import matplotlib.pyplot as plt
@@ -46,12 +51,12 @@ for year in range(2025, 2035):
     print(f"Lånsaldoen den 31.desember {year:} er: {saldo:.2f}")
 ```
 
+*Bytte ut `range` for `list`*
 
-*Bytte ut **range** for **list***
+Om jeg bytter ut `range(2025,2035)` med en liste som `[2025,2026,2027]` så ser jeg at koden fungerer på samme måte. Men forskjellen er at en `range`-funskjon lager listen automatisk uten at jeg må skrive inn hvert tall. 
+En liste gir meg muligheten til å velge fritt de årene jeg vil ha med. 
 
-Om jeg bytter ut **range(2025,2035)** med en liste som **[2025,2026,2027]** så ser jeg at koden fungerer på samme måte. Men forskjellen er at en **range** funskjon lager listen automatisk uten at jeg må skrive inn hvert tall. En **liste** funksjon gir meg muligheten til å velge fritt de årene jeg vil ha med. 
-
-**Range** funskjonen er praktisk om jeg vil ha en jevn sekvens mens en **list** funskjon er nyttig om jeg ønsker noen utvalgte år.
+`range`-funskjonen er praktisk om jeg vil ha en jevn sekvens mens en `list` er nyttig om jeg ønsker noen utvalgte år.
 
 ```{code-cell} ipython3
 rente=0.08 #rentesats i desimal tall
@@ -69,10 +74,10 @@ for year in [2025,2026,2027]:
 
 *Liten refleksjon*
 
-Etter å ha kjørt den orginale koden så ser vi at saldoen vokser hvert år, og dette er fordi renten legges til og det oppstår en renters rente. Jeg ønsket at koden skulle **"print"** datoen 1.januar med tilsvarende år og saldo. 
+Etter å ha kjørt den orginale koden så ser vi at saldoen vokser hvert år, og dette er fordi renten legges til og det oppstår en renters rente. Jeg ønsket at koden skulle `print` datoen 1.januar med tilsvarende år og saldo. 
 
-Jeg har brukt formatet **".2f"** for å begrense utskriften til 2 desimaler slik at tallene blir lettere å lese. 
-For å kunne bruke variabler inne i en print streng så brukte jeg **f""**, som lar oss skrive inn variabler direkte i teksten.
+Jeg har brukt formatet `.2f` for å begrense utskriften til 2 desimaler slik at tallene blir lettere å lese. 
+For å kunne bruke variabler inne i en print streng så brukte jeg `f".."`, som lar oss skrive inn variabler direkte i teksten.
 
 +++
 
@@ -83,7 +88,7 @@ I den første modellen så så vi at at saldoen vokste hvert år fordi rentene b
 Her har vi samme grunn tall med rente på 8% og saldo, altså lånbeløpet på 15.000kr. Men denne gangen så har vi satt inn at vi kommer til å legge inn nedbetaling.
 Et terminbeløp er det beløpet man avtaler, som oftes på forhand, å betale til långiver hvert år eller hver termin, kan være månedlig, kvartalvis men vi skal se på årlig terminbeløp. I denne oppgaven setter jeg det til 500kr per år. 
 
-For å kunne simulere dette i Python så må jeg legge til renter, der vi bruker formelen **"saldo * rente"**, trekke fra et terminbetaling, **"saldo med rente - terminbetaling"**, og skrive ut saldoen både ved starten og slutten av året, igjen 1. januar og 31. desember. Siden dette gjelder fortsatt 10 år , 2025 til 2035, så benytter vi **"for-løkken"** igjen.
+For å kunne simulere dette i Python så må jeg legge til renter, der vi bruker formelen `saldo * rente`, trekke fra et terminbetaling, **"saldo med rente - terminbetaling"**, og skrive ut saldoen både ved starten og slutten av året, igjen 1. januar og 31. desember. Siden dette gjelder fortsatt 10 år , 2025 til 2035, så benytter vi `for`-løkken igjen.
 
 ```{code-cell} ipython3
 rente = 0.08 #rentesats i desimal
@@ -97,10 +102,9 @@ for year in range(2025, 2035):
     print(f"Lånesaldo 31. desember {year} er: {saldo:.2f}")
 ```
 
----------
 *Rekkefølgen på renter og terminbeløp byttes*
 
-Dersom vi trekker fra terminbeløpet **før** vi legger til renten vil saldoen ha blitt lavere enn i modellen vi har brukt til nå. 
+Dersom vi trekker fra terminbeløpet `før` vi legger til renten vil saldoen ha blitt lavere enn i modellen vi har brukt til nå. 
 Eksempel: 
 - Lånesaldo 1.januar 2026 med *rente lagt til først* = 15.700kr
   Da legges renten på toppen av 15.700kr
@@ -109,7 +113,7 @@ Eksempel:
 
 Dette betyr at om vi bytter rekkefølgen så ender vi opp  med å skylde litt mindre penger hvert år. 
 
-Denne scenarioen er urealistisk fordi man beregner renter av hele beløpet du skylder **før** de trekker avdraget.
+Denne scenarioen er urealistisk fordi man beregner renter av hele beløpet du skylder `før` de trekker avdraget.
 
 ```{code-cell} ipython3
 rente = 0.08 #rentesats i desimal
@@ -132,16 +136,15 @@ Jeg kan se hvordan renters rente påvirker lån. Lånet blir dyrere og vokser fo
 
 Med denne simuleringen ser jeg at det er tydeligvis et alt for lavt terminebløp og konsekvensen er at gjelden blir større, selv med regelmessig nedbetaling. 
 
-Igjen så brukes **".2f"** for å begrense antall desimaler i utskriften. Videre i oppgaven så skal jeg fortsette å bruke 2 desimaler.
+Igjen så brukes `.2f` for å begrense antall desimaler i utskriften. Videre i oppgaven så skal jeg fortsette å bruke 2 desimaler.
 
 +++
 
-----------
-*Bruk av **While løkke** i oppgaven*
+*Bruk av `while`-løkke i oppgaven*
 
-I de tidligere simuleringene brukte jeg en **for løkke** som kjørte gjennom et fast antall år, 10 år. Dette fungerer fint, men i virkeligheten er det mer naturlig å simulere helt til lånet blir faktisk nedbetalt. 
+I de tidligere simuleringene brukte jeg en `for`-løkke som kjørte gjennom et fast antall år, 10 år. Dette fungerer fint, men i virkeligheten er det mer naturlig å simulere helt til lånet blir faktisk nedbetalt. 
 
-For å kunne vise dette frem så kan jeg bruke en **while løkke** som fortsetter å kjøre koden så lenge en betingelse er sann. 
+For å kunne vise dette frem så kan jeg bruke en `while`-løkke som fortsetter å kjøre koden så lenge en betingelse er sann. 
 Jeg skriver derfor at betingelsen som koden skal følge er : "saldo > 0"
 Det vil si at så lenge saldoen er større enn 0, så vil løkken fortsette å kjøre. 
 
@@ -165,9 +168,9 @@ while saldo > 0:
 *Liten refleksjon*
 
 Når jeg kjører denne koden så ser vi at løkken stopper automatisk når saldoen blir mindre eller lik 0, slik som betingelsen min ble satt til. 
-Bruk av **while** funksjonen er mer fleksibelt enn **for løkken** og dette er fordi da trenger jeg ikke å vite på forhånd hvor mange år nedbetalingen vil ta. 
+Bruk av `while` er mer fleksibelt enn `for` og dette er fordi da trenger jeg ikke å vite på forhånd hvor mange år nedbetalingen vil ta. 
 
-En forksjell er at jeg måtte definere variabelen "year" før løkken startet, og selv sette inn at "year" skal øke med 1. Så selv om **while** funksjonen gir mer kontroll og fleksibilitet, så kreves det litt mer koding enn for en **for løkke**
+En forksjell er at jeg måtte definere variabelen "year" før løkken startet, og selv sette inn at "year" skal øke med 1. Så selv om `while` gir mer kontroll og fleksibilitet, så kreves det litt mer koding enn for en `for`-løkke.
 
 +++
 
@@ -204,20 +207,20 @@ Dette viser hvordan små faste kostnader kan forlenge nedbetalingstiden og gjør
 
 +++
 
----------
-**Tredje del av oppgaven** *Plotting av utregning*
+## Del 3. Plotting av utregning
 
-Opptil nå har jeg bare skrevet ut saldoen med koden **print**. Dette gir en oversikt men det kan være vanskelig å se helheten over flere år. En bedre og kanskje litt mer ryddig måte å holde styr over alle tallene er å langre saldoen for hvert år i en liste, og deretter bruke **matplotlib** til å lage en graf. Helt på toppen av første kode celle så ser du at jeg har satt inn "import matplotlib.pyplot as plt". Der har jeg importert et bibliotek for å lage grafer, og **as plt** betyr at vi kan skrive **plt** i stedet for hele navnet. Dette er gjort med tanke på oppgavene fremover. 
+Opptil nå har jeg bare skrevet ut saldoen med koden `print`.
+Dette gir en oversikt men det kan være vanskelig å se helheten over flere år. En bedre og kanskje litt mer ryddig måte å holde styr over alle tallene er å langre saldoen for hvert år i en liste, og deretter bruke `matplotlib` til å lage en graf. Helt på toppen av første kode celle så ser du at jeg har satt inn "import matplotlib.pyplot as plt". Der har jeg importert et bibliotek for å lage grafer, og `as plt` betyr at vi kan skrive `plt` i stedet for hele navnet. Dette er gjort med tanke på oppgavene fremover. 
 
 For å kunne lage en graf så lager jeg 2 lister: 
-1. **x**: årstallene
+1. `x`: årstallene
    som skal representere tids-asken
-2. **y**: saldoen
+2. `y`: saldoen
        som skal representere beløpet
 
 I starten så setter jeg inn saldo på 15.000kr og startsåret til 2025. Jeg skal simulere 10 år med data. 
 
-Deretter så må jeg bruke en **for løkke** for å legge til renter hvert år og lagre saldoen i listen. 
+Deretter så må jeg bruke en `for`-løkke for å legge til renter hvert år og lagre saldoen i listen. 
 
 Til slutt så plotter jeg resultatene i en linjegraf
 
@@ -242,22 +245,21 @@ plt.show()
 
 *Liten refleksjon*
 
-Her så ser vi at jeg har laget to lister for årstallene og for saldoen. Ved bruk av **append** legger jeg til ett nytt element bakert i listen for hvert år som går. Dette gjør at jeg til slutt sitter igjen med 2 lister og de har da like mange elemeter, der hvert år har en tilhørende saldo. 
+Her så ser vi at jeg har laget to lister for årstallene og for saldoen. Ved bruk av `append` legger jeg til ett nytt element bakert i listen for hvert år som går. Dette gjør at jeg til slutt sitter igjen med 2 lister og de har da like mange elemeter, der hvert år har en tilhørende saldo. 
 
-Når jeg skal tenge inn grafen og plotte inn dataen bruker jeg funskjoner fra **matplotlib**. 
+Når jeg skal tenge inn grafen og plotte inn dataen bruker jeg funskjoner fra `matplotlib`. 
 
-- **plt.plot(x, y)** lager selve linjegrafen, med år på x-aksen og saldo på y-aksen.  
-- **plt.title("Lån uten nedbetaling")** setter en tittel øverst i figuren.  
-- **plt.xlabel("År")** setter en tekst under den horisontale aksen (årstallene).  
-- **plt.ylabel("Saldo (kr)")** setter en tekst langs den vertikale aksen (lånebeløpet).  
-- **plt.show()** viser selve figuren på skjermen.  
+- `plt.plot(x, y)` lager selve linjegrafen, med år på x-aksen og saldo på y-aksen.  
+- `plt.title("Lån uten nedbetaling")` setter en tittel øverst i figuren.  
+- `plt.xlabel("År")` setter en tekst under den horisontale aksen (årstallene).  
+- `plt.ylabel("Saldo (kr)")` setter en tekst langs den vertikale aksen (lånebeløpet).  
+- `plt.show()` viser selve figuren på skjermen.  
 
 Grafen gjør det mye lettere å forstå helheten enn om jeg bare hadde printet ut saldoen år for år som vi gjorde i oppgavene ovenfor.   
 Vi ser at kurven vokser stadig brattere og dette viser effekten av renters rente, der rentene også begynner å vokse på de tidligere rentene.
 
 +++
 
-----------
 *Plotting av utregning **med** nedbetalinger*
 
 Så i forrige del lagret jeg saldoen for hvert år i en liste og lagde grafen uten noe nedbetaling. Nå bygger vi videre på modellen slik at den også inkluderer en fast terminbetaling hvert år. 
@@ -269,8 +271,8 @@ Samme parameter gjelder:
 
 Jeg forventer ikke at lånet blir nedbetalt, og faktisk kommer til å vokse enda raskere, siden rentene som legges til hvert år er langt større enn terminbeløpet jeg betaler. 
 
-Igjen så bruker jeg 2 lister, **x** for årstall og **y** for saldo. 
-Hvert år så regner koden ut saldoen ved å legge til renter og trekke fra terminbeløpet, og deretter lagrer jeg resultatet med **append**.
+Igjen så bruker jeg 2 lister, `x` for årstall og `y` for saldo. 
+Hvert år så regner koden ut saldoen ved å legge til renter og trekke fra terminbeløpet, og deretter lagrer jeg resultatet med `append`
 
 Som i forrige oppgave så lager jeg en plott som viser hvordan saldoen endrer seg over tid.
 
@@ -303,14 +305,15 @@ Dette gir en litt annen utvikling enn når saldoen vokser med renter.
 Jeg legger også inn formelen: "saldo = saldo - terminbetaling" som skal trekke fra det faste terminbeløpet.  
 
 Når jeg skal tegne grafen så setter jeg inn det samme som i forrige oppgave. 
-- **plt.plot(x, y)** lager en linjegraf der år (x) plottes mot saldo (y).  
-- **plt.title("Lån med årlig nedbetaling")** gir grafen en forklarende overskrift.  
-- **plt.xlabel("År")** og **plt.ylabel("Saldo (kr)")** setter navn på aksene.  
-- **plt.show()** viser selve figuren.  
+- `plt.plot(x, y)` lager en linjegraf der år (x) plottes mot saldo (y).  
+- `plt.title("Lån med årlig nedbetaling")` gir grafen en forklarende overskrift.  
+- `plt.xlabel("År")` og `plt.ylabel("Saldo (kr)")` setter navn på aksene.  
+- `plt.show()` viser selve figuren.  
 
 Med en rente på 8% og bare 500kr i nedbetaling per år, ser vi at saldoen vokser veldig fort. Grafen viser en bratt stigende kurve som forteller at lånet kommer **ikke** til å bli nedbetalt innen for tidsrammen som jeg har satt, 10 år. 
 
-Grafen illustrerer det jeg fant i "**Andre del av oppgaven**: *Simulering av rente med nedbetaling*". 
+Grafen illustrerer det jeg fant i 
+"Del 2. *Simulering av rente med nedbetaling*". 
 Når rentekostnaden alene er større enn terminbeløpet, vokser lånet selv om jeg betaler hvert år. 
 Vi ser hvordan y-aksen på grafen slutter på beløpet litt over 24.000kr mens y-aksen på grafen til *Lån uten nedbetaling* slutter på 32.500kr 
 
@@ -318,12 +321,12 @@ Vi ser også at sluttverdien på grafen sin y-akse ender litt over 24.00kr mens 
 
 +++
 
----------
-**Fjerde del av oppgaven** *Gjenbruk av simuleringer med funksjoner*
+## Del 4. Gjenbruk av simuleringer med funksjoner
 
-Så langt har jeg sett på utviklingen av lånet med ett bestemt terminbeløp. I stedet kan jeg løse oppgaven ved bruk av **funksjoner**. En funksjon lages med **def** som definer selve funksjonen jeg skal bruke. 
+Så langt har jeg sett på utviklingen av lånet med ett bestemt terminbeløp. I stedet kan jeg løse oppgaven ved bruk av **funksjoner**.
+En funksjon lages med `def` som definer selve funksjonen jeg skal bruke. 
 Funskjonen fungerer som en slags oppskrift. Jeg gir funksjonen noen tall og den gjør utregningene for oss. 
-Til slutt bruker jeg **return** funksjonen for å sende resultatene tilbake slik at jeg kan bruke dem videre sånn som når jeg skal lage en graf.
+Til slutt bruker jeg `return` funksjonen for å sende resultatene tilbake slik at jeg kan bruke dem videre sånn som når jeg skal lage en graf.
 
 ```{code-cell} ipython3
 def loan(saldo=15000, rente=0.08, terminbeløp=0, year=2025, gebyr=0, maks_år=20):
@@ -341,12 +344,12 @@ def loan(saldo=15000, rente=0.08, terminbeløp=0, year=2025, gebyr=0, maks_år=2
 
 ```
 
-Jeg kaller funkjsonen **loan**. Deretter så setter vi inn verdiene i parantesen. Disse verdiene kalles **parametere**. Vi kan endre på disse tallene hver gang vi kjører en funksjon. 
-Som jeg har nevnt tidligere i oppgaven så har vi 2 lister, **x** som lagrer årstall og **y** som lagrer saldo. 
+Jeg kaller funksjonen `loan` Deretter så setter vi inn verdiene i parantesen. Disse verdiene kalles **parametere**. Vi kan endre på disse tallene hver gang vi kjører en funksjon. 
+Som jeg har nevnt tidligere i oppgaven så har vi 2 lister, `x` som lagrer årstall og `y` som lagrer saldo. 
 
-I denne koden så bruker jeg **while** funksjonen som gjør at programmet kjører helt til lånet er betalt tilbake, eller når vi har nådd maks antall år. 
+I denne koden så bruker jeg `while` funksjonen som gjør at programmet kjører helt til lånet er betalt tilbake, eller når vi har nådd maks antall år. 
 
-**return** sender listene tilbake slik at jeg kan bruke dem videre når jeg skal illustrere en graf.
+`return` sender listene tilbake slik at jeg kan bruke dem videre når jeg skal illustrere en graf.
 
 ```{code-cell} ipython3
 startsaldo = 15000
@@ -373,14 +376,13 @@ I denne simuleringen starter lånet på 15 000 kr med 8 % årlig rente, og vi be
 Som grafen viser så går saldoen aldri ned, men vokser kraftig fra år til år.  
 Årsaken er at terminbeløpet på 500kr er mye lavere enn rentekostnaden på 8%. Dermed dekker jeg ikke rentene, og gjelden øker hele tiden.  
 
-I grafen ser vi at jeg har satt inn en liten forklaringsboks av hva linjen betyr. Dette ble gjort ved **plt.legend()**. 
+I grafen ser vi at jeg har satt inn en liten forklaringsboks av hva linjen betyr. Dette ble gjort ved `plt.legend()` 
 
 Vi ser at grafen stiger raskt og igjen dette illustrerer effekten av renters rente. Fordi terminbeløpet er så lavt i praksis betyr dette at man alltid må betale mer enn rentene, ellers vil lånet vokse uendelig.
 
 +++
 
--------
-*Sammenligner grafen med forksjellige renter*
+*Sammenligner grafen med forskjellige renter*
 
 ```{code-cell} ipython3
 x8,y8 = loan(15000,rente=0.08,terminbeløp=500)
@@ -401,8 +403,8 @@ Grafen viser tydelig hvordan rentenivået påvirker utviklingen:
 - Med **5 % rente** flater kurven mer ut, men saldoen fortsetter likevel å stige.  
 - Med **2 % rente** blir gjelden faktisk nedbetalt over tid, fordi terminbeløpet er større enn rentekostnadene.  
 
-For å skille de tre scenarioene har jeg gitt kurvene ulike farger: **r** for rød, **b** for blå og **g** for grønn.  
-I tillegg har jeg valgt forskjellige linjestiler: **--** for stiplet, **:** for prikket og uten symbol for et heltrukket linje.  
+For å skille de tre scenarioene har jeg gitt kurvene ulike farger: `r` for rød, `b` for blå og `g` for grønn.  
+I tillegg har jeg valgt forskjellige linjestiler: `--` for stiplet, `:` for prikket og uten symbol for et heltrukket linje.  
 
 Jeg lager en forklaringsboks som viser hvilken kurve som hører til hvilken rente.
 
@@ -420,7 +422,7 @@ Før dette så avklarer jeg noen antakelser først:
 - Ellers forblir renten uendret det året.
 
 For å kunne simulere tilfeldige tall så "import" jeg en **random bibliotek**. 
-Jeg begynner med å teste slumptall med ved bruk av **random.randint(1, 10)** som gir et heltall fra 1 til 10, og deretter bygger jeg en lån funksjon som bruker disse tilfeldige endringene.
+Jeg begynner med å teste slumptall med ved bruk av `random.randint(1, 10)` som gir et heltall fra 1 til 10, og deretter bygger jeg en lån funksjon som bruker disse tilfeldige endringene.
 
 ```{code-cell} ipython3
 import random
@@ -432,7 +434,7 @@ import matplotlib.pyplot as plt
 ```
 
 *Liten refleksjon*
-Koden **random.randint(1,10)** gir et heltall fra 1 til 10, og random vil si at jeg får tilfeldige tall hver gang.  
+Koden `random.randint(1,10)` gir et heltall fra 1 til 10, og random vil si at jeg får tilfeldige tall hver gang.  
 
 Dette bruker jeg til å "kode" hendelser:
 - **1**: rente opp
@@ -445,13 +447,13 @@ Slik kan jeg simulere at renteendringer skjer med bestemte sannsynligheter.
 *En lån funskjon med tilfeldige renteendringer*
 
 
-Nedenfor så lager jeg **loan_random**, som er som den vanlige lånefunksjonen, men med en ekstra del:
+Nedenfor så lager jeg `loan_random`, som er som den vanlige lånefunksjonen, men med en ekstra del:
 - Jeg trekker et tilfeldig tall mellom 1...10 hvert år.
 - Hvis tallet er 1 så øker jeg renten med 0,5 prosentpoeng.
 - Hvis tallet er 10 så senker jeg renten med 0,5 prosentpoeng.
 - Så beregnes årets renter, og eventuelle gebyr legges til, terminbeløp trekkes fra, og året inkrementeres.
 
-Jeg lagrer år i listen **x** og saldo i **y**, for å kunne plotte senere.
+Jeg lagrer år i listen `x` og saldo i `y`, for å kunne plotte senere.
 
 Jeg bruker samme tall som før: 
 - startsaldo: **15.000kr**
@@ -491,7 +493,7 @@ def loan_random(saldo=15000, rente=0.08, terminbelop=2000, year=2025, gebyr=0, m
     return x, y
 ```
 
-Først definerer jeg funksjonen med **def**. Inne i parentesen ligger parametere som kan endres når jeg kaller funksjonen:  
+Først definerer jeg funksjonen med `def`. Inne i parentesen ligger parametere som kan endres når jeg kaller funksjonen:  
 - **saldo** (lånebeløp)  
 - **rente** (start-rente)  
 - **terminbeløp** (hvor mye vi betaler ned hvert år)  
@@ -501,18 +503,18 @@ Først definerer jeg funksjonen med **def**. Inne i parentesen ligger parametere
 Jeg benytter en **docstring** som betegnes med """...""". Dette er en tekstforklaring som står inne i en funskjon. 
 Fordi teksten er satt i en **docstring** så bryr Python ikke seg om denne når jeg skal kjøre programmet.     
 
-Videre oppretter jeg to lister som vanlig, **x** som lagrer årstall, og **y** som lagrer saldo for hvert år  
+Videre oppretter jeg to lister som vanlig, `x` som lagrer årstall, og `y` som lagrer saldo for hvert år  
 
-Jeg satt også **r = rente**, som er en type lokal kopi av renten. Dette vil føre til at jeg kan justere renten underveis. 
+Jeg satt også `r = rente`, som er en type lokal kopi av renten. Dette vil føre til at jeg kan justere renten underveis. 
 
-Selve simuleringen skjer i en **while-løkke**, som kjører så lenge saldoen er over 0 og antall år ikke overstiger 100.  
-Hvert år trekker jeg et tilfeldig tall med **random.randint(1,10)**. Hvis tallet er **1**, øker renta med 0.5 prosentpoeng, og hvis tallet er **10**, synker renta med 0.5 prosentpoeng. Alle andre tall enn 1 og 10 vil resultere at renten er uendret. 
+Selve simuleringen skjer i en `while`-løkke, som kjører så lenge saldoen er over 0 og antall år ikke overstiger 100.  
+Hvert år trekker jeg et tilfeldig tall med `random.randint(1,10)`. Hvis tallet er **1**, øker renta med 0.5 prosentpoeng, og hvis tallet er **10**, synker renta med 0.5 prosentpoeng. Alle andre tall enn 1 og 10 vil resultere at renten er uendret. 
 
-Deretter regnes ny saldo ut ved å først legge til renter ved formellen: **saldo + saldo*r**, så legger jeg til eventuelle gebyrer, og tilslutt så trekker jeg fra terminbeløpet. 
+Deretter regnes ny saldo ut ved å først legge til renter ved formellen: `saldo + saldo*r`, så legger jeg til eventuelle gebyrer, og tilslutt så trekker jeg fra terminbeløpet. 
 
-Året økes med **year += 1**, og både år og saldo legges inn i listene med **append**.  
+Året økes med `year += 1`, og både år og saldo legges inn i listene med `append`.  
 
-Til slutt returnerer funksjonen **x, y**, som er listene med utviklingen av lån over tid slik at jeg kan **plotte** utviklingen.
+Til slutt returnerer funksjonen `x, y`, som er listene med utviklingen av lån over tid slik at jeg kan **plotte** utviklingen.
 
 Denne koden har da vist hvordan man kan bruke funskjoner og betingelser med tilfeldige tall til å simulere et økonomisk situasjon.  
 
@@ -556,7 +558,7 @@ Denne modellen er veldig enkel. Jeg tok for meg 3 antagelser: 10% sjanse for at 
 
 +++
 
-## Siste del. Sammenligning av serie- og annuitetslån
+## Del 6. Sammenligning av serie- og annuitetslån
 
 Opptill nå så har jeg kjørt simuleringer som tar for seg **annuitetslån**. Det som kjennetegner et annuitetslån er at de har *fast terminbeløp* hvert år. Det er veldig typisk at renteandelen er høy på starten og synker etter hvert, i og med at avdragsandelen øker. Nå skal jeg også inkludere simuleringer med et **serielån**. Serielån kjennetegnes ved at det er et *fast **avdrag***, mens rentene beregnes på det gjenstående saldoen. Det vil lede til at totalbetalingen blir høy på starten og synker over tid. 
 
@@ -606,7 +608,7 @@ Siden **serielån** har samme rente så vil det gi et *lavere* totale rentekostn
 
 Med **annuitet** så er det en jevnere likviditet, altså samme beløp hvert år, som ofte er grunnent til at privatkunder velger denne type lån. 
 
-------
+
 *Månedlig rente og betalinger*
 
 Årlige terminer er uvanlig i praksis. Her simulerer jeg en **månedlig kapitalisering** og en **månedlig betaling**.
@@ -678,14 +680,14 @@ plt.xlabel("Måned (0=start)"); plt.ylabel("Saldo (kr)"); plt.legend(); plt.show
 
 *Liten refleksjon*
 
-Jeg har brukt koden **.zfill(2)**. Den brukes for å fylle på nuller foran et tall slik at det får en bestemt lengde. Jeg skrev inn **.zfill(2)** for at mars måneden (den tredje måned) skrives 03 og ikke bare 3. Dette ble nyttig når jeg skulle vise datoer eller måneder på en pen og litt mer oversiktlig måte. 
+Jeg har brukt koden `.zfill(2)`. Den brukes for å fylle på nuller foran et tall slik at det får en bestemt lengde. Jeg skrev inn `.zfill(2)` for at mars måneden (den tredje måned) skrives 03 og ikke bare 3. Dette ble nyttig når jeg skulle vise datoer eller måneder på en pen og litt mer oversiktlig måte. 
 
 En månedlig kapitalisering gjør at renteeffekten forløper **jevnere** gjennom året. Med en **annuitet** så gis et konstant termin, mens med **serie** så gis en synkende totalbeløp. 
 Over smame total horisont vil serie vanligvis gi **lavere rentekostnader**, men høyere betaling i starten.
 
 +++
 
-## Oppgave 3: Sannsynlighet justeres etter forrige endring (momentum)
+## Del 7 (Oppgave 3). Sannsynlighet justeres etter forrige endring (momentum)
 
 I virkeligheten ser vi ofte "trender": etter en renteøkning er det **litt høyere** sannsynlighet for enda en økning, helt til en nedgang faktisk inntreffer (og motsatt).
 
