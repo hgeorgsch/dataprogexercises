@@ -11,3 +11,8 @@ kriteria for mappevurdering.
 
 + [](kontantstraum)
    + [](kontantstraum-eval)
+
+
+Eg vil neppe klara å laga eit døme på refleksjonsdelen (Del 3).
+Refleksjon skal vera so individuell at døme lett verkar mot
+hensikta si.
