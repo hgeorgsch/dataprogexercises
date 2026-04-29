@@ -4,17 +4,18 @@ tags:
   - MOC/index
 ---
 
-Andreas: andreas.h.schille@ntnu.no
++ Støtteapparat
+	+  Andreas: andreas.h.schille@ntnu.no
 
 + [[Module Portfolio]]
-+ [[Project Management 2025-26]] (budsjett og rekneskap)
-+ [[Emneadministrasjon]]
-+ [[Praktiske tips og tekniske løysingar]]
++ Administrasjon
+	+ [[Project Management 2025-26]] (budsjett og rekneskap)
+	+ [[Emneadministrasjon]]
+	+ [[Budsjett IIRA6001 Steady State]]
++ Teknisk administrasjon
+	+ [[Tekniske løysingar]]
+	+ [[Notebooks i boka]]
 + [[Unused images]]
-+ [[Budsjett IIRA6001 Steady State]]
-+ [[Notebooks i boka]]
-
-
 
 + Føredrag
 	+ [[SlideOverview]]
