@@ -1,4 +1,4 @@
-# Essay-døme 1.  Kontantstraum
+# Vurdering av Kontantstraum
 
 Essayet [](kontantstraum) er basert på eit innlevert studentarbeide
 på IIRA2001 på andre året i økonomisk/administrative fag.
