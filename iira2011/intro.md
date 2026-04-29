@@ -82,20 +82,29 @@ Her finn du tre ting,
 
 ## Program
 
-+ [](veke01)
-+ [](Numeriske%20Metodar%20og%20Kontrollflyt.md)
-+ [](Datastrukturar%20og%20Simulering.md)
-+ [](CSV%20og%20Deskriptiv%20Statistikk)
-+ [](Samanlikna%20Datasett)
-+ [WebAPI](WebAPI) og JSON 
-+ [](Statistikk%20og%20Maskinlæring)
-+ [](Klassifikasjon)
-+ [](Automatisering)
-+ [](Sikkerheit)
++ Del 1. Grunnleggjande programmering.
+    + [](veke01)
+    + [](veke02)
+    + **TODO** treng me tre veker til grunnleggjande programmering og python?
++ Del 2. Statistiske data og maskinlæring
+    + [](veke-CSV)
+    + [](Samanlikna%20Datasett)
+    + [](Statistikk%20og%20Maskinlæring)
+    + [](Klassifikasjon)
++ Del 3. Billetdata
+    + [](Billetdata)
+    + [](torch)
+    + Annotering av datasett
+    + Augmentering av datasett
++ Del 4. Datahandsaming for vidarekomande
+    + [](Automatisering)
+    + [](Sikkerheit)
 + *Kanskje*-tema (sannsynlegvis ikkje)
     + [](GUI)
     + [](Klyngeanalyse-Kapittel)
     + [](Agent-basert%20simulering)
+    + [](Slumptal)
+    + [WebAPI](WebAPI) og JSON 
 
 
 

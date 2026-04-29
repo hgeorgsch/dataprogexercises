@@ -26,11 +26,10 @@ er ikkje eit mål i seg sjølve.
 	+ [Statistikk med pandas](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=8fff3714-2c20-4d25-917b-b3ed00d06ebf)
 	  [(Slides)](https://iirevu.org.ntnu.no/Statistikk%20med%20pandas/)
 + *Gjennomarbeidde døme*
-    + [](notebooks/Fyrste%20datasett%20med%20CSV) frå opningssamlinga.
-            Du bør gjera ferdig denne før du startar på noko nytt.
+    + [](notebooks/Fyrste%20datasett%20med%20CSV) 
 	+ [](notebooks/Arbeidsledige) 
 	+ [](notebooks/Tid%20og%20dato)
-    + [](notebooks/Genetikk) demonstrerer korrelasjon m.m. (valfri)
+    + [](notebooks/Genetikk) 
 + *Demovideo*
     + [Statistikkbanken](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=c3199984-d5ef-44dc-a9da-b3ee00cd4421)
         + [Datasett 13760](./notebooks/13760_20260203-130712.csv)
@@ -49,9 +48,6 @@ er ikkje eit mål i seg sjølve.
       problem identifiserer me.
         + [](notebooks/ssbfile-empty)
         + [](notebooks/ssbfile)
-+ *Opne øvingar*
-	+ [Eksportdata](exercises/Eksportdata).  Desse oppgåvene krev omfattande preprosessering
-      for å få data på samanliknbar form.
 
 ## Oppsummering
 

@@ -9,7 +9,7 @@ tags:
 # Samanlikna Datasett
 
 ::: {admonition} Forkunnskapar
-Dette kapittelet byggjer på [](CSV%20og%20Deskriptiv%20Statistikk).
+Dette kapittelet byggjer på [](veke-CSV).
 :::
 
 Denne veka skal me halda fram der me slapp i forrige veke.

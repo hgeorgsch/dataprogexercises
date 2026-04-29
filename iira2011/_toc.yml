@@ -7,7 +7,6 @@ chapters:
     sections:
     - file: Oblig
     - file: Mappevurdering
-    - file: Ny programvare
   - file: veke01
     sections:
     - file: Installasjon
@@ -33,7 +32,7 @@ chapters:
       - file: notebooks/dict
       - file: notebooks/list-empty
       - file: notebooks/list
-  - file: CSV og Deskriptiv Statistikk
+  - file: veke-CSV
       sections:
       - file: notebooks/Genetikk
       - file: notebooks/Tid og dato
@@ -62,16 +61,8 @@ chapters:
       - file: exercises/Agent-basert Marknadssimulering
       - file: notebooks/class-empty
       - file: notebooks/class
-  - file: WebAPI
-      sections:
-      - file: notebooks/WEBAPI
-      - file: notebooks/requests-trimmed
-      - file: notebooks/JSON json_stat og eksempler
-      - file: notebooks/ssb-api
-      - file: notebooks/Eurostat-API.ipynb
-      - file: norun/spotify-auth
-      - file: norun/spotify-audio-analyse
-      - file: norun/chatgpt_api
+  - file: Billetdata
+  - file: torch
   - file: Statistikk og Maskinlæring
       sections:
       - file: notebooks/numpy
@@ -114,3 +105,13 @@ chapters:
         - file: exercises/Kundedifferensiering
         - file: exercises/Varar på sal
         - file: notebooks/Tilfeldigheit-Demo
+      - file: WebAPI
+          sections:
+          - file: notebooks/WEBAPI
+          - file: notebooks/requests-trimmed
+          - file: notebooks/JSON json_stat og eksempler
+          - file: notebooks/ssb-api
+          - file: notebooks/Eurostat-API.ipynb
+          - file: norun/spotify-auth
+          - file: norun/spotify-audio-analyse
+          - file: norun/chatgpt_api
