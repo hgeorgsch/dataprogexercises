@@ -155,7 +155,7 @@ print( idxs_bpi )
 Me skal fjerna søyle 0-3 og byta namn på nr. 4.
 
 ```{code-cell} ipython3
-bpi = bpi.drop(labels=idxs_bpi[0:3], axis=1)
+bpi = bpi.drop(labels=idxs_bpi[0:4], axis=1)
 bpi = bpi.rename(columns={ idxs_bpi[4] : "BPI" })
 display(bpi)
 ```
@@ -350,75 +350,163 @@ plt.show()
 Dette plottet er omtrent likt det forrige, men KPI-kurva er glattare fordi kvart målepunkt er gjennomsnitt over ein lengre periode.
 Det er som det skal vera.
 
+## Fletting av datasett
+
+Når me går vidare er det greitt å ha alle data i éin
+*DataFrame*.  Det ordnar me med `merge()`.
+
 ```{code-cell} ipython3
 df = pd.merge(bpi, kpi_kvartal, how='outer', on="kvartal")
 display(df.round(2))
+```
 
+Me må presisera at indekssøyla `kvartal` vert brukt til fletting.
+Me har òg spesifisert `outer`, som
+tyder at alle data kjem me, og manglande data i eitt av 
+datasetta vert fyllte inn med NaN.
+
+```{code-cell} ipython3
 df.plot(title="BPI og KPI kvartalsvis")
 plt.xlabel("Kvartal")
 plt.ylabel("Prisindeks")
-plt.show()
 ```
 
-### Forklaring
+Plottet er det same som før bortsett frå at me plottar alle søylene
+og dermed får med prosentvis vekst for BPI.
 
-Datasettene for boligprisindeks (`bpi`) og konsumprisindeks per kvartal (`kpi_kvartal`) **slås sammen** med `.merge()` basert på felles kolonne `"kvartal"`. Argumentet `how='outer'` sikrer at alle kvartaler fra begge datasett inkluderes, selv om det mangler data i ett av dem. Resultatet er en samlet *dataframe* med både BPI og KPI per kvartal.
+::: {admonition} Refleksjon
+Ved å fletta tidsrekkjene saman i éi *DataFrame* vert koden for å
+plotta enklare.  Me treng berre éi line for å plotta alt.
+:::
 
-Deretter plottes alle numeriske kolonner mot kvartal i et linjediagram. Plottet viser hvordan boligprisene og konsumprisene har utviklet seg over tid.  
-
-Fra plottet kan man se at boligprisene (BPI) har hatt en **kraftigere** og mer **volatil** økning sammenlignet med konsumprisindeksen (KPI), som stiger **jevnere** over tid. Dette illustrerer at boligmarkedet har større svingninger enn generelle konsumpriser.
+Plottet viser at boligprisane (BPI) ikkje berre veks raskare
+men er òg meir **volatile**; dei går ein del opp og ned sjølv
+om trenden er opp.
+Konsumprisindeksen (KPI) stig **jamnare** over tid.
+Boligmarkedet har større svingingar enn generelle konsumprisar.
 
 +++
+
+## Korrelasjon
 
 Videre kan man lage et **spredringsplott** for å se om det er en **korrelasjon** mellom de to indeksene.
 
 ```{code-cell} ipython3
-df.plot.scatter("boligprisindeks", "konsumprisindeks")
+df.plot.scatter("BPI", "KPI")
 plt.title("Sammenheng mellom boligprisindeks og konsumprisindeks")
 plt.xlabel("BPI")
 plt.ylabel("KPI")
 plt.show()
 ```
 
-### Forklaring
+I staden for å plotta tidsrekkjene mot tidsaksa, viser spreidingsplottet
+dei to indeksane på kvar sin akse.
+Kvar prikk i plottet representerer eit kvartal, men tidspunktet for kvart
+punkt er ikkje synleg.
 
-Koden lager et **spredningsplott** som viser sammenhengen mellom boligprisindeks (`BPI`) og konsumprisindeks (`KPI`) for hvert kvartal. Hver prikk i plottet representerer et kvartal, med boligpriser på x-aksen og konsumprisindeksen på y-aksen.  
-
-Fra plottet kan man observere en klar **positiv sammenheng/korrelasjon**: når KPI øker, stiger også BPI. Dette betyr at boligpriser og den generelle prisutviklingen i økonomien ofte beveger seg i samme retning.
+Her ser me svært sterk og konsekvent korrelasjon fram til pandemien.
+Der er stadig høg korrelasjon dei siste åra, men biletet er mindre
+konsekvent.
+Det er neppe overraskande.
 
 +++
 
 Dette kan kvantifiseres ved å beregne **korrelasjonen** mellom de to indeksene, og man kan også se på **kovariansen** for å måle hvordan de endrer seg i forhold til hverandre.
 
 ```{code-cell} ipython3
-indekser = df[["boligprisindeks", "konsumprisindeks"]]
+indekser = df[["BPI", "KPI"]]
 
 korrelasjon = indekser.corr()
 print("Korrelasjon mellom BPI og KPI:")
 print(korrelasjon)
+```
 
+Koden velger først kolonnene `"boligprisindeks"` og `"konsumprisindeks"` fra datasettet `df` for å kunne sammenligne dem.
+Deretter beregnes *korrelasjonskoeffisient* (Pearson) med `.corr()`,
+som viser hvor tett BPI og KPI beveger seg sammen.
+En verdi nær 1 indikerer sterk positiv korrelasjon,
+dvs. at når konsumprisindeksen stiger, stiger også boligprisindeksen.  
+
+
+Me kan ogso rekna ut kovariansen.
+
+```{code-cell} ipython3
 kovarians = indekser.cov()
 print("\nKovarians mellom BPI og KPI:")
 print(kovarians)
 ```
 
-### Forklaring
+Positiv kovarians betyr at BPI og KPI i gjennomsnitt beveger
+seg i samme retning, mens negativ kovarians ville indikert motsatt bevegelse.  
 
-Koden velger først kolonnene `"boligprisindeks"` og `"konsumprisindeks"` fra datasettet `df` for å kunne sammenligne dem. Deretter beregnes **korrelasjonen** med `.corr()`, som viser hvor tett BPI og KPI beveger seg sammen. En verdi nær 1 indikerer sterk positiv korrelasjon, dvs. at når konsumprisindeksen stiger, stiger også boligprisindeksen.  
+Både  korrelasjonskoeffisienteng og kovariansen stadfestar den
+sterke positivie samenhengen som me såg mellom BPI og KPI i plotta.
 
-Videre beregnes **kovariansen** med `.cov()`, som viser hvor mye de to indeksene varierer sammen i samme enheter som indeksene. Positiv kovarians betyr at BPI og KPI i gjennomsnitt beveger seg i samme retning, mens negativ kovarians ville indikert motsatt bevegelse.  
++++
 
-Tallene fra korrelasjon - og kovarianstabellen bekrefter at BPI og KPI har en **sterk positiv sammenheng**, noe som støtter observasjonen fra spredningsplottet om at boligprisene i stor grad følger den generelle prisutviklingen i økonomien.
+Det kan vera interessant ogso å samanlikna prosentvis vekst
+
+```{code-cell} ipython3
+df["KPI-vekst"] = df["KPI"].pct_change() * 100
+display(df.head())
+```
+
+Me kan plotta prosentvis vekst på same måte som indeksverdiane.
+
+```{code-cell} ipython3
+df[ [ "vekst", "KPI-vekst"] ].plot(title="BPI og KPI kvartalsvis")
+plt.xlabel("Kvartal")
+plt.ylabel("Prisindeks")
+```
+
+Dette plottet stadfestar skilnaden i volatilitet.
+Der er stor variasjon i konsumprisindeksen, men sjelden over 2%.
+Bustadprisveksten svingar mellom -7% og +8% og er ofte utanfor $\pm3$%.
+
+Me kan sjå spreidingsplottet òg.
+
+```{code-cell} ipython3
+df.plot.scatter("vekst", "KPI-vekst")
+plt.title("Prosentvis vekst i BPI og KPI")
+plt.xlabel("BPI")
+plt.ylabel("KPI")
+plt.show()
+```
+
+Spreidingsplottet viser ikkje særleg korrelasjon mellom vekstratane i dei to indeksane.
+Dette tyder derimot ikkje at der ikkje er korrelasjon.  Det kan tenkast at korrelasjonen er forseinka, slik at utslag i KPI t.d. får fylgjar for BPI tre eller seks månader seinare. Det har me ikkje tid til å gå inn i her.
 
 +++
 
 ## Avslutning og refleksjon
 
-Analysen viser at boligprisene i Norge (BPI) har steget betydelig fra 1992 til i dag, med en langsiktig vekst som overgår utviklingen i konsumprisindeksen (KPI). Dette indikerer at boligmarkedet har hatt en reell prisvekst over perioden, altså at boligprisene har økt mer enn den generelle prisstigningen i samfunnet. Både spredningsplott og beregning av korrelasjon og kovarians viser at BPI og KPI beveger seg i samme retning, men BPI har større volatilitet, noe som reflekterer at boligmarkedet påvirkes av flere faktorer enn konsumprisene alene
+Analysa viser at bustadprisane i Noreg (BPI) har stige mykje frå 1992,
+og har stige mykje raskare enn konsumprisindeksane (KPI).
+Bustadmarknade har dermed hatt ein *reell* prisvekst samanlikna med andre
+godar.
+Både spreidingsplott og korrelasjonskoeffisienten viser at BPI
+og KPI går isamme retning, men BPI har større volatilitet.
+Det tilseier at bustadmarknaden vert påverka av fleire faktorar enn KPI.
 
-Som student i økonomi og nylig boligkjøper har jeg funnet oppgaven svært interessant. Det har vært spennende å se hvor mye boligprisene har steget siden 1992, samtidig som analysen av konsumprisindeksen gir innsikt i hvordan prisutvikling på varer og tjenester påvirker kjøpekraften, særlig nå som jeg selv skal kjøpe flere varer.  
+Som student i økonomi og nylig bustadkjøpar har eg funne oppgåva
+svært interessant.
+Det har vore spanande å sjå kor mykje bustadprisen har stige sidan 1992.
+Analysa av KPI gjev òg innsikt i korleis prisutvikling på varar og
+tenester påverkar kjøpekraften, særleg no som eg sjølv skal kjøpa fleire
+varar.  
 
-I tillegg har arbeidet med oppgaven styrket mine programmeringskunnskaper. Programmet kombinerer praktisk økonomisk forståelse med tekniske ferdigheter, noe som er nyttig både for studier og fremtidige karriereplaner innen økonomi og rådgivning.
+I tillegg har arbeidet med oppgåva styrka programmeringskunnskapane mine.
+Programmet kombinerer praktisk økonomisk forståelse med tekniske
+ferdigheter, noko som er nyttig både for studium og framtidige jobb
+innan økonomi og rådgjevning.
+
+Den største utfordringa i arbeidet er å vaska datasetta og få dei på
+eins leseleg form.  Det krev ein god del prøving og feiling, og
+kan lett verta den største jobben i praktisk dataanalyse.
+Dermed har det ikkje vore tid til å testa mange statistiske teknikkar her.
+Me ser likevel at kurve- og spreidingsplott er nok til å gje god
+innsikt i datasetta.
+I tillegg har eg brukt korellasjon og kovarians.
 
 ```{code-cell} ipython3
 
