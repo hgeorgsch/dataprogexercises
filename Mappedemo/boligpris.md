@@ -1,5 +1,6 @@
 ---
 jupytext:
+  formats: md:myst,ipynb
   text_representation:
     extension: .md
     format_name: myst
@@ -13,172 +14,341 @@ kernelspec:
 
 # Innledning
 
-Boligmarkedet er en sentral del av norsk økonomi, og boligprisene har hatt betydelig vekst de siste tiårene. Samtidig påvirkes kjøpekraften av generell prisstigning i økonomien, målt gjennom konsumprisindeksen (KPI). For boligkjøpere er det derfor interessant å forstå ikke bare nominell prisutvikling, men også hvordan boligpriser utvikler seg relativt til inflasjon.
+Bustadmarknaden er ein sentral del av norsk økonomi,
+og bustadprisane har auka mykje over dei siste tiåra.
+Samstundes vert kjøpekraften påverka av av generell prisstiging i økonomien,
+målt gjennom konsumprisindeksen (KPI).
+For bustadkjøparar er det difor interessant å forstå ikkje berre nominell
+prisutvikling, men òg korleis boligprisane utviklar seg relativt til 
+inflasjonen.
 
-Vi skal ta for oss følgende problemstilling:
+Me skal ta for oss fylgjande problemstilling:
 
-> Hvordan har boligprisene i Norge utviklet seg sammenlignet med 
-konsumprisindeksen, og hva sier dette om reell prisvekst i boligmarkedet?
+> Korleis har boligprisane i Noreg utvikla seg samanlikna med 
+konsumprisindeksen, og kva seier dette om reell prisvekst i bustadmarknaden?
 
-## Datasett
+## Datasett for bustadprisar
 
-Jeg har lastet ned datasettet [1060.csv](./1060csv) fra Statistisk sentralbyrå med informasjon om boligprisindekser.
-Datasettet starter på 1992K1 fordi Statistisk sentralbyrå begynte å publisere prisindekser for brukte selveierboliger tidlig på 1990-tallet, etter kraftige prisfall i boligmarkedet på slutten av 1980- og starten av 1990-tallet. Dette gir en historisk oversikt over boligprisutviklingen i Norge fra en tid med store markedsendringer.
+Eg har lasta ned datasettet [1060.csv](./1060csv) frå
+Statistisk sentralbyrå med informasjon om bustadprisindeksen.
+Datasettet startar på 1992K1 fordi Statistisk sentralbyrå tok til
+å publisera prisindeksar for brukte sjølveigarbustadar tidleg på
+1990-tallet, etter kraftige prisfall i bustadmarknaden på slutten
+av 1980- og starten av 1990-tallet.
+Dette gjev ei historisk oversikt over bustadprisutviklinga i lander
+frå ei tid med store marknadsendringar.
 
 ```{code-cell} ipython3
 import pandas as pd
 
 df1 = pd.read_csv("1060.csv", sep=";", encoding="latin1")
+display(df1)
+```
+
+Me har lasta inn datasettet i pandas, og utskrifta viser at me kan fylgja
+bustadprisindeksen kvartal for kvartal.  Me ser derimot at der er fleire tidsrekkjer i datasettet, for ulike regionar og ulike bustadtypar. For å sjå utviklinga, må me sjå på tidsrekkjene kvar for seg.  Det kjem me tilbake til. Det andre problemet me må sjekka er datatypane.  Tidssøylen ser ut til å vera strengar, og me må sjekka at prisindeksen er tal.
+
+```{code-cell} ipython3
+df1.dtypes
+```
+
+Her er alle søylene strengar, og det er ikkje bra.
+Lat oss ta prisindeksen fyrst.  Han er vist med desimalkomma, og ikkje punktum som i engelskspråklege system.  
+Me ser òg nokre radar med `..` for indeks.  Det tyder sikkert at data manglar.
+Dette kunne me ha fiksa då me las fila, so lat oss gjera det på nytt.
+
+```{code-cell} ipython3
+df1 = pd.read_csv("1060.csv", sep=";"
+                  , encoding="latin1"
+                  , decimal=","
+                  , na_values="..")
 display(df1.head())
 ```
 
-Vi har lastet inn datasettet i pandas, og utskriften viser at vi kan følge
-**TODO**
-
-Datasettet **filtreres** først for statistikkvariabelen "Prisindeks for brukte boliger", boligtypen `"00 Alle boligtyper"` og regionen `"TOTAL Hele landet"`. Dette gir en oversikt over de generelle boligprisene i Norge på nasjonalt nivå, uten at tallene påvirkes av lokale variasjoner eller spesifikke boligtyper.
-
-En **kopi** av datasettet lages for å lage en ny *dataframe* slik at man unngår advarsler når verdier endres. Kvartalene omformes til et Pandas `PeriodIndex` med frekvens "Q" (kvartal), slik at de kan brukes som **tidsindeks** i plottet.
-
+Dette ser betre ut. Me har brukt `decimal` for å velja desimalskiljeteikn og `na_values` for å seia korleis manglande data er representert.
+Det er likevel ikkje godt nok, når me ser på datatypane.
 
 ```{code-cell} ipython3
-bpi = df1[df1["statistikkvariabel"] == "Prisindeks for brukte boliger"]
-bpi = bpi[bpi["boligtype"] == "00 Alle boligtyper"]
-bpi = bpi[bpi["region"] == "TOTAL Hele landet"]
-bpi = bpi.copy()
+df1.dtypes
 ```
 
-Kolonnen med prisindeksen renses: manglende verdier ("..") settes til `None` (NaN), desimalskilletegn endres fra komma til punktum, og verdiene konverteres til flyttall (`float`). Kolonnen får navnet `"prisindeks"` for enklere bruk i videre analyser og plotting.
+Prisindeksen er stadig ein streng.  Der må dermed vera fleire verdiar som pandas ikkje kan lesa som tal.
+Det viser seg at manglande verdi somme plassar er registrert med eitt punktum.
+
+```{code-cell} ipython3
+df1 = pd.read_csv("1060.csv", sep=";"
+                  , encoding="latin1"
+                  , decimal=","
+                  , na_values=[ "..", "." ])
+display(df1.head())
+```
+
+No vert tala skrivne med punktum, slik dei skal når pandas forstår dei som tal.
+For å dobbelsjekka, ser me typane.
+
+```{code-cell} ipython3
+df1.dtypes
+```
+
+::: {admonition} Refleksjon
+Dette vart overdrive tungvint.  
+Det hadde vore enklare å bruke *string replace* for å byta ut komma med punktum, for så å byta type med `.astype(float64)`.
+Direkte lesing med `read_csv()` er meir elegant som endeleg løysing, men det er ikkje lett å identifisera alle notasjonane for manglande data.
+:::
+
++++
+
+### Tidsaksa
+
+Tidssøylen er òg strengar.
+For å retta det, må me fyrste byta ut `K` med `Q` som pandas
+kjenner att som kvartal, og dernest omsetja heile søyla til
+`PeriodIndex` som gjev tidsintervall i pandas.
+
+Me lagar ein kopi av vår *DataFrame* for å unngå kluss om me
+må gå tilbake og køyra koden på nytt.
 
 ```{code-cell} ipython3
 def formatertid(streng):
     return streng.replace("K", "Q")
+    
+df2 = df1.copy()
+df2["kvartal"] = df2["kvartal"].map(formatertid)
+df2["kvartal"] = pd.PeriodIndex(df2["kvartal"], freq="Q")
+display( df2 )
+display( df2.dtypes )
+```
 
-bpi["kvartal"] = bpi["kvartal"].map(formatertid)
-bpi["kvartal"] = pd.PeriodIndex(bpi["kvartal"], freq="Q")
-bpi = bpi.set_index("kvartal")
+No er kvartal registrert som tidsperiodar.
+Til sist skal me gjera kvartalsøyla til indeks, slik at me slipp
+å spesifisera $x$-aksa når me går vidare.
 
-prisidx = list(bpi.columns)[-1]
-bpi[prisidx] = bpi[prisidx].replace("..", None)
-bpi[prisidx] = bpi[prisidx].str.replace(",", ".")
-bpi[prisidx] = bpi[prisidx].astype(float)
-bpi = bpi.rename(columns={prisidx: "prisindeks"})
+```{code-cell} ipython3
+df2 = df2.set_index( df2["kvartal"] )
+display( df2 )
+```
 
-idxs_bpi = list(bpi.columns)[0:3] 
-bpi = bpi.drop(labels=idxs_bpi, axis=1)
+### Filtrering
 
+Dette siste steget i datavasken er å sortera variabelane frå kvarandre.
+For å gjera det enkelt, skal me berre sjå på heile landet og alle
+bustadtypar.  Me ser òg i datasettet at dei sesongjusterte tala ofte
+manglar, og me held oss difor til variabelen som heiter
+«Prisindeks for brukte boliger».
+
+```{code-cell} ipython3
+bpi = df2[df2["statistikkvariabel"] == "Prisindeks for brukte boliger"]
+bpi = bpi[bpi["boligtype"] == "00 Alle boligtyper"]
+bpi = bpi[bpi["region"] == "TOTAL Hele landet"]
+bpi = bpi.copy()
 display(bpi)
 ```
 
-Til slutt vises/**plottes** tabellen og utviklingen av boligprisindeksen i et linjediagram. Dette viser den langsiktige trenden i boligmarkedet, med jevn prisvekst og enkelte mindre nedgangsperioder.
+No har me éi isolert tidsrekkje i datasettet.  Dette gjer at dei tre
+søylene med variabelnamn vert overflødige, og me kan ta dei bort.
+
+```{code-cell} ipython3
+idxs_bpi = list(bpi.columns)
+print( idxs_bpi )
+```
+
+Me skal fjerna søyle 0-3 og byta namn på nr. 4.
+
+```{code-cell} ipython3
+bpi = bpi.drop(labels=idxs_bpi[0:3], axis=1)
+bpi = bpi.rename(columns={ idxs_bpi[4] : "BPI" })
+display(bpi)
+```
+
+Denne tidsrekkja kan me plotta.
 
 ```{code-cell} ipython3
 import matplotlib.pyplot as plt
-bpi["prisindeks"].plot(title="Boligprisindeks - brukte boliger, alle typer for hele landet")
+bpi["BPI"].plot(title="Boligprisindeks - brukte boliger, alle typer for hele landet")
 plt.xlabel("Kvartal")
 plt.ylabel("Prisindeks")
 plt.show()
 ```
 
+### Prosentvis endring
 
-+++
-
-Videre kan det være interessant å se på hvilke kvartal som hadde høyest og
-lavest **prosentvis endring**.
-En ny kolonne `vekst` beregnes med metoden `pct_change()`, som regner ut prosentvis endring fra forrige kvartal. Verdien multipliseres med 100 for å få prosent.  
+Vidare kan det vera interessant å sjå kva kvartal som hadde høgast og
+lågast **prosentvis endring**.
+Me kan laga ei ny søyle med metoden `pct_change()`, som reknar ut
+prosentvis endring frå førre periode.
+Me gangar med hundre for å sjå prosentpoeng.
 
 ```{code-cell} ipython3
-bpi["vekst"] = bpi["boligprisindeks"].pct_change() * 100
+bpi["vekst"] = bpi["BPI"].pct_change() * 100
 display(bpi)
 ```
+
+Fyrste periode har sjølvsagt NaN, sidan der ikkje finst nokon tidlegare
+periode å samanlikna med.
+Elles ser tala ut som rimelege prosenttal.
 
 ```{code-cell} ipython3
 lav_endring = bpi["vekst"].idxmin()
 lav_endring_verdi = bpi["vekst"].min()
 print(f"Kvartalet med lavest prisvekst var {lav_endring}, med en endring på {lav_endring_verdi:.1f}%")
+```
 
+Det verkar rimeleg.  Siste kvartal 2008 var midt i finanskrisen, og eit
+sjelden tilfelle av prisnedgang.
+
+Me har brutk f-strengar for lett å kunna bestemma talet på desimalplassar,
+her med `.1f` for å få éin desimal.
+
+```{code-cell} ipython3
 hoy_endring = bpi["vekst"].idxmax()
 hoy_endring_verdi = bpi["vekst"].max()
 print(f"Kvartalet med høyest prisvekst var {hoy_endring}, med en endring på {hoy_endring_verdi:.1f}%")
 ```
 
-### Forklaring
-
-
-Deretter identifiseres kvartalet med lavest og høyest prisvekst ved å bruke `idxmin()` og `idxmax()`, og verdiene printes ut som prosenter med én desimal, `1f}%`.  
-
-Kvartalet med høyest prosentvis prisvekst i BPI var i andre kvartal i 1999, med en økning på 8,1%. Dette kan ha vært drevet av høy etterspørsel etter bolig, lave renter og generelt optimistiske økonomiske utsikter på slutten av 1990-tallet.  
+Kvartalet med høgast prosentvis prisvekst i BPI var andre kvartal 1999,
+med ei auke på 8,1%.
+Dette kan ha vore drive av høg etterspurnad etter bustad, låge renter 
+og generelt optimistiske økonomiske utsikter på slutten av 1990-tallet.  
 
 Kvartalet med lavest prisvekst var siste kvartal i 2008, med en nedgang på 7,0%. Dette kvartalet sammenfaller med finanskrisen, som førte til økt usikkerhet i økonomien, strammere kredittforhold og lavere kjøpekraft, som alle bidro til fall i boligprisene.  
 
 Dette viser at kvartalsvise svingninger i boligprisene ofte reflekterer større samfunnsøkonomiske hendelser, og at den reelle prisveksten i boligmarkedet påvirkes av både kortsiktige og langsiktige faktorer som renter, kreditt og økonomisk tillit.
 
+## Datasett for Konsumprisindeks
+
+For å studera konsumprisindeksen har me lasta ned datasettet
+[1086.csv](1086.csv) frå SSB.
+Dette skal me lesa og formattera på same måte som det fyrste 
+datasettet.
+
 ```{code-cell} ipython3
-df2 = pd.read_csv("1086.csv", sep=";", encoding="latin1")
-print(df2.columns.tolist())
-display(df2.head())
+kpi0 = pd.read_csv("1086.csv", sep=";"
+                  , encoding="latin1"
+                  , decimal=","
+                  , na_values=[ "..", "." ])
+display(kpi0)
+display(kpi0.dtypes)
 ```
 
-### Forklaring
-
-Koden leser inn datasettet `1086.csv` som er en **csv-fil** av en tabell hentet fra SSB, som inneholder tall for **konsumprisindeksen** (KPI). Denne indeksen måler endringer i prisnivået på varer og tjenester som husholdninger kjøper, og brukes som et mål på **inflasjon**.
-Ved å bruke `pd.read_csv("1086.csv", sep=";", encoding="latin1")` importeres datafilen, mens `print(df2.columns.tolist())` viser kolonnenavnene og `display(df2.head())` viser de første radene i tabellen for å få oversikt over strukturen.
-Datasettet danner dermed grunnlaget for å analysere prisutviklingen i Norge over tid.
-Fra tabellen ser man at **basisåret** (året hvor indeksen er 100) er 2015. Statistikken går helt tilbake til 1979 og måles **månedlig**. 
-For at KPI skal kunne sammenlignes med BPI, er det viktig å undersøke om begge indeksene har samme basisår, altså 2015, siden dette ikke var presisert i datasettet om BPI. 
+Her fekk me til prisindekssøyla på fyrste forsøk.
+Neste steg er å fiksa tidsaksa.  Det gjer me på same måte som sist, men meir kompakt.
 
 ```{code-cell} ipython3
-bpi_per_aar = bpi["prisindeks"].groupby(bpi.index.year).mean()
+kpi1 = kpi0.copy()
+kpi1["måned"] = kpi1["måned"].str.replace("M","-")
+kpi1["måned"] = pd.PeriodIndex(kpi1["måned"], freq="M")
+kpi1 = kpi1.set_index( kpi1["måned"] )
+display( kpi1 )
+display( kpi1.dtypes )
+```
+
+Som i det fyrste datasettet har me her mange statistikkvariablar.
+Denne gongen er dei målte månadleg, heller enn kvartalsvis, og
+går tilbake til 1979.
+
+Me vil berre studera sjølve konsumprisindeksen.
+Me filtrerer òg bort data frå før starten på bustadprisindeksen.
+
+```{code-cell} ipython3
+kpi2 = kpi1[kpi1["statistikkvariabel"] == "Konsumprisindeks (2015=100)"]
+kpi2 = kpi2[kpi2["måned"] >= pd.Period("1992-01",freq="M") ]
+kpi2 = kpi2.copy()
+display( kpi2 )
+```
+
+Dette ser riktig ut, med riktig tidsintervall og berre éin statistikkvariabel.
+Me kan droppa overflødige søyler, og laga kortare søylenamn, på same måte som før.
+
+```{code-cell} ipython3
+idxs_bpi = list(kpi2.columns)
+kpi = kpi2.drop(labels=idxs_bpi[0:3], axis=1)
+kpi = kpi.rename(columns={ idxs_bpi[3] : "KPI" })
+display(kpi)
+```
+
+Me kan merka oss at *basisåret* er 2015, dvs. det er her indeksen er 100.
+For at KPI og BPI skal vera samanliknbare, bør dei ha same basisår.
+Me kan sjekka kvar som er basisåret for BPI med fylgjande kode.
+
+```{code-cell} ipython3
+bpi_per_aar = bpi["BPI"].groupby(bpi.index.year).mean()
 basisaar = (bpi_per_aar - 100).abs().idxmin()
 print(f"Basisåret er {basisaar}, med en gjennomsnittlig prisindeks på {bpi_per_aar.loc[basisaar]:.1f}")
 ```
 
-### Forklaring
-
-Koden beregner **gjennomsnittlig boligprisindeks per år** ved å gruppere kvartalsdataene i `bpi` etter år med `groupby(bpi.index.year)` og finne gjennomsnittet med `.mean()`. Variabelen `bpi_per_aar` inneholder dermed ett gjennomsnittstall for hvert år. Deretter finner koden hvilket år som har en gjennomsnittlig prisindeks nærmest 100 med `(bpi_per_aar - 100).abs().idxmin()`, og lagrer dette som `basisaar`. 
-Koden bekrefter at basisåret for BPI er 2015 i likhet med KPI, og de kan sammenlignes videre. 
+::: {admonition} Forklaring
+Koden beregner **gjennomsnittlig boligprisindeks per år** ved å gruppere kvartalsdataene i `bpi` etter år med `groupby(bpi.index.year)` og finne gjennomsnittet med `.mean()`. 
+Variabelen `bpi_per_aar` inneholder dermed ett gjennomsnittstall for hvert år. 
+Deretter finner koden hvilket år som har en gjennomsnittlig prisindeks nærmest 100 med ved å rekna avviket frå 100 
+som `(bpi_per_aar - 100).abs()`, og til slutt finna det lågaset avviket med `.idxmin()`.
+Dette vert lagra  som `basisaar`. 
+Koden stadfestar at basisåret for BPI er 2015 akkurat som for KPI.
+:::
 
 +++
 
-Som nevnt måles KPI månedlig, mens BPI måles kvartalvis. De har altså en tidsindeks med **ulik frekvens**. For å sammenligne dem vil man helst ha hver variabel kun én gang per periode. Det er også hensiktsmessig å kun se på KPI fra 1992, selv om dataene går lenger tilbake. 
+Me kan dobbelsjekka at me ikkje har rota det til ved å lista BPI i 2015.
 
 ```{code-cell} ipython3
-kpi = df2[df2["statistikkvariabel"] == "Konsumprisindeks (2015=100)"]
-kpi = kpi[kpi["måned"] >= "1992M01"]
-kpi = kpi.copy()
+display( bpi[ bpi.index.year == 2015 ] )
+```
 
-kpi["måned"] = kpi["måned"].str.replace("M", "-")
-kpi["kvartal"] = pd.PeriodIndex(kpi["måned"], freq="Q")
+Her ser me tal rundt 100 som venta.  Me kan rekna gjennomsnittet for hand for å sjå at det er akkurat 100.
 
-kpi = kpi.set_index("måned")
++++
 
-idxs_kpi = list(kpi.columns)[0:2] 
-kpi = kpi.drop(labels=idxs_kpi, axis=1)
+### Plott
 
-kpidx = list(kpi.columns)[0]
-kpi[kpidx] = kpi[kpidx].str.replace(",", ".")
-kpi[kpidx] = kpi[kpidx].astype(float)
+Det er alltid nyttig å plotta for å sjekka at datasetta fungerer som dei
+skal.
+
+```{code-cell} ipython3
+ax = kpi.plot(  )
+bpi["BPI"].plot( ax=ax, label="BPI" )
+plt.legend()
+```
+
+Legg merke til korleis me må lagra aksesystemet `ax` når me plottar den fyrste rekkja, slik at me kan be om å få den andre i same aksesystem.
+
+Her ser me det som me eigentleg veit.  Bustadprisar veks raskare enn andre prisar, særleg før finanskrisa rundt 2008.
+
++++
+
+### Kvartalsvis samanlikning
+
+Som nemnd har me månadlege KPI-data og kvartalsvise BPI-data.
+For å samanlikna numerisk, er det enklast å ha alt med same
+oppløysing.
+Me kan gruppera data kvartalsvis og rekna gjennomsnitt per period,
+slik.
+
+```{code-cell} ipython3
+kpi["kvartal"] = pd.PeriodIndex(kpi.index, freq="Q")
 
 kpi_kvartal = kpi.groupby("kvartal").mean()
-kpi_kvartal = kpi_kvartal.rename(columns={kpidx: "konsumprisindeks"})
 
 display(kpi_kvartal.round(2))
+```
 
-kpi_kvartal["konsumprisindeks"].plot(title="Konsumprisindeks kvartalsvis")
+::: {admonition} Refleksjon
+Teknikken for å gruppera data i lengre periodar er den same som 
+me brukte for å sjekka basisåret for indeksen tidlegare, men her
+tek me vare på heile tidsrekkja med gjennomsnittleg indeks per
+kvartal.
+:::
+
+Det er alltid greitt å plotta for å sjekka at alt er rett.
+
+```{code-cell} ipython3
+ax = kpi_kvartal["KPI"].plot(title="Konsumprisindeks kvartalsvis", legend="KPI")
+bpi["BPI"].plot( ax=ax, legend="BPI" )
 plt.xlabel("Kvartal")
 plt.ylabel("Konsumprisindeks")
 plt.show()
 ```
 
-### Forklaring
-
-Datasettet **filtreres** først slik at det kun inneholder statistikkvariabelen `"Konsumprisindeks (2015=100)"`, og observasjonene begrenses til perioden fra og med `1992M01`. Dette gjøres for å gjøre datasettet sammenlignbart med BPI-dataene, som også starter i 1992. En **kopi** av datasettet lages for å unngå advarsler når verdier endres.
-
-Deretter omformes månedsformatet ved å erstatte `“M” med “-”`, slik at verdiene får et gyldig **datotidformat**. En ny kolonne med kvartal opprettes basert på månedskolonnen ved hjelp av `PeriodIndex` med kvartalsfrekvens. Dette gjør det mulig å gruppere dataene på kvartalsnivå. Kolonnen “måned” settes som indeks for å tydeliggjøre tidsdimensjonen.
-
-Unødvendige kolonner som `"kode"` og `"statistikkvariabel"` fjernes fordi de ikke lenger er relevante etter filtreringen. Dette gjør datasettet ryddigere og enklere å bruke videre. Verdiene omformes konsumprisindeksen slik at komma erstattes med punktum, og datatypen konverteres til flyttall (`float`) for å kunne beregne **gjennomsnitt per kvartal**.
-
-Gjennomsnittlig konsumprisindeks per kvartal beregnes deretter ved hjelp av `groupby("kvartal").mean()`, og kolonnen gis navnet `"konsumprisindeks"` for enklere referanse. Til slutt vises den ferdige tabellen avrundet til to desimaler og plottes i et linjediagram som viser utviklingen i konsumprisindeksen kvartalsvis fra 1992 til i dag.
-Plottet viser en tydlig og jevn økning i KPI. 
+Dette plottet er omtrent likt det forrige, men KPI-kurva er glattare fordi kvart målepunkt er gjennomsnitt over ein lengre periode.
+Det er som det skal vera.
 
 ```{code-cell} ipython3
 df = pd.merge(bpi, kpi_kvartal, how='outer', on="kvartal")
@@ -200,7 +370,7 @@ Fra plottet kan man se at boligprisene (BPI) har hatt en **kraftigere** og mer *
 
 +++
 
-Videre kan man lage et **spredringsplott** for å se om det er en **korrelasjon** mellom de to indeksene. 
+Videre kan man lage et **spredringsplott** for å se om det er en **korrelasjon** mellom de to indeksene.
 
 ```{code-cell} ipython3
 df.plot.scatter("boligprisindeks", "konsumprisindeks")
@@ -214,7 +384,7 @@ plt.show()
 
 Koden lager et **spredningsplott** som viser sammenhengen mellom boligprisindeks (`BPI`) og konsumprisindeks (`KPI`) for hvert kvartal. Hver prikk i plottet representerer et kvartal, med boligpriser på x-aksen og konsumprisindeksen på y-aksen.  
 
-Fra plottet kan man observere en klar **positiv sammenheng/korrelasjon**: når KPI øker, stiger også BPI. Dette betyr at boligpriser og den generelle prisutviklingen i økonomien ofte beveger seg i samme retning.   
+Fra plottet kan man observere en klar **positiv sammenheng/korrelasjon**: når KPI øker, stiger også BPI. Dette betyr at boligpriser og den generelle prisutviklingen i økonomien ofte beveger seg i samme retning.
 
 +++
 
@@ -249,7 +419,6 @@ Analysen viser at boligprisene i Norge (BPI) har steget betydelig fra 1992 til i
 Som student i økonomi og nylig boligkjøper har jeg funnet oppgaven svært interessant. Det har vært spennende å se hvor mye boligprisene har steget siden 1992, samtidig som analysen av konsumprisindeksen gir innsikt i hvordan prisutvikling på varer og tjenester påvirker kjøpekraften, særlig nå som jeg selv skal kjøpe flere varer.  
 
 I tillegg har arbeidet med oppgaven styrket mine programmeringskunnskaper. Programmet kombinerer praktisk økonomisk forståelse med tekniske ferdigheter, noe som er nyttig både for studier og fremtidige karriereplaner innen økonomi og rådgivning.
-
 
 ```{code-cell} ipython3
 

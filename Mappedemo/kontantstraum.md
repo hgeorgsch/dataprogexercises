@@ -1,9 +1,6 @@
 ---
-title: Simulering av kontantstrøm oppgave
-author: Hans Georg Schaathun (red.)
-date: mai 2026
 jupytext:
-  formats: ipynb,md:myst
+  formats: md:myst,ipynb
   text_representation:
     extension: .md
     format_name: myst
@@ -341,7 +338,6 @@ def loan(saldo=15000, rente=0.08, terminbeløp=0, year=2025, gebyr=0, maks_år=2
         x.append(year)                # legg år til i listen
         y.append(saldo)               # legg saldo til i listen
     return x, y                       # returnerer to lister: x = år, y = saldo
-
 ```
 
 Jeg kaller funksjonen `loan` Deretter så setter vi inn verdiene i parantesen. Disse verdiene kalles **parametere**. Vi kan endre på disse tallene hver gang vi kjører en funksjon. 
