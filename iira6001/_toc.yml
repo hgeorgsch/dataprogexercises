@@ -10,8 +10,9 @@ chapters:
     - file: Mappedemo/Mappedemo
       sections:
         - file: Mappedemo/kontantstraum-eval
-        - file: kontantstraum.ipynb
-        - file: kontantstraum-eval
+        - file: Mappedemo/kontantstraum.ipynb
+        - file: Mappedemo/boligpris-eval
+        - file: Mappedemo/boligpris.ipynb
     - file: Ny programvare
     - file: Dropin
   - file: Opningssamling

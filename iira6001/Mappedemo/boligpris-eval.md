@@ -18,7 +18,7 @@ men eg har redigert det med grundigare testing og analyse.
     + Kandidaten har vore nøye med å ta stilling til kvar einaste
       kodeblokk, og fordi kvar kodeblokk er ganske liten, er det
       lett å fylgja argumentasjonen.
-    + Der er ingen tvil om at alt er korrelt, so dette ligg mot A.
+    + Der er ingen tvil om at koden er korrelt, so dette ligg mot A.
 + Kodekvalitet (per del) 
     + Kodekvaliteten er god og alt er lett å lesa.
     + Om ein er pirkut, kunne ein vore meir konsekvent med
@@ -44,5 +44,11 @@ men eg har redigert det med grundigare testing og analyse.
 
 Me skal ikkje setja karakter utan å sjå ei heil mappe, men dette er 
 nok ein typisk prestasjon i ein mappe til C eller B.
+Essayet har ingen drag som peikar mot dårlegare karakter enn C, og nokre
+som peikar mot betre.
 Det er vanskeleg å få betre enn B utan ein meir original og utfordrande
 problemstilling.
+
+Merk at der ikkje er ein B-kategori i rubrikken, og gode vurderingar
+som ikkje rekk til A er difor nemnde som «sterk C».  
+NÅr sensorane ser heile mappa samla, vil dei gjera ein heilskapsvurdering.
