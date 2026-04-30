@@ -1,6 +1,6 @@
-ipynb: kontantstraum.ipynb
+ipynb: kontantstraum.ipynb boligpris.ipynb
 all: pdf ipynb
-pdf: kontantstraum.pdf
+pdf: kontantstraum.pdf boligpris.pdf
 
 %.pdf: %.ipynb
 	python -m nbconvert --to pdf $<
