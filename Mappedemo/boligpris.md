@@ -12,7 +12,7 @@ kernelspec:
   name: dataprog
 ---
 
-# Innledning
+# Boligpris- og Konsumprisindeks
 
 Bustadmarknaden er ein sentral del av norsk økonomi,
 og bustadprisane har auka mykje over dei siste tiåra.
