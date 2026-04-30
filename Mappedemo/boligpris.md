@@ -15,30 +15,41 @@ kernelspec:
 
 Boligmarkedet er en sentral del av norsk økonomi, og boligprisene har hatt betydelig vekst de siste tiårene. Samtidig påvirkes kjøpekraften av generell prisstigning i økonomien, målt gjennom konsumprisindeksen (KPI). For boligkjøpere er det derfor interessant å forstå ikke bare nominell prisutvikling, men også hvordan boligpriser utvikler seg relativt til inflasjon.
 
-## Problemstilling
+Vi skal ta for oss følgende problemstilling:
 
-Hvordan har boligprisene i Norge utviklet seg sammenlignet med konsumprisindeksen, og hva sier dette om reell prisvekst i boligmarkedet?
+> Hvordan har boligprisene i Norge utviklet seg sammenlignet med 
+konsumprisindeksen, og hva sier dette om reell prisvekst i boligmarkedet?
+
+## Datasett
+
+Jeg har lastet ned datasettet [1060.csv](./1060csv) fra Statistisk sentralbyrå med informasjon om boligprisindekser.
+Datasettet starter på 1992K1 fordi Statistisk sentralbyrå begynte å publisere prisindekser for brukte selveierboliger tidlig på 1990-tallet, etter kraftige prisfall i boligmarkedet på slutten av 1980- og starten av 1990-tallet. Dette gir en historisk oversikt over boligprisutviklingen i Norge fra en tid med store markedsendringer.
 
 ```{code-cell} ipython3
 import pandas as pd
 
 df1 = pd.read_csv("1060.csv", sep=";", encoding="latin1")
-print(df1.columns.tolist())
 display(df1.head())
 ```
 
-### Forklaring
+Vi har lastet inn datasettet i pandas, og utskriften viser at vi kan følge
+**TODO**
 
-Jeg har importert datasettet `1060.csv` fra Statistisk sentralbyrå med informasjon om boligprisindekser. Datasettet starter på 1992K1 fordi Statistisk sentralbyrå begynte å publisere prisindekser for brukte selveierboliger tidlig på 1990-tallet, etter kraftige prisfall i boligmarkedet på slutten av 1980- og starten av 1990-tallet. Dette gir en historisk oversikt over boligprisutviklingen i Norge fra en tid med store markedsendringer.
+Datasettet **filtreres** først for statistikkvariabelen "Prisindeks for brukte boliger", boligtypen `"00 Alle boligtyper"` og regionen `"TOTAL Hele landet"`. Dette gir en oversikt over de generelle boligprisene i Norge på nasjonalt nivå, uten at tallene påvirkes av lokale variasjoner eller spesifikke boligtyper.
+
+En **kopi** av datasettet lages for å lage en ny *dataframe* slik at man unngår advarsler når verdier endres. Kvartalene omformes til et Pandas `PeriodIndex` med frekvens "Q" (kvartal), slik at de kan brukes som **tidsindeks** i plottet.
+
 
 ```{code-cell} ipython3
-import matplotlib.pyplot as plt
-
 bpi = df1[df1["statistikkvariabel"] == "Prisindeks for brukte boliger"]
 bpi = bpi[bpi["boligtype"] == "00 Alle boligtyper"]
 bpi = bpi[bpi["region"] == "TOTAL Hele landet"]
 bpi = bpi.copy()
+```
 
+Kolonnen med prisindeksen renses: manglende verdier ("..") settes til `None` (NaN), desimalskilletegn endres fra komma til punktum, og verdiene konverteres til flyttall (`float`). Kolonnen får navnet `"prisindeks"` for enklere bruk i videre analyser og plotting.
+
+```{code-cell} ipython3
 def formatertid(streng):
     return streng.replace("K", "Q")
 
@@ -56,31 +67,31 @@ idxs_bpi = list(bpi.columns)[0:3]
 bpi = bpi.drop(labels=idxs_bpi, axis=1)
 
 display(bpi)
+```
+
+Til slutt vises/**plottes** tabellen og utviklingen av boligprisindeksen i et linjediagram. Dette viser den langsiktige trenden i boligmarkedet, med jevn prisvekst og enkelte mindre nedgangsperioder.
+
+```{code-cell} ipython3
+import matplotlib.pyplot as plt
 bpi["prisindeks"].plot(title="Boligprisindeks - brukte boliger, alle typer for hele landet")
 plt.xlabel("Kvartal")
 plt.ylabel("Prisindeks")
 plt.show()
 ```
 
-### Forklaring
-
-Datasettet **filtreres** først for statistikkvariabelen "Prisindeks for brukte boliger", boligtypen `"00 Alle boligtyper"` og regionen `"TOTAL Hele landet"`. Dette gir en oversikt over de generelle boligprisene i Norge på nasjonalt nivå, uten at tallene påvirkes av lokale variasjoner eller spesifikke boligtyper.
-
-En **kopi** av datasettet lages for å lage en ny *dataframe* slik at man unngår advarsler når verdier endres. Kvartalene omformes til et Pandas `PeriodIndex` med frekvens "Q" (kvartal), slik at de kan brukes som **tidsindeks** i plottet.
-
-Kolonnen med prisindeksen renses: manglende verdier ("..") settes til `None` (NaN), desimalskilletegn endres fra komma til punktum, og verdiene konverteres til flyttall (`float`). Kolonnen får navnet `"prisindeks"` for enklere bruk i videre analyser og plotting.
-
-Til slutt vises/**plottes** tabellen og utviklingen av boligprisindeksen i et linjediagram. Dette viser den langsiktige trenden i boligmarkedet, med jevn prisvekst og enkelte mindre nedgangsperioder.
-
 
 +++
 
-Videre kan det være interessant å se på hvilke kvartal som hadde høyest og lavest **prosentvis endring**.
+Videre kan det være interessant å se på hvilke kvartal som hadde høyest og
+lavest **prosentvis endring**.
+En ny kolonne `vekst` beregnes med metoden `pct_change()`, som regner ut prosentvis endring fra forrige kvartal. Verdien multipliseres med 100 for å få prosent.  
 
 ```{code-cell} ipython3
-
 bpi["vekst"] = bpi["boligprisindeks"].pct_change() * 100
+display(bpi)
+```
 
+```{code-cell} ipython3
 lav_endring = bpi["vekst"].idxmin()
 lav_endring_verdi = bpi["vekst"].min()
 print(f"Kvartalet med lavest prisvekst var {lav_endring}, med en endring på {lav_endring_verdi:.1f}%")
@@ -92,7 +103,6 @@ print(f"Kvartalet med høyest prisvekst var {hoy_endring}, med en endring på {h
 
 ### Forklaring
 
-En ny kolonne `vekst` beregnes med metoden `pct_change()`, som regner ut prosentvis endring fra forrige kvartal. Verdien multipliseres med 100 for å få prosent.  
 
 Deretter identifiseres kvartalet med lavest og høyest prisvekst ved å bruke `idxmin()` og `idxmax()`, og verdiene printes ut som prosenter med én desimal, `1f}%`.  
 
