@@ -11,6 +11,8 @@ kriteria for mappevurdering.
 
 + [](kontantstraum)
    + [](kontantstraum-eval)
++ [](boligpris)
+   + [](boligpris-eval)
 
 
 Eg vil neppe klara å laga eit døme på refleksjonsdelen (Del 3).
