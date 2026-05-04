@@ -14,7 +14,8 @@ kernelspec:
 
 # Kundesegmentering med Klyngeanalyse
 
-I denne leksjonen skal vi bruke et kjent datasett fra Kaggle som inneholder bruksmønsteret til ca. 9000 kredittkortkunder.
+I denne leksjonen skal vi bruke et kjent datasett fra Kaggle
+som inneholder bruksmønsteret til ca. 9000 kredittkortkunder.
 
 ```{code-cell} ipython3
 import pandas as pd
@@ -25,7 +26,9 @@ import seaborn as sns
 
 ## Målet vårt: Finne kundesegmenter
 
-Tenk deg at du jobber som dataanalytiker i en bank. Markedsavdelingen ønsker å kjøre målrettede kampanjer, men de vet ikke *a priori* hvilke «typer» kunder de har. 
+Tenk deg at du jobber som dataanalytiker i en bank.
+Markedsavdelingen ønsker å kjøre målrettede kampanjer,
+men de vet ikke *a priori* hvilke «typer» kunder de har. 
 De maskinlæringsmetodene som vi har sett på hittil forutsetter at vi allerede har bestemt hvilke kategorier vi vil dele datasettet i, f.eks. overklasse, middelklasse og arbeiderklasse, og at vi har en metode, om enn kostbar, for å identifisere kategoriene i et datasett som vi kan bruke til trening.  Dette kalles veiledet trening eller *supervised learning*.
 
 Dersom vi ikke har bestemt en kategorisering som vi mener er relevant, kan vi bruke *unsupervised learning* eller trening uten veiledning. Det vanligste eksempelet på trening uten veiledning er klyngeanalyse (*clustering*).
@@ -35,14 +38,14 @@ Vi kan bruke klyngeanalyse for å dele kundemassen inn i klynger (segmenter) som
 I dette eksempelet skal vi ta for oss kredittkortkunder, og se hvordan vi kan segmentere kundemassen ved hjelp av klyngeanalyse, for derefter å analysere hva som kjennetegner de ulike segmentene.
 Kjøper de mye på avbetaling? Tar de ut mye kontanter? Betaler de hele regningen hver måned?
 
-For en bank eller en markedsavdeling kan dette være verdifullt. Hvis vi vet hvilke klynger kundene våre tilhører, kan vi feks:
+For en bank eller en markedsavdeling kan dette være verdifullt.
+Hvis vi vet hvilke klynger kundene våre tilhører, kan vi feks:
 * Sende målrettede reklamekampanjer.
 * Utvikle skreddersydde finansprodukter (f.eks. et kredittkort for de som reiser mye).
 * Identifisere risiko (kunder som tar opp mye gjeld og betaler lite).
 
 ::: {admonition} Hvordan fungerer K-Means-algoritmen?
 :class: note dropdown
-
 
 En av de mest populære algoritmen for klyngeanalyse heter **K-Means**. Navnet avslører egentlig hvordan den fungerer: "K" står for antall klynger vi ønsker å finne, og "Means" (gjennomsnitt) refererer til hvordan algoritmen finner midtpunktet i disse klyngene.
 
