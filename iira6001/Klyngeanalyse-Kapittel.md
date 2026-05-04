@@ -12,7 +12,19 @@ title: Klyngeanalyse med Maskinlæring
     + [Kredittbruk](notebooks/clustering_creditcards)
 + *Demo* regresjon og korrelasjon i pandas:
     + [Klyngeanalyse](notebooks/Klyngeanalyse)
-    + [$k$-means](notebooks/klyngedemo)
++ *Kuriosa*
+    + [$k$-means](notebooks/klyngedemo) viser og forklarer
+      implementasjonen av $k$-means.
+      Demonstrasjonen lagar òg dei plotta som er brukt i føredraget.
+
+
+::: {admonition} Open oppgåve
+Test ut teknikkane og framgangsmåtane frå det gjennomarbeidede dømet
+på andre datasett, t.d.
++ iris-datasettet
++ [Palmer Penguins](https://archive.ics.uci.edu/dataset/690/palmer+penguins-3.)-datasettet
++ [nett-/detaljhandel](https://archive.ics.uci.edu/dataset/352/online+retail) 
+:::
 
 ## plan
 
@@ -23,9 +35,3 @@ title: Klyngeanalyse med Maskinlæring
 + Gjennomarbeidet eksempel
     + Spotify, audio analyse fra uke om webapi, skisse 
       [spotify-audio-bla](notebooks/Spotify-klyngeanalyse-ny)
-+ Egen oppgave:
-   + Test ut teknikker og framgangsmåter på iris-dataset og/eller 
-     Palmer Penguins dataset
-   + Ett stort/tungt relevant dataset eksempel er 
-     [online/retail](https://archive.ics.uci.edu/dataset/352/online+retail) 
-       - mulig mappeoppgave
