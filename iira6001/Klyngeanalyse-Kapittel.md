@@ -12,6 +12,7 @@ title: Klyngeanalyse med Maskinlæring
     + [Kredittbruk](notebooks/clustering_creditcards)
 + *Demo* regresjon og korrelasjon i pandas:
     + [Klyngeanalyse](notebooks/Klyngeanalyse)
+    + [$k$-means](notebooks/klyngedemo)
 
 ## plan
 
@@ -20,7 +21,6 @@ title: Klyngeanalyse med Maskinlæring
     + tiltenkt bruk av datasettt generert i 
       [testfil](notebooks/data-til-kmeans-knn)
 + Gjennomarbeidet eksempel
-    + [Kredittbruk](notebooks/clustering_creditcards)
     + Spotify, audio analyse fra uke om webapi, skisse 
       [spotify-audio-bla](notebooks/Spotify-klyngeanalyse-ny)
 + Egen oppgave:
