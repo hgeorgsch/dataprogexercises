@@ -120,6 +120,7 @@ chapters:
       sections:
       - file: notebooks/Klyngeanalyse
       - file: notebooks/Kundesegmentering
+      - file: norun/klyngedemo
       - file: notebooks/clustering_creditcards
       - file: notebooks/data-til-kmeans-knn
     - file: GUI
