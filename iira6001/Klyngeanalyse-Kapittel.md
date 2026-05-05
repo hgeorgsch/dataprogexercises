@@ -10,9 +10,11 @@ title: Klyngeanalyse med Maskinlæring
     + Unsupervised Learning
 
 + *Gjennomarbeidd døme* 
-    + [Kredittbruk](notebooks/clustering_creditcards)
-+ *Demo* $k$-*means* og $k$-*nearest neighbour*
     + [Klyngeanalyse](notebooks/Klyngeanalyse)
+      er ein enkel demonstrasjon av
+      $k$-*means* og $k$-*nearest neighbour* på tilfeldige data.
+    + [Kredittbruk](notebooks/clustering_creditcards)
+      viser grundig utforsking av kredittkortkundedata.
 + *Kuriosa*
     + [$k$-means](norun/klyngedemo) viser og forklarer
       implementasjonen av $k$-means.

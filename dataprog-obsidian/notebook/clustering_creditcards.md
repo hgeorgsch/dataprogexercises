@@ -258,16 +258,14 @@ g.ax_joint.grid(True, linestyle="--", alpha=0.5)
 plt.show()
 ```
 
-```{code-cell} ipython3
-
-```
-
 ::: {admonition} 'symlog' og 'log'?
 :class: note dropdown
 
 Vanligvis, når vi ønsker en logaritmisk skala i Python (for eksempel i et standard Matplotlib-plot), bruker vi kommandoen `plt.xscale("log")`. 
 
-Problemet i vårt spesifikke datasett er at mange kunder har *nøyaktig 0 kr* i kjøp eller saldo. Som du kanskje husker fra matten, er logaritmen av 0 ikke definert (den går mot minus uendelig). Hvis vi hadde brukt en vanlig `"log"`-skala her, ville Python enten gitt oss en feilmelding, eller enda verre: den ville bare slettet alle punktene med 0 kr fra grafen uten å si ifra!
+Problemet i vårt spesifikke datasett er at mange kunder har *nøyaktig 0 kr* i kjøp eller saldo.
+Som du kanskje husker fra matten, er logaritmen av 0 ikke definert (den går mot minus uendelig).
+Hvis vi hadde brukt en vanlig `"log"`-skala her, ville Python enten gitt oss en feilmelding, eller enda verre: den ville bare slettet alle punktene med 0 kr fra grafen uten å si ifra!
 
 Løsningen er å bruke `"symlog"` (symmetrical log). Dette er en genial funksjon som fungerer akkurat som en vanlig logaritmisk skala for store tall, men som glir over til å bli en vanlig lineær skala akkurat rundt nullpunktet. På denne måten får vi i pose og sekk: Vi strekker ut de store tallene for å se mønstre, *og* vi beholder kundene med 0 kr i forbruk trygt i grafen vår!
 :::
@@ -276,9 +274,14 @@ Løsningen er å bruke `"symlog"` (symmetrical log). Dette er en genial funksjon
 ::: {admonition} Hva betyr dette for maskinlæringen vår?
 :class: warning
 
-Boksplottet på toppen og siden bekrefter mistanken vår: Vi har mange "outliere"! De svarte prikkene som strekker seg langt ut til høyre og oppover, er kunder med helt ekstrem adferd sammenlignet med normalen (inni selve boksen). 
+Boksplottet på toppen og siden bekrefter mistanken vår:
+Vi har mange *utliggere*!
+De svarte prikkene som strekker seg langt ut til høyre og oppover, er kunder med helt ekstrem adferd sammenlignet med normalen (inni selve boksen). 
 
-Dette skaper et lite problem for oss. Siden K-Means-algoritmen baserer seg på å måle avstander mellom punkter, kan disse ekstreme "hvalene" trekke klyngenes midtpunkter helt ut av kurs. K-Means lar seg nemlig veldig lett påvirke av slike uteliggere. 
+Dette skaper et lite problem for oss.
+Siden $k$-*means*-algoritmen baserer seg på å måle avstander mellom punkter,
+kan disse ekstreme "hvalene" trekke klyngenes midtpunkter helt ut av kurs.
+$k$-*means* blir nemlig veldig lett påvirke av slike uteliggere. 
 
 Derfor må vi **skalere** dataene våre og vurdere om vi skal **fjerne** "outliere" eller gjøre en log-transformasjon på disse kolonnene ($x^{\prime} = \log{(x+1)}$)
 :::
