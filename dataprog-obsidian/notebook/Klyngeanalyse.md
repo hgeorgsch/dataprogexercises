@@ -53,7 +53,7 @@ mm = menn_bmi*(menn_h/100)**2
 mk = kvinner_bmi*(kvinner_h/100)**2
 ```
 
-Me skal generera `n` datapunkt, og definerer `n` som
+Me skal generera `n` datapunkt per kjøn, og definerer `n` som
 
 ```{code-cell} ipython3
 n = 1000
@@ -246,18 +246,25 @@ vera med.
 ```{code-cell} ipython3
 from sklearn.neighbors import KNeighborsClassifier
 
-X = df[["vekt", "hoyde"]]
+X = df[["Vekt", "Høyde"]]
 y = df["Kjønn"]
 model = KNeighborsClassifier(n_neighbors=2)
 result = model.fit(X,y)
 df["KNN"] = model.predict(X)
 ```
 
+::: {tip}
+Når me instantierer modellen, gjev me argumentet `n_neighbors`.
+Det er parameteren $k$, som fortel kor mange grannar som skal brukast.
+:::
+
++++
+
 Me kan visualisera som i stad:
 
 ```{code-cell} ipython3
-sns.relplot(data=df, x="hoyde", y="vekt", hue="Kjønn")
-sns.relplot(data=df, x="hoyde", y="vekt", hue="KNN")
+sns.relplot(data=df, x="Høyde", y="Vekt", hue="Kjønn")
+sns.relplot(data=df, x="Høyde", y="Vekt", hue="KNN")
 ```
 
 ::: {admonition} Refleksjon
@@ -267,20 +274,67 @@ neighbour*, eller er det omtrent det same?
 
 ### Evaluering
 
+Over brukte me heile datasettet til trening, i strid med alt me har lært tidlegare.
+Lat oss gjera det opp att, med skikkeleg evaluering.
+
 ```{code-cell} ipython3
 from sklearn.model_selection import train_test_split
-
 
 model = KNeighborsClassifier(n_neighbors=50)
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=.2)
 result = model.fit(X_train, y_train)
-
+print( X_train.shape, y_train.shape )
 df_test = pd.DataFrame(X_test)
 df_test = df_test.join(y_test)
 df_test["KNN"] = model.predict(X_test)
+
+errors = ( df_test["KNN"] != df_test["Kjønn"] )
+print( errors )
+```
+
+Her har me brukt pandas, til skilnad frå tidlegare øvingar, men prinsippet er det same.
+
+::: {admonition} Oppgåve
+Tel opp kor mange feil me har og rekn ut feilraten.
+:::
+
++++
+
+### Blaut prediksjon
+
+So langt har me brukt ein anten/eller-klassifikasjon, men ofte er det slik at nokre prediksjonar er
+sikrare enn andre. 
+Me kan òg bruka modellen til å estimera rimelegheita for kvar klasse.
+Dette vert ofte kalt *soft output* (blaute utdata) til skilnad frå det harde anten/eller-svaret.
+I SciKitLearn vert prediksjonane gjerne kalt sannsyn (*probabilities*), men sannsynsteoretisk sett
+er det tvilsom ordbruk.  Poenget er uansett at me bruker flyttal, der verdiar nær 0 og 1 vert rekna
+som visse prediksjonar, medan prediksjonar nær ½ tyder på stor uvisse.
+
+For å gjera dette i praksis bruker me `predict_proba()` i staden for `predict()`, slik:
+
+```{code-cell} ipython3
 test_probabilities = model.predict_proba(X_test)
 df_test["KNN_prob"] = list(map(max, test_probabilities))
-sns.relplot(data=df_test, x="hoyde", y="vekt", hue="Kjønn")
-sns.relplot(data=df_test, x="hoyde", y="vekt", hue="KNN", size="KNN_prob")
+```
+
+Legg merke til at me ikkje treng trena modellen på nytt.
+Den same modellen kan brukast til både harde og blaute 
+predikasjonar.
+
+For å vurdera resultatet, kan me plotta slik at storleiken
+på kvart punkt representerer prediksjonsverdien, slik:
+
+```{code-cell} ipython3
+g1 = sns.relplot(data=df_test, x="Høyde", y="Vekt", hue="Kjønn")
+g1.fig.suptitle("Ground Truth", fontsize=16)
+
+g2 = sns.relplot(data=df_test, x="Høyde", y="Vekt", hue="KNN", size="KNN_prob")
+g2.fig.suptitle("Prediksjon", fontsize=16)
 df_test.dtypes
 ```
+
+::: {admonition} Refleksjon
+Kva kjenneteiknar datapunkt med uviss prediksjon?
+Verker dette rimeleg?
+Er dette nyttig i praksis?
+:::

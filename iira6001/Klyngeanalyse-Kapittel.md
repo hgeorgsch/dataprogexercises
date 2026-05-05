@@ -8,7 +8,8 @@ title: Klyngeanalyse med Maskinlæring
 
 + *Foredrag*
     + Unsupervised Learning
-+ *Gjennomarbeidede eksempler* 
+
++ *Gjennomarbeidd døme* 
     + [Kredittbruk](notebooks/clustering_creditcards)
 + *Demo* $k$-*means* og $k$-*nearest neighbour*
     + [Klyngeanalyse](notebooks/Klyngeanalyse)
@@ -16,6 +17,11 @@ title: Klyngeanalyse med Maskinlæring
     + [$k$-means](norun/klyngedemo) viser og forklarer
       implementasjonen av $k$-means.
       Demonstrasjonen lagar òg dei plotta som er brukt i føredraget.
+
+      Matematisk sett er $k$-*means* ein svært enkel algoritme
+      å setja seg inn i.
+      Dersom du ikkje er van med matriserekning, kan det likevel
+      for tungt til å forsvara tida.
 
 
 ::: {admonition} Open oppgåve
@@ -26,7 +32,7 @@ på andre datasett, t.d.
 + [nett-/detaljhandel](https://archive.ics.uci.edu/dataset/352/online+retail) 
 :::
 
-## plan
+## Uferdige døme
 
 + Introduksjon til unsupervised learning 
     + sklearn: kmeans, silhouette-score, inertia, skalering, pca
