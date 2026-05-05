@@ -29,7 +29,7 @@ konsumprisindeksen, og kva seier dette om reell prisvekst i bustadmarknaden?
 
 ## Datasett for bustadprisar
 
-Eg har lasta ned datasettet [1060.csv](./1060csv) frå
+Eg har lasta ned datasettet [1060.csv](./1060.csv) frå
 Statistisk sentralbyrå med informasjon om bustadprisindeksen.
 Datasettet startar på 1992K1 fordi Statistisk sentralbyrå tok til
 å publisera prisindeksar for brukte sjølveigarbustadar tidleg på
