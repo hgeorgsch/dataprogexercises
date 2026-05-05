@@ -35,6 +35,9 @@ Gjennomarbeidde døme
 + [](notebooks/Simulering%20av%20kontantstraum) frå opningssamlinga.
       Du bør gjera ferdig denne før du startar på noko nytt.
 + [Halveringsmetoden](notebooks/Halveringsmetoden)
+  viser numerisk likningsløysing.  Dette koplar programmeringa til
+  matematikk, men om du ikkje er interessert i matematikken er det
+  kanskje like greit å hoppa over det.
 + [](notebooks/Smittespreiing)
 
 Demonstrasjonsvideoane
