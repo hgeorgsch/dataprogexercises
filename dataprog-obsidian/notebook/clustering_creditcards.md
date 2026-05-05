@@ -14,35 +14,38 @@ kernelspec:
 
 # Kundesegmentering med Klyngeanalyse
 
-I denne leksjonen skal vi bruke et kjent datasett fra Kaggle
-som inneholder bruksmønsteret til ca. 9000 kredittkortkunder.
-
-```{code-cell} ipython3
-import pandas as pd
-import matplotlib.pyplot as plt
-import numpy as np
-import seaborn as sns
-```
-
-## Målet vårt: Finne kundesegmenter
-
 Tenk deg at du jobber som dataanalytiker i en bank.
 Markedsavdelingen ønsker å kjøre målrettede kampanjer,
 men de vet ikke *a priori* hvilke «typer» kunder de har. 
-De maskinlæringsmetodene som vi har sett på hittil forutsetter at vi allerede har bestemt hvilke kategorier vi vil dele datasettet i, f.eks. overklasse, middelklasse og arbeiderklasse, og at vi har en metode, om enn kostbar, for å identifisere kategoriene i et datasett som vi kan bruke til trening.  Dette kalles veiledet trening eller *supervised learning*.
+De maskinlæringsmetodene som vi har sett på hittil forutsetter at vi allerede har bestemt hvilke kategorier vi vil dele datasettet i, f.eks. overklasse, middelklasse og arbeiderklasse, og at vi har en metode, om enn kostbar, for å identifisere kategoriene i et datasett som vi kan bruke til trening.
+Dette kalles veiledet trening eller *supervised learning*.
 
-Dersom vi ikke har bestemt en kategorisering som vi mener er relevant, kan vi bruke *unsupervised learning* eller trening uten veiledning. Det vanligste eksempelet på trening uten veiledning er klyngeanalyse (*clustering*).
+Dersom vi ikke har bestemt en kategorisering som vi mener er relevant, kan vi bruke *unsupervised learning* eller trening uten veiledning.
+Det vanligste eksempelet på trening uten veiledning er klyngeanalyse (*clustering*).
 
 Vi kan bruke klyngeanalyse for å dele kundemassen inn i klynger (segmenter) som har meget til felles uten å ha nogen formening om *hva* de har til felles.
 
 I dette eksempelet skal vi ta for oss kredittkortkunder, og se hvordan vi kan segmentere kundemassen ved hjelp av klyngeanalyse, for derefter å analysere hva som kjennetegner de ulike segmentene.
-Kjøper de mye på avbetaling? Tar de ut mye kontanter? Betaler de hele regningen hver måned?
+Kjøper de mye på avbetaling?
+Tar de ut mye kontanter? Betaler de hele regningen hver måned?
+
+::: {admonition} Mål
+Identifisere grupper av kunder som ligner på hverandre.
+:::
 
 For en bank eller en markedsavdeling kan dette være verdifullt.
 Hvis vi vet hvilke klynger kundene våre tilhører, kan vi feks:
 * Sende målrettede reklamekampanjer.
 * Utvikle skreddersydde finansprodukter (f.eks. et kredittkort for de som reiser mye).
 * Identifisere risiko (kunder som tar opp mye gjeld og betaler lite).
+
+::: {admonition} Datasett
+I denne leksjonen skal vi bruke et kjent datasett fra Kaggle
+som inneholder bruksmønsteret til ca. 9000 kredittkortkunder.
+:::
+
+
+## Bakgrunn
 
 ::: {admonition} Hvordan fungerer K-Means-algoritmen?
 :class: note dropdown
@@ -61,25 +64,36 @@ Slik jobber $K$-Means, steg for steg:
 :class: tip dropdown
 
 Når vi sier at algoritmen finner det midtpunktet som er "nærmest", mener vi matematisk avstand. For å kunne måle denne avstanden riktig, er det helt kritisk at alle variablene våre har samme skala. Hvis vi har én variabel som måles i titusener (f.eks. kredittgrense) og en annen som måles fra 1 til 12 (f.eks. måneder som kunde), vil algoritmen ignorere den lille variabelen helt. Derfor må vi alltid **skalere (standardisere)** dataene våre før vi kjører K-Means!
-
 :::
 
 +++
 
+## Oppsett
+
+Vi importerer de vanlige bibliotekene en gang, i tillegg til `seaborn`
+som vi skal bruke til visualisering.
+Bibliotekene for klyngeanalyse skal vi importere etter hvert som vi
+trenger dem.
+
+```{code-cell} ipython3
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+import seaborn as sns
+```
+
 ## Steg 1. Datasett
 
-Du kan laste ned datasettet fra kaggle her: 
-[https://www.kaggle.com/datasets/arjunbhasin2013/ccdata](https://www.kaggle.com/datasets/arjunbhasin2013/ccdata),
-eller fra kurssiden
+::: {admonition} Oppgåve
+Last ned datasettet
+fra [Kaggle](https://www.kaggle.com/datasets/arjunbhasin2013/ccdata)
+eller fra kurssiden.  Filen skal hete `CC GENERAL.csv`.
+:::
 
 Vi begynner med å laste inn data og biblioteker:
 
 ```{code-cell} ipython3
-# Laster inn datasettet (sørg for at du har lastet ned CC GENERAL.csv fra Kaggle)
-
 df = pd.read_csv("CC GENERAL.csv")
-
-# Tar en rask titt på de første 5 radene for å forstå strukturen
 df.head()
 ```
 
