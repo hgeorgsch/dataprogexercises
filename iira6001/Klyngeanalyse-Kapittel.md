@@ -10,7 +10,7 @@ title: Klyngeanalyse med Maskinlæring
     + Unsupervised Learning
 + *Gjennomarbeidede eksempler* 
     + [Kredittbruk](notebooks/clustering_creditcards)
-+ *Demo* regresjon og korrelasjon i pandas:
++ *Demo* $k$-*means* og $k$-*nearest neighbour*
     + [Klyngeanalyse](notebooks/Klyngeanalyse)
 + *Kuriosa*
     + [$k$-means](norun/klyngedemo) viser og forklarer
