@@ -238,6 +238,11 @@ Videoen gjev ei kjapp *briefing*.
 YouTubeVideo('0p0o5cmgLdE', width=800, height=300)
 ```
 
+SciKitLearn implementerer `KNeighborsClassifier` med det same APIet
+som andre maskinlæringsmodellar.
+Sidan dette er rettleidd læring, må målvariabelen `y`, dvs. kjønn, 
+vera med.
+
 ```{code-cell} ipython3
 from sklearn.neighbors import KNeighborsClassifier
 
@@ -248,10 +253,19 @@ result = model.fit(X,y)
 df["KNN"] = model.predict(X)
 ```
 
+Me kan visualisera som i stad:
+
 ```{code-cell} ipython3
 sns.relplot(data=df, x="hoyde", y="vekt", hue="Kjønn")
 sns.relplot(data=df, x="hoyde", y="vekt", hue="KNN")
 ```
+
+::: {admonition} Refleksjon
+Er der skilnad mellom klyngene i $k$-*means* og $k$-*nearest
+neighbour*, eller er det omtrent det same?
+:::
+
+### Evaluering
 
 ```{code-cell} ipython3
 from sklearn.model_selection import train_test_split
@@ -270,8 +284,3 @@ sns.relplot(data=df_test, x="hoyde", y="vekt", hue="Kjønn")
 sns.relplot(data=df_test, x="hoyde", y="vekt", hue="KNN", size="KNN_prob")
 df_test.dtypes
 ```
-
-::: {admonition} Refleksjon
-Er der skilnad mellom klyngene i $k$-*means* og $k$-*nearest
-neighbour*, eller er det omtrent det same?
-:::
