@@ -59,7 +59,7 @@ Me skal generera `n` datapunkt, og definerer `n` som
 n = 1000
 ```
 
-## Tilfeldig datasett
+### Tilfeldig datasett
 
 Me genererer normalfordelte datasett vha. `np.random.normal`.
 
@@ -100,7 +100,7 @@ Me genererer altso ikkje alle moglege par. Kvart element vert parra
 med berre eitt element frå den andre lista.
 :::
 
-## Visualisering
+### Visualisering
 
 For å visulisera datasettet kan me bruka histogram.  For å få visinga kompakt, bruker eg `add_subplot` for å få alle plotta på ei rekkje.
 
@@ -133,9 +133,18 @@ Legg merke til at me må laga ein figur `fig`, fordi `add_subplot()` er ein meto
 Elles er koden den same som ein ville brukt for å plotta histogramma einskildvis.
 :::
 
++++
+
+### Dataanalyse
+
+Neste steg er å sette det tilfeldige datasettet inn i ein pandas *DataFrame*.
+Dette kan ein gjera på forskjellige måtar.  
+Her bruker me ein `dict` med eitt element for kvar søyle.
+Det kjekke er at nyklane frå `dict` vert søyleoverskrifter.
+
 ```{code-cell} ipython3
-data={"hoyde": np.concatenate((menn_hoyde_liste, kvinner_hoyde_liste)), 
-      "vekt":  np.concatenate((menn_masse_liste, kvinner_masse_liste)),
+data={"Høyde": np.concatenate((menn_hoyde_liste, kvinner_hoyde_liste)), 
+      "Vekt":  np.concatenate((menn_masse_liste, kvinner_masse_liste)),
       "Kjønn": ["Mann"]*n+["Kvinne"]*n}
 
 
@@ -144,15 +153,29 @@ df =df.reindex(np.random.permutation(df.index))
 display(df)
 ```
 
+::: {tip}
+Datasetta er numpy *arrays* og difor må me bruka `concatenate()` frå numpy for å setja dei saman.
+Til kjøn bruker me lister, so dei kan me skøyta med `+`.
+Legg merke til trikset med `["Mann"]*n`.  Me kan multiplisera ei liste med eit tal for å repetera elementa.
+:::
+
+For å visualisera samanhengen mellom høgd og BMI kan me bruka eit spreideplott, slik:
+
 ```{code-cell} ipython3
-df.plot.scatter(x="hoyde", y="vekt")
+df.plot.scatter(x="Høyde", y="Vekt")
 ```
 
-# K-Means clustering
+## K-Means clustering
 
-* «Unsupervised learning»
-* Vi prøver å dele data inn i klynger uten å nødvendigvis vite hva de representerer
-* Noen ganger vet vi hvor mange klynger det burde være, andre ganger må vi prøve oss frem
+::: {tip}
+[](../norun/klyngedemo) gjev ei detaljert innføring i $k$-*means*.
+:::
+
+Me *Unsupervised learning* freistar me å dela data inn i klynger utan å vita kva klyngene representerer.
+Somme tider veit me kormange klynger der bør vera, som når me føreset to kjønn.
+Andre gongar må ein prøva seg fram.  I $k$-*means* må me gå ut frå eit bestemt tal `k` på klynger.
+
+Denne videoen gjev ei kort *briefing* på kva me skal oppnå.
 
 ```{code-cell} ipython3
 from IPython.display import YouTubeVideo
@@ -160,27 +183,56 @@ from IPython.display import YouTubeVideo
 YouTubeVideo('R2e3Ls9H_fc', width=800, height=300)
 ```
 
+SciKitLearn implementerer omtrent det same APIet for maskinlæring utan rettleiing, som me kjenner med rettleiing.
+Det ser slik ut.
+
 ```{code-cell} ipython3
 model = cl.KMeans(n_clusters=2)
-result = model.fit(df[["vekt", "hoyde"]])
-df["cluster"] = model.predict(df[["vekt", "hoyde"]])
-df
+result = model.fit(df[["Vekt", "Høyde"]])
+df["cluster"] = model.predict(df[["Vekt", "Høyde"]])
+display(df)
 ```
 
-## Seaborn
+Me kjenner igjen instantiering av modellen, tilpassing med `fit()` og prediksjon med `predict()`.  
+Dette er det same som me har gjort med rettleidd læring tidlegare.
+For å halda fram analysen legg me prediksjonen inn som ei ny søyle i `df`.
+
+I dei radane som me ser verkar prediksjonen ganske vilkårleg, men for å få eit fullstendig inntrykk må me visualisera (eller rekna).
+
++++
+
+### Seaborn
+
+Til visualiseringa skal me bruka SeaBorn, mest for å prøva
+noko nytt.  SeaBorn gjev ein del nye moglegheiter, men dette
+kunne me ha gjort med `pyplot` òg.
 
 ```{code-cell} ipython3
 import seaborn as sns
 
-sns.relplot(data=df, x="hoyde", y="vekt", hue="cluster")
-sns.relplot(data=df, x="hoyde", y="vekt", hue="Kjønn")
+sns.relplot(data=df, x="Høyde", y="Vekt", hue="cluster")
+sns.relplot(data=df, x="Høyde", y="Vekt", hue="Kjønn")
 ```
 
-# K-nearest neighbours
+::: {admonition} Refleksjon
+Kva synest du om klyngeinndelinga?  Er ho nyttig?
+:::
 
-* «Supervised learning» - Vi har data hvor vi kjenner klassifiseringene
-* For nye usette datapunkt undersøker vi de $k$ nærmeste naboene til datapunktet, og klassifiseringen deres
-* Klassifiseringen til det nye datapunktet bestemmes av disse
+::: {admonition} Oppgåve
+Køyr klyngeanalysa fleire gongar på det same datasettet.
+Gjev ho same resultat kvar gong?
+:::
+
+
+## $k$-*nearest neighbours*
+
+Der er ein algoritme som byggjer på same prinsipp som $k$-means,
+men som er laga for rettleidd læring.
+
+Når me ser nye usette datapunkt undersøker me dei $k$ næraste grannane
+til datapunktet, og bruker klassifiseringa deira til å 
+klassifisera det nye datapunktet.
+Videoen gjev ei kjapp *briefing*.
 
 ```{code-cell} ipython3
 YouTubeVideo('0p0o5cmgLdE', width=800, height=300)
@@ -219,6 +271,7 @@ sns.relplot(data=df_test, x="hoyde", y="vekt", hue="KNN", size="KNN_prob")
 df_test.dtypes
 ```
 
-```{code-cell} ipython3
-
-```
+::: {admonition} Refleksjon
+Er der skilnad mellom klyngene i $k$-*means* og $k$-*nearest
+neighbour*, eller er det omtrent det same?
+:::
