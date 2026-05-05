@@ -108,9 +108,11 @@ Me definerer òg *ground truth* til seinare evaluering.
 Dvs. ein vektor med eitt element (0, 1 eller 2) for kvar rad i `data0`.
 
 ```{code-cell} ipython3
-gt0 = np.vstack( [ np.zeros( [30, 1] ), np.ones([30,1]), np.ones([30,1])*2 ] )
-print( gt0 )
+gt0 = np.vstack( [ np.zeros( [size, 1] ), np.ones([size,1]), np.ones([size,1])*2 ] )
+print( gt0.T )
 ```
+
+*Merk* at me skriv ut den transponerte for at utskrifta skal ta mindre plass.
 
 Algoritmen skal sjølvsagt ikkje ha informasjon om *ground truth*.
 Difor skal me stokka radane tilfeldig.  
@@ -118,21 +120,29 @@ For å kunna stokka både `data0` og `gt0` lagar me fyrst ei liste med
 indeksar som vert stokka, og so bruker me dei til å stokka datasettet.
 
 ```{code-cell} ipython3
-idx = np.random.shuffle( list(range(300) ) )
+idx = np.arange(300)
+np.random.shuffle( idx )
 print( idx )
 ```
 
 ```{code-cell} ipython3
+data = data0[idx,:]
 gt = gt0[idx,:]
-print( gt )
+print( gt.T )
 ```
+
+Indekseringa med `idx` over tek alle elementa, men i ny rekkjefylge.
+Dermed kjem ikkje alle datapunkta frå same klasse etter kvarandre.
+
+For å testa at datasettet stadig er rett, kan me plotta og samanlikna med spreideplottet over.
 
 ```{code-cell} ipython3
-data = data0[idx,:]
-print( data )
+plt.scatter( data[:,0], data[:,1], c=gt, marker="." )
 ```
 
+Dette ser rimeleg ut.
 
++++
 
 ## Implementasjon av $k$-*means*
 
@@ -242,13 +252,75 @@ kmplot( data, model, p )
 ```
 
 ```{code-cell} ipython3
-for i in range(100):
+for i in range(1000):
    p = predict( data, model )
    model = means( data, p )
 kmplot( data, model, p )
 ```
 
-## Sketches on basic functionality
+Det er ikkje sikkert at dei identifiserte klyngene stemmer med dei opprinnelege, men det kan vera gøy å samanlikna.
+Då kan me bruka ulike farger for predikerte klasser og ulike symbol for *ground truth*.  Diverre kan me ikkje bruka ein `array` som `marker` på same måte som me gjer med `c`, so me må dela datasettet opp.
+
+Me startar med å definera indeksane for kvar *ground truth*-klasse.
+
+```{code-cell} ipython3
+idx0 = gt == 0
+idx1 = gt == 1
+idx2 = gt == 2
+print( idx0.T )
+print( idx1.T )
+print( idx2.T )
+```
+
+No kan me plotta kvar *ground truth*-klasse med ulik `marker`.
+
+```{code-cell} ipython3
+plt.scatter( data[idx0,0], data[idx0,1], c=p[idx0], marker="+" )
+plt.scatter( data[idx1,0], data[idx1,1], c=p[idx1], marker="x" )
+plt.scatter( data[idx2,0], data[idx2,1], c=p[idx2], marker="o" )
+plt.scatter( model[:,0], model[:,1], c="k", marker="x" )
+```
+
+Det gjekk visst ikkje.  Me har brukt tre indeksar i ei todimensjonal matrise.  Det er vanskeleg å sjå kvar det kan vera.
+Me har éin indeks på `p`, to på `modell` og to på `data`, men `idx` er ein `array` med to dimensjonar, og dermed indekserar me tre dimensjonar i `data`.
+Løysinga er å flata ut `idx`.  Ho har berre éi søyle.
+
+```{code-cell} ipython3
+idx0 = idx0.flatten()
+idx1 = idx1.flatten()
+idx2 = idx2.flatten()
+plt.scatter( data[idx0,0], data[idx0,1], c=p[idx0], marker="+" )
+plt.scatter( data[idx1,0], data[idx1,1], c=p[idx1], marker="x" )
+plt.scatter( data[idx2,0], data[idx2,1], c=p[idx2], marker="*" )
+plt.scatter( model[:,0], model[:,1], c="k", marker="x" )
+```
+
+Dette vart òg rart.  Det ser ikkje ut som om same tal gjev same farge i kvart kall til `scatter`. 
+Det ser ein òg om ein slår opp i [dokumentasjonen](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.scatter.html).
+Fargen avheng av fleire faktorar.
+
+Dette kan me fiksa ved å byta ut tala med farger i `p`.
+
+```{code-cell} ipython3
+pc = p.astype(str)
+pc[ pc == "0" ] = "r"
+pc[ pc == "1" ] = "g"
+pc[ pc == "2" ] = "b"
+plt.scatter( data[idx0,0], data[idx0,1], c=pc[idx0], marker="+" )
+plt.scatter( data[idx1,0], data[idx1,1], c=pc[idx1], marker="x" )
+plt.scatter( data[idx2,0], data[idx2,1], c=pc[idx2], marker="*" )
+plt.scatter( model[:,0], model[:,1], c="k", marker="x" )
+```
+
+Det vart litt omstendeleg, men eg valde å visa nokre av dei feila som eg gjorde på vegen.
+
+Me ser ganske godt samsvar mellom dei opprinnelege klyngene og prediksjonane, sjølv om det ikkje er perfekt.
+
++++
+
+## Skisser til grunnleggjande syntaks
+
+Det siste avsnittet er prøving og feiling med grunnleggjande syntaks.
 
 ```{code-cell} ipython3
 a = np.array( [[[1, 2,3 ],[ 1,0,2]]] ) *2

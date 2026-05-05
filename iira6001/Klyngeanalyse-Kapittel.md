@@ -13,7 +13,7 @@ title: Klyngeanalyse med Maskinlæring
 + *Demo* regresjon og korrelasjon i pandas:
     + [Klyngeanalyse](notebooks/Klyngeanalyse)
 + *Kuriosa*
-    + [$k$-means](notebooks/klyngedemo) viser og forklarer
+    + [$k$-means](norun/klyngedemo) viser og forklarer
       implementasjonen av $k$-means.
       Demonstrasjonen lagar òg dei plotta som er brukt i føredraget.
 
