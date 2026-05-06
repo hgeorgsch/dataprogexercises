@@ -6,8 +6,11 @@ css:
 tags:
    - topic/machinelearning
    - lecture/video/perspective
+enableAudioSlideshow: true
 ---
-# Klyngeanalyse
+
+![Klyngeanalyse](./klyngeanalyse-vignett.mp4)
+<!-- element data-autoplay -->
 
 ---
 <!-- slide template="[[tpl-flex]]" -->
@@ -18,6 +21,9 @@ tags:
 By EpochFail - Own work, CC BY-SA 4.0,
 via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=45021868)
 :::
+
+note:
+
 
 ---
 
@@ -41,39 +47,39 @@ $k$-means
 
 ---
 
-![[klynge1a.svg]]
+![[klyngedemo01a.svg]]
 
 ---
 
-![[klynge1b.svg]]
+![[klyngedemo01b.svg]]
 
 ---
 
-![[klynge2a.svg]]
+![[klyngedemo02a.svg]]
 
 ---
 
-![[klynge2b.svg]]
+![[klyngedemo02b.svg]]
 
 ---
 
-![[klynge3a.svg]]
+![[klyngedemo03a.svg]]
 
 ---
 
-![[klynge3b.svg]]
+![[klyngedemo03b.svg]]
 
 ---
 
-![[klynge4a.svg]]
+![[klyngedemo04a.svg]]
 
 ---
 
-![[klynge4b.svg]]
+![[klyngedemo04b.svg]]
 
 ---
 
-![[klynge100.svg]]
+![[klyngedemo-final.svg]]
 
 ---
 
