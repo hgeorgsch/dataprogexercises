@@ -95,7 +95,14 @@ For å visa kva me har generert, kan me visualisera med eit spreideplott.
 plt.scatter( a[:,0], a[:,1], c="r", marker="x" )
 plt.scatter( b[:,0], b[:,1], c="g", marker="+" )
 plt.scatter( c[:,0], c[:,1], c="b", marker="d" )
+plt.savefig( "klyngedemo-initial01.svg" )
 ```
+
+::: {tip}
+Me bruker `savefig()` for å lagra figuren til bruk i foilane.
+Billetformatet er SVG som gjev vektorgrafikk særleg tilpassa bruk
+saman med HTML.
+:::
 
 Til sist skal me setja saman datasettet til éi matrise.
 
@@ -138,11 +145,17 @@ For å testa at datasettet stadig er rett, kan me plotta og samanlikna med sprei
 
 ```{code-cell} ipython3
 plt.scatter( data[:,0], data[:,1], c=gt, marker="." )
+plt.savefig( "klyngedemo-initial02.svg" )
 ```
 
 Dette ser rimeleg ut.
+Me skal laga ein figur utan fargar òg.  Dette er berre til bruk
+i foilane.
 
-+++
+```{code-cell} ipython3
+plt.scatter( data[:,0], data[:,1], c="b", marker="." )
+plt.savefig( "klyngedemo-initial.svg" )
+```
 
 ## Implementasjon av $k$-*means*
 
@@ -159,6 +172,7 @@ For å sjekka at alt er rett kan me plotta datasettet saman med modellpunkta, sl
 ```{code-cell} ipython3
 plt.scatter( data[:,0], data[:,1], c="b", marker="." )
 plt.scatter( model[:,0], model[:,1], c="r", marker="x" )
+plt.savefig( "klyngedemo00.svg" )
 ```
 
 Modellen er sjølvsagt ikkje god. Modellpunkta er klynga saman og er lite representative for spreidinga i datasettet,
@@ -185,16 +199,17 @@ def predict( a, m ):
 Me treng òg ein funksjon for å plotta datasettet med ulike farger for kvar klynge.
 
 ```{code-cell} ipython3
-def kmplot( data, model, pred ):
+def kmplot( data, model, pred, fn=None ):
     plt.scatter( data[:,0], data[:,1], c=p, marker="." )
     plt.scatter( model[:,0], model[:,1], c="k", marker="x" )
+    if fn: plt.savefig( fn )
 ```
 
 No kan me gjera prediksjonen og plotta resultatet, ved hjelp av funksjonane.
 
 ```{code-cell} ipython3
 p = predict( data, model )
-kmplot( data, model, p )
+kmplot( data, model, p, "klyngedemo01a.svg" )
 ```
 
 Modellpunkta er stadig dei same, men no kan me sjå kva datapunkt som høyrer til same klynge.
@@ -214,7 +229,7 @@ No kan me bruka denne funksjonen og plotta på nytt.
 
 ```{code-cell} ipython3
 model = means( data, p )
-kmplot( data, model, p )
+kmplot( data, model, p, "klyngedemo01b.svg" )
 ```
 
 Klyngene er dei same som sist, men me kan sjå korleis modellpunkta har flytta seg.
@@ -223,39 +238,39 @@ No kan me gjenta heile prosessen.
 
 ```{code-cell} ipython3
 p = predict( data, model )
-kmplot( data, model, p )
+kmplot( data, model, p, "klyngedemo02a.svg" )
 ```
 
 ```{code-cell} ipython3
 model = means( data, p )
-kmplot( data, model, p )
+kmplot( data, model, p, "klyngedemo02b.svg" )
 ```
 
 ```{code-cell} ipython3
 p = predict( data, model )
-kmplot( data, model, p )
+kmplot( data, model, p, "klyngedemo03a.svg" )
 ```
 
 ```{code-cell} ipython3
 model = means( data, p )
-kmplot( data, model, p )
+kmplot( data, model, p, "klyngedemo03b.svg" )
 ```
 
 ```{code-cell} ipython3
 p = predict( data, model )
-kmplot( data, model, p )
+kmplot( data, model, p, "klyngedemo04a.svg" )
 ```
 
 ```{code-cell} ipython3
 model = means( data, p )
-kmplot( data, model, p )
+kmplot( data, model, p, "klyngedemo04b.svg" )
 ```
 
 ```{code-cell} ipython3
 for i in range(1000):
    p = predict( data, model )
    model = means( data, p )
-kmplot( data, model, p )
+kmplot( data, model, p, "klyngedemo-final.svg" )
 ```
 
 Det er ikkje sikkert at dei identifiserte klyngene stemmer med dei opprinnelege, men det kan vera gøy å samanlikna.
