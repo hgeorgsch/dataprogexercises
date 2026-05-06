@@ -37,7 +37,7 @@
     + [[jupytext-overview]]
     + [[GUI]]
 + Week 10
-    + [[Slides/Klyngeanalyse]]
+    + [[Klyngeanalyse-slides]]
 + ???
     + [[autentisering]]
     + [[dataform]]
