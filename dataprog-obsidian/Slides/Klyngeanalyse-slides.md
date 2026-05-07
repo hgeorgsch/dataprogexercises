@@ -68,8 +68,8 @@ punkter imellom, selv om mønsteret ikke er veldig tydlig.
 
 ---
 
-+ *Supervised learning*
-+ *Unsupervised learning*
+- *Supervised learning*
+- *Unsupervised learning*
 
 note:
 Spørsmålet er om vi kan identifisere disse klyngene algoritmisk.
@@ -97,7 +97,7 @@ i denne gjennomsnittsrepresentanten.
 
 ---
 
-![[klynge-initial.svg]]
+![[klyngedemo00.svg]]
 
 note:
 Vi kan ta et eksempel.
@@ -209,9 +209,12 @@ Som regel krever det prøving og feiling.
 
 ---
 
-## Slutt
+## Lykke til videre
 
 note:
 I praksis trenger du selvsagt ikke implementere $k$-means selv.
 Algoritmen er implementert i SciKitLearn for python og i mange
 andre biblioteker.
+Du kan starte med et hvilket som helst datasett som du er interessert i, og se hva $k$-*means* gjør for deg.
+
+
