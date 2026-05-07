@@ -9,7 +9,7 @@ title: Klyngeanalyse med Maskinlæring
 + *Perspektivforedrag* (Denne gongen er føredraget lagt ut som 
   foilar med lydspor; det kan henda at du må starta avspelinga manuelt;
   det kjem an på lesaren din.)
-    + [Klyngeanalyse](https://iirevu.org.ntnu.no/Slides/Klyngeanalyse-slides/#/18)
+    + [Klyngeanalyse](https://iirevu.org.ntnu.no/Slides/Klyngeanalyse-slides/)
 + *Gjennomarbeidd døme* 
     + [Klyngeanalyse](notebooks/Klyngeanalyse)
       er ein enkel demonstrasjon av
