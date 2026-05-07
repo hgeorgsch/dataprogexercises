@@ -98,6 +98,8 @@ altså *unsupervised learning*.
 $k$-*means*
 <!-- element class="[[r-fit-text]]" -->
 
+![[klynge05.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
+
 note:
 Den mest kjente algoritmen for læring uten veiledning er $k$-*means*.
 
@@ -110,6 +112,8 @@ i denne gjennomsnittsrepresentanten.
 
 ![[klyngedemo00.svg]]
 
+![[klynge06.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
+
 note:
 Vi kan ta et eksempel.
 La oss forutsette tre klynger.
@@ -121,6 +125,8 @@ klynge.
 
 ![[klyngedemo01a.svg]]
 
+![[klynge07.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
+
 note:
 Første steg i algoritmen er å danne klynger ved å identifisere
 hvert datapunkt med nærmeste representant.  Da ser det slik ut.
@@ -128,6 +134,8 @@ hvert datapunkt med nærmeste representant.  Da ser det slik ut.
 ---
 
 ![[klyngedemo01b.svg]]
+
+![[klynge08.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
 
 note:
 Andre steg i algoritmen er å oppdatere representantene slik at de
@@ -140,6 +148,8 @@ har ikke endret farve.
 
 ![[klyngedemo02a.svg]]
 
+![[klynge09.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
+
 note:
 Så gjentar vi.
 
@@ -149,12 +159,16 @@ Førs oppdaterer vi klyngetilordningen.
 
 ![[klyngedemo02b.svg]]
 
+![[klynge10.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
+
 note:
 Dernest oppdaterer vi representantene.
 
 ---
 
 ![[klyngedemo03a.svg]]
+
+![[klynge11.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
 
 note:
 Algoritmen fortsetter å iterere med disse to stegene.
@@ -163,12 +177,17 @@ Algoritmen fortsetter å iterere med disse to stegene.
 
 ![[klyngedemo03b.svg]]
 
+![[klynge12.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
+
 note:
 For hver gang blir klyngeinndelingen litt bedre.
 
 ---
 
 ![[klyngedemo04a.svg]]
+
+
+![[klynge13.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
 
 note:
 og endringene fra forrige iterasjon blir også mindre og mindre.
@@ -177,6 +196,8 @@ og endringene fra forrige iterasjon blir også mindre og mindre.
 
 ![[klyngedemo04b.svg]]
 
+![[klynge14.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
+
 note:
 før eller siden blir endringene fra iterasjon til iterasjon så
 små at de ikke lenger spiller nogen rolle.
@@ -184,6 +205,8 @@ små at de ikke lenger spiller nogen rolle.
 ---
 
 ![[klyngedemo-final.svg]]
+
+![[klynge15.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
 
 note:
 da er det på tide å stoppe.
