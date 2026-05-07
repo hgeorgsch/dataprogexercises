@@ -333,6 +333,29 @@ Me ser ganske godt samsvar mellom dei opprinnelege klyngene og prediksjonane, sj
 
 +++
 
+## Brukarrettleiing
+
+For å generera alle figurane i dette dokumentet, kan ein bruka fylgjande
+på kommandolina
+```sh
+jupytext --sync klyngeanalyse.md
+jupyter nbconvert --execute --allow-errors --inplace klyngedemo.ipynb
+```
+Den fyrste lina omset fila til ipynb-format.
+Den andre lina køyrer alle cellane utan å stoppa ved feil.
+
+Det går sjølvsagt an å køyra fila manuelt i Jupyter Lab, men det 
+tek litt meir tid.
+
+Dersom ein bruker python-*scripte* (.py) som òg vert generert av
+`jupytext` har ein potentielt to problem.  For det fyrste stoppar
+*scriptet* ved feil.  For det andre kan nokre visuelle funksjonar,
+t.d. frå `pyplot`, oppføra seg forskjellig.  
+Jupyter Lab lagar nye figurar for kvar blokk der ein plottar noko.
+I *scriptet* må ein manuelt laga nye figurer (`fig = plt.figure()`).
+Elles vert nye plott berre lagt til i den same figuren.
+
+
 ## Skisser til grunnleggjande syntaks
 
 Det siste avsnittet er prøving og feiling med grunnleggjande syntaks.
