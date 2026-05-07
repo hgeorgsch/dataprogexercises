@@ -216,6 +216,8 @@ da er det på tide å stoppe.
 $k$-*means*
 <!-- element class="[[r-fit-text]]" -->
 
+![[klynge16.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
+
 note:
 $k$-*means* er en meget enkel algoritme, faktisk så enkel at det
 er en grei studentøvelse å implementere den selv, i alle fall om 
@@ -237,6 +239,8 @@ som forhåpentligvis gir en bedre start.
 $k$
 <!-- element class="[[r-fit-text]]" -->
 
+![[klynge17.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
+
 note:
 Utfordringen i $k$-means er at man må velge $k$, dvs. antallet klynger.
 Som regel krever det prøving og feiling.
@@ -244,6 +248,8 @@ Som regel krever det prøving og feiling.
 ---
 
 ## Lykke til videre
+
+![[klynge18.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
 
 note:
 I praksis trenger du selvsagt ikke implementere $k$-means selv.
