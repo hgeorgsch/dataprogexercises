@@ -6,10 +6,13 @@ css:
 tags:
   - topic/machinelearning
   - lecture/video/perspective
-enableAudioSlideshow: true
+plugins:
+  - scripts:
+    - css/auto.js
 ---
 
-![Klyngeanalyse](Klyngeanalyse.mp4)<!-- element data-autoplay -->
+<!-- slide template="[[tpl-title]]" -->
+![Klyngeanalyse](Klyngeanalyse.mp4)<!-- element data-autoplay onended="Reveal.next()" -->
 
 ---
 <!-- slide template="[[tpl-flex]]" -->
@@ -20,6 +23,8 @@ enableAudioSlideshow: true
 By EpochFail - Own work, CC BY-SA 4.0,
 via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=45021868)
 :::
+
+![[klynge01.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
 
 note:
 Den mest kjente formen for maskinlæring er veiledet læring,
@@ -37,6 +42,8 @@ Der er mange problemer som kan løses med veiledet læring, men i mange tilfelle
 
 ::: credit
 :::
+
+![[klynge02.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
 
 note:
 Ett typisk eksempel er kundesegmentering, eller markedsegmentering.
@@ -56,6 +63,8 @@ Kan vi identifisere klynger av kunder som ligner på hverandre?
 ::: credit
 :::
 
+![[klynge03.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
+
 note:
 Datasettet vårt ser kanskje slik ut.
 Det vil si, vi ser på kundene våre som vektorer av tall,
@@ -70,6 +79,8 @@ punkter imellom, selv om mønsteret ikke er veldig tydlig.
 
 - *Supervised learning*
 - *Unsupervised learning*
+
+![[klynge04.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
 
 note:
 Spørsmålet er om vi kan identifisere disse klyngene algoritmisk.
