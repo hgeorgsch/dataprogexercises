@@ -1,10 +1,11 @@
 
-svg: ontology.svg
+S=ontology.svg infosecorg.svg
+svg: $S
 pdf: ontology.pdf
 
 I=../../dataprog-obsidian/Slides/slidefig/
 
-install: ontology.svg 
+install: $S
 	cp $^ $I
 
 %.svg: %.pdf
