@@ -59,8 +59,14 @@ På den andre siden har vi sikkerhet mot fiender som aktivt ønsker å tilrane s
 
 Tilfeldige hendelser er det enkleste å forholde seg til.  Klarer vi å forhindre 50% av hendelsene, har vi redusert risikoen med 50%.
 
+---
+
+![[kurios119.jpg]]
+
+note:
 Slik er det ikke med skurken.  De er slu, og hvis vi hindrer 50% av angrepene, vil angriperne oppdage det og flytte innsatsen for å utnytte andre sårbarheter. 
 Der vil alltid være skurker som aktivt søker efter vårt svakeste punkt.
+
 
 ---
 <!-- slide template="[[tpl-flex]]" -->
@@ -70,11 +76,6 @@ Der vil alltid være skurker som aktivt søker efter vårt svakeste punkt.
 ::: credit
 :::
 
----
-
-- Verdiar
-- Truslar
-- Sårbarheiter
 
 ---
 <!-- slide template="[[tpl-flex]]" bg="white" -->
@@ -82,6 +83,11 @@ Der vil alltid være skurker som aktivt søker efter vårt svakeste punkt.
 ![[infosecorg.svg]]
 ::: credit
 :::
+
+note:
+- Verdiar
+- Truslar
+- Sårbarheiter
 
 ---
 <!-- slide template="[[tpl-flex]]" bg="white" -->
