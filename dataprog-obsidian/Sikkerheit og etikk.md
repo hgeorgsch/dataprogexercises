@@ -9,19 +9,19 @@ tags:
 
 
 + Tema
-	+ Sikkerheit
+	+ [[Informasjonssikkerheit]]
 		+ CIA
-		+ risiko
 		+ verdivurdering
+	+ [[Personvern]]
+	+ Nedprioritert
+		+ risiko
 		+ Cobit ?
-	+ Personvern
 	+ Lover
 		+ personvern og GDPR
+		+ Personopplysingslova
 		+ andsverk og lisensar
-		+ personvern
 		+ universell tilrettelegging
 	+ Etikk
 		+ Det gode livet
 		+ er det godt for oss
 		+ dilemmaet?
-	+ Personopplysingslova

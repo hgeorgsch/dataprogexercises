@@ -99,6 +99,38 @@ note:
 note:
 
 ---
+<!-- slide template="[[tpl-flex]]" -->
+
+![[Beaumaris_Castle_(48281071296).jpg]]
+
+::: credit
+By Tom Parnell from Scottish Borders, Scotland - Beaumaris Castle, CC BY-SA 2.0,
+via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=80472330)
+:::
+
+---
+<!-- slide template="[[tpl-flex]]" -->
+
+![[Castell_Beaumaris_Castle,_Ynys_Mon_(Anglesey),_Wales_05.jpg]]
+
+::: credit
+By Llywelyn2000 - Own work, CC BY-SA 4.0, 
+via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=137373162)
+:::
+
+---
 <!-- slide template="[[tpl-flex]]" bg="white" -->
 
-![[kit.svg]]
+![[kit.svg|378]]
+
+::: credit
+:::
+
+---
+
+Compliance
+
+
+---
+
+## Slutt
