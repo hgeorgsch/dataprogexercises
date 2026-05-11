@@ -79,6 +79,13 @@ Der vil alltid være skurker som aktivt søker efter vårt svakeste punkt.
 ---
 <!-- slide template="[[tpl-flex]]" bg="white" -->
 
+![[infosecorg.svg]]
+::: credit
+:::
+
+---
+<!-- slide template="[[tpl-flex]]" bg="white" -->
+
 ![[ontology.svg]]
 ::: credit
 :::
