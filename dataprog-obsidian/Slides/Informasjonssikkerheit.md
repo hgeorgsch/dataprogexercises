@@ -97,3 +97,8 @@ note:
 :::
 
 note:
+
+---
+<!-- slide template="[[tpl-flex]]" bg="white" -->
+
+![[kit.svg]]

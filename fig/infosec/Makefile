@@ -1,5 +1,5 @@
 
-S=ontology.svg infosecorg.svg
+S=ontology.svg infosecorg.svg kit.svg
 svg: $S
 pdf: ontology.pdf
 
