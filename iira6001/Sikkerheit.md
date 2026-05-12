@@ -52,8 +52,12 @@ i oppgåvene forut.
 + *Perspektivføredrag*: Personvern
 
 ::: {admonition} Refleksjonspørsmål
-Kva lover og etiske dilemma er relvante for dei data som du arbeider
-med til dagleg.
+Ta for deg eit datasett som er relevant for analyse i arbeidet ditt.
+Tenk gjennom,
+
++ I kva grad inngår persondata i dette datasettet?
++ Kva persondata er naudsynte for analysa og kva kunne ein utelata?
++ Er datasette eigna for anonymisering?
 :::
 
 
