@@ -124,11 +124,20 @@ Art. 5.1.f. Integritet og konfidentialitet
 <!-- element class="[[r-fit-text]]" -->
 
 note:
+Integritet og konfidensialitet er allminnelige kriterier fra informasjonssikkerhet, men de er viktige i forhold til de andre prinsippene for personvern.
+
+Vi krever at personopplysningene skal være riktige, og det innebærer integritet.
+Vi krever formålsbegrensning, og det fordrer konfidentialitet. Tilgangen må begrenses til dem som trenger dem efter formålet, og vi må for all del hindre at data blir delt med dem som ønsker å misbruke dem.
 
 ---
 
 Art. 5.2. Ansvar
 <!-- element class="[[r-fit-text]]" -->
+
+All behandling av personopplysninger krever en behandlingsansvarlig, som vanligvis er en organisasjon og som har det juridiske ansvaret for innsamling og behandling.
+Artikkel 5.2 i GDPR slår fast et ufravikelig ansvar som ligger på den behandlingsansvarlige.
+Ansvaret kan ikke delegeres.
+Selv om deler av arbeidet delegeres til andre databehandlere, hviler alltid ansvaret på den behandlingsansvarlige.
 
 ---
 <!-- slide template="[[tpl-flex]]" bg="white" -->
@@ -138,3 +147,41 @@ Art. 5.2. Ansvar
 !!! credit
 [Anonymous icons created by Pixel perfect - Flaticon](https://www.flaticon.com/free-icons/anonymous)
 :::
+
+note:
+Personopplysninger er data som kan tilskrives identifiserbare personer.
+I dataanalyse er dette sjelden interessant.  Vi er interessert i makrostørrelser, og enkeltindivider er uten interesse.
+
+Hvis vi kan klare å anonymisere dataene, så vil vi stå friere i anvendelsen.
+Det kan likevel være kontroversielt å anonymisere data som er samlet inn til et begrenset formål, uten at den registrerte er blitt informert om at dataene vil bli anonymisert for andre formål. Her er der dog en del gråsoner, og reglene er strengere innenfor forskning enn de er for en bedrift som bruker dem til intern kvalitetssikring.
+
+---
+<!-- slide template="[[tpl-flex]]" bg="white" -->
+
+![[Artificial_Intelligence_&_AI_&_Machine_Learning_-_30212411048.jpg]]
+::: credit
+By [vpnsrus](https://www.vpnsrus.com/)
+at [flickr](https://www.flickr.com/photos/152824664@N07/30212411048/),
+CC BY 2.0,
+via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=95608113)
+:::
+
+note:
+Anonymisering gir derimot en større utfordring enn juridiske spissfindigheter.
+
+Det er ikke nok at dataene mangler navn og fødselsnummer.  All informasjon som kan brukes til å identifisere enkeltpersoner og små grupper må bort.
+
+Maskinlæring har vist seg meget effektivt til å rekonstruere personidentiteter fra tilsynelatende irrelevante data, bare det er nok av dem.
+Det som ser anonymt nok ut i  dag, trenger ikke å være det med neste generasjon KI.
+Dess mer data vi samler inn, dess vanskeligere er det å anonymisere dem effektivt.
+
+Hvis vi trekker ut noen få variabler per rad i datasettet, så kan anonymisering være effektivt.
+
+---
+## Slutt
+
+note:
+Jeg har valgt å styre unna detaljene her.  Der er flere grunner til det. 
+I praksis, i en bedriftsammenheng, vil det være vel så viktig å forholde seg til interne regler og *policy*-dokumenter, og vanskelige etiske vurderinger må taes sammen med ledere, IT-støtte og jurister som kjenner bedriften.
+
+Det jeg har forsøkt å få frem er de grunnprinsippene som krever medvirkning fra dem som faktisk skal bruke dataene.  Forhåpentligvis har jeg gjort det litt lettere å sette seg inn i detaljene når det blir nødvendig. 

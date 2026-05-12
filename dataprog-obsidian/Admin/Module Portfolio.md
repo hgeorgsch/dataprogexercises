@@ -8,6 +8,7 @@ aliases:
 # Emneportefeuille
 
 + [[Statistikkemne]]
++ [[Programmering for lærarar]]
 + [[IIRA6001]]
 + [[IIRA2011]]
 + [[IIRA2001]]
