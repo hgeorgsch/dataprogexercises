@@ -31,13 +31,17 @@
     + [[Om å læra frå data]]
     + [[Modellen]]
     + [[Evaluering av modellar]]
-+ Week 9/11 
++ Week 9 
     + [[Automatisering]]
     + [[Versjonskontroll]]
     + [[jupytext-overview]]
-    + [[GUI]]
 + Week 10
     + [[Klyngeanalyse-slides]]
++ Week 11
+    + [[GUI]]
++ Week 12
+	+ [[Informasjonssikkerheit]]
+	+ [[Personvern]]
 + ???
     + [[autentisering]]
     + [[dataform]]
