@@ -11,7 +11,6 @@ tags:
 + Administrasjon
 	+ [[Project Management 2025-26]] (budsjett og rekneskap)
 	+ [[Emneadministrasjon]]
-	+ [[Budsjett IIRA6001 Steady State]]
 + Teknisk administrasjon
 	+ [[Tekniske løysingar]]
 	+ [[Notebooks i boka]]
@@ -23,12 +22,11 @@ tags:
 	+ [Panopto Tool Login](https://ntnu.cloud.panopto.eu/)
 	+ [Videoes published in Panopto](https://ntnu.cloud.panopto.eu/Panopto/Pages/Sessions/List.aspx#folderID=%224b14e494-1e6f-432b-88ac-b3ed00d06ccd%22)
 
-+ Program [[IIRA2011]]
-+ Program IIRA6001: 
-	+ Sjå [[IIRA6001]] som oversyn over læringsmateriell i Jupyter Books
-	+ [[Skisse til opplegg]]
-	+ [[IIRA6001 våren 2026]]
-+ IIRA2001 - to delar
++ Program
+	+ [[IIRA2011]]
+	+ [[IIRA6001]] (oversyn over læringsmateriell i Jupyter Books)
+		+ [[Skisse til opplegg]]
++ IIRA2001 (historisk) - to delar
 	+ Del 1.  Grunnleggjande introduksjon
 		+ Sjå `Beregninger og funksjoner-JHmanus.ipynb` (oppsummering)
 	+ Del 2.  Store datasett
