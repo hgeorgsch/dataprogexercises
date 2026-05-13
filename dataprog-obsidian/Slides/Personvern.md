@@ -168,11 +168,14 @@ Selv om deler av arbeidet delegeres til andre databehandlere, hviler alltid ansv
 [Anonymous icons created by Pixel perfect - Flaticon](https://www.flaticon.com/free-icons/anonymous)
 :::
 
+![[priv11.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
+
 note:
 Personopplysninger er data som kan tilskrives identifiserbare personer.
 I dataanalyse er dette sjelden interessant.  Vi er interessert i makrostørrelser, og enkeltindivider er uten interesse.
 
 Hvis vi kan klare å anonymisere dataene, så vil vi stå friere i anvendelsen.
+
 Det kan likevel være kontroversielt å anonymisere data som er samlet inn til et begrenset formål, uten at den registrerte er blitt informert om at dataene vil bli anonymisert for andre formål. Her er der dog en del gråsoner, og reglene er strengere innenfor forskning enn de er for en bedrift som bruker dem til intern kvalitetssikring.
 
 ---
@@ -186,7 +189,7 @@ CC BY 2.0,
 via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=95608113)
 :::
 
-![[priv11.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
+![[priv12.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
 
 note:
 Anonymisering gir derimot en større utfordring enn juridiske spissfindigheter.
@@ -202,7 +205,7 @@ Hvis vi trekker ut noen få variabler per rad i datasettet, så kan anonymiserin
 ---
 ## Slutt
 
-![[priv12.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
+![[priv13.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
 
 note:
 Jeg har valgt å styre unna detaljene her.  Der er flere grunner til det. 
