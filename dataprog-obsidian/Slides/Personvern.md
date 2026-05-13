@@ -154,6 +154,9 @@ Vi krever formålsbegrensning, og det fordrer konfidentialitet. Tilgangen må be
 Art. 5.2. Ansvar
 <!-- element class="[[r-fit-text]]" -->
 
+![[priv11.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
+
+note:
 All behandling av personopplysninger krever en behandlingsansvarlig, som vanligvis er en organisasjon og som har det juridiske ansvaret for innsamling og behandling.
 Artikkel 5.2 i GDPR slår fast et ufravikelig ansvar som ligger på den behandlingsansvarlige.
 Ansvaret kan ikke delegeres.
@@ -168,7 +171,7 @@ Selv om deler av arbeidet delegeres til andre databehandlere, hviler alltid ansv
 [Anonymous icons created by Pixel perfect - Flaticon](https://www.flaticon.com/free-icons/anonymous)
 :::
 
-![[priv11.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
+![[priv12.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
 
 note:
 Personopplysninger er data som kan tilskrives identifiserbare personer.
@@ -189,7 +192,7 @@ CC BY 2.0,
 via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=95608113)
 :::
 
-![[priv12.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
+![[priv13.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
 
 note:
 Anonymisering gir derimot en større utfordring enn juridiske spissfindigheter.
@@ -205,7 +208,7 @@ Hvis vi trekker ut noen få variabler per rad i datasettet, så kan anonymiserin
 ---
 ## Slutt
 
-![[priv13.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
+![[priv14.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
 
 note:
 Jeg har valgt å styre unna detaljene her.  Der er flere grunner til det. 

@@ -13,7 +13,8 @@ Derimot har eg nokre nye føredrag om sikkerheit, etikk og relevant lovverk.
 
 ## Del 1. Informasjonssikkerheit
 
-+ *Perspektivføredrag*: Informasjonssikkerheit
++ *Perspektivføredrag*: 
+  [Informasjonssikkerheit](https://iirevu.org.ntnu.no/Slides/Informasjonssikkerheit/)
 
 ::: {admonition} Refleksjonspørsmål
 Sjå på éi av arbeidsoppgåvene dine, der du bruker data.
@@ -49,7 +50,8 @@ i oppgåvene forut.
 
 ## Del 2. Personvern
 
-+ *Perspektivføredrag*: Personvern
++ *Perspektivføredrag*: 
+  [Personvern](https://iirevu.org.ntnu.no/Slides/Personvern/)
 
 ::: {admonition} Refleksjonspørsmål
 Ta for deg eit datasett som er relevant for analyse i arbeidet ditt.
