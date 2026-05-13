@@ -10,12 +10,17 @@ css:
 
 # Informasjonssikkerheit
 
+![[sec01.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
+
 note:
 Intet kurs i databehandling eller programmering bør avsluttes uten å komme inn på informasjonssikkerhet.
+
 
 ---
 
 ![[protect.png]]
+
+![[sec02.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
 
 note:
 Sikkerhet handler i bunn og grunn bare om én ting.  
@@ -50,6 +55,8 @@ sikkerhetseksperter som ikke vet hvordan data brukes.
 ::: rightcredit
 :::
 
+![[sec03.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
+
 note:
 Sikkerhet handler om to ganske forskjellige utfordringer.
 På engelsk skiller man vanemessig mellom *security* og *safety*.
@@ -64,6 +71,8 @@ Tilfeldige hendelser er det enkleste å forholde seg til.  Klarer vi å forhindr
 
 ![[kurios119.jpg]]
 
+![[sec04.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
+
 note:
 Slik er det ikke med skurken.  De er slu, og hvis vi hindrer 50% av angrepene, vil angriperne oppdage det og flytte innsatsen for å utnytte andre sårbarheter. 
 Der vil alltid være skurker som aktivt søker efter vårt svakeste punkt.
@@ -76,6 +85,8 @@ Der vil alltid være skurker som aktivt søker efter vårt svakeste punkt.
 ::: credit
 :::
 
+![[sec05.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
+
 note:
 Sikkerhet er ingen absolutt størrelse; det er alltid relativt til de verdier vi ønsker å beskytte.
 
@@ -84,10 +95,12 @@ I informasjonssikkerhet kan vi snakke om informasjonsverdier.  Data kan ha verdi
 ---
 <!-- slide template="[[tpl-flex]]" bg="white" -->
 
-![[kit.svg|378]]
+![[kit.svg]]
 
 ::: credit
 :::
+
+![[sec05.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
 
 note:
 Informasjonssikkerhet handler ikke bare om informasjon som kan komme på avveie.
