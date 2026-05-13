@@ -59,7 +59,7 @@ Tenk gjennom,
 
 + I kva grad inngår persondata i dette datasettet?
 + Kva persondata er naudsynte for analysa og kva kunne ein utelata?
-+ Er datasette eigna for anonymisering?
++ Er datasettet eigna for anonymisering?
 :::
 
 

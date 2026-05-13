@@ -6,6 +6,8 @@ tags:
   - lecture/video/perspective
 css:
   - css/templates.css
+width: 1600
+height: 900
 ---
 
 # Personvern
@@ -58,10 +60,8 @@ Eidsvollsmennene så antagelig ikke for seg hvordan personopplysninger kan misbr
 ---
 
 [Personopplysingslova](https://lovdata.no/nav/lov/2018-06-15-38?q=personopplysingslova)
-<!-- element class="[[r-fit-text]]" -->
 
 GDPR
-<!-- element class="[[r-fit-text]]" -->
 
 ![[priv04.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
 
@@ -167,7 +167,7 @@ Selv om deler av arbeidet delegeres til andre databehandlere, hviler alltid ansv
 
 ![[anonymous.png]]]
 
-!!! credit
+::: credit
 [Anonymous icons created by Pixel perfect - Flaticon](https://www.flaticon.com/free-icons/anonymous)
 :::
 
@@ -182,9 +182,10 @@ Hvis vi kan klare å anonymisere dataene, så vil vi stå friere i anvendelsen.
 Det kan likevel være kontroversielt å anonymisere data som er samlet inn til et begrenset formål, uten at den registrerte er blitt informert om at dataene vil bli anonymisert for andre formål. Her er der dog en del gråsoner, og reglene er strengere innenfor forskning enn de er for en bedrift som bruker dem til intern kvalitetssikring.
 
 ---
-<!-- slide template="[[tpl-flex]]" bg="white" -->
+<!-- slide template="[[tpl-flex]]" -->
 
 ![[Artificial_Intelligence_&_AI_&_Machine_Learning_-_30212411048.jpg]]
+
 ::: credit
 By [vpnsrus](https://www.vpnsrus.com/)
 at [flickr](https://www.flickr.com/photos/152824664@N07/30212411048/),

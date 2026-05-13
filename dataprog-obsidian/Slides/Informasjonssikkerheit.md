@@ -109,9 +109,9 @@ Dersom dét var det eneste som bekymret oss, ville det tryggeste være bare å s
 
 Derfor snakker vi gjerne om tre forskjellige sider ved sikkerhet, 
 
-+ Konfidentialitet handler om at informasjon ikke skal være tilgjengelig for uvedkommende.
-+ Tilgjengelighet handler om at informasjonen *skal* være tilgjengelig for oss som trenger den.
-+ Integritet handler om at vi må kunne stole på at informasjonen er korrekt.
+- Konfidentialitet handler om at informasjon ikke skal være tilgjengelig for uvedkommende.
+- Tilgjengelighet handler om at informasjonen *skal* være tilgjengelig for oss som trenger den.
+- Integritet handler om at vi må kunne stole på at informasjonen er korrekt.
 
 Til sammen blir dette det som gjerne kalles KIT-triangelet.
 Det er farlig å bli så opphengt i én side av trianglet at vi glemmer en anden.
