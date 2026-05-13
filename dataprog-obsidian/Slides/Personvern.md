@@ -106,6 +106,8 @@ Behandlingsgrunnlaget gir anledning til å bruke data bare til det formål som e
 Art. 5.1.c. Dataminimering
 <!-- element class="[[r-fit-text]]" -->
 
+![[priv07.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
+
 note:
 I samme spor gjelder dataminimering.
 Det er ikke lov å samle inn mer data enn det som er nødvendig for å oppfylle formålet med innhentingen.
@@ -115,6 +117,8 @@ Hvis du kan klare deg uten en opplysning, skal du ikke registrere den.
 
 Art. 5.1.d. Riktige data
 <!-- element class="[[r-fit-text]]" -->
+
+![[priv08.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
 
 note:
 Persondata skal være korrekte i forhold til behandlingsformålet.
@@ -126,6 +130,8 @@ I dataanalyse er dette kanskje ikke særlig relevant, siden vi gjerne analyserer
 Art. 5.1.e. Avgrensa lagring
 <!-- element class="[[r-fit-text]]" -->
 
+![[priv09.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
+
 note:
 I tråd med formålsbegrensning og dataminimering gjelder begrenset lagring.
 Det er ikke lov å lagre data lenger enn det som er nødvendig for formålet.
@@ -134,6 +140,8 @@ Det er ikke lov å lagre data lenger enn det som er nødvendig for formålet.
 
 Art. 5.1.f. Integritet og konfidentialitet
 <!-- element class="[[r-fit-text]]" -->
+
+![[priv10.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
 
 note:
 Integritet og konfidensialitet er allminnelige kriterier fra informasjonssikkerhet, men de er viktige i forhold til de andre prinsippene for personvern.
@@ -178,6 +186,8 @@ CC BY 2.0,
 via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=95608113)
 :::
 
+![[priv11.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
+
 note:
 Anonymisering gir derimot en større utfordring enn juridiske spissfindigheter.
 
@@ -191,6 +201,8 @@ Hvis vi trekker ut noen få variabler per rad i datasettet, så kan anonymiserin
 
 ---
 ## Slutt
+
+![[priv12.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
 
 note:
 Jeg har valgt å styre unna detaljene her.  Der er flere grunner til det. 
