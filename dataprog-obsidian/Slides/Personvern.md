@@ -10,13 +10,15 @@ css:
 
 # Personvern
 
+![[priv01.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
+
 note:
 En av de virkelig store etiske og juridiske utfordringene i dataanalyse er personvern.
-Svært ofte ønsker vi å behandle data som vi selv eier.
-Ofte er det snakk om personopplysninger som i prinsippet tilhører den enkelte person.
+Svært ofte ønsker vi å analysere data som vi ikke eier selv.
+Ofte er det snakk om personopplysninger som i tilhører den enkelte person.
 Vi har slike data blott på lån med et spesifikt og avgrenset formål.
 
-Det gjelder også data som kan være karakterisert som åndsverk, og som dermed er underlagt opphavsrett efter åndsverksloven, men det skal vi hoppe over i dag.
+Det kan òg gjelde data som er karakterisert som åndsverk, og som dermed er underlagt opphavsrett efter åndsverksloven, men det skal vi hoppe over i dag.
 
 Personvern har blitt et hett tema i det offentlige ordskiftet eftersom det sakte men sikkert går opp for oss hva særlig sosiale medier klarer å bruke våre data til.
 
@@ -31,6 +33,8 @@ I dette foredraget skal jeg gi en kort introduksjon med vekt på det som dataana
 
 [Kongeriket Noregs grunnlov](https://lovdata.no/nav/lov/1814-05-17-nn/) §102 (2014)
 
+![[priv02.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
+
 note:
 I Norge er  personvernet er forankret i grunnloven, og det i en langt videre forstand enn det vi gjerne tenker på i datasammenheng. Likevel, kommunikasjon er nevnt, og det er et eksempel på data.
 
@@ -41,6 +45,8 @@ Vi burde kanskje heller ha snakket om  *personopplysingsvern* i vår sammenheng,
 > Huusinqvisitioner maae ikke finde Sted, uden i criminelle Tilfælde.
 
 Kongeriket Noregs grunnlov §102 av 17de mai 1814
+
+![[priv03.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
 
 note:
 Bestemmelsen om personvern kom inn i Grunnloven i 2014.  I 1814 var man blott bekymret for husransakelser.
@@ -57,10 +63,12 @@ Eidsvollsmennene så antagelig ikke for seg hvordan personopplysninger kan misbr
 GDPR
 <!-- element class="[[r-fit-text]]" -->
 
+![[priv04.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
+
 note:
 I Norge er behandling av personopplysninger regulert av personopplysningsloven, som bygger på den velkjente EU-forordningen GDPR.
 
-Det er vel verd å sette segg inn i GDPRs Artikkel 5 som på mange måter gir et overblikk, og som etablere gode etiske grunnprinsipper. 
+Det er vel verd å sette seg inn i GDPRs Artikkel 5 som på mange måter gir et overblikk, og som etablere gode etiske grunnprinsipper. 
 
 
 ---
@@ -68,9 +76,11 @@ Det er vel verd å sette segg inn i GDPRs Artikkel 5 som på mange måter gir et
 Art. 5.1.a.  Lovlig behandlingsgrunnlag, rettferd og openheit
 <!-- element class="[[r-fit-text]]" -->
 
+![[priv05.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
+
 note:
 All behandling av personopplysninger krever et behandlingsgrunnlag som forteller hvorfor behandling er lovlig. 
-Samtykke er én form for behandlingsgrunnlag er informert samtykke.
+Informert samtykke er én form for behandlingsgrunnlag.
 Når vi samler inn data til forskning og lignende, er det samtykke som gjelder.
 
 Andre former for behandlingsgrunnlag forutsetter at personopplysningene er nødvendige for å oppfylle andre forpliktelser, som kan følge av avtaler med den registrere, av lovpålegg eller allmennhetens interesse. Databehandlerens egeninteresse gir derimot aldri noget behandlingsgrunnlag.
@@ -83,6 +93,8 @@ Det siste punktet i art. 5.1.a er openhet, dvs. at den registrerte skal ha innsy
 
 Art. 5.1.b.  Formålsavgrensing
 <!-- element class="[[r-fit-text]]" -->
+
+![[priv06.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
 
 note:
 Behandlingsgrunnlaget gir ingen blankofullmakt.
