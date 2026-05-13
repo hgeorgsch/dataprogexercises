@@ -100,10 +100,11 @@ I informasjonssikkerhet kan vi snakke om informasjonsverdier.  Data kan ha verdi
 ::: credit
 :::
 
-![[sec05.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
+![[sec06.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
 
 note:
-Informasjonssikkerhet handler ikke bare om informasjon som kan komme på avveie.
+Informasjonsverdier som blir stjålet eller kommer på avveie er ikke det eneste
+som bekymrer oss.
 Dersom dét var det eneste som bekymret oss, ville det tryggeste være bare å slette og ødelegge alt sammen.  Ingenting blir hemmeligere enn det som alle har glemt.
 
 Derfor snakker vi gjerne om tre forskjellige sider ved sikkerhet, 
@@ -122,6 +123,8 @@ Når vi fortsetter skal vi derfor alltid huske at informasjonsverdier er utsatt 
 ![[infosecorg.svg]]
 ::: credit
 :::
+
+![[sec07.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
 
 note:
 Utgangspunktet for effektiv sikring er god forståelse av hva som
@@ -155,6 +158,8 @@ man risikerer og truslene man står overfor.
 ::: credit
 :::
 
+![[sec08.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
+
 note:
 Når vi vet hva vi står overfor, er det nyttig å gå videre og vurdere
 hva vi kan gjøre med det.
@@ -184,6 +189,8 @@ By Tom Parnell from Scottish Borders, Scotland - Beaumaris Castle, CC BY-SA 2.0,
 via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=80472330)
 :::
 
+![[sec09.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
+
 note:
 Tradisjonelt har vi ofte lagt borgmodellen til grunn for sikkerhet.
 
@@ -198,6 +205,8 @@ Vi får ekspertene til å bygge høye og solide murer rundt oss, og så velger v
 By Llywelyn2000 - Own work, CC BY-SA 4.0, 
 via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=137373162)
 :::
+
+![[sec10.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
 
 note:
 Vi kan gjerne ha flere lag med mur, der hver mur representerer et nytt sikkerhetsnivå, men det samme prinsippet og det samme problemet ligger til grunn på hvert nivå.
@@ -214,6 +223,8 @@ Enda mer kontroversielt er det når vi legger data inn i borgen. Hvis det er vå
 
 ---
 ## Slutt
+
+![[sec11.mp3]]<!-- element data-autoplay onended="Reveal.next()" -->
 
 note:
 Personvern er dog en så stor utfordring at det fordrer et foredrag for seg selv.
