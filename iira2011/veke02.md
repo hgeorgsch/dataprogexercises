@@ -26,13 +26,13 @@ author: Hans Georg Schaathun
       ([Slides](https://iirevu.org.ntnu.no/Slides/Datastrukturar/))
 
 + Gjennomarbeidde døme
-    + [](notebooks/Smittespreiing)
-	+ [Listekomprehensjon](notebooks/Listekomprehensjon)
+    + [](nb01/Smittespreiing)
+	+ [](notebooks/Listekomprehensjon)
 	+ [](notebooks/JSON%20og%20dict) (valfri).
       Denne øvinga er litt meir teknisk og spissfindig, og mindre praktisk,
       men ho kan gje ein nyttig illustrasjon av bruken av `dict`.
 + *Valfrie oppgåver*
-    + [](notebooks/Halveringsmetoden) viser eit døme på numerisk
+    + [](nb01/Halveringsmetoden) viser eit døme på numerisk
       likningsløysing i python.  Denne oppgåva er nyttig dersom
       du har litt bakgrunn i matematikk.
       

@@ -16,12 +16,12 @@ vel so mykje om djupare forståing for konsepta frå forrige veke.
       ([foilar](https://iirevu.org.ntnu.no/Slides/Kunstig%20Intelligens/))
 
 + *Gjennomarbeidde døme*
-	+ [](notebooks/Fisher%20Linear%20Discriminant%20in%20sklearn)
-	+ [](notebooks/Evaluering)
+	+ [](nbml/fld)
+	+ [](nbml/Evaluering)
 + *Vidaregåande døme* som viser nokre maskinlæringsteknikkar.
   Eg reknar med at dei fleste har nok med dei gjennomarbeidde døma.
   Det er ikkje eit nederlag å droppa desse vidaregåande døma.
-    + [](notebooks/SVM)
+    + [](nbml/SVM)
 
 ## Læringsutbyte
 

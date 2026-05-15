@@ -14,16 +14,14 @@ chapters:
         - file: Anaconda
     - file: nb01/fyrstedok
     - file: nb01/simkontant
+    - file: exercises/Kontantstraum
     - file: nb01/control-empty
     - file: nb01/control
     - file: norun/intro-simulering
   - file: veke02
     sections:
-      - file: notebooks/Halveringsmetoden
-      - file: notebooks/Smittespreiing
-      - file: exercises/Kontantstraum
-      - file: exercises/Kundedata
-      - file: notebooks/Folkevekst
+      - file: nb01/Halveringsmetoden
+      - file: nb01/Smittespreiing
       - file: notebooks/Listekomprehensjon
       - file: notebooks/JSON og dict
       - file: notebooks/dict-empty
@@ -32,37 +30,20 @@ chapters:
       - file: notebooks/list
   - file: veke-CSV
     sections:
-      - file: notebooks/Fyrste datasett med CSV
+      - file: nb02/csv01
       - file: norun/intro-csv-slides
-      - file: notebooks/Genetikk
-      - file: notebooks/Tid og dato
-      - file: notebooks/Arbeidsledige
-      - file: exercises/Eksportdata
+      - file: nb02/Genetikk
+      - file: nb02/time
+      - file: nb02/Arbeidsledige
         sections:
-        - file: notebooks/ssb
-        - file: notebooks/ssbfile-empty
-        - file: notebooks/ssbfile
-        - file: notebooks/plot1empty
-        - file: notebooks/plot1
-        - file: notebooks/plot2empty
-        - file: notebooks/plot2
+        - file: nb02/ssbfile-empty
+        - file: nb02/ssbfile
+        - file: nb02/plot1empty
+        - file: nb02/plot1
   - file: Samanlikna Datasett
     sections:
-      - file: notebooks/Arbeidsledige og Konkursar
-      - file: notebooks/Jordskjelv
-      - file: notebooks/Tidsrekkjer-demo
+      - file: nb02/Jordskjelv
       - file: notebooks/Melt-pivot
-  - file: Agent-basert simulering
-    sections:
-      - file: notebooks/LoanClass
-      - file: notebooks/Shrimp-Game
-      - file: notebooks/Iskrem på ei strand.ipynb
-      - file: notebooks/ShrimpSimulation
-      - file: exercises/Agent-basert Marknadssimulering
-      - file: notebooks/class-empty
-      - file: notebooks/class
-  - file: Billetdata
-  - file: torch
   - file: Statistikk og Maskinlæring
     sections:
       - file: notebooks/numpy
@@ -76,42 +57,15 @@ chapters:
       - file: norun/sklearn-demo
   - file: Klassifikasjon
     sections:
-      - file: notebooks/Fisher Linear Discriminant in sklearn
-      - file: notebooks/Evaluering
-      - file: notebooks/SVM
-  - file: Automatisering
-    sections:
-      - file: notebooks/ML-WebAPI
-      - file: notebooks/standalone-exercise
-      - file: notebooks/jupytext1demo
-      - file: Installasjon-git
-      - file: jupytext
-      - file: Spyder
-      - file: Git
-  - file: Klyngeanalyse-Kapittel
-    sections:
-      - file: notebooks/Klyngeanalyse
-      - file: notebooks/Kundesegmentering
-      - file: notebooks/clustering_creditcards
-      - file: notebooks/data-til-kmeans-knn
+      - file: mlnb/fld
+      - file: mlnb/Evaluering
+      - file: mlnb/SVM
+  - file: Billetdata
+  - file: torch
   - file: Sikkerheit
   - title: Bilag.
     file: Bilag
     sections:
       - file: Slumptal
-        sections:
-        - file: notebooks/Tilfeldigheit
-        - file: notebooks/Marknadssimulering
-        - file: exercises/Kundedifferensiering
-        - file: exercises/Varar på sal
-        - file: notebooks/Tilfeldigheit-Demo
-      - file: WebAPI
-        sections:
-          - file: notebooks/WEBAPI
-          - file: notebooks/requests-trimmed
-          - file: notebooks/JSON json_stat og eksempler
-          - file: notebooks/ssb-api
-          - file: notebooks/Eurostat-API.ipynb
-          - file: norun/spotify-auth
-          - file: norun/spotify-audio-analyse
-          - file: norun/chatgpt_api
+      - file: Klyngeanalyse-Kapittel
+      - file: Automatisering
