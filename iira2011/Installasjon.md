@@ -4,16 +4,13 @@ tags:
     - installation
 ---
 
-# Installasjon python
+# Installasjon av python
 
 I kurset bruker vi python som programmeringsspråk og fleire ulike
 verkty til å arbeida med pythonkode.
 Der er mange ulike programvarepakkar som kan brukast til å koma i gang.
 
 Den tryggaste løysinga er å installera Python og Pip lokalt.
-
-Der er to 
-
 
 ## Python og pip
 
