@@ -12,20 +12,18 @@ chapters:
     - file: Installasjon
       sections:
         - file: Anaconda
-    - file: notebooks/Fyrste dokument i Jupyter Lab
-    - file: notebooks/Fyrste datasett med CSV
-    - file: notebooks/Simulering av kontantstraum
-    - file: norun/intro-csv-slides
+    - file: nb01/fyrstedok
+    - file: nb01/simkontant
+    - file: nb01/control-empty
+    - file: nb01/control
     - file: norun/intro-simulering
   - file: veke02
-      sections:
+    sections:
       - file: notebooks/Halveringsmetoden
       - file: notebooks/Smittespreiing
       - file: exercises/Kontantstraum
       - file: exercises/Kundedata
       - file: notebooks/Folkevekst
-      - file: notebooks/control-empty
-      - file: notebooks/control
       - file: notebooks/Listekomprehensjon
       - file: notebooks/JSON og dict
       - file: notebooks/dict-empty
@@ -33,7 +31,9 @@ chapters:
       - file: notebooks/list-empty
       - file: notebooks/list
   - file: veke-CSV
-      sections:
+    sections:
+      - file: notebooks/Fyrste datasett med CSV
+      - file: norun/intro-csv-slides
       - file: notebooks/Genetikk
       - file: notebooks/Tid og dato
       - file: notebooks/Arbeidsledige
@@ -47,13 +47,13 @@ chapters:
         - file: notebooks/plot2empty
         - file: notebooks/plot2
   - file: Samanlikna Datasett
-      sections:
+    sections:
       - file: notebooks/Arbeidsledige og Konkursar
       - file: notebooks/Jordskjelv
       - file: notebooks/Tidsrekkjer-demo
       - file: notebooks/Melt-pivot
   - file: Agent-basert simulering
-      sections:
+    sections:
       - file: notebooks/LoanClass
       - file: notebooks/Shrimp-Game
       - file: notebooks/Iskrem på ei strand.ipynb
@@ -64,7 +64,7 @@ chapters:
   - file: Billetdata
   - file: torch
   - file: Statistikk og Maskinlæring
-      sections:
+    sections:
       - file: notebooks/numpy
       - file: notebooks/Linear Regression in SciKitLearn
       - file: notebooks/Evaluering for regresjon
@@ -75,12 +75,12 @@ chapters:
       - file: notebooks/sklearn-demo-empty
       - file: norun/sklearn-demo
   - file: Klassifikasjon
-      sections:
+    sections:
       - file: notebooks/Fisher Linear Discriminant in sklearn
       - file: notebooks/Evaluering
       - file: notebooks/SVM
   - file: Automatisering
-      sections:
+    sections:
       - file: notebooks/ML-WebAPI
       - file: notebooks/standalone-exercise
       - file: notebooks/jupytext1demo
@@ -89,14 +89,14 @@ chapters:
       - file: Spyder
       - file: Git
   - file: Klyngeanalyse-Kapittel
-      sections:
+    sections:
       - file: notebooks/Klyngeanalyse
       - file: notebooks/Kundesegmentering
       - file: notebooks/clustering_creditcards
       - file: notebooks/data-til-kmeans-knn
   - file: Sikkerheit
-  - file: closure
   - title: Bilag.
+    file: Bilag
     sections:
       - file: Slumptal
         sections:
@@ -106,7 +106,7 @@ chapters:
         - file: exercises/Varar på sal
         - file: notebooks/Tilfeldigheit-Demo
       - file: WebAPI
-          sections:
+        sections:
           - file: notebooks/WEBAPI
           - file: notebooks/requests-trimmed
           - file: notebooks/JSON json_stat og eksempler

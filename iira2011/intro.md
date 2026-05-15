@@ -24,7 +24,7 @@ feil) forklart, er det berre å gje eit ord, og so fiksar me det.
 
 ## Korleis arbeida med boka
 
-I dette bruket skal me i hovudsak læra fra døme og praktiske øvingar,
+I dette kurset skal me i hovudsak læra fra døme og praktiske øvingar,
 langt meir enn å prøva å hugs generelle forklaringar.
 Det er godt kjend i kognitiv psykologi at dei fleste lærer betre frå
 døme enn frå forklaringar, og ikkje minst er det enklare å overføre
