@@ -26,28 +26,22 @@ er ikkje eit mål i seg sjølve.
 	+ [Statistikk med pandas](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=8fff3714-2c20-4d25-917b-b3ed00d06ebf)
 	  [(Slides)](https://iirevu.org.ntnu.no/Statistikk%20med%20pandas/)
 + *Gjennomarbeidde døme*
-    + [](notebooks/Fyrste%20datasett%20med%20CSV) 
-	+ [](notebooks/Arbeidsledige) 
-	+ [](notebooks/Tid%20og%20dato)
-    + [](notebooks/Genetikk) 
+    + [](nb02/csv01)
+	+ [](nb02/Arbeidsledige) 
+	+ [](nb02/time)
+    + [](nb02/Genetikk) 
 + *Demovideo*
-    + [Statistikkbanken](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=c3199984-d5ef-44dc-a9da-b3ee00cd4421)
-        + [Datasett 13760](./notebooks/13760_20260203-130712.csv)
-        + [Arbeidsdokument](notebooks/ssb)
 	+ [Plot i pandas](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=9b30ced4-33c3-4811-a3d1-b3ee0147cfe4)
-        + [](notebooks/plot1empty)
-        + [](notebooks/plot1)
-	+ [Kakediagram i pandas](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=0c83d979-3a67-4c41-a6e2-b3ee00a30d87)
-        + [](notebooks/plot2empty)
-        + [](notebooks/plot2)
+        + [](nb02/plot1empty)
+        + [](nb02/plot1)
     + [Dataformattering](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=67762136-dda7-47b3-af9b-b3ee00e3fcbb)
       Denne demoen viser rydding i nokre datasett som eg har sett
       studentar finna for å studera utvikling i bustadprisar.
       Til sjuande og sist viser han at ikkje alle problem lèt seg 
       løysa, men nokre løysingar finn me og nokre uløyselege
       problem identifiserer me.
-        + [](notebooks/ssbfile-empty)
-        + [](notebooks/ssbfile)
+        + [](nb02/ssbfile-empty)
+        + [](nb02/ssbfile)
 
 ## Oppsummering
 
