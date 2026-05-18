@@ -5,6 +5,7 @@ css:
   - css/templates.css
 ---
 
+
 <!-- slide template="[[tpl-titleslide]]" -->
 
 # Programmering for andre fagdisipliner
@@ -19,35 +20,47 @@ NTNU---Noregs Teknisk-Naturvitskaplege Universitet
 
 ---
 
-
-- IIRA6001 Programmering til Dataanalyse
-    - EVU-variant av
-	- IIRA2001 Programmering og Data i Økonomiske Fag
-	- andre år øk/adm
--  IIRA2011 Maskinlæring i Biologiske Fag
-	- utstrakt gjenbruk av materiell
-	- mye nytt stoff
-- Prosjekt $\sim$ ett årsverk til gjenbrukbart læringsmateriell
+- Prosjekt $\leftarrow$ Fleksibel og Desentralisert utdanning
+	- $\sim$ ett årsverk 
+	- gjenbrukbart læringsmateriell
+	- to nye emner 2026
 
 note:
-- EVU som byggjer på eksisterende kurs
-- EVU fordrer læringsmateriell som kan brukes mest mulig uten veiledning
+- Prosjektfinansiering hovedsaklig til utvikling av øvelsesopplegg med video. 
+- Fleiksibilitet og desentralisering fordrer læringsmateriell som kan brukes mest mulig uten veiledning
 - i ordinær undervisning kan mye løses underveis fordi man uansett treffer studentene 2-3 ganger  i uken.
 - det går dårlig når man ser studentene 2-3 ganger i semesteret
-- Prosjektfinansiering hovedsaklig til utvikling av øvelsesopplegg med video. 
 - Læringsmateriellet kan føres tilbake til det ordinære kurset og brukes i andre overlappende emner.
+
 
 ---
 
+- IIRA6001 Programmering til Dataanalyse
+    - EVU-variant av IIRA2001  (andre år øk/adm)
+	- Programmering og Data i Økonomiske Fag
+-  IIRA2011 Maskinlæring i Biologiske Fag 
+	- utstrakt gjenbruk av materiell
+	- mye nytt stoff
+
+note:
+- EVU som byggjer på eksisterende kurs
+- IIRA2011 undervises først for ordinære studenter
+	- høster gevinst av gjenbrukbart materiell
+	- håp om EVU på sikt
+---
+
 1. Hva skulle til for å lykkes?
-1. Hvorfor er kurset spesielt?
+2. Hvorfor er vårt EVU-kurs spesielt?
+
+note:
+Jeg skal snakke om to ting her.
 
 ---
 
 ## Drift av EVU
 
 ---
-<!-- slide template="[[tpl-flex]]" bg="white" -->
+<!-- slide template="[[tpl-flex]]" -->
 
 ![[treasure.png]]
 
@@ -80,10 +93,10 @@ Inger Johanne Krohn
 :::
 
 ---
-<!-- slide template="[[tpl-twocolumn]]" bg="white" -->
+<!-- slide template="[[tpl-twocolumn]]" -->
 
 ::: leftimage
-![[bef.png]]
+![[bef.jpg]]
 :::
 
 ::: leftcredit
@@ -91,7 +104,7 @@ Barbro Fjørtoft
 ::: 
 
 ::: rightimage
-![[mtv.jpg]]
+![[marie.jpeg]]
 ::: 
 ::: rightcredit
 Marie Espeland
