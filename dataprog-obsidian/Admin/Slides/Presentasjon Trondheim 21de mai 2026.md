@@ -141,8 +141,8 @@ ressursbruken.
 
 ---
 
-+ Pedagogikk
-    + Induktiv læring $\to$ Colburn og Hendrix
-    + Cognitive Load $\to$ Sweller og Ruth Clark
-    + $\to$ inga lærebok $\to$ stort behov for utvikling
-+ God kritikk - særleg læringsmaterialet
+- Pedagogikk
+    - Induktiv læring $\to$ Colburn og Hendrix
+    - Cognitive Load $\to$ Sweller og Ruth Clark
+    - $\to$ inga lærebok $\to$ stort behov for utvikling
+- God kritikk - særleg læringsmaterialet
