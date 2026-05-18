@@ -19,16 +19,18 @@ NTNU---Noregs Teknisk-Naturvitskaplege Universitet
 
 ---
 
+## Innhald
+
 1.  IIRA6001 Programmering til Dataanalyse
 2.  Moglegheitsrom
 3.  Kva er interessant for skulane?
 
 ---
 
-##  IIRA6001 Programmering til Dataanalyse
+##  Programmering til Dataanalyse (IIRA6001)
 
-- EVU-variant av
-	- IIRA2001 Programmering og Data i Økonomiske Fag
+- EVU-variant av IIRA2001 
+	- Programmering og Data i Økonomiske Fag
 	- andre år øk/adm
 
 note:
@@ -41,42 +43,46 @@ note:
 
 ---
 
-- Fridom til læring
-- Kontekstuell læring
-- Induktiv læring
+## Pedagogiske prinsipp
 
----
-
-- Mykje opp til deltakarane å avgjera kva som er vesentleg
+- Fridom til læring (Carl Rogers)
 - Kontekstuell læring (NTNU-*hype*)
+- Induktiv læring (Warren Colburn, Gertrude Hendrix)
+
+note:
+- Mykje opp til deltakarane å avgjera kva som er vesentleg
+- Kontekstuell læring (NTNU-*hype*) $\to$ økonomisk og samfunnsfagleg analyse 
+	- programmering er eit verkty 
+- læring gjennom døme
+	- inspirert av Warren Colburn 1821
+	- Gertrude Hendrix viste på 40-talet at læring gjennom døme gjev betre overføringsevne enn deduktive tilnærmingar
+- Dei fleste døma bør vera overførbare til fag som 1P/2P, statistikk, samfunnsøkonomi og andre fag der
 
 ---
 
-+ Pedagogikk
-    + Induktiv læring $\to$ Colburn og Hendrix
-    + Cognitive Load $\to$ Sweller og Ruth Clark
-    + $\to$ inga lærebok $\to$ stort behov for utvikling
-+ God kritikk - særleg læringsmaterialet
+- 14 deltakarar våren 2025
+- planlagd igjen våren 2026
+- gjenbrukbart læringsmateriell $\to$ høve til skreddarsydde kurs
 
 ---
 
 ## Moglegheitsrom
 
 ---
-<!-- slide template="[[tpl-twocolumn]]" bg="white" -->
+<!-- slide template="[[tpl-twocolumn]]" -->
 
 ::: leftimage
 ## IIRA6001
 
-+ lågare grad 
-+ inngår *ikkje* i *master*-grad
+- lågare grad 
+- inngår *ikkje* i *master*-grad
 :::
 
-::: rightcredit
+::: rightimage
 ## Mogleg
 
-+ meir didaktikk 
-+ $\to$ høgare grad
+- meir didaktikk 
+- $\to$ høgare grad
 :::
 
 ::: leftcredit
@@ -85,24 +91,24 @@ note:
 :::
 
 ---
-<!-- slide template="[[tpl-twocolumn]]" bg="white" -->
+<!-- slide template="[[tpl-twocolumn]]" -->
 
 ::: leftimage
 ## IIRA6001
 
-+ tre samlingar à to dagar
-+ 2x6 veker mellom samlingane
-+ 1h/veke *dropin* på Teams
-+ video og øvingar per veke
-+ mappevurdering med obligatorisk presentasjon
+- tre samlingar à to dagar
+- 2x6 veker mellom samlingane
+- 1h/veke *dropin* på Teams
+- video og øvingar per veke
+- mappevurdering med obligatorisk presentasjon
 :::
 
-::: rightcredit
+::: rightimage
 ## Mogleg
 
-+ færre eller kortare samlingar
-+ meir nettstudium
-+ kontrollert eksamen
+- færre eller kortare samlingar
+- meir nettstudium
+- kontrollert eksamen
 :::
 
 ::: leftcredit
@@ -111,23 +117,58 @@ note:
 :::
 
 ---
-<!-- slide template="[[tpl-twocolumn]]" bg="white" -->
+<!-- slide template="[[tpl-twocolumn]]" -->
 
 ::: leftimage
 ## IIRA6001
 
-+ Deltakaravgift 24000 kr
-+ 7½ studiepoeng
+- Økonomi og samfunnsfag
+- Dataanalyse (statistkk og maskinlæring)
+- Litt simulering
 :::
 
-::: rightcredit
+::: rightimage
 ## Mogleg
 
-+ ???
+- Fleire døme frå fysikk
+- Fleire døme frå biologi
 :::
 
 ::: leftcredit
 :::
 ::: rightcredit
 :::
+
+---
+<!-- slide template="[[tpl-twocolumn]]" -->
+
+::: leftimage
+## IIRA6001
+
+- Deltakaravgift 24000 kr
+- 7½ studiepoeng
+:::
+
+::: rightimage
+## Mogleg
+
+- ???
+:::
+
+::: leftcredit
+:::
+::: rightcredit
+:::
+
+
+---
+## Spørsmål til skulane
+
+---
+
+- Korleis fungerer EVU i skulesektoren?
+	- finansiering
+	- søknadsfrister
+- Er kurset vårt i programmering attraktivt?
+	- Kva justeringar kan gjera det attraktivt
 
