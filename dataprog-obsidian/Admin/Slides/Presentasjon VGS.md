@@ -29,17 +29,18 @@ NTNU---Noregs Teknisk-Naturvitskaplege Universitet
 
 ##  Programmering til Dataanalyse (IIRA6001)
 
-- EVU-variant av IIRA2001 
+- EVU-variant av IIRA2001  (andre år øk/adm)
 	- Programmering og Data i Økonomiske Fag
-	- andre år øk/adm
++ Programmering er eit verkty for å forstå andre fag
+	+ smittespreiing
+	+ samanheng mellom arbeidsledigheit og konkursar
+	+ klassifikasjon av Iris-artar
 
 note:
 - EVU som byggjer på eksisterende kurs
 - EVU fordrer læringsmateriell som kan brukes mest mulig uten veiledning
 - i ordinær undervisning kan mye løses underveis fordi man uansett treffer studentene 2-3 ganger  i uken.
 - det går dårlig når man ser studentene 2-3 ganger i semesteret
-- Prosjektfinansiering hovedsaklig til utvikling av øvelsesopplegg med video. 
-- Læringsmateriellet kan føres tilbake til det ordinære kurset og brukes i andre overlappende emner.
 
 ---
 
@@ -57,6 +58,19 @@ note:
 	- inspirert av Warren Colburn 1821
 	- Gertrude Hendrix viste på 40-talet at læring gjennom døme gjev betre overføringsevne enn deduktive tilnærmingar
 - Dei fleste døma bør vera overførbare til fag som 1P/2P, statistikk, samfunnsøkonomi og andre fag der
+
+---
+
+## Innhold
+
++ Simulering, deterministisk og probabilistisk
+	+ t.d. smittespreiing
++ Dataanalyse og visualisering
+	+ t.d. arbeidsledigheitsdata
++ Maskinlæring $\to$ klassifisering og regresjon
+	+ t.d. klassifikasjon av Iris-artar
++ Frittståande program og GUI
++ Sikkerheit og personvern
 
 ---
 
@@ -123,7 +137,7 @@ note:
 ## IIRA6001
 
 - Økonomi og samfunnsfag
-- Dataanalyse (statistkk og maskinlæring)
+- Dataanalyse (statistikk og maskinlæring)
 - Litt simulering
 :::
 
