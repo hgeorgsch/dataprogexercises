@@ -3,7 +3,7 @@ tags:
    - topic/security
 ---
 
-+ [ ] Veke: Sikkerheit og etikk
++ [x] Veke: Sikkerheit og etikk @completed(2026-05-15T11:30:18+02:00)
 	+ [ ] Samtykkeskjema
 	+ [ ] Eigarskap og verdiar
 

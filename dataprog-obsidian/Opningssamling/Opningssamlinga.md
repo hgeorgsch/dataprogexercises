@@ -29,7 +29,7 @@ author: Hans Georg Schaathun
 ## TODO
 
 + [x] Køyring av celler i feil rekkjefylgje 📅 2025-06-20 ✅ 2026-02-05
-+ [ ] Ferdigstill Opningssamlinga  📅 2026-02-10
++ [x] Ferdigstill Opningssamlinga  📅 2026-02-10 @completed(2026-05-15T11:30:30+02:00)
 	+ [x] Treng tilpassing til deltakartal  (10-15) ✅ 2026-02-06
 	+ [ ] Vurder programmet   
 	    + [ ] Kor lang bør kvar økt vera?
