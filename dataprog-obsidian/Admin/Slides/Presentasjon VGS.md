@@ -31,10 +31,10 @@ NTNU---Noregs Teknisk-Naturvitskaplege Universitet
 
 - EVU-variant av IIRA2001  (andre år øk/adm)
 	- Programmering og Data i Økonomiske Fag
-+ Programmering er eit verkty for å forstå andre fag
-	+ smittespreiing
-	+ samanheng mellom arbeidsledigheit og konkursar
-	+ klassifikasjon av Iris-artar
+- Programmering er eit verkty for å forstå andre fag
+	- smittespreiing
+	- samanheng mellom arbeidsledigheit og konkursar
+	- klassifikasjon av Iris-artar
 
 note:
 - EVU som byggjer på eksisterende kurs
@@ -63,14 +63,14 @@ note:
 
 ## Innhold
 
-+ Simulering, deterministisk og probabilistisk
-	+ t.d. smittespreiing
-+ Dataanalyse og visualisering
-	+ t.d. arbeidsledigheitsdata
-+ Maskinlæring $\to$ klassifisering og regresjon
-	+ t.d. klassifikasjon av Iris-artar
-+ Frittståande program og GUI
-+ Sikkerheit og personvern
+- Simulering, deterministisk og probabilistisk
+	- t.d. smittespreiing
+- Dataanalyse og visualisering
+	- t.d. arbeidsledigheitsdata
+- Maskinlæring $\to$ klassifisering og regresjon
+	- t.d. klassifikasjon av Iris-artar
+- Frittståande program og GUI
+- Sikkerheit og personvern
 
 ---
 
