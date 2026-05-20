@@ -162,8 +162,8 @@ Det tredje poenget er induktiv læring. Jeg er særlig inspirert av Warren Colbu
 
 ---
 
-+ Gjennomarbeidde døme
-+ *Worked Examples* (Clark, Nguyen, Sweller 2005)
+- Gjennomarbeidde døme
+- *Worked Examples* (Clark, Nguyen, Sweller 2005)
 
 note:
 Derfor består læringsmaterialet i IIRA6001 hovedsaklig av gjennomarbeidede eksempler der programmering brukes for å realisere reelle problemer. Deltagerne skal studere disse eksemplene og variere dem, for å skjønne hvordan analysen fungere.
@@ -176,8 +176,11 @@ Det er sjelden jeg vet hvordan alt skal gjøres *a priori*.  Som regel *googler*
 ---
 <!-- slide template="[[tpl-flex]]" -->
 
+![[Americanstudbookvolume2open.jpg]]
 
 ::: credit
+By Ealdgyth - Own work, CC BY 3.0,
+via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=2987257)
 :::
 
 note:
