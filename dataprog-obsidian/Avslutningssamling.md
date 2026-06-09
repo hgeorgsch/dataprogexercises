@@ -12,25 +12,16 @@ tags:
 
 # Onsdag
 
-1.  Menti.
-	1. Eit læringsutbyte
-	2. Éi utfordring
++ [[Velkomen til Avslutningssamling]]
+	1.  Menti. ( læringsutbyte + utfordring )
 2. Deltakarpresentasjonar
 	1. - diskusjon
 	+ **Ja** Morten
 	+ **Nei** Mariann, Ann Lisbeth, Alice, Nina, Trond
-6. Seminar.:
+3. [[Modularisering og problemløysing]]
+4. Seminar.:
 	1. Kva er det viktigaste læringsutbytet til no?
 	2. Korleis skal me bruka dette kurset til å arbeida annleis dei neste tre åra?
-7. [[Modularisering og problemløysing]]
-    + Oppsummering
-	    1. Automatisering av beregninger
-	    2. Statistikk og prediksjon
-	    3. Simulering av modeller
-    + Modularisering
-        1. Funksjonar
-        2. Klasser
-        3. Modular
 
 # Torsdag
 
