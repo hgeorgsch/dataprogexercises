@@ -11,3 +11,4 @@ tags:
 	+ fleksibelt på nett $\to$ kontrollert eksamen
 	+ samlingsbasert (2-3) med oblig og mappe
 + [[Presentasjon VGS]] 
++ [[Epost om VGS-kurs]]

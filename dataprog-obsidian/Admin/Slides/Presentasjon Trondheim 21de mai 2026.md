@@ -38,6 +38,7 @@ note:
 - IIRA6001 Programmering til Dataanalyse
     - EVU-variant av IIRA2001  (andre år øk/adm)
 	- Programmering og Data i Økonomiske Fag
+	- 14 deltakarar inneverande semester
 -  IIRA2011 Maskinlæring i Biologiske Fag 
 	- utstrakt gjenbruk av materiell
 	- mye nytt stoff
@@ -144,6 +145,14 @@ Nu vet ikke jeg om Barbro og Marie har jobb til neste år, og det bekymrer oss, 
 ---
 
 ## IIRA6001 Programmering til Dataanalyse
+
+---
+
++ 7½ studiepoeng
++ Eitt semester (frå ultimo februar)
++ Tre samlingar
++ 2$\times$6 veker med video og øvingar
++ Mappevurdering (ultimo august)
 
 ---
 
