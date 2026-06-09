@@ -117,7 +117,6 @@ direkte fylgjer av eksisterande proposisjonar
 Dette er akkurat som andre reknemaskiner.
 
 
-
 ---
 <!-- slide template="[[tpl-flex]]" -->
 
@@ -173,6 +172,9 @@ Miriam Wolff
 - Reknar ut $X\mapsto \hat Y$ (estimat)
 - <span class="ntnupurple"> *loss function*</span> måler avviket mellom $Y$ og $\hat Y$
 
+---
+Analytisk $\to$ Syntetisk
+<!-- element class="[[r-fit-text]]" -->
 
 ---
 
@@ -186,12 +188,18 @@ Miriam Wolff
 	3. Rekn ut  $\text{loss}(Y, y)$
 	4. Juster vektene i $M$
 	5. Gjenta med nytt objekt
-- Gjenta fleire gongar med dei same objekta
-	
+- Gjenta fleire epokar med dei same objekta
 
 ---
-Analytisk $\to$ Syntetisk
-<!-- element class="[[r-fit-text]]" -->
+
+## Hyperparameter
+
++ Talet på epokar
++ *læringsrate* - kor raskt endrar ein vektene?
++ satsstorleik (fleire bilete for kvar vektoppdatering)
++ *dropout rate* (dropp enkelte vekter)
++ vektforfall (unngå store vekter)
+	
 
 ---
 <!-- slide template="[[tpl-flex]]" -->
@@ -214,7 +222,7 @@ av strukturerte eller ustrukturerte data, i den hensikt
 
 > Kva bør eg ha til middag i dag?
 
-> Ja, men det hadde me i går ...
+> Kor mange barneskular treng me i Ålesund?
 
 ---
 
@@ -223,6 +231,58 @@ Stor språkmodell $=$ Prediksjonsmodell
 
 ---
 
++ pølse med ...
++ morgenstund har ...
++ her er det bare å bøye seg i ...
+
+---
 ## Sannsynsmodellar
 
+---
+
+- forutseia kva som skje (prediksjon)
+- typebestemme objekt (klassifikasjon)
+- segmentering av bilete (t.d. metastasar)
+- oppdaga avvik (anomalideteksjon)
+- reguleringsteknikk 
+
+---
+<!-- slide template="[[]]"="[[tpl-flex]]" -->
+
+![[A_Horseshoe_Einstein_Ring_from_Hubble.jpeg]]
+
+::: credit
+By Lensshoe_hubble.jpg: ESA/Hubble & NASAderivative work: Bulwersator (talk) - Lensshoe_hubble.jpg, Public Domain,
+via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=17750437)
+:::
+
+---
+
+gjer-det-sjølv
+<!-- element class="[[r-fit-text]]" -->
+
+---
+
+1. Annotering $\to$ datasett
+2. Trening $\to$ modell
+3. Testing $\to$ evaluering
+4. Bruk $\to$ resultat
+
+---
+
+## Utfordringar
+
+1.  Annotering er tidkrevjande
+2. Trening krev reknekraft
+	1. Mellomstore datasett krev GPU
+	2. Store data krev dedikerte datasenter
+3. Testing krev kompetanse og kritisk sans	
+	1. Statistikk og domenekunnskap
+	2. Kva er godt nok for oss?
+4. ... men bruken er gjerne automatisert
 	
+
+---
+
+Spørsmål?
+<!-- element class="[[r-fit-text]]" -->

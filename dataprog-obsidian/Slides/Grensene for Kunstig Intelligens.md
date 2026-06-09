@@ -78,3 +78,77 @@ By [Perig Gouanvic](http://www.philosophical-investigations.org/Users/PerigGouan
 [Philosophical Investigations](http://www.philosophical-investigations.org/Users/PerigGouanvic/Merleau-Ponty_and_the_Post-Modern_Non-Self), CC BY 3.0,
 via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=12248562)
 :::
+
+note:
+kroppsleggjering
+
+---
+
+*dasein*
+<!-- element class="[[r-fit-text]]" -->
+
+---
+
+bevisstheit
+<!-- element class="[[r-fit-text]]" -->
+
+---
+
+opplevingsbevisstheit
+<!-- element class="[[r-fit-text]]" -->
+
+---
+
+fenomenalbevisst
+<!-- element class="[[r-fit-text]]" -->
+
+---
+
+- ein tilstand er (opplevings)bevisst dersom han vert *opplevd* som nok særskilt
+- eit vesen er bevisst om det kan ha bevisste tilstandar
+
+---
+
+> Kva skal me ha til middag?
+
+---
+
+## Fire typar problem
+
+(Dreyfus 1972)
+
++ Assosiasonistiske problem
++ Enkle-formelle problem
++ Kompleks-formelle problem
++ Ikkje-formelle problem
+
+---
+
+Assosiasjonistisk
+
+Omsetjing ord for ord
+
+---
+
+Enkelt-formelt
+
+Tripp-trapp-tresko
+
+---
+
+Kompleks-formelt
+
+Sjakk
+
+---
+
+## Ikkje-formelt
+
++ Gjenkjenning av forvrengte mynster
++ Gåter
++ Åpne problem
++ Omsetjing ?
++ Arkitektur?   Kunst?
++ Uskikkelege problem
+
+Tripp-trapp-tresko
