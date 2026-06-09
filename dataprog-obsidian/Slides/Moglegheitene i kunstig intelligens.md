@@ -6,8 +6,7 @@ tags:
 css:
   - css/templates.css
 ---
-
-# Moglegheitene i kunstig intelligens
+e Moglegheitene i kunstig intelligens
 
 
 ---
@@ -80,15 +79,9 @@ Donald MacCrimmon MacKay var fysiker
 
 # Tradisjonar
 
-1. Kunstig intelligens
-2. *Pattern Recognition*
-3. Maskinlæring
-4. *Computational Logic*
-5. Generativ KI
-
-note:
-1. Klassifikasjon
-2. Regresjon 
+1. *Pattern Recognition*  $\to$  Maskinlæring
+2. *Computational Logic*
+3. Generativ KI
 
 ---
 
@@ -112,10 +105,44 @@ via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=27105106
 
 ---
 
-# Problemløysing
+Analytisk
+<!-- element class="[[r-fit-text]]" -->
+
+note:
+Analytisk kunnskap. *Computational Logic* kan ikkje seia noko som ikkje
+direkte fylgjer av eksisterande proposisjonar
+
+Dette er akkurat som andre reknemaskiner.
+
+
+
+---
+<!-- slide template="[[tpl-flex]]" -->
+
+![[metastatis.png]]
+
+::: credit
+Grøvik, E., Yi, D., Iv, M. _et al._ Handling missing MRI sequences in deep learning segmentation of brain metastases: a multicenter study. _npj Digit. Med._ **4**, 33 (2021).
+[DOI](https://doi.org/10.1038/s41746-021-00398-4)
+:::
+
+note:
+1. Klassifikasjon
+2. Regresjon 
+
+---
+
+Analytisk $\to$ Syntetisk
+<!-- element class="[[r-fit-text]]" -->
+
+---
+
+## Problemløysing
 
 1. Instrumentelle og veldefinerte problem
 2. Åpne problem (generativ KI)
+
+note:
 
 ---
 <!-- slide template="[[tpl-flex]]" -->
@@ -132,4 +159,38 @@ av strukturerte eller ustrukturerte data, i den hensikt
 
 ---
 
-# Sannsynsmodellar
+## Sannsynsmodellar
+
+---
+<!-- slide template="[[tpl-flex]]" bg=lightgray"-->
+
+![[ann.png]]
+
+::: credit
+:::
+
+---
+
+$X \to \boxed{\text{samanheng}} \to Y$
+<!-- element class="[[r-fit-text]]" -->
+
+---
+
+## Trening
+
++ Start med modell $M$ med tilfeldige vekter
+	+ Treningssett $(X_1,Y_1), (X_2,Y_2),(X_3,Y_3),\ldots$
++ Gjenta
+	+ Object $X$ (inn) og $Y$ (ut)
+	+ Mat $X$ inn i $M$ $\mapsto$ y
+	+ Rekn ut  $\text{loss}(Y, y)$
+	+ Juster vektene i $M$
+	+ Gjenta med nytt objekt
++ Gjenta fleire gongar med dei same objekta
+	
+	
+---
+
+## Målet
+
++ Ei maskin som predikerer $Y$  gjeve $X$
