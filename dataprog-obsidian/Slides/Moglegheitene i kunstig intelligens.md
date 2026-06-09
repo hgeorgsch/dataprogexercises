@@ -1,12 +1,11 @@
 ---
 title: Moglegheitene i kunstig intelligens
 tags:
-  - lecture/video/perspective
   - topic/machinelearning
 css:
   - css/templates.css
 ---
-e Moglegheitene i kunstig intelligens
+# Moglegheitene i kunstig intelligens
 
 
 ---
@@ -90,11 +89,14 @@ $$
 & \text{Alle mennesker er dødelege} \\
 & \text{Sokrates er menneske} \\
 \hline
-\therefore\;\; & \text{Sokrates er dødeleg}
+\therefore\;\; & \text{Sokrates er dødeleg}\\
+\hline
+\hline
 \end{align}
 $$
 
 ---
+<!-- slide template="[[tpl-flex]]" -->
 
 ![[Red_semantica_clasica.png]]
 
@@ -131,18 +133,65 @@ note:
 2. Regresjon 
 
 ---
+<!-- slide template="[[tpl-flex]]" bg=lightgray"-->
 
-Analytisk $\to$ Syntetisk
-<!-- element class="[[r-fit-text]]" -->
+## Diabetes
+
+![[Pancreas_insulin_beta_cells.png]]
+
+::: credit
+By United States Department of Health and Human Services: National Diabetes Information Clearinghouse (NDIC) - http://diabetes.niddk.nih.gov/dm/pubs/diagnosis/, 
+Public Domain, via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=25539437)
+:::
+
+---
+<!-- slide template="[[tpl-flex]]" bg=lightgray"-->
+
+![[icecream.png]]
+
+::: credit
+Miriam Wolff
+:::
 
 ---
 
-## Problemløysing
+$X \to \boxed{\text{samanheng}} \to Y$
+<!-- element class="[[r-fit-text]]" -->
 
-1. Instrumentelle og veldefinerte problem
-2. Åpne problem (generativ KI)
+---
+<!-- slide template="[[tpl-flex]]" bg=lightgray"-->
 
-note:
+![[ann.png]]
+
+::: credit
+Miriam Wolff
+:::
+
+---
+
+- Det nevrale nettverket imiterer samanhengen $X \mapsto Y$
+- Reknar ut $X\mapsto \hat Y$ (estimat)
+- <span class="ntnupurple"> *loss function*</span> måler avviket mellom $Y$ og $\hat Y$
+
+
+---
+
+## Trening
+
+- Start med modell $M$ med tilfeldige vekter
+	- Treningssett $(X_1,Y_1), (X_2,Y_2),(X_3,Y_3),\ldots$
+- Gjenta
+	1. Object $X$ (inn) og $Y$ (ut)
+	2. Mat $X$ inn i $M$ $\mapsto$ y
+	3. Rekn ut  $\text{loss}(Y, y)$
+	4. Juster vektene i $M$
+	5. Gjenta med nytt objekt
+- Gjenta fleire gongar med dei same objekta
+	
+
+---
+Analytisk $\to$ Syntetisk
+<!-- element class="[[r-fit-text]]" -->
 
 ---
 <!-- slide template="[[tpl-flex]]" -->
@@ -156,41 +205,24 @@ av strukturerte eller ustrukturerte data, i den hensikt
 [Nasjonal strategi for kunstig intelligens](https://www.regjeringen.no/no/dokumenter/nasjonal-strategi-for-kunstig-intelligens/id2685594/?ch=3)
 :::
 
+---
+## Målet
+
++ Ei maskin som predikerer $Y$  gjeve $X$
+
+---
+
+> Kva bør eg ha til middag i dag?
+
+> Ja, men det hadde me i går ...
+
+---
+
+Stor språkmodell $=$ Prediksjonsmodell
+<!-- element class="[[r-fit-text]]" -->
 
 ---
 
 ## Sannsynsmodellar
 
----
-<!-- slide template="[[tpl-flex]]" bg=lightgray"-->
-
-![[ann.png]]
-
-::: credit
-:::
-
----
-
-$X \to \boxed{\text{samanheng}} \to Y$
-<!-- element class="[[r-fit-text]]" -->
-
----
-
-## Trening
-
-+ Start med modell $M$ med tilfeldige vekter
-	+ Treningssett $(X_1,Y_1), (X_2,Y_2),(X_3,Y_3),\ldots$
-+ Gjenta
-	+ Object $X$ (inn) og $Y$ (ut)
-	+ Mat $X$ inn i $M$ $\mapsto$ y
-	+ Rekn ut  $\text{loss}(Y, y)$
-	+ Juster vektene i $M$
-	+ Gjenta med nytt objekt
-+ Gjenta fleire gongar med dei same objekta
 	
-	
----
-
-## Målet
-
-+ Ei maskin som predikerer $Y$  gjeve $X$
