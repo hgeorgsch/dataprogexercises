@@ -104,7 +104,7 @@ fenomenalbevisst
 
 ---
 
-- ein tilstand er (opplevings)bevisst dersom han vert *opplevd* som nok særskilt
+- ein tilstand er (opplevings)bevisst dersom han vert *opplevd* som noko særskilt
 - eit vesen er bevisst om det kan ha bevisste tilstandar
 
 ---
@@ -151,4 +151,44 @@ Sjakk
 + Arkitektur?   Kunst?
 + Uskikkelege problem
 
-Tripp-trapp-tresko
+---
+<!-- slide template="[[tpl-twocolumn]]" -->
+
+## Uskikkelege problem (Rittel og Webber 1973)
+
+::: leftimage
++ Byplanleggjing
++ Arkitektur
+:::
+
+::: leftcredit
+:::
+::: rightimage
++ Ingen klare mål 
++ Brukaroppleving <!-- element class="ntnupurple" -->
+:::
+
+:::rightcredit
+:::
+
+
+---
+
+## Sjakk
+
+- komplisert, men enkelt
+- enkle reglar, vanskeleg å spela
+- enkle kriterium for kven som vinn
+
+---
+
+## Forsterkande læring
+
+- Maskina lærer sjakk ved å spela mot seg sjølv
+- enkel simulator
+- komplisert strategi
+- maskina må spela nok gongar
+
+---
+
+## 
