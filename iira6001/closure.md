@@ -27,18 +27,19 @@ author: Hans Georg Schaathun
 
 | Onsdag | Tema | Materiell |
 | :- | :- | :- |
-| 10.00-10.30 | Kaffi og velkomst | |
-| 10.30-12.00 | Deltakarpresentasjonar | [Foilar](https://iirevu.org.ntnu.no/Slides/Mellomsamling-foilar/#/) |
+| 10.00-10.30 | Kaffi og velkomst | [Foilar](https://iirevu.org.ntnu.no/Slides/Velkomen%20til%20Avslutningssamling/) |
+| 10.30-12.00 | Deltakarpresentasjonar | |
 | 12.00-12.45 | Lønsj | |
-| 12.45-15.00 | Deltakarpresentasjonar (med pause) | |
+| -- | Modularisering og problemløysing | [Foilar](https://iirevu.org.ntnu.no/Slides/Modularisering%20og%20probleml%c3%b8ysing/) |
 | 15.15-16.30 | Oppsummering og avrunding | |
 
 | Torsdag | Tema | Materiell |
 | :- | :- | :- |
 | 9.00 | Kaffi | |
-| 9.15-10 | Føredrag om kunstig intelligens. Kva maskiner ikkje kan gjera? |  |
+| --  | Moglegheitene i kunstig intelligens | [Foilar](https://iirevu.org.ntnu.no/Slides/Moglegheitene%20i%20kunstig%20intelligens/) |
 | 10-11.30 | Seminar. Kva kan KI gjera for oss?  | |
 | 11.30-12.15 | Lønsj | |
-| 12.15-14.15 | Open post.  Kva meir treng me? | |
+| -- | Grensene for kunstig intelligens | [Foilar](https://iirevu.org.ntnu.no/Slides/Grensene%20for%20Kunstig%20Intelligens/) |
+| -- | Open post.  Kva meir treng me? | |
 | 14.15-14.30 | Avrunding | |
 
