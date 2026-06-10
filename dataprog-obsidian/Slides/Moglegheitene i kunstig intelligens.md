@@ -247,7 +247,7 @@ Stor språkmodell $=$ Prediksjonsmodell
 - reguleringsteknikk 
 
 ---
-<!-- slide template="[[]]"="[[tpl-flex]]" -->
+<!-- slide template="[[tpl-flex]]" -->
 
 ![[A_Horseshoe_Einstein_Ring_from_Hubble.jpeg]]
 
