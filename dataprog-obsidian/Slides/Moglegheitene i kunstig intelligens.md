@@ -194,11 +194,11 @@ Analytisk $\to$ Syntetisk
 
 ## Hyperparameter
 
-+ Talet på epokar
-+ *læringsrate* - kor raskt endrar ein vektene?
-+ satsstorleik (fleire bilete for kvar vektoppdatering)
-+ *dropout rate* (dropp enkelte vekter)
-+ vektforfall (unngå store vekter)
+- Talet på epokar
+- *læringsrate* - kor raskt endrar ein vektene?
+- satsstorleik (fleire bilete for kvar vektoppdatering)
+- *dropout rate* (dropp enkelte vekter)
+- vektforfall (unngå store vekter)
 	
 
 ---
@@ -216,7 +216,7 @@ av strukturerte eller ustrukturerte data, i den hensikt
 ---
 ## Målet
 
-+ Ei maskin som predikerer $Y$  gjeve $X$
+- Ei maskin som predikerer $Y$  gjeve $X$
 
 ---
 
@@ -231,8 +231,8 @@ Stor språkmodell $=$ Prediksjonsmodell
 
 ---
 
+- morgenstund har ...
 + pølse med ...
-+ morgenstund har ...
 + her er det bare å bøye seg i ...
 
 ---
