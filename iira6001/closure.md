@@ -8,8 +8,9 @@ author: Hans Georg Schaathun
 # Avslutningssamling
 
 
-+ **Stad:** NTNU i Ålesund, 
-  [Brua](https://link.mazemap.com/vdbzfWlm) i Kompasset (K-bygget), 3. etasje.
++ **Stad:** NTNU i Ålesund, **NB** Rombyte:
+  [A334](https://use.mazemap.com/#v=1&config=ntnu&campusid=91&zlevel=3&center=6.235554,62.472277&zoom=18&search=A334&sharepoitype=identifier&sharepoi=702-A334) 
+  i Hovudbygget/Ankeret 3. etasje.  
 + **Dato:** Onsdag 10. og Torsdag 11. juni 2026.  
 + Deltakarpresentasjonar
     + Me har deltakarpresentasjonar etter same mal som på mellomsamlinga.
