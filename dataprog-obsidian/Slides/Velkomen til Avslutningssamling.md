@@ -40,16 +40,16 @@ https://www.menti.com/
 
 ---
 
-+ [[Modularisering og problemløysing]]
+- [[Modularisering og problemløysing]]
 
 ---
 
 ## Seminar - onsdag
 
-+ tre grupper
-+ tre spørsmål
-+ ein halv time
-+ deling i plenum
+- tre grupper
+- tre spørsmål
+- ein halv time
+- deling i plenum
 
 ---
 

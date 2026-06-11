@@ -28,10 +28,11 @@ author: Hans Georg Schaathun
 | Onsdag | Tema | Materiell |
 | :- | :- | :- |
 | 10.00-10.30 | Kaffi og velkomst | [Foilar](https://iirevu.org.ntnu.no/Slides/Velkomen%20til%20Avslutningssamling/) |
-| 10.30-12.00 | Deltakarpresentasjonar | |
+| 10.30-12.00 | Deltakarpresentasjonar | [](demo/avslutting2026/avslutting-onsdag-sketches.ipynb), [helpers.py](demo/avslutting2026/helpers.py) |
 | 12.00-12.45 | Lønsj | |
 | -- | Modularisering og problemløysing | [Foilar](https://iirevu.org.ntnu.no/Slides/Modularisering%20og%20probleml%c3%b8ysing/) |
-| 15.15-16.30 | Oppsummering og avrunding | |
+| -- | Demo: [](./notebooks/Iskrem%20på%20ei%20strand) | [](demo/avslutting2026/Strand.ipynb) |
+| -16.30 | Oppsummering og avrunding | |
 
 | Torsdag | Tema | Materiell |
 | :- | :- | :- |
