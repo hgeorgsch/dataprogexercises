@@ -128,6 +128,9 @@ chapters:
       - file: notebooks/tkinter-demo
     - file: Sikkerheit
   - file: closure
+    sections:
+      - file: demo/avslutting2026/avslutting-onsdag-sketches.ipynb
+      - file: demo/avslutting2026/Strand.ipynb
   - file: drafts
     sections:
     - file: notebooks/Lånesøknad.ipynb

@@ -129,20 +129,42 @@ Assosiasjonistisk
 Omsetjing ord for ord
 
 ---
+<!-- slide template="[[tpl-flex]]" -->
 
-Enkelt-formelt
+## Enkelt-formelt
 
-Tripp-trapp-tresko
+![[Tic_tac_toe.svg]]
+
+::: credit
+By Joeytje50 - Own work, CC BY 4.0,
+via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=169001466)
+:::
+
+---
+<!-- slide template="[[tpl-flex]]" -->
+
+## Kompleks-formelt
+
+![[Chess_game_Staunton_No._6.jpg]]
+
+
+::: credit
+By Wilfredor - Own work, CC0,
+via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=147572311)
+:::
+
+---
+<!-- slide template="[[tpl-flex]]" -->
+
+![[Edvard_Munch_-_The_Scream_-_Google_Art_Project.jpg]]
+
+::: credit
+Av Edvard Munch, Offentleg eigedom,
+via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=37624942)
 
 ---
 
-Kompleks-formelt
-
-Sjakk
-
----
-
-## Ikkje-formelt
+## Det ikkje-formelle
 
 + Gjenkjenning av forvrengte mynster
 + Gåter
@@ -150,6 +172,16 @@ Sjakk
 + Omsetjing ?
 + Arkitektur?   Kunst?
 + Uskikkelege problem
+
+---
+<!-- slide template="[[tpl-flex]]" -->
+
+![[Full_Opera_by_night.jpg]]
+
+::: credit
+By Rafał Konieczny - Own work, CC BY-SA 4.0,
+via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=5559036)
+:::
 
 ---
 <!-- slide template="[[tpl-twocolumn]]" -->
@@ -191,4 +223,27 @@ Sjakk
 
 ---
 
-## 
+Sjakk Matt
+<!-- element class="[[r-fit-text]]" -->
+
+---
+
+Det gode livet
+<!-- element class="[[r-fit-text]]" -->
+
+---
+
+*One-Dimensional Man*
+<!-- element class="[[r-fit-text]]" -->
+
+---
+
+> Der er ting som mennesket lærer berre ved å veksa opp og verta behandla som menneske av andre menneske.
+
+(Joseph Weizenbaum 1976)
+
+---
+
+Spørsmål?
+<!-- element class="[[r-fit-text]]" -->
+
