@@ -117,14 +117,14 @@ fenomenalbevisst
 
 (Dreyfus 1972)
 
-+ Assosiasonistiske problem
-+ Enkle-formelle problem
-+ Kompleks-formelle problem
-+ Ikkje-formelle problem
+- Assosiasonistiske problem
+- Enkle-formelle problem
+- Kompleks-formelle problem
+- Ikkje-formelle problem
 
 ---
 
-Assosiasjonistisk
+## Assosiasjonistisk
 
 Omsetjing ord for ord
 
@@ -166,12 +166,12 @@ via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=37624942
 
 ## Det ikkje-formelle
 
-+ Gjenkjenning av forvrengte mynster
-+ Gåter
-+ Åpne problem
-+ Omsetjing ?
-+ Arkitektur?   Kunst?
-+ Uskikkelege problem
+- Gjenkjenning av forvrengte mynster
+- Gåter
+- Åpne problem
+- Omsetjing ?
+- Arkitektur?   Kunst?
+- Uskikkelege problem
 
 ---
 <!-- slide template="[[tpl-flex]]" -->
@@ -186,21 +186,23 @@ via [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=5559036)
 ---
 <!-- slide template="[[tpl-twocolumn]]" -->
 
-## Uskikkelege problem (Rittel og Webber 1973)
+## Uskikkelege problem 
+
+(Rittel og Webber 1973)
 
 ::: leftimage
-+ Byplanleggjing
-+ Arkitektur
+- Byplanleggjing
+- Arkitektur
 :::
 
 ::: leftcredit
 :::
 ::: rightimage
-+ Ingen klare mål 
-+ Brukaroppleving <!-- element class="ntnupurple" -->
+- Ingen klare mål 
+- Brukaroppleving <!-- element class="ntnupurple" -->
 :::
 
-:::rightcredit
+::: rightcredit
 :::
 
 
