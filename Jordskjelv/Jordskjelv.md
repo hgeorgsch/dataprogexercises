@@ -215,7 +215,7 @@ Me får eit betre inntrykk om me kan plotta skjelva oppå eit kart.
 Då bør me bruka eit
 [ekvirektangulært kart](https://simple.wikipedia.org/wiki/Equirectangular_projection),
 Der ein lengde- og breiddegradane har same avstand overalt på kartet.
-Me finn eit slikt kart på [Wikimedia Commons](https://simple.wikipedia.org/wiki/Equirectangular_projection#/media/File:Equirectangular-projection.jpg):
+Me finn eit slikt kart på [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Equirectangular-projection.jpg):
 [Equirectangular-projection.jpg](Equirectangular-projection.jpg).
 
 Lat oss fyrst sjå berre på kartet:
