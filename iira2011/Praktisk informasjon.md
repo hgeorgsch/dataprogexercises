@@ -1,4 +1,0 @@
-# Praktisk Informasjon
-
-+ [](Mappevurdering)
-+ [](Oblig)
