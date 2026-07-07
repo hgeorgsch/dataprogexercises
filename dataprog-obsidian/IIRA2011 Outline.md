@@ -5,6 +5,23 @@
 + Arbeidsøkt 4h onsdag
 + Førelesing 2h fredag
 
+| Veke | Forarbeid | Arbeidsøkt | Førelesing |     |
+| :--- | --------- | ---------- | ---------- | --- |
+| 19. august    | --        | Fyrste dok |            |            |
+| 26. august    |           | Datatypar  |            |     |
+| 2. september  |           | Filer og CSV |            |     |
+| 9. september  |           |            |            |     |
+| 16. september |           |            |            |     |
+| 23. september |           | Oblig: Innleiing |            |            |
+| 30. september |           |            |            |     |
+|  7. oktober   |  |            |            |     |
+| 14. oktober   |           | Oblig: Material |            |            |
+| 21. oktober   |            |            |            |     |
+| 28. oktober   |  |            |            |     |
+|  4. november  |           | Oblig: Resultat |            |            |     
+| 11. november  |  |            |            |     |
+| 18. november  |           | Oblig: Diskusjon |            |            |     
+
 ## Del 1. Python
 
 + Veke 1. [[Fyrste dokument i Jupyter Lab]] m.m.
