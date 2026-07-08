@@ -5,26 +5,33 @@
 + Arbeidsøkt 4h onsdag
 + Førelesing 2h fredag
 
-| Veke | Forarbeid | Arbeidsøkt | Førelesing |     |
-| :--- | --------- | ---------- | ---------- | --- |
-| 19. august    | --        | Fyrste dok |            |            |
-| 26. august    |           | Datatypar  |            |     |
-| 2. september  |           | Filer og CSV |            |     |
-| 9. september  |           |            |            |     |
-| 16. september |           |            |            |     |
-| 23. september |           | Oblig: Innleiing |            |            |
-| 30. september |           |            |            |     |
-|  7. oktober   |  |            |            |     |
-| 14. oktober   |           | Oblig: Material |            |            |
-| 21. oktober   |            |            |            |     |
-| 28. oktober   |  |            |            |     |
-|  4. november  |           | Oblig: Resultat |            |            |     
-| 11. november  |  |            |            |     |
-| 18. november  |           | Oblig: Diskusjon |            |            |     
+|     | Veke          | Forarbeid | Arbeidsøkt       | Førelesing                       |     |
+| --- | :------------ | --------- | ---------------- | -------------------------------- | --- |
+| 1   | 19. august    | --        | Fyrste dokument  | Databehandling og representasjon | OK  |
+| 2   | 26. august    |           | Fyrste datasett  | Om å læra frå data               |     |
+| 3   | 2. september  |           | Inferens         | Biletrepresentasjon              |     |
+| 4   | 9. september  |           | Biletdata        | Problem i biologi                |     |
+| 5   | 16. september |           | Annotering       |                                  |     |
+| 6   | 23. september |           | Oblig: Innleiing |                                  |     |
+| 7   | 30. september |           |                  |                                  |     |
+| 8   | 7. oktober    |           |                  |                                  |     |
+| 9   | 14. oktober   |           | Oblig: Material  |                                  |     |
+| 10  | 21. oktober   |           |                  |                                  |     |
+| 11  | 28. oktober   |           |                  |                                  |     |
+| 12  | 4. november   |           | Oblig: Resultat  |                                  |     |
+| 13  | 11. november  |           |                  |                                  |     |
+| 14  | 18. november  |           | Oblig: Diskusjon |                                  |     |
 
-## Del 1. Python
+## Del 1. Verkty
 
 + Veke 1. [[Fyrste dokument i Jupyter Lab]] m.m.
++ [[CSV og pandas]] 
+	+ lasta og plotta datasett
+	+ genetikk
++ [[Statistikk og Maskinlæring]]  $\to$ Iris-datasettet
+
+## Del X ???
+
 + Veke 2.  `dict` etc
 	+ [[Smittespreiing]]
 
@@ -39,10 +46,6 @@
 			+ samla resultat i lister
 ## Del 2. Data
 			
-+ [[CSV og pandas]] 
-	+ lasta og plotta datasett
-	+ genetikk
-+ [[Statistikk og Maskinlæring]]  $\to$ Iris-datasettet
 + Bilethandsaming
 		+ Yolo
 		+ Annotering av datasett
