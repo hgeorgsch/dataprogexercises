@@ -7,6 +7,12 @@ chapters:
     sections:
     - file: Oblig
     - file: Mappevurdering
+    - file: Mappedemo/Mappedemo
+      sections:
+        - file: Mappedemo/kontantstraum-eval
+        - file: Mappedemo/kontantstraum.ipynb
+        - file: Mappedemo/boligpris-eval
+        - file: Mappedemo/boligpris.ipynb
     - file: Ny programvare
     - file: Dropin
   - file: Opningssamling
@@ -81,6 +87,8 @@ chapters:
       - file: norun/spotify-audio-analyse
       - file: norun/chatgpt_api
   - file: midway
+    sections:
+      - file: demo/demo20260423.ipynb
   - file: second
     sections:
     - file: Statistikk og Maskinlæring
@@ -112,12 +120,17 @@ chapters:
       sections:
       - file: notebooks/Klyngeanalyse
       - file: notebooks/Kundesegmentering
+      - file: norun/klyngedemo
       - file: notebooks/clustering_creditcards
+      - file: notebooks/data-til-kmeans-knn
     - file: GUI
       sections:
       - file: notebooks/tkinter-demo
     - file: Sikkerheit
   - file: closure
+    sections:
+      - file: demo/avslutting2026/avslutting-onsdag-sketches.ipynb
+      - file: demo/avslutting2026/Strand.ipynb
   - file: drafts
     sections:
     - file: notebooks/Lånesøknad.ipynb

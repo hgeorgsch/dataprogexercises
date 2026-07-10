@@ -3,22 +3,25 @@ tags:
    - topic/security
 ---
 
-+ [ ] Veke: Sikkerheit og etikk
++ [x] Veke: Sikkerheit og etikk @completed(2026-05-15T11:30:18+02:00)
 	+ [ ] Samtykkeskjema
 	+ [ ] Eigarskap og verdiar
 
 
 + Tema
-	+ Sikkerheit
+	+ [[Informasjonssikkerheit]]
 		+ CIA
-		+ risiko
 		+ verdivurdering
+	+ [[Personvern]]
+	+ Nedprioritert
+		+ risiko
+		+ Cobit ?
 	+ Lover
-		+ personvern
+		+ personvern og GDPR
+		+ Personopplysingslova
 		+ andsverk og lisensar
-		+ personvern
 		+ universell tilrettelegging
 	+ Etikk
+		+ Det gode livet
 		+ er det godt for oss
 		+ dilemmaet?
-	+ Personopplysingslova

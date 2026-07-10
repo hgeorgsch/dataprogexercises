@@ -273,3 +273,9 @@
    width: 100% ;
    height: inherit ;
 }
+
+/* Sound */
+
+.reveal section div.soundtrack audio {
+   data-autoplay: "true" ;
+}

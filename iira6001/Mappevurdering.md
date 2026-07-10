@@ -15,6 +15,8 @@ over korleis dei er nyttige i praktisk virke.
 I tillegg er det eit obligatorisk arbeidskrav å presentera og drøfta
 éi oppgåve mappa vert presentert munnleg på midtvegssamlingsa.
 
+Eg er i gang med å samla [](Mappedemo/Mappedemo)
+
 ## Mappeinnleveringa
 
 Mappa må leverast som ein ZIP-fil
@@ -170,7 +172,7 @@ Mappa vert vurdert som ein heilskap, og det er opp til kandidaten å velja ut op
 | Teknisk nivå (per del) | Mappa viser ikkje tilstrekkelege teknikkar til å løyse meiningsfulle, praktiske problem. | Mappa viser dei programmeringskonstruksjonane som er nemnde som minstekrav. | Mappa viser kompetent bruk av python med variasjon i teknikkane som vert brukte. | Mappa viser stor breidd og djup forståing av teknikkar og konsept.                             |
 | Testing og validering (per del) | Der er lite eller ingen forklaring til koden.[^tv]  | Koden er stort sett forklart, men overflatisk og utan overtyding. | Koden er stort sett forklart og testa.  Der er ingen tvil om at kandidaten veit kva som føregår.  | Koden er grundig testa og det er sjelden tvil om at alt er korrekt. |
 | Kodekvalitet (per del) | Der er mykje feil i koden, og koden gjer ikkje det teksta seier.                    | Koden er korrekt[^kor], men vond for lesaren å forstå.                                                  | Koden er lesbar[^les], med stort sett god bruk av variabelnamn og kommentarar, sjølv om nokon løysingar kan vera unødig tungvinte. | Koden er plettfri og lesarvenleg, med god bruk av effektive og enkle løysingar der det er råd. |
-| Analyse (per del) | Der er lite eller ingen tolking av resultat.                                             | Resultat er kommentert på ein fornuftig om ikkje innsiktsfull måte.                               | Mappa bruker resultat til å seia noko konstruktivt og nyttig om problemet, særleg i Del 2.                                  | Mappa viser kreativ og innsiktsfull analyse av resultata.                                      |
+| Analyse (per del) | Der er lite eller ingen tolking av resultat.                                             | Resultat er kommentert på ein fornuftig om ikkje innsiktsfull måte.                               | Mappa bruker resultat til å seia noko konstruktivt og nyttig om problemet.                                  | Mappa viser kreativ og innsiktsfull analyse av resultata.                                      |
 | Originalitet (samla)| Oppgåvene i mappa er kopi av kjende døme mest utan variasjon.                                 | Mappa inneheld enkle men tydelege variasjonar over utleverte øvingar og døme                                   | Mappa bruker gjennomgåtte teknikkar i nye kombinasjonar og på nye datasett, i minst ein av dellane.                                | Mappa viser stor variasjon og originalitet både i løysingsteknikkar og spørsmål.               |
 | Refleksjon (Del 3)   | Refleksjon manglar.                                                                      | Kandidaten freister å sjå kurset i sin yrkes- eller studiekontekst, men refleksjonen vert knapp og overflatisk. | Kandidaten har gjort kursinnhaldet til sitt eige, og har konstruktive døme på praktisk verdi av kurset.                     | Kandidaten er kreativ og visjonær i sin refleksjon over framtidig nytte av kurset.             |
 

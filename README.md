@@ -14,11 +14,11 @@ with other subprojects added.
   from several taught modules under development
 + `iir2001` is a Jupyter Book for IIRA2001 for IIF
 + `iir6001` is a Jupyter Book for IIRA6001 for EVU
-+ `work` is demo documents created in class.  They are typically included in 
-  the book in the same year, and then discarded.
 + `fig` is the source for figures and diagrams developed in TeX, for inclusion in the book.
 + `exercises` is exercises from a separate repo, included as a git subtree from 
   git@github.com:hgeorgsch/dataprogexercises.git
++ `Demo` is *ad hoc* documents created for demonstration, either in class 
+  or for video.
 + `admin` - administrative documents not written in Markdown
 
 
