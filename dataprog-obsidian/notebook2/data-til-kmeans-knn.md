@@ -12,6 +12,8 @@ kernelspec:
   name: python3
 ---
 
+# Data til $k$-*means*
+
 ```{code-cell} ipython3
 import pandas as pd
 import numpy as np

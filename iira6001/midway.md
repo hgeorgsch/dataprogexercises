@@ -32,7 +32,7 @@ author: Hans Georg Schaathun
 | Dag 1 | Tema | Materiell |
 | :- | :- | :- |
 | 10.00-10.30 | Kaffi og velkomst | |
-| 10.30-12.00 | Deltakarpresentasjonar | |
+| 10.30-12.00 | Deltakarpresentasjonar | [Foilar](https://iirevu.org.ntnu.no/Slides/Mellomsamling-foilar/#/) |
 | 12.00-12.45 | Lønsj | |
 | 12.45-15.00 | Deltakarpresentasjonar (med pause) | |
 | 15.15-16.30 | Oppsummering og avrunding | |
@@ -40,9 +40,13 @@ author: Hans Georg Schaathun
 | Dag 2 | Tema | Materiell |
 | :- | :- | :- |
 | 9.00 | Kaffi | |
-| 9.15-10 | Briefing.  Programmering utanfor Jupyter. | Sjå [Veke 9](./Automatisering) |
-| 10-11.30 | Økt. Programmering uttanfor Jupyter | |
+| 9.15-10 | Briefing.  Programmering utanfor Jupyter. | [Foilar](https://iirevu.org.ntnu.no/Slides/Mellomsamling-Automatisering/#/)|
+| 10-11.30 | Økt. Programmering uttanfor Jupyter | Sjå òg [Veke 9](./Automatisering) |
 | 11.30-12.15 | Lønsj | |
 | 12.15-14.45 | Seminar: Kvar vil me? (med pause) | |
 | 14.45-15.00 | Avrunding | |
 
+## Døme frå øktene
+
++ [](demo/demo20260423)
+    + Datafil: [EXR20250401.csv](./notebooks/EXR20250401.csv)
