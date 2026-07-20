@@ -1,4 +1,9 @@
 ---
+authors:
+- affiliation: NTNU-Noregs Teknisk-Naturvitskaplege Universitet
+  name: Hans Georg Schaathun
+- affiliation: Universitetet i Bergen
+  name: Morten Munthe
 jupytext:
   formats: md:myst,ipynb
   text_representation:
