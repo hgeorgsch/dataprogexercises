@@ -16,11 +16,12 @@ tags:
 	+ [[Notebooks i boka]]
 + [[Unused images]]
 
++ External tools
+	+ [Videoes published in Panopto](https://ntnu.cloud.panopto.eu/Panopto/Pages/Sessions/List.aspx#folderID=%224b14e494-1e6f-432b-88ac-b3ed00d06ccd%22)
+	+ [Enkle øvingar frå Morten Munthe}(https://github.com/hgeorgsch/dataprogexercises)
+
 + Føredrag
 	+ [[SlideOverview]]
-	+ [Panopto recordings](https://ntnu.cloud.panopto.eu/Panopto/Pages/Sessions/List.aspx?folderID=1ed05bcf-ae8f-429a-8c25-b330009a4114)
-	+ [Panopto Tool Login](https://ntnu.cloud.panopto.eu/)
-	+ [Videoes published in Panopto](https://ntnu.cloud.panopto.eu/Panopto/Pages/Sessions/List.aspx#folderID=%224b14e494-1e6f-432b-88ac-b3ed00d06ccd%22)
 
 + Program
 	+ [[IIRA2011]]
@@ -32,7 +33,6 @@ tags:
 	+ Del 2.  Store datasett
 	+ [[Mappe Del 2 Haust 2024]]
 + Materiell
-	+ [Enkle øvingar frå Morten Munthe}(https://github.com/hgeorgsch/dataprogexercises)
 	+ [[Industriintervju]]
 + Notat
 	+ Idéar til aktivitetar
