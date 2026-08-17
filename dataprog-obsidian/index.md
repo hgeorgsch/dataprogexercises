@@ -18,7 +18,7 @@ tags:
 
 + External tools
 	+ [Videoes published in Panopto](https://ntnu.cloud.panopto.eu/Panopto/Pages/Sessions/List.aspx#folderID=%224b14e494-1e6f-432b-88ac-b3ed00d06ccd%22)
-	+ [Enkle øvingar frå Morten Munthe}(https://github.com/hgeorgsch/dataprogexercises)
+	+ [Enkle øvingar frå Morten Munthe](https://github.com/hgeorgsch/dataprogexercises)
 
 + Føredrag
 	+ [[SlideOverview]]

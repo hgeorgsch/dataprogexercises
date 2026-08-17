@@ -1,3 +1,8 @@
+---
+tags:
+  - admin/iira6001/v2026
+---
+
 + [[Deltakarliste IIRA6001 Våren 2026]]
 
 Kjære deltakarar
