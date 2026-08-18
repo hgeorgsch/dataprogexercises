@@ -9,6 +9,7 @@ Currently in August 2026 we have the following books
 
 and the shared pages
 + Exercises (markdown - no executable code)
++ Public (git subtree - exercises shared publicly on github)
 + notebook (mostly first half of IIRA6001)
 + notebook2 (mostly second half of IIRA6001)
 + norun (notebooks checked in with execution output)
