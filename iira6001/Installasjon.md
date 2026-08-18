@@ -70,7 +70,7 @@ Trykk ja for å oppdatera - vindauga om innlogging kan dere kryssa ut.
 :::{note}
 Anaconda er alt me treng den fyrste halvdelen av kurset.
 Når du har installert, kan du gå
-[](notebooks/Fyrste%20dokument%20i%20Jupyter%20Lab) for å
+[](notebooks/jupyter01.ipynb) for å
 sjå om det verka, men dette skal me prata meir om på
 [Opningssamlinga](Opningssamling).
 :::
@@ -106,7 +106,7 @@ og testa *Jupyter Lab*.
     Om vevlesaren ikkje startar automatisk, vil meldingane i terminalvindauga
     gje deg ein URL som du kan kopiera og lima inn i vevlesaren din.
 5.  For å testa at alt verkar kan du ta fatt på
-    [](https://iirevu.org.ntnu.no/iira6001/notebooks/Fyrste%20dokument%20i%20Jupyter%20Lab) 
+    [](https://iirevu.org.ntnu.no/iira6001/notebooks/jupyter01.ipynb) 
     og gjera oppgåvene der.
 
 Eitt problem som du vil støyta på når du ikkje har Anaconda, er at

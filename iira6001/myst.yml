@@ -23,9 +23,9 @@ project:
     - file: Opningssamling.md
       children:
         - file: Installasjon.md
-        - file: notebooks/Fyrste dokument i Jupyter Lab.ipynb
-        - file: notebooks/Fyrste datasett med CSV.ipynb
-        - file: notebooks/Simulering av kontantstraum.ipynb
+        - file: Jupyter/jupyter01.ipynb
+        - file: Jupyter/csv01.ipynb
+        - file: Jupyter/sim01.ipynb
         - file: norun/intro-csv-slides.ipynb
         - file: norun/intro-simulering.ipynb
     - file: first.md

@@ -7,8 +7,10 @@ used.  Some shared assets are files
 Currently in August 2026 we have the following books
 + iira6001
 and the shared pages
-+ Exercises (currently a symlink - should be replaced by git subtree when this
-  directory is extracted as a separate repo)
++ Exercises (markdown - no executable code)
 Additionally, there are shared assets
 + figures
 + hgs.bib (file in root)
+
+The exercises repo is symlinked from outside this subtree, and has to be
+reinstalled when this subtree is made its own git repo.
