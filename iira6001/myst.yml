@@ -54,7 +54,7 @@ project:
             - file: notebooks/list.ipynb
         - file: CSV og Deskriptiv Statistikk.md
           children:
-            - file: notebooks/Genetikk.ipynb
+            - file: Genetikk/Genetikk.ipynb
             - file: notebooks/Tid og dato.ipynb
             - file: notebooks/Arbeidsledige.ipynb
             - file: exercises/Eksportdata
@@ -69,7 +69,7 @@ project:
         - file: Samanlikna Datasett.md
           children:
             - file: notebooks/Arbeidsledige og Konkursar.ipynb
-            - file: notebooks/Jordskjelv.ipynb
+            - file: Jordskjelv/Jordskjelv.ipynb
             - file: notebooks/Tidsrekkjer-demo.ipynb
             - file: notebooks/Melt-pivot.ipynb
         - file: Agent-basert simulering.md
