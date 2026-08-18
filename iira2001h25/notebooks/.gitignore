@@ -1,8 +1,0 @@
-*.ipynb
-*.csv
-*.jpg
-*.svg
-*.txt
-*.json
-.ipynb_checkpoints
-datasets

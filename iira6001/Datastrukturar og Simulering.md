@@ -33,8 +33,8 @@ Dette kapittelet byggjer på
         + [](notebooks/dict-empty)
         + [](notebooks/dict)
 + *Opne Øvingar.*
-    + [](exercises/Kundedifferensiering)
-    + [](exercises/Varar%20på%20sal) (variasjonar over tidlegare oppgåver i marknadssimulering)
+    + [](Exercises/Kundedifferensiering)
+    + [](Exercises/Varar%20på%20sal) (variasjonar over tidlegare oppgåver i marknadssimulering)
 + *Drilløving* på [Moodle](https://capquiz.math.ntnu.no).  
 	+ CodeRunner `list` og `dict`
 

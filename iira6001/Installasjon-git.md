@@ -52,11 +52,11 @@ Git blir ofte installert automatik på mac, men følg instruksjonene under, så 
 conda install anaconda:::git
 ```
 
-:::{figure} jupyterlab-fig.png
+:::{figure} /figures/jupyterlab-fig.png
 Trykk på jupyterlab -- da åpnes det i en fane i nettleseren din
 :::
 
-:::{figure} terminal-fig.png
+:::{figure} /figures/terminal-fig.png
 Åpne en terminal i jupyterlab -- noen ganger kalles the powershell
 :::
 
