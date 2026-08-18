@@ -1,4 +1,5 @@
-all: Genetikk.ipynb
+all: ipynb
+ipynb: Genetikk.ipynb
 
 J=jupytext --execute -w --to ipynb
 
