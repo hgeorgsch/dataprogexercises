@@ -19,3 +19,21 @@ Additionally, there are shared assets
 
 The exercises repo is symlinked from outside this subtree, and has to be
 reinstalled when this subtree is made its own git repo.
+
+## git subtrees
+
+The exercise repository contains exercises published independently.
+```
+git remote add exercise  git@github.com:hgeorgsch/dataprogexercises.git
+git subtree add --prefix Public exercise main
+```
+
+### Updating
+
+```sh
+git remote add public 	git@github.com:hgeorgsch/dataprogexercises.git
+git subtree add --prefix Public public main
+git subtree pull --prefix Public public main
+git subtree push --prefix=Public public main
+```
+
