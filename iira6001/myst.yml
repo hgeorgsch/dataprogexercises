@@ -32,62 +32,62 @@ project:
       children:
         - file: Numeriske Metodar og Kontrollflyt.md
           children:
-            - file: notebooks/Halveringsmetoden.ipynb
-            - file: notebooks/Smittespreiing.ipynb
+            - file: notebook/Halveringsmetoden.ipynb
+            - file: notebook/Smittespreiing.ipynb
             - file: exercises/Kontantstraum
             - file: exercises/Kundedata
-            - file: notebooks/Folkevekst.ipynb
-            - file: notebooks/control-empty.ipynb
-            - file: notebooks/control.ipynb
+            - file: notebook/Folkevekst.ipynb
+            - file: notebook/control-empty.ipynb
+            - file: notebook/control.ipynb
         - file: Datastrukturar og Simulering.md
           children:
-            - file: notebooks/Tilfeldigheit.ipynb
-            - file: notebooks/Marknadssimulering.ipynb
+            - file: notebook/Tilfeldigheit.ipynb
+            - file: notebook/Marknadssimulering.ipynb
             - file: exercises/Kundedifferensiering
-            - file: notebooks/Listekomprehensjon.ipynb
-            - file: notebooks/JSON og dict.ipynb
+            - file: notebook/Listekomprehensjon.ipynb
+            - file: notebook/JSON og dict.ipynb
             - file: exercises/Varar på sal
-            - file: notebooks/Tilfeldigheit-Demo.ipynb
-            - file: notebooks/dict-empty.ipynb
-            - file: notebooks/dict.ipynb
-            - file: notebooks/list-empty.ipynb
-            - file: notebooks/list.ipynb
+            - file: notebook/Tilfeldigheit-Demo.ipynb
+            - file: notebook/dict-empty.ipynb
+            - file: notebook/dict.ipynb
+            - file: notebook/list-empty.ipynb
+            - file: notebook/list.ipynb
         - file: CSV og Deskriptiv Statistikk.md
           children:
             - file: Genetikk/Genetikk.ipynb
-            - file: notebooks/Tid og dato.ipynb
-            - file: notebooks/Arbeidsledige.ipynb
+            - file: notebook/Tid og dato.ipynb
+            - file: notebook/Arbeidsledige.ipynb
             - file: exercises/Eksportdata
               children:
-                - file: notebooks/ssb.ipynb
-                - file: notebooks/ssbfile-empty.ipynb
-                - file: notebooks/ssbfile.ipynb
-                - file: notebooks/plot1empty.ipynb
-                - file: notebooks/plot1.ipynb
-                - file: notebooks/plot2empty.ipynb
-                - file: notebooks/plot2.ipynb
+                - file: notebook/ssb.ipynb
+                - file: notebook/ssbfile-empty.ipynb
+                - file: notebook/ssbfile.ipynb
+                - file: notebook/plot1empty.ipynb
+                - file: notebook/plot1.ipynb
+                - file: notebook/plot2empty.ipynb
+                - file: notebook/plot2.ipynb
         - file: Samanlikna Datasett.md
           children:
-            - file: notebooks/Arbeidsledige og Konkursar.ipynb
+            - file: notebook/Arbeidsledige og Konkursar.ipynb
             - file: Jordskjelv/Jordskjelv.ipynb
-            - file: notebooks/Tidsrekkjer-demo.ipynb
-            - file: notebooks/Melt-pivot.ipynb
+            - file: notebook/Tidsrekkjer-demo.ipynb
+            - file: notebook/Melt-pivot.ipynb
         - file: Agent-basert simulering.md
           children:
-            - file: notebooks/LoanClass.ipynb
-            - file: notebooks/Shrimp-Game.ipynb
-            - file: notebooks/Iskrem på ei strand.ipynb
-            - file: notebooks/ShrimpSimulation.ipynb
+            - file: notebook/LoanClass.ipynb
+            - file: notebook/Shrimp-Game.ipynb
+            - file: notebook/Iskrem på ei strand.ipynb
+            - file: notebook/ShrimpSimulation.ipynb
             - file: exercises/Agent-basert Marknadssimulering
-            - file: notebooks/class-empty.ipynb
-            - file: notebooks/class.ipynb
+            - file: notebook/class-empty.ipynb
+            - file: notebook/class.ipynb
         - file: WebAPI.md
           children:
-            - file: notebooks/WEBAPI.ipynb
-            - file: notebooks/requests-trimmed.ipynb
-            - file: notebooks/JSON json_stat og eksempler.ipynb
-            - file: notebooks/ssb-api.ipynb
-            - file: notebooks/Eurostat-API.ipynb
+            - file: notebook/WEBAPI.ipynb
+            - file: notebook/requests-trimmed.ipynb
+            - file: notebook/JSON json_stat og eksempler.ipynb
+            - file: notebook/ssb-api.ipynb
+            - file: notebook/Eurostat-API.ipynb
             - file: norun/spotify-auth.ipynb
             - file: norun/spotify-audio-analyse.ipynb
             - file: norun/chatgpt_api.ipynb
@@ -98,39 +98,39 @@ project:
       children:
         - file: Statistikk og Maskinlæring.md
           children:
-            - file: notebooks/numpy.ipynb
-            - file: notebooks/Linear Regression in SciKitLearn.ipynb
-            - file: notebooks/Evaluering for regresjon.ipynb
-            - file: notebooks/scikitlearn.ipynb
-            - file: notebooks/matrix.ipynb
-            - file: notebooks/hypothesistest.ipynb
-            - file: notebooks/Iris-Statistics.ipynb
-            - file: notebooks/sklearn-demo-empty.ipynb
+            - file: notebook2/numpy.ipynb
+            - file: notebook2/Linear Regression in SciKitLearn.ipynb
+            - file: notebook2/Evaluering for regresjon.ipynb
+            - file: notebook2/scikitlearn.ipynb
+            - file: notebook2/matrix.ipynb
+            - file: notebook2/hypothesistest.ipynb
+            - file: notebook2/Iris-Statistics.ipynb
+            - file: notebook2/sklearn-demo-empty.ipynb
             - file: norun/sklearn-demo.ipynb
         - file: Klassifikasjon.md
           children:
-            - file: notebooks/Fisher Linear Discriminant in sklearn.ipynb
-            - file: notebooks/Evaluering.ipynb
-            - file: notebooks/SVM.ipynb
+            - file: notebook2/Fisher Linear Discriminant in sklearn.ipynb
+            - file: notebook2/Evaluering.ipynb
+            - file: notebook2/SVM.ipynb
         - file: Automatisering.md
           children:
-            - file: notebooks/ML-WebAPI.ipynb
-            - file: notebooks/standalone-exercise.ipynb
-            - file: notebooks/jupytext1demo.ipynb
+            - file: notebook2/ML-WebAPI.ipynb
+            - file: notebook2/standalone-exercise.ipynb
+            - file: notebook2/jupytext1demo.ipynb
             - file: Installasjon-git.md
             - file: jupytext.md
             - file: Spyder.md
             - file: Git.md
         - file: Klyngeanalyse-Kapittel.md
           children:
-            - file: notebooks/Klyngeanalyse.ipynb
-            - file: notebooks/Kundesegmentering.ipynb
+            - file: notebook2/Klyngeanalyse.ipynb
+            - file: notebook2/Kundesegmentering.ipynb
             - file: norun/klyngedemo.ipynb
-            - file: notebooks/clustering_creditcards.ipynb
-            - file: notebooks/data-til-kmeans-knn.ipynb
+            - file: notebook2/clustering_creditcards.ipynb
+            - file: notebook2/data-til-kmeans-knn.ipynb
         - file: GUI.md
           children:
-            - file: notebooks/tkinter-demo.ipynb
+            - file: notebook2/tkinter-demo.ipynb
         - file: Sikkerheit.md
     - file: closure.md
       children:
@@ -138,9 +138,9 @@ project:
         - file: demo/avslutting2026/Strand.ipynb
     - file: drafts.md
       children:
-        - file: notebooks/Lånesøknad.ipynb
-        - file: notebooks/dicts-json-jsonstat.ipynb
-        - file: notebooks/Predator-Prey.ipynb
+        - file: notebook/Lånesøknad.ipynb
+        - file: notebook/dicts-json-jsonstat.ipynb
+        - file: notebook/Predator-Prey.ipynb
 site:
   options:
     logo: ../figures/ntnu.svg

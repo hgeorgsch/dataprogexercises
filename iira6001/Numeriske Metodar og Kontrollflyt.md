@@ -34,11 +34,11 @@ Gjennomarbeidde døme
 
 + [](Jupyter/sim01.ipynb) frå opningssamlinga.
       Du bør gjera ferdig denne før du startar på noko nytt.
-+ [Halveringsmetoden](notebooks/Halveringsmetoden)
++ [Halveringsmetoden](notebook/Halveringsmetoden)
   viser numerisk likningsløysing.  Dette koplar programmeringa til
   matematikk, men om du ikkje er interessert i matematikken er det
   kanskje like greit å hoppa over det.
-+ [](notebooks/Smittespreiing)
++ [](notebook/Smittespreiing)
 
 Demonstrasjonsvideoane
 : fokuserer på tekniske detaljar. Dette er videoar som krev meir konsentrasjon, og ein bør absolutt testa ut dei teknikkane som vert demonstrert på eiga hand, før ein gløymer dei. Det er best å sjå dei saman med øvingane.  Me har freista å visa dei vesentlege teknikkane i dei gjennomarbeidde, og demonstrasjonsvideoane skal primært gje ei ny vinkling meir enn nytt stoff.
@@ -48,8 +48,8 @@ Demonstrasjonsvideoane
   vilkår (*if*) og løkker (*for*) i python.
   Denne vart lang (nesten 30 min.) og kanskje litt for omstendeleg,
   men hopp over det som vert for trivielt.
-    + [](notebooks/control-empty)
-    + [](notebooks/control)
+    + [](notebook/control-empty)
+    + [](notebook/control)
 
 Drilloppgåver
 : fokuserer på grunnteknikkar og vert automatisk retta.  Me vil ikkje oppfordra til å leggja stor vekt på desse, men nokon finne dei nyttige tidleg i kurset.
@@ -68,7 +68,7 @@ Utkast til oppgåver
 : desse oppgåvene er uferdige, men kan gje idéar til dei som er på jakt etter meir.
 
 + [](Exercises/Kundedata)
-+ [](notebooks/Folkevekst)
++ [](notebook/Folkevekst)
 
 Der er rikeleg med oppgåver, og me reknar ikkje med at nokon rekk å gjera alt.
 Hensikta med oppgåvene er å visa eit breidt utval av løysingar til etterlikning,

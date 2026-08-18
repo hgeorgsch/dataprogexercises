@@ -1,6 +1,6 @@
 # Utkast til øvingar
 
-+ [](notebooks/Predator-Prey)
++ [](notebook/Predator-Prey)
 + [](Exercises/Varar%20på%20sal)
-+ [](notebooks/Lånesøknad.ipynb)
-+ [](notebooks/dicts-json-jsonstat.ipynb)
++ [](notebook/Lånesøknad.ipynb)
++ [](notebook/dicts-json-jsonstat.ipynb)
