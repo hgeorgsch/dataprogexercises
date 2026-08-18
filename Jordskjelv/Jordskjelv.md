@@ -1,11 +1,16 @@
 ---
+authors:
+- affiliation: NTNU-Noregs Teknisk-Naturvitskaplege Universitet
+  name: Hans Georg Schaathun
+- affiliation: Universitetet i Bergen
+  name: Morten Munthe
 jupytext:
   formats: md:myst,ipynb
   text_representation:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.17.0
+    jupytext_version: 1.19.4
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -215,7 +220,7 @@ Me får eit betre inntrykk om me kan plotta skjelva oppå eit kart.
 Då bør me bruka eit
 [ekvirektangulært kart](https://simple.wikipedia.org/wiki/Equirectangular_projection),
 Der ein lengde- og breiddegradane har same avstand overalt på kartet.
-Me finn eit slikt kart på [Wikimedia Commons](https://simple.wikipedia.org/wiki/Equirectangular_projection#/media/File:Equirectangular-projection.jpg):
+Me finn eit slikt kart på [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Equirectangular-projection.jpg):
 [Equirectangular-projection.jpg](Equirectangular-projection.jpg).
 
 Lat oss fyrst sjå berre på kartet:
@@ -404,6 +409,7 @@ Kva gjer `plt.title()`?
 :::
 
 For å køyra animasjonen over riktig periode, må me finna fyrste og siste år, slik:
+
 ```{code-cell} ipython3
 startar = data_J["Year"].min()
 sluttar = data_J["Year"].max()
