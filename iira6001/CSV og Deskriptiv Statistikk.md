@@ -28,27 +28,27 @@ er ikkje eit mål i seg sjølve.
 + *Gjennomarbeidde døme*
     + [](Jupyter/csv01.ipynb) frå opningssamlinga.
             Du bør gjera ferdig denne før du startar på noko nytt.
-	+ [](notebooks/Arbeidsledige) 
-	+ [](notebooks/Tid%20og%20dato)
+	+ [](notebook/Arbeidsledige) 
+	+ [](notebook/Tid%20og%20dato)
     + [](Genetikk/Genetikk) demonstrerer korrelasjon m.m. (valfri)
 + *Demovideo*
     + [Statistikkbanken](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=c3199984-d5ef-44dc-a9da-b3ee00cd4421)
-        + [Datasett 13760](./notebooks/13760_20260203-130712.csv)
-        + [Arbeidsdokument](notebooks/ssb)
+        + [Datasett 13760](./notebook/13760_20260203-130712.csv)
+        + [Arbeidsdokument](notebook/ssb.ipynb)
 	+ [Plot i pandas](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=9b30ced4-33c3-4811-a3d1-b3ee0147cfe4)
-        + [](notebooks/plot1empty)
-        + [](notebooks/plot1)
+        + [](notebook/plot1empty.ipynb)
+        + [](notebook/plot1.ipynb)
 	+ [Kakediagram i pandas](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=0c83d979-3a67-4c41-a6e2-b3ee00a30d87)
-        + [](notebooks/plot2empty)
-        + [](notebooks/plot2)
+        + [](notebook/plot2empty.ipynb)
+        + [](notebook/plot2.ipynb)
     + [Dataformattering](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=67762136-dda7-47b3-af9b-b3ee00e3fcbb)
       Denne demoen viser rydding i nokre datasett som eg har sett
       studentar finna for å studera utvikling i bustadprisar.
       Til sjuande og sist viser han at ikkje alle problem lèt seg 
       løysa, men nokre løysingar finn me og nokre uløyselege
       problem identifiserer me.
-        + [](notebooks/ssbfile-empty)
-        + [](notebooks/ssbfile)
+        + [](notebook/ssbfile-empty.ipynb)
+        + [](notebook/ssbfile.ipynb)
 + *Opne øvingar*
 	+ [Eksportdata](Exercises/Eksportdata).  Desse oppgåvene krev omfattande preprosessering
       for å få data på samanliknbar form.
