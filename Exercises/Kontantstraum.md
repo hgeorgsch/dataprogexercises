@@ -10,7 +10,7 @@ tags:
 
 # Kontantstraum (oppgåver for vidarekomande)
 
-Desse oppgåvene byggjer vidare på [](/notebooks/Simulering%20av%20kontantstraum).
+Desse oppgåvene byggjer vidare på [](/Jupyter/sim01.ipynb).
 Dei skal ikkje krevja nye programmeringsteknikkar, men gjev øving i å variera
 å kombinera og variera teknikkane frå det opprinnelege dømet.
 Den enklaste måten å arbeida på, er å samanlikna kvar ny oppgåve med kjende
@@ -44,7 +44,7 @@ saldo frå nyttår til nyttår.
 
 
 :::{admonition} Oppgåve
-Sjå på dømet med rentedringar (i [](/notebooks/Simulering%20av%20kontantstraum)).
+Sjå på dømet med rentedringar (i [](/Jupyter/sim01.ipynb).
 I røynda kjem ei renteendring sjelden aleine.  
 Kan henda burde sannsynlegheita for renteauke auka når den fyrste renteendringa
 skjer, og ikkje gå ned før me ser ein rentenedgang.

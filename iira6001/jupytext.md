@@ -15,7 +15,7 @@ køyringane.
 Her skal me sjå korleis me kan omsetja ein *Notebook* til køyrbar
 pythonkode (.py) og køyra dette på komamndolina.
 Me skal ta utgangspunkt i eit enkelt dokument:
-+ [](notebooks/jupytext1demo)
++ [](notebook/jupytext1demo.ipynb)
 
 ::: {admonition} Oppgåve
 Opna *Notebook*-dokumentet over.  Kva gjer programkoden?

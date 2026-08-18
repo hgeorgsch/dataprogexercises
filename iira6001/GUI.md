@@ -29,6 +29,6 @@ ein kanskje klara å læra resten på eiga hand.
     + [Grafiske Brukargrensesnitt](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=c7c9b290-0dac-455a-bc27-b41900d1e90a)
       [(foilar)](https://iirevu.org.ntnu.no/Slides/GUI/)
 + *Tutorials* og øvingar
-    + [](notebooks/tkinter-demo)
+    + [](notebook2/tkinter-demo.ipynb)
 + Demovideo
     + [Demo GUI](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=681a7321-df1d-4713-a2c2-b41a0103857f)

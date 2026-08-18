@@ -28,8 +28,8 @@ er ikkje eit mål i seg sjølve.
 + *Gjennomarbeidde døme*
     + [](Jupyter/csv01.ipynb) frå opningssamlinga.
             Du bør gjera ferdig denne før du startar på noko nytt.
-	+ [](notebook/Arbeidsledige) 
-	+ [](notebook/Tid%20og%20dato)
+	+ [](notebook/Arbeidsledige.ipynb) 
+	+ [](notebook/Tid%20og%20dato.ipynb)
     + [](Genetikk/Genetikk) demonstrerer korrelasjon m.m. (valfri)
 + *Demovideo*
     + [Statistikkbanken](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=c3199984-d5ef-44dc-a9da-b3ee00cd4421)
