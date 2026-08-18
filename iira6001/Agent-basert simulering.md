@@ -21,17 +21,17 @@ og oversikt.
 	+ [Objektorientert modellering og programmering](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=9d3d90fc-bb4b-4858-8dce-b3ee00a17df8)
       [(foilar)](https://iirevu.org.ntnu.no/Slides/Objektorientert%20modellering%20og%20programmering)
 + *Utarbeidde døme*
-    + [](notebooks/LoanClass) viser objektorientert programmering på
+    + [](notebook/LoanClass.ipynb) viser objektorientert programmering på
       simulering av kontantstraum, og dermed ikkje agent-basert simulering
-    + [](notebooks/Shrimp-Game) er eit døme på 
+    + [](notebook/Shrimp-Game.ipynb) er eit døme på 
       agent-basert simulering.
 + *Demovideo*
     + [Klasser og Objekt](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=0bb72247-110b-4a7f-adab-b3ef00efeafa)
-        + [](notebooks/class-empty)
-        + [](notebooks/class)
+        + [](notebook/class-empty.ipynb)
+        + [](notebook/class.ipynb)
 + *Opne øvingar*
-    + [Iskrem på ei strand](notebooks/Iskrem%20på%20ei%20strand)
-    + [](exercises/Agent-basert%20Marknadssimulering)
+    + [Iskrem på ei strand](notebook/Iskrem%20på%20ei%20strand.ipynb)
+    + [](Exercises/Agent-basert%20Marknadssimulering.ipynb)
 
 ## Oppsummering
 

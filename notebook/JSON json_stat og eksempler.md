@@ -191,7 +191,8 @@ df.set_index("time").plot()
 ::: {admonition} Oppgave
 Les dokumentasjonen til open-meteo, og se om du klarer å gjøre et kall til web-apien etter noe data. Eksempelvis:
 
-- Finn en lengde- breddegrad feks her: [](https://www.gps-coordinates.net/)
+- Finn en lengde- breddegrad feks her: 
+  [GPS coordinates](https://www.gps-coordinates.net/)
 - Hent ut for *daglig værvariabel* (totalt regn, uv-index, solnedgang osv)
 - Les ut aktuell data fra og importer til pandas
 

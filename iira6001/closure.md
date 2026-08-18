@@ -32,7 +32,7 @@ author: Hans Georg Schaathun
 | 10.30-12.00 | Deltakarpresentasjonar | [](demo/avslutting2026/avslutting-onsdag-sketches.ipynb), [helpers.py](demo/avslutting2026/helpers.py) |
 | 12.00-12.45 | Lønsj | |
 | -- | Modularisering og problemløysing | [Foilar](https://iirevu.org.ntnu.no/Slides/Modularisering%20og%20probleml%c3%b8ysing/) |
-| -- | Demo: [](./notebooks/Iskrem%20på%20ei%20strand) | [](demo/avslutting2026/Strand.ipynb) |
+| -- | Demo: [](./notebook/Iskrem%20på%20ei%20strand.ipynb) | [](demo/avslutting2026/Strand.ipynb) |
 | -16.30 | Oppsummering og avrunding | |
 
 | Torsdag | Tema | Materiell |

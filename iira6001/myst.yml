@@ -34,8 +34,8 @@ project:
           children:
             - file: notebook/Halveringsmetoden.ipynb
             - file: notebook/Smittespreiing.ipynb
-            - file: exercises/Kontantstraum
-            - file: exercises/Kundedata
+            - file: Exercises/Kontantstraum
+            - file: Exercises/Kundedata
             - file: notebook/Folkevekst.ipynb
             - file: notebook/control-empty.ipynb
             - file: notebook/control.ipynb
@@ -43,10 +43,10 @@ project:
           children:
             - file: notebook/Tilfeldigheit.ipynb
             - file: notebook/Marknadssimulering.ipynb
-            - file: exercises/Kundedifferensiering
+            - file: Exercises/Kundedifferensiering
             - file: notebook/Listekomprehensjon.ipynb
             - file: notebook/JSON og dict.ipynb
-            - file: exercises/Varar på sal
+            - file: Exercises/Varar på sal
             - file: notebook/Tilfeldigheit-Demo.ipynb
             - file: notebook/dict-empty.ipynb
             - file: notebook/dict.ipynb
@@ -57,7 +57,7 @@ project:
             - file: Genetikk/Genetikk.ipynb
             - file: notebook/Tid og dato.ipynb
             - file: notebook/Arbeidsledige.ipynb
-            - file: exercises/Eksportdata
+            - file: Exercises/Eksportdata
               children:
                 - file: notebook/ssb.ipynb
                 - file: notebook/ssbfile-empty.ipynb
@@ -78,7 +78,7 @@ project:
             - file: notebook/Shrimp-Game.ipynb
             - file: notebook/Iskrem på ei strand.ipynb
             - file: notebook/ShrimpSimulation.ipynb
-            - file: exercises/Agent-basert Marknadssimulering
+            - file: Exercises/Agent-basert Marknadssimulering
             - file: notebook/class-empty.ipynb
             - file: notebook/class.ipynb
         - file: WebAPI.md

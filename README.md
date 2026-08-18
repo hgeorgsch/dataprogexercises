@@ -6,8 +6,13 @@ used.  Some shared assets are files
 
 Currently in August 2026 we have the following books
 + iira6001
+
 and the shared pages
 + Exercises (markdown - no executable code)
++ notebook (mostly first half of IIRA6001)
++ notebook2 (mostly second half of IIRA6001)
++ norun (notebooks checked in with execution output)
+
 Additionally, there are shared assets
 + figures
 + hgs.bib (file in root)
