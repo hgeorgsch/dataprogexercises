@@ -31,7 +31,7 @@ og oversikt.
         + [](notebook/class.ipynb)
 + *Opne øvingar*
     + [Iskrem på ei strand](notebook/Iskrem%20på%20ei%20strand.ipynb)
-    + [](Exercises/Agent-basert%20Marknadssimulering.ipynb)
+    + [](Exercises/Agent-basert%20Marknadssimulering.md)
 
 ## Oppsummering
 
