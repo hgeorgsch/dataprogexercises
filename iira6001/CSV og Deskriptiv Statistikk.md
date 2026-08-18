@@ -26,7 +26,7 @@ er ikkje eit mål i seg sjølve.
 	+ [Statistikk med pandas](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=8fff3714-2c20-4d25-917b-b3ed00d06ebf)
 	  [(Slides)](https://iirevu.org.ntnu.no/Statistikk%20med%20pandas/)
 + *Gjennomarbeidde døme*
-    + [](notebooks/Fyrste%20datasett%20med%20CSV) frå opningssamlinga.
+    + [](Jupyter/csv01.ipynb) frå opningssamlinga.
             Du bør gjera ferdig denne før du startar på noko nytt.
 	+ [](notebooks/Arbeidsledige) 
 	+ [](notebooks/Tid%20og%20dato)

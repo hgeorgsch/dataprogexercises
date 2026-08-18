@@ -32,7 +32,7 @@ Perspektivføredrag
 Gjennomarbeidde døme
 : er den viktigaste læringsaktiviteten.  Dei viser nye teknikkar i kontekst med oppgåver og spørsmål som oppmodar til fikla med og variera koden for forstå kva som føregår.
 
-+ [](notebooks/Simulering%20av%20kontantstraum) frå opningssamlinga.
++ [](Jupyter/sim01.ipynb) frå opningssamlinga.
       Du bør gjera ferdig denne før du startar på noko nytt.
 + [Halveringsmetoden](notebooks/Halveringsmetoden)
   viser numerisk likningsløysing.  Dette koplar programmeringa til
