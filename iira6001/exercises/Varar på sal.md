@@ -1,1 +1,0 @@
-../../dataprog-obsidian/Exercises/Varar på sal.md

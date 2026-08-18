@@ -50,7 +50,7 @@ er ikkje eit mål i seg sjølve.
         + [](notebooks/ssbfile-empty)
         + [](notebooks/ssbfile)
 + *Opne øvingar*
-	+ [Eksportdata](exercises/Eksportdata).  Desse oppgåvene krev omfattande preprosessering
+	+ [Eksportdata](Exercises/Eksportdata).  Desse oppgåvene krev omfattande preprosessering
       for å få data på samanliknbar form.
 
 ## Oppsummering

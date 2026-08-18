@@ -51,7 +51,7 @@ Det er alt me treng.
    - Du kan sjekka om du har intel eller apple-silicon-prosessor 
      slik som på [biletet under](fig-sjekk)
 
-:::{figure} sjekk-prosessor.png
+:::{figure} /figures/sjekk-prosessor.png
 :name: fig-sjekk
 Trykk på eplet oppe til venstre og «about this mac» eller «Om denne maskinen»
 :::
@@ -62,7 +62,7 @@ Trykk på eplet oppe til venstre og «about this mac» eller «Om denne maskinen
    - Kan henda spør han òg om å laga eller logga inn på ein konto;
      det treng du ikkje
 
-:::{figure} oppdater.png
+:::{figure} /figures/oppdater.png
 :name: fig-oppdater
 Trykk ja for å oppdatera - vindauga om innlogging kan dere kryssa ut.
 :::

@@ -62,12 +62,12 @@ Drilloppgåver
 Opne oppgåver
 : er meir krevjande oppgåver, der ein må kombinera teknikkane og skriva meir kode frå botnen av.
 
-+ [Kontantstraum](exercises/Kontantstraum)
++ [Kontantstraum](Exercises/Kontantstraum)
 
 Utkast til oppgåver
 : desse oppgåvene er uferdige, men kan gje idéar til dei som er på jakt etter meir.
 
-+ [](exercises/Kundedata)
++ [](Exercises/Kundedata)
 + [](notebooks/Folkevekst)
 
 Der er rikeleg med oppgåver, og me reknar ikkje med at nokon rekk å gjera alt.
