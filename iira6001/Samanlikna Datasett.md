@@ -25,7 +25,7 @@ og skal no samanlikna data frå ulike datasett.
 	  [(foilar)](https://iirevu.org.ntnu.no/Slides/Tidsrekkjer%20og%20frekvens/)
 + *Gjennomarbeidde Døme.*
 	+ [Samanlikning av tidsrekkjer](notebooks/Arbeidsledige%20og%20Konkursar) 
-    + [Jordskjelvdata](notebooks/Jordskjelv) som demonstrerer animasjon og plotting oppå kart. (valfri)
+    + [Jordskjelvdata](Jordskjelv/Jordskjelv) som demonstrerer animasjon og plotting oppå kart. (valfri)
 + *Demovideo*
     + [Melt og pivot](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=bbd31244-1c04-4d7a-a7cf-b3f400bc9a25)
         + [Datasett 05307](./notebooks/05307_andel-roykere.csv)

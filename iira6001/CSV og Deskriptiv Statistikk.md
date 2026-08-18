@@ -30,7 +30,7 @@ er ikkje eit mål i seg sjølve.
             Du bør gjera ferdig denne før du startar på noko nytt.
 	+ [](notebooks/Arbeidsledige) 
 	+ [](notebooks/Tid%20og%20dato)
-    + [](notebooks/Genetikk) demonstrerer korrelasjon m.m. (valfri)
+    + [](Genetikk/Genetikk) demonstrerer korrelasjon m.m. (valfri)
 + *Demovideo*
     + [Statistikkbanken](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=c3199984-d5ef-44dc-a9da-b3ee00cd4421)
         + [Datasett 13760](./notebooks/13760_20260203-130712.csv)
