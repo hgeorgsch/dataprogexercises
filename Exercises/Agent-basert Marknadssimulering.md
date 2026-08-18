@@ -8,7 +8,7 @@ tags:
 ::: {admonition} Bakgrunn
 Denne oppgåve byggjer på problemforståinga frå
 [](./Kundedifferensiering) og
-den agent-baserte løysingsmetoden frå [Shrimp Game](/notebooks/Shrimp-Game).
+den agent-baserte løysingsmetoden frå [Shrimp Game](/notebook/Shrimp-Game.ipynb).
 Du bør studera båe desse problema før du freistar på oppgåvene under.
 :::
 
