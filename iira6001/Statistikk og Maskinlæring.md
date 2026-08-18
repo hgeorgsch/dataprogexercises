@@ -27,18 +27,18 @@ Målet denne veka er
     + [Evaluering av modellar](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=9daec41e-6ddf-4bfc-b291-b41800ab7e2e)
       [(foilar)](https://iirevu.org.ntnu.no/Slides/Evaluering%20av%20modellar/)
 + *Tutorials* og øvingar
-    + [](notebooks/numpy)
-	+ [Lineær regresjon](notebooks/Linear%20Regression%20in%20SciKitLearn)
-	+ [Evaluering av regresjonsmodellen](notebooks/Evaluering%20for%20regresjon)
-    + [](notebooks/scikitlearn)  (valfri)
+    + [](notebook2/numpy.ipynb)
+	+ [Lineær regresjon](notebook2/Linear%20Regression%20in%20SciKitLearn.ipynb)
+	+ [Evaluering av regresjonsmodellen](notebook2/Evaluering%20for%20regresjon.ipynb)
+    + [](notebook2/scikitlearn.ipynb)  (valfri)
 + *Demo* 
 	+ [Demo SciKitLearn](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=2f8a090a-9c81-4888-957b-b41700952df1)
-        + [Oppgåver til demonstrasjonen](notebooks/sklearn-demo-empty)
-        + [Løysingar frå demonstrasjonen](norun/sklearn-demo)
+        + [Oppgåver til demonstrasjonen](notebook2/sklearn-demo-empty.ipynb)
+        + [Løysingar frå demonstrasjonen](norun/sklearn-demo.ipynb)
 + *Meir avanserte øvingar*
-    + [](notebooks/matrix) gjev litt meir innføring i `numpy` for dei som
+    + [](notebook2/matrix.ipynb) gjev litt meir innføring i `numpy` for dei som
       har eit positivt forhold til matriserekning i matematikken
 + *Kuriosa.* Plotta i foilane vart laga med desse dokumenta.
-    + [Hypotesetesting](notebooks/hypothesistest)
+    + [Hypotesetesting](notebook2/hypothesistest.ipynb)
       utdjuper òg resonnementet bak hypotesetesting
-    + [Iris-Statistics](notebooks/Iris-Statistics)
+    + [Iris-Statistics](notebook2/Iris-Statistics.ipynb)
