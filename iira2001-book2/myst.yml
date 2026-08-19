@@ -1,0 +1,65 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+
+project:
+  id: 6edcdeb2-2a28-44cb-b20d-2f75eaffd814
+  title: Programmering og data i økonomiske fag
+  description: Kursmateriell – IIRA2001
+  static_files:
+    - static/slides
+
+  authors:
+    - name: Jonas Julius Harang
+    - name: Hans Georg Schaatun
+
+  toc:
+    - file: index.md
+
+    - title: Info
+      children:
+        - file: markdown/fremdrift.md
+          #- file: markdown/myst-markdown-eksempler.md
+        - title: Installasjon
+          file: markdown/programmering/uke-34/installasjon.md
+
+
+    - title: Del I – Programmering og simulering
+      file: markdown/programmering/index.md
+      children:
+        - title: Uke 34 – Kom i gang
+          file: markdown/programmering/uke-34/index.md
+          children:
+            - title: Installasjon og kom i gang
+              file: markdown/programmering/uke-34/installasjon.md
+            - title: Kickoff – banksegmentering med KI
+              file: markdown/programmering/uke-34/Kickoff-banksegmentering.md
+                #- title: Forelesningsnotater
+                #  file: markdown/programmering/uke-34/forelesningsnotater.md
+            - title: Slides
+              file: markdown/programmering/uke-34/slides.md
+                #- title: Oppgaver
+                #  file: markdown/programmering/uke-34/oppgaver.md
+
+        - title: Uke 35 – Vekst og funksjoner
+          file: markdown/programmering/uke-35/index.md
+          children:
+            - title: Forelesningsnotater
+              file: markdown/programmering/uke-35/forelesningsnotater.md
+            - title: Slides
+              file: markdown/programmering/uke-35/slides.md
+            - title: Oppgaver
+              file: markdown/programmering/uke-35/oppgaver.md
+
+    - title: Del II – Dataanalyse
+      children:
+        - file: markdown/dataframes.md
+        - file: markdown/groupby.md
+        - file: notebooks/pandas-demo.ipynb
+
+site:
+  template: book-theme
+  title: Programmering og data i økonomiske fag
+
+  options:
+    logo: images/NTNU-logo.png
+    logo_dark: images/NTNU-logo-dark.png

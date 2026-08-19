@@ -1,0 +1,9 @@
+project:
+  type: default
+  output-dir: ../static/slides
+
+format:
+  revealjs:
+    theme: dark
+    css: styles.css
+    embed-resources: true
