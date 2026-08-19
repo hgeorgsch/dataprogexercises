@@ -1,0 +1,49 @@
+Bruk vedlagte bilde(r) som **stilreferanse**. Referansebildene skal styre visuell stil, fargebruk, linjeføring, lyssetting og detaljnivå – ikke motiv eller komposisjon.
+
+## Fast stil
+
+Semi-realistisk redaksjonell tegneseriestil / moderne graphic-novel-illustrasjon.
+
+* tydelige, mørke, håndtegnede konturer
+* digitalt malt skyggelegging
+* realistiske mennesker og miljøer, men med lett karikerte og uttrykksfulle ansikter
+* varm, dempet fargepalett med mørk marineblå, krem, beige, bruntoner, dempet blå og enkelte varme gule/oransje aksenter
+* cinematisk lys og tydelig lys–mørke-kontrast
+* subtil papir-, blekk- og penseltekstur
+* rikt nok detaljnivå til å fortelle en liten historie, men med tydelig visuelt fokus
+* intelligent, lett humoristisk universitets-/lærebokpreg
+* profesjonelt og voksent uttrykk; ikke barnslig
+* ikke fotorealistisk
+* ikke flat vector-art
+* ikke glossy 3D-rendering
+
+Tekst, skilt, snakkebobler og annen typografi kan brukes når det er naturlig. All tekst skal være tydelig, korrekt stavet og lett å lese på en forelesningsslide.
+
+## Format
+
+* 16:9
+* laget for bruk i en mørk universitets-/Reveal.js-presentasjon
+* tydelig komposisjon som fungerer på prosjektor
+* motivet må være lett å forstå på avstand
+* behold gjerne noe negativ plass dersom det er nyttig for slide-layout
+
+## Ny illustrasjon
+
+**Motiv:**
+Foreleser fra referansebildet sliter med kvantemekanikken men river opp skjorten for å vise ikke supermansymbolet men pythonsymbolet!
+
+**Personer/objekter som skal være med:**
+Foreleser fra referansebildet er med
+
+**Handling og stemning:**
+[Beskriv hva som skjer, ansiktsuttrykk, humor, stemning osv.]
+
+**Tekst som skal stå i bildet:**
+[Skriv eksakt tekst i anførselstegn, eller skriv «ingen tekst».]
+
+**Komposisjon:**
+[Eventuelle ønsker: person til høyre, skjerm i bakgrunnen, god plass til venstre osv.]
+
+Lag en helt ny illustrasjon med dette motivet, men hold den visuelle stilen så tett som mulig på referansebildene. Ikke kopier komposisjonen eller innholdet fra referansebildene.
+ 
+
