@@ -13,14 +13,14 @@ title: Web API og JSON
     + [Autentisering](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=28ce2d10-ebed-4071-a973-b41300b98575)
 
 + *Introduksjonsstoff* 
-    + [](notebooks/WEBAPI)
-    + [](notebooks/requests-trimmed)
-    + [](notebooks/JSON%20json_stat%20og%20eksempler)
+    + [](notebook/WEBAPI.ipynb)
+    + [](notebook/requests-trimmed.ipynb)
+    + [](notebook/JSON%20json_stat%20og%20eksempler.ipynb)
 + *Eksempler, med oppgaver og video*
-    + [Statistisk sentralbyrå, WebAPI](notebooks/ssb-api)
+    + [Statistisk sentralbyrå, WebAPI](notebook/ssb-api.ipynb)
         + [Grunnlegende bruk, video](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=b8492fd7-a8fb-4078-9718-b41300b985f7)
         + [Avansert bruk (pxweb), video](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=7ac72552-0701-4467-abdd-b41300b985a8)
-    + [Eurostat, WebAPI](notebooks/Eurostat-API)
+    + [Eurostat, WebAPI](notebook/Eurostat-API.ipynb)
         + [Grunnlegende bruk, video](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=5be4fafa-9310-4333-8d57-b41300b9851b)
 
             ----

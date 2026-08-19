@@ -1,0 +1,148 @@
+version: 1
+project:
+  title: Programmering til dataanalyse
+  authors:
+    - name: Hans Georg Schaathun og Jonas Julius Harang
+  copyright: '2025'
+  bibliography:
+    - hgs.bib
+  toc:
+    - file: intro.md
+    - file: Praktisk informasjon.md
+      children:
+        - file: Oblig.md
+        - file: Mappevurdering.md
+        - file: Mappedemo/Mappedemo.md
+          children:
+            - file: Mappedemo/kontantstraum-eval.md
+            - file: Mappedemo/kontantstraum.ipynb
+            - file: Mappedemo/boligpris-eval.md
+            - file: Mappedemo/boligpris.ipynb
+        - file: Ny programvare.md
+        - file: Dropin.md
+    - file: Opningssamling.md
+      children:
+        - file: Installasjon.md
+        - file: Jupyter/jupyter01.ipynb
+        - file: Jupyter/csv01.ipynb
+        - file: Jupyter/sim01.ipynb
+        - file: norun/intro-csv-slides.ipynb
+        - file: norun/intro-simulering.ipynb
+    - file: first.md
+      children:
+        - file: Numeriske Metodar og Kontrollflyt.md
+          children:
+            - file: notebook/Halveringsmetoden.ipynb
+            - file: notebook/Smittespreiing.ipynb
+            - file: Exercises/Kontantstraum
+            - file: Exercises/Kundedata
+            - file: notebook/Folkevekst.ipynb
+            - file: notebook/control-empty.ipynb
+            - file: notebook/control.ipynb
+        - file: Datastrukturar og Simulering.md
+          children:
+            - file: notebook/Tilfeldigheit.ipynb
+            - file: notebook/Marknadssimulering.ipynb
+            - file: Exercises/Kundedifferensiering
+            - file: notebook/Listekomprehensjon.ipynb
+            - file: notebook/JSON og dict.ipynb
+            - file: Exercises/Varar på sal
+            - file: notebook/Tilfeldigheit-Demo.ipynb
+            - file: notebook/dict-empty.ipynb
+            - file: notebook/dict.ipynb
+            - file: notebook/list-empty.ipynb
+            - file: notebook/list.ipynb
+        - file: CSV og Deskriptiv Statistikk.md
+          children:
+            - file: Genetikk/Genetikk.ipynb
+            - file: notebook/Tid og dato.ipynb
+            - file: notebook/Arbeidsledige.ipynb
+            - file: Exercises/Eksportdata
+              children:
+                - file: notebook/ssb.ipynb
+                - file: notebook/ssbfile-empty.ipynb
+                - file: notebook/ssbfile.ipynb
+                - file: notebook/plot1empty.ipynb
+                - file: notebook/plot1.ipynb
+                - file: notebook/plot2empty.ipynb
+                - file: notebook/plot2.ipynb
+        - file: Samanlikna Datasett.md
+          children:
+            - file: notebook/Arbeidsledige og Konkursar.ipynb
+            - file: Jordskjelv/Jordskjelv.ipynb
+            - file: notebook/Tidsrekkjer-demo.ipynb
+            - file: notebook/Melt-pivot.ipynb
+        - file: Agent-basert simulering.md
+          children:
+            - file: notebook/LoanClass.ipynb
+            - file: notebook/Shrimp-Game.ipynb
+            - file: notebook/Iskrem på ei strand.ipynb
+            - file: notebook/ShrimpSimulation.ipynb
+            - file: Exercises/Agent-basert Marknadssimulering
+            - file: notebook/class-empty.ipynb
+            - file: notebook/class.ipynb
+        - file: WebAPI.md
+          children:
+            - file: notebook/WEBAPI.ipynb
+            - file: notebook/requests-trimmed.ipynb
+            - file: notebook/JSON json_stat og eksempler.ipynb
+            - file: notebook/ssb-api.ipynb
+            - file: notebook/Eurostat-API.ipynb
+            - file: norun/spotify-auth.ipynb
+            - file: norun/spotify-audio-analyse.ipynb
+            - file: norun/chatgpt_api.ipynb
+    - file: midway.md
+      children:
+        - file: demo/demo20260423.ipynb
+    - file: second.md
+      children:
+        - file: Statistikk og Maskinlæring.md
+          children:
+            - file: notebook2/numpy.ipynb
+            - file: notebook2/Linear Regression in SciKitLearn.ipynb
+            - file: notebook2/Evaluering for regresjon.ipynb
+            - file: notebook2/scikitlearn.ipynb
+            - file: notebook2/matrix.ipynb
+            - file: notebook2/hypothesistest.ipynb
+            - file: notebook2/Iris-Statistics.ipynb
+            - file: notebook2/sklearn-demo-empty.ipynb
+            - file: norun/sklearn-demo.ipynb
+        - file: Klassifikasjon.md
+          children:
+            - file: notebook2/Fisher Linear Discriminant in sklearn.ipynb
+            - file: notebook2/Evaluering.ipynb
+            - file: notebook2/SVM.ipynb
+        - file: Automatisering.md
+          children:
+            - file: notebook2/ML-WebAPI.ipynb
+            - file: notebook2/standalone-exercise.ipynb
+            - file: notebook2/jupytext1demo.ipynb
+            - file: Installasjon-git.md
+            - file: jupytext.md
+            - file: Spyder.md
+            - file: Git.md
+        - file: Klyngeanalyse-Kapittel.md
+          children:
+            - file: notebook2/Klyngeanalyse.ipynb
+            - file: notebook2/Kundesegmentering.ipynb
+            - file: norun/klyngedemo.ipynb
+            - file: notebook2/clustering_creditcards.ipynb
+            - file: notebook2/data-til-kmeans-knn.ipynb
+        - file: GUI.md
+          children:
+            - file: notebook2/tkinter-demo.ipynb
+        - file: Sikkerheit.md
+    - file: closure.md
+      children:
+        - file: demo/avslutting2026/avslutting-onsdag-sketches.ipynb
+        - file: demo/avslutting2026/Strand.ipynb
+    - file: drafts.md
+      children:
+        - file: notebook/Lånesøknad.ipynb
+        - file: notebook/dicts-json-jsonstat.ipynb
+        - file: notebook/Predator-Prey.ipynb
+site:
+  options:
+    logo: ../figures/ntnu.svg
+    folders: true
+  template: book-theme

@@ -11,10 +11,10 @@ title: Klyngeanalyse med Maskinlæring
   det kjem an på lesaren din.)
     + [Klyngeanalyse](https://iirevu.org.ntnu.no/Slides/Klyngeanalyse-slides/)
 + *Gjennomarbeidd døme* 
-    + [Klyngeanalyse](notebooks/Klyngeanalyse)
+    + [Klyngeanalyse](notebook2/Klyngeanalyse.ipynb)
       er ein enkel demonstrasjon av
       $k$-*means* og $k$-*nearest neighbour* på tilfeldige data.
-    + [Kredittbruk](notebooks/clustering_creditcards)
+    + [Kredittbruk](notebook2/clustering_creditcards.ipynb)
       viser grundig utforsking av kredittkortkundedata.
 + *Kuriosa*
     + [$k$-means](norun/klyngedemo) viser og forklarer
@@ -40,7 +40,7 @@ på andre datasett, t.d.
 + Introduksjon til unsupervised learning 
     + sklearn: kmeans, silhouette-score, inertia, skalering, pca
     + tiltenkt bruk av datasettt generert i 
-      [testfil](notebooks/data-til-kmeans-knn)
+      [testfil](notebook2/data-til-kmeans-knn.ipynb)
 + Gjennomarbeidet eksempel
     + Spotify, audio analyse fra uke om webapi, skisse 
-      [spotify-audio-bla](notebooks/Spotify-klyngeanalyse-ny)
+      [spotify-audio-bla](notebook2/Spotify-klyngeanalyse-ny.ipynb)

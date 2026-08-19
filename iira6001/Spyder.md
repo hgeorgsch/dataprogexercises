@@ -39,7 +39,7 @@ Start eit nytt prosjekt (*Projects*-menyen) med ein høveleg katalog.
 :::
 
 ::: {admonition} Oppgåve
-Ta utgangspunkt i ei gamal oppgåve, t.d. [](notebooks/Arbeidsledige),
+Ta utgangspunkt i ei gamal oppgåve, t.d. [](notebook/Arbeidsledige.ipynb),
 og kopierer datafila (CSV) som vert brukt inn i prosjektkatalogen som 
 du bruker i Spyder.
 :::
