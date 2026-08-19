@@ -25,6 +25,7 @@
 ## Del 1. Verkty
 
 + Veke 1. [[Fyrste dokument i Jupyter Lab]] m.m.
+	+ [[hasc_18.08.2026_15-56-49.pdf]]
 + [[CSV og pandas]] 
 	+ lasta og plotta datasett
 	+ genetikk
