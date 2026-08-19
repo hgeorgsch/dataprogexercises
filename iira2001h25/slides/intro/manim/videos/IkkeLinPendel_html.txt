@@ -1,7 +1,0 @@
-### IkkeLinPendel
-
-<script src="manim/videos/IkkeLinPendel.js"></script>
-<video  class="manimvid" data-breakpoints="IkkeLinPendel_breakpoints" src="manim/videos/IkkeLinPendel.mp4" muted preload="auto"  playsinline
-style="object-fit: cover; width: 100%;"> </video>
-
----

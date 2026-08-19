@@ -29,9 +29,9 @@ og heller koma tilbake til verktya når ein treng det.
     + [Versjonskontroll](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=fc028e03-ead3-42e3-a3e2-b42f008081d0)
       [(foilar)](https://iirevu.org.ntnu.no/Slides/Versjonskontroll/#/)
 + *Gjennomarbeidd døme*
-    + [](notebooks/ML-WebAPI)
+    + [](notebook2/ML-WebAPI.ipynb)
         + Last òg ned [innenlandslanegjeld.json](./notebooks/innenlandslanegjeld.json) 
-    + [](notebooks/standalone-exercise)
+    + [](notebook/standalone-exercise.ipynb)
 + *Demo-video*
     + [Python på kommandolina](https://ntnu.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=0c3334ba-5264-4e71-b9a7-b433007f211c)
       viser korleis eg vanlegvis arbeider ned python, utan *Jupyter Notebook*.
