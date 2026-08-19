@@ -1,11 +1,16 @@
 ---
+authors:
+- affiliation: NTNU-Noregs Teknisk-Naturvitskaplege Universitet
+  name: Hans Georg Schaathun
+- affiliation: Universitetet i Bergen
+  name: Morten Munthe
 jupytext:
   formats: md:myst,ipynb
   text_representation:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.19.1
+    jupytext_version: 1.19.4
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -145,7 +150,7 @@ Stemmer lista over vevstypar med søylene både for mus og menneske?
 
 ::: {hint}
 I denne hele oppgaven må vi være detektiver og lese oss opp på funksjoner til ulike gener ved hjelp av ulike databaser på nettet.
-Vi anbefaler [www.genecards.org](www.genecards.org) eller [www.proteinatlas.org](www.proteinatlas.org)  for å finne detaljert informasjon om gener og deres proteinprodukt.
+Vi anbefaler [www.genecards.org](https://www.genecards.org) eller [www.proteinatlas.org](https://www.proteinatlas.org)  for å finne detaljert informasjon om gener og deres proteinprodukt.
 I tillegg har wikipedia også ofte gode sider om disse genene/proteinene.
 :::
 
@@ -192,7 +197,7 @@ eller *Series*-objektet, men koden er nesten lik.
 plt.figure()
 GCG_vals.drop("genes").plot(kind='bar', title="GCG")    # Lager et barplott (histogram) med tittel GCG
 plt.ylabel("log2(Genuttrykk)")            # Navn på y-aksen
-plt.tight_layout()                        # Dette gjøre at plottet ser ryddigere ut
+plt.tight_layout() ;                      # Dette gjøre at plottet ser ryddigere ut
 ```
 
 ::: {hint}
@@ -203,7 +208,7 @@ Merk at vi måtte droppe `genes` før vi plotter. Det er ikke nødvendig når vi
 plt.figure()
 r1.plot(kind='bar', title="GCG")    # Lager et barplott (histogram) med tittel GCG
 plt.ylabel("log2(Genuttrykk)")      # Navn på y-aksen
-plt.tight_layout()                  # Dette gjøre at plottet ser ryddigere ut
+plt.tight_layout() ;                # Dette gjøre at plottet ser ryddigere ut
 ```
 
 ::: {admonition} Oppgave
@@ -385,7 +390,7 @@ plt.figure()
 plt.hist(data_H["varkoef"], bins=100)
 plt.title("Histogram over variasjonskoeffisienter")
 plt.xlabel("Variasjonskoeffisientverdi")
-plt.ylabel("Antall")
+plt.ylabel("Antall") ;
 ```
 
 ::: {admonition} Refleksjon 
@@ -402,7 +407,7 @@ I **biologioppgave 1** og **2** fant vi ut at høyt uttrykte gener ofte er høyt
 plt.figure()
 plt.scatter(data_H["mean"], data_H["varkoef"])
 plt.xlabel("Gjennomsnittlig vevsuttrykk")
-plt.ylabel("Variasjonskoeffisient")
+plt.ylabel("Variasjonskoeffisient") ;
 ```
 
 Vi skal se på to eksempler på gener som er høyt uttrykt. Beta-aktin (**ACTB**) (se liste over høyt uttrykte gener) og gener som koder for ribosomale proteiner.
@@ -434,7 +439,7 @@ plt.scatter( rps_data["mean"], rps_data["varkoef"], label='Ribosomale protein-su
 plt.scatter( actb_data["mean"], actb_data["varkoef"] , label='Beta-aktin')
 plt.xlabel("Gjennomsnittlig vevsuttrykk")
 plt.ylabel("variasjonskoeffisient")
-plt.legend()
+plt.legend() ;
 ```
 
 ::: {admonition} Biologioppgave 3 
@@ -485,7 +490,7 @@ Vi kan vise det samme som et søylediagram.
 ```{code-cell} ipython3
 korrelasjon.plot(kind="bar")
 plt.ylim([0, 1])
-plt.tight_layout()
+plt.tight_layout() ;
 ```
 
 ::: {admonition} Oppgave 
