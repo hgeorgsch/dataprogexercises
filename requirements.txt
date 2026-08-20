@@ -1,4 +1,6 @@
-jupytext
 pandas
 numpy
 matplotlib
+jupytext
+jupyter-book
+jupyterlab-myst
