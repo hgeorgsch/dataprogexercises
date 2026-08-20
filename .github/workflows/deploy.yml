@@ -55,7 +55,9 @@ jobs:
           make ipynb
       - name: Build HTML Assets
         if: always()
-        run: jupyter book build --html
+        run: |
+          echo "REPO_NAME=${{ github.event.repository.name }}"
+          BASE_URL="/${{ github.event.repository.name }}/" jupyter book build --html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
