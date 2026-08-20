@@ -1,53 +1,62 @@
-# Educational examples of interdiscplinary use of programming
+---
+authors:
+- name: Hans Georg Schaathun
+  affiliaiton: NTNU-Noregs Teknisk-Naturvitskaplege Universitet
+---
 
-This is a repository of programming exercises demonstrating
-practical use of programming in different subjects.
-The foundation of the repository was three exercises received
-from [Morten Munthe](https://www4.uib.no/finn-ansatte/Morten.Munthe)
-at the [PRIS conference](https://www.hivolda.no/pris-konferansen-2025)
-in Ørsta March 2025.
-The examples are intended for secondary school (VGS in Norway),
-demonstrating the use of python and jupyter to explore large datasets.
+# Gjenomarbeidde døme med Jupyter Lab
 
-## Formatting and use
+Dette er ei samling programmingsøvingar som er tenkt for elevar og 
+studentar som skal læra programmering i python, særleg programmering
+som verkty i andre fag, som økonomi, biologi eller fysikk.
 
-Each exercise is written in `md:myst` which is easily converted
-to Jupyter notebook format using jupytext.
-To use, say, the Genetics exercise, you can download the git repo,
-and run
-```sh
-pip install -r requirements
-cd Genetikk
-jupytext --sync Genetikk.md
-jupyter lab Genetikk.ipynb
-```
+Me har vald Jupyter Lab som verkty, fordi det let brukaren fletta
+programkode og resultat frå køyringane inn i rapporten der han
+drøftar problemet.  Det gjer det òg enkelt å samla og drøfta testresultat
+under testing av koden.
+Jupyter Lab er ikkje verktyet for å utvikla programvare for gjenbruk og
+slett ikkje store programsystem, men dét er heller ikkje målet her og no.
 
-If you edit the file in Jupyter lab, it will update both the 
-notebook and markdown versions.
-The reason for publishing in the `md:myst` format, is to make
-better use of the version control in git, which is important
-for the development process.
+Oppgåvene er lagt opp som gjennomarbeidde døme, som viser eit problem
+og ei løysing.  Innimellom er der spørsmål og øvingar, der lesaren
+vert spurt om å tolka resultat, endra og testa programkoden eller
+komplettera løysinga.  Lesaren kan lasta ned kvart døme, og redigera og
+køyra det i jupyter lab.
 
-It is possible to use Jupyter notebook, but Jupyter lab
-makes a better display of some of the markdown coding enabled
-by `md:myst`.
+Kvart side har ein nedlastingsmeny øvst til høgre, der ein kan lasta
+ned øvinga i `ipynb`-format.  Denne fila kan ein opna i Jupyter Lab
+på eiga maskin.  Nokre øvingar bruker datafiler som ein òg må lasta ned.
+Det er forklart i sjølve øvingsteksta.
 
-## Available Exercises
+## Open kjeldekode
 
-Each directory contains one exercise, including required data
-sets, and sometimes supplementary documentation.
-Two exercises have been prepared for use,
-+ [Genetikk](Genetikk/Genetikk.md)
-+ [Jordskjelv](Jordskjelv/Jordskjelv.md)
+Heile boka med alle øvingane kan lastast ned frå 
+[github](git@github.com:hgeorgsch/dataprogexercises).
 
-Other directories contain work in progress.
+## Øvingane
 
-## Contributors
+Den fyrste øvinga om [](Jupyter/jupyter01.ipynb) viser korleis ein
+kjem i gong med Jupyter Lab.
+Dei andre øvingane viser konkrete døme frå andre fag.
 
-Authors and contributors are listed in each individual exercise.
++ Døme frå økonomi
+    + [](Jupyter/sim01.ipynb)
+    + [](Jupyter/csv01.ipynb)
++ Døme frå naturfag
+    + [](Genetikk/Genetikk.ipynb)
+    + [](Jordskjelv/Jordskjelv.ipynb)
 
-**Editor:** Hans Georg Schaathun,
-Norwegian University of Science and Technology,
+## Bidragsytarar
+
+Forfattarar og bidragsytarar er oppgjevne for kvart døme.
+
+Grunnlaget for denne samlinga var tre døme som
+[Morten Munthe](https://www4.uib.no/finn-ansatte/Morten.Munthe)
+presenterte på [PRIS-konferansen](https://www.hivolda.no/pris-konferansen-2025)
+i Ørsta mars 2025.
+
+Nye bidrag er velkomne.
+
+**Redaktør:** Hans Georg Schaathun,
+NTNU-Noregs Teknisk-Naturvitskaplege Universitet,
 hasc@ntnu.no
-
-**Licensing** See each individual exercise.
