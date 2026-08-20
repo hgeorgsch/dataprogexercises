@@ -3,7 +3,6 @@ author: Hans Georg Schaathun
 authors:
 - affiliation: NTNU-Noregs Teknisk-Naturvitskaplege Universitet
   name: Hans Georg Schaathun
-date: '2025-03-20'
 jupytext:
   formats: md:myst,ipynb
   text_representation:
