@@ -35,10 +35,10 @@ Heile boka med alle øvingane kan lastast ned frå
 
 ## Øvingane
 
-Den fyrste øvinga om [](Jupyter/jupyter01.ipynb) viser korleis ein
-kjem i gong med Jupyter Lab.
+Den fyrste øvinga viser korleis ein kjem i gong med Jupyter Lab.
 Dei andre øvingane viser konkrete døme frå andre fag.
 
++ [](Jupyter/jupyter01.ipynb)
 + Døme frå økonomi
     + [](Jupyter/sim01.ipynb)
     + [](Jupyter/csv01.ipynb)
