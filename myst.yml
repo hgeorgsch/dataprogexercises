@@ -5,7 +5,9 @@ project:
   # title:
   # description:
   # keywords: []
-  # authors: []
+  authors: 
+    - name: Hans Georg Schaathun 
+      affiliation: NTNU-Noregs Teknisk-Naturvitskaplege Universitet
   github: https://github.com/hgeorgsch/dataprogexercises
   # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
   toc:
