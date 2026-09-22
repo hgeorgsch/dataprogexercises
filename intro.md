@@ -31,7 +31,7 @@ Det er forklart i sjølve øvingsteksta.
 ## Open kjeldekode
 
 Heile boka med alle øvingane kan lastast ned frå 
-[github](git@github.com:hgeorgsch/dataprogexercises).
+[github](https//github.com/hgeorgsch/dataprogexercises).
 
 ## Øvingane
 
