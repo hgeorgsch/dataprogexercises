@@ -12,9 +12,9 @@ jupytext:
     format_name: myst
     format_version: 0.13
 kernelspec:
-  display_name: dataprog
+  display_name: Python 3 (ipykernel)
   language: python
-  name: dataprog
+  name: python3
 jupyter:
   author: Hans Georg Schaathun
   tags: [exercise, simulering, topic/loop]
